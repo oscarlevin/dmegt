@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-01-07T16:45:56-07:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Propositional Logic</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-dev.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-dev.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script>(function() {
+  var cx = '000445521324161818100:qhc2ahxtur8';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.13;
+</script>
+</head>
+<body id="levin-DMOI" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://discrete.openmathbooks.org/dmoi3.html" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="dmoi.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">early Graph Theory</span></a></h1>
+<p class="byline">Oscar Levin</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_intro-statements.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_logic-proofs.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_intro-statements.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_logic-proofs.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="RGW"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="xOf">Preface</a></li>
+<li><a href="preface-2.html" data-scroll="dVo">How to use this book</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_graphtheory.html" data-scroll="gBz"><span class="codenumber">0</span> <span class="title">Graphs and other Discrete Structures</span></a><ul>
+<li><a href="sec_intro-intro.html" data-scroll="hPw">What is Discrete Mathematics?</a></li>
+<li><a href="sec_gt-intro.html" data-scroll="HLu">Graph Theory</a></li>
+<li><a href="sec_intro-sets.html" data-scroll="ltW">Sets</a></li>
+<li><a href="sec_intro-functions.html" data-scroll="CkQ">Functions</a></li>
+<li><a href="sec_gt-carefully.html" data-scroll="HLu">Graph Done Right</a></li>
+<li><a href="sec_coloring.html" data-scroll="qyO">Coloring</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logic.html" data-scroll="wur"><span class="codenumber">1</span> <span class="title">Symbolic Logic and Proofs</span></a><ul>
+<li><a href="sec_intro-statements.html" data-scroll="QDd">Mathematical Statements</a></li>
+<li><a href="sec_propositional.html" data-scroll="XMq" class="active">Propositional Logic</a></li>
+<li><a href="sec_logic-proofs.html" data-scroll="lnf">Proofs</a></li>
+<li><a href="sec_paths.html" data-scroll="tPg">Euler Paths and Circuits</a></li>
+<li><a href="sec_trees.html" data-scroll="gor">Trees</a></li>
+<li><a href="sec_logic-induction.html" data-scroll="lnf">Mathematical Induction</a></li>
+<li><a href="sec_planar.html" data-scroll="ttH">Planar Graphs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_counting.html" data-scroll="raE"><span class="codenumber">2</span> <span class="title">Counting</span></a><ul>
+<li><a href="sec_counting-pascal.html" data-scroll="sJa">Pascal's Triangle</a></li>
+<li><a href="sec_counting-addmult.html" data-scroll="sJa">Additive and Multiplicative Principles</a></li>
+<li><a href="sec_counting-binom.html" data-scroll="vZs">Binomial Coefficients</a></li>
+<li><a href="sec_counting-combperm.html" data-scroll="yda">Combinations and Permutations</a></li>
+<li><a href="sec_comb-proofs.html" data-scroll="SUg">Combinatorial Proofs</a></li>
+<li><a href="sec_stars-and-bars.html" data-scroll="qkt">Stars and Bars</a></li>
+<li><a href="sec_advPIE.html" data-scroll="HKU">Advanced Counting Using PIE</a></li>
+<li><a href="sec_count-conc.html" data-scroll="Bmb">Chapter Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_sequences.html" data-scroll="KxW"><span class="codenumber">3</span> <span class="title">Sequences</span></a><ul>
+<li><a href="sec_seq_intro.html" data-scroll="tgm">Describing Sequences</a></li>
+<li><a href="sec_seq-arithgeom.html" data-scroll="lIR">Arithmetic and Geometric Sequences</a></li>
+<li><a href="sec_polyfit.html" data-scroll="ylR">Polynomial Fitting</a></li>
+<li><a href="sec_recurrence.html" data-scroll="bcV">Solving Recurrence Relations</a></li>
+<li><a href="sec_seq-induction.html" data-scroll="Prg">Induction</a></li>
+<li><a href="sec_addtops-genfun.html" data-scroll="XaJ">Generating Functions</a></li>
+<li><a href="sec_sequences-conc.html" data-scroll="YaY">Chapter Summary</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="mqL"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="SxU"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="yFd"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="GjC"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="XMq"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Propositional Logic</span>
+</h2>
+<a href="sec_propositional.html" class="permalink">¶</a><section class="introduction" id="EDt"><article class="project-like" id="kKC"><h6 class="heading">
+<span class="type">Investigate!</span> </h6>
+<p id="YaL">You stumble upon two trolls playing Stratego®. They tell you:</p>
+<blockquote class="blockquote" id="NXf">
+<p id="xIO">Troll 1: If we are cousins, then we are both knaves.</p>
+<p id="dPX">Troll 2: We are cousins or we are both knaves.</p>
+</blockquote>
+<p id="EhU">Could both trolls be knights? Recall that all trolls are either always-truth-telling knights or always-lying knaves.</p></article><p id="kpd">A <dfn class="terminology">proposition</dfn>  is simply a statement. <dfn class="terminology">Propositional logic</dfn> studies the ways statements can interact with each other. It is important to remember that propositional logic does not really care about the content of the statements. For example, in terms of propositional logic, the claims, “if the moon is made of cheese then basketballs are round,” and “if spiders have eight legs then Sam walks with a limp” are exactly the same. They are both implications: statements of the form, \(P \imp Q\text{.}\)</p></section><section class="subsection" id="DTz"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Truth Tables</span>
+</h3>
+<a href="sec_propositional.html#DTz" class="permalink">¶</a><p id="tIP">Here's a question about playing Monopoly:</p>
+<blockquote class="blockquote" id="ueo"><p id="JXg">If you get more doubles than any other player then you will lose, or if you lose then you must have bought the most properties.</p></blockquote>
+<p id="ZPY">True or false? We will answer this question, and won't need to know anything about Monopoly. Instead we will look at the logical <em class="emphasis">form</em> of the statement.</p>
+<p id="FXh">We need to decide when the statement \((P \imp Q) \vee (Q \imp R)\) is true. Using the definitions of the connectives in <a href="sec_intro-statements.html" class="internal" title="Section 1.1: Mathematical Statements">Section 1.1</a>, we see that for this to be true, either \(P \imp Q\) must be true or \(Q \imp R\) must be true (or both). Those are true if either \(P\) is false or \(Q\) is true (in the first case) and \(Q\) is false or \(R\) is true (in the second case). So—yeah, it gets kind of messy. Luckily, we can make a chart to keep track of all the possibilities. Enter <dfn class="terminology">truth tables</dfn>. The idea is this: on each row, we list a possible combination of T's and F's (for true and false) for each of the sentential variables, and then mark down whether the statement in question is true or false in that case. We do this for every possible combination of T's and F's. Then we can clearly see in which cases the statement is true or false. For complicated statements, we will first fill in values for each part of the statement, as a way of breaking up our task into smaller, more manageable pieces.</p>
+<p id="meq">Since the truth value of a statement is completely determined by the truth values of its parts and how they are connected, all you really need to know is the truth tables for each of the logical connectives. Here they are:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel fixed-width" style="width:21.0526315789474%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(P\)</td>
+<td class="c m b1 r2 l0 t0 lines">\(Q\)</td>
+<td class="c m b1 r0 l0 t0 lines">\(P\wedge Q\)</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+</table></div>
+<div class="sbspanel fixed-width" style="width:21.0526315789474%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(P\)</td>
+<td class="c m b1 r2 l0 t0 lines">\(Q\)</td>
+<td class="c m b1 r0 l0 t0 lines">\(P\vee Q\)</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+</table></div>
+<div class="sbspanel fixed-width" style="width:21.0526315789474%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(P\)</td>
+<td class="c m b1 r2 l0 t0 lines">\(Q\)</td>
+<td class="c m b1 r0 l0 t0 lines">\(P\imp Q\)</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+</table></div>
+<div class="sbspanel fixed-width" style="width:21.0526315789474%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(P\)</td>
+<td class="c m b1 r2 l0 t0 lines">\(Q\)</td>
+<td class="c m b1 r0 l0 t0 lines">\(P\iff Q\)</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+</table></div>
+</div></div>
+<p id="Slz">The truth table for negation looks like this:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r2 l0 t0 lines">\(P\)</td>
+<td class="c m b1 r0 l0 t0 lines">\(\neg P\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr><td class="c m b0 r2 l0 t0 lines"></td></tr>
+</table></div></div></div>
+<p id="ysI">None of these truth tables should come as a surprise; they are all just restating the definitions of the connectives. Let's try another one.</p>
+<article class="example example-like" id="hgc"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
+</h6>
+<p id="CsH">Make a truth table for the statement \(\neg P \vee Q\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-QRL" id="QRL"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-QRL"><div class="solution solution-like">
+<p id="mzP">Note that this statement is not \(\neg(P \vee Q)\text{,}\) the negation belongs to \(P\) alone. Here is the truth table:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(P\)</td>
+<td class="c m b1 r2 l0 t0 lines">\(Q\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\neg P\)</td>
+<td class="c m b1 r0 l0 t0 lines">\(\neg P \vee Q\)</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+</table></div></div></div>
+<p id="SGY">We added a column for \(\neg P\) to make filling out the last column easier. The entries in the \(\neg P\) column were determined by the entries in the \(P\) column. Then to fill in the final column, look only at the column for \(Q\) and the column for \(\neg P\) and use the rule for \(\vee\text{.}\)</p>
+</div></div>
+</div></article><p id="ezR">Now let's answer our question about monopoly:</p>
+<article class="example example-like" id="Nnl"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
+</h6>
+<p id="izQ">Analyze the statement, “if you get more doubles than any other player you will lose, or that if you lose you must have bought the most properties,” using truth tables.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-wYU" id="wYU"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-wYU"><div class="solution solution-like">
+<p id="yOh">Represent the statement in symbols as \((P \imp Q) \vee (Q \imp R)\text{,}\) where \(P\) is the statement “you get more doubles than any other player,” \(Q\) is the statement “you will lose,” and \(R\) is the statement “you must have bought the most properties.” Now make a truth table.</p>
+<p id="eVq">The truth table needs to contain 8 rows in order to account for every possible combination of truth and falsity among the three statements. Here is the full truth table:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(P\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(Q\)</td>
+<td class="c m b1 r2 l0 t0 lines">\(R\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(P \imp Q\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(Q \imp R\)</td>
+<td class="c m b1 r0 l0 t0 lines">\((P \imp Q) \vee (Q \imp R)\)</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+</table></div></div></div>
+<p id="Lcz">The first three columns are simply a systematic listing of all possible combinations of T and F for the three statements (do you see how you would list the 16 possible combinations for four statements?). The next two columns are determined by the values of \(P\text{,}\) \(Q\text{,}\) and \(R\) and the definition of implication. Then, the last column is determined by the values in the previous two columns and the definition of \(\vee\text{.}\) It is this final column we care about.</p>
+<p id="rjI">Notice that in each of the eight possible cases, the statement in question is true. So our statement about monopoly is true (regardless of how many properties you own, how many doubles you roll, or whether you win or lose).</p>
+</div></div>
+</div></article><p id="KHa">The statement about monopoly is an example of a <dfn class="terminology">tautology</dfn>,  a statement which is true on the basis of its logical form alone. Tautologies are always true but they don't tell us much about the world. No knowledge about monopoly was required to determine that the statement was true. In fact, it is equally true that “If the moon is made of cheese, then Elvis is still alive, or if Elvis is still alive, then unicorns have 5 legs.”</p></section><section class="subsection" id="kaI"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Logical Equivalence</span>
+</h3>
+<a href="sec_propositional.html#kaI" class="permalink">¶</a><p id="qOj">You might have noticed in <a class="xref" data-knowl="./knowl/ex-imp-disj.html" title="Example 1.2.1">Example 1.2.1</a> that the final column in the truth table for \(\neg P \vee Q\) is identical to the final column in the truth table for \(P \imp Q\text{:}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(P\)</td>
+<td class="c m b1 r2 l0 t0 lines">\(Q\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(P \imp Q\)</td>
+<td class="c m b1 r0 l0 t0 lines">\(\neg P \vee Q\)</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+</table></div></div></div>
+<p id="WVs">This says that no matter what \(P\) and \(Q\) are, the statements \(\neg P \vee Q\) and \(P \imp Q\) either both true or both false. We therefore say these statements are <dfn class="terminology">logically equivalent</dfn>.</p>
+<article class="assemblage assemblage-like" id="cwj"><h6 class="heading"><span class="title">Logical Equivalence.</span></h6>
+<p id="wDv">Two (molecular) statements \(P\) and \(Q\) are <dfn class="terminology">logically equivalent</dfn>  provided \(P\) is true precisely when \(Q\) is true. That is, \(P\) and \(Q\) have the same truth value under any assignment of truth values to their atomic parts.</p>
+<p id="cKE">To verify that two statements are logically equivalent, you can make a truth table for each and check whether the columns for the two statements are identical.</p></article><p id="DcB">Recognizing two statements as logically equivalent can be very helpful. Rephrasing a mathematical statement can often lend insight into what it is saying, or how to prove or refute it. By using truth tables we can systematically verify that two statements are indeed logically equivalent.</p>
+<article class="example example-like" id="RXe"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
+</h6>
+<p id="OGZ">Are the statements, “it will not rain or snow” and “it will not rain and it will not snow” logically equivalent?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-dgd" id="dgd"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-dgd"><div class="solution solution-like">
+<p id="XqR">We want to know whether \(\neg(P \vee Q)\) is logically equivalent to \(\neg P \wedge \neg Q\text{.}\) Make a truth table which includes both statements:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(P\)</td>
+<td class="c m b1 r2 l0 t0 lines">\(Q\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\neg(P \vee Q)\)</td>
+<td class="c m b1 r0 l0 t0 lines">\(\neg P \wedge \neg Q\)</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+</table></div></div></div>
+<p id="Dya">Since in every row the truth values for the two statements are equal, the two statements are logically equivalent.</p>
+</div></div>
+</div></article><p id="jjK">Notice that this example gives us a way to “distribute” a negation over a disjunction (an “or”). We have a similar rule for distributing over conjunctions (“and”s):</p>
+<article class="assemblage assemblage-like" id="IDs"><h6 class="heading"><span class="title">De Morgan's Laws.</span></h6>
+<div class="displaymath" id="IRN">
+\begin{equation*}
+\neg(P \wedge Q) \text{ is logically equivalent to } \neg P \vee \neg Q\text{.}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\neg(P \vee Q) \text{ is logically equivalent to } \neg P \wedge \neg Q\text{.}
+\end{equation*}
+</div></article><p id="PqT">This suggests there might be a sort of “algebra” you could apply to statements (okay, there is: it is called <em class="emphasis">Boolean algebra</em>) to transform one statement into another. We can start collecting useful examples of logical equivalence, and apply them in succession to a statement, instead of writing out a complicated truth table.</p>
+<p id="vyc">De Morgan's laws do not do not directly help us with implications, but as we saw above, every implication can be written as a disjunction:</p>
+<article class="assemblage assemblage-like" id="oKB"><h6 class="heading"><span class="title">Implications are Disjuctions.</span></h6>
+<div class="displaymath" id="oYW">
+\begin{equation*}
+P \imp Q \text{ is logically equivalent to } \neg P \vee Q\text{.}
+\end{equation*}
+</div>
+<p id="Vgf">Example: “If a number is a multiple of 4, then it is even” is equivalent to, “a number is not a multiple of 4 or (else) it is even.”</p></article><p id="bFl">With this and De Morgan's laws, you can take any statement and <em class="emphasis">simplify</em> it to the point where negations are only being applied to atomic propositions.  Well, actually not, because you could get multiple negations stacked up.  But this can be easily dealt with:</p>
+<article class="assemblage assemblage-like" id="URK"><h6 class="heading"><span class="title">Double Negation.</span></h6>
+<div class="displaymath" id="Bno">
+\begin{equation*}
+\neg \neg P \text{ is logically equivalent to } P\text{.}
+\end{equation*}
+</div>
+<p id="hux">Example: “It is not the case that \(c\) is not odd” means “\(c\) is odd.”</p></article><p id="HMu">Let's see how we can apply the equivalences we have encountered so far.</p>
+<article class="example example-like" id="yen"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
+</h6>
+<p id="uOi">Prove that the statements \(\neg(P \imp Q)\) and \(P\wedge \neg Q\) are logically equivalent without using truth tables.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-Jnm" id="Jnm"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Jnm"><div class="solution solution-like">
+<p id="jFj">We want to start with one of the statements, and transform it into the other through a sequence of logically equivalent statements. Start with \(\neg(P \imp Q)\text{.}\) We can rewrite the implication as a disjunction this is logically equivalent to</p>
+<div class="displaymath">
+\begin{equation*}
+\neg(\neg P \vee Q)\text{.}
+\end{equation*}
+</div>
+<p>Now apply DeMorgan's law to get</p>
+<div class="displaymath">
+\begin{equation*}
+\neg\neg P \wedge \neg Q\text{.}
+\end{equation*}
+</div>
+<p>Finally, use double negation to arrive at \(P \wedge \neg Q\)</p>
+</div></div>
+</div></article><p id="nTD">Notice that the above example illustrates that the negation of an implication is NOT an implication: it is a conjunction!  We saw this before, in <a href="sec_intro-statements.html" class="internal" title="Section 1.1: Mathematical Statements">Section 1.1</a>, but it is so important and useful, it warants a second blue box here:</p>
+<article class="assemblage assemblage-like" id="AYT"><h6 class="heading"><span class="title">Negation of an Implication.</span></h6>
+<p id="NBG">The negation of an implication is a conjuction:</p>
+<div class="displaymath">
+\begin{equation*}
+\neg(P \imp Q) \text{ is logically equivalent to } P \wedge \neg Q\text{.}
+\end{equation*}
+</div>
+<p>That is, the only way for an implication to be false is for the hypothesis to be true <em class="emphasis">AND</em> the conclusion to be false.</p></article><p id="UaM">To verify that two statements are logically equivalent, you can use truth tables or a sequence of logically equivalent replacements. The truth table method, although cumbersome, has the advantage that it can verify that two statements are NOT logically equivalent.</p>
+<article class="example example-like" id="elw"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span>
+</h6>
+<p id="aVr">Are the statements \((P \vee Q) \imp R\) and \((P \imp R) \vee (Q \imp R)\) logically equivalent?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-puv" id="puv"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-puv"><div class="solution solution-like">
+<p id="vTB">Note that while we could start rewriting these statements with logically equivalent replacements in the hopes of transforming one into another, we will never be sure that our failure is due to their lack of logical equivalence rather than our lack of imagination. So instead, let's make a truth table:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(P\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(Q\)</td>
+<td class="c m b1 r2 l0 t0 lines">\(R\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((P\vee Q) \imp R\)</td>
+<td class="c m b1 r0 l0 t0 lines">\((P\imp R) \vee (Q \imp R)\)</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr><td class="c m b0 r1 l0 t0 lines"></td></tr>
+</table></div></div></div>
+<p id="caK">Look at the fourth (or sixth) row. In this case, \((P \imp R) \vee (Q \imp R)\) is true, but \((P \vee Q) \imp R\) is false. Therefore the statements are not logically equivalent.</p>
+<p id="IhT">While we don't have logical equivalence, it is the case that whenever \((P \vee Q) \imp R\) is true, so is \((P \imp R) \vee (Q \imp R)\text{.}\) This tells us that we can <em class="emphasis">deduce</em> \((P \imp R) \vee (Q \imp R)\) from \((P \vee Q) \imp R\text{,}\) just not the reverse direction.</p>
+</div></div>
+</div></article></section><section class="subsection" id="QhR"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Deductions</span>
+</h3>
+<a href="sec_propositional.html#QhR" class="permalink">¶</a><article class="project-like" id="gaJ"><h6 class="heading">
+<span class="type">Investigate!</span> </h6>
+<p id="Qwm">Holmes owns two suits: one black and one tweed. He always wears either a tweed suit or sandals. Whenever he wears his tweed suit and a purple shirt, he chooses to not wear a tie. He never wears the tweed suit unless he is also wearing either a purple shirt or sandals. Whenever he wears sandals, he also wears a purple shirt. Yesterday, Holmes wore a bow tie. What else did he wear?</p></article><p id="AhV">Earlier we claimed that the following was a valid argument:</p>
+<blockquote class="blockquote" id="alx"><p id="qep">If Edith eats her vegetables, then she can have a cookie. Edith ate her vegetables. Therefore Edith gets a cookie.</p></blockquote>
+<p id="gpe">How do we know this is valid? Let's look at the form of the statements. Let \(P\) denote “Edith eats her vegetables” and \(Q\) denote “Edith can have a cookie.” The logical form of the argument is then:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">\(P \imp Q\)</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines">\(P\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">\(\therefore\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(Q\)</td>
+</tr>
+</table></div></div></div>
+<p id="Mwn">This is an example of a <dfn class="terminology">deduction rule</dfn>,  an argument form which is always valid. This one is a particularly famous rule called <i class="foreign">modus ponens</i>.  Are you convinced that it is a valid deduction rule? If not, consider the following truth table:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(P\)</td>
+<td class="c m b1 r2 l0 t0 lines">\(Q\)</td>
+<td class="c m b1 r0 l0 t0 lines">\(P\imp Q\)</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+</table></div></div></div>
+<p id="sDw">This is just the truth table for \(P \imp Q\text{,}\) but what matters here is that all the lines in the deduction rule have their own column in the truth table. Remember that an argument is valid provided the conclusion must be true given that the premises are true. The premises in this case are \(P \imp Q\) and \(P\text{.}\) Which <em class="emphasis">rows</em> of the truth table correspond to both of these being true? \(P\) is true in the first two rows, and of those, only the first row has \(P \imp Q\) true as well. And lo-and-behold, in this one case, \(Q\) is also true. So if \(P\imp Q\) and \(P\) are both true, we see that \(Q\) must be true as well.</p>
+<p id="YKF">Here are a few more examples.</p>
+<article class="example example-like" id="COg"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span>
+</h6>
+<p id="HcA">Show that</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">\(P \imp Q\)</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines">\(\neg P \imp Q\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">\(\therefore\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(Q\)</td>
+</tr>
+</table></div></div></div>
+<p id="njJ">is a valid deduction rule.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-VBE" id="VBE"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-VBE"><div class="solution solution-like">
+<p id="opc">We make a truth table which contains all the lines of the argument form:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(P\)</td>
+<td class="c m b1 r2 l0 t0 lines">\(Q\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(P\imp Q\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\neg P\)</td>
+<td class="c m b1 r0 l0 t0 lines">\(\neg P \imp Q\)</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+</table></div></div></div>
+<p id="Uwl">(we include a column for \(\neg P\) just as a step to help getting the column for \(\neg P \imp Q\)).</p>
+<p id="ADu">Now look at all the rows for which both \(P \imp Q\) and \(\neg P \imp Q\) are true. This happens only in rows 1 and 3. Hey! In those rows \(Q\) is true as well, so the argument form is valid (it is a valid deduction rule).</p>
+</div></div>
+</div></article><article class="example example-like" id="iVp"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
+</h6>
+<p id="TqS">Decide whether</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">\(P \imp R\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">\(Q \imp R\)</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines">\(R\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">\(\therefore\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(P \vee Q\)</td>
+</tr>
+</table></div></div></div>
+<p id="zyb">is a valid deduction rule.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-BIN" id="BIN"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-BIN"><div class="solution solution-like">
+<p id="gKD">Let's make a truth table containing all four statements.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(P\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(Q\)</td>
+<td class="c m b1 r2 l0 t0 lines">\(R\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(P \imp R\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(Q \imp R\)</td>
+<td class="c m b1 r0 l0 t0 lines">\(P \vee Q\)</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+</table></div></div></div>
+<p id="MRM">Look at the second to last row. Here all three premises of the argument are true, but the conclusion is false. Thus this is not a valid deduction rule.</p>
+<p id="sYV">While we have the truth table in front of us, look at rows 1, 3, and 5. These are the only rows in which all of the statements statements \(P \imp R\text{,}\) \(Q \imp R\text{,}\) and \(P\vee Q\) are true. It also happens that \(R\) is true in these rows as well. Thus we have discovered a new deduction rule we know <em class="emphasis">is</em> valid:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">\(P \imp R\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">\(Q \imp R\)</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines">\(P \vee Q\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">\(\therefore\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(R\)</td>
+</tr>
+</table></div></div></div>
+</div></div>
+</div></article></section><section class="subsection" id="wpa"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Beyond Propositions</span>
+</h3>
+<a href="sec_propositional.html#wpa" class="permalink">¶</a><p id="ERO">As we saw in <a href="sec_intro-statements.html" class="internal" title="Section 1.1: Mathematical Statements">Section 1.1</a>, not every statement can be analyzed using logical connectives alone. For example, we might want to work with the statement:</p>
+<blockquote class="blockquote" id="GsG"><p id="Wly">All primes greater than 2 are odd.</p></blockquote>
+<p id="kYX">To write this statement symbolically, we must use quantifiers. We can translate as follows:</p>
+<div class="displaymath">
+\begin{equation*}
+\forall x ((P(x) \wedge x \gt 2) \imp O(x))\text{.}
+\end{equation*}
+</div>
+<p>In this case, we are using \(P(x)\) to denote “\(x\) is prime” and \(O(x)\) to denote “\(x\) is odd.” These are not propositions, since their truth value depends on the input \(x\text{.}\) Better to think of \(P\) and \(O\) as denoting <em class="emphasis">properties</em> of their input. The technical term for these is <dfn class="terminology">predicates</dfn> and when we study them in logic, we need to use <dfn class="terminology">predicate logic</dfn>.</p>
+<p id="Rgg">It is important to stress that predicate logic <em class="emphasis">extends</em> propositional logic (much in the way quantum mechanics extends classical mechanics). You will notice that our statement above still used the (propositional) logical connectives. Everything that we learned about logical equivalence and deductions still applies. However, predicate logic allows us to analyze statements at a higher resolution, digging down into the individual propositions \(P\text{,}\) \(Q\text{,}\) etc.</p>
+<p id="xnp">A full treatment of predicate logic is beyond the scope of this text. One reason is that there is no systematic procedure for deciding whether two statements in predicate logic are logically equivalent (i.e., there is no analogue to truth tables here). Rather, we end with a two examples of logical equivalence and deduction, to pique your interest.</p>
+<article class="example example-like" id="MhS"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.8</span><span class="period">.</span>
+</h6>
+<p id="fFk">Suppose we claim that there is no smallest number. We can translate this into symbols as</p>
+<div class="displaymath">
+\begin{equation*}
+\neg \exists x \forall y (x \le y)
+\end{equation*}
+</div>
+<p>(literally, “it is not true that there is a number \(x\) such that for all numbers \(y\text{,}\) \(x\) is less than or equal to \(y\)”).</p>
+<p id="LMt">However, we know how negation interacts with quantifiers: we can pass a negation over a quantifier by switching the quantifier type (between universal and existential). So the statement above should be <em class="emphasis">logically equivalent</em> to</p>
+<div class="displaymath">
+\begin{equation*}
+\forall x \exists y (y \lt x)\text{.}
+\end{equation*}
+</div>
+<p>Notice that \(y \lt x\) is the negation of \(x \le y\text{.}\) This literally says, “for every number \(x\) there is a number \(y\) which is smaller than \(x\text{.}\)” We see that this is another way to make our original claim.</p></article><article class="example example-like" id="spb"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.9</span><span class="period">.</span>
+</h6>
+<p id="rTC">Can you switch the order of quantifiers? For example, consider the two statements:</p>
+<div class="displaymath">
+\begin{equation*}
+\forall x \exists y P(x,y) \qquad \mathrm{ and } \qquad \exists y \forall x P(x,y)\text{.}
+\end{equation*}
+</div>
+<p>Are these logically equivalent?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-hPW" id="hPW"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-hPW"><div class="solution solution-like">
+<p id="Zge">These statements are NOT logically equivalent. To see this, we should provide an interpretation of the predicate \(P(x,y)\) which makes one of the statements true and the other false.</p>
+<p id="Fnn">Let \(P(x,y)\) be the predicate \(x \lt y\text{.}\) It is true, in the natural numbers, that for all \(x\) there is some \(y\) greater than that \(x\) (since there are infinitely many numbers). However, there is not a natural number \(y\) which is greater than every number \(x\text{.}\) Thus it is possible for \(\forall x \exists y P(x,y)\) to be true while \(\exists y \forall x P(x,y)\) is false.</p>
+<p id="luw">We cannot do the reverse of this though. If there is some \(y\) for which every \(x\) satisfies \(P(x,y)\text{,}\) then certainly for every \(x\) there is some \(y\) which satisfies \(P(x,y)\text{.}\) The first is saying we can find one \(y\) that works for every \(x\text{.}\) The second allows different \(y\)'s to work for different \(x\)'s, but there is nothing preventing us from using the same \(y\) that work for every \(x\text{.}\) In other words, while we don't have logical equivalence between the two statements, we do have a valid deduction rule:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines">\(\exists y \forall x P(x,y)\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">\(\therefore\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(\forall x \exists y P(x,y)\)</td>
+</tr>
+</table></div></div></div>
+<p id="RBF">Put yet another way, this says that the single statement</p>
+<div class="displaymath">
+\begin{equation*}
+\exists y \forall x P(x,y) \imp \forall x \exists y P(x,y)
+\end{equation*}
+</div>
+<p>is always true. This is sort of like a tautology, although we reserve that term for necessary truths in propositional logic. A statement in predicate logic that is necessarily true gets the more prestigious designation of a <dfn class="terminology">law of logic</dfn>  (or sometimes <dfn class="terminology">logically valid</dfn>,  but that is less fun).</p>
+</div></div>
+</div></article></section><section class="exercises" id="Shv"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<a href="sec_propositional.html#Shv" class="permalink">¶</a><article class="exercise exercise-like" id="iCQ"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="JTc">Consider the statement about a party, “If it's your birthday or there will be cake, then there will be cake.”</p>
+<ol class="lower-alpha">
+<li id="lbX"><p id="bmM">Translate the above statement into symbols. Clearly state which statement is \(P\) and which is \(Q\text{.}\)</p></li>
+<li id="Rjg"><p id="HtV">Make a truth table for the statement.</p></li>
+<li id="xqp"><p id="nBe">Assuming the statement is true, what (if anything) can you conclude if there will be cake?</p></li>
+<li id="dxy"><p id="TIn">Assuming the statement is true, what (if anything) can you conclude if there will not be cake?</p></li>
+<li id="JEH"><p id="zPw">Suppose you found out that the statement was a lie. What can you conclude?</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-Bqo" id="Bqo"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Bqo"><div class="solution solution-like"><ol id="bWG" class="lower-alpha">
+<li id="pLQ">\(P\text{:}\) it's your birthday; \(Q\text{:}\) there will be cake. \((P \vee Q) \imp Q\)</li>
+<li id="VSZ"><p id="fWF">Hint: you should get three T's and one F.</p></li>
+<li id="Cai"><p id="MdO">Only that there will be cake.</p></li>
+<li id="ihr"><p id="skX">It's NOT your birthday!</p></li>
+<li id="OoA"><p id="Ysg">It's your birthday, but the cake is a lie.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="OJZ"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="qal">Make a truth table for the statement \((P \vee Q) \imp (P \wedge Q)\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-hxx" id="hxx"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-hxx"><div class="solution solution-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(P\)</td>
+<td class="c m b1 r2 l0 t0 lines">\(Q\)</td>
+<td class="c m b1 r0 l0 t0 lines">\((P \vee Q) \imp (P \wedge Q)\)</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+</table></div></div></div></div></div>
+</div></article><article class="exercise exercise-like" id="uRi"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="Whu">Make a truth table for the statement \(\neg P \wedge (Q \imp P)\text{.}\) What can you conclude about \(P\) and \(Q\) if you know the statement is true?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-NEG" id="NEG"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-NEG"><div class="solution solution-like">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(P\)</td>
+<td class="c m b1 r2 l0 t0 lines">\(Q\)</td>
+<td class="c m b1 r0 l0 t0 lines">\(\neg P \wedge (Q \imp P)\)</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+</table></div></div></div>
+<p id="IdP">If the statement is true, then both \(P\) and \(Q\) are false.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="aYr"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="CoD">Make a truth table for the statement \(\neg P \imp (Q \wedge R)\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-tLP" id="tLP"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-tLP"><div class="hint solution-like"><p id="MNI">Like above, only now you will need 8 rows instead of just 4.</p></div></div>
+</div></article><article class="exercise exercise-like" id="HfA"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="ivM">Geoff Poshingten is out at a fancy pizza joint, and decides to order a calzone. When the waiter asks what he would like in it, he replies, “I want either pepperoni or sausage. Also, if I have sausage, then I must also include quail. Oh, and if I have pepperoni or quail then I must also have ricotta cheese.”</p>
+<ol class="lower-alpha">
+<li id="uvJ"><p id="Ezp">Translate Geoff's order into logical symbols.</p></li>
+<li id="aCS"><p id="kGy">The waiter knows that Geoff is either a liar or a truth-teller (so either everything he says is false, or everything is true). Which is it?</p></li>
+<li id="GKb"><p id="QNH">What, if anything, can the waiter conclude about the ingredients in Geoff's desired calzone?</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-ZSY" id="ZSY"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-ZSY"><div class="hint solution-like">
+<p id="sUR">You should write down three statements using the symbols \(P, Q, R, S\text{.}\)  If Geoff is a truth-teller, then all three statements would be true.  If he was a liar, then all three statements would be false.  But in either case, we don't yet know whether the four atomic statements are true or false, since he hasn't said them by themselves.</p>
+<p id="Zca">A truth table might help, although is probably not entirely necessary.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="nmJ"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="OCV">Determine whether the following two statements are logically equivalent: \(\neg(P \imp Q)\) and \(P \wedge \neg Q\text{.}\) Explain how you know you are correct.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-Gah" id="Gah"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Gah"><div class="solution solution-like"><p id="okY">Make a truth table for each and compare. The statements are logically equivalent.</p></div></div>
+</div></article><article class="exercise exercise-like" id="TtS"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="uKe">Are the statements \(P \imp (Q\vee R)\) and \((P \imp Q) \vee (P \imp R)\) logically equivalent?</p></article><article class="exercise exercise-like" id="zBb"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="aRn">Simplify the following statements (so that negation only appears right before variables).</p>
+<ol class="lower-alpha">
+<li id="mRk">\(\neg(P \imp \neg Q)\text{.}\)</li>
+<li id="SYt">\((\neg P \vee \neg Q) \imp \neg (\neg Q \wedge R)\text{.}\)</li>
+<li id="zfC">\(\neg((P \imp \neg Q) \vee \neg (R \wedge \neg R))\text{.}\)</li>
+<li id="fmL"><p id="wUQ">It is false that if Sam is not a man then Chris is a woman, and that Chris is not a woman.</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-mhq" id="mhq"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-mhq"><div class="solution solution-like"><ol id="Ush" class="lower-alpha">
+<li id="LtU">\(P \wedge Q\text{.}\)</li>
+<li id="rBd">\((\neg P \vee \neg R) \imp (Q \vee \neg R)\) or, replacing the implication with a disjunction first: \((P \wedge Q) \vee (Q \vee \neg R)\text{.}\)</li>
+<li id="XIm"><p id="dbZ">\((P \wedge Q) \wedge (R \wedge \neg R)\text{.}\) This is necessarily false, so it is also equivalent to \(P \wedge \neg P\text{.}\)</p></li>
+<li id="DPv"><p id="Jji">Either Sam is a woman and Chris is a man, or Chris is a woman.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="fIk"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="GYw">Use De Morgan's Laws, and any other logical equivalence facts you know to simplify the following statements. Show all your steps. Your final statements should have negations only appear directly next to the sentence variables or predicates (\(P\text{,}\) \(Q\text{,}\) \(E(x)\text{,}\) etc.), and no double negations. It would be a good idea to use only conjunctions, disjunctions, and negations.</p>
+<ol class="lower-alpha">
+<li id="jWE">\(\neg((\neg P \wedge Q) \vee \neg(R \vee \neg S))\text{.}\)</li>
+<li id="QdN">\(\neg((\neg P \imp \neg Q) \wedge (\neg Q \imp R))\) (careful with the implications).</li>
+<li id="wkW"><p id="pqr">For both parts above, verify your answers are correct using truth tables. That is, use a truth table to check that the given statement and your proposed simplification are actually logically equivalent.</p></li>
+</ol></article><article class="exercise exercise-like" id="LPt"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="nfF">Consider the statement, “If a number is triangular or square, then it is not prime”</p>
+<ol class="lower-alpha">
+<li id="csf"><p id="VxA">Make a truth table for the statement \((T \vee S) \imp \neg P\text{.}\)</p></li>
+<li id="Izo"><p id="BEJ">If you believed the statement was <em class="emphasis">false</em>, what properties would a counterexample need to possess? Explain by referencing your truth table.</p></li>
+<li id="oGx"><p id="hLS">If the statement were true, what could you conclude about the number 5657, which is definitely prime? Again, explain using the truth table.</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-Soz" id="Soz"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Soz"><div class="hint solution-like"><ol id="Fjj" class="lower-alpha">
+<li id="UNG"><p id="NTb">There will be three rows in which the statement is false.</p></li>
+<li id="AUP"><p id="uak">Consider the three rows that evaluate to false and say what the truth values of \(T\text{,}\) \(S\text{,}\) and \(P\) are there.</p></li>
+<li id="hbY"><p id="aht">You are looking for a row in which \(P\) is true, and the whole statement is true.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="rWC"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="TmO">Tommy Flanagan was telling you what he ate yesterday afternoon. He tells you, “I had either popcorn or raisins. Also, if I had cucumber sandwiches, then I had soda. But I didn't drink soda or tea.” Of course you know that Tommy is the worlds worst liar, and everything he says is false. What did Tommy eat?</p>
+<p id="ztX">Justify your answer by writing all of Tommy's statements using sentence variables (\(P, Q, R, S, T\)), taking their negations, and using these to deduce what Tommy actually ate.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-yvI" id="yvI"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-yvI"><div class="hint solution-like"><p id="lqs">Write down three statements, and then take the negation of each (since he is a liar).  You should find that Tommy ate one item and drank one item.  (\(Q\) is for cucumber sandwiches.)</p></div></div>
+</div></article><article class="exercise exercise-like" id="YdL"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<p id="fBg">Determine if the following deduction rule is valid:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">\(P \vee Q\)</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines">\(\neg P\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">\(\therefore\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(Q\)</td>
+</tr>
+</table></div></div></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-eCR" id="eCR"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-eCR"><div class="solution solution-like"><p id="Azq">The deduction rule is valid. To see this, make a truth table which contains \(P \vee Q\) and \(\neg P\) (and \(P\) and \(Q\) of course). Look at the truth value of \(Q\) in each of the rows that have \(P \vee Q\) and \(\neg P\) true.</p></div></div>
+</div></article><article class="exercise exercise-like" id="EkU"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<p id="LIp">Determine if the following is a valid deduction rule:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">\(P \imp (Q \vee R)\)</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines">\(\neg(P \imp Q)\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">\(\therefore\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(R\)</td>
+</tr>
+</table></div></div></div></article><article class="exercise exercise-like" id="ksd"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<p id="rPy">Determine if the following is a valid deduction rule:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">\((P \wedge Q) \imp R\)</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines">\(\neg P \vee \neg Q\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">\(\therefore\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(\neg R\)</td>
+</tr>
+</table></div></div></div></article><article class="exercise exercise-like" id="Qzm"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
+<p id="XWH">Can you chain implications together? That is, if \(P \imp Q\) and \(Q \imp R\text{,}\) does that means the \(P \imp R\text{?}\) Can you chain more implications together? Let's find out:</p>
+<ol class="lower-alpha">
+<li id="Njh">
+<p id="GoC">Prove that the following is a valid deduction rule:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">\(P \imp Q\)</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines">\(Q \imp R\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">\(\therefore\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(P \imp R\)</td>
+</tr>
+</table></div></div></div>
+</li>
+<li id="tqq">
+<p id="mvL">Prove that the following is a valid deduction rule for any \(n \ge 2\text{:}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">\(P_1 \imp P_2\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">\(P_2 \imp P_3\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">\(\vdots\)</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines">\(P_{n-1} \imp P_n\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">\(\therefore\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(P_1 \imp P_n\text{.}\)</td>
+</tr>
+</table></div></div></div>
+<p id="SCU">I suggest you don't go through the trouble of writing out a \(2^n\) row truth table. Instead, you should use part (a) and mathematical induction.</p>
+</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-KKa" id="KKa"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-KKa"><div class="hint solution-like"><p id="RxB">For the second part, you can inductively assume that from the first \(n-2\) implications you can deduce \(P_1 \imp P_{n-1}\text{.}\)  Then you are back in the case in part (a) again.</p></div></div>
+</div></article><article class="exercise exercise-like" id="wGv"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
+<p id="EdQ">We can also simplify statements in predicate logic using our rules for passing negations over quantifiers, and then applying propositional logical equivalence to the “inside” propositional part. Simplify the statements below (so negation appears only directly next to predicates).</p>
+<ol class="lower-alpha">
+<li id="Zxz">\(\neg \exists x \forall y (\neg O(x) \vee E(y))\text{.}\)</li>
+<li id="FEI">\(\neg \forall x \neg \forall y \neg(x \lt y \wedge \exists z (x \lt z \vee y \lt z))\text{.}\)</li>
+<li id="lLR"><p id="yKd">There is a number \(n\) for which no other number is either less \(n\) than or equal to \(n\text{.}\)</p></li>
+<li id="RTa"><p id="eRm">It is false that for every number \(n\) there are two other numbers which \(n\) is between.</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-qRj" id="qRj"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-qRj"><div class="solution solution-like"><ol id="gGz" class="lower-alpha">
+<li id="yaj">\(\forall x \exists y (O(x) \wedge \neg E(y))\text{.}\)</li>
+<li id="ehs">\(\exists x \forall y (x \ge y \vee \forall z (x \ge z \wedge y \ge z))\text{.}\)</li>
+<li id="KoB"><p id="KYv">There is a number \(n\) for which every other number is strictly greater than \(n\text{.}\)</p></li>
+<li id="qvK"><p id="rfE">There is a number \(n\) which is not between any other two numbers.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="cNE"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
+<p id="kkZ">Simplify the statements below to the point that negation symbols occur only directly next to predicates.</p>
+<ol class="lower-alpha">
+<li id="WCT"><p id="XmN">\(\neg \forall x \forall y (x \lt y \vee y \lt x)\text{.}\)</p></li>
+<li id="CKc"><p id="DtW">\(\neg(\exists x P(x) \imp \forall y P(y))\text{.}\)</p></li>
+</ol></article><article class="exercise exercise-like" id="IUN"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
+<p id="Qsi">Simplifying negations will be especially useful in the next section when we try to prove a statement by considering what would happen if it were false.  For each statement below, write the <em class="emphasis">negation</em> of the statement as simply as possible.  Don't just say, “it is false that …”.</p>
+<ol class="lower-alpha">
+<li id="iRl"><p id="jBf">Every number is either even or odd.</p></li>
+<li id="OYu"><p id="PIo">There is a sequence that is both arithmetic and geometric.</p></li>
+<li id="vfD"><p id="vPx">For all numbers \(n\text{,}\) if \(n\) is prime, then \(n+3\) is not prime.</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-WYs" id="WYs"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-WYs"><div class="hint solution-like"><p id="xEK">It might help to translate the statements into symbols and then use the formulaic rules to simplify negations (i.e., rules for quantifiers and De Morgan's laws).  After simplifying, you should get \(\forall x(\neg E(x) \wedge \neg O(x))\text{,}\) for the first one, for example.  Then translate this back into English.</p></div></div>
+</div></article><article class="exercise exercise-like" id="pbW"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
+<p id="wzr">Suppose \(P\) and \(Q\) are (possibly molecular) propositional statements. Prove that \(P\) and \(Q\) are logically equivalent if any only if \(P \iff Q\) is a tautology.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-DfB" id="DfB"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-DfB"><div class="hint solution-like"><p id="dLT">What do these concepts mean in terms of truth tables?</p></div></div>
+</div></article><article class="exercise exercise-like" id="Vjf"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
+<p id="cGA">Suppose \(P_1, P_2, \ldots, P_n\) and \(Q\) are (possibly molecular) propositional statements. Suppose further that</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(P_1\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(P_2\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\vdots\)</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">\(P_n\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\therefore\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(Q\)</td>
+</tr>
+</table></div></div></div>
+<p id="INJ">is a valid deduction rule. Prove that the statement</p>
+<div class="displaymath">
+\begin{equation*}
+(P_1 \wedge P_2 \wedge \cdots \wedge P_n) \imp Q
+\end{equation*}
+</div>
+<p>is a tautology.</p></article></section></section></div></main>
+</div>
+<!--Start: Google Universal code-->
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-66485406-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!--End: Google Universal code-->
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.13/login.js"></script>
+</body>
+</html>

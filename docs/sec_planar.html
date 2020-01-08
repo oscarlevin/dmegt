@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-01-07T16:45:57-07:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Planar Graphs</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-dev.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-dev.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script>(function() {
+  var cx = '000445521324161818100:qhc2ahxtur8';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.13;
+</script>
+</head>
+<body id="levin-DMOI" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://discrete.openmathbooks.org/dmoi3.html" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="dmoi.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">early Graph Theory</span></a></h1>
+<p class="byline">Oscar Levin</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_logic-induction.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ch_counting.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_logic-induction.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ch_counting.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="RGW"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="xOf">Preface</a></li>
+<li><a href="preface-2.html" data-scroll="dVo">How to use this book</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_graphtheory.html" data-scroll="gBz"><span class="codenumber">0</span> <span class="title">Graphs and other Discrete Structures</span></a><ul>
+<li><a href="sec_intro-intro.html" data-scroll="hPw">What is Discrete Mathematics?</a></li>
+<li><a href="sec_gt-intro.html" data-scroll="HLu">Graph Theory</a></li>
+<li><a href="sec_intro-sets.html" data-scroll="ltW">Sets</a></li>
+<li><a href="sec_intro-functions.html" data-scroll="CkQ">Functions</a></li>
+<li><a href="sec_gt-carefully.html" data-scroll="HLu">Graph Done Right</a></li>
+<li><a href="sec_coloring.html" data-scroll="qyO">Coloring</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logic.html" data-scroll="wur"><span class="codenumber">1</span> <span class="title">Symbolic Logic and Proofs</span></a><ul>
+<li><a href="sec_intro-statements.html" data-scroll="QDd">Mathematical Statements</a></li>
+<li><a href="sec_propositional.html" data-scroll="XMq">Propositional Logic</a></li>
+<li><a href="sec_logic-proofs.html" data-scroll="lnf">Proofs</a></li>
+<li><a href="sec_paths.html" data-scroll="tPg">Euler Paths and Circuits</a></li>
+<li><a href="sec_trees.html" data-scroll="gor">Trees</a></li>
+<li><a href="sec_logic-induction.html" data-scroll="lnf">Mathematical Induction</a></li>
+<li><a href="sec_planar.html" data-scroll="ttH" class="active">Planar Graphs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_counting.html" data-scroll="raE"><span class="codenumber">2</span> <span class="title">Counting</span></a><ul>
+<li><a href="sec_counting-pascal.html" data-scroll="sJa">Pascal's Triangle</a></li>
+<li><a href="sec_counting-addmult.html" data-scroll="sJa">Additive and Multiplicative Principles</a></li>
+<li><a href="sec_counting-binom.html" data-scroll="vZs">Binomial Coefficients</a></li>
+<li><a href="sec_counting-combperm.html" data-scroll="yda">Combinations and Permutations</a></li>
+<li><a href="sec_comb-proofs.html" data-scroll="SUg">Combinatorial Proofs</a></li>
+<li><a href="sec_stars-and-bars.html" data-scroll="qkt">Stars and Bars</a></li>
+<li><a href="sec_advPIE.html" data-scroll="HKU">Advanced Counting Using PIE</a></li>
+<li><a href="sec_count-conc.html" data-scroll="Bmb">Chapter Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_sequences.html" data-scroll="KxW"><span class="codenumber">3</span> <span class="title">Sequences</span></a><ul>
+<li><a href="sec_seq_intro.html" data-scroll="tgm">Describing Sequences</a></li>
+<li><a href="sec_seq-arithgeom.html" data-scroll="lIR">Arithmetic and Geometric Sequences</a></li>
+<li><a href="sec_polyfit.html" data-scroll="ylR">Polynomial Fitting</a></li>
+<li><a href="sec_recurrence.html" data-scroll="bcV">Solving Recurrence Relations</a></li>
+<li><a href="sec_seq-induction.html" data-scroll="Prg">Induction</a></li>
+<li><a href="sec_addtops-genfun.html" data-scroll="XaJ">Generating Functions</a></li>
+<li><a href="sec_sequences-conc.html" data-scroll="YaY">Chapter Summary</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="mqL"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="SxU"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="yFd"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="GjC"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="ttH"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.7</span> <span class="title">Planar Graphs</span>
+</h2>
+<a href="sec_planar.html" class="permalink">¶</a><section class="introduction" id="fZW"><article class="project-like" id="Mhf"><h6 class="heading">
+<span class="type">Investigate!</span> </h6>
+<p id="FmA">When a connected graph can be drawn without any edges crossing, it is called <dfn class="terminology">planar</dfn>. When a planar graph is drawn in this way, it divides the plane into regions called <dfn class="terminology">faces</dfn>.</p>
+<ol class="decimal">
+<li id="dfq"><p id="BIa">Draw, if possible, two different planar graphs with the same number of vertices, edges, and faces.</p></li>
+<li id="Jmz"><p id="hPj">Draw, if possible, two different planar graphs with the same number of vertices and edges, but a different number of faces.</p></li>
+</ol></article><p id="ltJ">When is it possible to draw a graph so that none of the edges cross? If this <em class="emphasis">is</em> possible, we say the graph is <dfn class="terminology">planar</dfn>  (since you can draw it on the <em class="emphasis">plane</em>).</p>
+<p id="RAS">Notice that the definition of planar includes the phrase “it is possible to.” This means that even if a graph does not look like it is planar, it still might be. Perhaps you can redraw it in a way in which no edges cross. For example, this is a planar graph:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-122.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="xIb">That is because we can redraw it like this:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-123.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="dPk">The graphs are the same, so if one is planar, the other must be too. However, the original drawing of the graph was not a <dfn class="terminology">planar representation</dfn> of the graph.</p>
+<p id="JWt">When a planar graph is drawn without edges crossing, the edges and vertices of the graph divide the plane into regions. We will call each region a <dfn class="terminology">face</dfn>.  The graph above has 3 faces (yes, we <em class="emphasis">do</em> include the “outside” region as a face). The number of faces does not change no matter how you draw the graph (as long as you do so without the edges crossing), so it makes sense to ascribe the number of faces as a property of the planar graph.</p>
+<p id="qdC">WARNING: you can only count faces when the graph is drawn in a planar way. For example, consider these two representations of the same graph:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:13.75%;margin-right:13.75%;">
+<div class="sbspanel" style="width:27.5862068965517%;justify-content:flex-end;"><img src="images/image-124.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:34.4827586206897%;justify-content:flex-end;"><img src="images/image-125.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="WkL">If you try to count faces using the graph on the left, you might say there are 5 faces (including the outside). But drawing the graph with a planar representation shows that in fact there are only 4 faces.</p>
+<p id="CrU">There is a connection between the number of vertices (\(v\)), the number of edges (\(e\)) and the number of faces (\(f\)) in any connected planar graph. This relationship is called Euler's formula.</p>
+<article class="assemblage assemblage-like" id="lPi"><h6 class="heading"><span class="title">Euler's Formula for Planar Graphs.</span></h6>
+<p id="izd">For any (connected) planar graph with \(v\) vertices, \(e\) edges and \(f\) faces, we have</p>
+<div class="displaymath">
+\begin{equation*}
+v-e + f = 2\text{.}
+\end{equation*}
+</div></article><p id="OGm">Why is Euler's formula true? One way to convince yourself of its validity is to draw a planar graph step by step. Start with the graph \(P_2\text{:}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:45%;margin-right:45%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-126.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="uNv">Any connected graph (besides just a single isolated vertex) must contain this subgraph. Now build up to your graph by adding edges and vertices. Each step will consist of either adding a new vertex connected by a new edge to part of your graph (so creating a new “spike”) or by connecting two vertices already in the graph with a new edge (completing a circuit).</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;">
+<div class="sbspanel" style="width:40%;justify-content:flex-end;"><img src="images/image-127.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:26.6666666666667%;justify-content:flex-end;"><img src="images/image-128.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="aUE">What do these “moves” do? When adding the spike, the number of edges increases by 1, the number of vertices increases by one, and the number of faces remains the same. But this means that \(v - e + f\) does not change. Completing a circuit adds one edge, adds one face, and keeps the number of vertices the same. So again, \(v - e + f\) does not change.</p>
+<p id="HbN">Since we can build any graph using a combination of these two moves, and doing so never changes the quantity \(v - e + f\text{,}\) that quantity will be the same for all graphs. But notice that our starting graph \(P_2\) has \(v = 2\text{,}\) \(e = 1\) and \(f = 1\text{,}\) so \(v - e + f = 2\text{.}\) This argument is essentially a proof by induction. A good exercise would be to rewrite it as a formal induction proof.</p></section><section class="subsection" id="ZAQ"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Non-planar Graphs</span>
+</h3>
+<a href="sec_planar.html#ZAQ" class="permalink">¶</a><article class="project-like" id="qzb"><h6 class="heading">
+<span class="type">Investigate!</span> </h6>
+<p id="niW">For the complete graphs \(K_n\text{,}\) we would like to be able to say something about the number of vertices, edges, and (if the graph is planar) faces. Let's first consider \(K_3\text{:}\)</p>
+<ol class="decimal">
+<li id="ptI"><p id="NWs">How many vertices does \(K_3\) have? How many edges?</p></li>
+<li id="VAR"><p id="udB">If \(K_3\) is planar, how many faces should it have?</p></li>
+</ol>
+<p id="Tqf">Repeat parts (1) and (2) for \(K_4\text{,}\) \(K_5\text{,}\) and \(K_{23}\text{.}\)</p>
+<p id="zxo">What about complete bipartite graphs? How many vertices, edges, and faces (if it were planar) does \(K_{7,4}\) have? For which values of \(m\) and \(n\) are \(K_n\) and \(K_{m,n}\) planar?</p></article><p id="rSP">Not all graphs are planar. If there are too many edges and too few vertices, then some of the edges will need to intersect. The smallest graph where this happens is \(K_5\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-129.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="XZY">If you try to redraw this without edges crossing, you quickly get into trouble. There seems to be one edge too many. In fact, we can prove that no matter how you draw it, \(K_5\) will always have edges crossing.</p>
+<article class="theorem theorem-like" id="RWr"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.7.1</span><span class="period">.</span>
+</h6>
+<p id="gJQ">\(K_5\) is not planar.</p></article><article class="proof" id="Yvx"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="mzc">The proof is by contradiction. So assume that \(K_5\) is planar. Then the graph must satisfy Euler's formula for planar graphs. \(K_5\) has 5 vertices and 10 edges, so we get</p>
+<div class="displaymath">
+\begin{equation*}
+5 - 10 + f = 2\text{,}
+\end{equation*}
+</div>
+<p>which says that if the graph is drawn without any edges crossing, there would be \(f = 7\) faces.</p>
+<p id="SGl">Now consider how many edges surround each face. Each face must be surrounded by at least 3 edges. Let \(B\) be the total number of <em class="emphasis">boundaries</em> around all the faces in the graph. Thus we have that \(3f \le B\text{.}\) But also \(B = 2e\text{,}\) since each edge is used as a boundary exactly twice. Putting this together we get</p>
+<div class="displaymath">
+\begin{equation*}
+3f \le 2e\text{.}
+\end{equation*}
+</div>
+<p id="yNu">But this is impossible, since we have already determined that \(f = 7\) and \(e = 10\text{,}\) and \(21 \not\le 20\text{.}\) This is a contradiction so in fact \(K_5\) is not planar.</p></article><p id="Ehh">The other simplest graph which is not planar is \(K_{3,3}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-130.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="koq">Proving that \(K_{3,3}\) is not planar answers the houses and utilities puzzle: it is not possible to connect each of three houses to each of three utilities without the lines crossing.</p>
+<article class="theorem theorem-like" id="ydA"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.7.2</span><span class="period">.</span>
+</h6>
+<p id="MQZ">\(K_{3,3}\) is not planar.</p></article><article class="proof" id="ECG"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="eUD">Again, we proceed by contradiction. Suppose \(K_{3,3}\) were planar. Then by Euler's formula there will be 5 faces, since \(v = 6\text{,}\) \(e = 9\text{,}\) and \(6 - 9 + f = 2\text{.}\)</p>
+<p id="LbM">How many boundaries surround these 5 faces? Let \(B\) be this number. Since each edge is used as a boundary twice, we have \(B = 2e\text{.}\) Also, \(B \ge 4f\) since each face is surrounded by 4 or more boundaries. We know this is true because \(K_{3,3}\) is bipartite, so does not contain any 3-edge cycles. Thus</p>
+<div class="displaymath">
+\begin{equation*}
+4f \le 2e\text{.}
+\end{equation*}
+</div>
+<p id="riV">But this would say that \(20 \le 18\text{,}\) which is clearly false. Thus \(K_{3,3}\) is not planar.</p></article><p id="Qvz">Note the similarities and differences in these proofs. Both are proofs by contradiction, and both start with using Euler's formula to derive the (supposed) number of faces in the graph. Then we find a relationship between the number of faces and the number of edges based on how many edges surround each face. This is the only difference. In the proof for \(K_5\text{,}\) we got \(3f \le 2e\) and for \(K_{3,3}\) we go \(4f \le 2e\text{.}\) The coefficient of \(f\) is the key. It is the smallest number of edges which could surround any face. If some number of edges surround a face, then these edges form a cycle. So that number is the size of the smallest cycle in the graph.</p>
+<p id="wCI">In general, if we let \(g\) be the size of the smallest cycle in a graph (\(g\) stands for <em class="emphasis">girth</em>,  which is the technical term for this) then for any planar graph we have \(gf \le 2e\text{.}\) When this disagrees with Euler's formula, we know for sure that the graph cannot be planar.</p></section><section class="subsection" id="FHZ"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Polyhedra</span>
+</h3>
+<a href="sec_planar.html#FHZ" class="permalink">¶</a><article class="project-like" id="viU"><h6 class="heading">
+<span class="type">Investigate!</span> </h6>
+<p id="fEx">A cube  is an example of a convex polyhedron. It contains 6 identical squares for its faces, 8 vertices, and 12 edges. The cube is a <dfn class="terminology">regular polyhedron</dfn> (also known as a <dfn class="terminology">Platonic solid</dfn>)  because each face is an identical regular polygon and each vertex joins an equal number of faces.</p>
+<p id="LLG">There are exactly four other regular polyhedra: the tetrahedron, octahedron, dodecahedron, and icosahedron with 4, 8, 12 and 20 faces respectively. How many vertices and edges do each of these have?</p></article><p id="cJR">Another area of mathematics where you might have heard the terms “vertex,” “edge,” and “face” is geometry. A <dfn class="terminology">polyhedron</dfn>  is a geometric solid made up of flat polygonal faces joined at edges and vertices. We are especially interested in <dfn class="terminology">convex</dfn>  polyhedra, which means that any line segment connecting two points on the interior of the polyhedron must be entirely contained inside the polyhedron.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-12" id="fn-12"><sup> 7 </sup></a></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-12"><div class="fn">An alternative definition for convex is that the internal angle formed by any two faces must be less than \(180\deg\text{.}\)</div></div>
+<p id="IRa">Notice that since \(8 - 12 + 6 = 2\text{,}\) the vertices, edges and faces of a cube satisfy Euler's formula for planar graphs. This is not a coincidence. We can represent a cube as a planar graph by projecting the vertices and edges onto the plane. One such projection looks like this:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-131.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="oYj">In fact, <em class="emphasis">every</em> convex polyhedron can be projected onto the plane without edges crossing. Think of placing the polyhedron inside a sphere, with a light at the center of the sphere. The edges and vertices of the polyhedron cast a shadow onto the interior of the sphere. You can then cut a hole in the sphere in the middle of one of the projected faces and “stretch” the sphere to lie down flat on the plane. The face that was punctured becomes the “outside” face of the planar graph.</p>
+<p id="Vfs">The point is, we can apply what we know about graphs (in particular planar graphs) to convex polyhedra. Since every convex polyhedron can be represented as a planar graph, we see that Euler's formula for planar graphs holds for all convex polyhedra as well. We also can apply the same sort of reasoning we use for graphs in other contexts to convex polyhedra. For example, we know that there is no convex polyhedron with 11 vertices all of degree 3, as this would make 33/2 edges.</p>
+<article class="example example-like" id="iUC"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.7.3</span><span class="period">.</span>
+</h6>
+<p id="Zfr">Is there a convex polyhedron consisting of three triangles and six pentagons? What about three triangles, six pentagons and five heptagons (7-sided polygons)?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-soo" id="soo"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-soo"><div class="solution solution-like">
+<p id="akK">How many edges would such polyhedra have? For the first proposed polyhedron, the triangles would contribute a total of 9 edges, and the pentagons would contribute 30. However, this counts each edge twice (as each edge borders exactly two faces), giving 39/2 edges, an impossibility. There is no such polyhedron.</p>
+<p id="GrT">The second polyhedron does not have this obstacle. The extra 35 edges contributed by the heptagons give a total of 74/2 = 37 edges. So far so good. Now how many vertices does this supposed polyhedron have? We can use Euler's formula. There are 14 faces, so we have \(v - 37 + 14 = 2\) or equivalently \(v = 25\text{.}\) But now use the vertices to count the edges again. Each vertex must have degree <em class="emphasis">at least</em> three (that is, each vertex joins at least three faces since the interior angle of all the polygons must be less that \(180^\circ\)), so the sum of the degrees of vertices is at least 75. Since the sum of the degrees must be exactly twice the number of edges, this says that there are strictly more than 37 edges. Again, there is no such polyhedron.</p>
+</div></div>
+</div></article><p id="BmB">To conclude this application of planar graphs, consider the regular polyhedra. We claimed there are only five. How do we know this is true? We can prove it using graph theory.</p>
+<article class="theorem theorem-like" id="WGk"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.7.4</span><span class="period">.</span>
+</h6>
+<p id="sYi">There are exactly five regular polyhedra.</p></article><article class="proof" id="kJP"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="Xqe">Recall that all the faces of a regular polyhedron are identical regular polygons, and that each vertex has the same degree. Consider four cases, depending on the type of regular polygon.</p>
+<p id="Dxn">Case 1: Each face is a triangle. Let \(f\) be the number of faces. There are then \(3f/2\) edges. Using Euler's formula we have \(v - 3f/2 + f = 2\) so \(v = 2 + f/2\text{.}\) Now each vertex has the same degree, say \(k\text{.}\) So the number of edges is also \(kv/2\text{.}\) Putting this together gives</p>
+<div class="displaymath">
+\begin{equation*}
+e = \frac{3f}{2} = \frac{k(2+f/2)}{2}\text{,}
+\end{equation*}
+</div>
+<p>which says</p>
+<div class="displaymath">
+\begin{equation*}
+k = \frac{6f}{4+f}\text{.}
+\end{equation*}
+</div>
+<p id="PLF">Both \(k\) and \(f\) must be positive integers. Note that \(\frac{6f}{4+f}\) is an increasing function for positive \(f\text{,}\) bounded above by a horizontal asymptote at \(f=6\text{.}\) Thus the only possible values for \(k\) are 3, 4, and 5. Each of these are possible. To get \(k = 3\text{,}\) we need \(f = 4\) (this is the tetrahedron).  For \(k = 4\) we take \(f = 8\) (the octahedron).  For \(k = 5\) take \(f = 20\) (the icosahedron).  Thus there are exactly three regular polyhedra with triangles for faces.</p>
+<p id="vSO">Case 2: Each face is a square. Now we have \(e = 4f/2 = 2f\text{.}\) Using Euler's formula we get \(v = 2 + f\text{,}\) and counting edges using the degree \(k\) of each vertex gives us</p>
+<div class="displaymath">
+\begin{equation*}
+e = 2f = \frac{k(2+f)}{2}\text{.}
+\end{equation*}
+</div>
+<p id="bZX">Solving for \(k\) gives</p>
+<div class="displaymath">
+\begin{equation*}
+k = \frac{4f}{2+f} = \frac{8f}{4+2f}\text{.}
+\end{equation*}
+</div>
+<p id="Ihg">This is again an increasing function, but this time the horizontal asymptote is at \(k = 4\text{,}\) so the only possible value that \(k\) could take is 3. This produces 6 faces, and we have a cube. There is only one regular polyhedron with square faces.</p>
+<p id="oop">Case 3: Each face is a pentagon. We perform the same calculation as above, this time getting \(e = 5f/2\) so \(v = 2 + 3f/2\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+e = \frac{5f}{2} = \frac{k(2+3f/2)}{2}\text{,}
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+k = \frac{10f}{4+3f}\text{.}
+\end{equation*}
+</div>
+<p id="Uvy">Now the horizontal asymptote is at \(\frac{10}{3}\text{.}\) This is less than 4, so we can only hope of making \(k = 3\text{.}\) We can do so by using 12 pentagons, getting the dodecahedron.  This is the only regular polyhedron with pentagons as faces.</p>
+<p id="ACH">Case 4: Each face is an \(n\)-gon with \(n \ge 6\text{.}\) Following the same procedure as above, we deduce that</p>
+<div class="displaymath">
+\begin{equation*}
+k = \frac{2nf}{4+(n-2)f}\text{,}
+\end{equation*}
+</div>
+<p>which will be increasing to a horizontal asymptote of \(\frac{2n}{n-2}\text{.}\) When \(n = 6\text{,}\) this asymptote is at \(k = 3\text{.}\) Any larger value of \(n\) will give an even smaller asymptote. Therefore no regular polyhedra exist with faces larger than pentagons.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-13" id="fn-13"><sup> 8 </sup></a></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-13"><div class="fn">Notice that you can tile the plane with hexagons. This is an infinite planar graph; each vertex has degree 3. These infinitely many hexagons correspond to the limit as \(f \to \infty\) to make \(k = 3\text{.}\)</div></div></article></section><section class="exercises" id="Pey"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<a href="sec_planar.html#Pey" class="permalink">¶</a><article class="exercise exercise-like" id="Vpj"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="kcI">Is it possible for a planar graph to have 6 vertices, 10 edges and 5 faces? Explain.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-jsO" id="jsO"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-jsO"><div class="solution solution-like"><p id="VZd">No. A (connected) planar graph must satisfy Euler's formula: \(v - e + f = 2\text{.}\) Here \(v - e + f = 6 - 10 + 5 = 1\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="Bws"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="QjR">The graph \(G\) has 6 vertices with degrees \(2, 2, 3, 4, 4, 5\text{.}\) How many edges does \(G\) have? Could \(G\) be planar? If so, how many faces would it have. If not, explain.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-PzX" id="PzX"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-PzX"><div class="solution solution-like"><p id="Cgm">\(G\) has 10 edges, since \(10 = \frac{2+2+3+4+4+5}{2}\text{.}\) It could be planar, and then it would have 6 faces, using Euler's formula: \(6-10+f = 2\) means \(f = 6\text{.}\) To make sure that it is actually planar though, we would need to draw a graph with those vertex degrees without edges crossing. This can be done by trial and error (and is possible).</p></div></div>
+</div></article><article class="exercise exercise-like" id="hDB"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="wra">Is it possible for a connected graph with 7 vertices and 10 edges to be drawn so that no edges cross and create 4 faces?  Explain.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-vHg" id="vHg"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-vHg"><div class="hint solution-like"><p id="fsP">What would Euler's formula tell you?</p></div></div>
+</div></article><article class="exercise exercise-like" id="NKK"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="cyj">Is it possible for a graph with 10 vertices and edges to be a connected planar graph?  Explain.</p></article><article class="exercise exercise-like" id="tRT"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="IFs">Is there a connected planar graph with an odd number of faces where every vertex has degree 6?  Prove your answer.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-bOp" id="bOp"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-bOp"><div class="hint solution-like"><p id="LzY">You can use the handshake lemma to find the number of edges, in terms of \(v\text{,}\) the number of vertices.</p></div></div>
+</div></article><article class="exercise exercise-like" id="ZZc"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="oMB">I'm thinking of a polyhedron containing 12 faces. Seven are triangles and four are quadralaterals. The polyhedron has 11 vertices including those around the mystery face. How many sides does the last face have?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-HVy" id="HVy"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-HVy"><div class="solution solution-like"><p id="inv">Say the last polyhedron has \(n\) edges, and also \(n\) vertices. The total number of edges the polyhedron has then is \((7 \cdot 3 + 4 \cdot 4 + n)/2 = (37 + n)/2\text{.}\) In particular, we know the last face must have an odd number of edges. We also have that \(v = 11 \text{.}\) By Euler's formula, we have \(11 - (37+n)/2 + 12 = 2\text{,}\) and solving for \(n\) we get \(n = 5\text{,}\) so the last face is a pentagon.</p></div></div>
+</div></article><article class="exercise exercise-like" id="Ggl"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="UTK">Consider some classic polyhedrons.</p>
+<ol class="lower-alpha">
+<li id="lib"><p id="dDC">An <em class="emphasis">octahedron</em> is a regular polyhedron made up of 8 equilateral triangles (it sort of looks like two pyramids with their bases glued together). Draw a planar graph representation of an octahedron. How many vertices, edges and faces does an octahedron (and your graph) have?</p></li>
+<li id="Rpk"><p id="JKL">The traditional design of a soccer ball is in fact a (spherical projection of a) truncated icosahedron. This consists of 12 regular pentagons and 20 regular hexagons. No two pentagons are adjacent (so the edges of each pentagon are shared only by hexagons). How many vertices, edges, and faces does a truncated icosahedron have? Explain how you arrived at your answers. Bonus: draw the planar graph representation of the truncated icosahedron.</p></li>
+<li id="xwt"><p id="pRU">Your “friend” claims that he has constructed a convex polyhedron out of 2 triangles, 2 squares, 6 pentagons and 5 octagons. Prove that your friend is lying. Hint: each vertex of a convex polyhedron must border at least three faces.</p></li>
+</ol></article><article class="exercise exercise-like" id="mnu"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="BaT">Prove Euler's formula using induction on the number of edges in the graph.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-ocH" id="ocH"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-ocH"><div class="solution solution-like"><article class="proof" id="UjQ"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="OuE">Let \(P(n)\) be the statement, “every connected planar graph containing \(n\) edges satisfies \(v - n + f = 2\text{.}\)” We will show \(P(n)\) is true for all \(n \ge 0\text{.}\)</p>
+<p id="uBN">Base case: there is only one graph with zero edges, namely a single isolated vertex. In this case \(v = 1\text{,}\) \(f = 1\) and \(e = 0\text{,}\) so Euler's formula holds.</p>
+<p id="aIW">Inductive case: Suppose \(P(k)\) is true for some arbitrary \(k \ge 0\text{.}\) Now consider an arbitrary graph containing \(k+1\) edges (and \(v\) vertices and \(f\) faces). No matter what this graph looks like, we can remove a single edge to get a graph with \(k\) edges which we can apply the inductive hypothesis to.</p>
+<p id="GQf">There are two cases: either the graph contains a cycle or it does not. If the graph contains a cycle, then pick an edge that is part of this cycle, and remove it.  This will not disconnect the graph, and will decrease the number of faces by 1 (since the edge was bordering two distinct faces).  So by the inductive hypothesis we will have \(v - k + f-1 = 2\text{.}\) Adding the edge back will give \(v - (k+1) + f = 2\) as needed.</p>
+<p id="mXo">If the graph does not contain a cycle, then it is a tree, so has a vertex of degree 1.  Then we can pick the edge to remove to be incident to such a degree 1 vertex. In this case, also remove that vertex. The smaller graph will now satisfy \(v-1 - k + f = 2\) by the induction hypothesis (removing the edge and vertex did not reduce the number of faces). Adding the edge and vertex back gives \(v - (k+1) + f = 2\text{,}\) as required.</p>
+<p id="Tex">Therefore, by the principle of mathematical induction, Euler's formula holds for all planar graphs.</p></article></div></div>
+</div></article><article class="exercise exercise-like" id="SuD"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="hic">Prove Euler's formula using induction on the number of <em class="emphasis">vertices</em> in the graph.</p></article><article class="exercise exercise-like" id="yBM"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="Npl">Euler's formula (\(v - e + f = 2\)) holds for all <em class="emphasis">connected</em> planar graphs. What if a graph is not connected? Suppose a planar graph has two components. What is the value of \(v - e + f\) now? What if it has \(k\) components?</p></article><article class="exercise exercise-like" id="eIV"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="twu">Prove that the <em class="emphasis">Petersen graph</em>  (below) is not planar.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:36%;margin-right:36%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-132.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-AqZ" id="AqZ"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-AqZ"><div class="hint solution-like"><p id="rHh">What is the length of the shortest cycle? (This quantity is usually called the <dfn class="terminology">girth</dfn> of the graph.)</p></div></div>
+</div></article><article class="exercise exercise-like" id="KQe"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<p id="ZDD">Prove that any planar graph with \(v\) vertices and \(e\) edges satisfies \(e \le 3v - 6\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-gyi" id="gyi"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-gyi"><div class="solution solution-like"><article class="proof" id="MFr"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="zlG">We know in any planar graph the number of faces \(f\) satisfies \(3f \le 2e\) since each face is bounded by at least three edges, but each edge borders two faces. Combine this with Euler's formula:</p>
+<div class="displaymath">
+\begin{equation*}
+v - e + f = 2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+v - e + \frac{2e}{3} \ge 2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+3v - e \ge 6
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+3v - 6 \ge e\text{.}
+\end{equation*}
+</div></article></div></div>
+</div></article><article class="exercise exercise-like" id="qXn"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<p id="FKM">Prove that any planar graph must have a vertex of degree 5 or less.</p></article><article class="exercise exercise-like" id="Xew"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<p id="lRV">Give a careful proof that the graph below is not planar.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/img-grotzsch1.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-sMA" id="sMA"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-sMA"><div class="hint solution-like"><p id="XOq">The girth of the graph is 4.</p></div></div>
+</div></article><article class="exercise exercise-like" id="DlF"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
+<p id="RZe">Explain why we cannot use the same sort of proof we did in <a class="xref" data-knowl="./knowl/exr-grotzsch-nonplanar.html" title="Exercise 1.7.14">Exercise 1.7.14</a> to prove that the graph below is not planar.  Then explain how you know the graph is not planar anyway.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/img-grotzsch-plus.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-YTJ" id="YTJ"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-YTJ"><div class="hint solution-like"><p id="DVz">What has happened to the girth?  Careful: we have a different number of edges as well.  Better check Euler's formula.</p></div></div>
+</div></article></section></section></div></main>
+</div>
+<!--Start: Google Universal code-->
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-66485406-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!--End: Google Universal code-->
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.13/login.js"></script>
+</body>
+</html>

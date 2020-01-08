@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-01-07T16:46:35-07:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution solution-like">
+<p>Note that while we could start rewriting these statements with logically equivalent replacements in the hopes of transforming one into another, we will never be sure that our failure is due to their lack of logical equivalence rather than our lack of imagination. So instead, let's make a truth table:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(P\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(Q\)</td>
+<td class="c m b1 r2 l0 t0 lines">\(R\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((P\vee Q) \imp R\)</td>
+<td class="c m b1 r0 l0 t0 lines">\((P\imp R) \vee (Q \imp R)\)</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr><td class="c m b0 r1 l0 t0 lines"></td></tr>
+</table></div></div></div>
+<p>Look at the fourth (or sixth) row. In this case, \((P \imp R) \vee (Q \imp R)\) is true, but \((P \vee Q) \imp R\) is false. Therefore the statements are not logically equivalent.</p>
+<p>While we don't have logical equivalence, it is the case that whenever \((P \vee Q) \imp R\) is true, so is \((P \imp R) \vee (Q \imp R)\text{.}\) This tells us that we can <em class="emphasis">deduce</em> \((P \imp R) \vee (Q \imp R)\) from \((P \vee Q) \imp R\text{,}\) just not the reverse direction.</p>
+</div></body>
+</html>

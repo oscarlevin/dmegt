@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-01-07T16:46:09-07:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Polynomial Fitting</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-dev.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-dev.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script>(function() {
+  var cx = '000445521324161818100:qhc2ahxtur8';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.13;
+</script>
+</head>
+<body id="levin-DMOI" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://discrete.openmathbooks.org/dmoi3.html" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="dmoi.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">early Graph Theory</span></a></h1>
+<p class="byline">Oscar Levin</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_seq-arithgeom.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_sequences.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_recurrence.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_seq-arithgeom.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_sequences.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_recurrence.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="RGW"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="xOf">Preface</a></li>
+<li><a href="preface-2.html" data-scroll="dVo">How to use this book</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_graphtheory.html" data-scroll="gBz"><span class="codenumber">0</span> <span class="title">Graphs and other Discrete Structures</span></a><ul>
+<li><a href="sec_intro-intro.html" data-scroll="hPw">What is Discrete Mathematics?</a></li>
+<li><a href="sec_gt-intro.html" data-scroll="HLu">Graph Theory</a></li>
+<li><a href="sec_intro-sets.html" data-scroll="ltW">Sets</a></li>
+<li><a href="sec_intro-functions.html" data-scroll="CkQ">Functions</a></li>
+<li><a href="sec_gt-carefully.html" data-scroll="HLu">Graph Done Right</a></li>
+<li><a href="sec_coloring.html" data-scroll="qyO">Coloring</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logic.html" data-scroll="wur"><span class="codenumber">1</span> <span class="title">Symbolic Logic and Proofs</span></a><ul>
+<li><a href="sec_intro-statements.html" data-scroll="QDd">Mathematical Statements</a></li>
+<li><a href="sec_propositional.html" data-scroll="XMq">Propositional Logic</a></li>
+<li><a href="sec_logic-proofs.html" data-scroll="lnf">Proofs</a></li>
+<li><a href="sec_paths.html" data-scroll="tPg">Euler Paths and Circuits</a></li>
+<li><a href="sec_trees.html" data-scroll="gor">Trees</a></li>
+<li><a href="sec_logic-induction.html" data-scroll="lnf">Mathematical Induction</a></li>
+<li><a href="sec_planar.html" data-scroll="ttH">Planar Graphs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_counting.html" data-scroll="raE"><span class="codenumber">2</span> <span class="title">Counting</span></a><ul>
+<li><a href="sec_counting-pascal.html" data-scroll="sJa">Pascal's Triangle</a></li>
+<li><a href="sec_counting-addmult.html" data-scroll="sJa">Additive and Multiplicative Principles</a></li>
+<li><a href="sec_counting-binom.html" data-scroll="vZs">Binomial Coefficients</a></li>
+<li><a href="sec_counting-combperm.html" data-scroll="yda">Combinations and Permutations</a></li>
+<li><a href="sec_comb-proofs.html" data-scroll="SUg">Combinatorial Proofs</a></li>
+<li><a href="sec_stars-and-bars.html" data-scroll="qkt">Stars and Bars</a></li>
+<li><a href="sec_advPIE.html" data-scroll="HKU">Advanced Counting Using PIE</a></li>
+<li><a href="sec_count-conc.html" data-scroll="Bmb">Chapter Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_sequences.html" data-scroll="KxW"><span class="codenumber">3</span> <span class="title">Sequences</span></a><ul>
+<li><a href="sec_seq_intro.html" data-scroll="tgm">Describing Sequences</a></li>
+<li><a href="sec_seq-arithgeom.html" data-scroll="lIR">Arithmetic and Geometric Sequences</a></li>
+<li><a href="sec_polyfit.html" data-scroll="ylR" class="active">Polynomial Fitting</a></li>
+<li><a href="sec_recurrence.html" data-scroll="bcV">Solving Recurrence Relations</a></li>
+<li><a href="sec_seq-induction.html" data-scroll="Prg">Induction</a></li>
+<li><a href="sec_addtops-genfun.html" data-scroll="XaJ">Generating Functions</a></li>
+<li><a href="sec_sequences-conc.html" data-scroll="YaY">Chapter Summary</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="mqL"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="SxU"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="yFd"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="GjC"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="ylR"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">Polynomial Fitting</span>
+</h2>
+<a href="sec_polyfit.html" class="permalink">¶</a><section class="introduction" id="jcT"><article class="project-like" id="Pkc"><h6 class="heading">
+<span class="type">Investigate!</span> </h6>
+<p id="cio">A standard \(8 \times 8\) chessboard contains 64 squares. Actually, this is just the number of unit squares. How many squares of all sizes are there on a chessboard? Start with smaller boards: \(1\times 1\text{,}\) \(2 \times 2\text{,}\) \(3\times 3\text{,}\) etc. Find a formula for the total number of squares in an \(n\times n\) board.</p></article><p id="Ipx">So far we have seen methods for finding the closed formulas for arithmetic and geometric sequences. Since we know how to compute the sum of the first \(n\) terms of arithmetic and geometric sequences, we can compute the closed formulas for sequences which have an arithmetic (or geometric) sequence of differences between terms. But what if we consider a sequence which is the sum of the first \(n\) terms of a sequence which is itself the sum of an arithmetic sequence?</p>
+<p id="owG">Before we get too carried away, let's consider an example: How many squares (of all sizes) are there on a chessboard? A chessboard consists of \(64\) squares, but we also want to consider squares of longer side length. Even though we are only considering an \(8 \times 8\) board, there is already a lot to count. So instead, let us build a sequence: the first term will be the number of squares on a \(1 \times 1\) board, the second term will be the number of squares on a \(2 \times 2\) board, and so on. After a little thought, we arrive at the sequence</p>
+<div class="displaymath">
+\begin{equation*}
+1,5,14,30, 55,\ldots\text{.}
+\end{equation*}
+</div>
+<p id="UDP">This sequence is not arithmetic (or geometric for that matter), but perhaps it's sequence of differences is. For differences we get</p>
+<div class="displaymath">
+\begin{equation*}
+4, 9, 16, 25, \ldots\text{.}
+\end{equation*}
+</div>
+<p id="AKY">Not a huge surprise: one way to count the number of squares in a \(4 \times 4\) chessboard is to notice that there are \(16\) squares with side length 1, 9 with side length 2, 4 with side length 3 and 1 with side length 4. So the original sequence is just the sum of squares. Now this sequence of differences is not arithmetic since it's sequence of differences (the differences of the differences of the original sequence) is not constant. In fact, this sequence of <dfn class="terminology">second differences</dfn> is</p>
+<div class="displaymath">
+\begin{equation*}
+5, 7, 9, \ldots\text{,}
+\end{equation*}
+</div>
+<p>which <em class="emphasis">is</em> an arithmetic sequence (with constant difference 2). Notice that our original sequence had <dfn class="terminology">third differences</dfn> (that is, differences of differences of differences of the original) constant. We will call such a sequence \(\Delta^3\)-constant. The sequence \(1, 4, 9, 16, \ldots\) has second differences constant, so it will be a \(\Delta^2\)-constant sequence. In general, we will say a sequence is a <dfn class="terminology">\(\Delta^k\)-constant</dfn>  sequence if the \(k\)th differences are constant.</p>
+<article class="example example-like" id="KAj"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span>
+</h6>
+<p id="DFE">Which of the following sequences are \(\Delta^k\)-constant for some value of \(k\text{?}\)</p>
+<ol class="decimal">
+<li id="swF">\(2, 3, 7, 14, 24, 37,\ldots\text{.}\)</li>
+<li id="YDO">\(1, 8, 27, 64, 125, 216, \ldots\text{.}\)</li>
+<li id="EKX">\(1,2,4,8,16,32,64,\ldots\text{.}\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-vrl" id="vrl"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-vrl"><div class="solution solution-like"><ol id="GAk" class="decimal">
+<li id="kSg">This is the sequence from <a class="xref" data-knowl="./knowl/example-sum-of-arithmetic.html" title="Example 3.2.6">Example 3.2.6</a>, in which we found a closed formula by recognizing the sequence as the sequence of partial sums of an arithmetic sequence. Indeed, the sequence of first differences is \(1,4,7, 10, 13,\ldots\text{,}\) which itself has differences \(3,3,3,3,\ldots\text{.}\) Thus \(2, 3, 7, 14, 24, 37,\ldots\) is a \(\Delta^2\)-constant sequence.</li>
+<li id="QZp">These are the perfect cubes. The sequence of first differences is \(7, 19, 37, 61, 91, \ldots\text{;}\) the sequence of second differences is \(12, 18, 24, 30,\ldots\text{;}\) the sequence of third differences is constant: \(6,6,6,\ldots\text{.}\) Thus the perfect cubes are a \(\Delta^3\)-constant sequence.</li>
+<li id="xgy">If we take first differences we get \(1,2,4,8,16,\ldots\text{.}\) Wait, what? That's the sequence we started with. So taking second differences will give us the same sequence again. No matter how many times we repeat this we will always have the same sequence, which in particular means no finite number of differences will be constant. Thus this sequence is not \(\Delta^k\)-constant for any \(k\text{.}\)</li>
+</ol></div></div>
+</div></article><p id="gSh">The \(\Delta^0\)-constant sequences are themselves constant, so a closed formula for them is easy to compute (it's just the constant). The \(\Delta^1\)-constant sequences are arithmetic and we have a method for finding closed formulas for them as well. Every \(\Delta^2\)-constant sequence is the sum of an arithmetic sequence so we can find formulas for these as well. But notice that the format of the closed formula for a \(\Delta^2\)-constant sequence is always quadratic. For example, the square numbers are \(\Delta^2\)-constant with closed formula \(a_n= n^2\text{.}\) The triangular numbers (also \(\Delta^2\)-constant) have closed formula \(a_n = \frac{n(n+1)}{2}\text{,}\) which when multiplied out gives you an \(n^2\) term as well. It appears that every time we increase the complexity of the sequence, that is, increase the number of differences before we get constants, we also increase the degree of the polynomial used for the closed formula. We go from constant to linear to quadratic. The sequence of differences between terms tells us something about the rate of growth of the sequence. If a sequence is growing at a constant rate, then the formula for the sequence will be linear. If the sequence is growing at a rate which itself is growing at a constant rate, then the formula is quadratic. You have seen this elsewhere: if a function has a constant second derivative (rate of change) then the function must be quadratic.</p>
+<p id="MZq">This works in general:</p>
+<article class="assemblage assemblage-like" id="eta"><h6 class="heading"><span class="title">Finite Differences.</span></h6>
+<p id="tgz"> The closed formula for a sequence will be a degree \(k\) polynomial if and only if the sequence is \(\Delta^k\)-constant (i.e., the \(k\)th sequence of differences is constant).</p></article><p id="ZnI">This tells us that the sequence of numbers of squares on a chessboard, \(1, 5, 14, 30, 55, \ldots\text{,}\) which we saw to be \(\Delta^3\)-constant, will have a cubic (degree 3 polynomial) for its closed formula.</p>
+<p id="FuR">Now once we know what format the closed formula for a sequence will take, it is much easier to actually find the closed formula. In the case that the closed formula is a degree \(k\) polynomial, we just need \(k+1\) data points to “fit” the polynomial to the data.</p>
+<article class="example example-like" id="qHs"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
+</h6>
+<p id="jMN">Find a formula for the sequence \(3, 7, 14, 24,\ldots\text{.}\) Assume \(a_1 = 3\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-byu" id="byu"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-byu"><div class="solution solution-like">
+<p id="mHt">First, check to see if the formula has constant differences at some level. The sequence of first differences is \(4, 7, 10, \ldots\) which is arithmetic, so the sequence of second differences is constant. The sequence is \(\Delta^2\)-constant, so the formula for \(a_n\) will be a degree 2 polynomial. That is, we know that for some constants \(a\text{,}\) \(b\text{,}\) and \(c\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+a_n = an^2 + bn + c\text{.}
+\end{equation*}
+</div>
+<p id="SOC">Now to find \(a\text{,}\) \(b\text{,}\) and \(c\text{.}\) First, it would be nice to know what \(a_0\) is, since plugging in \(n = 0\) simplifies the above formula greatly. In this case, \(a_0 = 2\) (work backwards from the sequence of constant differences). Thus</p>
+<div class="displaymath">
+\begin{equation*}
+a_0 = 2 = a\cdot 0^2 + b \cdot 0 + c\text{,}
+\end{equation*}
+</div>
+<p>so \(c = 2\text{.}\) Now plug in \(n =1\) and \(n = 2\text{.}\) We get</p>
+<div class="displaymath">
+\begin{equation*}
+a_1 = 3 = a + b + 2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+a_2 = 7 = a4 + b 2 + 2\text{.}
+\end{equation*}
+</div>
+<p id="yVL">At this point we have two (linear) equations and two unknowns, so we can solve the system for \(a\) and \(b\) (using substitution or elimination or even matrices). We find \(a = \frac{3}{2}\) and \(b = \frac{-1}{2}\text{,}\) so \(a_n = \frac{3}{2} n^2 - \frac{1}{2}n + 2\text{.}\)</p>
+</div></div>
+</div></article><article class="example example-like" id="WOB"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span>
+</h6>
+<p id="PTW">Find a closed formula for the number of squares on an \(n \times n\) chessboard.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-HFD" id="HFD"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-HFD"><div class="solution solution-like">
+<p id="fcU">We have seen that the sequence \(1, 5, 14, 30, 55, \ldots\) is \(\Delta^3\)-constant, so we are looking for a degree 3 polynomial. That is,</p>
+<div class="displaymath">
+\begin{equation*}
+a_n = an^3 + bn^2 + cn + d\text{.}
+\end{equation*}
+</div>
+<p id="Lkd">We can find \(d\) if we know what \(a_0\) is. Working backwards from the third differences, we find \(a_0 = 0\) (unsurprisingly, since there are no squares on a \(0\times 0\) chessboard). Thus \(d = 0\text{.}\) Now plug in \(n = 1\text{,}\) \(n =2\text{,}\) and \(n =3\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+1 = \amp a + b + c\\
+5 = \amp 8a + 4b + 2c\\
+14 = \amp 27a + 9b + 3c\text{.}
+\end{align*}
+</div>
+<p id="rrm">If we solve this system of equations we get \(a = \frac{1}{3}\text{,}\) \(b = \frac{1}{2}\) and \(c = \frac{1}{6}\text{.}\) Therefore the number of squares on an \(n \times n\) chessboard is \(a_n = \frac{1}{3}n^3 + \frac{1}{2}n^2 + \frac{1}{6}n = \frac{1}{6}n(n+1)(2n+1)\text{.}\)</p>
+</div></div>
+</div></article><p id="lCa">Note: Since the squares-on-a-chessboard problem is really asking for the sum of squares, we now have a nice formula for \(\d\sum_{k=1}^n k^2\text{.}\)</p>
+<p id="RJj">Not all sequences will have polynomials as their closed formula. We can use the theory of finite differences to identify these.</p>
+<article class="example example-like" id="CVK"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.4</span><span class="period">.</span>
+</h6>
+<p id="wbf">Determine whether the following sequences can be described by a polynomial, and if so, of what degree.</p>
+<ol class="decimal">
+<li id="dnH">\(\displaystyle 1, 2, 4, 8, 16, \ldots\)</li>
+<li id="JuQ">\(\displaystyle 0, 7, 50, 183, 484, 1055, \ldots\)</li>
+<li id="pBZ">\(\displaystyle 1,1,2,3,5,8,13,\ldots\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-nMM" id="nMM"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-nMM"><div class="solution solution-like"><ol id="Xyv" class="decimal">
+<li id="VJi"><p id="OeJ">As we saw in <a class="xref" data-knowl="./knowl/example-deltak.html" title="Example 3.3.1">Example 3.3.1</a>, this sequence is not \(\Delta^k\)-constant for any \(k\text{.}\) Therefore the closed formula for the sequence is not a polynomial. In fact, we know the closed formula is \(a_n = 2^n\text{,}\) which grows faster than any polynomial (so is not a polynomial).</p></li>
+<li id="BQr"><p id="ulS">The sequence of first differences is \(7, 43, 133, 301, 571,\ldots\text{.}\) The second differences are: \(36, 90, 168, 270,\ldots\text{.}\) Third difference: \(54, 78, 102,\ldots\text{.}\) Fourth differences: \(24, 24, \ldots\text{.}\) As far as we can tell, this sequence of differences is constant so the sequence is \(\Delta^4\)-constant and as such the closed formula is a degree 4 polynomial.</p></li>
+<li id="hXA"><p id="atb">This is the Fibonacci sequence.  The sequence of first differences is \(0, 1, 1, 2, 3, 5, 8, \ldots\text{,}\) the second differences are \(1, 0, 1, 1, 2, 3, 5\ldots\text{.}\) We notice that after the first few terms, we get the original sequence back. So there will never be constant differences, so the closed formula for the Fibonacci sequence is not a polynomial.</p></li>
+</ol></div></div>
+</div></article></section><section class="exercises" id="FTD"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<a href="sec_polyfit.html#FTD" class="permalink">¶</a><article class="exercise exercise-like" id="kGY"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-4290">Use polynomial fitting to find the formula for the \(n\)th term of the sequence \((a_n)_{n \ge 0}\) which starts,</p>
+<div class="displaymath" id="p-4291">
+\begin{equation*}
+0, 2, 6, 12, 20, \ldots 
+\text{.}
+\end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-374" id="solution-374"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-374"><div class="solution solution-like">
+<p id="p-4292">\(a_n = n^2 + n\text{.}\) Here we know that we are looking for a quadratic because the second differences are constant. So \(a_n = an^2 + bn + c\text{.}\) Since \(a_0 = 0\text{,}\) we know \(c= 0\text{.}\) So just solve the system</p>
+<div class="displaymath" id="p-4293">
+\begin{equation*}
+\begin{aligned}
+2 \amp = a + b\\
+6 \amp = 4a + 2b
+\end{aligned}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="QOh"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-4296">Use polynomial fitting to find the formula for the \(n\)th term of the sequence \((a_n)_{n \ge 0}\) which starts,</p>
+<div class="displaymath" id="p-4297">
+\begin{equation*}
+1, 2, 4, 8, 15, 26 \ldots 
+\text{.}
+\end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-376" id="solution-376"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-376"><div class="solution solution-like"><p id="p-4298">\(a_n = \frac{1}{6} (n^3 + 5n + 6)\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="wVq"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-4301">Use polynomial fitting to find the formula for the \(n\)th term of the sequence \((a_n)_{n \ge 0}\) which starts,</p>
+<div class="displaymath" id="p-4302">
+\begin{equation*}
+2,5,11,21,36, \ldots 
+\text{.}
+\end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-378" id="solution-378"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-378"><div class="solution solution-like"><p id="p-4303">\(a_n = \frac{1}{6} (n^3 + 6n^2 + 11n + 12)\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="dcz"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-4306">Use polynomial fitting to find the formula for the \(n\)th term of the sequence \((a_n)_{n \ge 0}\) which starts,</p>
+<div class="displaymath" id="p-4307">
+\begin{equation*}
+3, 6, 12, 22, 37, 58, \ldots 
+\text{.}
+\end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-380" id="solution-380"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-380"><div class="solution solution-like"><p id="p-4308">\(a_n = \frac{1}{6} (n^3 + 6n^2 + 11n + 18)\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="JjI"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="zux">Make up sequences that have</p>
+<ol class="lower-alpha">
+<li id="bXg">3, 3, 3, 3, … as its second differences.</li>
+<li id="Iep">1, 2, 3, 4, 5, … as its third differences.</li>
+<li id="oly">1, 2, 4, 8, 16, … as its 100th differences.</li>
+</ol></article><article class="exercise exercise-like" id="pqR"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="fBG">Consider the sequence \(1, 3, 7, 13, 21, \ldots\text{.}\) Explain how you know the closed formula for the sequence will be quadratic. Then “guess” the correct formula by comparing this sequence to the squares \(1, 4, 9, 16, \ldots\) (do not use polynomial fitting).</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-eRM" id="eRM"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-eRM"><div class="solution solution-like"><p id="qaL">\(a_n = n^2 - n + 1\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="Vya"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="LIP">Use a similar technique as in the previous exercise to find a closed formula for the sequence \(2, 11, 34, 77, 146, 247,\ldots\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-KYV" id="KYV"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-KYV"><div class="solution solution-like"><p id="WhU">\(a_n = n^3 + n^2 - n + 1\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="BFj"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-4316">Suppose \(a_n = n^2 + 3n + 4\text{.}\) Find a closed formula for the sequence of differences by computing \(a_n - a_{n-1}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-384" id="solution-384"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-384"><div class="solution solution-like"><p id="p-4317">\(a_{n-1} = (n-1)^2 + 3(n-1) + 4 = n^2 + n + 2\text{.}\) Thus \(a_n - a_{n-1} = 2n+2\text{.}\) Note that this is linear (arithmetic). We can check that we are correct. The sequence \(a_n\) is \(4, 8, 14, 22, 32, \ldots\) and the sequence of differences is thus \(4, 6, 8, 10,\ldots\) which agrees with \(2n+2\) (if we start at \(n = 1\)).</p></div></div>
+</div></article><article class="exercise exercise-like" id="hMs"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="XXh">Generalize <a class="xref" data-knowl="./knowl/ex-quad-diff.html" title="Exercise 3.3.8">Exercise 3.3.8</a>: Find a closed formula for the sequence of differences of \(a_n = an^2 + bn + c\text{.}\) That is, prove that every quadratic sequence has arithmetic differences.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-Xnn" id="Xnn"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Xnn"><div class="solution solution-like"><p id="iwm">\(a_{n-1} = a(n-1)^2 + b(n-1) + c = an^2 - 2an + a + bn - b + c\text{.}\) Therefore \(a_n - a_{n-1} = 2an - a + b\text{,}\) which is arithmetic. Notice that this is not quite the derivative of \(a_n\text{,}\) which would be \(2an + b\text{,}\) but it is close.</p></div></div>
+</div></article><article class="exercise exercise-like" id="NTB"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="Eeq">Can you use polynomial fitting to find the formula for the \(n\)th term of the sequence 4, 7, 11, 18, 29, 47, …? Explain why or why not.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-Duw" id="Duw"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Duw"><div class="solution solution-like"><p id="ODv">No. The sequence of differences is the same as the original sequence so no differences will be constant.</p></div></div>
+</div></article><article class="exercise exercise-like" id="uaK"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="klz">Will the \(n\)th sequence of differences of \(2, 6, 18, 54, 162, \ldots\) ever be constant? Explain.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-jBF" id="jBF"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-jBF"><div class="solution solution-like"><p id="uKE">No. The sequence is geometric, and in fact has closed formula \(2\cdot 3^n\text{.}\) This is an exponential function, which is not equal to any polynomial of any degree. If the \(n\)th sequence of differences was constant, then the closed formula for the original sequence would be a degree \(n\) polynomial.</p></div></div>
+</div></article><article class="exercise exercise-like" id="ahT"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<p id="QsI">In their down time, ghost pirates enjoy stacking cannonballs in triangular based pyramids (aka, tetrahedrons), like those pictured here:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:8%;margin-right:8%;">
+<div class="sbspanel" style="width:9.523809523809524%;justify-content:flex-end;"><img src="images/image-164.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:21.4285714285714%;justify-content:flex-end;"><img src="images/image-165.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:30.952380952381%;justify-content:flex-end;"><img src="images/image-166.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="wzR">Note, these are solid tetrahedrons, so there will be some cannonballs obscured from view (the picture on the right has one cannonball in the back not shown in the picture, for example)</p>
+<p id="cHa">The pirates wonder how many cannonballs would be required to build a pyramid 15 layers high (thus breaking the world cannonball stacking record). Can you help?</p>
+<ol class="lower-alpha">
+<li id="UsH"><p id="sVr">Let \(P(n)\) denote the number of cannonballs needed to create a pyramid \(n\) layers high. So \(P(1) = 1\text{,}\) \(P(2) = 4\text{,}\) and so on. Calculate \(P(3)\text{,}\) \(P(4)\) and \(P(5)\text{.}\)</p></li>
+<li id="AzQ"><p id="ZcA">Use polynomial fitting to find a closed formula for \(P(n)\text{.}\) Show your work.</p></li>
+<li id="gGZ"><p id="FjJ">Answer the pirate's question: how many cannonballs do they need to make a pyramid 15 layers high?</p></li>
+<li id="MOi"><p id="lqS">Bonus: Locate this sequence in Pascal's triangle. Why does that make sense?</p></li>
+</ol></article></section></section></div></main>
+</div>
+<!--Start: Google Universal code-->
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-66485406-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!--End: Google Universal code-->
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.13/login.js"></script>
+</body>
+</html>

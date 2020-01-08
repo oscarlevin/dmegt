@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-01-07T16:45:56-07:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Trees</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-dev.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-dev.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script>(function() {
+  var cx = '000445521324161818100:qhc2ahxtur8';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.13;
+</script>
+</head>
+<body id="levin-DMOI" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://discrete.openmathbooks.org/dmoi3.html" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="dmoi.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">early Graph Theory</span></a></h1>
+<p class="byline">Oscar Levin</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_paths.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_logic-induction.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_paths.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_logic-induction.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="RGW"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="xOf">Preface</a></li>
+<li><a href="preface-2.html" data-scroll="dVo">How to use this book</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_graphtheory.html" data-scroll="gBz"><span class="codenumber">0</span> <span class="title">Graphs and other Discrete Structures</span></a><ul>
+<li><a href="sec_intro-intro.html" data-scroll="hPw">What is Discrete Mathematics?</a></li>
+<li><a href="sec_gt-intro.html" data-scroll="HLu">Graph Theory</a></li>
+<li><a href="sec_intro-sets.html" data-scroll="ltW">Sets</a></li>
+<li><a href="sec_intro-functions.html" data-scroll="CkQ">Functions</a></li>
+<li><a href="sec_gt-carefully.html" data-scroll="HLu">Graph Done Right</a></li>
+<li><a href="sec_coloring.html" data-scroll="qyO">Coloring</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logic.html" data-scroll="wur"><span class="codenumber">1</span> <span class="title">Symbolic Logic and Proofs</span></a><ul>
+<li><a href="sec_intro-statements.html" data-scroll="QDd">Mathematical Statements</a></li>
+<li><a href="sec_propositional.html" data-scroll="XMq">Propositional Logic</a></li>
+<li><a href="sec_logic-proofs.html" data-scroll="lnf">Proofs</a></li>
+<li><a href="sec_paths.html" data-scroll="tPg">Euler Paths and Circuits</a></li>
+<li><a href="sec_trees.html" data-scroll="gor" class="active">Trees</a></li>
+<li><a href="sec_logic-induction.html" data-scroll="lnf">Mathematical Induction</a></li>
+<li><a href="sec_planar.html" data-scroll="ttH">Planar Graphs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_counting.html" data-scroll="raE"><span class="codenumber">2</span> <span class="title">Counting</span></a><ul>
+<li><a href="sec_counting-pascal.html" data-scroll="sJa">Pascal's Triangle</a></li>
+<li><a href="sec_counting-addmult.html" data-scroll="sJa">Additive and Multiplicative Principles</a></li>
+<li><a href="sec_counting-binom.html" data-scroll="vZs">Binomial Coefficients</a></li>
+<li><a href="sec_counting-combperm.html" data-scroll="yda">Combinations and Permutations</a></li>
+<li><a href="sec_comb-proofs.html" data-scroll="SUg">Combinatorial Proofs</a></li>
+<li><a href="sec_stars-and-bars.html" data-scroll="qkt">Stars and Bars</a></li>
+<li><a href="sec_advPIE.html" data-scroll="HKU">Advanced Counting Using PIE</a></li>
+<li><a href="sec_count-conc.html" data-scroll="Bmb">Chapter Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_sequences.html" data-scroll="KxW"><span class="codenumber">3</span> <span class="title">Sequences</span></a><ul>
+<li><a href="sec_seq_intro.html" data-scroll="tgm">Describing Sequences</a></li>
+<li><a href="sec_seq-arithgeom.html" data-scroll="lIR">Arithmetic and Geometric Sequences</a></li>
+<li><a href="sec_polyfit.html" data-scroll="ylR">Polynomial Fitting</a></li>
+<li><a href="sec_recurrence.html" data-scroll="bcV">Solving Recurrence Relations</a></li>
+<li><a href="sec_seq-induction.html" data-scroll="Prg">Induction</a></li>
+<li><a href="sec_addtops-genfun.html" data-scroll="XaJ">Generating Functions</a></li>
+<li><a href="sec_sequences-conc.html" data-scroll="YaY">Chapter Summary</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="mqL"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="SxU"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="yFd"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="GjC"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="gor"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.5</span> <span class="title">Trees</span>
+</h2>
+<a href="sec_trees.html" class="permalink">¶</a><section class="introduction" id="mNx"><article class="project-like" id="SUG"><h6 class="heading">
+<span class="type">Investigate!</span> </h6>
+<p id="Yot">Consider the graph drawn below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-114.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<ol id="EvC" class="decimal">
+<li id="jSR"><p id="cos">Find a subgraph with the smallest number of edges that is still connected and contains all the vertices.</p></li>
+<li id="Qaa"><p id="IvB">Find a subgraph with the largest number of edges that doesn't contain any cycles.</p></li>
+<li id="whj"><p id="oCK">What do you notice about the number of edges in your examples above?  Is this a coincidence?</p></li>
+</ol></article><p id="kCL">One very useful and common approach to studying graph theory is to restrict your focus to graphs of a particular kind. For example, you could try to really understand just complete graphs or just bipartite graphs, instead of trying to understand all graphs in general. That is what we are going to do now, looking at <em class="emphasis">trees</em>. Hopefully by the end of this section we will have a better understanding of this class of graph, and also understand why it is important enough to warrant its own section.</p>
+<article class="assemblage assemblage-like" id="kYk"><h6 class="heading"><span class="title">Definition of a Tree.</span></h6>
+<p id="QJU">A <dfn class="terminology">tree</dfn> is a connected graph containing no cycles.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-9" id="fn-9"><sup> 4 </sup></a></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-9"><div class="fn">Sometimes this is stated as “a tree is an acyclic connected graph;” “acyclic” is just a fancy word for “containing no cycles.”</div></div>
+<p id="wRd">A <dfn class="terminology">forest</dfn> is a graph containing no cycles.   Note that this means that a connected forest is a tree.</p></article><p id="cYm">Does the definition above agree with your intuition for what graphs we should call trees? Try thinking of examples of trees and make sure they satisfy the definition. One thing to keep in mind is that while the trees we study in graph theory are related to trees you might see in other subjects, the correspondence is not exact. For instance, in anthropology, you might study family trees, like the one below,</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/family-tree.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="Jfv">So far so good, but while your grandparents are (probably) not blood-relatives, if we go back far enough, it is likely that they did have <em class="emphasis">some</em> common ancestor. If you trace the tree back from you to that common ancestor, then down through your other grandparent, you would have a cycle, and thus the graph would not be a tree.</p>
+<p id="pmE">You might also have seen something called a <em class="emphasis">decision tree</em> (such as the algorithm for deciding whether a series converges or diverges). Sometimes these too contain cycles, as the decision for one node might lead you back to a previous step.</p>
+<p id="VtN">Both the examples of trees above also have another feature worth mentioning: there is a clear order to the vertices in the tree. In general, there is no reason for a tree to have this added structure, although we can impose such a structure by considering <dfn class="terminology">rooted trees</dfn>, where we simply designate one vertex as the <em class="emphasis">root</em>. We will consider such trees in more detail later in this section.</p></section><section class="subsection" id="MvA"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Properties of Trees</span>
+</h3>
+<a href="sec_trees.html#MvA" class="permalink">¶</a><p id="NPo">We wish to really understand trees. This means we should discover properties of trees; what makes them special and what is special about them.</p>
+<p id="tWx">A tree is a connected graph with no cycles. Is there anything else we can say? It would be nice to have other equivalent conditions for a graph to be a tree. That is, we would like to know whether there are any graph theoretic properties that all trees have, and perhaps even that <em class="emphasis">only</em> trees have.</p>
+<p id="adG">To get a feel for the sorts of things we can say, we will consider three <em class="emphasis">propositions</em> about trees.  These will also illustrate important proof techniques that apply to graphs in general, and happen to be a little easier for trees.</p>
+<p id="GkP">Our first proposition gives an alternate definition for a tree.  That is, it gives necessary and sufficient conditions for a graph to be a tree.</p>
+<article class="proposition theorem-like" id="Rft"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.5.1</span><span class="period">.</span>
+</h6>
+<p id="vbQ">A graph \(T\) is a tree if and only if between every pair of distinct vertices of \(T\) there is a unique path.</p></article><article class="proof" id="zbP"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="Nfu">This is an “if and only if” statement, so we must prove two implications.  We start by proving that if \(T\) is a tree, then between every pair of distinct vertices there is a unique path.</p>
+<p id="tmD">Assume \(T\) is a tree, and let \(u\) and \(v\) be distinct vertices (if \(T\) only has one vertex, then the conclusion is satisfied automatically).  We must show two things to show that there is a unique path between \(u\) and \(v\text{:}\) that there is a path, and that there is not more than one path.  The first of these is automatic, since \(T\) is a tree, it is connected, so there is a path between any pair of vertices.</p>
+<p id="ZtM">To show the path is unique, we suppose there are two paths between \(u\) and \(v\text{,}\) and get a contradiction.  The two paths might start out the same, but since they are different, there is some first vertex \(u'\) after which the two paths diverge.  However, since the two paths both end and \(v\text{,}\) there is some first vertex after \(u'\) that they have in common, call it \(v'\text{.}\)  Now consider the two paths from \(u'\) to \(v'\text{.}\)  Taken together, these form a cycle, which contradicts our assumption that \(T\) is a tree.</p>
+<p id="FAV">Now we consider the converse: if between every pair of distinct vertices of \(T\) there is a unique path, then \(T\) is a tree.  So assume the hypothesis: between every pair of distinct vertices of \(T\) there is a unique path.  To prove that \(T\) is a tree, we must show it is connected and contains no cycles.</p>
+<p id="lIe">The first half of this is easy: \(T\) is connected, because there is a path between every pair of vertices.  To show that \(T\) has no cycles, we assume it does, for the sake of contradiction.  Let \(u\) and \(v\) be two distinct vertices in a cycle of \(T\text{.}\)  Since we can get from \(u\) to \(v\) by going clockwise or counterclockwise around the cycle, there are two paths from \(u\) and \(v\text{,}\) contradicting our assumption.</p>
+<p id="RPn">We have established both directions so we have completed the proof.</p></article><p id="mrY">Read the proof above very carefully.  Notice that both directions had two parts: the existence of paths, and the uniqueness of paths (which related to the fact that there were no cycles).  In this case, these two parts were really separate.  In fact, if we just considered graphs with no cycles (a forest), then we could still do the parts of the proof that explore the uniqueness of paths between vertices, even if there might not <em class="emphasis">exist</em> paths between vertices.</p>
+<p id="Szh">This observation allows us to state the following <em class="emphasis">corollary</em>:<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-10" id="fn-10"><sup> 5 </sup></a></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-10"><div class="fn">A corollary is another sort of provable statement, like a proposition or theorem, but one that follows direction from another already established statement, or its proof.</div></div>
+<article class="corollary theorem-like" id="JAU"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">1.5.2</span><span class="period">.</span>
+</h6>
+<p id="nxr">A graph \(F\) is a forest if and only if between any pair of vertices in \(F\) there is at most one path.</p></article><p id="yGq">We do not give a proof of the corollary (it is, after all, supposed to follow directly from the proposition) but for practice, you are asked to give a careful proof in the exercises.  When you do so, try to use proof by contrapositive instead of proof by contradiction.</p>
+<p id="eNz">Our second proposition tells us that all trees have <dfn class="terminology">leaves</dfn>: vertices of degree one.</p>
+<article class="proposition theorem-like" id="xmC"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.5.3</span><span class="period">.</span>
+</h6>
+<p id="biZ">Any tree with at least two vertices has at least two vertices of degree one.</p></article><article class="proof" id="fiY"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="xWw">We give a proof by contradiction.  Let \(T\) be a tree with at least two vertices, and suppose, contrary to stipulation, that there are not two vertices of degree one.</p>
+<p id="edF">Let \(P\) be a path in \(T\) of longest possible length.  Let \(u\) and \(v\) be the endpoints of the path.  Since \(T\) does not have two vertices of degree one, at least one of these must have degree two or higher.  Say that it is \(u\text{.}\)  We know that \(u\) is adjacent to a vertex in the path \(P\text{,}\) but now it must also be adjacent to another vertex, call it \(u'\text{.}\)</p>
+<p id="KkO">Where is \(u'\text{?}\)  It cannot be a vertex of \(P\text{,}\) because if it was, there would be two distinct paths from \(u\) to \(u'\text{:}\) the edge between them, and the first part of \(P\) (up to \(u'\)).  But \(u'\) also cannot be outside of \(P\text{,}\) for if it was, there would be a path from \(u'\) to \(v\) that was longer than \(P\text{,}\) which has longest possible length.</p>
+<p id="qrX">This contradiction proves that there must be at least two vertices of degree one.  In fact, we can say a little more: \(u\) and \(v\) must <em class="emphasis">both</em> have degree one.</p></article><p id="KUI">The proposition is quite useful when proving statements about trees, because we often prove statements about trees by <em class="emphasis">induction</em>.  To do so, we need to reduce a given tree to a smaller tree (so we can apply the inductive hypothesis).  Getting rid of a vertex of degree one is an obvious choice, and now we know there is always one to get rid of.</p>
+<p id="rbR">To illustrate how induction is used on trees, we will consider the relationship between the number of vertices and number of edges in trees.  Is there a tree with exactly 7 vertices and 7 edges?  Try to draw one.  Could a tree with 7 vertices have only 5 edges?  There is a good reason that these seem impossible to draw.</p>
+<article class="proposition theorem-like" id="dtL"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.5.4</span><span class="period">.</span>
+</h6>
+<p id="Hqi">Let \(T\) be a tree with \(v\) vertices and \(e\) edges.  Then \(e = v-1\text{.}\)</p></article><article class="proof" id="Lqh"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="Wzg">We will give a proof by induction on the number of vertices in the tree.  That is, we will prove that every tree with \(v\) vertices has exactly \(v-1\) edges, and then use induction to show this is true for all \(v \ge 1\text{.}\)</p>
+<p id="CGp">For the base case, consider all trees with \(v = 1\) vertices.  There is only one such tree: the graph with a single isolated vertex.  This graph has \(e = 0\) edges, so we see that \(e = v-1\) as needed.</p>
+<p id="iNy">Now for the inductive case, fix \(k \ge 1\) and assume that all trees with \(v=k\) vertices have exactly \(e=k-1\) edges.  Now consider an arbitrary tree \(T\) with \(v = k+1\) vertices.  By <a class="xref" data-knowl="./knowl/prop-leaves-in-trees.html" title="Proposition 1.5.3">Proposition 1.5.3</a>, \(T\) has a vertex \(v_0\) of degree one.  Let \(T'\) be the tree resulting from removing \(v_0\) from \(T\) (together with its incident edge).  Since we removed a leaf, \(T'\) is still a tree (the unique paths between pairs of vertices in \(T'\) are the same as the unique paths between them in \(T\)).</p>
+<p id="OUH">Now \(T'\) has \(k\) vertices, so by the inductive hypothesis, has \(k-1\) edges.  What can we say about \(T\text{?}\)  Well, it has one more edge than \(T'\text{,}\) so it has \(k\) edges.  But this is exactly what we wanted: \(v=k+1\text{,}\) \(e=k\) so indeed \(e = v-1\text{.}\)  This completes the inductive case, and the proof.</p></article><p id="Xja">There is a very important feature of this induction proof that is worth noting.  Induction makes sense for proofs about graphs because we can think of graphs as growing into larger graphs.  However, this does NOT work.  It would not be correct to start with a tree with \(k\) vertices, and then add a new vertex and edge to get a tree with \(k+1\) vertices, and note that the number of edges also grew by one.  Why is this bad?  Because how do you know that <em class="emphasis">every</em> tree with \(k+1\) vertices is the result of adding a vertex to your arbitrary starting tree?  You don't!</p>
+<p id="Dqj">The point is that whenever you give an induction proof that a statement about graphs that holds for all graphs with \(v\) vertices, you must start with an arbitrary graph with \(v+1\) vertices, then <em class="emphasis">reduce</em> that graph to a graph with \(v\) vertices, to which you can apply your inductive hypothesis.</p></section><section class="subsection" id="sCJ"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Rooted Trees</span>
+</h3>
+<a href="sec_trees.html#sCJ" class="permalink">¶</a><p id="jxs">So far, we have thought of trees only as a particular kind of graph. However, it is often useful to add additional structure to trees to help solve problems. Data is often structured like a tree. This book, for example, has a tree structure: draw a vertex for the book itself. Then draw vertices for each chapter, connected to the book vertex. Under each chapter, draw a vertex for each section, connecting it to the chapter it belongs to. The graph will not have any cycles; it will be a tree. But a tree with clear hierarchy which is not present if we don't identify the book vertex as the “top”.</p>
+<p id="PEB"> As soon as one vertex of a tree is designated as the <dfn class="terminology">root</dfn>, then every other vertex on the tree can be characterized by its position relative to the root.  This works because there is a unique path between any two vertices in a tree.  So from any vertex, we can travel back to the root in exactly one way.  This also allows us to describe how distinct vertices in a rooted tree are related.</p>
+<p id="vLK"> If two vertices are adjacent, then we say one of them is the <dfn class="terminology">parent</dfn> of the other, which is called the <dfn class="terminology">child</dfn> of the parent.  Of the two, the parent is the vertex that is closer to the root.  Thus the root of a tree is a parent, but is not the child of any vertex (and is unique in this respect: all non-root vertices have <em class="emphasis">exactly one</em> parent).</p>
+<p id="bST"> Not surprisingly, the child of a child of a vertex is called the <dfn class="terminology">grandchild</dfn> of the vertex (and it is the <dfn class="terminology">grandparent</dfn>).  More in general, we say that a vertex \(v\) is a <dfn class="terminology">descendent</dfn> of a vertex \(u\) provided \(u\) is a vertex on the path from \(v\) to the root.  Then we would call \(u\) an <dfn class="terminology">ancestor</dfn> of \(v\text{.}\)</p>
+<p id="Iac"> For most trees (in fact, all except paths with one end the root), there will be pairs of vertices neither of which is a descendant of the other.  We might call these cousins or siblings.  In fact, vertices \(u\) and \(v\) are called <dfn class="terminology">siblings</dfn> provided they have the same parent.  Note that siblings are never adjacent (do you see why?).</p>
+<article class="example example-like" id="pId"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.5</span><span class="period">.</span>
+</h6>
+<p id="TEA">Consider the tree below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/img-labeled-tree.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="zLJ">If we designate vertex \(f\) as the root, then \(e\text{,}\) \(h\text{,}\) and \(i\) are the children of \(f\text{,}\) and are siblings of each other.  Among the other things we cay say are that \(a\) is a child of \(c\text{,}\) and a descendant of \(f\text{.}\)  The vertex \(g\) is a descendant of \(f\text{,}\) in fact, is a grandchild of \(f\text{.}\)  Vertices \(g\) and \(d\) are siblings, since they have the common parent \(e\text{.}\)</p>
+<p id="fSS">Notice how this changes if we pick a different vertex for the root.  If \(a\) is the root, then its lone child is \(c\text{,}\) which also has only one child, namely \(e\text{.}\)  We would then have \(f\) the child of \(e\) (instead of the other way around), and \(f\) is the descendant of \(a\text{,}\) instead of the ancestor.  \(f\) and \(g\) are now siblings.</p></article><p id="ohl">All of this flowery language helps us describe how to <em class="emphasis">navigate</em> through a tree.  Traversing a tree, visiting each vertex in some order, is a key step in many algorithms.  Even if the tree is not rooted, we can always form a rooted tree by picking any vertex as the root.  Here is an example of why doing so can be helpful.</p>
+<article class="example example-like" id="VPm"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.6</span><span class="period">.</span>
+</h6>
+<p id="Mab">Explain why every tree is a bipartite graph.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-rxq" id="rxq"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-rxq"><div class="solution solution-like">
+<p id="UJT">To show that a graph is bipartite, we must divide the vertices into two sets \(A\) and \(B\) so that no two vertices in the same set are adjacent.  Here is an algorithm that does just this.</p>
+<p id="ARc">Designate any vertex as the root.  Put this vertex in set \(A\text{.}\)  Now put all of the children of the root in set \(B\text{.}\)  None of these children are adjacent (they are siblings), so we are good so far.  Now put into \(A\) every child of every vertex in \(B\) (i.e., every grandchild of the root).  Keep going until all vertices have been assigned one of the sets, alternating between \(A\) and \(B\) every “generation.”  That is, a vertex is in set \(B\) if and only if it is the child of a vertex in set \(A\text{.}\)</p>
+</div></div>
+</div></article><p id="Uou"> The key to how we partitioned the tree in the example was to know which vertex to assign to a set next.  We chose to visit all vertices in the same generation before any vertices of the next generation.  This is usually called a <dfn class="terminology">breadth first search</dfn> (we say “search” because you often traverse a tree looking for vertices with certain properties).</p>
+<p id="AvD"> In contrast, we could also have partitioned the tree in a different order.  Start with the root, put it in \(A\text{.}\)  Then look for one child of the root to put in \(B\text{.}\)  Then find a child of that vertex, into \(A\text{,}\) and then find its child, into \(B\text{,}\) and so on.  When you get to a vertex with no children, retreat to its parent and see if the parent has any other children.  So we travel as far from the root as fast as possible, then backtrack until we can move forward again.  This is called <dfn class="terminology">depth first search</dfn>.</p>
+<p id="gCM">These algorithmic explanations can serve as a proof that every tree is bipartite, although care needs to be spent to prove that the algorithms are <em class="emphasis">correct</em>.  Another approach to prove that all trees are bipartite, using induction, is requested in the exercises.</p></section><section class="subsection" id="YJS"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Spanning Trees</span>
+</h3>
+<a href="sec_trees.html#YJS" class="permalink">¶</a><p id="MJV">One of the advantages of trees is that they give us a few simple ways to travel through the vertices.  If a connected graph is not a tree, then we can still use these traversal algorithms if we identify a subgraph that <em class="emphasis">is</em> a tree.</p>
+<p id="sRe">First we should consider if this even makes sense.  Given any connected graph \(G\text{,}\) will there always be a subgraph that is a tree?  Well, that is actually too easy: you could just take a single edge of \(G\text{.}\)  If we want to use this subgraph to tell us how to visit all vertices, then we want our subgraph to include all of the vertices.  We call such a tree a <dfn class="terminology">spanning tree</dfn>.  It turns out that every connected graph has one (and usually many).</p>
+<article class="assemblage assemblage-like" id="ERb"><h6 class="heading"><span class="title">Spanning tree.</span></h6>
+<p id="BAW">Given a connected graph \(G\text{,}\) a <dfn class="terminology">spanning tree</dfn> of \(G\) is a subgraph of \(G\) which is a tree and includes all the vertices of \(G\text{.}\)</p>
+<p id="hIf">Every connected graph has a spanning tree.</p></article><p id="YYn">How do we know?  We can give an algorithm for <em class="emphasis">finding</em> a spanning tree!  Start with a connected graph \(G\text{.}\)  If there is no cycle, then \(G\) is already a tree and we are done.  If there is a cycle, let \(e\) be any edge in that cycle and consider the new graph \(G_1 = G - e\) (i.e., the graph you get by deleting \(e\)).  This tree is still connected since \(e\) belonged to a cycle, there were at least two paths between its incident vertices.  Now repeat: if \(G_1\) has no cycles, we are done, otherwise define \(G_2\) to be \(G_1 - e_1\text{,}\) where \(e_1\) is an edge in a cycle in \(G_1\text{.}\)  Keep going.  This process must eventually stop, since there are only a finite number of edges to remove.  The result will be a tree, and since we never removed any vertex, a <em class="emphasis">spanning</em> tree.</p>
+<p id="Ffw">This is by no means the only algorithm for finding a spanning tree.  You could have started with the empty graph and added edges that belong to \(G\) as long as adding them would not create a cycle.  You have some choices as to which edges you add first: you could always add an edge adjacent to edges you have already added (after the first one, of course), or add them using some other order.  Which spanning tree you end up with depends on these choices.</p>
+<article class="example example-like" id="idE"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.7</span><span class="period">.</span>
+</h6>
+<p id="shk">Find two different spanning trees of the graph,</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-117.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-XEz" id="XEz"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-XEz"><div class="solution solution-like">
+<p id="gYl">Here are two spanning trees.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;">
+<div class="sbspanel" style="width:37.5%;justify-content:flex-start;"><img src="images/image-118.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:37.5%;justify-content:flex-start;"><img src="images/image-119.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+</div></div>
+</div></article><p id="lmF">Although we will not consider this in detail, these algorithms are usually applied to <em class="emphasis">weighted</em> graphs.  Here every edge has some weight or cost assigned to it.  The goal is to find a spanning tree that has the smallest possible combined weight.  Such a tree is called a <dfn class="terminology">minimum spanning tree</dfn>.  Finding the minimum spanning tree uses basically the same algorithms as we described above, but when picking an edge to add, you always pick the smallest (or when removing an edge, you always remove the largest).<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-11" id="fn-11"><sup> 6 </sup></a></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-11"><div class="fn">If you add the smallest edge adjacent to edges you have already added, you are doing <em class="emphasis">Prim's algorithm</em>.  If you add the smallest edge in the entire graph, you are following <em class="emphasis">Kruskal's algorithm</em>.</div></div></section><section class="exercises" id="iQl"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<a href="sec_trees.html#iQl" class="permalink">¶</a><article class="exercise exercise-like" id="HzZ"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="wjW">Which of the following graphs are trees?</p>
+<ol class="lower-alpha">
+<li id="MTM"><p id="hwx">\(G = (V, E)\) with \(V = \{a, b, c, d, e\}\) and \(E = \{\{a, b\}, \{a,e\}, \{b, c\}, \{c,d\}, \{d,e\} \}\)</p></li>
+<li id="taV"><p id="NDG">\(G = (V, E)\) with \(V = \{a, b, c, d, e\}\) and \(E = \{\{a, b\}, \{b, c\}, \{c,d\}, \{d,e\}\}\)</p></li>
+<li id="Zie"><p id="tKP">\(G = (V, E)\) with \(V = \{a, b, c, d, e\}\) and \(E = \{\{a, b\}, \{a, c\}, \{a,d\}, \{a,e\}\}\)</p></li>
+<li id="Fpn"><p id="ZRY">\(G = (V, E)\) with \(V = \{a, b, c, d, e\}\) and \(E = \{\{a, b\}, \{a, c\}, \{d,e\}\}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-BKN" id="BKN"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-BKN"><div class="solution solution-like"><ol id="igr" class="lower-alpha">
+<li id="lww"><p id="FZh">This is not a tree since it contains a cycle. Note also that there are too many edges to be a tree, since we know that all trees with \(v\) vertices have \(v-1\) edges.</p></li>
+<li id="RDF"><p id="mgq">This is a tree since it is connected and contains no cycles (which you can see by drawing the graph). All paths are trees.</p></li>
+<li id="xKO"><p id="Snz">This is a tree since it is connected and contains no cycles (draw the graph). All stars are trees.</p></li>
+<li id="dRX"><p id="yuI">This is a not a tree since it is not connected. Note that there are not enough edges to be a tree.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="nHi"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="crf">For each degree sequence below, decide whether it must always, must never, or could possibly be a degree sequence for a tree. Remember, a degree sequence lists out the degrees (number of edges incident to the vertex) of all the vertices in a graph in non-increasing order.</p>
+<ol class="lower-alpha">
+<li id="JZg"><p id="eBR">\((4,1,1,1,1)\)</p></li>
+<li id="qgp"><p id="KJa">\((3,3,2,1,1)\)</p></li>
+<li id="Wny"><p id="qQj">\((2,2,2,1,1)\)</p></li>
+<li id="CuH"><p id="WXs">\((4, 4, 3, 3, 3, 2, 2, 1, 1, 1, 1, 1, 1, 1)\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-hRW" id="hRW"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-hRW"><div class="solution solution-like"><ol id="OnA" class="lower-alpha">
+<li id="iBQ"><p id="DeB">This must be the degree sequence for a tree. This is because the vertex of degree 4 must be adjacent to the four vertices of degree 1 (there are no other vertices for it to be adjacent to), and thus we get a star.</p></li>
+<li id="OIZ">
+<p id="jlK">This cannot be a tree. Each degree 3 vertex is adjacent to all but one of the vertices in the graph. Thus each must be adjacent to one of the degree 1 vertices (and not the other). That means both degree 3 vertices are adjacent to the degree 2 vertex, and to each other, so that means there is a cycle.</p>
+<p id="PsT">Alternatively, count how many edges there are!</p>
+</li>
+<li id="uQi"><p id="vAc">This might or might not be a tree. The length 4 path has this degree sequence (this is a tree), but so does the union of a 3-cycle and a length 1 path (which is not connected, so not a tree).</p></li>
+<li id="aXr"><p id="bHl">This cannot be a tree. The sum of the degrees is 28, so there are 14 edges. But there are 14 vertices as well, so we don't have \(v = e+1\text{,}\) meaning this cannot be a tree.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="TOr"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="Iyo">For each degree sequence below, decide whether it must always, must never, or could possibly be a degree sequence for a tree.  Justify your answers.</p>
+<ol class="lower-alpha">
+<li id="HeA"><p id="HOu">\((3, 3, 2, 2, 2)\)</p></li>
+<li id="nlJ"><p id="nVD">\((3, 2, 2, 1, 1, 1)\)</p></li>
+<li id="TsS"><p id="UcM">\((3, 3, 3, 1, 1, 1)\)</p></li>
+<li id="zAb"><p id="AjV">\((4, 4, 1, 1, 1, 1, 1, 1)\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-NZf" id="NZf"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-NZf"><div class="hint solution-like"><p id="GJb">Careful: the graphs might not be connected.</p></div></div>
+</div></article><article class="exercise exercise-like" id="zVA"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="oFx">Suppose you have a graph with \(v\) vertices and \(e\) edges that satisfies \(v = e+1\text{.}\) Must the graph be a tree? Prove your answer.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-ugo" id="ugo"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-ugo"><div class="hint solution-like"><p id="mQk">Try <a class="xref" data-knowl="./knowl/ex-tree-deg-seq.html" title="Exercise 1.5.2">Exercise 1.5.2</a>.</p></div></div>
+</div></article><article class="exercise exercise-like" id="gcJ"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="UMG">Prove that any graph (not necessarily a tree) with \(v\) vertices and \(e\) edges that satisfies \(v \gt e+1\) will NOT be connected.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-anx" id="anx"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-anx"><div class="hint solution-like"><p id="SXt">Try a proof by contradiction and consider a spanning tree of the graph.</p></div></div>
+</div></article><article class="exercise exercise-like" id="MjS"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="ATP">If a graph \(G\) with \(v\) vertices and \(e\) edges is connected and has \(v \lt e+1\text{,}\) must it contain a cycle? Prove your answer.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-GuG" id="GuG"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-GuG"><div class="solution solution-like"><p id="uuJ">Yes. We will prove the contrapositive. Assume \(G\) does not contain a cycle. Then \(G\) is a tree, so would have \(v = e+1\text{,}\) contrary to stipulation.</p></div></div>
+</div></article><article class="exercise exercise-like" id="srb"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="haY">We define a <dfn class="terminology">forest</dfn> to be a graph with no cycles.</p>
+<ol class="lower-alpha">
+<li id="fHk"><p id="gre">Explain why this is a good name. That is, explain why a forest is a union of trees.</p></li>
+<li id="LOt"><p id="Myn">Suppose \(F\) is a forest consisting of \(m\) trees and \(v\) vertices. How many edges does \(F\) have? Explain.</p></li>
+<li id="rVC"><p id="sFw">Prove that any graph \(G\) with \(v\) vertices and \(e\) edges that satisfies \(v \lt e+1\) must contain a cycle (i.e., not be a forest).</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-mBP" id="mBP"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-mBP"><div class="hint solution-like"><p id="zeC">For part (b), trying some simple examples should give you the formula.  Then you just need to prove it is correct.</p></div></div>
+</div></article><article class="exercise exercise-like" id="Yyk"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="Nih">Give a careful proof of <a class="xref" data-knowl="./knowl/cor-unique-paths-forests.html" title="Corollary 1.5.2">Corollary 1.5.2</a>: A graph is a forest if and only if there is at most one path between any pair of vertices.  Use proof by contrapositive (and not a proof by contradiction) for both directions.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-SIY" id="SIY"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-SIY"><div class="hint solution-like"><p id="flL">Examining the proof of <a class="xref" data-knowl="./knowl/prop-unique-paths-trees.html" title="Proposition 1.5.1">Proposition 1.5.1</a> gives you most of what you need, but make sure to just give the relevant parts, and take care to not use proof by contradiction.</p></div></div>
+</div></article><article class="exercise exercise-like" id="EFt"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="tpq">Give a careful proof by induction on the number of vertices, that every tree is bipartite.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-yQh" id="yQh"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-yQh"><div class="hint solution-like"><p id="LsU">You will need to remove a vertex of degree one, apply the inductive hypothesis to the result, and then say which set the degree one vertex to.</p></div></div>
+</div></article><article class="exercise exercise-like" id="kMC"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="Zwz">Consider the tree drawn below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/img-labeled-tree2.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<ol id="FDI" class="lower-alpha">
+<li id="YcL"><p id="YMF">Suppose we designate vertex \(e\) as the root.  List the children, parents and siblings of each vertex.  Does any vertex other than \(e\) have grandchildren?</p></li>
+<li id="EjU"><p id="ETO">Suppose \(e\) is <em class="emphasis">not</em> chosen as the root.  Does our choice of root vertex change the <em class="emphasis">number</em> of children \(e\) has?  The number of grandchildren?  How many are there of each?</p></li>
+<li id="krd"><p id="laX">In fact, pick any vertex in the tree and suppose it is not the root.  Explain why the number of children of that vertex does not depend on which other vertex is the root.</p></li>
+<li id="Qym"><p id="Rig">Does the previous part work for other trees?  Give an example of a different tree for which it holds.  Then either prove that it always holds or give an example of a tree for which it doesn't.</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-eXq" id="eXq"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-eXq"><div class="hint solution-like">
+<p id="rAd">If \(e\) is the root, then \(b\) will have three children (\(a\text{,}\) \(c\text{,}\) and \(d\)), all of which will be siblings, and have \(b\) as their parent.  \(a\) will not have any children.</p>
+<p id="XHm">In general, how can you determine the number of children a vertex will have, if it is not a root?</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="QTL"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="lKR">Let \(T\) be a rooted tree that contains vertices \(u\text{,}\) \(v\text{,}\) and \(w\) (among possibly others). Prove that if \(w\) is a descendant of both \(u\) and \(v\text{,}\) then \(u\) is a descendant of \(v\) or \(v\) is a descendant of \(u\text{.}\)</p></article><article class="exercise exercise-like" id="xaU"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<p id="RSa">Unless it is already a tree, a given graph \(G\) will have multiple spanning trees. How similar or different must these be?</p>
+<ol class="lower-alpha">
+<li id="wFv"><p id="xpp">Must all spanning trees of a given graph be isomorphic to each other? Explain why or give a counterexample.</p></li>
+<li id="cME"><p id="dwy">Must all spanning trees of a given graph have the same number of edges? Explain why or give a counterexample.</p></li>
+<li id="ITN"><p id="JDH">Must all spanning trees of a graph have the same number of leaves (vertices of degree 1)? Explain why or give a counterexample.</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-Lez" id="Lez"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Lez"><div class="solution solution-like"><ol id="aBS" class="lower-alpha">
+<li id="paW"><p id="pKQ">No, although there are graphs for which this is true. For example, \(K_4\) has a spanning tree that is a path (of three edges) and also a spanning tree that is a star (with center vertex of degree 3).</p></li>
+<li id="Vif"><p id="VRZ">Yes. For a fixed graph, we have a fixed number \(v\) of vertices. Any spanning tree of the graph will also have \(v\) vertices, and since it is a tree, must have \(v-1\) edges.</p></li>
+<li id="Bpo"><p id="BZi">No, although there are graph for which this is true (note that if all spanning trees are isomorphic, then all spanning trees will have the same number of leaves). Again, \(K_4\) is a counterexample. One spanning tree is a path, with only two leaves, another spanning tree is a star with 3 leaves.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="did"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<p id="xZj">Find all spanning trees of the graph below. How many different spanning trees are there? How many different spanning trees are there <em class="emphasis">up to isomorphism</em> (that is, if you grouped all the spanning trees by which are isomorphic, how many groups would you have)?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-121.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise exercise-like" id="Jpm"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<p id="egs">Give an example of a graph that has exactly 7 different spanning trees. Note, it acceptable for some or all of these spanning trees to be isomorphic.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-rlI" id="rlI"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-rlI"><div class="hint solution-like"><p id="DOv">There is an example with 7 edges.</p></div></div>
+</div></article><article class="exercise exercise-like" id="pwv"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
+<p id="KnB">Prove that every connected graph which is not itself a tree must have at last three different (although possibly isomorphic) spanning trees.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-XsR" id="XsR"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-XsR"><div class="hint solution-like"><p id="jVE">The previous exercise will be helpful.</p></div></div>
+</div></article><article class="exercise exercise-like" id="VDE"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
+<p id="quK">Consider edges that must be in every spanning tree of a graph. Must every graph have such an edge? Give an example of a graph that has exactly one such edge.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-DAa" id="DAa"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-DAa"><div class="hint solution-like"><p id="QcN">Note that such an edge, if removed, would disconnect the graph. We call graphs that have an edge like this <dfn class="terminology">1-connected</dfn>.</p></div></div>
+</div></article></section></section></div></main>
+</div>
+<!--Start: Google Universal code-->
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-66485406-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!--End: Google Universal code-->
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.13/login.js"></script>
+</body>
+</html>

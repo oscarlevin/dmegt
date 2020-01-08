@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-01-07T16:46:03-07:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Stars and Bars</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-dev.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-dev.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script>(function() {
+  var cx = '000445521324161818100:qhc2ahxtur8';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.13;
+</script>
+</head>
+<body id="levin-DMOI" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://discrete.openmathbooks.org/dmoi3.html" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="dmoi.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">early Graph Theory</span></a></h1>
+<p class="byline">Oscar Levin</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_comb-proofs.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_counting.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_advPIE.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_comb-proofs.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_counting.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_advPIE.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="RGW"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="xOf">Preface</a></li>
+<li><a href="preface-2.html" data-scroll="dVo">How to use this book</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_graphtheory.html" data-scroll="gBz"><span class="codenumber">0</span> <span class="title">Graphs and other Discrete Structures</span></a><ul>
+<li><a href="sec_intro-intro.html" data-scroll="hPw">What is Discrete Mathematics?</a></li>
+<li><a href="sec_gt-intro.html" data-scroll="HLu">Graph Theory</a></li>
+<li><a href="sec_intro-sets.html" data-scroll="ltW">Sets</a></li>
+<li><a href="sec_intro-functions.html" data-scroll="CkQ">Functions</a></li>
+<li><a href="sec_gt-carefully.html" data-scroll="HLu">Graph Done Right</a></li>
+<li><a href="sec_coloring.html" data-scroll="qyO">Coloring</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logic.html" data-scroll="wur"><span class="codenumber">1</span> <span class="title">Symbolic Logic and Proofs</span></a><ul>
+<li><a href="sec_intro-statements.html" data-scroll="QDd">Mathematical Statements</a></li>
+<li><a href="sec_propositional.html" data-scroll="XMq">Propositional Logic</a></li>
+<li><a href="sec_logic-proofs.html" data-scroll="lnf">Proofs</a></li>
+<li><a href="sec_paths.html" data-scroll="tPg">Euler Paths and Circuits</a></li>
+<li><a href="sec_trees.html" data-scroll="gor">Trees</a></li>
+<li><a href="sec_logic-induction.html" data-scroll="lnf">Mathematical Induction</a></li>
+<li><a href="sec_planar.html" data-scroll="ttH">Planar Graphs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_counting.html" data-scroll="raE"><span class="codenumber">2</span> <span class="title">Counting</span></a><ul>
+<li><a href="sec_counting-pascal.html" data-scroll="sJa">Pascal's Triangle</a></li>
+<li><a href="sec_counting-addmult.html" data-scroll="sJa">Additive and Multiplicative Principles</a></li>
+<li><a href="sec_counting-binom.html" data-scroll="vZs">Binomial Coefficients</a></li>
+<li><a href="sec_counting-combperm.html" data-scroll="yda">Combinations and Permutations</a></li>
+<li><a href="sec_comb-proofs.html" data-scroll="SUg">Combinatorial Proofs</a></li>
+<li><a href="sec_stars-and-bars.html" data-scroll="qkt" class="active">Stars and Bars</a></li>
+<li><a href="sec_advPIE.html" data-scroll="HKU">Advanced Counting Using PIE</a></li>
+<li><a href="sec_count-conc.html" data-scroll="Bmb">Chapter Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_sequences.html" data-scroll="KxW"><span class="codenumber">3</span> <span class="title">Sequences</span></a><ul>
+<li><a href="sec_seq_intro.html" data-scroll="tgm">Describing Sequences</a></li>
+<li><a href="sec_seq-arithgeom.html" data-scroll="lIR">Arithmetic and Geometric Sequences</a></li>
+<li><a href="sec_polyfit.html" data-scroll="ylR">Polynomial Fitting</a></li>
+<li><a href="sec_recurrence.html" data-scroll="bcV">Solving Recurrence Relations</a></li>
+<li><a href="sec_seq-induction.html" data-scroll="Prg">Induction</a></li>
+<li><a href="sec_addtops-genfun.html" data-scroll="XaJ">Generating Functions</a></li>
+<li><a href="sec_sequences-conc.html" data-scroll="YaY">Chapter Summary</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="mqL"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="SxU"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="yFd"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="GjC"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="qkt"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.6</span> <span class="title">Stars and Bars</span>
+</h2>
+<a href="sec_stars-and-bars.html" class="permalink">¶</a><section class="introduction" id="uUm"><article class="project-like" id="bbv"><h6 class="heading">
+<span class="type">Investigate!</span> </h6>
+<p id="pOU">Suppose you have some number of identical Rubik's cubes to distribute to your friends. Imagine you start with a single row of the cubes.</p>
+<ol class="decimal">
+<li id="YgP">
+<p id="Gdl">Find the number of different ways you can distribute the cubes provided:</p>
+<ol id="mku" class="lower-alpha">
+<li id="ekw"><p id="ydn">You have 3 cubes to give to 2 people.</p></li>
+<li id="EnY"><p id="SrD">You have 4 cubes to give to 2 people.</p></li>
+<li id="kvh"><p id="yyM">You have 5 cubes to give to 2 people.</p></li>
+<li id="QCq"><p id="eFV">You have 3 cubes to give to 3 people.</p></li>
+<li id="wJz"><p id="KNe">You have 4 cubes to give to 3 people.</p></li>
+<li id="cQI"><p id="qUn">You have 5 cubes to give to 3 people.</p></li>
+</ol>
+</li>
+<li id="tOT"><p id="Xbw">Make a conjecture about how many different ways you could distribute 7 cubes to 4 people. Explain.</p></li>
+<li id="ZWc"><p id="DiF">What if each person were required to get <em class="emphasis">at least one</em> cube? How would your answers change?</p></li>
+</ol></article><p id="VWd">Consider the following counting problem:</p>
+<blockquote class="blockquote" id="zEf"><p id="EXS">You have 7 cookies to give to 4 kids. How many ways can you do this?</p></blockquote>
+<p id="Cdm">Take a moment to think about how you might solve this problem. You may assume that it is acceptable to give a kid no cookies. Also, the cookies are all identical and the order in which you give out the cookies does not matter.</p>
+<p id="ikv">Before solving the problem, here is a wrong answer: You might guess that the answer should be \(4^7\) because for each of the 7 cookies, there are 4 choices of kids to which you can give the cookie. This is reasonable, but wrong. To see why, consider a few possible outcomes: we could assign the first six cookies to kid A, and the seventh cookie to kid B. Another outcome would assign the first cookie to kid B and the six remaining cookies to kid A. Both outcomes are included in the \(4^7\) answer. But for our counting problem, both outcomes are really the same – kid A gets six cookies and kid B gets one cookie.</p>
+<p id="OrE">What do outcomes actually look like? How can we represent them? One approach would be to write an outcome as a string of four numbers like this:</p>
+<div class="displaymath">
+\begin{equation*}
+3112\text{,}
+\end{equation*}
+</div>
+<p>which represent the outcome in which the first kid gets 3 cookies, the second and third kid each get 1 cookie, and the fourth kid gets 2 cookies. Represented this way, the order in which the numbers occur matters. 1312 is a different outcome, because the first kid gets a one cookie instead of 3. Each number in the string can be any integer between 0 and 7. But the answer is not \(7^4\text{.}\) We need the <em class="emphasis">sum</em> of the numbers to be 7.</p>
+<p id="uyN">Another way we might represent outcomes is to write a string of seven letters:</p>
+<div class="displaymath">
+\begin{equation*}
+\mbox{ABAADCD} \text{,}
+\end{equation*}
+</div>
+<p>which represents that the first cookie goes to kid A, the second cookie goes to kid B, the third and fourth cookies go to kid A, and so on. In fact, this outcome is identical to the previous one—A gets 3 cookies, B and C get 1 each and D gets 2. Each of the seven letters in the string can be any of the 4 possible letters (one for each kid), but the number of such strings is not \(4^7\text{,}\) because here order does <em class="emphasis">not</em> matter. In fact, another way to write the same outcome is</p>
+<div class="displaymath">
+\begin{equation*}
+\mbox{AAABCDD} \text{.}
+\end{equation*}
+</div>
+<p id="aFW">This will be the preferred representation of the outcome. Since we can write the letters in any order, we might as well write them in <em class="emphasis">alphabetical</em> order for the purposes of counting. So we will write all the A's first, then all the B's, and so on.</p>
+<p id="GNf">Now think about how you could specify such an outcome. All we really need to do is say when to switch from one letter to the next. In terms of cookies, we need to say after how many cookies do we stop giving cookies to the first kid and start giving cookies to the second kid. And then after how many do we switch to the third kid? And after how many do we switch to the fourth? So yet another way to represent an outcome is like this:</p>
+<div class="displaymath">
+\begin{equation*}
+***|*|*|**\text{.}
+\end{equation*}
+</div>
+<p id="mUo">Three cookies go to the first kid, then we switch and give one cookie to the second kid, then switch, one to the third kid, switch, two to the fourth kid. Notice that we need 7 stars and 3 bars – one star for each cookie, and one bar for each switch between kids, so one fewer bars than there are kids (we don't need to switch after the last kid – we are done).</p>
+<p id="Tbx">Why have we done all of this? Simple: to count the number of ways to distribute 7 cookies to 4 kids, all we need to do is count how many <em class="emphasis">stars and bars</em> charts there are. But a <dfn class="terminology">stars and bars chart</dfn>  is just a string of symbols, some stars and some bars. If instead of stars and bars we would use 0's and 1's, it would just be a bit string.  We know how to count those.</p>
+<p id="ziG">Before we get too excited, we should make sure that really <em class="emphasis">any</em> string of (in our case) 7 stars and 3 bars corresponds to a different way to distribute cookies to kids. In particular consider a string like this:</p>
+<div class="displaymath">
+\begin{equation*}
+|***||****\text{.}
+\end{equation*}
+</div>
+<p id="fpP">Does that correspond to a cookie distribution? Yes. It represents the distribution in which kid A gets 0 cookies (because we switch to kid B before any stars), kid B gets three cookies (three stars before the next bar), kid C gets 0 cookies (no stars before the next bar) and kid D gets the remaining 4 cookies. No matter how the stars and bars are arranged, we can distribute cookies in that way. Also, given any way to distribute cookies, we can represent that with a stars and bars chart. For example, the distribution in which kid A gets 6 cookies and kid B gets 1 cookie has the following chart:</p>
+<div class="displaymath">
+\begin{equation*}
+******|*||\text{.}
+\end{equation*}
+</div>
+<p id="LwY">After all that work we are finally ready to count. Each way to distribute cookies corresponds to a stars and bars chart with 7 stars and 3 bars. So there are 10 symbols, and we must choose 3 of them to be bars. Thus:</p>
+<div class="displaymath">
+\begin{equation*}
+\mbox{ There are } {10 \choose 3}\mbox{ ways to distribute 7 cookies to 4 kids}\text{.}
+\end{equation*}
+</div>
+<p id="rEh">While we are at it, we can also answer a related question: how many ways are there to distribute 7 cookies to 4 kids so that each kid gets at least one cookie? What can you say about the corresponding stars and bars charts? The charts must start and end with at least one star (so that kids A and D) get cookies, and also no two bars can be adjacent (so that kids B and C are not skipped). One way to assure this is to place bars only in the spaces <em class="emphasis">between</em> the stars. With 7 stars, there are 6 spots between the stars, so we must choose 3 of those 6 spots to fill with bars. Thus there are \({6 \choose 3}\) ways to distribute 7 cookies to 4 kids giving at least one cookie to each kid.</p>
+<p id="XLq">Another (and more general) way to approach this modified problem is to first give each kid one cookie. Now the remaining 3 cookies can be distributed to the 4 kids without restrictions. So we have 3 stars and 3 bars for a total of 6 symbols, 3 of which must be bars. So again we see that there are \({6 \choose 3}\) ways to distribute the cookies.</p>
+<p id="DSz">Stars and bars can be used in counting problems other than kids and cookies. Here are a few examples:</p>
+<article class="example example-like" id="CyL"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.6.1</span><span class="period">.</span>
+</h6>
+<p id="lfb">Your favorite mathematical ice-cream parlor offers 10 flavors. How many milkshakes could you create using exactly 6, not necessarily distinct scoops? The order you add the flavors does not matter (they will be blended up anyway) but you are allowed repeats. So one possible shake is triple chocolate, double cherry, and mint chocolate chip.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-HiE" id="HiE"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-HiE"><div class="solution solution-like">
+<p id="UgQ">We get six scoops, each of which could be one of ten possible flavors. Represent each scoop as a star. Think of going down the counter one flavor at a time: you see vanilla first, and skip to the next, chocolate. You say yes to chocolate three times (use three stars), then switch to the next flavor. You keep skipping until you get to cherry, which you say yes to twice. Another switch and you are at mint chocolate chip. You say yes once. Then you keep switching until you get past the last flavor, never saying yes again (since you already have said yes six times). There are ten flavors to choose from, so we must switch from considering one flavor to the next nine times. These are the nine bars.</p>
+<p id="AnZ">Now that we are confident that we have the right number of stars and bars, we answer the question simply: there are 6 stars and 9 bars, so 15 symbols. We need to pick 9 of them to be bars, so the number of milkshakes possible is</p>
+<div class="displaymath">
+\begin{equation*}
+\binom{15}{9}\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="example example-like" id="iFU"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.6.2</span><span class="period">.</span>
+</h6>
+<p id="Rmk">How many 7 digit phone numbers are there in which the digits are non-increasing? That is, every digit is less than or equal to the previous one.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-npN" id="npN"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-npN"><div class="solution solution-like">
+<p id="gvi">We need to decide on 7 digits so we will use 7 stars. The bars will represent a switch from each possible single digit number down to the next smaller one. So the phone number 866-5221 is represented by the stars and bars chart</p>
+<div class="displaymath">
+\begin{equation*}
+|*||**|*|||**|*|\text{.}
+\end{equation*}
+</div>
+<p id="MCr">There are 10 choices for each digit (0-9) so we must switch between choices 9 times. We have 7 stars and 9 bars, so the total number of phone numbers is</p>
+<div class="displaymath">
+\begin{equation*}
+{16 \choose 9}\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="example example-like" id="ONd"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.6.3</span><span class="period">.</span>
+</h6>
+<p id="xtt">How many integer solutions are there to the equation</p>
+<div class="displaymath">
+\begin{equation*}
+x_1 + x_2 + x_3 + x_4 + x_5 = 13\text{.}
+\end{equation*}
+</div>
+<p id="dAC">(An <dfn class="terminology">integer solution</dfn> to an equation is a solution in which the unknown must have an integer value.)</p>
+<ol id="JHL" class="decimal">
+<li id="IXR"><p id="jpO">where \(x_i \ge 0\) for each \(x_i\text{?}\)</p></li>
+<li id="pfa"><p id="PwX">where \(x_i &gt; 0\) for each \(x_i\text{?}\)</p></li>
+<li id="Vmj"><p id="vEg">where \(x_i \ge 2\) for each \(x_i\text{?}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-TwW" id="TwW"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-TwW"><div class="solution solution-like">
+<p id="sJA">This problem is just like giving 13 cookies to 5 kids. We need to say how many of the 13 units go to each of the 5 variables. In other words, we have 13 stars and 4 bars (the bars are like the “+” signs in the equation).</p>
+<ol id="YQJ" class="decimal">
+<li id="Bts"><p id="bLp">If \(x_i\) can be 0 or greater, we are in the standard case with no restrictions. So 13 stars and 4 bars can be arranged in \({17 \choose 4}\) ways.</p></li>
+<li id="hAB"><p id="HSy">Now each variable must be at least 1. So give one unit to each variable to satisfy that restriction. Now there are 8 stars left, and still 4 bars, so the number of solutions is \({12 \choose 4}\text{.}\)</p></li>
+<li id="NHK"><p id="nZH">Now each variable must be 2 or greater. So before any counting, give each variable 2 units. We now have 3 remaining stars and 4 bars, so there are \({7 \choose 4}\) solutions.</p></li>
+</ol>
+</div></div>
+</div></article><article class="paragraphs" id="WrC"><h5 class="heading"><span class="title">Counting with Functions.</span></h5>
+<p id="jZI">Many of the counting problems in this section might at first appear to be examples of counting <em class="emphasis">functions</em>. After all, when we try to count the number of ways to distribute cookies to kids, we are assigning each cookie to a kid, just like you assign elements of the domain of a function to elements in the codomain. However, the number of ways to assign 7 cookies to 4 kids is \({10 \choose 7} = 120\text{,}\) while the number of functions \(f: \{1,2,3,4,5,6,7\} \to \{a,b,c,d\}\) is \(4^7 = 16384\text{.}\) What is going on here?</p>
+<p id="QgR">When we count functions, we consider the following two functions, for example, to be different:</p>
+<div class="displaymath">
+\begin{equation*}
+f = \twoline{1 \amp 2 \amp 3 \amp 4\amp 5 \amp 6 \amp 7}{a \amp b \amp c \amp c \amp c \amp c \amp c} \qquad g = \twoline{1 \amp 2 \amp 3 \amp 4\amp 5 \amp 6 \amp 7}{b \amp a \amp c \amp c \amp c \amp c \amp c}\text{.}
+\end{equation*}
+</div>
+<p>But these two functions would correspond to the <em class="emphasis">same</em> cookie distribution: kids \(a\) and \(b\) each get one cookie, kid \(c\) gets the rest (and none for kid \(d\)).</p>
+<p id="woa">The point: elements of the domain are distinguished, cookies are indistinguishable. This is analogous to the distinction between permutations (like counting functions) and combinations (not).</p></article></section><section class="exercises" id="zVa"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<a href="sec_stars-and-bars.html#zVa" class="permalink">¶</a><article class="exercise exercise-like" id="SfI"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-3207">A multiset is a collection of objects, just like a set, but can contain an object more than once (the order of the elements still doesn’t matter). For example, \(\{1,1, 2, 5, 5, 7\}\) is a multiset of size 6.</p>
+<ol class="lower-alpha">
+<li id="li-1444"><p id="p-3208">How many <em class="emphasis">sets</em> of size 5 can be made using the 10 numeric digits 0 through 9?</p></li>
+<li id="li-1445"><p id="p-3210">How many <em class="emphasis">multi</em>sets of size 5 can be made using the 10 numeric digits 0 through 9?</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-158" id="answer-158"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-158"><div class="answer solution-like"><p id="p-3212">\(\mathop{\rm C}\nolimits\!\left(10,5\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-159" id="answer-159"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-159"><div class="answer solution-like"><p id="p-3213">\(\mathop{\rm C}\nolimits\!\left(14,5\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-243" id="solution-243"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-243"><div class="solution solution-like"><ol id="p-3214" class="lower-alpha">
+<li id="li-1446"><p id="p-3215">\({10\choose 5}\) sets. We must select 5 of the 10 digits to put in the set.</p></li>
+<li id="li-1447"><p id="p-3216">Use stars and bars: each star represents one of the 5 elements of the set, each bar represents a switch between digits. So there are 5 stars and 9 bars, giving us \({14 \choose 9}\) sets.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="ymR"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-3225">Using the digits 2 through 8, find the number of different 5-digit numbers such that:</p>
+<ol class="lower-alpha">
+<li id="li-1452"><p id="p-3226">Digits cannot be repeated and must be written in increasing order. For example, 23678 is okay, but 32678 is not.</p></li>
+<li id="li-1453"><p id="p-3228">Digits <em class="emphasis">can</em> be repeated and must be written in <em class="emphasis">non-decreasing</em> order. For example, 24448 is okay, but 24484 is not.</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-160" id="answer-160"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-160"><div class="answer solution-like"><p id="p-3230">\(\mathop{\rm C}\nolimits\!\left(7,5\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-161" id="answer-161"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-161"><div class="answer solution-like"><p id="p-3231">\(\mathop{\rm C}\nolimits\!\left(11,6\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-245" id="solution-245"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-245"><div class="solution solution-like"><ol id="p-3232" class="lower-alpha">
+<li id="li-1454"><p id="p-3233">There are \({7 \choose 5}\) numbers. We simply choose five of the seven digits and once chosen put them in increasing order.</p></li>
+<li id="li-1455"><p id="p-3234">This requires stars and bars. Use a star to represent each of the 5 digits in the number, and use their position relative to the bars to say what numeral fills that spot. So we will have 5 stars and 6 bars, giving \({11 \choose 6}\) numbers.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="eua"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="lRv">Each of the counting problems below can be solved with stars and bars. For each, say what outcome the diagram</p>
+<div class="displaymath">
+\begin{equation*}
+***|*||**|
+\end{equation*}
+</div>
+<p>represents, if there are the correct number of stars and bars for the problem. Otherwise, say why the diagram does not represent any outcome, and what a correct diagram would look like.</p>
+<ol class="lower-alpha">
+<li id="cjo"><p id="Sud">How many ways are there to select a handful of 6 jellybeans from a jar that contains 5 different flavors?</p></li>
+<li id="Iqx"><p id="yBm">How many ways can you distribute 5 identical lollipops to 6 kids?</p></li>
+<li id="oxG"><p id="eIv">How many 6-letter words can you make using the 5 vowels in alphabetical order?</p></li>
+<li id="UEP"><p id="KPE">How many solutions are there to the equation \(x_1 + x_2 + x_3 + x_4 = 6\text{.}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-TUV" id="TUV"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-TUV"><div class="solution solution-like"><ol id="cxJ" class="lower-alpha">
+<li id="ALY"><p id="qWN">You take 3 strawberry, 1 lime, 0 licorice, 2 blueberry and 0 bubblegum.</p></li>
+<li id="gTh">
+<p id="XdW">This is backwards. We don't want the stars to represent the kids because the kids are not identical, but the stars are. Instead we should use 5 stars (for the lollipops) and use 5 bars to switch between the 6 kids. For example,</p>
+<div class="displaymath">
+\begin{equation*}
+**||***|||
+\end{equation*}
+</div>
+<p>would represent the outcome with the first kid getting 2 lollipops, the third kid getting 3, and the rest of the kids getting none.</p>
+</li>
+<li id="Naq"><p id="Dlf">This is the word AAAEOO.</p></li>
+<li id="thz">
+<p id="jso">This doesn't represent a solution. Each star should represent one of the 6 units that add up to 6, and the bars should <em class="emphasis">switch</em> between the different variables. We have one too many bars. An example of a correct diagram would be</p>
+<div class="displaymath">
+\begin{equation*}
+*|**||***\text{,}
+\end{equation*}
+</div>
+<p>representing that \(x_1 = 1\text{,}\) \(x_2 = 2\text{,}\) \(x_3 = 0\text{,}\) and \(x_4 = 3\text{.}\)</p>
+</li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="KBj"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-3251">After gym class you are tasked with putting the 14 identical dodgeballs away into 5 bins.</p>
+<ol class="lower-alpha">
+<li id="li-1468"><p id="p-3252">How many ways can you do this if there are no restrictions?</p></li>
+<li id="li-1469"><p id="p-3254">How many ways can you do this if each bin must contain at least one dodgeball?</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-162" id="answer-162"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-162"><div class="answer solution-like"><p id="p-3256">\(\mathop{\rm C}\nolimits\!\left(18,14\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-163" id="answer-163"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-163"><div class="answer solution-like"><p id="p-3257">\(\mathop{\rm C}\nolimits\!\left(13,9\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-248" id="solution-248"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-248"><div class="solution solution-like"><ol id="p-3258" class="lower-alpha">
+<li id="li-1470"><p id="p-3259">\({18 \choose 4}\) ways. Each outcome can be represented by a sequence of 14 stars and 4 bars.</p></li>
+<li id="li-1471"><p id="p-3260">\({13 \choose 4}\) ways. First put one ball in each bin. This leaves 9 stars and 4 bars.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="qIs"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-3272">How many integer solutions are there to the equation \(x + y + z = 8\) for which</p>
+<ol class="lower-alpha">
+<li id="li-1478"><p id="p-3273">\(x\text{,}\) \(y\text{,}\) and \(z\) are all positive?</p></li>
+<li id="li-1479"><p id="p-3275">\(x\text{,}\) \(y\text{,}\) and \(z\) are all non-negative?</p></li>
+<li id="li-1480"><p id="p-3277">\(x\text{,}\) \(y\text{,}\) and \(z\) are all greater than or equal to \(-3\text{.}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-164" id="answer-164"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-164"><div class="answer solution-like"><p id="p-3279">\(\mathop{\rm C}\nolimits\!\left(7,2\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-165" id="answer-165"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-165"><div class="answer solution-like"><p id="p-3280">\(\mathop{\rm C}\nolimits\!\left(10,2\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-166" id="answer-166"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-166"><div class="answer solution-like"><p id="p-3281">\(\mathop{\rm C}\nolimits\!\left(19,2\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-250" id="solution-250"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-250"><div class="solution solution-like"><ol id="p-3282" class="lower-alpha">
+<li id="li-1481"><p id="p-3283">\({7 \choose 2}\) solutions. After each variable gets 1 star for free, we are left with 5 stars and 2 bars.</p></li>
+<li id="li-1482"><p id="p-3284">\({10 \choose 2}\) solutions. We have 8 stars and 2 bars.</p></li>
+<li id="li-1483"><p id="p-3285">\({19 \choose 2}\) solutions. This problem is equivalent to finding the number of solutions to \(x' + y' + z' = 17\) where \(x'\text{,}\) \(y'\) and \(z'\) are non-negative. (In fact, we really just do a substitution. Let \(x = x'- 3\text{,}\) \(y = y' - 3\) and \(z = z' - 3\)).</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="WPB"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-3289">When playing Yahtzee, you roll five regular 6-sided dice. How many different outcomes are possible from a single roll? The order of the dice does not matter.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-167" id="answer-167"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-167"><div class="answer solution-like"><p id="p-3291">\(\mathop{\rm C}\nolimits\!\left(10,5\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-252" id="solution-252"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-252"><div class="solution solution-like"><p id="p-3292">\({10 \choose 5}\) outcomes.</p></div></div>
+</div></article><article class="exercise exercise-like" id="CWK"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-3296">Your friend tells you she has 7 coins in her hand (just pennies, nickels, dimes and quarters). If you guess how many of each kind of coin she has, she will give them to you. If you guess randomly, what is the probability that you will be correct?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-168" id="answer-168"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-168"><div class="answer solution-like"><p id="p-3298">\(\frac{1}{\mathop{\rm C}\nolimits\!\left(10,7\right)}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-254" id="solution-254"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-254"><div class="solution solution-like"><p id="p-3299">There are \({10 \choose 3} = 120\) different combinations of coins possible. Thus you have a 1 in 120 chance of guessing correctly.</p></div></div>
+</div></article><article class="exercise exercise-like" id="jdT"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-3303">How many integer solutions to \(x_1 + x_2 + x_3 + x_4 = 25\) are there for which \(x_1 \ge 1\text{,}\) \(x_2 \ge 2\text{,}\) \(x_3 \ge 3\) and \(x_4 \ge 4\text{?}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-169" id="answer-169"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-169"><div class="answer solution-like"><p id="p-3305">\(\mathop{\rm C}\nolimits\!\left(18,15\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-256" id="solution-256"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-256"><div class="solution solution-like"><p id="p-3306">\({18 \choose 15}\) solutions. Distribute 10 units to the variables before finding all solutions to \(x_1' + x_2' + x_3' + x_4' = 15\) in non-negative integers.</p></div></div>
+</div></article><article class="exercise exercise-like" id="Plc"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="PdY">Solve the three counting problems below. Then say why it makes sense that they all have the same answer. That is, say how you can interpret them as each other.</p>
+<ol class="lower-alpha">
+<li id="iIu"><p id="RoK">How many ways are there to distribute 8 cookies to 3 kids?</p></li>
+<li id="OPD"><p id="xvT">How many solutions in non-negative integers are there to \(x+y+z = 8\text{?}\)</p></li>
+<li id="uWM"><p id="dDc">How many different packs of 8 crayons can you make using crayons that come in red, blue and yellow?</p></li>
+</ol></article><article class="exercise exercise-like" id="vsl"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="p-3319">Consider functions \(f:\{1,2,3,4,5\} \to \{0,1,2,\ldots,9\}\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-1491"><p id="p-3320">How many of these functions are strictly increasing? Explain. (A function is strictly increasing provided if \(a \lt b\text{,}\) then \(f(a) \lt f(b)\text{.}\))</p></li>
+<li id="li-1492"><p id="p-3322">How many of the functions are non-decreasing? Explain. (A function is non-decreasing provided if \(a \lt b\text{,}\) then \(f(a) \le f(b)\text{.}\))</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-170" id="answer-170"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-170"><div class="answer solution-like"><p id="p-3324">\(\mathop{\rm C}\nolimits\!\left(10,5\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-171" id="answer-171"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-171"><div class="answer solution-like"><p id="p-3325">\(\mathop{\rm C}\nolimits\!\left(14,5\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-258" id="solution-258"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-258"><div class="solution solution-like"><ol id="p-3326" class="lower-alpha">
+<li id="li-1493"><p id="p-3327">\({10 \choose 5}\text{.}\) Note that a strictly increasing function is automatically injective.</p></li>
+<li id="li-1494"><p id="p-3328">\({14 \choose 9}\text{.}\)</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="bzu"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="p-3343"><em class="emphasis">Conic</em>, your favorite math themed fast food drive-in offers 20 flavors which can be added to your soda. You have enough money to buy a large soda with 4 added flavors. How many different soda concoctions can you order if:</p>
+<ol class="lower-alpha">
+<li id="li-1503"><p id="p-3344">You refuse to use any of the flavors more than once?</p></li>
+<li id="li-1504"><p id="p-3346">You refuse repeats but care about the order the flavors are added?</p></li>
+<li id="li-1505"><p id="p-3348">You allow yourself multiple shots of the same flavor?</p></li>
+<li id="li-1506"><p id="p-3350">You allow yourself multiple shots, and care about the order the flavors are added?</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-172" id="answer-172"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-172"><div class="answer solution-like"><p id="p-3352">\(\mathop{\rm C}\nolimits\!\left(20,4\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-173" id="answer-173"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-173"><div class="answer solution-like"><p id="p-3353">\(\mathop{\rm P}\nolimits\!\left(20,4\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-174" id="answer-174"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-174"><div class="answer solution-like"><p id="p-3354">\(\mathop{\rm C}\nolimits\!\left(23,4\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-175" id="answer-175"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-175"><div class="answer solution-like"><p id="p-3355">\(20^{4}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-260" id="solution-260"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-260"><div class="solution solution-like"><ol id="p-3356" class="lower-alpha">
+<li id="li-1507"><p id="p-3357">\({20 \choose 4}\) sodas (order does not matter and repeats are not allowed).</p></li>
+<li id="li-1508"><p id="p-3358">\(P(20, 4) = 20\cdot 19\cdot 18 \cdot 17\) sodas (order matters and repeats are not allowed).</p></li>
+<li id="li-1509"><p id="p-3359">\({23 \choose 4}\) sodas (order does not matter and repeats are allowed; 4 stars and 19 bars).</p></li>
+<li id="li-1510"><p id="p-3360">\(20^4\) sodas (order matters and repeats are allowed; 20 choices 4 times).</p></li>
+</ol></div></div>
+</div></article></section></section></div></main>
+</div>
+<!--Start: Google Universal code-->
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-66485406-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!--End: Google Universal code-->
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.13/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-01-07T16:45:55-07:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Mathematical Statements</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-dev.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-dev.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script>(function() {
+  var cx = '000445521324161818100:qhc2ahxtur8';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.13;
+</script>
+</head>
+<body id="levin-DMOI" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://discrete.openmathbooks.org/dmoi3.html" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="dmoi.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">early Graph Theory</span></a></h1>
+<p class="byline">Oscar Levin</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ch_logic.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_propositional.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ch_logic.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_propositional.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="RGW"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="xOf">Preface</a></li>
+<li><a href="preface-2.html" data-scroll="dVo">How to use this book</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_graphtheory.html" data-scroll="gBz"><span class="codenumber">0</span> <span class="title">Graphs and other Discrete Structures</span></a><ul>
+<li><a href="sec_intro-intro.html" data-scroll="hPw">What is Discrete Mathematics?</a></li>
+<li><a href="sec_gt-intro.html" data-scroll="HLu">Graph Theory</a></li>
+<li><a href="sec_intro-sets.html" data-scroll="ltW">Sets</a></li>
+<li><a href="sec_intro-functions.html" data-scroll="CkQ">Functions</a></li>
+<li><a href="sec_gt-carefully.html" data-scroll="HLu">Graph Done Right</a></li>
+<li><a href="sec_coloring.html" data-scroll="qyO">Coloring</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logic.html" data-scroll="wur"><span class="codenumber">1</span> <span class="title">Symbolic Logic and Proofs</span></a><ul>
+<li><a href="sec_intro-statements.html" data-scroll="QDd" class="active">Mathematical Statements</a></li>
+<li><a href="sec_propositional.html" data-scroll="XMq">Propositional Logic</a></li>
+<li><a href="sec_logic-proofs.html" data-scroll="lnf">Proofs</a></li>
+<li><a href="sec_paths.html" data-scroll="tPg">Euler Paths and Circuits</a></li>
+<li><a href="sec_trees.html" data-scroll="gor">Trees</a></li>
+<li><a href="sec_logic-induction.html" data-scroll="lnf">Mathematical Induction</a></li>
+<li><a href="sec_planar.html" data-scroll="ttH">Planar Graphs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_counting.html" data-scroll="raE"><span class="codenumber">2</span> <span class="title">Counting</span></a><ul>
+<li><a href="sec_counting-pascal.html" data-scroll="sJa">Pascal's Triangle</a></li>
+<li><a href="sec_counting-addmult.html" data-scroll="sJa">Additive and Multiplicative Principles</a></li>
+<li><a href="sec_counting-binom.html" data-scroll="vZs">Binomial Coefficients</a></li>
+<li><a href="sec_counting-combperm.html" data-scroll="yda">Combinations and Permutations</a></li>
+<li><a href="sec_comb-proofs.html" data-scroll="SUg">Combinatorial Proofs</a></li>
+<li><a href="sec_stars-and-bars.html" data-scroll="qkt">Stars and Bars</a></li>
+<li><a href="sec_advPIE.html" data-scroll="HKU">Advanced Counting Using PIE</a></li>
+<li><a href="sec_count-conc.html" data-scroll="Bmb">Chapter Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_sequences.html" data-scroll="KxW"><span class="codenumber">3</span> <span class="title">Sequences</span></a><ul>
+<li><a href="sec_seq_intro.html" data-scroll="tgm">Describing Sequences</a></li>
+<li><a href="sec_seq-arithgeom.html" data-scroll="lIR">Arithmetic and Geometric Sequences</a></li>
+<li><a href="sec_polyfit.html" data-scroll="ylR">Polynomial Fitting</a></li>
+<li><a href="sec_recurrence.html" data-scroll="bcV">Solving Recurrence Relations</a></li>
+<li><a href="sec_seq-induction.html" data-scroll="Prg">Induction</a></li>
+<li><a href="sec_addtops-genfun.html" data-scroll="XaJ">Generating Functions</a></li>
+<li><a href="sec_sequences-conc.html" data-scroll="YaY">Chapter Summary</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="mqL"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="SxU"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="yFd"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="GjC"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="QDd"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Mathematical Statements</span>
+</h2>
+<a href="sec_intro-statements.html" class="permalink">¶</a><section class="introduction" id="HTl"><article class="project-like" id="oau"><h6 class="heading">
+<span class="type">Investigate!</span> </h6>
+<p id="azF">While walking through a fictional forest, you encounter three trolls guarding a bridge. Each is either a <em class="emphasis">knight</em>, who always tells the truth, or a <em class="emphasis">knave</em>, who always lies. The trolls will not let you pass until you correctly identify each as either a knight or a knave. Each troll makes a single statement:</p>
+<blockquote class="blockquote" id="RmX">
+<p id="vxP">Troll 1: If I am a knave, then there are exactly two knights here.</p>
+<p id="bEY">Troll 2: Troll 1 is lying.</p>
+<p id="HMh">Troll 3: Either we are all knaves or at least one of us is a knight.</p>
+</blockquote>
+<p id="GGO">Which troll is which? </p></article><p id="mNX">In order to <em class="emphasis">do</em> mathematics, we must be able to <em class="emphasis">talk</em> and <em class="emphasis">write</em> about mathematics. Perhaps your experience with mathematics so far has mostly involved finding answers to problems. As we embark towards more advanced and abstract mathematics, writing will play a more prominent role in the mathematical process.</p>
+<p id="SVg">Communication in mathematics requires more precision than many other subjects, and thus we should take a few pages here to consider the basic building blocks: <em class="emphasis">mathematical statements</em>.</p></section><section class="subsection" id="wKm"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Atomic and Molecular Statements</span>
+</h3>
+<a href="sec_intro-statements.html#wKm" class="permalink">¶</a><p id="NfU"> A <dfn class="terminology">statement</dfn> is any declarative sentence which is either true or false. A statement is <dfn class="terminology">atomic</dfn> if it cannot be divided into smaller statements, otherwise it is called <dfn class="terminology">molecular</dfn>.</p>
+<article class="example example-like" id="yzz"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span>
+</h6>
+<p id="YKs">These are statements (in fact, <em class="emphasis">atomic</em> statements):</p>
+<ul class="disc">
+<li id="DTm"><p id="IhG">Telephone numbers in the USA have 10 digits.</p></li>
+<li id="kav"><p id="ooP">The moon is made of cheese.</p></li>
+<li id="QhE"><p id="UvY">42 is a perfect square.</p></li>
+<li id="woN"><p id="ADh">Every even number greater than 2 can be expressed as the sum of two primes.</p></li>
+<li id="cvW"><p id="gKq">\(3+7 = 12\)</p></li>
+</ul>
+<p>And these are not statements:</p>
+<ul class="disc">
+<li id="IDf"><p id="MRz">Would you like some cake?</p></li>
+<li id="oKo"><p id="sYI">The sum of two squares.</p></li>
+<li id="URx">\(1+3+5+7+\cdots+2n+1\text{.}\)</li>
+<li id="AYG"><p id="ZfR">Go to your room!</p></li>
+<li id="hfP"><p id="Fna">\(3+x = 12\)</p></li>
+</ul></article><p id="tnd"> The reason the sentence “\(3 + x = 12\)” is not a statement is that it contains a variable. Depending on what \(x\) is, the sentence is either true or false, but right now it is neither. One way to make the <em class="emphasis">sentence</em> into a <em class="emphasis">statement</em> is to specify the value of the variable in some way. This could be done by specifying a specific substitution, for example, “\(3+x = 12\) where \(x = 9\text{,}\)” which is a true statement. Or you could <em class="emphasis">capture</em> the free variable by <em class="emphasis">quantifying</em> over it, as in, “for all values of \(x\text{,}\) \(3+x = 12\text{,}\)” which is false. We will discuss quantifiers in more detail at the end of this section.</p>
+<p id="Zum"> You can build more complicated (molecular) statements out of simpler (atomic or molecular) ones using <dfn class="terminology">logical connectives</dfn>. For example, this is a molecular statement:</p>
+<blockquote class="blockquote" id="JIy"><p id="nTq">Telephone numbers in the USA have 10 digits and 42 is a perfect square.</p></blockquote>
+<p id="FBv"> Note that we can break this down into two smaller statements. The two shorter statements are <em class="emphasis">connected</em> by an “and.” We will consider 5 connectives: “and” (Sam is a man and Chris is a woman), “or” (Sam is a man or Chris is a woman), “if…, then…” (if Sam is a man, then Chris is a woman), “if and only if” (Sam is a man if and only if Chris is a woman), and “not” (Sam is not a man). The first four are called <dfn class="terminology">binary connectives</dfn> (because they connect two statements) while “not” is an example of a <dfn class="terminology">unary connective</dfn> (since it applies to a single statement).</p>
+<p id="lIE"> These molecular statements are of course still statements, so they must be either true or false. The absolutely key observation here is that which <dfn class="terminology">truth value</dfn> the molecular statement achieves is completely determined by the type of connective and the truth values of the parts. We do not need to know what the parts actually say, only whether those parts are true or false. So to analyze logical connectives, it is enough to consider <dfn class="terminology">propositional variables</dfn> (sometimes called <em class="emphasis">sentential</em> variables), usually capital letters in the middle of the alphabet: \(P, Q, R, S, \ldots\text{.}\) We think of these as standing in for (usually atomic) statements, but there are only two <em class="emphasis">values</em> the variables can achieve: true or false.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-6" id="fn-6"><sup> 1 </sup></a> We also have symbols for the logical connectives: \(\wedge\text{,}\) \(\vee\text{,}\) \(\imp\text{,}\) \(\iff\text{,}\) \(\neg\text{.}\)</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn">In computer programing, we should call such variables <dfn class="terminology">Boolean variables</dfn>.</div></div>
+<article class="assemblage assemblage-like" id="pfN"><h6 class="heading"><span class="title">Logical Connectives.</span></h6>
+<ul id="DMi" class="disc">
+<li id="NmY">\(P \wedge Q\) is read “\(P\) and \(Q\text{,}\)” and called a <dfn class="terminology">conjunction</dfn>. </li>
+<li id="tuh">\(P \vee Q\) is read “\(P\) or \(Q\text{,}\)” and called a <dfn class="terminology">disjunction</dfn>. </li>
+<li id="ZBq">\(P \imp Q\) is read “if \(P\) then \(Q\text{,}\)” and called an <dfn class="terminology">implication</dfn> or <dfn class="terminology">conditional</dfn>. </li>
+<li id="FIz">\(P \iff Q\) is read “\(P\) if and only if \(Q\text{,}\)” and called a <dfn class="terminology">biconditional</dfn>. </li>
+<li id="lPI">\(\neg P\) is read “not \(P\text{,}\)” and called a <dfn class="terminology">negation</dfn>. </li>
+</ul></article><p id="RPN"> The <dfn class="terminology">truth value</dfn> of a statement is determined by the truth value(s) of its part(s), depending on the connectives:</p>
+<article class="assemblage assemblage-like" id="VmW"><h6 class="heading"><span class="title">Truth Conditions for Connectives.</span></h6>
+<ul id="jTr" class="disc">
+<li id="RWR">\(P \wedge Q\) is true when both \(P\) and \(Q\) are true. </li>
+<li id="yea">\(P \vee Q\) is true when \(P\) or \(Q\) or both are true. </li>
+<li id="elj">\(P \imp Q\) is true when \(P\) is false or \(Q\) is true or both. </li>
+<li id="Kss">\(P \iff Q\) is true when \(P\) and \(Q\) are both true, or both false. </li>
+<li id="qzB">\(\neg P\) is true when \(P\) is false. </li>
+</ul></article><p id="xWW"> Note that for us, <em class="emphasis">or</em> is the <dfn class="terminology">inclusive or</dfn> (and not the sometimes used <em class="emphasis">exclusive or</em>) meaning that \(P \vee Q\) is in fact true when both \(P\) and \(Q\) are true. As for the other connectives, “and” behaves as you would expect, as does negation. The biconditional (if and only if) might seem a little strange, but you should think of this as saying the two parts of the statements are <em class="emphasis">equivalent</em> in that they have the same truth value. This leaves only the conditional \(P \imp Q\) which has a slightly different meaning in mathematics than it does in ordinary usage. However, implications are so common and useful in mathematics, that we must develop fluency with their use, and as such, they deserve their own subsection.</p></section><section class="subsection" id="cRv"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Implications</span>
+</h3>
+<a href="sec_intro-statements.html#cRv" class="permalink">¶</a><article class="assemblage assemblage-like" id="Buf"><h6 class="heading"><span class="title">Implications.</span></h6>
+<p id="QaA">An <dfn class="terminology">implication</dfn> or <dfn class="terminology">conditional</dfn> is a molecular statement of the form</p>
+<div class="displaymath">
+\begin{equation*}
+P \imp Q
+\end{equation*}
+</div>
+<p>where \(P\) and \(Q\) are statements. We say that</p>
+<ul class="disc">
+<li id="WGK">\(P\) is the <dfn class="terminology">hypothesis</dfn> (or <dfn class="terminology">antecedent</dfn>).</li>
+<li id="iVc">\(Q\) is the <dfn class="terminology">conclusion</dfn> (or <dfn class="terminology">consequent</dfn>).</li>
+</ul>
+<p id="whJ">An implication is <em class="emphasis">true</em> provided \(P\) is false or \(Q\) is true (or both), and <em class="emphasis">false</em> otherwise. In particular, the only way for \(P \imp Q\) to be false is for \(P\) to be true <em class="emphasis">and</em> \(Q\) to be false.</p></article><p id="eef"> Easily the most common type of statement in mathematics is the implication. Even statements that do not at first look like they have this form conceal an implication at their heart. Consider the <em class="emphasis">Pythagorean Theorem</em>. Many a college freshman would quote this theorem as “\(a^2 + b^2 = c^2\text{.}\)” This is absolutely not correct. For one thing, that is not a statement since it has three variables in it. Perhaps they imply that this should be true for any values of the variables? So \(1^2 + 5^2 = 2^2\text{???}\) How can we fix this? Well, the equation is true as long as \(a\) and \(b\) are the legs or a right triangle and \(c\) is the hypotenuse. In other words:</p>
+<blockquote class="blockquote" id="pPH"><p id="Uaz"><em class="emphasis">If</em> \(a\) and \(b\) are the legs of a right triangle with hypotenuse \(c\text{,}\) <em class="emphasis">then</em> \(a^2 + b^2 = c^2\text{.}\)</p></blockquote>
+<p id="Klo">This is a reasonable way to think about implications: our claim is that the conclusion (“then” part) is true, but on the assumption that the hypothesis (“if” part) is true. We make no claim about the conclusion in situations when the hypothesis is false.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-7" id="fn-7"><sup> 2 </sup></a></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn">However, note that in the case of the Pythagorean Theorem, it is also the case that <em class="emphasis">if</em> \(a^2 + b^2 = c^2\text{,}\) <em class="emphasis">then</em> \(a\) and \(b\) are the legs of a right triangle with hypotenuse \(c\text{.}\) So we could have also expressed this theorem as a biconditional: “\(a\) and \(b\) are the legs of a right triangle with hypotenuse \(c\) <em class="emphasis">if and only if</em> \(a^2 + b^2 = c^2\text{.}\)”</div></div>
+<p id="qsx">Still, it is important to remember that an implication is a statement, and therefore is either true or false. The truth value of the implication is determined by the truth values of its two parts. To agree with the usage above, we say that an implication is true either when the hypothesis is false, or when the conclusion is true. This leaves only one way for an implication to be false: when the hypothesis is true and the conclusion is false.</p>
+<article class="example example-like" id="eGI"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span>
+</h6>
+<p id="ERB">Consider the statement:</p>
+<blockquote class="blockquote" id="UhD"><p id="AhI">If Bob gets a 90 on the final, then Bob will pass the class.</p></blockquote>
+<p id="kYK">This is definitely an implication: \(P\) is the statement “Bob gets a 90 on the final,” and \(Q\) is the statement “Bob will pass the class.”</p>
+<p id="RfT">Suppose I made that statement to Bob. In what circumstances would it be fair to call me a liar? What if Bob really did get a 90 on the final, and he did pass the class? Then I have not lied; my statement is true. However, if Bob did get a 90 on the final and did not pass the class, then I lied, making the statement false. The tricky case is this: what if Bob did not get a 90 on the final? Maybe he passes the class, maybe he doesn't. Did I lie in either case? I think not. In these last two cases, \(P\) was false, and the statement \(P \imp Q\) was true. In the first case, \(Q\) was true, and so was \(P \imp Q\text{.}\) So \(P \imp Q\) is true when either \(P\) is false or \(Q\) is true.</p></article><p id="WzG">Just to be clear, although we sometimes read \(P \imp Q\) as “\(P\) <em class="emphasis">implies</em> \(Q\)”, we are not insisting that there is some causal relationship between the statements \(P\) and \(Q\text{.}\) In particular, if you claim that \(P \imp Q\) is <em class="emphasis">false</em>, you are not saying that \(P\) does not imply \(Q\text{,}\) but rather that \(P\) is true and \(Q\) is false.</p>
+<article class="example example-like" id="KNR"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span>
+</h6>
+<p id="xnc">Decide which of the following statements are true and which are false. Briefly explain.</p>
+<ol class="decimal">
+<li id="TMe"><p id="luj">If \(1=1\text{,}\) then most horses have 4 legs.</p></li>
+<li id="zTn"><p id="RBs">If \(0=1\text{,}\) then \(1=1\text{.}\)</p></li>
+<li id="gaw"><p id="xIB">If 8 is a prime number, then the 7624th digit of \(\pi\) is an 8.</p></li>
+<li id="MhF"><p id="dPK">If the 7624th digit of \(\pi\) is an 8, then \(2+2 = 4\text{.}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-AoM" id="AoM"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-AoM"><div class="solution solution-like">
+<p id="med">All four of the statements are true. Remember, the only way for an implication to be false is for the <em class="emphasis">if</em> part to be true and the <em class="emphasis">then</em> part to be false.</p>
+<ol class="decimal">
+<li id="soO"><p id="JWT">Here both the hypothesis and the conclusion are true, so the implication is true. It does not matter that there is no meaningful connection between the true mathematical fact and the fact about horses.</p></li>
+<li id="YvX"><p id="qec">Here the hypothesis is false and the conclusion is true, so the implication is true.</p></li>
+<li id="EDg"><p id="Wll">I have no idea what the 7624th digit of \(\pi\) is, but this does not matter. Since the hypothesis is false, the implication is automatically true.</p></li>
+<li id="kKp"><p id="Csu">Similarly here, regardless of the truth value of the hypothesis, the conclusion is true, making the implication true.</p></li>
+</ol>
+</div></div>
+</div></article><p id="CGP">It is important to understand the conditions under which an implication is true not only to decide whether a mathematical statement is true, but in order to <em class="emphasis">prove</em> that it is. Proofs might seem scary (especially if you have had a bad high school geometry experience) but all we are really doing is explaining (very carefully) why a statement is true. If you understand the truth conditions for an implication, you already have the outline for a proof.</p>
+<article class="assemblage assemblage-like" id="hBo"><h6 class="heading"><span class="title">Direct Proofs of Implications.</span></h6>
+<p id="coS">To prove an implication \(P \imp Q\text{,}\) it is enough to assume \(P\text{,}\) and from it, deduce \(Q\text{.}\)</p></article><p id="iNY">Perhaps a better way to say this is that to prove a statement of the form \(P \imp Q\) directly, you must explain why \(Q\) is true, but you <em class="emphasis">get to</em> assume \(P\) is true first. After all, you only care about whether \(Q\) is true in the case that \(P\) is as well.</p>
+<p id="OVh">There are other techniques to prove statements (implications and others) that we will encounter throughout our studies, and new proof techniques are discovered all the time. Direct proof is the easiest and most elegant style of proof and has the advantage that such a proof often does a great job of explaining <em class="emphasis">why</em> the statement is true.</p>
+<article class="example example-like" id="qVa"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span>
+</h6>
+<p id="dul">Prove: If two numbers \(a\) and \(b\) are even, then their sum \(a+b\) is even.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-gvV" id="gvV"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-gvV"><div class="solution solution-like">
+<article class="proof" id="MDe"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="Slm">Suppose the numbers \(a\) and \(b\) are even. This means that \(a = 2k\) and \(b=2j\) for some integers \(k\) and \(j\text{.}\) The sum is then \(a+b = 2k+2j = 2(k+j)\text{.}\) Since \(k+j\) is an integer, this means that \(a+b\) is even.</p></article><p id="ysv">Notice that since we get to assume the hypothesis of the implication, we immediately have a place to start. The proof proceeds essentially by repeatedly asking and answering, “what does that mean?” Eventually, we conclude that it means the conclusion.</p>
+</div></div>
+</div></article><p id="vcq">This sort of argument shows up outside of math as well. If you ever found yourself starting an argument with “hypothetically, let's assume …,” then you have attempted a direct proof of your desired conclusion.</p>
+<p id="bjz">An implication is a way of expressing a relationship between two statements. It is often interesting to ask whether there are other relationships between the statements. Here we introduce some common language to address this question.</p>
+<article class="assemblage assemblage-like" id="NIx"><h6 class="heading"><span class="title">Converse and Contrapositive.</span></h6>
+<ul id="Iwb" class="disc">
+<li id="Pcl"><p id="izD">The <dfn class="terminology">converse</dfn>  of an implication \(P \imp Q\) is the implication \(Q \imp P\text{.}\) The converse is NOT logically equivalent to the original implication. That is, whether the converse of an implication is true is independent of the truth of the implication.</p></li>
+<li id="vju"><p id="OGM">The <dfn class="terminology">contrapositive</dfn>  of an implication \(P \imp Q\) is the statement \(\neg Q \imp \neg P\text{.}\) An implication and its contrapositive are logically equivalent (they are either both true or both false).</p></li>
+</ul></article><p id="HqI">Mathematics is overflowing with examples of true implications which have a false converse. If a number greater than 2 is prime, then that number is odd. However, just because a number is odd does not mean it is prime. If a shape is a square, then it is a rectangle. But it is false that if a shape is a rectangle, then it is a square.</p>
+<p id="nxR">However, sometimes the converse of a true statement is also true. For example, the Pythagorean theorem has a true converse: if\(a^2 + b^2 = c^2\text{,}\) then the triangle with sides \(a\text{,}\) \(b\text{,}\) and \(c\) is a <em class="emphasis">right</em> triangle. Whenever you encounter an implication in mathematics, it is always reasonable to ask whether the converse is true.</p>
+<p id="TFa">The contrapositive, on the other hand, always has the same truth value as its original implication. This can be very helpful in deciding whether an implication is true: often it is easier to analyze the contrapositive.</p>
+<article class="example example-like" id="Xcj"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span>
+</h6>
+<p id="JBu">True or false: If you draw any nine playing cards from a regular deck, then you will have at least three cards all of the same suit. Is the converse true?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-sKn" id="sKn"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-sKn"><div class="solution solution-like">
+<p id="ezE">True. The original implication is a little hard to analyze because there are so many different combinations of nine cards. But consider the contrapositive: If you <em class="emphasis">don't</em> have at least three cards all of the same suit, then you don't have nine cards. It is easy to see why this is true: you can at most have two cards of each of the four suits, for a total of eight cards (or fewer).</p>
+<p id="KGN">The converse: If you have at least three cards all of the same suit, then you have nine cards. This is false. You could have three spades and nothing else. Note that to demonstrate that the converse (an implication) is false, we provided an example where the hypothesis is true (you do have three cards of the same suit), but where the conclusion is false (you do not have nine cards).</p>
+</div></div>
+</div></article><p id="zMj">Understanding converses and contrapositives can help understand implications and their truth values:</p>
+<article class="example example-like" id="Djs"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.6</span><span class="period">.</span>
+</h6>
+<p id="pID">Suppose I tell Sue that if she gets a 93% on her final, then she will get an A in the class. Assuming that what I said is true, what can you conclude in the following cases:</p>
+<ol id="VPM" class="decimal">
+<li id="QRy"><p id="uNV">Sue gets a 93% on her final.</p></li>
+<li id="wYH"><p id="aVe">Sue gets an A in the class.</p></li>
+<li id="dfQ"><p id="Hcn">Sue does not get a 93% on her final.</p></li>
+<li id="JmZ"><p id="njw">Sue does not get an A in the class.</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-YRw" id="YRw"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-YRw"><div class="solution solution-like">
+<p id="qNW">Note first that whenever \(P \imp Q\) and \(P\) are both true statements, \(Q\) must be true as well. For this problem, take \(P\) to mean “Sue gets a 93% on her final” and \(Q\) to mean “Sue will get an A in the class.”</p>
+<ol id="WVf" class="decimal">
+<li id="pui"><p id="TqF">We have \(P \imp Q\) and \(P\text{,}\) so \(Q\) follows. Sue gets an A.</p></li>
+<li id="VBr"><p id="zxO">You cannot conclude anything. Sue could have gotten the A because she did extra credit for example. Notice that we do not know that if Sue gets an \(A\text{,}\) then she gets a 93% on her final. That is the converse of the original implication, so it might or might not be true.</p></li>
+<li id="BIA"><p id="fEX">The contrapositive of the converse of \(P \imp Q\) is \(\neg P \imp \neg Q\text{,}\) which states that if Sue does not get a 93% on the final, then she will not get an A in the class. But this does not follow from the original implication. Again, we can conclude nothing. Sue could have done extra credit.</p></li>
+<li id="hPJ"><p id="LMg">What would happen if Sue does not get an A but <em class="emphasis">did</em> get a 93% on the final? Then \(P\) would be true and \(Q\) would be false. This makes the implication \(P \imp Q\) false! It must be that Sue did not get a 93% on the final. Notice now we have the implication \(\neg Q \imp \neg P\) which is the contrapositive of \(P \imp Q\text{.}\) Since \(P \imp Q\) is assumed to be true, we know \(\neg Q \imp \neg P\) is true as well.</p></li>
+</ol>
+</div></div>
+</div></article><p id="fTs">As we said above, an implication is not logically equivalent to its converse, but it is possible that both the implication and its converse are true. In this case, when both \(P \imp Q\) and \(Q \imp P\) are true, we say that \(P\) and \(Q\) are equivalent and write \(P \iff Q\text{.}\) This is the biconditional we mentioned earlier.</p>
+<article class="assemblage assemblage-like" id="tPG"><h6 class="heading"><span class="title">If and only if.</span></h6>
+<blockquote class="blockquote" id="xug"><p id="goR">\(P \iff Q\) is logically equivalent to \((P \imp Q) \wedge (Q \imp P)\text{.}\)</p></blockquote>
+<p id="oDk">Example: Given an integer \(n\text{,}\) it is true that \(n\) is even if and only if \(n^2\) is even. That is, if \(n\) is even, then \(n^2\) is even, as well as the converse: if \(n^2\) is even, then \(n\) is even.</p></article><p id="MaB">You can think of “if and only if” statements as having two parts: an implication and its converse. We might say one is the “if” part, and the other is the “only if” part. We also sometimes say that “if and only if” statements have two directions: a forward direction \((P \imp Q)\) and a backwards direction (\(P \leftarrow Q\text{,}\) which is really just sloppy notation for \(Q \imp P\)).</p>
+<p id="shK">Let's think a little about which part is which. Is \(P \imp Q\) the “if” part or the “only if” part? Consider an example.</p>
+<article class="example example-like" id="jqB"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.7</span><span class="period">.</span>
+</h6>
+<p id="BWV">Suppose it is true that I sing if and only if I'm in the shower. We know this means both that if I sing, then I'm in the shower, and also the converse, that if I'm in the shower, then I sing. Let \(P\) be the statement, “I sing,” and \(Q\) be, “I'm in the shower.” So \(P \imp Q\) is the statement “if I sing, then I'm in the shower.” Which part of the if and only if statement is this?</p>
+<p id="iee">What we are really asking for is the meaning of “I sing <em class="emphasis">if</em> I'm in the shower” and “I sing <em class="emphasis">only if</em> I'm in the shower.” When is the first one (the “if” part) <em class="emphasis">false</em>? When I am in the shower but not singing. That is the same condition on being false as the statement “if I'm in the shower, then I sing.” So the “if” part is \(Q \imp P\text{.}\) On the other hand, to say, “I sing only if I'm in the shower” is equivalent to saying “if I sing, then I'm in the shower,” so the “only if” part is \(P \imp Q\text{.}\)</p></article><p id="YoT">It is not terribly important to know which part is the “if” or “only if” part, but this does illustrate something very, very important: <em class="emphasis">there are many ways to state an implication!</em></p>
+<article class="example example-like" id="PxK"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.8</span><span class="period">.</span>
+</h6>
+<p id="Oln">Rephrase the implication, “if I dream, then I am asleep” in as many different ways as possible. Then do the same for the converse.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-EYF" id="EYF"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-EYF"><div class="solution solution-like">
+<p id="Dco">The following are all equivalent to the original implication:</p>
+<ol class="decimal">
+<li id="NWS"><p id="rTp">I am asleep if I dream.</p></li>
+<li id="ueb"><p id="Yay">I dream only if I am asleep.</p></li>
+<li id="alk"><p id="EhH">In order to dream, I must be asleep.</p></li>
+<li id="Gst"><p id="koQ">To dream, it is necessary that I am asleep.</p></li>
+<li id="mzC"><p id="QvZ">To be asleep, it is sufficient to dream.</p></li>
+<li id="SGL"><p id="wDi">I am not dreaming unless I am asleep.</p></li>
+</ol>
+<p>The following are equivalent to the converse (if I am asleep, then I dream):</p>
+<ol class="decimal">
+<li id="yNU"><p id="cKr">I dream if I am asleep.</p></li>
+<li id="eVd"><p id="IRA">I am asleep only if I dream.</p></li>
+<li id="Lcm"><p id="oYJ">It is necessary that I dream in order to be asleep.</p></li>
+<li id="rjv"><p id="VfS">It is sufficient that I be asleep in order to dream.</p></li>
+<li id="XqE"><p id="Bnb">If I don't dream, then I'm not asleep.</p></li>
+</ol>
+</div></div>
+</div></article><p id="Ewc">Hopefully you agree with the above example. We include the “necessary and sufficient” versions because those are common when discussing mathematics. In fact, let's agree once and for all what they mean.</p>
+<article class="assemblage assemblage-like" id="ZWP"><h6 class="heading"><span class="title">Necessary and Sufficient.</span></h6>
+<ul id="UKt" class="disc">
+<li id="bqD">“\(P\) is necessary for \(Q\)” means \(Q \imp P\text{.}\)</li>
+<li id="HxM">“\(P\) is sufficient for \(Q\)” means \(P \imp Q\text{.}\)</li>
+<li id="nEV"><p id="huk">If \(P\) is necessary and sufficient for \(Q\text{,}\) then \(P \iff Q\text{.}\)</p></li>
+</ul></article><p id="kDl">To be honest, I have trouble with these if I'm not very careful. I find it helps to keep a standard example for reference.</p>
+<article class="example example-like" id="vET"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.9</span><span class="period">.</span>
+</h6>
+<p id="usw">Recall from calculus, if a function is differentiable at a point \(c\text{,}\) then it is continuous at \(c\text{,}\) but that the converse of this statement is not true (for example, \(f(x) = |x|\) at the point 0). Restate this fact using “necessary and sufficient” language.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-lfO" id="lfO"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-lfO"><div class="solution solution-like">
+<p id="jjx">It is true that in order for a function to be differentiable at a point \(c\text{,}\) it is necessary for the function to be continuous at \(c\text{.}\) However, it is not necessary that a function be differentiable at \(c\) for it to be continuous at \(c\text{.}\)</p>
+<p id="PqG">It is true that to be continuous at a point \(c\text{,}\) it is sufficient that the function be differentiable at \(c\text{.}\) However, it is not the case that being continuous at \(c\) is sufficient for a function to be differentiable at \(c\text{.}\)</p>
+</div></div>
+</div></article><p id="QKu">Thinking about the necessity and sufficiency of conditions can also help when writing proofs and justifying conclusions. If you want to establish some mathematical fact, it is helpful to think what other facts would <em class="emphasis">be enough</em> (be sufficient) to prove your fact. If you have an assumption, think about what must also be necessary if that hypothesis is true.</p></section><section class="subsection" id="IYE"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Predicates and Quantifiers</span>
+</h3>
+<a href="sec_intro-statements.html#IYE" class="permalink">¶</a><article class="project-like" id="bMc"><h6 class="heading">
+<span class="type">Investigate!</span> </h6>
+<p id="zcp">Consider the statements below. Decide whether any are equivalent to each other, or whether any imply any others.</p>
+<ol id="fjy" class="decimal">
+<li id="DxN"><p id="NBt">You can fool some people all of the time.</p></li>
+<li id="PMf"><p id="tIC">You can fool everyone some of the time.</p></li>
+<li id="vTo"><p id="ZPL">You can always fool some people.</p></li>
+<li id="cax"><p id="FWU">Sometimes you can fool everyone.</p></li>
+</ol></article><p id="wRD"> It would be nice to use variables in our mathematical sentences. For example, suppose we wanted to claim that if \(n\) is prime, then \(n+7\) is not prime. This looks like an implication. I would like to write something like</p>
+<div class="displaymath">
+\begin{equation*}
+P(n) \imp \neg P(n+7)
+\end{equation*}
+</div>
+<p>where \(P(n)\) means “\(n\) is prime.” But this is not quite right. For one thing, because this sentence has a <dfn class="terminology">free variable</dfn> (that is, a variable that we have not specified anything about), it is not a statement.  A sentence that contains variables is called a <dfn class="terminology">predicate</dfn>.</p>
+<p id="cYM">Now, if we plug in a specific value for \(n\text{,}\) we do get a statement. In fact, it turns out that no matter what value we plug in for \(n\text{,}\) we get a true implication in this case. What we really want to say is that <em class="emphasis">for all</em> values of \(n\text{,}\) if \(n\) is prime, then \(n+7\) is not. We need to <em class="emphasis">quantify</em> the variable.</p>
+<p id="JfV">Although there are many types of <em class="emphasis">quantifiers</em> in English (e.g., many, few, most, etc.) in mathematics we, for the most part, stick to two: existential and universal.</p>
+<article class="assemblage assemblage-like" id="mlh"><h6 class="heading"><span class="title">Universal and Existential Quantifiers.</span></h6>
+<p id="ARC">The existential quantifier is \(\exists\) and is read “there exists” or “there is.” For example, </p>
+<div class="displaymath">
+\begin{equation*}
+\exists x (x \lt 0)
+\end{equation*}
+</div>
+<p>asserts that there is a number less than 0.</p>
+<p id="gYL">The universal quantifier is \(\forall\) and is read “for all” or “every.” For example, </p>
+<div class="displaymath">
+\begin{equation*}
+\forall x (x \ge 0)
+\end{equation*}
+</div>
+<p>asserts that every number is greater than or equal to 0.</p></article><p id="pne">As with all mathematical statements, we would like to decide whether quantified statements are true or false. Consider the statement</p>
+<div class="displaymath">
+\begin{equation*}
+\forall x \exists y (y \lt x)\text{.}
+\end{equation*}
+</div>
+<p>You would read this, “for every \(x\) there is some \(y\) such that \(y\) is less than \(x\text{.}\)” Is this true? The answer depends on what our <em class="emphasis">domain of discourse</em> is: when we say “for all” \(x\text{,}\) do we mean all positive integers or all real numbers or all elements of some other set? Usually this information is implied. In discrete mathematics, we almost always quantify over the <em class="emphasis">natural numbers</em>, 0, 1, 2, …, so let's take that for our domain of discourse here.</p>
+<p id="Vun">For the statement to be true, we need it to be the case that no matter what natural number we select, there is always some natural number that is strictly smaller. Perhaps we could let \(y\) be \(x-1\text{?}\) But here is the problem: what if \(x = 0\text{?}\) Then \(y = -1\) and that is <em class="emphasis">not a number!</em> (in our domain of discourse). Thus we see that the statement is false because there is a number which is less than or equal to all other numbers. In symbols,</p>
+<div class="displaymath">
+\begin{equation*}
+\exists x \forall y (y \ge x)\text{.}
+\end{equation*}
+</div>
+<p id="BBw">To show that the original statement is false, we proved that the <em class="emphasis">negation</em> was true. Notice how the negation and original statement compare. This is typical.</p>
+<article class="assemblage assemblage-like" id="Ssq"><h6 class="heading"><span class="title">Quantifiers and Negation.</span></h6>
+<blockquote class="blockquote" id="dBp">
+<p id="Mwa">\(\neg \forall x P(x)\) is equivalent to \(\exists x \neg P(x)\text{.}\)</p>
+<p id="sDj">\(\neg \exists x P(x)\) is equivalent to \(\forall x \neg P(x)
+\text{.}\)</p>
+</blockquote></article><p id="hIF">Essentially, we can pass the negation symbol over a quantifier, but that causes the quantifier to switch type. This should not be surprising: if not everything has a property, then something doesn't have that property. And if there is not something with a property, then everything doesn't have that property.</p>
+<article class="paragraphs" id="GdY"><h5 class="heading"><span class="title">Implicit Quantifiers.</span></h5>
+<p id="LqH">It is always a good idea to be precise in mathematics.  Sometimes though, we can relax a little bit, as long as we all agree on a convention.  An example of such a convention is to assume that sentences containing predicates with free variables are intended as statements, where the variables are universally quantified.</p>
+<p id="rxQ">For example, do you believe that if a shape is a square, then it is a rectangle?  But how can that be true if it is not a statement?  To be a little more precise, we have two predicates: \(S(x)\) standing for “\(x\) is a square” and \(R(x)\) standing for “\(x\) is a rectangle”.  The <em class="emphasis">sentence</em> we are looking at is,</p>
+<div class="displaymath">
+\begin{equation*}
+S(x) \imp R(x)\text{.}
+\end{equation*}
+</div>
+<p>This is neither true nor false, as it is not a statement.  But come on!  We all know that we meant to consider the statement,</p>
+<div class="displaymath">
+\begin{equation*}
+\forall x (S(x) \imp R(x))\text{,}
+\end{equation*}
+</div>
+<p>and this is what our convention tells us to consider.</p>
+<p id="XEZ">Similarly, we will often be a bit sloppy about the distinction between a predicate and a statement.  For example, we might write, <em class="emphasis">let \(P(n)\) be the <em class="emphasis">statement</em>, “\(n\) is prime,”</em> which is technically incorrect.  It is implicit that we mean that we are defining \(P(n)\) to be a predicate, which for each \(n\) becomes the statement, \(n\) is prime.</p></article></section><section class="exercises" id="iCD"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<a href="sec_intro-statements.html#iCD" class="permalink">¶</a><article class="exercise exercise-like" id="vWb"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-1197">For each sentence below, decide whether it is an atomic statement, a molecular statement, or not a statement at all.</p>
+<ol class="lower-alpha">
+<li id="li-544"><p id="p-1198">Customers must wear shoes. <ul style="list-style:circle;">
+<li id="li-546"><p id="p-1200">atomic statement</p></li>
+<li id="li-547"><p id="p-1201">molecular statement</p></li>
+<li id="li-548"><p id="p-1202">not a statement</p></li>
+</ul></p></li>
+<li id="li-549"><p id="p-1203">The customers wore shoes. <ul style="list-style:circle;">
+<li id="li-551"><p id="p-1205">atomic statement</p></li>
+<li id="li-552"><p id="p-1206">molecular statement</p></li>
+<li id="li-553"><p id="p-1207">not a statement</p></li>
+</ul></p></li>
+<li id="li-554"><p id="p-1208">The customers wore shoes and they wore socks. <ul style="list-style:circle;">
+<li id="li-556"><p id="p-1210">atomic statement</p></li>
+<li id="li-557"><p id="p-1211">molecular statement</p></li>
+<li id="li-558"><p id="p-1212">not a statement</p></li>
+</ul></p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-50" id="answer-50"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-50"><div class="answer solution-like"><p id="p-1213">\(\text{not a statement}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-51" id="answer-51"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-51"><div class="answer solution-like"><p id="p-1214">\(\text{atomic statement}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-52" id="answer-52"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-52"><div class="answer solution-like"><p id="p-1215">\(\text{molecular statement}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-91" id="solution-91"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-91"><div class="solution solution-like"><ol id="p-1216" class="lower-alpha">
+<li id="li-559"><p id="p-1217">This is not a statement. It is an imperative sentence, but is not either true or false. It doesn’t matter that this might actually be the rule or not. Note that “The rule is that all customers must wear shoes” <em class="emphasis">is</em> a statement.</p></li>
+<li id="li-560"><p id="p-1218">This is a statement, as it is either true or false. It is an atomic statement because it cannot be divided into smaller statements.</p></li>
+<li id="li-561"><p id="p-1219">This is again a statement, but this time it is molecular. In fact, it is a conjunction, as we can write it as “The customers wore shoes and the customers wore socks.”</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="cdk"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="jHW">Classify each of the sentences below as an atomic statement, a molecular statement, or not a statement at all. If the statement is molecular, say what kind it is (conjuction, disjunction, conditional, biconditional, negation).</p>
+<ol class="lower-alpha">
+<li id="pLq">The sum of the first 100 odd positive integers.</li>
+<li id="VSz">Everybody needs somebody sometime.</li>
+<li id="BZI">The Broncos will win the Super Bowl or I'll eat my hat.</li>
+<li id="igR">We can have donuts for dinner, but only if it rains.</li>
+<li id="Ooa">Every natural number greater than 1 is either prime or composite.</li>
+<li id="uvj">This sentence is false.</li>
+</ol></article><article class="exercise exercise-like" id="Ikt"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="PPf">Suppose \(P\) and \(Q\) are the statements: \(P\text{:}\) Jack passed math. \(Q\text{:}\) Jill passed math.</p>
+<ol class="lower-alpha">
+<li id="aCs"><p id="XAI">Translate “Jack and Jill both passed math” into symbols.</p></li>
+<li id="GJB"><p id="DHR">Translate “If Jack passed math, then Jill did not” into symbols.</p></li>
+<li id="mQK"><p id="jPa">Translate “\(P \vee Q\)” into English.</p></li>
+<li id="SXT"><p id="PWj">Translate “\(\neg(P \wedge Q) \imp Q\)” into English.</p></li>
+<li id="zfc">
+<p id="vWo">Suppose you know that if Jack passed math, then so did Jill. What can you conclude if you know that:</p>
+<ol class="lower-roman">
+<li id="OJM">Jill passed math?</li>
+<li id="fml">Jill did not pass math?</li>
+</ol>
+</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-uQI" id="uQI"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-uQI"><div class="solution solution-like"><ol id="diQ" class="lower-alpha">
+<li id="Ltu">\(P \wedge Q\text{.}\)</li>
+<li id="rAD">\(P \imp \neg Q\text{.}\)</li>
+<li id="XHM"><p id="wds">Jack passed math or Jill passed math (or both).</p></li>
+<li id="DOV"><p id="ckB">If Jack and Jill did not both pass math, then Jill did.</p></li>
+<li id="jWe"><ol id="JpZ" class="lower-roman">
+<li id="uQV">Nothing else.</li>
+<li id="Qdn">Jack did not pass math either.</li>
+</ol></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="orC"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-1247">Determine whether each molecular statement below is true or false, or whether it is impossible to determine. Assume you do not know what my favorite number is (but you do know that 13 is prime).</p>
+<ol class="lower-alpha">
+<li id="li-596"><p id="p-1248">If 13 is prime, then 13 is my favorite number. <ul style="list-style:circle;">
+<li id="li-598"><p id="p-1250">True</p></li>
+<li id="li-599"><p id="p-1251">False</p></li>
+<li id="li-600"><p id="p-1252">Not enough information</p></li>
+</ul></p></li>
+<li id="li-601"><p id="p-1253">If 13 is my favorite number, then 13 is prime. <ul style="list-style:circle;">
+<li id="li-603"><p id="p-1255">True</p></li>
+<li id="li-604"><p id="p-1256">False</p></li>
+<li id="li-605"><p id="p-1257">Not enough information</p></li>
+</ul></p></li>
+<li id="li-606"><p id="p-1258">If 13 is not prime, then 13 is my favorite number. <ul style="list-style:circle;">
+<li id="li-608"><p id="p-1260">True</p></li>
+<li id="li-609"><p id="p-1261">False</p></li>
+<li id="li-610"><p id="p-1262">Not enough information</p></li>
+</ul></p></li>
+<li id="li-611"><p id="p-1263">13 is my favorite number or 13 is prime. <ul style="list-style:circle;">
+<li id="li-613"><p id="p-1265">True</p></li>
+<li id="li-614"><p id="p-1266">False</p></li>
+<li id="li-615"><p id="p-1267">Not enough information</p></li>
+</ul></p></li>
+<li id="li-616"><p id="p-1268">13 is my favorite number and 13 is prime. <ul style="list-style:circle;">
+<li id="li-618"><p id="p-1270">True</p></li>
+<li id="li-619"><p id="p-1271">False</p></li>
+<li id="li-620"><p id="p-1272">Not enough information</p></li>
+</ul></p></li>
+<li id="li-621"><p id="p-1273">7 is my favorite number and 13 is not prime. <ul style="list-style:circle;">
+<li id="li-623"><p id="p-1275">True</p></li>
+<li id="li-624"><p id="p-1276">False</p></li>
+<li id="li-625"><p id="p-1277">Not enough information</p></li>
+</ul></p></li>
+<li id="li-626"><p id="p-1278">13 is my favorite number or 13 is not my favorite number. <ul style="list-style:circle;">
+<li id="li-628"><p id="p-1280">True</p></li>
+<li id="li-629"><p id="p-1281">False</p></li>
+<li id="li-630"><p id="p-1282">Not enough information</p></li>
+</ul></p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-53" id="answer-53"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-53"><div class="answer solution-like"><p id="p-1283">\(\text{Not enough information}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-54" id="answer-54"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-54"><div class="answer solution-like"><p id="p-1284">\(\text{True}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-55" id="answer-55"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-55"><div class="answer solution-like"><p id="p-1285">\(\text{True}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-56" id="answer-56"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-56"><div class="answer solution-like"><p id="p-1286">\(\text{True}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-57" id="answer-57"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-57"><div class="answer solution-like"><p id="p-1287">\(\text{Not enough information}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-58" id="answer-58"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-58"><div class="answer solution-like"><p id="p-1288">\(\text{False}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-59" id="answer-59"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">7</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-59"><div class="answer solution-like"><p id="p-1289">\(\text{True}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-94" id="solution-94"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-94"><div class="solution solution-like"><ol id="p-1290" class="lower-alpha">
+<li id="li-631"><p id="p-1291">It is impossible to tell. The hypothesis of the implication is true. Thus the implication will be true if the conclusion is true (if 13 <em class="emphasis">is</em> my favorite number) and false otherwise.</p></li>
+<li id="li-632"><p id="p-1292">This is true, no matter whether 13 is my favorite number or not. Any implication with a true conclusion is true.</p></li>
+<li id="li-633"><p id="p-1293">This is true, again, no matter whether 13 is my favorite number or not. Any implication with a false hypothesis is true.</p></li>
+<li id="li-634"><p id="p-1294">For a disjunction to be true, we just need one or the other (or both) of the parts to be true. Thus this is a true statement.</p></li>
+<li id="li-635"><p id="p-1295">We cannot tell. The statement would be true if 13 is my favorite number, and false if not (since a conjunction needs both parts to be true to be true).</p></li>
+<li id="li-636"><p id="p-1296">This is definitely false. 13 is prime, so its negation (13 is not prime) is false. At least one part of the conjunction is false, so the whole statement is false.</p></li>
+<li id="li-637"><p id="p-1297">This is true. Either 13 is my favorite number or it is not, but whichever it is, at least one part of the disjunction is true, so the whole statement is true.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="UyL"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-1310">In my safe is a sheet of paper with two shapes drawn on it in colored crayon. One is a square, and the other is a triangle. Each shape is drawn in a single color. Suppose you believe me when I tell you that <em class="emphasis">if the square is blue, then the triangle is green</em>. What do you therefore know about the truth value of the following statements?</p>
+<ol class="lower-alpha">
+<li id="li-648"><p id="p-1311">The square and the triangle are both blue. <ul style="list-style:circle;">
+<li id="li-650"><p id="p-1313">True</p></li>
+<li id="li-651"><p id="p-1314">False</p></li>
+<li id="li-652"><p id="p-1315">Not enough information</p></li>
+</ul></p></li>
+<li id="li-653"><p id="p-1316">The square and the triangle are both green. <ul style="list-style:circle;">
+<li id="li-655"><p id="p-1318">True</p></li>
+<li id="li-656"><p id="p-1319">False</p></li>
+<li id="li-657"><p id="p-1320">Not enough information</p></li>
+</ul></p></li>
+<li id="li-658"><p id="p-1321">If the triangle is not green, then the square is not blue. <ul style="list-style:circle;">
+<li id="li-660"><p id="p-1323">True</p></li>
+<li id="li-661"><p id="p-1324">False</p></li>
+<li id="li-662"><p id="p-1325">Not enough information</p></li>
+</ul></p></li>
+<li id="li-663"><p id="p-1326">If the triangle is green, then the square is blue. <ul style="list-style:circle;">
+<li id="li-665"><p id="p-1328">True</p></li>
+<li id="li-666"><p id="p-1329">False</p></li>
+<li id="li-667"><p id="p-1330">Not enough information</p></li>
+</ul></p></li>
+<li id="li-668"><p id="p-1331">The square is not blue or the triangle is green. <ul style="list-style:circle;">
+<li id="li-670"><p id="p-1333">True</p></li>
+<li id="li-671"><p id="p-1334">False</p></li>
+<li id="li-672"><p id="p-1335">Not enough information</p></li>
+</ul></p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-60" id="answer-60"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-60"><div class="answer solution-like"><p id="p-1336">\(\text{False}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-61" id="answer-61"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-61"><div class="answer solution-like"><p id="p-1337">\(\text{Not enough information}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-62" id="answer-62"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-62"><div class="answer solution-like"><p id="p-1338">\(\text{True}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-63" id="answer-63"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-63"><div class="answer solution-like"><p id="p-1339">\(\text{Not enough information}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-64" id="answer-64"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-64"><div class="answer solution-like"><p id="p-1340">\(\text{True}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-96" id="solution-96"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-96"><div class="solution solution-like">
+<p id="p-1341">The main thing to realize is that we don’t know the colors of these two shapes, but we do know that we are in one of three cases: We could have a blue square and green triangle. We could have a square that was not blue but a green triangle. Or we could have a square that was not blue and a triangle that was not green. The case in which the square is blue but the triangle is not green cannot occur, as that would make the statement false.</p>
+<ol class="lower-alpha">
+<li id="li-673"><p id="p-1342">This must be false. In fact, this is the negation of the original implication.</p></li>
+<li id="li-674"><p id="p-1343">This might be true or might be false.</p></li>
+<li id="li-675"><p id="p-1344">True. This is the contrapositive of the original statement, which is logically equivalent to it.</p></li>
+<li id="li-676"><p id="p-1345">We do not know. This is the converse of the original statement. In particular, if the square is not blue but the triangle is green, then the original statement is true but the converse is false.</p></li>
+<li id="li-677"><p id="p-1346">True. This is logically equivalent to the original statement.</p></li>
+</ol>
+</div></div>
+</div></article><article class="exercise exercise-like" id="AFU"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-1357">Again, suppose the statement “if the square is blue, then the triangle is green” is true. This time however, assume the converse is false. Classify each statement below as true or false (if possible).</p>
+<ol class="lower-alpha">
+<li id="li-686"><p id="p-1358">The square is blue if and only if the triangle is green. <ul style="list-style:circle;">
+<li id="li-688"><p id="p-1360">True</p></li>
+<li id="li-689"><p id="p-1361">False</p></li>
+<li id="li-690"><p id="p-1362">Not enough information</p></li>
+</ul></p></li>
+<li id="li-691"><p id="p-1363">The square is blue if and only if the triangle is not green. <ul style="list-style:circle;">
+<li id="li-693"><p id="p-1365">True</p></li>
+<li id="li-694"><p id="p-1366">False</p></li>
+<li id="li-695"><p id="p-1367">Not enough information</p></li>
+</ul></p></li>
+<li id="li-696"><p id="p-1368">The square is blue. <ul style="list-style:circle;">
+<li id="li-698"><p id="p-1370">True</p></li>
+<li id="li-699"><p id="p-1371">False</p></li>
+<li id="li-700"><p id="p-1372">Not enough information</p></li>
+</ul></p></li>
+<li id="li-701"><p id="p-1373">The triangle is green. <ul style="list-style:circle;">
+<li id="li-703"><p id="p-1375">True</p></li>
+<li id="li-704"><p id="p-1376">False</p></li>
+<li id="li-705"><p id="p-1377">Not enough information</p></li>
+</ul></p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-65" id="answer-65"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-65"><div class="answer solution-like"><p id="p-1378">\(\text{False}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-66" id="answer-66"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-66"><div class="answer solution-like"><p id="p-1379">\(\text{True}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-67" id="answer-67"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-67"><div class="answer solution-like"><p id="p-1380">\(\text{False}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-68" id="answer-68"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-68"><div class="answer solution-like"><p id="p-1381">\(\text{True}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-98" id="solution-98"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-98"><div class="solution solution-like">
+<p id="p-1382">The only way for an implication \(P\imp Q\) to be true but its converse to be false is for \(Q\) to be true and \(P\) to be false. Thus:</p>
+<ol class="lower-alpha">
+<li id="li-706"><p id="p-1383">False.</p></li>
+<li id="li-707"><p id="p-1384">True.</p></li>
+<li id="li-708"><p id="p-1385">False.</p></li>
+<li id="li-709"><p id="p-1386">True.</p></li>
+</ol>
+</div></div>
+</div></article><article class="exercise exercise-like" id="gNd"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-1395">Consider the statement, “If you will give me a cow, then I will give you magic beans.” Decide whether each statement below is the converse, the contrapositive, or neither.</p>
+<ol class="lower-alpha">
+<li id="li-716"><p id="p-1396">If you will give me a cow, then I will not give you magic beans. <ul style="list-style:circle;">
+<li id="li-718"><p id="p-1398">Converse</p></li>
+<li id="li-719"><p id="p-1399">Contrapositive</p></li>
+<li id="li-720"><p id="p-1400">Neither</p></li>
+</ul></p></li>
+<li id="li-721"><p id="p-1401">If I will not give you magic beans, then you will not give me a cow. <ul style="list-style:circle;">
+<li id="li-723"><p id="p-1403">Converse</p></li>
+<li id="li-724"><p id="p-1404">Contrapositive</p></li>
+<li id="li-725"><p id="p-1405">Neither</p></li>
+</ul></p></li>
+<li id="li-726"><p id="p-1406">If I will give you magic beans, then you will give me a cow. <ul style="list-style:circle;">
+<li id="li-728"><p id="p-1408">Converse</p></li>
+<li id="li-729"><p id="p-1409">Contrapositive</p></li>
+<li id="li-730"><p id="p-1410">Neither</p></li>
+</ul></p></li>
+<li id="li-731"><p id="p-1411">If you will not give me a cow, then I will not give you magic beans. <ul style="list-style:circle;">
+<li id="li-733"><p id="p-1413">Converse</p></li>
+<li id="li-734"><p id="p-1414">Contrapositive</p></li>
+<li id="li-735"><p id="p-1415">Neither</p></li>
+</ul></p></li>
+<li id="li-736"><p id="p-1416">You will give me a cow and I will not give you magic beans. <ul style="list-style:circle;">
+<li id="li-738"><p id="p-1418">Converse</p></li>
+<li id="li-739"><p id="p-1419">Contrapositive</p></li>
+<li id="li-740"><p id="p-1420">Neither</p></li>
+</ul></p></li>
+<li id="li-741"><p id="p-1421">If I will give you magic beans, then you will not give me a cow. <ul style="list-style:circle;">
+<li id="li-743"><p id="p-1423">Converse</p></li>
+<li id="li-744"><p id="p-1424">Contrapositive</p></li>
+<li id="li-745"><p id="p-1425">Neither</p></li>
+</ul></p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-69" id="answer-69"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-69"><div class="answer solution-like"><p id="p-1426">\(\text{Neither}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-70" id="answer-70"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-70"><div class="answer solution-like"><p id="p-1427">\(\text{Contrapositive}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-71" id="answer-71"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-71"><div class="answer solution-like"><p id="p-1428">\(\text{Converse}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-72" id="answer-72"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-72"><div class="answer solution-like"><p id="p-1429">\(\text{Neither}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-73" id="answer-73"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-73"><div class="answer solution-like"><p id="p-1430">\(\text{Neither}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-74" id="answer-74"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-74"><div class="answer solution-like"><p id="p-1431">\(\text{Neither}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-100" id="solution-100"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-100"><div class="solution solution-like"><p id="p-1432">The converse is “If I will give you magic beans, then you will give me a cow.” The contrapositive is “If I will not give you magic beans, then you will not give me a cow.” All the other statements are neither the converse nor contrapositive.</p></div></div>
+</div></article><article class="exercise exercise-like" id="MUm"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="AGh">Consider the statement “If Oscar eats Chinese food, then he drinks milk.”</p>
+<ol class="lower-alpha">
+<li id="Vxa"><p id="hEo">Write the converse of the statement.</p></li>
+<li id="BEj"><p id="NLx">Write the contrapositive of the statement.</p></li>
+<li id="hLs"><p id="tSG">Is it possible for the contrapositive to be false? If it was, what would that tell you?</p></li>
+<li id="NSB"><p id="ZZP">Suppose the original statement is true, and that Oscar drinks milk. Can you conclude anything (about his eating Chinese food)? Explain.</p></li>
+<li id="tZK"><p id="GgY">Suppose the original statement is true, and that Oscar does not drink milk. Can you conclude anything (about his eating Chinese food)? Explain.</p></li>
+</ol></article><article class="exercise exercise-like" id="tbv"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-1457">You have discovered an old paper on graph theory that discusses the <em class="emphasis">viscosity</em> of a graph (which for all you know, is something completely made up by the author). A theorem in the paper claims that “if a graph satisfies <em class="emphasis">condition (V)</em>, then the graph is <em class="emphasis">viscous</em>.” Which of the following are equivalent ways of stating this claim? Which are equivalent to the <em class="emphasis">converse</em> of the claim?</p>
+<ol class="lower-alpha">
+<li id="li-767"><p id="p-1458">A graph is viscous only if it satisfies condition (V). <ul style="list-style:circle;">
+<li id="li-769"><p id="p-1460">Original</p></li>
+<li id="li-770"><p id="p-1461">Converse</p></li>
+<li id="li-771"><p id="p-1462">Neither</p></li>
+</ul></p></li>
+<li id="li-772"><p id="p-1463">A graph is viscous if it satisfies condition (V). <ul style="list-style:circle;">
+<li id="li-774"><p id="p-1465">Original</p></li>
+<li id="li-775"><p id="p-1466">Converse</p></li>
+<li id="li-776"><p id="p-1467">Neither</p></li>
+</ul></p></li>
+<li id="li-777"><p id="p-1468">For a graph to be viscous, it is necessary that it satisfies condition (V). <ul style="list-style:circle;">
+<li id="li-779"><p id="p-1470">Original</p></li>
+<li id="li-780"><p id="p-1471">Converse</p></li>
+<li id="li-781"><p id="p-1472">Neither</p></li>
+</ul></p></li>
+<li id="li-782"><p id="p-1473">For a graph to be viscous, it is sufficient for it to satisfy condition (V). <ul style="list-style:circle;">
+<li id="li-784"><p id="p-1475">Original</p></li>
+<li id="li-785"><p id="p-1476">Converse</p></li>
+<li id="li-786"><p id="p-1477">Neither</p></li>
+</ul></p></li>
+<li id="li-787"><p id="p-1478">Satisfying condition (V) is a sufficient condition for a graph to be viscous. <ul style="list-style:circle;">
+<li id="li-789"><p id="p-1480">Original</p></li>
+<li id="li-790"><p id="p-1481">Converse</p></li>
+<li id="li-791"><p id="p-1482">Neither</p></li>
+</ul></p></li>
+<li id="li-792"><p id="p-1483">Satisfying condition (V) is a necessary condition for a graph to be viscous. <ul style="list-style:circle;">
+<li id="li-794"><p id="p-1485">Original</p></li>
+<li id="li-795"><p id="p-1486">Converse</p></li>
+<li id="li-796"><p id="p-1487">Neither</p></li>
+</ul></p></li>
+<li id="li-797"><p id="p-1488">Every viscous graph satisfies condition (V). <ul style="list-style:circle;">
+<li id="li-799"><p id="p-1490">Original</p></li>
+<li id="li-800"><p id="p-1491">Converse</p></li>
+<li id="li-801"><p id="p-1492">Neither</p></li>
+</ul></p></li>
+<li id="li-802"><p id="p-1493">Only viscous graphs satisfy condition (V). <ul style="list-style:circle;">
+<li id="li-804"><p id="p-1495">Original</p></li>
+<li id="li-805"><p id="p-1496">Converse</p></li>
+<li id="li-806"><p id="p-1497">Neither</p></li>
+</ul></p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-75" id="answer-75"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-75"><div class="answer solution-like"><p id="p-1498">\(\text{Converse}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-76" id="answer-76"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-76"><div class="answer solution-like"><p id="p-1499">\(\text{Original}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-77" id="answer-77"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-77"><div class="answer solution-like"><p id="p-1500">\(\text{Converse}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-78" id="answer-78"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-78"><div class="answer solution-like"><p id="p-1501">\(\text{Original}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-79" id="answer-79"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-79"><div class="answer solution-like"><p id="p-1502">\(\text{Original}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-80" id="answer-80"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-80"><div class="answer solution-like"><p id="p-1503">\(\text{Converse}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-81" id="answer-81"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">7</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-81"><div class="answer solution-like"><p id="p-1504">\(\text{Converse}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-82" id="answer-82"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">8</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-82"><div class="answer solution-like"><p id="p-1505">\(\text{Original}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-102" id="solution-102"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-102"><div class="solution solution-like"><ol id="p-1506" class="lower-alpha">
+<li id="li-807"><p id="p-1507">Equivalent to the converse.</p></li>
+<li id="li-808"><p id="p-1508">Equivalent to the original theorem.</p></li>
+<li id="li-809"><p id="p-1509">Equivalent to the converse.</p></li>
+<li id="li-810"><p id="p-1510">Equivalent to the original theorem.</p></li>
+<li id="li-811"><p id="p-1511">Equivalent to the original theorem.</p></li>
+<li id="li-812"><p id="p-1512">Equivalent to the converse.</p></li>
+<li id="li-813"><p id="p-1513">Equivalent to the converse.</p></li>
+<li id="li-814"><p id="p-1514">Equivalent to the original theorem.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="ZiE"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="MUz">Write each of the following statements in the form, “if …, then ….” Careful, some of the statements might be false (which is alright for the purposes of this question).</p>
+<ol class="lower-alpha">
+<li id="UrH"><p id="gyV">To lose weight, you must exercise.</p></li>
+<li id="AyQ"><p id="MGe">To lose weight, all you need to do is exercise.</p></li>
+<li id="gFZ"><p id="sNn">Every American is patriotic.</p></li>
+<li id="MNi"><p id="YUw">You are patriotic only if you are American.</p></li>
+<li id="sUr"><p id="FbF">The set of rational numbers is a subset of the real numbers.</p></li>
+<li id="ZbA"><p id="liO">A number is prime if it is not even.</p></li>
+<li id="FiJ"><p id="RpX">Either the Broncos will win the Super Bowl, or they won't play in the Super Bowl.</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-fHK" id="fHK"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-fHK"><div class="solution solution-like"><ol id="uhb" class="lower-alpha">
+<li id="lpS"><p id="xxg">If you have lost weight, then you exercised.</p></li>
+<li id="Rxb"><p id="dEp">If you exercise, then you will lose weight.</p></li>
+<li id="xEk"><p id="JLy">If you are American, then you are patriotic.</p></li>
+<li id="dLt"><p id="pSH">If you are patriotic, then you are American.</p></li>
+<li id="JSC"><p id="VZQ">If a number is rational, then it is real.</p></li>
+<li id="pZL"><p id="CgZ">If a number is not even, then it is prime. (Or the contrapositive: if a number is not prime, then it is even.)</p></li>
+<li id="WgU"><p id="ioi">If the Broncos don't win the Super Bowl, then they didn't play in the Super Bowl. Alternatively, if the Broncos play in the Super Bowl, then they will win the Super Bowl.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="FpN"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="tbI">Which of the following statements are equivalent to the implication, “if you win the lottery, then you will be rich,” and which are equivalent to the converse of the implication?</p>
+<ol class="lower-alpha">
+<li id="Cod"><p id="Ovr">Either you win the lottery or else you are not rich.</p></li>
+<li id="ivm"><p id="uCA">Either you don't win the lottery or else you are rich.</p></li>
+<li id="OCv"><p id="aJJ">You will win the lottery and be rich.</p></li>
+<li id="uJE"><p id="GQS">You will be rich if you win the lottery.</p></li>
+<li id="aQN"><p id="mYb">You will win the lottery if you are rich.</p></li>
+<li id="GXW"><p id="Tfk">It is necessary for you to win the lottery to be rich.</p></li>
+<li id="nff"><p id="zmt">It is sufficient to win the lottery to be rich.</p></li>
+<li id="Tmo"><p id="ftC">You will be rich only if you win the lottery.</p></li>
+<li id="ztx"><p id="LAL">Unless you win the lottery, you won't be rich.</p></li>
+<li id="LHP"><p id="rHU">If you are rich, you must have won the lottery.</p></li>
+<li id="rOY"><p id="XPd">If you are not rich, then you did not win the lottery.</p></li>
+<li id="XWh"><p id="DWm">You will win the lottery if and only if you are rich.</p></li>
+</ol></article><article class="exercise exercise-like" id="lwW"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<p id="p-1549">Let \(P(x)\) be the predicate, “\(3x+1\) is even.”</p>
+<ol class="lower-alpha">
+<li id="li-844"><p id="p-1550">Is \(P(5)\) true or false? <ul style="list-style:circle;">
+<li id="li-846"><p id="p-1552">True</p></li>
+<li id="li-847"><p id="p-1553">False</p></li>
+<li id="li-848"><p id="p-1554">Neither (not a statement)</p></li>
+</ul></p></li>
+<li id="li-849"><p id="p-1555">What, if anything, can you conclude about \(\exists x P(x)\) from the truth value of \(P(5)\text{?}\)</p></li>
+<li id="li-850"><p id="p-1556">What, if anything, can you conclude about \(\forall x P(x)\) from the truth value of \(P(5)\text{?}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-83" id="answer-83"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-83"><div class="answer solution-like"><p id="p-1557">\(\text{True}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-105" id="solution-105"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-105"><div class="solution solution-like"><p id="p-1558">\(P(5)\) is the statement “\(3\cdot 5 + 1\) is even”, which is true. Thus the statement \(\exists x P(x)\) is true (for example, 5 is such an \(x\)). However, we cannot tell anything about \(\forall x P(x)\) since we do not know the truth value of \(P(x)\) for <em class="emphasis">all</em> elements of the domain of discourse. In this case, \(\forall x P(x)\) happens to be false (since \(P(4)\) is false, for example).</p></div></div>
+</div></article><article class="exercise exercise-like" id="REf"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<p id="p-1563">Let \(P(x)\) be the predicate, “\(4x+1\) is even.”</p>
+<ol class="lower-alpha">
+<li id="li-854"><p id="p-1564">Is \(P(5)\) true or false? <ul style="list-style:circle;">
+<li id="li-856"><p id="p-1566">True</p></li>
+<li id="li-857"><p id="p-1567">False</p></li>
+<li id="li-858"><p id="p-1568">Not enough information</p></li>
+</ul></p></li>
+<li id="li-859"><p id="p-1569">What, if anything, can you conclude about \(\exists x P(x)\) from the truth value of \(P(5)\text{?}\)</p></li>
+<li id="li-860"><p id="p-1570">What, if anything, can you conclude about \(\forall x P(x)\) from the truth value of \(P(5)\text{?}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-84" id="answer-84"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-84"><div class="answer solution-like"><p id="p-1571">\(\text{False}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="xLo"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<p id="p-1582">For a given predicate \(P(x)\text{,}\) you might believe that the statements \(\forall x P(x)\) or \(\exists x P(x)\) are either true or false. How would you decide if you were correct in each case?  You have four choices: you could give an example of an element \(n\) in the domain for which \(P(n)\) is true or for which \(P(n)\) if false, or you could argue that no matter what \(n\) is, \(P(n)\) is true or is false.</p>
+<ol class="lower-alpha">
+<li id="li-869"><p id="p-1583">What would you need to do to prove \(\forall x P(x)\) is true?</p></li>
+<li id="li-870"><p id="p-1584">What would you need to do to prove \(\forall x P(x)\) is false?</p></li>
+<li id="li-871"><p id="p-1585">What would you need to do to prove \(\exists x P(x)\) is true?</p></li>
+<li id="li-872"><p id="p-1586">What would you need to do to prove \(\exists x P(x)\) is false?</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-107" id="solution-107"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-107"><div class="solution solution-like"><ol id="p-1587" class="lower-alpha">
+<li id="li-873"><p id="p-1588">The claim that \(\forall x P(x)\) means that \(P(n)\) is true no matter what \(n\) you consider in the domain of discourse. Thus the only way to prove that \(\forall x P(x)\) is true is to check or otherwise argue that \(P(n)\) is true for all \(n\) in the domain.</p></li>
+<li id="li-874"><p id="p-1589">To prove \(\forall x P(x)\) is false all you need is one example of an element in the domain for which \(P(n)\) is false. This is often called a counterexample.</p></li>
+<li id="li-875"><p id="p-1590">We are simply claiming that there is some element \(n\) in the domain of discourse for which \(P(n)\) is true. If you can find one such element, you have verified the claim.</p></li>
+<li id="li-876"><p id="p-1591">Here we are claiming that no element we find will make \(P(n)\) true. The only way to be sure of this is to verify that <em class="emphasis">every</em> element of the domain makes \(P(n)\) false. Note that the level of proof needed for this statement is the same as to prove that \(\forall x P(x)\) is true.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="dSx"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
+<div class="introduction" id="POS">
+<p id="rmv">Suppose \(P(x,y)\) is some binary predicate defined on a very small domain of discourse: just the integers 1, 2, 3, and 4. For each of the 16 pairs of these numbers, \(P(x,y)\) is either true or false, according to the following table (\(x\) values are rows, \(y\) values are columns).</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="r m b1 r1 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">1</td>
+<td class="l m b1 r0 l0 t0 lines">2</td>
+<td class="l m b1 r0 l0 t0 lines">3</td>
+<td class="l m b1 r0 l0 t0 lines">4</td>
+</tr>
+<tr>
+<td class="r m b0 r1 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">T</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="r m b0 r1 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">T</td>
+<td class="l m b0 r0 l0 t0 lines">T</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="r m b0 r1 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">T</td>
+<td class="l m b0 r0 l0 t0 lines">T</td>
+<td class="l m b0 r0 l0 t0 lines">T</td>
+<td class="l m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="r m b0 r1 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+</tr>
+</table></div></div></div>
+<p id="XtE">For example, \(P(1,3)\) is false, as indicated by the F in the first row, third column.</p>
+</div>
+<p id="p-1604">Use the table to decide whether the following statements are true or false.</p>
+<ol class="lower-alpha">
+<li id="li-885"><p id="p-1605">\(\forall x \exists y P(x,y)\text{.}\) <ul style="list-style:circle;">
+<li id="li-887"><p id="p-1607">True</p></li>
+<li id="li-888"><p id="p-1608">False</p></li>
+<li id="li-889"><p id="p-1609">Not enough information</p></li>
+</ul></p></li>
+<li id="li-890"><p id="p-1610">\(\forall y \exists x P(x,y)\text{.}\) <ul style="list-style:circle;">
+<li id="li-892"><p id="p-1612">True</p></li>
+<li id="li-893"><p id="p-1613">False</p></li>
+<li id="li-894"><p id="p-1614">Not enough information</p></li>
+</ul></p></li>
+<li id="li-895"><p id="p-1615">\(\exists x \forall y P(x,y)\text{.}\) <ul style="list-style:circle;">
+<li id="li-897"><p id="p-1617">True</p></li>
+<li id="li-898"><p id="p-1618">False</p></li>
+<li id="li-899"><p id="p-1619">Not enough information</p></li>
+</ul></p></li>
+<li id="li-900"><p id="p-1620">\(\exists y \forall x P(x,y)\text{.}\) <ul style="list-style:circle;">
+<li id="li-902"><p id="p-1622">True</p></li>
+<li id="li-903"><p id="p-1623">False</p></li>
+<li id="li-904"><p id="p-1624">Not enough information</p></li>
+</ul></p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-85" id="answer-85"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-85"><div class="answer solution-like"><p id="p-1625">\(\text{False}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-86" id="answer-86"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-86"><div class="answer solution-like"><p id="p-1626">\(\text{True}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-87" id="answer-87"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-87"><div class="answer solution-like"><p id="p-1627">\(\text{True}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-88" id="answer-88"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-88"><div class="answer solution-like"><p id="p-1628">\(\text{False}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-109" id="solution-109"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-109"><div class="solution solution-like"><ol id="p-1629" class="lower-alpha">
+<li id="li-905"><p id="p-1630">\(\forall x \exists y P(x,y)\) is false because when \(x = 4\text{,}\) there is no \(y\) which makes \(P(4,y)\) true.</p></li>
+<li id="li-906"><p id="p-1631">\(\forall y \exists x P(x,y)\) is true. No matter what \(y\) is (i.e., no matter what column we are in) there is some \(x\) for which \(P(x,y)\) is true. In fact, we can always take \(x\) to be \(3\text{.}\)</p></li>
+<li id="li-907"><p id="p-1632">\(\exists x \forall y P(x,y)\) is true. In particular \(x=3\) is such a number, so that no matter what \(y\) is, \(P(x,y)\) is true.</p></li>
+<li id="li-908"><p id="p-1633">\(\exists y \forall x P(x,y)\) is false. In fact, no matter what \(y\) (column) we look at, there is always some \(x\) (row) which makes \(P(x,y)\) false.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="JZG"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
+<p id="xLB">Translate into symbols. Use \(E(x)\) for “\(x\) is even” and \(O(x)\) for “\(x\) is odd.”</p>
+<ol class="lower-alpha">
+<li id="jfg"><p id="Pfl">No number is both even and odd.</p></li>
+<li id="Pmp"><p id="vmu">One more than any even number is an odd number.</p></li>
+<li id="vty"><p id="btD">There is prime number that is even.</p></li>
+<li id="bAH"><p id="HAM">Between any two numbers there is a third number.</p></li>
+<li id="HHQ"><p id="nHV">There is no number between a number and one more than that number.</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-Eku" id="Eku"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Eku"><div class="solution solution-like"><ol id="SJL" class="lower-alpha">
+<li id="nOZ">\(\neg \exists x (E(x) \wedge O(x))\text{.}\)</li>
+<li id="TWi">\(\forall x (E(x) \imp O(x+1))\text{.}\)</li>
+<li id="Adr">\(\exists x(P(x) \wedge E(x))\) (where \(P(x)\) means “\(x\) is prime”).</li>
+<li id="gkA">\(\forall x \forall y \exists z(x \lt z \lt y \vee y \lt z \lt x)\text{.}\)</li>
+<li id="MrJ">\(\forall x \neg \exists y (x \lt y \lt x+1)\text{.}\)</li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="qgP"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
+<p id="dSK">Translate into English:</p>
+<ol class="lower-alpha">
+<li id="syS">\(\forall x (E(x) \imp E(x +2))\text{.}\)</li>
+<li id="YGb">\(\forall x \exists y (\sin(x) = y)\text{.}\)</li>
+<li id="ENk">\(\forall y \exists x (\sin(x) = y)\text{.}\)</li>
+<li id="kUt">\(\forall x \forall y (x^3 = y^3 \imp x = y)\text{.}\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-krD" id="krD"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-krD"><div class="solution solution-like"><ol id="yQU" class="lower-alpha">
+<li id="RbC"><p id="TPe">Any even number plus 2 is an even number.</p></li>
+<li id="xiL"><p id="zWn">For any \(x\) there is a \(y\) such that \(\sin(x) = y\text{.}\) In other words, every number \(x\) is in the domain of sine.</p></li>
+<li id="dpU"><p id="gdw">For every \(y\) there is an \(x\) such that \(\sin(x) = y\text{.}\) In other words, every number \(y\) is in the range of sine (which is false).</p></li>
+<li id="Jxd"><p id="MkF">For any numbers, if the cubes of two numbers are equal, then the numbers are equal.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="WnY"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
+<p id="JZT">Suppose \(P(x)\) is some predicate for which the statement \(\forall x P(x)\) is true. Is it also the case that \(\exists x P(x)\) is true? In other words, is the statement \(\forall x P(x) \imp \exists x P(x)\) always true? Is the converse always true?  Assume the domain of discourse is non-empty.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-QyM" id="QyM"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-QyM"><div class="hint solution-like"><p id="eYd">Try an example.  What if \(P(x)\) was the predicate, “\(x\) is prime”?  What if it was “if \(x\) is divisible by 4, then it is even”?  Of course examples are not enough to prove something in general, but that is entirely the point of this question.</p></div></div>
+</div></article><article class="exercise exercise-like" id="Cvh"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
+<p id="qhc">For each of the statements below, give a domain of discourse for which the statement is true, and a domain for which the statement is false.</p>
+<ol class="lower-alpha">
+<li id="pEm">\(\forall x \exists y (y^2 = x)\text{.}\)</li>
+<li id="VLv">\(\forall x \forall y (x \lt y \imp \exists z (x \lt z \lt y))\text{.}\)</li>
+<li id="BSE">\(\exists x \forall y \forall z (y \lt z \imp y \le x \le z)\text{.}\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-wFV" id="wFV"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-wFV"><div class="hint solution-like"><p id="Lfm">First figure out what each statement is saying.  For part (c), you don't need to assume the domain is an infinite set.</p></div></div>
+</div></article><article class="exercise exercise-like" id="iCq"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
+<p id="Wol">Consider the statement, “For all natural numbers \(n\text{,}\) if \(n\) is prime, then \(n\) is solitary.” You do not need to know what <em class="emphasis">solitary</em> means for this problem, just that it is a property that some numbers have and others do not.</p>
+<ol class="lower-alpha">
+<li id="hZN"><p id="srO">Write the converse and the contrapositive of the statement, saying which is which. Note: the original statement claims that an implication is true for all \(n\text{,}\) and it is that implication that we are taking the converse and contrapositive of.</p></li>
+<li id="OgW"><p id="YyX">Write the negation of the original statement. What would you need to show to prove that the statement is false?</p></li>
+<li id="uof"><p id="EGg">Even though you don't know whether 10 is solitary (in fact, nobody knows this), is the statement “if 10 is prime, then 10 is solitary” true or false? Explain.</p></li>
+<li id="avo"><p id="kNp">It turns out that 8 is solitary. Does this tell you anything about the truth or falsity of the original statement, its converse or its contrapositive? Explain.</p></li>
+<li id="GCx"><p id="QUy">Assuming that the original statement is true, what can you say about the relationship between the <em class="emphasis">set</em> \(P\) of prime numbers and the <em class="emphasis">set</em> \(S\) of solitary numbers. Explain.</p></li>
+</ol></article></section></section></div></main>
+</div>
+<!--Start: Google Universal code-->
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-66485406-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!--End: Google Universal code-->
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.13/login.js"></script>
+</body>
+</html>

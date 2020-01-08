@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-01-07T16:46:40-07:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution solution-like">
+<p>To show that a graph is bipartite, we must divide the vertices into two sets \(A\) and \(B\) so that no two vertices in the same set are adjacent.  Here is an algorithm that does just this.</p>
+<p>Designate any vertex as the root.  Put this vertex in set \(A\text{.}\)  Now put all of the children of the root in set \(B\text{.}\)  None of these children are adjacent (they are siblings), so we are good so far.  Now put into \(A\) every child of every vertex in \(B\) (i.e., every grandchild of the root).  Keep going until all vertices have been assigned one of the sets, alternating between \(A\) and \(B\) every “generation.”  That is, a vertex is in set \(B\) if and only if it is the child of a vertex in set \(A\text{.}\)</p>
+</div></body>
+</html>

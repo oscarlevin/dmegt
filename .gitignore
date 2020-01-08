@@ -28,7 +28,6 @@
 *.pdf
 *.fdb*
 *.fls
-*.html
 html/images/*.svg
 localbuild/
 Makefile.paths

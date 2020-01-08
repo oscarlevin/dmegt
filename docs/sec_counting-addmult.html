@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-01-07T16:45:58-07:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Additive and Multiplicative Principles</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-dev.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-dev.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script>(function() {
+  var cx = '000445521324161818100:qhc2ahxtur8';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.13;
+</script>
+</head>
+<body id="levin-DMOI" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://discrete.openmathbooks.org/dmoi3.html" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="dmoi.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">early Graph Theory</span></a></h1>
+<p class="byline">Oscar Levin</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_counting-pascal.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_counting.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_counting-binom.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_counting-pascal.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_counting.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_counting-binom.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="RGW"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="xOf">Preface</a></li>
+<li><a href="preface-2.html" data-scroll="dVo">How to use this book</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_graphtheory.html" data-scroll="gBz"><span class="codenumber">0</span> <span class="title">Graphs and other Discrete Structures</span></a><ul>
+<li><a href="sec_intro-intro.html" data-scroll="hPw">What is Discrete Mathematics?</a></li>
+<li><a href="sec_gt-intro.html" data-scroll="HLu">Graph Theory</a></li>
+<li><a href="sec_intro-sets.html" data-scroll="ltW">Sets</a></li>
+<li><a href="sec_intro-functions.html" data-scroll="CkQ">Functions</a></li>
+<li><a href="sec_gt-carefully.html" data-scroll="HLu">Graph Done Right</a></li>
+<li><a href="sec_coloring.html" data-scroll="qyO">Coloring</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logic.html" data-scroll="wur"><span class="codenumber">1</span> <span class="title">Symbolic Logic and Proofs</span></a><ul>
+<li><a href="sec_intro-statements.html" data-scroll="QDd">Mathematical Statements</a></li>
+<li><a href="sec_propositional.html" data-scroll="XMq">Propositional Logic</a></li>
+<li><a href="sec_logic-proofs.html" data-scroll="lnf">Proofs</a></li>
+<li><a href="sec_paths.html" data-scroll="tPg">Euler Paths and Circuits</a></li>
+<li><a href="sec_trees.html" data-scroll="gor">Trees</a></li>
+<li><a href="sec_logic-induction.html" data-scroll="lnf">Mathematical Induction</a></li>
+<li><a href="sec_planar.html" data-scroll="ttH">Planar Graphs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_counting.html" data-scroll="raE"><span class="codenumber">2</span> <span class="title">Counting</span></a><ul>
+<li><a href="sec_counting-pascal.html" data-scroll="sJa">Pascal's Triangle</a></li>
+<li><a href="sec_counting-addmult.html" data-scroll="sJa" class="active">Additive and Multiplicative Principles</a></li>
+<li><a href="sec_counting-binom.html" data-scroll="vZs">Binomial Coefficients</a></li>
+<li><a href="sec_counting-combperm.html" data-scroll="yda">Combinations and Permutations</a></li>
+<li><a href="sec_comb-proofs.html" data-scroll="SUg">Combinatorial Proofs</a></li>
+<li><a href="sec_stars-and-bars.html" data-scroll="qkt">Stars and Bars</a></li>
+<li><a href="sec_advPIE.html" data-scroll="HKU">Advanced Counting Using PIE</a></li>
+<li><a href="sec_count-conc.html" data-scroll="Bmb">Chapter Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_sequences.html" data-scroll="KxW"><span class="codenumber">3</span> <span class="title">Sequences</span></a><ul>
+<li><a href="sec_seq_intro.html" data-scroll="tgm">Describing Sequences</a></li>
+<li><a href="sec_seq-arithgeom.html" data-scroll="lIR">Arithmetic and Geometric Sequences</a></li>
+<li><a href="sec_polyfit.html" data-scroll="ylR">Polynomial Fitting</a></li>
+<li><a href="sec_recurrence.html" data-scroll="bcV">Solving Recurrence Relations</a></li>
+<li><a href="sec_seq-induction.html" data-scroll="Prg">Induction</a></li>
+<li><a href="sec_addtops-genfun.html" data-scroll="XaJ">Generating Functions</a></li>
+<li><a href="sec_sequences-conc.html" data-scroll="YaY">Chapter Summary</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="mqL"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="SxU"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="yFd"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="GjC"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sJa"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Additive and Multiplicative Principles</span>
+</h2>
+<a href="sec_counting-addmult.html" class="permalink">¶</a><section class="introduction" id="Qgr"><article class="project-like" id="wnA"><h6 class="heading">
+<span class="type">Investigate!</span> </h6>
+<ol id="DwA" class="decimal">
+<li id="RVE">
+<p id="Ppt">A restaurant offers 8 appetizers and 14 entrées. How many choices do you have if:</p>
+<ol class="lower-alpha">
+<li id="vwC">you will eat one dish, either an appetizer or an entrée?</li>
+<li id="ycN">you are extra hungry and want to eat both an appetizer and an entrée?</li>
+</ol>
+</li>
+<li id="iTP"><p id="vih">Think about the methods you used to solve question 1. Write down the rules for these methods.</p></li>
+<li id="PaY">
+<p id="jDJ">Do your rules work? A standard deck of playing cards has 26 red cards and 12 face cards.</p>
+<ol class="lower-alpha">
+<li id="ejW">How many ways can you select a card which is either red or a face card?</li>
+<li id="Krf">How many ways can you select a card which is both red and a face card?</li>
+<li id="qyo">How many ways can you select two cards so that the first one is red and the second one is a face card?</li>
+</ol>
+</li>
+</ol></article><p id="PKS">Consider this rather simple counting problem: at Red Dogs and Donuts, there are 14 varieties of donuts, and 16 types of hot dogs. If you want either a donut or a dog, how many options do you have? This isn't too hard, just add 14 and 16. Will that always work? What is important here?</p>
+<article class="assemblage assemblage-like" id="pOu"><h6 class="heading"><span class="title">Additive Principle.</span></h6>
+<p id="vSb">The <dfn class="terminology">additive principle</dfn> states that if event \(A\) can occur in \(m\) ways, and event \(B\) can occur in \(n\) <em class="emphasis">disjoint</em> ways, then the event “\(A\) or \(B\)” can occur in \(m + n\) ways.</p></article><p id="bZk"> It is important that the events be <dfn class="terminology">disjoint</dfn>: i.e., that there is no way for \(A\) and \(B\) to both happen at the same time. For example, a standard deck of 52 cards contains \(26\) red cards and \(12\) face cards. However, the number of ways to select a card which is either red or a face card is not \(26 + 12 = 38\text{.}\) This is because there are 6 cards which are both red and face cards.</p>
+<article class="example example-like" id="Lwy"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span>
+</h6>
+<p id="ajX"> How many two letter “words” start with either A or B? (A <dfn class="terminology">word</dfn> is just a string of letters; it doesn't have to be English, or even pronounceable.)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-cuJ" id="cuJ"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-cuJ"><div class="solution solution-like"><p id="nDI">First, how many two letter words start with A? We just need to select the second letter, which can be accomplished in 26 ways. So there are 26 words starting with A. There are also 26 words that start with B. To select a word which starts with either A or B, we can pick the word from the first 26 or the second 26, for a total of 52 words.</p></div></div>
+</div></article><p id="Igt">The additive principle also works with more than two events. Say, in addition to your 14 choices for donuts and 16 for dogs, you would also consider eating one of 15 waffles? How many choices do you have now? You would have \(14 + 16 + 15 = 45\) options.</p>
+<article class="example example-like" id="rDH"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span>
+</h6>
+<p id="Grg">How many two letter words start with one of the 5 vowels?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-IBS" id="IBS"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-IBS"><div class="solution solution-like"><p id="TKR">There are 26 two letter words starting with A, another 26 starting with E, and so on. We will have 5 groups of 26. So we add 26 to itself 5 times. Of course it would be easier to just multiply \(5\cdot 26\text{.}\) We are really using the additive principle again, just using multiplication as a shortcut.</p></div></div>
+</div></article><article class="example example-like" id="XKQ"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span>
+</h6>
+<p id="myp">Suppose you are going for some fro-yo. You can pick one of 6 yogurt choices, and one of 4 toppings. How many choices do you have?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-oJb" id="oJb"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-oJb"><div class="solution solution-like"><p id="zSa">Break your choices up into disjoint events: \(A\) are the choices with the first topping, \(B\) the choices featuring the second topping, and so on. There are four events; each can occur in 6 ways (one for each yogurt flavor). The events are disjoint, so the total number of choices is \(6 + 6 + 6 + 6 = 24\text{.}\)</p></div></div>
+</div></article><p id="onC">Note that in both of the previous examples, when using the additive principle on a bunch of events all the same size, it is quicker to multiply. This really is the same, and not just because \(6 + 6 + 6 + 6 = 4\cdot 6\text{.}\) We can first select the topping in 4 ways (that is, we first select which of the disjoint events we will take). For each of those first 4 choices, we now have 6 choices of yogurt. We have:</p>
+<article class="assemblage assemblage-like" id="VVD"><h6 class="heading"><span class="title">Multiplicative Principle.</span></h6>
+<p id="UuL">The <dfn class="terminology">multiplicative principle</dfn> states that if event \(A\) can occur in \(m\) ways, and each possibility for \(A\) allows for exactly \(n\) ways for event \(B\text{,}\) then the event “\(A\) and \(B\)” can occur in \(m \cdot n\) ways.</p></article><p id="ABU">The multiplicative principle generalizes to more than two events as well.</p>
+<article class="example example-like" id="DRZ"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span>
+</h6>
+<p id="SFy">How many license plates can you make out of three letters followed by three numerical digits?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-UQk" id="UQk"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-UQk"><div class="solution solution-like">
+<p id="fZj">Here we have six events: the first letter, the second letter, the third letter, the first digit, the second digit, and the third digit. The first three events can each happen in 26 ways; the last three can each happen in 10 ways. So the total number of license plates will be \(26\cdot 26\cdot 26 \cdot 10 \cdot 10 \cdot 10\text{,}\) using the multiplicative principle.</p>
+<p id="Mgs">Does this make sense? Think about how we would pick a license plate. How many choices we would have? First, we need to pick the first letter. There are 26 choices. Now for each of those, there are 26 choices for the second letter: 26 second letters with first letter A, 26 second letters with first letter B, and so on. We add 26 to itself 26 times. Or quicker: there are \(26 \cdot 26\) choices for the first two letters.</p>
+<p id="snB">Now for each choice of the first two letters, we have 26 choices for the third letter. That is, 26 third letters for the first two letters AA, 26 choices for the third letter after starting AB, and so on. There are \(26 \cdot 26\) of these \(26\) third letter choices, for a total of \((26\cdot26)\cdot 26\) choices for the first three letters. And for each of these \(26\cdot26\cdot26\) choices of letters, we have a bunch of choices for the remaining digits.</p>
+<p id="YuK">In fact, there are going to be exactly 1000 choices for the numbers. We can see this because there are 1000 three-digit numbers (000 through 999). This is 10 choices for the first digit, 10 for the second, and 10 for the third. The multiplicative principle says we multiply: \(10\cdot 10 \cdot 10 = 1000\text{.}\)</p>
+<p id="EBT">All together, there were \(26^3\) choices for the three letters, and \(10^3\) choices for the numbers, so we have a total of \(26^3 \cdot 10^3\) choices of license plates.</p>
+</div></div>
+</div></article><p id="gJd">Careful: “and” doesn't mean “times.” For example, how many playing cards are both red and a face card? Not \(26 \cdot 12\text{.}\) The answer is 6, and we needed to know something about cards to answer that question.</p>
+<p id="MQm">Another caution: how many ways can you select two cards, so that the first one is a red card and the second one is a face card? This looks more like the multiplicative principle (you are counting two separate events) but the answer is not \(26 \cdot 12\) here either. The problem is that while there are 26 ways for the first card to be selected, it is not the case that <em class="emphasis">for each</em> of those there are 12 ways to select the second card. If the first card was both red and a face card, then there would be only 11 choices for the second card.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-14" id="fn-14"><sup> 1 </sup></a></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-14"><div class="fn">To solve this problem, you could break it into two cases. First, count how many ways there are to select the two cards when the first card is a red non-face card. Second, count how many ways when the first card is a red face card. Doing so makes the events in each separate case independent, so the multiplicative principle can be applied.</div></div>
+<article class="example example-like" id="jZi"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Counting functions.</span>
+</h6>
+<p id="yMH">How many functions \(f:\{1,2,3,4,5\} \to \{a,b,c,d\}\) are there?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-AXt" id="AXt"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-AXt"><div class="solution solution-like">
+<p id="kJc">Remember that a function sends each element of the domain to exactly one element of the codomain. To determine a function, we just need to specify the image of each element in the domain. Where can we send 1? There are 4 choices. Where can we send 2? Again, 4 choices. What we have here is 5 “events” (picking the image of an element in the domain) each of which can happen in 4 ways (the choices for that image). Thus there are \(4 \cdot 4 \cdot 4 \cdot 4 \cdot 4 = 4^5\) functions.</p>
+<p id="QQl">This is more than just an example of how we can use the multiplicative principle in a particular counting question. What we have here is a general interpretation of certain applications of the multiplicative principle using rigorously defined mathematical objects: functions. Whenever we have a counting question that asks for the number of outcomes of a repeated event, we can interpret that as asking for the number of functions from \(\{1,2,\ldots, n\}\) (where \(n\) is the number of times the event is repeated) to \(\{1,2,\ldots,k\}\) (where \(k\) is the number of ways that event can occur).</p>
+</div></div>
+</div></article></section><section class="subsection" id="YQj"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Counting With Sets</span>
+</h3>
+<a href="sec_counting-addmult.html#YQj" class="permalink">¶</a><p id="JVG">Do you believe the additive and multiplicative principles? How would you convince someone they are correct? This is surprisingly difficult. They seem so simple, so obvious. But why do they work?</p>
+<p id="qcP">To make things clearer, and more mathematically rigorous, we will use sets. Do not skip this section! It might seem like we are just trying to give a proof of these principles, but we are doing a lot more. If we understand the additive and multiplicative principles rigorously, we will be better at applying them, and knowing when and when not to apply them at all.</p>
+<p id="WjY">We will look at the additive and multiplicative principles in a slightly different way. Instead of thinking about event \(A\) and event \(B\text{,}\) we want to think of a set \(A\) and a set \(B\text{.}\) The sets will contain all the different ways the event can happen. (It will be helpful to be able to switch back and forth between these two models when checking that we have counted correctly.) Here's what we mean:</p>
+<article class="example example-like" id="CcM"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span>
+</h6>
+<p id="eTQ">Suppose you own 9 shirts and 5 pairs of pants.</p>
+<ol class="decimal">
+<li id="WFx"><p id="bpq">How many outfits can you make?</p></li>
+<li id="CMG"><p id="Hwz">If today is half-naked-day, and you will wear only a shirt or only a pair of pants, how many choices do you have?</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-heC" id="heC"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-heC"><div class="solution solution-like">
+<p id="wXu">By now you should agree that the answer to the first question is \(9 \cdot 5 = 45\) and the answer to the second question is \(9 + 5 = 14\text{.}\) These are the multiplicative and additive principles. There are two events: picking a shirt and picking a pair of pants. The first event can happen in 9 ways and the second event can happen in 5 ways. To get both a shirt and a pair of pants, you multiply. To get just one article of clothing, you add.</p>
+<p id="deD">Now look at this using sets. There are two sets, call them \(S\) and \(P\text{.}\) The set \(S\) contains all 9 shirts so \(|S| = 9\) while \(|P| = 5\text{,}\) since there are 5 elements in the set \(P\) (namely your 5 pairs of pants). What are we asking in terms of these sets? Well in question 2, we really want \(|S \cup P|\text{,}\) the number of elements in the union of shirts and pants. This is just \(|S| + |P|\) (since there is no overlap; \(|S \cap P| = 0\)). Question 1 is slightly more complicated. Your first guess might be to find \(|S \cap P|\text{,}\) but this is not right (there is nothing in the intersection). We are not asking for how many clothing items are both a shirt and a pair of pants. Instead, we want one of each. We could think of this as asking how many pairs \((x,y)\) there are, where \(x\) is a shirt and \(y\) is a pair of pants. As we will soon verify, this number is \(|S| \cdot |P|\text{.}\)</p>
+</div></div>
+</div></article><p id="Crh">From this example we can see right away how to rephrase our additive principle in terms of sets:</p>
+<article class="assemblage assemblage-like" id="leB"><h6 class="heading"><span class="title">Additive Principle (with sets).</span></h6>
+<p id="FlN">Given two sets \(A\) and \(B\text{,}\) if \(A \cap B = \emptyset\) (that is, if there is no element in common to both \(A\) and \(B\)), then</p>
+<div class="displaymath">
+\begin{equation*}
+\card{A \cup B} = \card{A} + \card{B}\text{.}
+\end{equation*}
+</div></article><p id="iyq">This hardly needs a proof. To find \(A \cup B\text{,}\) you take everything in \(A\) and throw in everything in \(B\text{.}\) Since there is no element in both sets already, you will have \(\card{A}\) things and add \(\card{B}\) new things to it. This is what adding does! Of course, we can easily extend this to any number of disjoint sets.</p>
+<p id="OFz">From the example above, we see that in order to investigate the multiplicative principle carefully, we need to consider ordered pairs. We should define this carefully:</p>
+<article class="assemblage assemblage-like" id="RlK"><h6 class="heading"><span class="title">Cartesian Product.</span></h6>
+<p id="lsW">Given sets \(A\) and \(B\text{,}\) we can form the <em class="emphasis">set</em></p>
+<div class="displaymath">
+\begin{equation*}
+A \times B = \{(x,y) \st x \in A \wedge y \in B\}
+\end{equation*}
+</div>
+<p>to be the set of all ordered pairs \((x,y)\) where \(x\) is an element of \(A\) and \(y\) is an element of \(B\text{.}\) We call \(A \times B\) the <dfn class="terminology">Cartesian product</dfn> of \(A\) and \(B\text{.}\)</p></article><article class="example example-like" id="ijV"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span>
+</h6>
+<p id="LaZ">Let \(A = \{1,2\}\) and \(B=\{3,4,5\}\text{.}\) Find \(A \times B\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-NlL" id="NlL"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-NlL"><div class="solution solution-like">
+<p id="JlM">We want to find ordered pairs \((a,b)\) where \(a\) can be either \(1\) or \(2\) and \(b\) can be either 3, 4, or 5. \(A \times B\) is the set of all of these pairs:</p>
+<div class="displaymath">
+\begin{equation*}
+A \times B = \{(1,3), (1,4), (1,5), (2,3), (2,4), (2,5)\}\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article><p id="uMI">The question is, what is \(\card{A \times B}\text{?}\) To figure this out, write out \(A \times B\text{.}\) Let \(A = \{a_1,a_2, a_3, \ldots,
+a_m\}\) and \(B = \{b_1,b_2, b_3, \ldots, b_n\}\) (so \(\card{A} = m\) and \(\card{B} = n\)). The set \(A \times B\) contains all pairs with the first half of the pair being some \(a_i \in A\) and the second being one of the \(b_j \in B\text{.}\) In other words:</p>
+<div class="displaymath">
+\begin{align*}
+A \times B = \{ \amp (a_1, b_1), (a_1, b_2), (a_1, b_3), \ldots (a_1, b_n),\\
+\amp (a_2, b_1), (a_2, b_2), (a_2, b_3), \ldots, (a_2, b_n),\\
+\amp (a_3, b_1), (a_3, b_2), (a_3, b_3), \ldots, (a_3, b_n),\\
+\amp \vdots\\
+\amp (a_m, b_1), (a_m, b_2), (a_m, b_3), \ldots, (a_m, b_n)\}\text{.}
+\end{align*}
+</div>
+<p id="aTR">Notice what we have done here: we made \(m\) rows of \(n\) pairs, for a total of \(m \cdot n\) pairs.</p>
+<p id="Hba">Each row above is really \(\{a_i\} \times B\) for some \(a_i \in A\text{.}\) That is, we fixed the \(A\)-element. Broken up this way, we have</p>
+<div class="displaymath">
+\begin{equation*}
+A \times B = (\{a_1\} \times B) \cup (\{a_2\} \times B) \cup (\{a_3\}\times B) \cup \cdots \cup (\{a_m\} \times B)\text{.}
+\end{equation*}
+</div>
+<p id="nij">So \(A \times B\) is really the union of \(m\) disjoint sets. Each of those sets has \(n\) elements in them. The total (using the additive principle) is \(n + n + n + \cdots + n = m \cdot n\text{.}\)</p>
+<p id="Tps">To summarize:</p>
+<article class="assemblage assemblage-like" id="xsT"><h6 class="heading"><span class="title">Multiplicative Principle (with sets).</span></h6>
+<p id="RAf">Given two sets \(A\) and \(B\text{,}\) we have \(\card{A \times B} = \card{A} \cdot \card{B}\text{.}\)</p></article><p id="zwB">Again, we can easily extend this to any number of sets.</p></section><section class="subsection" id="EXs"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Principle of Inclusion/Exclusion</span>
+</h3>
+<a href="sec_counting-addmult.html#EXs" class="permalink">¶</a><article class="project-like" id="fpp"><h6 class="heading">
+<span class="type">Investigate!</span> </h6>
+<p id="sXv">A recent buzz marketing campaign for <em class="emphasis">Village Inn</em> surveyed patrons on their pie preferences. People were asked whether they enjoyed (A) Apple, (B) Blueberry or (C) Cherry pie (respondents answered yes or no to each type of pie, and could say yes to more than one type). The following table shows the results of the survey.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="r m b1 r1 l0 t0 lines">Pies enjoyed:</td>
+<td class="c m b1 r0 l0 t0 lines">A</td>
+<td class="c m b1 r0 l0 t0 lines">B</td>
+<td class="c m b1 r0 l0 t0 lines">C</td>
+<td class="c m b1 r0 l0 t0 lines">AB</td>
+<td class="c m b1 r0 l0 t0 lines">AC</td>
+<td class="c m b1 r0 l0 t0 lines">BC</td>
+<td class="c m b1 r0 l0 t0 lines">ABC</td>
+</tr>
+<tr>
+<td class="r m b0 r1 l0 t0 lines">Number of people:</td>
+<td class="c m b0 r0 l0 t0 lines">20</td>
+<td class="c m b0 r0 l0 t0 lines">13</td>
+<td class="c m b0 r0 l0 t0 lines">26</td>
+<td class="c m b0 r0 l0 t0 lines">9</td>
+<td class="c m b0 r0 l0 t0 lines">15</td>
+<td class="c m b0 r0 l0 t0 lines">7</td>
+<td class="c m b0 r0 l0 t0 lines">5</td>
+</tr>
+</table></div></div></div>
+<p id="ZeE">How many of those asked enjoy at least one of the kinds of pie? Also, explain why the answer is not 95.</p></article><p id="fDK"> While we are thinking about sets, consider what happens to the additive principle when the sets are NOT disjoint. Suppose we want to find \(\card{A \cup B}\) and know that \(\card{A} = 10\) and \(\card{B} = 8\text{.}\) This is not enough information though. We do not know how many of the 8 elements in \(B\) are also elements of \(A\text{.}\) However, if we also know that \(\card{A \cap B} = 6\text{,}\) then we can say exactly how many elements are in \(A\text{,}\) and, of those, how many are in \(B\) and how many are not (6 of the 10 elements are in \(B\text{,}\) so 4 are in \(A\) but not in \(B\)). We could fill in a Venn diagram as follows:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-135.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="LKT">This says there are 6 elements in \(A \cap B\text{,}\) 4 elements in \(A \setminus B\) and 2 elements in \(B \setminus A\text{.}\) Now <em class="emphasis">these</em> three sets <em class="emphasis">are</em> disjoint, so we can use the additive principle to find the number of elements in \(A \cup B\text{.}\) It is \(6 + 4 + 2 = 12\text{.}\)</p>
+<p id="rSc">This will always work, but drawing a Venn diagram is more than we need to do. In fact, it would be nice to relate this problem to the case where \(A\) and \(B\) are disjoint. Is there one rule we can make that works in either case?</p>
+<p id="XZl">Here is another way to get the answer to the problem above. Start by just adding \(\card{A} + \card{B}\text{.}\) This is \(10 + 8 = 18\text{,}\) which would be the answer if \(\card{A \cap B} = 0\text{.}\) We see that we are off by exactly 6, which just so happens to be \(\card{A \cap B}\text{.}\) So perhaps we guess,</p>
+<div class="displaymath">
+\begin{equation*}
+\card{A \cup B} = \card{A} + \card{B} - \card{A \cap B}\text{.}
+\end{equation*}
+</div>
+<p id="Egu">This works for this one example. Will it always work? Think about what we are doing here. We want to know how many things are either in \(A\) or \(B\) (or both). We can throw in everything in \(A\text{,}\) and everything in \(B\text{.}\) This would give \(\card{A} + \card{B}\) many elements. But of course when you actually take the union, you do not repeat elements that are in both. So far we have counted every element in \(A \cap B\) exactly twice: once when we put in the elements from \(A\) and once when we included the elements from \(B\text{.}\) We correct by subtracting out the number of elements we have counted twice. So we added them in twice, subtracted once, leaving them counted only one time.</p>
+<p id="knD">In other words, we have:</p>
+<article class="assemblage assemblage-like" id="dAc"><h6 class="heading"><span class="title">Cardinality of a union (2 sets).</span></h6>
+<p id="xHo">For any finite sets \(A\) and \(B\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\card{A \cup B} = \card{A} + \card{B} - \card{A \cap B}\text{.}
+\end{equation*}
+</div></article><p id="QuM">We can do something similar with three sets.</p>
+<article class="example example-like" id="Ore"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.8</span><span class="period">.</span>
+</h6>
+<p id="rii">An examination in three subjects, Algebra, Biology, and Chemistry, was taken by 41 students. The following table shows how many students failed in each single subject and in their various combinations:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="r m b1 r1 l0 t0 lines">Subject:</td>
+<td class="c m b1 r0 l0 t0 lines">A</td>
+<td class="c m b1 r0 l0 t0 lines">B</td>
+<td class="c m b1 r0 l0 t0 lines">C</td>
+<td class="c m b1 r0 l0 t0 lines">AB</td>
+<td class="c m b1 r0 l0 t0 lines">AC</td>
+<td class="c m b1 r0 l0 t0 lines">BC</td>
+<td class="c m b1 r0 l0 t0 lines">ABC</td>
+</tr>
+<tr>
+<td class="r m b0 r1 l0 t0 lines">Failed:</td>
+<td class="c m b0 r0 l0 t0 lines">12</td>
+<td class="c m b0 r0 l0 t0 lines">5</td>
+<td class="c m b0 r0 l0 t0 lines">8</td>
+<td class="c m b0 r0 l0 t0 lines">2</td>
+<td class="c m b0 r0 l0 t0 lines">6</td>
+<td class="c m b0 r0 l0 t0 lines">3</td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+</tr>
+</table></div></div></div>
+<p id="Xpr">How many students failed at least one subject?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-tsU" id="tsU"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-tsU"><div class="solution solution-like">
+<p id="psV">The answer is not 37, even though the sum of the numbers above is 37. For example, while 12 students failed Algebra, 2 of those students also failed Biology, 6 also failed Chemistry, and 1 of those failed all three subjects. In fact, that 1 student who failed all three subjects is counted a total of 7 times in the total 37. To clarify things, let us think of the students who failed Algebra as the elements of the set \(A\text{,}\) and similarly for sets \(B\) and \(C\text{.}\) The one student who failed all three subjects is the lone element of the set \(A \cap B \cap C\text{.}\) Thus, in Venn diagrams:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32%;margin-right:32%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-136.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="VAe">Now let's fill in the other intersections. We know \(A\cap B\) contains 2 elements, but 1 element has already been counted. So we should put a 1 in the region where \(A\) and \(B\) intersect (but \(C\) does not). Similarly, we calculate the cardinality of \((A\cap C) \setminus B\text{,}\) and \((B \cap C) \setminus A\text{:}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32%;margin-right:32%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-137.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="BHn">Next, we determine the numbers which should go in the remaining regions, including outside of all three circles. This last number is the number of students who did not fail any subject:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32%;margin-right:32%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-138.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="hOw">We found 5 goes in the “\(A\) only” region because the entire circle for \(A\) needed to have a total of 12, and 7 were already accounted for. Similarly, we calculate the “\(B\) only” region to contain only 1 student and the “\(C\) only” region to contain no students.</p>
+<p id="NVF">Thus the number of students who failed at least one class is 15 (the sum of the numbers in each of the eight disjoint regions). The number of students who passed all three classes is 26: the total number of students, 41, less the 15 who failed at least one class.</p>
+<p id="ucO">Note that we can also answer other questions. For example, how many students failed just Chemistry? None. How many passed Algebra but failed both Biology and Chemistry? This corresponds to the region inside both \(B\) and \(C\) but outside of \(A\text{,}\) containing 2 students.</p>
+</div></div>
+</div></article><p id="wBV">Could we have solved the problem above in an algebraic way? While the additive principle generalizes to any number of sets, when we add a third set here, we must be careful. With two sets, we needed to know the cardinalities of \(A\text{,}\) \(B\text{,}\) and \(A \cap B\) in order to find the cardinality of \(A \cup B\text{.}\) With three sets we need more information. There are more ways the sets can combine. Not surprisingly then, the formula for cardinality of the union of three non-disjoint sets is more complicated:</p>
+<article class="assemblage assemblage-like" id="JHl"><h6 class="heading"><span class="title">Cardinality of a union (3 sets).</span></h6>
+<p id="dOx">For any finite sets \(A\text{,}\) \(B\text{,}\) and \(C\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\card{A \cup B \cup C} = \card{A} + \card{B} + \card{C} - \card{A \cap B} - \card{A \cap C} - \card{B \cap C} + \card{A \cap B \cap C}\text{.}
+\end{equation*}
+</div></article><p id="cJe">To determine how many elements are in at least one of \(A\text{,}\) \(B\text{,}\) or \(C\) we add up all the elements in each of those sets. However, when we do that, any element in both \(A\) and \(B\) is counted twice. Also, each element in both \(A\) and \(C\) is counted twice, as are elements in \(B\) and \(C\text{,}\) so we take each of those out of our sum once. But now what about the elements which are in \(A \cap B \cap C\) (in all three sets)? We added them in three times, but also removed them three times. They have not yet been counted. Thus we add those elements back in at the end.</p>
+<p id="IQn">Returning to our example above, we have \(\card{A} = 12\text{,}\) \(\card{B} = 5\text{,}\) \(\card{C} = 8\text{.}\) We also have \(\card{A \cap B} = 2\text{,}\) \(\card{A \cap C} = 6\text{,}\) \(\card{B \cap C} = 3\text{,}\) and \(\card{A \cap B \cap C} = 1\text{.}\) Therefore:</p>
+<div class="displaymath">
+\begin{equation*}
+\card{A \cup B \cup C} = 12 + 5 + 8 - 2 - 6 - 3 + 1 = 15\text{.}
+\end{equation*}
+</div>
+<p id="oXw">This is what we got when we solved the problem using Venn diagrams.</p>
+<p id="VeF">This process of adding in, then taking out, then adding back in, and so on is called the <em class="emphasis">Principle of Inclusion/Exclusion</em>, or simply PIE. We will return to this counting technique later to solve for more complicated problems (involving more than 3 sets).</p></section><section class="exercises" id="WHK"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<a href="sec_counting-addmult.html#WHK" class="permalink">¶</a><article class="exercise exercise-like" id="Abr"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-2328">Your wardrobe consists of 5 shirts, 3 pairs of pants, and 17 bow ties. bow ties How many different outfits can you make?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-166" id="solution-166"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-166"><div class="solution solution-like"><p id="p-2329">There are 255 outfits. Use the multiplicative principle.</p></div></div>
+</div></article><article class="exercise exercise-like" id="giA"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-2339">For your college interview, you must wear a tie. You own 3 regular (boring) ties and 5 (cool) bow ties.</p>
+<ol class="lower-alpha">
+<li id="li-1122"><p id="p-2340">How many choices do you have for your neck-wear?</p></li>
+<li id="li-1123"><p id="p-2342">You realize that the interview is for clown college, so you should probably wear both a regular tie and a bow tie. How many choices do you have now?</p></li>
+<li id="li-1124"><p id="p-2344">For the rest of your outfit, you have 5 shirts, 4 skirts, 3 pants, and 7 dresses. You want to select either a shirt to wear with a skirt or pants, or just a dress. How many outfits do you have to choose from?</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-89" id="answer-89"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-89"><div class="answer solution-like"><p id="p-2346">\(8\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-90" id="answer-90"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-90"><div class="answer solution-like"><p id="p-2347">\(15\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-91" id="answer-91"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-91"><div class="answer solution-like"><p id="p-2348">\(42\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-168" id="solution-168"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-168"><div class="solution solution-like"><ol id="p-2349" class="lower-alpha">
+<li id="li-1125"><p id="p-2350">8 ties. Use the additive principle.</p></li>
+<li id="li-1126"><p id="p-2351">15 ties. Use the multiplicative principle</p></li>
+<li id="li-1127"><p id="p-2352">\(5\cdot (4+3) + 7 = 42\) outfits.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="MpJ"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="wpN">Your Blu-ray collection consists of 9 comedies and 7 horror movies. Give an example of a question for which the answer is:</p>
+<ol class="lower-alpha">
+<li id="dXO"><p id="yAz">16.</p></li>
+<li id="KeX"><p id="eHI">63.</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-umf" id="umf"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-umf"><div class="solution solution-like"><ol id="uAA" class="lower-alpha">
+<li id="qmg"><p id="KOR">For example, 16 is the number of choices you have if you want to watch one movie, either a comedy or horror flick.</p></li>
+<li id="Wtp"><p id="qWa">For example, 63 is the number of choices you have if you will watch two movies, first a comedy and then a horror.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="swS"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-2367">hexadecimal We usually write numbers in decimal form (or base 10), meaning numbers are composed using 10 different “digits” \(\{0,1,\ldots, 9\}\text{.}\) Sometimes though it is useful to write numbers hexadecimal or base 16. Now there are 16 distinct digits that can be used to form numbers: \(\{0, 1, \ldots, 9, \mathrm{A, B, C, D, E, F}\}\text{.}\) So for example, a 3 digit hexadecimal number might be 2B8.</p>
+<ol class="lower-alpha">
+<li id="li-1136"><p id="p-2368">How many 2-digit hexadecimals are there in which the first digit is E or F? Explain your answer in terms of the additive principle (using either events or sets).</p></li>
+<li id="li-1137"><p id="p-2370">Explain why your answer to the previous part is correct in terms of the multiplicative principle (using either events or sets). Why do both the additive and multiplicative principles give you the same answer?</p></li>
+<li id="li-1138"><p id="p-2371">How many 3-digit hexadecimals start with a letter (A-F) and end with a numeral (0-9)? Explain.</p></li>
+<li id="li-1139"><p id="p-2373">How many 3-digit hexadecimals start with a letter (A-F) or end with a numeral (0-9) (or both)? Explain.</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-92" id="answer-92"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-92"><div class="answer solution-like"><p id="p-2375">\(32\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-93" id="answer-93"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-93"><div class="answer solution-like"><p id="p-2376">\(960\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-94" id="answer-94"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-94"><div class="answer solution-like"><p id="p-2377">\(3136\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="YEb"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-2385">Suppose you have sets \(A\) and \(B\) with \(\card{A} = 10\) and \(\card{B} = 15\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-1146"><p id="p-2386">What is the largest possible value for \(\card{A \cap B}\text{?}\)</p></li>
+<li id="li-1147"><p id="p-2388">What is the smallest possible value for \(\card{A \cap B}\text{?}\)</p></li>
+<li id="li-1148"><p id="p-2390">What are the possible values for \(\card{A \cup B}\text{?}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-95" id="answer-95"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-95"><div class="answer solution-like"><p id="p-2391">\(10\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-96" id="answer-96"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-96"><div class="answer solution-like"><p id="p-2392">\(0\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-171" id="solution-171"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-171"><div class="solution solution-like"><ol id="p-2393" class="lower-alpha">
+<li id="li-1149"><p id="p-2394">To maximize the number of elements in common between \(A\) and \(B\text{,}\) make \(A \subset B\text{.}\) This would give \(\card{A \cap B} = 10\text{.}\)</p></li>
+<li id="li-1150"><p id="p-2395">\(A\) and \(B\) might have no elements in common, giving \(\card{A\cap B} = 0\text{.}\)</p></li>
+<li id="li-1151"><p id="p-2396">\(15 \le \card{A \cup B} \le 25\text{.}\) In fact, when \(\card{A \cap B} = 0\) then \(\card{A \cup B} = 25\) and when \(\card{A \cap B} = 10\) then \(\card{A \cup B} = 15\text{.}\)</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="ELk"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-2400">If \(\card{A} = 8\) and \(\card{B} = 5\text{,}\) what is \(\card{A \cup B} + \card{A \cap B}\text{?}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-97" id="answer-97"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-97"><div class="answer solution-like"><p id="p-2402">\(13\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-173" id="solution-173"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-173"><div class="solution solution-like"><p id="p-2403">\(\card{A \cup B} + \card{A \cap B} = 13\text{.}\) Use PIE: we know \(\card{A \cup B} = 8 + 5 - \card{A \cap B}\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="kSt"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-2407">A group of college students were asked about their TV watching habits. Of those surveyed, 28 students watch <em class="emphasis">The Walking Dead</em>, 19 watch <em class="emphasis">The Blacklist</em>, and 24 watch <em class="emphasis">Game of Thrones</em>. Additionally, 16 watch <em class="emphasis">The Walking Dead</em> and <em class="emphasis">The Blacklist</em>, 14 watch <em class="emphasis">The Walking Dead</em> and <em class="emphasis">Game of Thrones</em>, and 10 watch <em class="emphasis">The Blacklist</em> and <em class="emphasis">Game of Thrones</em>. There are 8 students who watch all three shows. How many students surveyed watched at least one of the shows?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-98" id="answer-98"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-98"><div class="answer solution-like"><p id="p-2409">\(39\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-175" id="solution-175"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-175"><div class="solution solution-like"><p id="p-2410">39 students. Use Venn diagram or PIE: \(28 + 19 + 24 - 16 - 14 - 10 + 8 = 39\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="QZC"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-2414">In a recent survey, 30 students reported whether they liked their potatoes Mashed, French-fried, or Twice-baked. 15 liked them mashed, 20 liked French fries, and 9 liked twice baked potatoes. Additionally, 12 students liked both mashed and fried potatoes, 5 liked French fries and twice baked potatoes, 6 liked mashed and baked, and 3 liked all three styles. How many students <em class="emphasis">hate</em> potatoes? Explain why your answer is correct.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-99" id="answer-99"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-99"><div class="answer solution-like"><p id="p-2416">\(6\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-177" id="solution-177"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-177"><div class="solution solution-like"><p id="p-2417">6 students <em class="emphasis">don’t</em> like potatoes.</p></div></div>
+</div></article><article class="exercise exercise-like" id="xgL"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-2422">For how many \(n \in \{1,2, \ldots, 500\}\) is \(n\) a multiple of one or more of 5, 6, or 7?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-64" id="hint-64"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-64"><div class="hint solution-like"><p id="p-2424">To find out how many numbers are divisible by 6 and 7, for example, take \(500/42\) and round down.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-100" id="answer-100"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-100"><div class="answer solution-like"><p id="p-2425">\(215\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-179" id="solution-179"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-179"><div class="solution solution-like"><p id="p-2426">215 values of \(n\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="dnU"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="p-2429">How many positive integers less than 1000 are multiples of 3, 5, or 7? Explain your answer using the Principle of Inclusion/Exclusion.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-101" id="answer-101"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-101"><div class="answer solution-like"><p id="p-2431">\(542\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="Jvd"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="yfa">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be sets.</p>
+<ol class="lower-alpha">
+<li id="LUk">Find \(\card{(A \cup C)\setminus B}\) provided \(\card{A} = 50\text{,}\) \(\card{B} = 45\text{,}\) \(\card{C} = 40\text{,}\) \(\card{A\cap B} = 20\text{,}\) \(\card{A \cap C} = 15\text{,}\) \(\card{B \cap C} = 23\text{,}\) and \(\card{A \cap B \cap C} = 12\text{.}\)</li>
+<li id="sbt">Describe a set in terms of \(A\text{,}\) \(B\text{,}\) and \(C\) with cardinality 26.</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-Lkq" id="Lkq"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Lkq"><div class="hint solution-like"><p id="rFU">For part (a) you could use the formula for PIE, but for part (b) you might be better off drawing a Venn diagram.</p></div></div>
+</div></article><article class="exercise exercise-like" id="pCm"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<p id="p-2447">Consider all 5 letter “words” made from the letters \(a\) through \(h\text{.}\) (Recall, words are just strings of letters, not necessarily actual English words.)</p>
+<ol class="lower-alpha">
+<li id="li-1164"><p id="p-2448">How many of these words are there total?</p></li>
+<li id="li-1165"><p id="p-2450">How many of these words contain no repeated letters?</p></li>
+<li id="li-1166"><p id="p-2452">How many of these words start with the sub-word “aha”?</p></li>
+<li id="li-1167"><p id="p-2454">How many of these words either start with “aha” or end with “bah” or both?</p></li>
+<li id="li-1168"><p id="p-2456">How many of the words containing no repeats also do not contain the sub-word “bad”?</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-102" id="answer-102"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-102"><div class="answer solution-like"><p id="p-2458">\(32768\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-103" id="answer-103"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-103"><div class="answer solution-like"><p id="p-2459">\(6720\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-104" id="answer-104"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-104"><div class="answer solution-like"><p id="p-2460">\(64\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-105" id="answer-105"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-105"><div class="answer solution-like"><p id="p-2461">\(128\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-106" id="answer-106"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-106"><div class="answer solution-like"><p id="p-2462">\(6660\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-181" id="solution-181"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-181"><div class="solution solution-like"><ol id="p-2463" class="lower-alpha">
+<li id="li-1169"><p id="p-2464">\(8^5 = 32768\) words.</p></li>
+<li id="li-1170"><p id="p-2465">\(8\cdot 7\cdot 6\cdot 5\cdot 4 = 6720\) words.</p></li>
+<li id="li-1171"><p id="p-2466">\(8 \cdot 8 =64\) words.</p></li>
+<li id="li-1172"><p id="p-2467">\(64 + 64 - 0 = 128\) words.</p></li>
+<li id="li-1173"><p id="p-2468">\((8\cdot 7\cdot 6\cdot 5\cdot 4) - 3\cdot (5\cdot 4) = 6660\) words.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="VJv"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<p id="Kts">For how many three digit numbers (100 to 999) is the <em class="emphasis">sum of the digits</em> even? (For example, \(343\) has an even sum of digits: \(3+4+3 = 10\) which is even.) Find the answer and explain why it is correct in at least two <em class="emphasis">different</em> ways.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-XyI" id="XyI"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-XyI"><div class="hint solution-like"><p id="XNd">You could consider cases.  For example, any number of the form ODD-ODD-EVEN will have an even sum.  Alternatively, how many three digit numbers have the sum of their digits even if the first two digits are 54?  What if the first two digits are 19?</p></div></div>
+</div></article><article class="exercise exercise-like" id="BQE"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<p id="qAB">The number 735000 factors as \(2^3 \cdot 3 \cdot 5^4 \cdot 7^2\text{.}\) How many divisors does it have? Explain your answer using the multiplicative principle.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-DFR" id="DFR"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-DFR"><div class="hint solution-like"><p id="DUm">For a simpler example, there are 4 divisors of \(6 = 2\cdot 3\text{.}\)  They are \(1 = 2^0\cdot 3^0\text{,}\) \(2 = 2^1\cdot 3^0\text{,}\) \(3 = 2^0\cdot 3^1\) and \(6 = 2^1\cdot 3^1\text{.}\)</p></div></div>
+</div></article></section></section></div></main>
+</div>
+<!--Start: Google Universal code-->
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-66485406-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!--End: Google Universal code-->
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.13/login.js"></script>
+</body>
+</html>

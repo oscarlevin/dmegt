@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-01-07T16:47:39-07:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution solution-like">
+<h6 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.5.19.1</span><span class="period">.</span>
+</h6>
+<p>The proof will by by strong induction.</p>
+<article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p>Let \(P(n)\) be the statement “\(n\) is either a power of 2 or can be written as the sum of distinct powers of 2.” We will show that \(P(n)\) is true for all \(n \ge 1\text{.}\)</p>
+<p>Base case: \(1 = 2^0\) is a power of 2, so \(P(1)\) is true.</p>
+<p>Inductive case: Suppose \(P(k)\) is true for all \(k \lt n\text{.}\) Now if \(n\) is a power of 2, we are done. If not, let \(2^x\) be the largest power of 2 strictly less than \(n\text{.}\) Consider \(n - 2^x\text{,}\) which is a smaller number, in fact smaller than both \(n\) and \(2^x\text{.}\) Thus \(n-2^x\) is either a power of 2 or can be written as the sum of distinct powers of 2, but none of them are going to be \(2^x\text{,}\) so the together with \(2^x\) we have written \(n\) as the sum of distinct powers of 2.</p>
+<p>Therefore, by the principle of (strong) mathematical induction, \(P(n)\) is true for all \(n \ge 1\text{.}\)</p></article>
+</div>
+<span class="incontext"><a href="sec_seq-induction.html#DBA">in-context</a></span>
+</body>
+</html>

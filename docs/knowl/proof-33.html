@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-01-07T16:47:35-07:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="proof"><h6 class="heading"><span class="type">Proof</span></h6>
+<p>Let \(P(n)\) be the statement “it is possible to make exactly \(n\) cents of postage using 5-cent and 8-cent stamps.” We will show \(P(n)\) is true for all \(n \ge 28\text{.}\)</p>
+<p>First, we show that \(P(28)\) is true: \(28 = 4 \cdot 5+ 1\cdot 8\text{,}\) so we can make \(28\) cents using four 5-cent stamps and one 8-cent stamp.</p>
+<p>Now suppose \(P(k)\) is true for some arbitrary \(k \ge 28\text{.}\) Then it is possible to make \(k\) cents using 5-cent and 8-cent stamps. Note that since \(k \ge 28\text{,}\) it cannot be that we use fewer than three 5-cent stamps <em class="emphasis">and</em> fewer than three 8-cent stamps: using two of each would give only 26 cents. Now if we have made \(k\) cents using at least three 5-cent stamps, replace three 5-cent stamps by two 8-cent stamps. This replaces 15 cents of postage with 16 cents, moving from a total of \(k\) cents to \(k+1\) cents. Thus \(P(k+1)\) is true. On the other hand, if we have made \(k\) cents using at least three 8-cent stamps, then we can replace three 8-cent stamps with five 5-cent stamps, moving from 24 cents to 25 cents, giving a total of \(k+1\) cents of postage. So in this case as well \(P(k+1)\) is true.</p>
+<p>Therefore, by the principle of mathematical induction, \(P(n)\) is true for all \(n \ge 28\text{.}\)</p></article><span class="incontext"><a href="sec_seq-induction.html#GHo">in-context</a></span>
+</body>
+</html>

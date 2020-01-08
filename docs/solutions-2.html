@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-01-07T16:46:14-07:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Selected Solutions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-dev.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-dev.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script>(function() {
+  var cx = '000445521324161818100:qhc2ahxtur8';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.13;
+</script>
+</head>
+<body id="levin-DMOI" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://discrete.openmathbooks.org/dmoi3.html" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="dmoi.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">early Graph Theory</span></a></h1>
+<p class="byline">Oscar Levin</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="solutions-1.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="backmatter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="appendix-1.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="solutions-1.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="backmatter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="appendix-1.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="RGW"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="xOf">Preface</a></li>
+<li><a href="preface-2.html" data-scroll="dVo">How to use this book</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_graphtheory.html" data-scroll="gBz"><span class="codenumber">0</span> <span class="title">Graphs and other Discrete Structures</span></a><ul>
+<li><a href="sec_intro-intro.html" data-scroll="hPw">What is Discrete Mathematics?</a></li>
+<li><a href="sec_gt-intro.html" data-scroll="HLu">Graph Theory</a></li>
+<li><a href="sec_intro-sets.html" data-scroll="ltW">Sets</a></li>
+<li><a href="sec_intro-functions.html" data-scroll="CkQ">Functions</a></li>
+<li><a href="sec_gt-carefully.html" data-scroll="HLu">Graph Done Right</a></li>
+<li><a href="sec_coloring.html" data-scroll="qyO">Coloring</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logic.html" data-scroll="wur"><span class="codenumber">1</span> <span class="title">Symbolic Logic and Proofs</span></a><ul>
+<li><a href="sec_intro-statements.html" data-scroll="QDd">Mathematical Statements</a></li>
+<li><a href="sec_propositional.html" data-scroll="XMq">Propositional Logic</a></li>
+<li><a href="sec_logic-proofs.html" data-scroll="lnf">Proofs</a></li>
+<li><a href="sec_paths.html" data-scroll="tPg">Euler Paths and Circuits</a></li>
+<li><a href="sec_trees.html" data-scroll="gor">Trees</a></li>
+<li><a href="sec_logic-induction.html" data-scroll="lnf">Mathematical Induction</a></li>
+<li><a href="sec_planar.html" data-scroll="ttH">Planar Graphs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_counting.html" data-scroll="raE"><span class="codenumber">2</span> <span class="title">Counting</span></a><ul>
+<li><a href="sec_counting-pascal.html" data-scroll="sJa">Pascal's Triangle</a></li>
+<li><a href="sec_counting-addmult.html" data-scroll="sJa">Additive and Multiplicative Principles</a></li>
+<li><a href="sec_counting-binom.html" data-scroll="vZs">Binomial Coefficients</a></li>
+<li><a href="sec_counting-combperm.html" data-scroll="yda">Combinations and Permutations</a></li>
+<li><a href="sec_comb-proofs.html" data-scroll="SUg">Combinatorial Proofs</a></li>
+<li><a href="sec_stars-and-bars.html" data-scroll="qkt">Stars and Bars</a></li>
+<li><a href="sec_advPIE.html" data-scroll="HKU">Advanced Counting Using PIE</a></li>
+<li><a href="sec_count-conc.html" data-scroll="Bmb">Chapter Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_sequences.html" data-scroll="KxW"><span class="codenumber">3</span> <span class="title">Sequences</span></a><ul>
+<li><a href="sec_seq_intro.html" data-scroll="tgm">Describing Sequences</a></li>
+<li><a href="sec_seq-arithgeom.html" data-scroll="lIR">Arithmetic and Geometric Sequences</a></li>
+<li><a href="sec_polyfit.html" data-scroll="ylR">Polynomial Fitting</a></li>
+<li><a href="sec_recurrence.html" data-scroll="bcV">Solving Recurrence Relations</a></li>
+<li><a href="sec_seq-induction.html" data-scroll="Prg">Induction</a></li>
+<li><a href="sec_addtops-genfun.html" data-scroll="XaJ">Generating Functions</a></li>
+<li><a href="sec_sequences-conc.html" data-scroll="YaY">Chapter Summary</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="mqL"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="SxU"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link active"><a href="solutions-2.html" data-scroll="yFd"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="GjC"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="solutions" id="yFd"><h2 class="heading hide-type">
+<span class="type">Solutions</span> <span class="codenumber">B</span> <span class="title">Selected Solutions</span>
+</h2>
+<a href="solutions-2.html" class="permalink">¶</a><section class="chapter"><h3 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">0</span> <span class="title">Graphs and other Discrete Structures</span>
+</h3>
+<a href="ch_graphtheory.html" class="permalink">¶</a></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">0.2</span> <span class="title">Graph Theory</span>
+</h4>
+<a href="sec_gt-intro.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h5>
+<a href="sec_gt-intro.html#QMu" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.2.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-8-hidden.html" title="Solution 0.2.1.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.2.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-9-hidden.html" title="Solution 0.2.2.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.2.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-10-hidden.html" title="Solution 0.2.4.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.2.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-11-hidden.html" title="Solution 0.2.9.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.2.10<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-12-hidden.html" title="Solution 0.2.10.1"><span class="type">Solution</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">0.3</span> <span class="title">Sets</span>
+</h4>
+<a href="sec_intro-sets.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h5>
+<a href="sec_intro-sets.html#DAA" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.3.1<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.3.2<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.3.3<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.3.4<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.3.5<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.3.6<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.3.7<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.3.8<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.3.9<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.3.11<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-38-hidden.html" title="Solution 0.3.11.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.3.12<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-39-hidden.html" title="Solution 0.3.12.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.3.13<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-40-hidden.html" title="Solution 0.3.13.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.3.15<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-41-hidden.html" title="Solution 0.3.15.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.3.17<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-42-hidden.html" title="Solution 0.3.17.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.3.20<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-43-hidden.html" title="Solution 0.3.20.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.3.28<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-44-hidden.html" title="Solution 0.3.28.1"><span class="type">Solution</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">0.4</span> <span class="title">Functions</span>
+</h4>
+<a href="sec_intro-functions.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h5>
+<a href="sec_intro-functions.html#XHz" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.4.1<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.4.2<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.4.5<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.4.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-59-hidden.html" title="Solution 0.4.7.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.4.9<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.4.10<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.4.12<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-64-hidden.html" title="Solution 0.4.12.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.4.13<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-65-hidden.html" title="Solution 0.4.13.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.4.16<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-66-hidden.html" title="Solution 0.4.16.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.4.17<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-67-hidden.html" title="Solution 0.4.17.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.4.21<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-68-hidden.html" title="Solution 0.4.21.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.4.22<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-69-hidden.html" title="Solution 0.4.22.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.4.24<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-70-hidden.html" title="Solution 0.4.24.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.4.25<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-71-hidden.html" title="Solution 0.4.25.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.4.26<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-72-hidden.html" title="Solution 0.4.26.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.4.27<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-73-hidden.html" title="Solution 0.4.27.1"><span class="type">Solution</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">0.6</span> <span class="title">Coloring</span>
+</h4>
+<a href="sec_coloring.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h5>
+<a href="sec_coloring.html#MxN" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.6.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-77-hidden.html" title="Solution 0.6.1.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.6.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-78-hidden.html" title="Solution 0.6.2.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.6.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-79-hidden.html" title="Solution 0.6.3.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.6.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-80-hidden.html" title="Solution 0.6.5.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.6.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-81-hidden.html" title="Solution 0.6.9.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.6.12<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-82-hidden.html" title="Solution 0.6.12.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">0.6.13<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-83-hidden.html" title="Solution 0.6.13.1"><span class="type">Solution</span></a></div></article></section><section class="chapter"><h3 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">1</span> <span class="title">Symbolic Logic and Proofs</span>
+</h3>
+<a href="ch_logic.html" class="permalink">¶</a></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Mathematical Statements</span>
+</h4>
+<a href="sec_intro-statements.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h5>
+<a href="sec_intro-statements.html#iCD" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.1.1<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.1.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-92-hidden.html" title="Solution 1.1.3.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.1.4<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.1.5<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.1.6<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.1.7<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.1.9<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.1.10<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-103-hidden.html" title="Solution 1.1.10.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.1.12<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.1.14<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.1.15<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.1.16<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-110-hidden.html" title="Solution 1.1.16.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.1.17<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-111-hidden.html" title="Solution 1.1.17.1"><span class="type">Solution</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Propositional Logic</span>
+</h4>
+<a href="sec_propositional.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h5>
+<a href="sec_propositional.html#Shv" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-120-hidden.html" title="Solution 1.2.1.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-121-hidden.html" title="Solution 1.2.2.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-122-hidden.html" title="Solution 1.2.3.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-123-hidden.html" title="Solution 1.2.6.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-124-hidden.html" title="Solution 1.2.8.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.12<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-125-hidden.html" title="Solution 1.2.12.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.16<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-126-hidden.html" title="Solution 1.2.16.1"><span class="type">Solution</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Proofs</span>
+</h4>
+<a href="sec_logic-proofs.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h5>
+<a href="sec_logic-proofs.html#Fqn" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.3.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-137-hidden.html" title="Solution 1.3.1.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.3.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-138-hidden.html" title="Solution 1.3.2.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.3.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-139-hidden.html" title="Solution 1.3.3.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.3.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-140-hidden.html" title="Solution 1.3.4.1"><span class="type">Solution</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">Euler Paths and Circuits</span>
+</h4>
+<a href="sec_paths.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h5>
+<a href="sec_paths.html#wMz" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.4.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-142-hidden.html" title="Solution 1.4.1.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.4.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-143-hidden.html" title="Solution 1.4.2.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.4.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-144-hidden.html" title="Solution 1.4.8.1"><span class="type">Solution</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.5</span> <span class="title">Trees</span>
+</h4>
+<a href="sec_trees.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h5>
+<a href="sec_trees.html#iQl" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-147-hidden.html" title="Solution 1.5.1.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-148-hidden.html" title="Solution 1.5.2.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-149-hidden.html" title="Solution 1.5.6.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.12<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-150-hidden.html" title="Solution 1.5.12.1"><span class="type">Solution</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.7</span> <span class="title">Planar Graphs</span>
+</h4>
+<a href="sec_planar.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h5>
+<a href="sec_planar.html#Pey" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.7.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-152-hidden.html" title="Solution 1.7.1.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.7.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-153-hidden.html" title="Solution 1.7.2.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.7.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-154-hidden.html" title="Solution 1.7.6.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.7.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-155-hidden.html" title="Solution 1.7.8.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.7.12<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-156-hidden.html" title="Solution 1.7.12.1"><span class="type">Solution</span></a></div></article></section><section class="chapter"><h3 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">2</span> <span class="title">Counting</span>
+</h3>
+<a href="ch_counting.html" class="permalink">¶</a></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Additive and Multiplicative Principles</span>
+</h4>
+<a href="sec_counting-addmult.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h5>
+<a href="sec_counting-addmult.html#WHK" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.1<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.2<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-169-hidden.html" title="Solution 2.2.3.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.5<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.6<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.7<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.8<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.9<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.12<span class="period">.</span></span></h6></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Binomial Coefficients</span>
+</h4>
+<a href="sec_counting-binom.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h5>
+<a href="sec_counting-binom.html#uWm" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.1<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.2<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.3<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.4<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.5<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.6<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.9<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.10<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.11<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-198-hidden.html" title="Solution 2.3.11.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.12<span class="period">.</span></span></h6></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Combinations and Permutations</span>
+</h4>
+<a href="sec_counting-combperm.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h5>
+<a href="sec_counting-combperm.html#jkK" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.1<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.2<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.3<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.5<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-214-hidden.html" title="Solution 2.4.6.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.7<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.8<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.9<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.10<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.11<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.12<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.13<span class="period">.</span></span></h6></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.5</span> <span class="title">Combinatorial Proofs</span>
+</h4>
+<a href="sec_comb-proofs.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h5>
+<a href="sec_comb-proofs.html#lYz" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.5.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-236-hidden.html" title="Solution 2.5.1.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.5.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-237-hidden.html" title="Solution 2.5.5.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.5.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-238-hidden.html" title="Solution 2.5.7.1"><span class="type">Solution</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.6</span> <span class="title">Stars and Bars</span>
+</h4>
+<a href="sec_stars-and-bars.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h5>
+<a href="sec_stars-and-bars.html#zVa" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.1<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.2<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-246-hidden.html" title="Solution 2.6.3.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.4<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.5<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.6<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.7<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.8<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.10<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.11<span class="period">.</span></span></h6></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.7</span> <span class="title">Advanced Counting Using PIE</span>
+</h4>
+<a href="sec_advPIE.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h5>
+<a href="sec_advPIE.html#nUq" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.1<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.3<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.4<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.5<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-280-hidden.html" title="Solution 2.7.7.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.8<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.9<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.11<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.12<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.13<span class="period">.</span></span></h6></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.8</span> <span class="title">Chapter Summary</span>
+</h4>
+<a href="sec_count-conc.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Chapter Review</span>
+</h5>
+<a href="sec_count-conc.html#Ejh" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.1<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-293-hidden.html" title="Solution 2.8.2.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.3<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-296-hidden.html" title="Solution 2.8.4.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.5<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.6<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.7<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.8<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.9<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.10<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.11<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.12<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.13<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.14<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.15<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-317-hidden.html" title="Solution 2.8.15.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.16<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.17<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.18<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.19<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.20<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-326-hidden.html" title="Solution 2.8.20.1"><span class="type">Solution</span></a></div></article></section><section class="chapter"><h3 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">3</span> <span class="title">Sequences</span>
+</h3>
+<a href="ch_sequences.html" class="permalink">¶</a></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">Describing Sequences</span>
+</h4>
+<a href="sec_seq_intro.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h5>
+<a href="sec_seq_intro.html#vPK" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.1.1<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.1.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-334-hidden.html" title="Solution 3.1.3.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.1.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-335-hidden.html" title="Solution 3.1.4.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.1.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-336-hidden.html" title="Solution 3.1.5.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.1.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-337-hidden.html" title="Solution 3.1.6.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.1.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-338-hidden.html" title="Solution 3.1.7.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.1.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-339-hidden.html" title="Solution 3.1.8.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.1.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-340-hidden.html" title="Solution 3.1.9.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.1.13<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-341-hidden.html" title="Solution 3.1.13.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.1.14<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-342-hidden.html" title="Solution 3.1.14.1"><span class="type">Solution</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">Arithmetic and Geometric Sequences</span>
+</h4>
+<a href="sec_seq-arithgeom.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h5>
+<a href="sec_seq-arithgeom.html#EGG" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.2.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-351-hidden.html" title="Solution 3.2.1.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.2.2<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.2.3<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.2.4<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.2.5<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.2.6<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.2.7<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.2.8<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.2.9<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.2.11<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-368-hidden.html" title="Solution 3.2.11.1"><span class="type">Solution</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">Polynomial Fitting</span>
+</h4>
+<a href="sec_polyfit.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h5>
+<a href="sec_polyfit.html#FTD" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.1<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.2<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.3<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.4<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-381-hidden.html" title="Solution 3.3.6.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-382-hidden.html" title="Solution 3.3.7.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.8<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-385-hidden.html" title="Solution 3.3.9.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.10<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-386-hidden.html" title="Solution 3.3.10.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.11<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-387-hidden.html" title="Solution 3.3.11.1"><span class="type">Solution</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.4</span> <span class="title">Solving Recurrence Relations</span>
+</h4>
+<a href="sec_recurrence.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h5>
+<a href="sec_recurrence.html#bQc" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.4.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-395-hidden.html" title="Solution 3.4.1.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.4.3<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.4.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-398-hidden.html" title="Solution 3.4.4.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.4.5<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.4.6<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.4.7<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.4.10<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-405-hidden.html" title="Solution 3.4.10.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.4.12<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-406-hidden.html" title="Solution 3.4.12.1"><span class="type">Solution</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.5</span> <span class="title">Induction</span>
+</h4>
+<a href="sec_seq-induction.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h5>
+<a href="sec_seq-induction.html#YsG" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.5.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-411-hidden.html" title="Solution 3.5.1.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.5.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-412-hidden.html" title="Solution 3.5.2.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.5.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-413-hidden.html" title="Solution 3.5.3.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.5.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-414-hidden.html" title="Solution 3.5.4.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.5.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-415-hidden.html" title="Solution 3.5.5.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.5.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-416-hidden.html" title="Solution 3.5.6.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.5.12<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-417-hidden.html" title="Solution 3.5.12.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.5.13<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-418-hidden.html" title="Solution 3.5.13.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.5.14<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-419-hidden.html" title="Solution 3.5.14.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.5.16<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-420-hidden.html" title="Solution 3.5.16.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.5.19<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-421-hidden.html" title="Solution 3.5.19.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.5.25<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-422-hidden.html" title="Solution 3.5.25.1"><span class="type">Solution</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.6</span> <span class="title">Generating Functions</span>
+</h4>
+<a href="sec_addtops-genfun.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h5>
+<a href="sec_addtops-genfun.html#iOL" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.6.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-429-hidden.html" title="Solution 3.6.1.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.6.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-430-hidden.html" title="Solution 3.6.2.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.6.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-431-hidden.html" title="Solution 3.6.4.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.6.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-432-hidden.html" title="Solution 3.6.5.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.6.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-433-hidden.html" title="Solution 3.6.6.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.6.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-434-hidden.html" title="Solution 3.6.7.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.6.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-435-hidden.html" title="Solution 3.6.8.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.6.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-436-hidden.html" title="Solution 3.6.9.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.6.12<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-437-hidden.html" title="Solution 3.6.12.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.6.13<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-438-hidden.html" title="Solution 3.6.13.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.6.15<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-439-hidden.html" title="Solution 3.6.15.1"><span class="type">Solution</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.7</span> <span class="title">Chapter Summary</span>
+</h4>
+<a href="sec_sequences-conc.html" class="permalink">¶</a></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Chapter Review</span>
+</h5>
+<a href="sec_sequences-conc.html#XPQ" class="permalink">¶</a><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.7.1<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.7.2<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.7.3<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.7.5<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.7.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-448-hidden.html" title="Solution 3.7.6.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.7.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-449-hidden.html" title="Solution 3.7.7.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.7.8<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.7.10<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.7.11<span class="period">.</span></span></h6></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.7.12<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-456-hidden.html" title="Solution 3.7.12.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.7.17<span class="period">.</span></span></h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-457-hidden.html" title="Solution 3.7.17.1"><span class="type">Solution</span></a></div></article></section></section></div></main>
+</div>
+<!--Start: Google Universal code-->
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-66485406-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!--End: Google Universal code-->
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.13/login.js"></script>
+</body>
+</html>

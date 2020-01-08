@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-01-07T16:47:36-07:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="proof"><h6 class="heading"><span class="type">Proof</span></h6>
+<p>Let \(P(n)\) be the statement \(n^2 \lt 2^n\text{.}\) We will prove \(P(n)\) is true for all integers \(n \ge 5\text{.}\)</p>
+<p>Base case: \(P(5)\) is the statement \(5^2 \lt 2^5\text{.}\) Since \(5^2 = 25\) and \(2^5 = 32\text{,}\) we see that \(P(5)\) is indeed true.</p>
+<p>Inductive case: Let \(k \ge 5\) be an arbitrary integer. Assume, for induction, that \(P(k)\) is true. That is, assume \(k^2 \lt  2^k\text{.}\) We will prove that \(P(k+1)\) is true, i.e., \((k+1)^2 \lt  2^{k+1}\text{.}\) To prove such an inequality, start with the left-hand side and work towards the right-hand side:</p>
+<div class="displaymath">
+\begin{align*}
+(k+1)^2 \amp = k^2 + 2k + 1 \amp\\
+\amp \lt 2^k + 2k + 1 \amp \ldots\text{by the inductive hypothesis.}\\
+\amp \lt 2^k + 2^k \amp \ldots\text{ since } 2k + 1 \lt  2^k \text{ for }k \ge 5.\\
+\amp = 2^{k+1}. \amp
+\end{align*}
+</div>
+<p>Following the equalities and inequalities through, we get \((k+1)^2 \lt 2^{k+1}\text{,}\) in other words, \(P(k+1)\text{.}\) Therefore by the principle of mathematical induction, \(P(n)\) is true for all \(n \ge 5\text{.}\)</p></article><span class="incontext"><a href="sec_seq-induction.html#OlN">in-context</a></span>
+</body>
+</html>
