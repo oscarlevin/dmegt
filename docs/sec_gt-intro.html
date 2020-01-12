@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T09:54:03-07:00    *-->
+<!--*    on 2020-01-12T15:59:48-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -9,7 +9,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Graph Theory</title>
+<title>Graphs</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/x-mathjax-config">
@@ -124,10 +124,10 @@ var js_version = 0.13;
 <li class="link">
 <a href="ch_graphtheory.html" data-scroll="gBz"><span class="codenumber">1</span> <span class="title">Graphs and other Discrete Structures</span></a><ul>
 <li><a href="sec_intro-intro.html" data-scroll="hPw">What is Discrete Mathematics?</a></li>
-<li><a href="sec_gt-intro.html" data-scroll="HLu" class="active">Graph Theory</a></li>
+<li><a href="sec_gt-intro.html" data-scroll="HLu" class="active">Graphs</a></li>
 <li><a href="sec_intro-sets.html" data-scroll="ltW">Sets</a></li>
 <li><a href="sec_intro-functions.html" data-scroll="CkQ">Functions</a></li>
-<li><a href="sec_gt-carefully.html" data-scroll="HLu">Graph Done Right</a></li>
+<li><a href="sec_gt-carefully.html" data-scroll="HLu">Graphs Done Right</a></li>
 <li><a href="sec_coloring.html" data-scroll="qyO">Coloring</a></li>
 </ul>
 </li>
@@ -174,7 +174,7 @@ var js_version = 0.13;
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="HLu"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Graph Theory</span>
+<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Graphs</span>
 </h2>
 <a href="sec_gt-intro.html" class="permalink">¶</a><section class="introduction" id="xzK"><article class="project-like" id="dGT"><h6 class="heading">
 <span class="type">Investigate!</span> </h6>
@@ -212,7 +212,7 @@ var js_version = 0.13;
 <span class="type">Question</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
 </h6>
 <p id="p-57">How many colors do you need to color the states in the map below so that bordering states are colored differently?</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/southwest-map.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><p id="p-58">We can create a graph from the map above as follows: represent each state with a vertex, and make two vertices adjacent (i.e., put an edge between them) if the states the represent share a border.  Now coloring the map means coloring the vertices in such a way that adjacent vertices get different colors.  The smallest number of colors needed to color vertices in this way is called the <dfn class="terminology">chromatic number</dfn> of the graph.  Interestingly, knowing that a graph is planar limits what the chromatic number can be, and the graph we get from a map will generally be planar.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/southwest-map.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><p id="p-58">We can create a graph from the map above as follows: represent each state with a vertex, and make two vertices adjacent (i.e., put an edge between them) if the states the represent share a border.  Now coloring the map means coloring the vertices in such a way that adjacent vertices get different colors.  The smallest number of colors needed to color vertices in this way is called the <dfn class="terminology">chromatic number</dfn> of the graph.  Interestingly, knowing that a graph is planar limits what the chromatic number can be, and the graph we get from a map will generally be planar.</p>
 <p id="p-59">Let's consider another real world application of graphs.</p>
 <article class="question example-like" id="question-2"><h6 class="heading">
 <span class="type">Question</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
@@ -268,7 +268,7 @@ var js_version = 0.13;
 <span class="type">Question</span><span class="space"> </span><span class="codenumber">1.2.9</span><span class="period">.</span>
 </h6>
 <p id="p-77">How many different graphs are there with four vertices?</p></article><p id="p-78">At first, this might seem like a question purely about graphs, but it is easy enough to see how this would apply to a real world situation: You want to design a network using four routers as access points.  You could connect some or all pairs of routers using wired connections, or wireless connections.  How many different configurations are possible.</p>
-<p id="p-79">To fully answer <a class="xref" data-knowl="./knowl/ques-four-vertex-count.html" title="Question 1.2.9">Question 1.2.9</a>, we will first need to be more careful about how we define graphs and what it means for two graphs to be “different.”  We will do this in <a href="sec_gt-carefully.html" class="internal" title="Section 1.5: Graph Done Right">Section 1.5</a> after we consider sets and functions, the tools needed to give these careful definitions.</p></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<p id="p-79">To fully answer <a class="xref" data-knowl="./knowl/ques-four-vertex-count.html" title="Question 1.2.9">Question 1.2.9</a>, we will first need to be more careful about how we define graphs and what it means for two graphs to be “different.”  We will do this in <a href="sec_gt-carefully.html" class="internal" title="Section 1.5: Graphs Done Right">Section 1.5</a> after we consider sets and functions, the tools needed to give these careful definitions.</p></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Types of graphs</span>
 </h3>
 <a href="sec_gt-intro.html#subsection-2" class="permalink">¶</a><p id="p-80">Let's agree upon some more common terminology in discussing graphs and, in particular, particular types of graphs.</p>

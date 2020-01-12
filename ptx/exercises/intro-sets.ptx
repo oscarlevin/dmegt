@@ -902,7 +902,6 @@
             Let <m>A = \{1,2,\ldots, 10\}</m>.
             How many subsets of <m>A</m> contain exactly one element (i.e., how many
             <term>singleton</term> subsets are there)?
-            <idx><h>singleton set</h></idx>
           </p>
 
           <p permid="Mks">
@@ -913,7 +912,6 @@
             How many <term>doubleton</term> subsets
             (containing exactly two elements)
             are there?
-            <idx><h>doubleton set</h></idx>
           </p>
 
           <p permid="YyK">

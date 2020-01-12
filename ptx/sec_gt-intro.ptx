@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_gt-intro" permid="HLu">
-<title>Graph Theory</title>
+<title>Graphs</title>
 <introduction permid="xzK">
   <investigation permid="dGT">
     <p permid="uFe">
@@ -192,12 +192,12 @@
         <p>
           How many colors do you need to color the states in the map below so that bordering states are colored differently?
         </p>
-        <sidebyside width="40%" margins="auto" permid="cFn">
+        <sidebyside width="35%" margins="auto" permid="cFn">
 
           <image permid="uXm" xml:id="southwest-map">
 
             <latex-image> \begin{tikzpicture}[scale=.25]
-          \USA[every state={draw=white, line width = .7pt, fill=white}, CA={fill=gray}, NV={fill=gray},NM={fill=gray},AZ={fill=gray},UT={fill=gray},CO={fill=gray},TX={fill=gray},KS={fill=gray},OK={fill=gray}];
+          \USA[every state={draw=white, line width = .7pt, fill=white}, WY={fill=gray}, ID={fill=gray}, OR={fill=gray},CA={fill=gray}, NV={fill=gray},NM={fill=gray},AZ={fill=gray},UT={fill=gray},CO={fill=gray},TX={fill=gray},KS={fill=gray},OK={fill=gray}];
           \end{tikzpicture}
             </latex-image>
           </image>
