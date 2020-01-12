@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:17:04-07:00    *-->
+<!--*    on 2020-01-12T09:54:45-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,10 +12,26 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>The problem with trying a direct proof is that it will be hard to separate \(a\) and \(b\) from knowing something about \(a+b\text{.}\) On the other hand, if we know something about \(a\) and \(b\) separately, then combining them might give us information about \(a+b\text{.}\) The contrapositive of the statement we are trying to prove is: for all integers \(a\) and \(b\text{,}\) if \(a\) and \(b\) are even, then \(a+b\) is even. Thus our proof will have the following format:</p>
-<p>Let \(a\) and \(b\) be integers. Assume that \(a\) and \(b\) are both even. la la la. Therefore \(a+b\) is even.</p>
-<p>Here is a complete proof:</p>
+<p>It is hard to know where to start this, because we don't know much of anything about \(n\text{.}\) We might be able to prove that \(n^3 - n\) is even if we knew that \(n\) was even. In fact, we could probably prove that \(n^3-n\) was even if \(n\) was odd. But since \(n\) must either be even or odd, this will be enough. Here's the proof.</p>
 <article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
-<p>Let \(a\) and \(b\) be integers. Assume that \(a\) and \(b\) are even. Then \(a = 2k\) and \(b = 2l\) for some integers \(k\) and \(l\text{.}\) Now \(a + b = 2k + 2l = 2(k+1)\text{.}\) Since \(k + l\) is an integer, we see that \(a + b\) is even, completing the proof.</p></article><p>Note that our assumption that \(a\) and \(b\) are even is really the negation of \(a\) or \(b\) is odd. We used De Morgan's law here.</p>
+<p>We consider two cases: if \(n\) is even or if \(n\) is odd.</p>
+<p>Case 1: \(n\) is even. Then \(n = 2k\) for some integer \(k\text{.}\) This give</p>
+<div class="displaymath">
+\begin{align*}
+n^3 - n \amp = 8k^3 - 2k\\
+\amp = 2(4k^2 - k)\text{,}
+\end{align*}
+</div>
+<p data-braille="continuation">and since \(4k^2 - k\) is an integer, this says that \(n^3-n\) is even.</p>
+<p>Case 2: \(n\) is odd. Then \(n = 2k+1\) for some integer \(k\text{.}\) This gives</p>
+<div class="displaymath">
+\begin{align*}
+n^3 - n \amp = (2k+1)^3 - (2k+1)\\
+\amp = 8k^3 + 6k^2 + 6k + 1 - 2k - 1\\
+\amp = 2(4k^3 + 3k^2 + 2k)\text{,}
+\end{align*}
+</div>
+<p data-braille="continuation">and since \(4k^3 + 3k^2 + 2k\) is an integer, we see that \(n^3 - n\) is even again.</p>
+<p>Since \(n^3 - n\) is even in both exhaustive cases, we see that \(n^3 - n\) is indeed always even.</p></article>
 </div></body>
 </html>

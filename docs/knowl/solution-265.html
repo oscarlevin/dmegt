@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:17:32-07:00    *-->
+<!--*    on 2020-01-12T09:55:15-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,15 +14,11 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.7.5.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.7.11.1</span><span class="period">.</span>
 </h6>
-<p>We are counting derangements on 5 elements. There are \(5!\) ways for the gentlemen to grab hats in any order—but many of these permutations will result in someone getting their own hat. So we subtract all the ways in which one or more of the men get their own hat. In other words, we subtract the non-derangements. Doing so requires PIE. Thus the answer is:</p>
-<div class="displaymath">
-\begin{equation*}
-5! - \left[{5 \choose 1}4! - {5 \choose 2}3! + {5 \choose 3}2! - {5 \choose 4}1! + {5 \choose 5}0!\right]\text{.}
-\end{equation*}
+<p>We saw in <a href="sec_counting-binom.html" class="internal" title="Section 3.3: Binomial Coefficients">Section 3.3</a> that the answer to both these questions is \(2^9\text{,}\) as we can say yes or no (or 0 or 1) to each of the 9 elements in the set (positions in the bit-string). But \(2^9\) also looks like the answer you get from counting functions. In fact, if you count all functions \(f: A \to B\) with \(|A| = 9\) and \(|B| = 2\text{,}\) this is exactly what you get.</p>
+<p>This makes sense! Let \(A = \{1,2,\ldots, 9\}\) and \(B = \{y, n\}\text{.}\) We are assigning each element of the set either a yes or a no. Or in the language of bit-strings, we would take the 9 positions in the bit string as our domain and the set \(\{0,1\}\) as the codomain.</p>
 </div>
-</div>
-<span class="incontext"><a href="sec_advPIE.html#mMK">in-context</a></span>
+<span class="incontext"><a href="sec_advPIE.html#XDM">in-context</a></span>
 </body>
 </html>

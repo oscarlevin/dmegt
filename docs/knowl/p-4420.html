@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:18:00-07:00    *-->
+<!--*    on 2020-01-12T09:55:46-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,11 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Think back to the magical candy machine at your neighborhood grocery store. Suppose that the first time a quarter is put into the machine 1 Skittle comes out. The second time, 4 Skittles, the third time 16 Skittles, the fourth time 64 Skittles, etc.</p>
-<ol class="lower-alpha">
-<li><p>Find both a recursive and closed formula for how many Skittles the <em class="emphasis">n</em>th customer gets.</p></li>
-<li><p>Check your solution for the closed formula by solving the recurrence relation using the Characteristic Root technique.</p></li>
-</ol>
-<span class="incontext"><a href="sec_recurrence.html#KRR">in-context</a></span>
+<p>Again, start by understanding the dynamics of the problem. What does increasing \(n\) do? Let's try with a few examples. If \(n = 1\text{,}\) then yes, \(6^1 - 1 = 5\) is a multiple of 5. What does incrementing \(n\) to 2 look like? We get \(6^2 - 1 = 35\text{,}\) which again is a multiple of 5. Next, \(n = 3\text{:}\) but instead of just finding \(6^3 - 1\text{,}\) what did the increase in \(n\) do? We will still subtract 1, but now we are multiplying by another 6 first. Viewed another way, we are multiplying a number which is one more than a multiple of 5 by 6 (because \(6^2 - 1\) is a multiple of 5, so \(6^2\) is one more than a multiple of 5). What do numbers which are one more than a multiple of 5 look like? They must have last digit 1 or 6. What happens when you multiply such a number by 6? Depends on the number, but in any case, the last digit of the new number must be a 6. And then if you subtract 1, you get last digit 5, so a multiple of 5.</p>
+<span class="incontext"><a href="sec_seq-induction.html#eeF">in-context</a></span>
 </body>
 </html>

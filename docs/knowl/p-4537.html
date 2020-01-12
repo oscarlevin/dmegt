@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:18:03-07:00    *-->
+<!--*    on 2020-01-12T09:55:49-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>As a final contrast between the two forms of induction, consider once more the stamp problem. Regular induction worked by showing how to increase postage by one cent (either replacing three 5-cent stamps with two 8-cent stamps, or three 8-cent stamps with five 5-cent stamps). We could give a slightly different proof using strong induction. First, we could show <em class="emphasis">five</em> base cases: it is possible to make 28, 29, 30, 31, and 32 cents (we would actually say how each of these is made). Now assume that it is possible to make \(k\) cents of postage for all \(k \lt n\) as long as \(k \ge 28\text{.}\) As long as \(n &gt; 32\text{,}\) this means in particular we can make \(k = n-5\) cents. Now add a 5-cent stamp to get make \(n\) cents.</p>
-<span class="incontext"><a href="sec_seq-induction.html#UZo">in-context</a></span>
+<p>Here's the idea: since every entry in Pascal's Triangle is the sum of the two entries above it, we can get the \(k+1\)st row by adding up all the pairs of entry from the \(k\)th row. But doing this uses each entry on the \(k\)th row twice. Thus each time we drop to the next row, we double the total. Of course, row 0 has sum \(1 = 2^0\) (the base case). Now try to make this precise with a formal induction proof. You will use the fact that \({n \choose k} = {n-1 \choose k-1} + {n-1 \choose k}\) for the inductive case.</p>
+<span class="incontext"><a href="sec_seq-induction.html#YOf">in-context</a></span>
 </body>
 </html>

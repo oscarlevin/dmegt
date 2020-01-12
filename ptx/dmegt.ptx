@@ -3,9 +3,9 @@
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
   <xi:include href="./bookinfo.ptx"/>
 
-  <book xml:id="dmoi" permid="xel">
+  <book xml:id="dmegt" permid="xel">
     <title>Discrete Mathematics</title>
-    <subtitle>early Graph Theory</subtitle>
+    <subtitle>Early Graph Theory</subtitle>
     <xi:include href="./frontmatter.ptx"/>
 
     <xi:include href="./ch_graphs-structures.ptx"/>

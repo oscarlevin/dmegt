@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:17:08-07:00    *-->
+<!--*    on 2020-01-12T09:54:50-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,14 +14,31 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.5.12.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.7.12.1</span><span class="period">.</span>
 </h6>
-<ol class="lower-alpha">
-<li><p>No, although there are graphs for which this is true. For example, \(K_4\) has a spanning tree that is a path (of three edges) and also a spanning tree that is a star (with center vertex of degree 3).</p></li>
-<li><p>Yes. For a fixed graph, we have a fixed number \(v\) of vertices. Any spanning tree of the graph will also have \(v\) vertices, and since it is a tree, must have \(v-1\) edges.</p></li>
-<li><p>No, although there are graph for which this is true (note that if all spanning trees are isomorphic, then all spanning trees will have the same number of leaves). Again, \(K_4\) is a counterexample. One spanning tree is a path, with only two leaves, another spanning tree is a star with 3 leaves.</p></li>
-</ol>
+<article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p>We know in any planar graph the number of faces \(f\) satisfies \(3f \le 2e\) since each face is bounded by at least three edges, but each edge borders two faces. Combine this with Euler's formula:</p>
+<div class="displaymath">
+\begin{equation*}
+v - e + f = 2
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec_trees.html#Lez">in-context</a></span>
+<div class="displaymath">
+\begin{equation*}
+v - e + \frac{2e}{3} \ge 2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+3v - e \ge 6
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+3v - 6 \ge e\text{.}
+\end{equation*}
+</div></article>
+</div>
+<span class="incontext"><a href="sec_planar.html#gyi">in-context</a></span>
 </body>
 </html>

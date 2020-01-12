@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:16:22-07:00    *-->
+<!--*    on 2020-01-12T09:54:07-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -96,7 +96,7 @@ var js_version = 0.13;
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="http://discrete.openmathbooks.org/dmoi3.html" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="dmoi.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">early Graph Theory</span></a></h1>
+<h1 class="heading"><a href="dmegt.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">Early Graph Theory</span></a></h1>
 <p class="byline">Oscar Levin</p>
 </div>
 </div></div>
@@ -377,8 +377,8 @@ b^2 = 2k^2\text{.}
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Proof by (counter) Example</span>
 </h3>
 <a href="sec_logic-proofs.html#JPP" class="permalink">¶</a><p id="sKA">It is almost NEVER okay to prove a statement with just an example. Certainly none of the statements proved above can be proved through an example. This is because in each of those cases we are trying to prove that something holds of all integers. We claim that \(n^2\) being even implies that \(n\) is even, <em class="emphasis">no matter what integer</em> \(n\) we pick. Showing that this works for \(n = 4\) is not even close to enough.</p>
-<p id="YRJ">This cannot be stressed enough. If you are trying to prove a statement of the form \(\forall x P(x)\text{,}\) you absolutely CANNOT prove this with an example.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-8" id="fn-8"><sup> 3 </sup></a></p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-8"><div class="fn">This is not to say that looking at examples is a waste of time. Doing so will often give you an idea of how to write a proof. But the examples do not belong in the proof.</div></div>
+<p id="YRJ">This cannot be stressed enough. If you are trying to prove a statement of the form \(\forall x P(x)\text{,}\) you absolutely CANNOT prove this with an example.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-7" id="fn-7"><sup> 3 </sup></a></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn">This is not to say that looking at examples is a waste of time. Doing so will often give you an idea of how to write a proof. But the examples do not belong in the proof.</div></div>
 <p id="EYS">However, existential statements can be proven this way. If we want to prove that there is an integer \(n\) such that \(n^2-n+41\) is not prime, all we need to do is find one. This might seem like a silly thing to want to prove until you try a few values for \(n\text{.}\)</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
@@ -389,7 +389,7 @@ b^2 = 2k^2\text{.}
 <td class="c m b1 r0 l0 t0 lines">4</td>
 <td class="c m b1 r0 l0 t0 lines">5</td>
 <td class="c m b1 r0 l0 t0 lines">6</td>
-<td class="c m b1 r0 l0 t0 lines">7</td>
+<td class="c m b1 r0 l0 t0 lines" data-braille="last-cell">7</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">\(n^2 - n + 41\)</td>
@@ -399,7 +399,7 @@ b^2 = 2k^2\text{.}
 <td class="c m b0 r0 l0 t0 lines">53</td>
 <td class="c m b0 r0 l0 t0 lines">61</td>
 <td class="c m b0 r0 l0 t0 lines">71</td>
-<td class="c m b0 r0 l0 t0 lines">83</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">83</td>
 </tr>
 </table></div></div></div>
 <p id="lgb">So far we have gotten only primes. You might be tempted to conjecture, “For all positive integers \(n\text{,}\) the number \(n^2 - n + 41\) is prime.” If you wanted to prove this, you would need to use a direct proof, a proof by contrapositive, or another style of proof, but certainly it is not enough to give even 7 examples. In fact, we can prove this conjecture is <em class="emphasis">false</em> by proving its negation: “There is a positive integer \(n\) such that \(n^2 - n + 41\) is not prime.” Since this is an existential statement, it suffices to show that there does indeed exist such a number.</p>
@@ -452,7 +452,7 @@ n^3 - n \amp = 8k^3 - 2k\\
 \amp = 2(4k^2 - k)\text{,}
 \end{align*}
 </div>
-<p>and since \(4k^2 - k\) is an integer, this says that \(n^3-n\) is even.</p>
+<p data-braille="continuation">and since \(4k^2 - k\) is an integer, this says that \(n^3-n\) is even.</p>
 <p id="fMo">Case 2: \(n\) is odd. Then \(n = 2k+1\) for some integer \(k\text{.}\) This gives</p>
 <div class="displaymath">
 \begin{align*}
@@ -461,7 +461,7 @@ n^3 - n \amp = (2k+1)^3 - (2k+1)\\
 \amp = 2(4k^3 + 3k^2 + 2k)\text{,}
 \end{align*}
 </div>
-<p>and since \(4k^3 + 3k^2 + 2k\) is an integer, we see that \(n^3 - n\) is even again.</p>
+<p data-braille="continuation">and since \(4k^3 + 3k^2 + 2k\) is an integer, we see that \(n^3 - n\) is even again.</p>
 <p id="LTx">Since \(n^3 - n\) is even in both exhaustive cases, we see that \(n^3 - n\) is indeed always even.</p></article>
 </div></div>
 </div></article></section><section class="exercises" id="Fqn"><h3 class="heading hide-type">
@@ -606,9 +606,9 @@ n^3 - n \amp = (2k+1)^3 - (2k+1)\\
 <a data-knowl="" class="id-ref original" data-refid="hk-WvC" id="WvC"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-WvC"><div class="hint solution-like"><p id="djd">This feels like the pigeonhole principle, although a bit more complicated.  At least, you could try to replicate the style of proof used by the pigeonhole principle.  How would the episodes need to be spaced out so that no two of your sixty were exactly 4 apart?</p></div></div>
 </div></article><article class="exercise exercise-like" id="rtM"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
 <p id="gND">Suppose you have an \(n\times n\) chessboard but your dog has eaten one of the corner squares. Can you still cover the remaining squares with dominoes? What needs to be true about \(n\text{?}\) Give necessary and sufficient conditions (that is, say exactly which values of \(n\) work and which do not work). Prove your answers.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-89.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise exercise-like" id="XAV"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-64.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise exercise-like" id="XAV"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
 <p id="MUM">What if your \(n\times n\) chessboard is missing two opposite corners? Prove that no matter what \(n\) is, you will not be able to cover the remaining squares with dominoes.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-90.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article></section></section></div></main>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-65.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article></section></section></div></main>
 </div>
 <div class="login-link"><span id="loginlogout" class="login">login</span></div>
 <script src="https://pretextbook.org/js/0.13/login.js"></script>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:16:48-07:00    *-->
+<!--*    on 2020-01-12T09:54:29-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,32 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(A = \{2, 4, 6, 8\}\text{.}\) Suppose \(B\) is a set with \(|B| = 5\text{.}\)</p>
-<ol class="lower-alpha">
-<li><p>What are the smallest and largest possible values of \(|A \cup B|\text{?}\) Explain.</p></li>
-<li><p>What are the smallest and largest possible values of \(|A \cap B|\text{?}\) Explain.</p></li>
-<li><p>What are the smallest and largest possible values of \(|A \times B|\text{?}\) Explain.</p></li>
+<ol class="decimal">
+<li>
+<p>The initial condition is \(f(0) = 3\text{.}\) To get \(f(n+1)\) we would double the number of snails in the terrarium the previous year, which is given by \(f(n)\text{.}\) Thus \(f(n+1) = 2f(n)\text{.}\) The full recursive definition contains both of these, and would be written,</p>
+<div class="displaymath">
+\begin{equation*}
+f(0) = 3;~ f(n+1) = 2f(n)\text{.}
+\end{equation*}
+</div>
+</li>
+<li>
+<p>We are told that on day 0 you can do 7 push-ups, so \(g(0) = 7\text{.}\) The number of push-ups you can do on day \(n+1\) is 2 more than the number you can do on day \(n\text{,}\) which is given by \(g(n)\text{.}\) Thus</p>
+<div class="displaymath">
+\begin{equation*}
+g(0) = 7;~ g(n+1) = g(n) + 2\text{.}
+\end{equation*}
+</div>
+</li>
+<li>
+<p>Here \(h(0) = 1\text{.}\) To get the recurrence relation, think about how you can get \(h(n+1) = (n+1)!\) from \(h(n) = n!\text{.}\) If you write out both of these as products, you see that \((n+1)!\) is just like \(n!\) except you have one more term in the product, an extra \(n+1\text{.}\) So we have,</p>
+<div class="displaymath">
+\begin{equation*}
+h(0) = 1;~ h(n+1) = (n+1)\cdot h(n)\text{.}
+\end{equation*}
+</div>
+</li>
 </ol>
-<span class="incontext"><a href="sec_intro-sets.html#diD">in-context</a></span>
+<span class="incontext"><a href="sec_intro-functions.html#tPt">in-context</a></span>
 </body>
 </html>

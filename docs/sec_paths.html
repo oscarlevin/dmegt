@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:16:22-07:00    *-->
+<!--*    on 2020-01-12T09:54:07-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -96,7 +96,7 @@ var js_version = 0.13;
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="http://discrete.openmathbooks.org/dmoi3.html" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="dmoi.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">early Graph Theory</span></a></h1>
+<h1 class="heading"><a href="dmegt.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">Early Graph Theory</span></a></h1>
 <p class="byline">Oscar Levin</p>
 </div>
 </div></div>
@@ -183,10 +183,10 @@ var js_version = 0.13;
 <li id="Uhd">
 <p id="YQW">Which of the graphs below have Euler paths? Which have Euler circuits?</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0.75%;margin-right:0.75%;">
-<div class="sbspanel" style="width:18.2741116751269%;justify-content:center;"><img src="images/image-91.svg" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:18.2741116751269%;justify-content:center;"><img src="images/image-92.svg" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:36.5482233502538%;justify-content:center;"><img src="images/image-93.svg" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:22.3350253807107%;justify-content:center;"><img src="images/image-94.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:18.2741116751269%;justify-content:center;"><img src="images/image-66.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:18.2741116751269%;justify-content:center;"><img src="images/image-67.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:36.5482233502538%;justify-content:center;"><img src="images/image-68.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:22.3350253807107%;justify-content:center;"><img src="images/image-69.svg" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
 </li>
 <li id="Aom"><p id="EYf">List the degrees of each vertex of the graphs above. Is there a connection between degrees and the existence of Euler paths and circuits?</p></li>
@@ -194,14 +194,14 @@ var js_version = 0.13;
 <li id="MCE"><p id="Rmx">What if every vertex of the graph has degree 2. Is there an Euler path? An Euler circuit? Draw some graphs.</p></li>
 <li id="sJN">
 <p id="xtG">Below is <em class="emphasis">part</em> of a graph. Even though you can only see some of the vertices, can you deduce whether the graph will have an Euler path or circuit?</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:23%;margin-right:23%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-95.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:23%;margin-right:23%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-70.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 </li>
 </ol></article><p id="OrR">If we start at a vertex and trace along edges to get to other vertices, we create a <em class="emphasis">walk</em> through the graph. More precisely, a <dfn class="terminology">walk</dfn> in a graph is a sequence of vertices such that every vertex in the sequence is adjacent to the vertices before and after it in the sequence. If the walk travels along every edge exactly once, then the walk is called an <dfn class="terminology">Euler path</dfn> (or <dfn class="terminology">Euler walk</dfn>). If, in addition, the starting and ending vertices are the same (so you trace along every edge exactly once and end up where you started), then the walk is called an <dfn class="terminology">Euler circuit</dfn> (or <dfn class="terminology">Euler tour</dfn>). Of course if a graph is not connected, there is no hope of finding such a path or circuit. For the rest of this section, assume all the graphs discussed are connected.</p>
 <p id="uza">The bridges of Königsberg problem is really a question about the existence of Euler paths. There will be a route that crosses every bridge exactly once if and only if the graph below has an Euler path:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:39%;margin-right:39%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-96.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:39%;margin-right:39%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-71.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 <p id="aGj">This graph is small enough that we could actually check every possible walk that does not reuse edges, and in doing so convince ourselves that there is no Euler path (let alone an Euler circuit). On small graphs which do have an Euler path, it is usually not difficult to find one. Our goal is to find a quick way to check whether a graph has an Euler path or circuit, even if the graph is quite large.</p>
 <p id="GNs">One way to guarantee that a graph does <em class="emphasis">not</em> have an Euler circuit is to include a “spike,” a vertex of degree 1.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:38.5%;margin-right:38.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-97.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:38.5%;margin-right:38.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-72.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 <p id="mUB">The vertex \(a\) has degree 1, and if you try to make an Euler circuit, you see that you will get stuck at the vertex. It is a dead end. That is, unless you start there. But then there is no way to return, so there is no hope of finding an Euler circuit. There is however an Euler path. It starts at the vertex \(a\text{,}\) then loops around the triangle. You will end at the vertex of degree 3.</p>
 <p id="TbK">You run into a similar problem whenever you have a vertex of any odd degree. If you start at such a vertex, you will not be able to end there (after traversing every edge exactly once). After using one edge to leave the starting vertex, you will be left with an even number of edges emanating from the vertex. Half of these could be used for returning to the vertex, the other half for leaving. So you return, then leave. Return, then leave. The only way to use up all the edges is to use the last one by leaving the vertex. On the other hand, if you have a vertex with odd degree that you do not start a path at, then you will eventually get stuck at that vertex. The path will use pairs of edges incident to the vertex to arrive and leave again. Eventually all but one of these edges will be used up, leaving only an edge to arrive by, and none to leave again.</p>
 <p id="ziT">What all this says is that if a graph has an Euler path and two vertices with odd degree, then the Euler path must start at one of the odd degree vertices and end at the other. In such a situation, every other vertex <em class="emphasis">must</em> have an even degree since we need an equal number of edges to get to those vertices as to leave them. How could we have an Euler circuit? The graph could not have any odd degree vertex as an Euler path would have to start there or end there, but not both. Thus for a graph to have an Euler circuit, all vertices must have even degree.</p>
@@ -219,13 +219,13 @@ var js_version = 0.13;
 </h6>
 <p id="Cdz">Determine whether the graphs below have a Hamilton path.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;">
-<div class="sbspanel" style="width:28.5714285714286%;justify-content:flex-start;"><img src="images/image-98.svg" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:28.5714285714286%;justify-content:flex-start;"><img src="images/image-99.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:28.5714285714286%;justify-content:flex-start;"><img src="images/image-73.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:28.5714285714286%;justify-content:flex-start;"><img src="images/image-74.svg" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-Pxk" id="Pxk"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Pxk"><div class="solution solution-like">
 <p id="pPh">The graph on the left has a Hamilton path (many different ones, actually), as shown here:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-100.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-75.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 <p id="VWq">The graph on the right does not have a Hamilton path. You would need to visit each of the “outside” vertices, but as soon as you visit one, you get stuck. Note that this graph does not have an Euler path, although there are graphs with Euler paths but no Hamilton paths.</p>
 </div></div>
 </div></article><p id="DSM">It appears that finding Hamilton paths would be easier because graphs often have more edges than vertices, so there are fewer requirements to be met. However, nobody knows whether this is true. There is no known simple test for whether a graph has a Hamilton path. For small graphs this is not a problem, but as the size of the graph grows, it gets harder and harder to check wither there is a Hamilton path. In fact, this is an example of a question which as far as we know is too difficult for computers to solve; it is an example of a problem which is NP-complete. </p></section><section class="exercises" id="wMz"><h3 class="heading hide-type">
@@ -233,7 +233,7 @@ var js_version = 0.13;
 </h3>
 <a href="sec_paths.html#wMz" class="permalink">¶</a><article class="exercise exercise-like" id="Nwp"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="NaQ">You and your friends want to tour the southwest by car. You will visit the nine states below, with the following rather odd rule: you must cross each border between neighboring states exactly once (so, for example, you must cross the Colorado-Utah border exactly once). Can you do it? If so, does it matter where you start your road trip? What fact about graph theory solves this problem?</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-101.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-76.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-jet" id="jet"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-jet"><div class="solution solution-like"><p id="cjO">This is a question about finding Euler paths. Draw a graph with a vertex in each state, and connect vertices if their states share a border. Exactly two vertices will have odd degree: the vertices for Nevada and Utah. Thus you must start your road trip at in one of those states and end it in the other.</p></div></div>
 </div></article><article class="exercise exercise-like" id="tDy"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
@@ -257,7 +257,7 @@ var js_version = 0.13;
 </ol></div></div>
 </div></article><article class="exercise exercise-like" id="ZKH"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="Zpi">Edward A. Mouse has just finished his brand new house. The floor plan is shown below:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:26%;margin-right:26%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-102.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:26%;margin-right:26%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-77.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 <ol id="Fwr" class="lower-alpha">
 <li id="uns"><p id="XzV">Edward wants to give a tour of his new pad to a lady-mouse-friend. Is it possible for them to walk through every doorway exactly once? If so, in which rooms must they begin and end the tour? Explain.</p></li>
 <li id="auB"><p id="DHe">Is it possible to tour the house visiting each room exactly once (not necessarily using every doorway)? Explain.</p></li>
@@ -274,24 +274,24 @@ var js_version = 0.13;
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-bzU" id="bzU"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-bzU"><div class="solution solution-like">
 <p id="oyg">If we build one bridge, we can have an Euler path. Two bridges must be built for an Euler circuit.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-103.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-78.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 </div></div>
 </div></article><article class="exercise exercise-like" id="KBJ"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
 <p id="qnt">Below is a graph representing friendships between a group of students (each vertex is a student and each edge is a friendship). Is it possible for the students to sit around a round table in such a way that every student sits between two friends? What does this question have to do with paths?</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-104.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-79.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-HHd" id="HHd"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-HHd"><div class="hint solution-like"><p id="AMy">If you read off the names of the students in order, you would need to read each student's name exactly once, and the last name would need to be of a student who was friends with the first.  What sort of a cycle is this?</p></div></div>
 </div></article><article class="exercise exercise-like" id="qIS"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
 <p id="WuC">On the table rest 8 dominoes, as shown below. If you were to line them up in a single row, so that any two sides touching had matching numbers, what would the sum of the two end numbers be?</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;">
-<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-105.svg" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-106.svg" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-107.svg" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-108.svg" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-109.svg" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-110.svg" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-111.svg" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-112.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-80.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-81.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-82.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-83.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-84.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-85.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-86.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-87.svg" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-nOm" id="nOm"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-nOm"><div class="hint solution-like"><p id="gTH">Draw a graph with 6 vertices and 8 edges.  What sort of path would be appropriate?</p></div></div>
@@ -302,7 +302,7 @@ var js_version = 0.13;
 <li id="SQc"><p id="wcF">Find a graph which does not have a Hamilton path even though no vertex has degree one. Explain why your example works.</p></li>
 </ol></article><article class="exercise exercise-like" id="CXk"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
 <p id="iIU">Consider the following graph:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:36%;margin-right:36%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-113.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:36%;margin-right:36%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-88.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 <ol id="OQd" class="lower-alpha">
 <li id="yXl">Find a Hamilton path. Can your path be extended to a Hamilton cycle?</li>
 <li id="feu">Is the graph bipartite? If so, how many vertices are in each “part”?</li>

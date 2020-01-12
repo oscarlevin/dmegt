@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:17:09-07:00    *-->
+<!--*    on 2020-01-12T09:54:50-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,11 +13,27 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>For the complete graphs \(K_n\text{,}\) we would like to be able to say something about the number of vertices, edges, and (if the graph is planar) faces. Let's first consider \(K_3\text{:}\)</p>
-<ol class="decimal">
-<li><p>How many vertices does \(K_3\) have? How many edges?</p></li>
-<li><p>If \(K_3\) is planar, how many faces should it have?</p></li>
-</ol>
-<span class="incontext"><a href="sec_planar.html#niW">in-context</a></span>
+<p>We know in any planar graph the number of faces \(f\) satisfies \(3f \le 2e\) since each face is bounded by at least three edges, but each edge borders two faces. Combine this with Euler's formula:</p>
+<div class="displaymath">
+\begin{equation*}
+v - e + f = 2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+v - e + \frac{2e}{3} \ge 2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+3v - e \ge 6
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+3v - 6 \ge e\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="sec_planar.html#zlG">in-context</a></span>
 </body>
 </html>

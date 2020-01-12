@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:17:02-07:00    *-->
+<!--*    on 2020-01-12T09:54:43-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,10 +11,46 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><ol class="lower-alpha">
-<li><p>Any even number plus 2 is an even number.</p></li>
-<li><p>For any \(x\) there is a \(y\) such that \(\sin(x) = y\text{.}\) In other words, every number \(x\) is in the domain of sine.</p></li>
-<li><p>For every \(y\) there is an \(x\) such that \(\sin(x) = y\text{.}\) In other words, every number \(y\) is in the range of sine (which is false).</p></li>
-<li><p>For any numbers, if the cubes of two numbers are equal, then the numbers are equal.</p></li>
-</ol></div></body>
+<body><div class="solution solution-like">
+<p>We make a truth table which contains all the lines of the argument form:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(P\)</td>
+<td class="c m b1 r2 l0 t0 lines">\(Q\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(P\imp Q\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\neg P\)</td>
+<td class="c m b1 r0 l0 t0 lines" data-braille="last-cell">\(\neg P \imp Q\)</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">F</td>
+</tr>
+</table></div></div></div>
+<p>(we include a column for \(\neg P\) just as a step to help getting the column for \(\neg P \imp Q\)).</p>
+<p>Now look at all the rows for which both \(P \imp Q\) and \(\neg P \imp Q\) are true. This happens only in rows 1 and 3. Hey! In those rows \(Q\) is true as well, so the argument form is valid (it is a valid deduction rule).</p>
+</div></body>
 </html>

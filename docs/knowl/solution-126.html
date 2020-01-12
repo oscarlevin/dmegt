@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:17:04-07:00    *-->
+<!--*    on 2020-01-12T09:54:45-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,15 +14,33 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.16.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.3.7.1</span><span class="period">.</span>
 </h6>
-<ol class="lower-alpha">
-<li>\(\forall x \exists y (O(x) \wedge \neg E(y))\text{.}\)</li>
-<li>\(\exists x \forall y (x \ge y \vee \forall z (x \ge z \wedge y \ge z))\text{.}\)</li>
-<li><p>There is a number \(n\) for which every other number is strictly greater than \(n\text{.}\)</p></li>
-<li><p>There is a number \(n\) which is not between any other two numbers.</p></li>
-</ol>
+<article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p>Suppose not. Then \(\sqrt 2\) is equal to a fraction \(\frac{a}{b}\text{.}\) Without loss of generality, assume \(\frac{a}{b}\) is in lowest terms (otherwise reduce the fraction). So,</p>
+<div class="displaymath">
+\begin{equation*}
+2 = \frac{a^2}{b^2}
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec_propositional.html#qRj">in-context</a></span>
+<div class="displaymath">
+\begin{equation*}
+2b^2 = a^2\text{.}
+\end{equation*}
+</div>
+<p>Thus \(a^2\) is even, and as such \(a\) is even. So \(a = 2k\) for some integer \(k\text{,}\) and \(a^2 = 4k^2\text{.}\) We then have,</p>
+<div class="displaymath">
+\begin{equation*}
+2b^2 = 4k^2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+b^2 = 2k^2\text{.}
+\end{equation*}
+</div>
+<p>Thus \(b^2\) is even, and as such \(b\) is even. Since \(a\) is also even, we see that \(\frac{a}{b}\) is not in lowest terms, a contradiction. Thus \(\sqrt 2\) is irrational.</p></article>
+</div>
+<span class="incontext"><a href="sec_logic-proofs.html#Nup">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:16:50-07:00    *-->
+<!--*    on 2020-01-12T09:54:31-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,15 +13,20 @@
 </head>
 <body>
 <article class="exercise exercise-like"><h6 class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">5<span class="period">.</span></span>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">11<span class="period">.</span></span>
 </h6>
-<p>Write out all functions \(f: \{1,2,3\} \to \{a,b\}\) (using two-line notation).</p>
-<p>How many functions are there?</p>
-<p>How many are injective?</p>
-<p>How many are surjective?</p>
-<p>How many are bijective?</p>
-<div class="solutions">
-<a class="original" data-knowl="./knowl/answer-37-hidden.html" title="Answer 1.4.5.1"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><a class="original" data-knowl="./knowl/answer-38-hidden.html" title="Answer 1.4.5.2"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><a class="original" data-knowl="./knowl/answer-39-hidden.html" title="Answer 1.4.5.3"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><a class="original" data-knowl="./knowl/answer-40-hidden.html" title="Answer 1.4.5.4"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span></a><a class="original" data-knowl="./knowl/solution-58-hidden.html" title="Solution 1.4.5.1"><span class="type">Solution</span></a>
-</div></article><span class="incontext"><a href="sec_intro-functions.html#zOw">in-context</a></span>
+<p>Suppose \(f:\N \to \N\) satisfies the recurrence relation</p>
+<div class="displaymath">
+\begin{equation*}
+f(n+1) = \begin{cases} \frac{f(n)}{2} \amp \text{ if } f(n) \text{ is even} \\ 3f(n) + 1 \amp \text{ if } f(n) \text{ is odd}\end{cases}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Note that with the initial condition \(f(0) = 1\text{,}\) the values of the function are: \(f(1) = 4\text{,}\) \(f(2) = 2\text{,}\) \(f(3) = 1\text{,}\) \(f(4) = 4\text{,}\) and so on, the images cycling through those three numbers. Thus \(f\) is NOT injective (and also certainly not surjective). Might it be under other initial conditions?<a class="fn-knowl" data-knowl="./knowl/fn-3-hidden.html" title="Footnote 1.3"><sup> 3 </sup></a></p>
+<ol class="lower-alpha">
+<li><p>If \(f\) satisfies the initial condition \(f(0) = 5\text{,}\) is \(f\) injective? Explain why or give a specific example of two elements from the domain with the same image.</p></li>
+<li><p>If \(f\) satisfies the initial condition \(f(0) = 3\text{,}\) is \(f\) injective? Explain why or give a specific example of two elements from the domain with the same image.</p></li>
+<li><p>If \(f\) satisfies the initial condition \(f(0) = 27\text{,}\) then it turns out that \(f(105) = 10\) and no two numbers less than 105 have the same image. Could \(f\) be injective? Explain.</p></li>
+<li><p>Prove that no matter what initial condition you choose, the function cannot be surjective.</p></li>
+</ol></article><span class="incontext"><a href="sec_intro-functions.html#kFy">in-context</a></span>
 </body>
 </html>

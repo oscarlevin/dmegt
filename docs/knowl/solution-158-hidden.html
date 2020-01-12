@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:17:10-07:00    *-->
+<!--*    on 2020-01-12T09:54:51-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,5 +11,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><p>There are 26 two letter words starting with A, another 26 starting with E, and so on. We will have 5 groups of 26. So we add 26 to itself 5 times. Of course it would be easier to just multiply \(5\cdot 26\text{.}\) We are really using the additive principle again, just using multiplication as a shortcut.</p></div></body>
+<body><div class="solution solution-like">
+<p>The answer is not 37, even though the sum of the numbers above is 37. For example, while 12 students failed Algebra, 2 of those students also failed Biology, 6 also failed Chemistry, and 1 of those failed all three subjects. In fact, that 1 student who failed all three subjects is counted a total of 7 times in the total 37. To clarify things, let us think of the students who failed Algebra as the elements of the set \(A\text{,}\) and similarly for sets \(B\) and \(C\text{.}\) The one student who failed all three subjects is the lone element of the set \(A \cap B \cap C\text{.}\) Thus, in Venn diagrams:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32%;margin-right:32%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-111.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p>Now let's fill in the other intersections. We know \(A\cap B\) contains 2 elements, but 1 element has already been counted. So we should put a 1 in the region where \(A\) and \(B\) intersect (but \(C\) does not). Similarly, we calculate the cardinality of \((A\cap C) \setminus B\text{,}\) and \((B \cap C) \setminus A\text{:}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32%;margin-right:32%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-112.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p>Next, we determine the numbers which should go in the remaining regions, including outside of all three circles. This last number is the number of students who did not fail any subject:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32%;margin-right:32%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-113.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p>We found 5 goes in the “\(A\) only” region because the entire circle for \(A\) needed to have a total of 12, and 7 were already accounted for. Similarly, we calculate the “\(B\) only” region to contain only 1 student and the “\(C\) only” region to contain no students.</p>
+<p>Thus the number of students who failed at least one class is 15 (the sum of the numbers in each of the eight disjoint regions). The number of students who passed all three classes is 26: the total number of students, 41, less the 15 who failed at least one class.</p>
+<p>Note that we can also answer other questions. For example, how many students failed just Chemistry? None. How many passed Algebra but failed both Biology and Chemistry? This corresponds to the region inside both \(B\) and \(C\) but outside of \(A\text{,}\) containing 2 students.</p>
+</div></body>
 </html>

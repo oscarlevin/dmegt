@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:17:07-07:00    *-->
+<!--*    on 2020-01-12T09:54:48-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,11 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Is there anything we can say about whether a graph has a Hamilton path based on the degrees of its vertices?</p>
-<ol class="lower-alpha">
-<li><p>Suppose a graph has a Hamilton path. What is the maximum number of vertices of degree one the graph can have? Explain why your answer is correct.</p></li>
-<li><p>Find a graph which does not have a Hamilton path even though no vertex has degree one. Explain why your example works.</p></li>
-</ol>
-<span class="incontext"><a href="sec_paths.html#CBL">in-context</a></span>
+<p>How do we know?  We can give an algorithm for <em class="emphasis">finding</em> a spanning tree!  Start with a connected graph \(G\text{.}\)  If there is no cycle, then \(G\) is already a tree and we are done.  If there is a cycle, let \(e\) be any edge in that cycle and consider the new graph \(G_1 = G - e\) (i.e., the graph you get by deleting \(e\)).  This tree is still connected since \(e\) belonged to a cycle, there were at least two paths between its incident vertices.  Now repeat: if \(G_1\) has no cycles, we are done, otherwise define \(G_2\) to be \(G_1 - e_1\text{,}\) where \(e_1\) is an edge in a cycle in \(G_1\text{.}\)  Keep going.  This process must eventually stop, since there are only a finite number of edges to remove.  The result will be a tree, and since we never removed any vertex, a <em class="emphasis">spanning</em> tree.</p>
+<span class="incontext"><a href="sec_trees.html#YYn">in-context</a></span>
 </body>
 </html>

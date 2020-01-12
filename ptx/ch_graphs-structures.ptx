@@ -11,6 +11,10 @@
       Hopefully this short introduction
       will shed some light on what the subject is about and what you can expect as you move forward in your studies.
   </p>
+
+  <p>
+    To begin, we will familiarize ourselves with some of the mathematical <em>structures</em> with which discrete mathematics is concerned.  In particular, we will investigate graphs, sets, and functions, and then see how these three types of mathematical objects interact.
+  </p>
 </introduction>
 <xi:include href="sec_intro-intro.ptx"/>
   <xi:include href="sec_gt-intro.ptx"/>

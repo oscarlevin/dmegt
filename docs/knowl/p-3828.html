@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:17:43-07:00    *-->
+<!--*    on 2020-01-12T09:55:28-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,13 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Each of the 5 students gets at least 1 dollar?</p>
-<span class="incontext"><a href="sec_count-conc.html#p-3828">in-context</a></span>
+<ol class="lower-alpha">
+<li>\({10 \choose 4}\) combinations. You need to choose 4 of the 10 cookie types. Order doesn't matter.</li>
+<li>\(P(10, 4) = 10 \cdot 9 \cdot 8 \cdot 7\) ways. You are choosing and arranging 4 out of 10 cookies. Order matters now.</li>
+<li>\({21 \choose 12}\) choices. You must switch between cookie type 9 times as you make your 12 cookies. The cookies are the stars, the switches between cookie types are the bars.</li>
+<li>\(10^{12}\) choices. You have 10 choices for the “1” cookie, 10 choices for the “2” cookie, and so on.</li>
+<li>\(10^{12} - \left[{10 \choose 1}9^{12} - {10 \choose 2}8^{12} + \cdots - {10 \choose 10}0^{12} \right]\) choices. We must use PIE to remove all the ways in which one or more cookie type is not selected.</li>
+</ol>
+<span class="incontext"><a href="sec_count-conc.html#rkV">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:18:03-07:00    *-->
+<!--*    on 2020-01-12T09:55:49-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,14 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We must prove that \(1 + 2 + 2^2 + 2^3 + \cdots +2^n = 2^{n+1} - 1\) for all \(n \in \N\text{.}\) Thus let \(P(n)\) be the statement \(1 + 2 + 2^2 + \cdots + 2^n = 2^{n+1} - 1\text{.}\) We will prove that \(P(n)\) is true for all \(n \in \N\text{.}\) First we establish the base case, \(P(0)\text{,}\) which claims that \(1 = 2^{0+1} -1\text{.}\) Since \(2^1 - 1 = 2 - 1 = 1\text{,}\) we see that \(P(0)\) is true. Now for the inductive case. Assume that \(P(k)\) is true for an arbitrary \(k \in \N\text{.}\) That is, \(1 + 2 + 2^2 + \cdots + 2^k = 2^{k+1} - 1\text{.}\) We must show that \(P(k+1)\) is true (i.e., that \(1 + 2 + 2^2 + \cdots + 2^{k+1} = 2^{k+2} - 1\)). To do this, we start with the left-hand side of \(P(k+1)\) and work to the right-hand side:</p>
+<p>For the inductive step, we know by the product rule for two functions that</p>
 <div class="displaymath">
-\begin{align*}
-1 + 2 + 2^2 + \cdots + 2^k + 2^{k+1} = \amp ~ 2^{k+1} - 1 + 2^{k+1} \amp \text{by inductive hypothesis}\\
-= \amp ~2\cdot 2^{k+1} - 1 \amp\\
-= \amp ~ 2^{k+2} - 1 \amp
-\end{align*}
+\begin{equation*}
+(f_1f_2f_3 \cdots f_k f_{k+1})' = (f_1f_2f_3\cdots f_k)'f_{k+1} + (f_1f_2f_3\cdots f_k)f_{k+1}'\text{.}
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec_seq-induction.html#QzM">in-context</a></span>
+<span class="incontext"><a href="sec_seq-induction.html#RjG">in-context</a></span>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:16:37-07:00    *-->
+<!--*    on 2020-01-12T09:54:19-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -96,7 +96,7 @@ var js_version = 0.13;
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="http://discrete.openmathbooks.org/dmoi3.html" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="dmoi.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">early Graph Theory</span></a></h1>
+<h1 class="heading"><a href="dmegt.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">Early Graph Theory</span></a></h1>
 <p class="byline">Oscar Levin</p>
 </div>
 </div></div>
@@ -176,8 +176,8 @@ var js_version = 0.13;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Prg"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.5</span> <span class="title">Induction</span>
 </h2>
-<a href="sec_seq-induction.html" class="permalink">¶</a><section class="introduction" id="duL"><p id="rcR"> Mathematical induction is a proof technique, not unlike direct proof or proof by contradiction or combinatorial proof.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-19" id="fn-19"><sup> 3 </sup></a> In other words, induction is a style of argument we use to convince ourselves and others that a mathematical statement is always true. Many mathematical statements can be proved by simply explaining what they mean. Others are very difficult to prove—in fact, there are relatively simple mathematical statements which nobody yet knows how to prove. To facilitate the discovery of proofs, it is important to be familiar with some standard styles of arguments. Induction is one such style. Let's start with an example:</p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-19"><div class="fn">You might or might not be familiar with these yet. We will consider these in <a href="ch_logic.html" class="internal" title="Chapter 2: Symbolic Logic and Proofs">Chapter 2</a>.</div></div></section><section class="subsection" id="vyp"><h3 class="heading hide-type">
+<a href="sec_seq-induction.html" class="permalink">¶</a><section class="introduction" id="duL"><p id="rcR"> Mathematical induction is a proof technique, not unlike direct proof or proof by contradiction or combinatorial proof.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-18" id="fn-18"><sup> 3 </sup></a> In other words, induction is a style of argument we use to convince ourselves and others that a mathematical statement is always true. Many mathematical statements can be proved by simply explaining what they mean. Others are very difficult to prove—in fact, there are relatively simple mathematical statements which nobody yet knows how to prove. To facilitate the discovery of proofs, it is important to be familiar with some standard styles of arguments. Induction is one such style. Let's start with an example:</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-18"><div class="fn">You might or might not be familiar with these yet. We will consider these in <a href="ch_logic.html" class="internal" title="Chapter 2: Symbolic Logic and Proofs">Chapter 2</a>.</div></div></section><section class="subsection" id="vyp"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Stamps</span>
 </h3>
 <a href="sec_seq-induction.html#vyp" class="permalink">¶</a><article class="project-like" id="MwA"><h6 class="heading">
@@ -189,22 +189,22 @@ var js_version = 0.13;
 P(1), P(2), P(3), P(4), \ldots\text{,}
 \end{equation*}
 </div>
-<p>the sequence will consist of \(T\)'s (for true) and \(F\)'s (for false). In our particular case the sequence starts</p>
+<p data-braille="continuation">the sequence will consist of \(T\)'s (for true) and \(F\)'s (for false). In our particular case the sequence starts</p>
 <div class="displaymath">
 \begin{equation*}
 F,F,F,F,T,F,F,T,F,T,F,F,T,\ldots
 \end{equation*}
 </div>
-<p>because \(P(1), P(2), P(3), P(4)\) are all false (you cannot make 1, 2, 3, or 4 cents of postage) but \(P(5)\) is true (use one 5-cent stamp), and so on.</p>
+<p data-braille="continuation">because \(P(1), P(2), P(3), P(4)\) are all false (you cannot make 1, 2, 3, or 4 cents of postage) but \(P(5)\) is true (use one 5-cent stamp), and so on.</p>
 <p id="gDM">Let's think a bit about how we could find the value of \(P(n)\) for some specific \(n\) (the “value” will be either \(T\) or \(F\)). How did we find the value of the \(n\)th term of a sequence of numbers? How did we find \(a_n\text{?}\) There were two ways we could do this: either there was a closed formula for \(a_n\text{,}\) so we could plug in \(n\) into the formula and get our output value, or we had a recursive definition for the sequence, so we could use the previous terms of the sequence to compute the \(n\)th term. When dealing with sequences of statements, we could use either of these techniques as well. Maybe there is a way to use \(n\) itself to determine whether we can make \(n\) cents of postage. That would be something like a closed formula. Or instead we could use the previous terms in the sequence (of statements) to determine whether we can make \(n\) cents of postage. That is, if we know the value of \(P(n-1)\text{,}\) can we get from that to the value of \(P(n)\text{?}\) That would be something like a recursive definition for the sequence. Remember, finding recursive definitions for sequences was often easier than finding closed formulas. The same is true here.</p>
 <p id="MKV">Suppose I told you that \(P(43)\) was true (it is). Can you determine from this fact the value of \(P(44)\) (whether it true or false)? Yes you can. Even if we don't know how exactly we made 43 cents out of the 5-cent and 8-cent stamps, we do know that there was some way to do it. What if that way used at least three 5-cent stamps (making 15 cents)? We could replace those three 5-cent stamps with two 8-cent stamps (making 16 cents). The total postage has gone up by 1, so we have a way to make 44 cents, so \(P(44)\) is true. Of course, we assumed that we had at least three 5-cent stamps. What if we didn't? Then we must have at least three 8-cent stamps (making 24 cents). If we replace those three 8-cent stamps with five 5-cent stamps (making 25 cents) then again we have bumped up our total by 1 cent so we can make 44 cents, so \(P(44)\) is true.</p>
 <p id="sSe">Notice that we have not said how to make 44 cents, just that we can, on the basis that we can make 43 cents. How do we know we can make 43 cents? Perhaps because we know we can make \(42\)  cents, which we know we can do because we know we can make 41 cents, and so on. It's a recursion! As with a recursive definition of a numerical sequence, we must specify our initial value. In this case, the initial value is “\(P(1)\) is false.” That's not good, since our recurrence relation just says that \(P(k+1)\) is true <em class="emphasis">if</em> \(P(k)\) is also true. We need to start the process with a true \(P(k)\text{.}\) So instead, we might want to use “\(P(28)\) is true” as the initial condition.</p>
-<p id="YZn">Putting this all together we arrive at the following fact: it is possible to (exactly) make any amount of postage greater than 27 cents using just 5-cent and 8-cent stamps.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-20" id="fn-20"><sup> 4 </sup></a> In other words, \(P(k)\) is true for any \(k \ge 28\text{.}\) To prove this, we could do the following:</p>
+<p id="YZn">Putting this all together we arrive at the following fact: it is possible to (exactly) make any amount of postage greater than 27 cents using just 5-cent and 8-cent stamps.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-19" id="fn-19"><sup> 4 </sup></a> In other words, \(P(k)\) is true for any \(k \ge 28\text{.}\) To prove this, we could do the following:</p>
 <ol class="decimal">
 <li id="ryq"><p id="cps">Demonstrate that \(P(28)\) is true.</p></li>
 <li id="XFz"><p id="IwB">Prove that if \(P(k)\) is true, then \(P(k+1)\) is true (for any \(k \ge 28\)).</p></li>
 </ol>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-20"><div class="fn">This is not claiming that there are no amounts less than 27 cents which can also be made.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-19"><div class="fn">This is not claiming that there are no amounts less than 27 cents which can also be made.</div></div>
 <p id="Fgw">Suppose we have done this. Then we know that the 28th term of the sequence above is a \(T\) (using step 1, the initial condition or <dfn class="terminology">base case</dfn>), and that every term after the 28th is \(T\) also (using step 2, the recursive part or <dfn class="terminology">inductive case</dfn>). Here is what the proof would actually look like.</p>
 <article class="proof" id="GHo"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="cZm">Let \(P(n)\) be the statement “it is possible to make exactly \(n\) cents of postage using 5-cent and 8-cent stamps.” We will show \(P(n)\) is true for all \(n \ge 28\text{.}\)</p>
@@ -344,8 +344,8 @@ a\text{,}\) then \(f(x) \lt g(x)\) for \(x &gt; a\text{.}\) Same idea: the large
 <li id="Qba"><p id="ASc">Base case: Prove that \(P(0)\) is true.</p></li>
 <li id="wij"><p id="gZl">Inductive case: Assume \(P(k)\) is true for all \(k \lt n\text{.}\) Prove that \(P(n)\) is true.</p></li>
 </ol>
-<p>Conclude, “therefore, by strong induction, \(P(n)\) is true for all \(n \gt 0\text{.}\)”</p></article><p id="wwE">Of course, it is acceptable to replace 0 with a larger base case if needed.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-21" id="fn-21"><sup> 5 </sup></a></p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-21"><div class="fn">Technically, strong induction does not require you to prove a separate base case. This is because when proving the inductive case, you must show that \(P(0)\) is true, assuming \(P(k)\) is true for all \(k \lt 0\text{.}\) But this is not any help so you end up proving \(P(0)\) anyway. To be on the safe side, we will always include the base case separately.</div></div>
+<p data-braille="continuation">Conclude, “therefore, by strong induction, \(P(n)\) is true for all \(n \gt 0\text{.}\)”</p></article><p id="wwE">Of course, it is acceptable to replace 0 with a larger base case if needed.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-20" id="fn-20"><sup> 5 </sup></a></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-20"><div class="fn">Technically, strong induction does not require you to prove a separate base case. This is because when proving the inductive case, you must show that \(P(0)\) is true, assuming \(P(k)\) is true for all \(k \lt 0\text{.}\) But this is not any help so you end up proving \(P(0)\) anyway. To be on the safe side, we will always include the base case separately.</div></div>
 <p id="cDN">Let's prove our conjecture about the chocolate bar puzzle:</p>
 <article class="proof" id="mOx"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="BBW">Let \(P(n)\) be the statement, “it takes \(n-1\) breaks to reduce a \(n\)-square chocolate bar to single squares.”</p>
@@ -550,7 +550,7 @@ F_0 + F_2 + \cdots + F_{2k} + F_{2k+2} ~ \amp = F_{2k+1} - 1 + F_{2k+2} \amp \te
 \log(a^{k+1}) = \log(a^k\cdot a) = \log(a^k) + \log(a) = k\log(a) + \log(a)\text{,}
 \end{equation*}
 </div>
-<p>with the last equality due to the inductive hypothesis. But this simplifies to \((k+1) \log(a)\text{,}\) establishing \(P(k+1)\text{.}\) Therefore by the principle of mathematical induction, \(P(n)\) is true for all \(n \ge 2\text{.}\)</p></article>
+<p data-braille="continuation">with the last equality due to the inductive hypothesis. But this simplifies to \((k+1) \log(a)\text{,}\) establishing \(P(k+1)\text{.}\) Therefore by the principle of mathematical induction, \(P(n)\) is true for all \(n \ge 2\text{.}\)</p></article>
 </div></div>
 </div></article><article class="exercise exercise-like" id="nII"><h6 class="heading"><span class="codenumber">26<span class="period">.</span></span></h6>
 <p id="FFi">Let \(f_1, f_2,\ldots, f_n\) be differentiable functions. Prove, using induction, that</p>
@@ -587,7 +587,7 @@ F_0 + F_2 + \cdots + F_{2k} + F_{2k+2} ~ \amp = F_{2k+1} - 1 + F_{2k+2} \amp \te
 F_mF_n + F_{m+1}F_{n+1} = F_{m+n+1}\text{,}
 \end{equation*}
 </div>
-<p>and realize that when \(m = n\) we get our desired result.</p>
+<p data-braille="continuation">and realize that when \(m = n\) we get our desired result.</p>
 <p id="Kpb">Note that we now have two variables, so we want to prove this for all \(m \ge 0\) <em class="emphasis">and</em> all \(n \ge 0\) at the same time. For each such pair \((m,n)\text{,}\) let \(P(m,n)\) be the statement \(F_mF_n + F_{m+1}F_{n+1} = F_{m+n+1}\)</p>
 <ol class="lower-alpha">
 <li id="iDq"><p id="rXc">First fix \(m = 0\) and give a proof by mathematical induction that \(P(0,n)\) holds for all \(n \ge 0\text{.}\) Note this proof will be very easy.</p></li>
@@ -595,7 +595,7 @@ F_mF_n + F_{m+1}F_{n+1} = F_{m+n+1}\text{,}
 <li id="uRI"><p id="Elu">You can now conclude that \(P(m,n)\) holds for all \(m,n\ge 0\text{.}\) Do you believe that? Explain why this sort of induction is valid. For example, why do your proofs above guarantee that \(P(2,3)\) is true?</p></li>
 </ol></article><article class="exercise exercise-like" id="gej"><h6 class="heading"><span class="codenumber">29<span class="period">.</span></span></h6>
 <p id="qwk">Given a square, you can cut the square into smaller squares by cutting along lines parallel to the sides of the original square (these lines do not need to travel the entire side length of the original square). For example, by cutting along the lines below, you will divide a square into 6 smaller squares:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-167.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-142.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 <p id="WDt">Prove, using strong induction, that it is possible to cut a square into \(n\) smaller squares for any \(n \ge 6\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-ZjE" id="ZjE"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-ZjE"><div class="hint solution-like"><p id="dxY">You will need three base cases.  This is a very good hint actually, as it suggests that to prove \(P(n)\) is true, you would want to use the fact that \(P(n-3)\) is true.  So somehow you need to increase the number of squares by 3.</p></div></div>

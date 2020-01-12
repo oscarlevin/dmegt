@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:17:25-07:00    *-->
+<!--*    on 2020-01-12T09:55:09-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,17 +12,12 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>Let's do a “pizza proof” again. We need to find a question about pizza toppings which has \(2^n\) as the answer. How about this: If a pizza joint offers \(n\) toppings, how many pizzas can you build using any number of toppings from no toppings to all toppings, using each topping at most once?</p>
-<p>On one hand, the answer is \(2^n\text{.}\) For each topping you can say “yes” or “no,” so you have two choices for each topping.</p>
-<p>On the other hand, divide the possible pizzas into disjoint groups: the pizzas with no toppings, the pizzas with one topping, the pizzas with two toppings, etc. If we want no toppings, there is only one pizza like that (the empty pizza, if you will) but it would be better to think of that number as \({n \choose 0}\) since we choose 0 of the \(n\) toppings. How many pizzas have 1 topping? We need to choose 1 of the \(n\) toppings, so \({n \choose 1}\text{.}\) We have:</p>
-<ul class="disc">
-<li>Pizzas with 0 toppings: \({n \choose 0}\)</li>
-<li>Pizzas with 1 topping: \({n \choose 1}\)</li>
-<li>Pizzas with 2 toppings: \({n \choose 2}\)</li>
-<li>\(\displaystyle \vdots\)</li>
-<li>Pizzas with \(n\) toppings: \({n \choose n}\text{.}\)</li>
-</ul>
-<p>The total number of possible pizzas will be the sum of these, which is exactly the left-hand side of the identity we are trying to prove.</p>
-<p>Again, we could have proved the identity using subsets, bit strings, or lattice paths (although the lattice path argument is a little tricky).</p>
+<p>We get six scoops, each of which could be one of ten possible flavors. Represent each scoop as a star. Think of going down the counter one flavor at a time: you see vanilla first, and skip to the next, chocolate. You say yes to chocolate three times (use three stars), then switch to the next flavor. You keep skipping until you get to cherry, which you say yes to twice. Another switch and you are at mint chocolate chip. You say yes once. Then you keep switching until you get past the last flavor, never saying yes again (since you already have said yes six times). There are ten flavors to choose from, so we must switch from considering one flavor to the next nine times. These are the nine bars.</p>
+<p>Now that we are confident that we have the right number of stars and bars, we answer the question simply: there are 6 stars and 9 bars, so 15 symbols. We need to pick 9 of them to be bars, so the number of milkshakes possible is</p>
+<div class="displaymath">
+\begin{equation*}
+\binom{15}{9}\text{.}
+\end{equation*}
+</div>
 </div></body>
 </html>

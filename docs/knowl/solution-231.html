@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:17:25-07:00    *-->
+<!--*    on 2020-01-12T09:55:08-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,12 +14,14 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.5.3.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.5.5.1</span><span class="period">.</span>
 </h6>
-<p>The easiest way to see this is to consider bit strings. \({n \choose k}\) is the number of bit strings of length \(n\) containing \(k\) 1's. Of all of these strings, some start with a 1 and the rest start with a 0. First consider all the bit strings which start with a 1. After the 1, there must be \(n-1\) more bits (to get the total length up to \(n\)) and exactly \(k-1\) of them must be 1's (as we already have one, and we need \(k\) total). How many strings are there like that? There are exactly \({n-1 \choose k-1}\) such bit strings, so of all the length \(n\) bit strings containing \(k\) 1's, \({n-1 \choose k-1}\) of them start with a 1. Similarly, there are \({n-1\choose k}\) which start with a 0 (we still need \(n-1\) bits and now \(k\) of them must be 1's). Since there are \({n-1 \choose k}\) bit strings containing \(n-1\) bits with \(k\) 1's, that is the number of length \(n\) bit strings with \(k\) 1's which start with a 0. Therefore \({n \choose k} = {n-1\choose k-1} + {n-1 \choose k}\text{.}\)</p>
-<p>Another way: consider the question, how many ways can you select \(k\) pizza toppings from a menu containing \(n\) choices? One way to do this is just \({n \choose k}\text{.}\) Another way to answer the same question is to first decide whether or not you want anchovies. If you do want anchovies, you still need to pick \(k-1\) toppings, now from just \(n-1\) choices. That can be done in \({n-1 \choose k-1}\) ways. If you do not want anchovies, then you still need to select \(k\) toppings from \(n-1\) choices (the anchovies are out). You can do that in \({n-1 \choose k}\) ways. Since the choices with anchovies are disjoint from the choices without anchovies, the total choices are \({n-1 \choose k-1}+{n-1 \choose k}\text{.}\) But wait. We answered the same question in two different ways, so the two answers must be the same. Thus \({n \choose k} = {n-1\choose k-1} + {n-1 \choose k}\text{.}\)</p>
-<p>You can also explain (prove) this identity by counting subsets, or even lattice paths.</p>
+<ol class="lower-alpha">
+<li><p>She has \({15 \choose 6}\) ways to select the 6 bridesmaids, and then for each way, has 6 choices for the maid of honor. Thus she has \({15 \choose 6}6\) choices.</p></li>
+<li><p>She has 15 choices for who will be her maid of honor. Then she needs to select 5 of the remaining 14 friends to be bridesmaids, which she can do in \({14 \choose 5}\) ways. Thus she has \(15 {14 \choose 5}\) choices.</p></li>
+<li><p>We have answered the question (how many wedding parties can the bride choose from) in two ways. The first way gives the left-hand side of the identity and the second way gives the right-hand side of the identity. Therefore the identity holds.</p></li>
+</ol>
 </div>
-<span class="incontext"><a href="sec_comb-proofs.html#tmd">in-context</a></span>
+<span class="incontext"><a href="sec_comb-proofs.html#DdO">in-context</a></span>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:16:28-07:00    *-->
+<!--*    on 2020-01-12T09:54:12-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -96,7 +96,7 @@ var js_version = 0.13;
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="http://discrete.openmathbooks.org/dmoi3.html" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="dmoi.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">early Graph Theory</span></a></h1>
+<h1 class="heading"><a href="dmegt.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">Early Graph Theory</span></a></h1>
 <p class="byline">Oscar Levin</p>
 </div>
 </div></div>
@@ -239,7 +239,7 @@ var js_version = 0.13;
 {n-1 \choose k-1} = \frac{(n-1)!}{(n-1-(k-1))!(k-1)!} = \frac{(n-1)!}{(n-k)!(k-1)!}
 \end{equation*}
 </div>
-<p>and</p>
+<p data-braille="continuation">and</p>
 <div class="displaymath">
 \begin{equation*}
 {n-1 \choose k} = \frac{(n-1)!}{(n-1-k)!k!}\text{.}
@@ -306,8 +306,8 @@ var js_version = 0.13;
 <p id="pVY">The total number of possible pizzas will be the sum of these, which is exactly the left-hand side of the identity we are trying to prove.</p>
 <p id="Wdh">Again, we could have proved the identity using subsets, bit strings, or lattice paths (although the lattice path argument is a little tricky).</p>
 </div></div>
-</div></article><p id="EJx">Hopefully this gives some idea of how explanatory proofs of binomial identities can go. It is worth pointing out that more traditional proofs can also be beautiful.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-15" id="fn-15"><sup> 2 </sup></a> For example, consider the following rather slick proof of the last identity.</p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-15"><div class="fn">Most every binomial identity can be proved using mathematical induction, using the recursive definition for \({n \choose k}\text{.}\) We will discuss induction in <a href="sec_seq-induction.html" class="internal" title="Section 4.5: Induction">Section 4.5</a>.</div></div>
+</div></article><p id="EJx">Hopefully this gives some idea of how explanatory proofs of binomial identities can go. It is worth pointing out that more traditional proofs can also be beautiful.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-14" id="fn-14"><sup> 2 </sup></a> For example, consider the following rather slick proof of the last identity.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-14"><div class="fn">Most every binomial identity can be proved using mathematical induction, using the recursive definition for \({n \choose k}\text{.}\) We will discuss induction in <a href="sec_seq-induction.html" class="internal" title="Section 4.5: Induction">Section 4.5</a>.</div></div>
 <p id="kQG">Expand the binomial \((x+y)^n\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
@@ -597,7 +597,7 @@ k{n\choose k} = n{n-1 \choose k-1}\text{.}
 {n\choose 0} + {n \choose 1} + {n\choose 2} + \cdots + {n \choose n} = 2^n\text{.}
 \end{equation*}
 </div>
-<p>The argument given there used the counting question, “how many pizzas can you build using any number of \(n\) different toppings?”  To practice, give new proofs of this identity using different questions.</p>
+<p data-braille="continuation">The argument given there used the counting question, “how many pizzas can you build using any number of \(n\) different toppings?”  To practice, give new proofs of this identity using different questions.</p>
 <ol class="lower-alpha">
 <li id="CIp"><p id="bUT">Use a question about counting subsets.</p></li>
 <li id="iPy"><p id="Icc">Use a question about counting bit strings.</p></li>
@@ -605,6 +605,16 @@ k{n\choose k} = n{n-1 \choose k-1}\text{.}
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-Aji" id="Aji"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Aji"><div class="hint solution-like"><p id="OBi">For the lattice paths, think about what sort of paths \(2^n\) would count.  Not all the paths will end at the same point, but you could describe the set of end points as a line.</p></div></div>
+</div></article><article class="exercise exercise-like" id="xaH"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
+<p id="Kno">Let \(k_1, k_2, \ldots,
+k_j\) be a list of positive integers that sum to \(n\) (i.e, \(\sum_{i=1}^j k_i = n\)). Use two graphs containing \(n\) vertices to explain why</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{i = 1}^j \binom{k_i}{2} \le \binom{n}{2}\text{.}
+\end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-Lem" id="Lem"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Lem"><div class="hint solution-like"><p id="DOi">How many edges does \(K_n\) have?  One of the two graphs will not be connected (unless \(j=1\)).</p></div></div>
 </div></article></section></section></div></main>
 </div>
 <div class="login-link"><span id="loginlogout" class="login">login</span></div>

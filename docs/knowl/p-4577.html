@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:18:04-07:00    *-->
+<!--*    on 2020-01-12T09:55:50-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,14 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>While the above proof does not work (it better not since the statement it is trying to prove is false!) we can prove something similar. Prove that there is a strictly increasing sequence \(a_1, a_2, a_3, \ldots\) of numbers (not necessarily integers) such that \(a_n \lt 100\) for all \(n \in \N\text{.}\) (By <dfn class="terminology">strictly increasing</dfn> we mean \(a_n \lt a_{n+1}\) for all \(n\text{.}\) So each term must be larger than the last.)</p>
-<span class="incontext"><a href="sec_seq-induction.html#Qen">in-context</a></span>
+<p>What about the sequence \(2, 4, 10, 28, 82, \ldots\text{?}\) Here the terms are always 1 more than powers of 3. That is, we have added the sequences \(1,1,1,1,\ldots\) and \(1,3,9, 27,\ldots\) term by term. Therefore we can get a generating function by adding the respective generating functions:</p>
+<div class="displaymath">
+\begin{align*}
+2 + 4x + 10x^2 + 28x^3 + \cdots  \amp  = (1 + 1) + (1 + 3)x + (1 + 9)x^2 + (1 + 27)x^3 + \cdots\\
+\amp  = 1 + x + x^2 + x^3 + \cdots + 1 + 3x + 9x^2 + 27x^3 + \cdots\\
+\amp  = \frac{1}{1-x} + \frac{1}{1-3x}
+\end{align*}
+</div>
+<span class="incontext"><a href="sec_addtops-genfun.html#nDv">in-context</a></span>
 </body>
 </html>

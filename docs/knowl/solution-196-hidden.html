@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:17:18-07:00    *-->
+<!--*    on 2020-01-12T09:55:00-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,9 +11,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><ol class="lower-alpha">
-<li>\({14 \choose 7} = 3432\) paths.</li>
-<li>\({6 \choose 2}{8\choose 5} = 840\) paths.</li>
-<li>\({14 \choose 7} - {6\choose 2}{8 \choose 5}\) paths.</li>
-</ol></div></body>
+<body><div class="solution solution-like">
+<p>Remember what it means for a function to be bijective: each element in the codomain must be the image of exactly one element of the domain. Using two-line notation, we could write one of these bijections as</p>
+<div class="displaymath">
+\begin{equation*}
+f = \twoline{1 \amp 2 \amp 3 \amp 4 \amp 5 \amp 6 \amp 7 \amp 8} {3 \amp 1 \amp 5 \amp 8 \amp 7 \amp 6 \amp 2 \amp 4}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">What we are really doing is just rearranging the elements of the codomain, so we are creating a permutation of 8 elements. In fact, “permutation” is another term used to describe bijective functions from a finite set to itself.</p>
+<p>If you believe this, then you see the answer must be \(8! = 8 \cdot 7 \cdot\cdots\cdot 1 = 40320\text{.}\) You can see this directly as well: for each element of the domain, we must pick a distinct element of the codomain to map to. There are 8 choices for where to send 1, then 7 choices for where to send 2, and so on. We multiply using the multiplicative principle.</p>
+</div></body>
 </html>

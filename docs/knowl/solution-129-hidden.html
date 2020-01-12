@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:17:04-07:00    *-->
+<!--*    on 2020-01-12T09:54:45-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,12 +12,25 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>This is the converse of the statement we proved above using a direct proof. From trying a few examples, this statement definitely appears to be true. So let's prove it.</p>
-<p>A direct proof of this statement would require fixing an arbitrary \(n\) and assuming that \(n^2\) is even. But it is not at all clear how this would allow us to conclude anything about \(n\text{.}\) Just because \(n^2 = 2k\) does not in itself suggest how we could write \(n\) as a multiple of 2.</p>
-<p>Try something else: write the contrapositive of the statement. We get, for all integers \(n\text{,}\) if \(n\) is odd then \(n^2\) is odd. This looks much more promising. Our proof will look something like this:</p>
-<p>Let \(n\) be an arbitrary integer. Suppose that \(n\) is not even. This means that …. In other words …. But this is the same as saying …. Therefore \(n^2\) is not even.</p>
-<p>Now we fill in the details:</p>
-<article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
-<p>We will prove the contrapositive. Let \(n\) be an arbitrary integer. Suppose that \(n\) is not even, and thus odd. Then \(n= 2k+1\) for some integer \(k\text{.}\) Now \(n^2 = (2k+1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1\text{.}\) Since \(2k^2 + 2k\) is an integer, we see that \(n^2\) is odd and therefore not even.</p></article>
+<p>The converse is the statement, “for all integers \(a\) and \(b\text{,}\) if \(a\) is odd or \(b\) is odd, then \(a + b\) is odd.” This is false! How do we prove it is false? We need to prove the negation of the converse. Let's look at the symbols. The converse is</p>
+<div class="displaymath">
+\begin{equation*}
+\forall a \forall b ((O(a) \vee O(b)) \imp O(a+b))\text{.}
+\end{equation*}
+</div>
+<p>We want to prove the negation:</p>
+<div class="displaymath">
+\begin{equation*}
+\neg \forall a \forall b ((O(a) \vee O(b)) \imp O(a+b))\text{.}
+\end{equation*}
+</div>
+<p>Simplify using the rules from the previous sections:</p>
+<div class="displaymath">
+\begin{equation*}
+\exists a \exists b ((O(a) \vee O(b)) \wedge \neg O(a+b))\text{.}
+\end{equation*}
+</div>
+<p>As the negation passed by the quantifiers, they changed from \(\forall\) to \(\exists\text{.}\) We then needed to take the negation of an implication, which is equivalent to asserting the if part and not the then part.</p>
+<p>Now we know what to do. To prove that the converse is false we need to find two integers \(a\) and \(b\) so that \(a\) is odd or \(b\) is odd, but \(a+b\) is not odd (so even). That's easy: 1 and 3. (remember, “or” means one or the other or both). Both of these are odd, but \(1+3 = 4\) is not odd.</p>
 </div></body>
 </html>

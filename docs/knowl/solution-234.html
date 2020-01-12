@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:17:25-07:00    *-->
+<!--*    on 2020-01-12T09:55:09-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,31 +14,21 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.5.6.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.6.2.1</span><span class="period">.</span>
 </h6>
-<p>To give a combinatorial proof we need to think up a question we can answer in two ways: one way needs to give the left-hand-side of the identity, the other way needs to be the right-hand-side of the identity. Our clue to what question to ask comes from the right-hand side: \({n+2 \choose 3}\) counts the number of ways to select 3 things from a group of \(n+2\) things. Let's name those things \(1, 2, 3, \ldots, n+2\text{.}\) In other words, we want to find 3-element subsets of those numbers (since order should not matter, subsets are exactly the right thing to think about). We will have to be a bit clever to explain why the left-hand-side also gives the number of these subsets. Here's the proof.</p>
-<article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
-<p>Consider the question “How many 3-element subsets are there of the set \(\{1,2,3,\ldots,
-n+2\}\text{?}\)” We answer this in two ways:</p>
-<p>Answer 1: We must select 3 elements from the collection of \(n+2\) elements. This can be done in \({n+2 \choose 3}\) ways.</p>
-<p>Answer 2: Break this problem up into cases by what the middle number in the subset is. Say each subset is \(\{a,b,c\}\) written in increasing order. We count the number of subsets for each distinct value of \(b\text{.}\) The smallest possible value of \(b\) is \(2\text{,}\) and the largest is \(n+1\text{.}\)</p>
-<p>When \(b = 2\text{,}\) there are \(1 \cdot n\) subsets: 1 choice for \(a\) and \(n\) choices (3 through \(n+2\)) for \(c\text{.}\)</p>
-<p>When \(b = 3\text{,}\) there are \(2 \cdot (n-1)\) subsets: 2 choices for \(a\) and \(n-1\) choices for \(c\text{.}\)</p>
-<p>When \(b = 4\text{,}\) there are \(3 \cdot (n-2)\) subsets: 3 choices for \(a\) and \(n-2\) choices for \(c\text{.}\)</p>
-<p>And so on. When \(b = n+1\text{,}\) there are \(n\) choices for \(a\) and only 1 choice for \(c\text{,}\) so \(n \cdot 1\) subsets.</p>
-<p>Therefore the total number of subsets is</p>
+<p>We need to decide on 7 digits so we will use 7 stars. The bars will represent a switch from each possible single digit number down to the next smaller one. So the phone number 866-5221 is represented by the stars and bars chart</p>
 <div class="displaymath">
 \begin{equation*}
-1 n + 2 (n-1) + 3 (n-2) + \cdots + (n-1)2 + n 1\text{.}
+|*||**|*|||**|*|\text{.}
 \end{equation*}
 </div>
-<p>Since Answer 1 and Answer 2 are answers to the same question, they must be equal. Therefore</p>
+<p>There are 10 choices for each digit (0-9) so we must switch between choices 9 times. We have 7 stars and 9 bars, so the total number of phone numbers is</p>
 <div class="displaymath">
 \begin{equation*}
-1 n + 2 (n-1) + 3 (n-2) + \cdots + (n-1) 2 + n 1 = {n+2 \choose 3}\text{.}
+{16 \choose 9}\text{.}
 \end{equation*}
-</div></article>
 </div>
-<span class="incontext"><a href="sec_comb-proofs.html#lHE">in-context</a></span>
+</div>
+<span class="incontext"><a href="sec_stars-and-bars.html#npN">in-context</a></span>
 </body>
 </html>

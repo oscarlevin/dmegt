@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:17:56-07:00    *-->
+<!--*    on 2020-01-12T09:55:42-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>The sequence of first differences is \(7, 43, 133, 301, 571,\ldots\text{.}\) The second differences are: \(36, 90, 168, 270,\ldots\text{.}\) Third difference: \(54, 78, 102,\ldots\text{.}\) Fourth differences: \(24, 24, \ldots\text{.}\) As far as we can tell, this sequence of differences is constant so the sequence is \(\Delta^4\)-constant and as such the closed formula is a degree 4 polynomial.</p>
-<span class="incontext"><a href="sec_polyfit.html#ulS">in-context</a></span>
+<p>This sum telescopes. We are left with only the \(-a_0\) from the first equation and the \(a_n\) from the last equation. Putting this all together we have \(-a_0 + a_n = \frac{n(n+1)}{2}\) or \(a_n = \frac{n(n+1)}{2} + a_0\text{.}\) But we know that \(a_0 = 4\text{.}\) So the solution to the recurrence relation, subject to the initial condition is</p>
+<div class="displaymath">
+\begin{equation*}
+a_n = \frac{n(n+1)}{2} + 4\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="sec_recurrence.html#HTY">in-context</a></span>
 </body>
 </html>

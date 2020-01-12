@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:17:24-07:00    *-->
+<!--*    on 2020-01-12T09:55:06-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,13 +14,12 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.4.12.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.5.4.1</span><span class="period">.</span>
 </h6>
-<ol class="lower-alpha">
-<li><p>\(17^{10}\) functions. There are 17 choices for the image of each element in the domain.</p></li>
-<li><p>\(P(17, 10)\) injective functions. There are 17 choices for image of the first element of the domain, then only 16 choices for the second, and so on.</p></li>
-</ol>
+<p>Why is this true? \({n \choose k}\) counts the number of ways to select \(k\) things from \(n\) choices. On the other hand, \({n \choose n-k}\) counts the number of ways to select \(n-k\) things from \(n\) choices. Are these really the same? Well, what if instead of selecting the \(n-k\) things you choose to exclude them. How many ways are there to choose \(n-k\) things to exclude from \(n\) choices. Clearly this is \({n \choose n-k}\) as well (it doesn't matter whether you include or exclude the things once you have chosen them). And if you exclude \(n-k\) things, then you are including the other \(k\) things. So the set of outcomes should be the same.</p>
+<p>Let's try the pizza counting example like we did above. How many ways are there to pick \(k\) toppings from a list of \(n\) choices? On the one hand, the answer is simply \({n \choose k}\text{.}\) Alternatively, you could make a list of all the toppings you don't want. To end up with a pizza containing exactly \(k\) toppings, you need to pick \(n-k\) toppings to not put on the pizza. You have \({n \choose n-k}\) choices for the toppings you don't want. Both of these ways give you a pizza with \(k\) toppings, in fact all the ways to get a pizza with \(k\) toppings. Thus these two answers must be the same: \({n \choose k} = {n \choose n-k}\text{.}\)</p>
+<p>You can also prove (explain) this identity using bit strings, subsets, or lattice paths. The bit string argument is nice: \({n \choose k}\) counts the number of bit strings of length \(n\) with \(k\) 1's. This is also the number of bit string of length \(n\) with \(k\) 0's (just replace each 1 with a 0 and each 0 with a 1). But if a string of length \(n\) has \(k\) 0's, it must have \(n-k\) 1's. And there are exactly \({n\choose n-k}\) strings of length \(n\) with \(n-k\) 1's.</p>
 </div>
-<span class="incontext"><a href="sec_counting-combperm.html#solution-226">in-context</a></span>
+<span class="incontext"><a href="sec_comb-proofs.html#Ztm">in-context</a></span>
 </body>
 </html>

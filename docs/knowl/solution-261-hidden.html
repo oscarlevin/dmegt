@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:17:32-07:00    *-->
+<!--*    on 2020-01-12T09:55:15-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,24 +11,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">
-<p>Without the “no more than 4” restriction, the answer would be \({13 \choose 2}\text{,}\) using 11 stars and 2 bars (separating the three kids). Now count the number of ways that one or more of the kids violates the condition, i.e., gets at least 4 cookies.</p>
-<p>Let \(A\) be the set of outcomes in which Alberto gets more than 4 cookies. Let \(B\) be the set of outcomes in which Bernadette gets more than 4 cookies. Let \(C\) be the set of outcomes in which Carlos gets more than 4 cookies. We then are looking (for the sake of subtraction) for the size of the set \(A \cup B \cup C\text{.}\) Using PIE, we must find the sizes of \(|A|\text{,}\) \(|B|\text{,}\) \(|C|\text{,}\) \(|A\cap B|\) and so on. Here is what we find.</p>
-<ul class="disc">
-<li>\(|A| = {8 \choose 2}\text{.}\) First give Alberto 5 cookies, then distribute the remaining 6 to the three kids without restrictions, using 6 stars and 2 bars.</li>
-<li>\(|B| = {8 \choose 2}\text{.}\) Just like above, only now Bernadette gets 5 cookies at the start.</li>
-<li>\(|C| = {8 \choose 2}\text{.}\) Carlos gets 5 cookies first.</li>
-<li>\(|A \cap B| = {3 \choose 2}\text{.}\) Give Alberto and Bernadette 5 cookies each, leaving 1 (star) to distribute to the three kids (2 bars).</li>
-<li>\(|A \cap C| = {3 \choose 2}\text{.}\) Alberto and Carlos get 5 cookies first.</li>
-<li>\(|B \cap C| = {3 \choose 2}\text{.}\) Bernadette and Carlos get 5 cookies first.</li>
-<li>\(|A \cap B \cap C| = 0\text{.}\) It is not possible for all three kids to get 4 or more cookies.</li>
-</ul>
-<p>Combining all of these we see</p>
-<div class="displaymath">
-\begin{equation*}
-|A \cup B \cup C| = {8 \choose 2} + {8 \choose 2} + {8 \choose 2} - {3 \choose 2} - {3 \choose 2} - {3 \choose 2} + 0 = 75\text{.}
-\end{equation*}
-</div>
-<p>Thus the answer to the original question is \({13 \choose 2} - 75 = 78 - 75 = 3\text{.}\) This makes sense now that we see it. The only way to ensure that no kid gets more than 4 cookies is to give two kids 4 cookies and one kid 3; there are three choices for which kid that should be. We could have found the answer much quicker through this observation, but the point of the example is to illustrate that PIE works!</p>
-</div></body>
+<body><div class="solution solution-like"><p>There are \(2^5\) functions all together, two choices for where to send each of the 5 elements of the domain. Now of these, the functions which are <em class="emphasis">not</em> surjective must exclude one or more elements of the codomain from the range. So first, consider functions for which \(a\) is not in the range. This can only happen one way: everything gets sent to \(b\text{.}\) Alternatively, we could exclude \(b\) from the range. Then everything gets sent to \(a\text{,}\) so there is only one function like this. These are the only ways in which a function could not be surjective (no function excludes both \(a\) and \(b\) from the range) so there are exactly \(2^5 - 2\) surjective functions.</p></div></body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:18:05-07:00    *-->
+<!--*    on 2020-01-12T09:55:49-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,9 +13,20 @@
 </head>
 <body>
 <article class="exercise exercise-like"><h6 class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">23<span class="period">.</span></span>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">28<span class="period">.</span></span>
 </h6>
-<p>Use induction to prove that \(\d\sum_{k=0}^n {n \choose k} = 2^n\text{.}\) That is, the sum of the \(n\)th row of Pascal's Triangle is \(2^n\text{.}\)</p>
-<div class="solutions"><a class="original" data-knowl="./knowl/hint-108-hidden.html" title="Hint 4.5.23.1"><span class="type">Hint</span></a></div></article><span class="incontext"><a href="sec_seq-induction.html#vnh">in-context</a></span>
+<p>You will prove that the Fibonacci numbers satisfy the identity \(F_n^2 + F_{n+1}^2 = F_{2n+1}\text{.}\) One way to do this is to prove the more general identity,</p>
+<div class="displaymath">
+\begin{equation*}
+F_mF_n + F_{m+1}F_{n+1} = F_{m+n+1}\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">and realize that when \(m = n\) we get our desired result.</p>
+<p>Note that we now have two variables, so we want to prove this for all \(m \ge 0\) <em class="emphasis">and</em> all \(n \ge 0\) at the same time. For each such pair \((m,n)\text{,}\) let \(P(m,n)\) be the statement \(F_mF_n + F_{m+1}F_{n+1} = F_{m+n+1}\)</p>
+<ol class="lower-alpha">
+<li><p>First fix \(m = 0\) and give a proof by mathematical induction that \(P(0,n)\) holds for all \(n \ge 0\text{.}\) Note this proof will be very easy.</p></li>
+<li><p>Now fix an arbitrary \(n\) and give a proof by <em class="emphasis">strong</em> mathematical induction that \(P(m,n)\) holds for all \(m \ge 0\text{.}\)</p></li>
+<li><p>You can now conclude that \(P(m,n)\) holds for all \(m,n\ge 0\text{.}\) Do you believe that? Explain why this sort of induction is valid. For example, why do your proofs above guarantee that \(P(2,3)\) is true?</p></li>
+</ol></article><span class="incontext"><a href="sec_seq-induction.html#zXa">in-context</a></span>
 </body>
 </html>

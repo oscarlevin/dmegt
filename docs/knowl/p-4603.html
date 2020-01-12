@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:18:05-07:00    *-->
+<!--*    on 2020-01-12T09:55:51-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>To see why this works, try it on a copy of Pascal's triangle. We are adding up the entries along a diagonal, starting with the 1 on the left-hand side of the 4th row. Suppose we add up the first 5 entries on this diagonal. The claim is that the sum is the entry below and to the left of the last of these 5 entries. Note that if this is true, and we instead add up the first 6 entries, we will need to add the entry one spot to the right of the previous sum. But these two together give the entry below them, which is below and left of the last of the 6 entries on the diagonal. If you follow that, you can see what is going on. But it is not a great proof. A formal induction proof is needed.</p>
-<span class="incontext"><a href="sec_seq-induction.html#EVo">in-context</a></span>
+<p>The new constant term is just \(1 \cdot 1\text{.}\) The next term will be \(1\cdot 2 + 2 \cdot 1 = 4\text{.}\) The next term: \(1 \cdot 4 + 2 \cdot 2 + 3 \cdot 1 = 11\text{.}\) One more: \(1 \cdot 8 + 2 \cdot 4 + 3 \cdot 2 + 4 \cdot 1 = 28\text{.}\) The resulting sequence is</p>
+<div class="displaymath">
+\begin{equation*}
+1, 4, 11, 28, 57, \ldots\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="sec_addtops-genfun.html#fpc">in-context</a></span>
 </body>
 </html>

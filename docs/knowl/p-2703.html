@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:17:18-07:00    *-->
+<!--*    on 2020-01-12T09:55:01-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>\({14 \choose 7} = 3432\) paths.</p>
-<span class="incontext"><a href="sec_counting-binom.html#p-2703">in-context</a></span>
+<p>Here is another way to find the number of \(k\)-permutations of \(n\) elements: first select which \(k\) elements will be in the permutation, then count how many ways there are to arrange them. Once you have selected the \(k\) objects, we know there are \(k!\) ways to arrange (permute) them. But how do you select \(k\) objects from the \(n\text{?}\) You have \(n\) objects, and you need to <em class="emphasis">choose</em> \(k\) of them. You can do that in \({n \choose k}\) ways. Then for each choice of those \(k\) elements, we can permute <em class="emphasis">them</em> in \(k!\) ways. Using the multiplicative principle, we get another formula for \(P(n,k)\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+P(n,k) = {n \choose k}\cdot k!\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="sec_counting-combperm.html#Hbn">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:18:03-07:00    *-->
+<!--*    on 2020-01-12T09:55:48-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,13 +12,5 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like"><article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
-<p>We must prove that \(1 + 2 + 2^2 + 2^3 + \cdots +2^n = 2^{n+1} - 1\) for all \(n \in \N\text{.}\) Thus let \(P(n)\) be the statement \(1 + 2 + 2^2 + \cdots + 2^n = 2^{n+1} - 1\text{.}\) We will prove that \(P(n)\) is true for all \(n \in \N\text{.}\) First we establish the base case, \(P(0)\text{,}\) which claims that \(1 = 2^{0+1} -1\text{.}\) Since \(2^1 - 1 = 2 - 1 = 1\text{,}\) we see that \(P(0)\) is true. Now for the inductive case. Assume that \(P(k)\) is true for an arbitrary \(k \in \N\text{.}\) That is, \(1 + 2 + 2^2 + \cdots + 2^k = 2^{k+1} - 1\text{.}\) We must show that \(P(k+1)\) is true (i.e., that \(1 + 2 + 2^2 + \cdots + 2^{k+1} = 2^{k+2} - 1\)). To do this, we start with the left-hand side of \(P(k+1)\) and work to the right-hand side:</p>
-<div class="displaymath">
-\begin{align*}
-1 + 2 + 2^2 + \cdots + 2^k + 2^{k+1} = \amp ~ 2^{k+1} - 1 + 2^{k+1} \amp \text{by inductive hypothesis}\\
-= \amp ~2\cdot 2^{k+1} - 1 \amp\\
-= \amp ~ 2^{k+2} - 1 \amp
-\end{align*}
-</div>
-<p>Thus \(P(k+1)\) is true so by the principle of mathematical induction, \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article></div></body>
+<p>Let \(P(n)\) be the statement that \(n + 3 \lt n + 7\text{.}\) We will prove that \(P(n)\) is true for all \(n \in \N\text{.}\) First, note that the base case holds: \(0+3 \lt 0+7\text{.}\) Now assume for induction that \(P(k)\) is true. That is, \(k+3 \lt k+7\text{.}\) We must show that \(P(k+1)\) is true. Now since \(k + 3 \lt k + 7\text{,}\) add 1 to both sides. This gives \(k + 3 + 1 \lt k + 7 + 1\text{.}\) Regrouping \((k+1) + 3 \lt (k+1) + 7\text{.}\) But this is simply \(P(k+1)\text{.}\) Thus by the principle of mathematical induction \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article></div></body>
 </html>

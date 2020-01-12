@@ -87,7 +87,7 @@
     <idx>
       <h>vertices</h>
     </idx>
-      and lines connecting those dots called <term>edges</term>.
+      (singular: <term>vertex</term>) and lines connecting those dots called <term>edges</term>.
     <idx>
       <h>edges</h>
     </idx>
@@ -103,14 +103,18 @@
       It does not matter how big the islands are,
       what the bridges are made out of,
       if the river contains alligators, etc.
-      All that matters is which land masses are connected to which other land masses,
-      and how many times.
+      All that matters is which land masses are connected to which other land masses, and how many times.
           <!-- This was the great insight that Euler had. -->
   </p>
+</introduction>
+<subsection xml:id="subsec-gt-questions">
+  <title>Questions about Graphs</title>
+  <p>
+    Let's consider a few more typical problems about graphs, and the <q>real world</q> problems they help solve.  Along the way we will introduce a fair amount of vocabulary about graphs, which we will summarize at the end of the section.
+  </p>
 
-  <p permid="zoX">
-      We will return to the question of finding paths through graphs later.
-      But first, here are a few other situations you can represent with graphs:
+  <p>
+    Graphs are useful in describing relationships between things.  The <q>things</q> might be numbers, or people, or cities, for example.  The relationships will be equally varied, but for now, we will insist that the relationships need to go both ways.  That is, if <m>a</m> is related to <m>b</m>, we need <m>b</m> to be related to <m>a</m>.
   </p>
 
   <example permid="MII">
@@ -147,892 +151,100 @@
     </solution>
   </example>
 
-  <example permid="sPR">
-    <statement>
-      <p permid="OxV">
-          Each of three houses must be connected to each of three utilities.
-          Is it possible to do this without any of the utility lines crossing?
-      </p>
-    </statement>
-    <solution permid="pVl">
-      <p permid="CjD">
-          We will answer this question later.
-          For now, notice how we would ask this question in the context of graph theory.
-          We are really asking whether it is possible to redraw the graph below without any edges crossing
-          (except at vertices).
+
+<example permid="sPR">
+  <statement>
+    <p permid="OxV">
+      Each of three houses must be connected to each of three utilities.  What does the graph representing this situation look like?
+    </p>
+  </statement>
+  <solution permid="pVl">
+    <p permid="CjD">
           Think of the top row as the houses,
           bottom row as the utilities.
-      </p>
+    </p>
 
-      <sidebyside width="20%" permid="RsB">
+    <sidebyside width="20%" permid="RsB">
 
-        <image xml:id="gt-k33" permid="XRH">
+      <image xml:id="gt-k33" permid="XRH">
 
-          <latex-image> \begin{tikzpicture}[yscale=.8]
+        <latex-image> \begin{tikzpicture}[yscale=.8]
         \draw (-1,1) \v -- (-1,0)\v  -- (0,1) \v -- (0,0) \v -- (1,1) \v -- (1,0) \v -- (0,1) -- (-1,0) -- (1,1) (1,0) -- (-1,1) -- (0,0);
       \end{tikzpicture}
-          </latex-image>
-        </image>
-
-      </sidebyside>
-    </solution>
-  </example>
-</introduction>
-<subsection>
-  <title>Definitions</title>
-  <investigation permid="LpU">
-    <p permid="nbF">
-      Which (if any) of the graphs below are the same?
-    </p>
-
-    <sidebyside width="18%" margins="auto" valign="bottom" permid="VOZ">
-
-      <image permid="hWn">
-
-				<latex-image>
-					\begin{tikzpicture}
-	\coordinate (A) at (-1,0);
-	\coordinate (B) at (0,0);
-	\coordinate (C) at (1,0);
-	\coordinate (D) at (-.5,1);
-	\coordinate (E) at (.5,1);
-
-	\draw (A) -- (D) -- (B) -- (E) -- (C) -- (D) (A) -- (E);
-	\foreach \x in {(A), (B), (C), (D), (E)}{
-		\fill \x \v;
-	}
-	\end{tikzpicture}
-				</latex-image>
-      </image>
-
-      <image permid="Odw">
-
-				<latex-image>
-					\begin{tikzpicture}
-	\coordinate (A) at (90+360/5:1);
-	\coordinate (B) at (90+2*360/5:1);
-	\coordinate (C) at (90+3*360/5:1);
-	\coordinate (D) at (90+4*360/5:1);
-	\coordinate (E) at (90:1);
-
-	\draw (A) -- (B) -- (C) -- (D) -- (E) -- (A);
-	\foreach \x in {(A), (B), (C), (D), (E)}{
-		\fill \x \v;
-	}
-	\end{tikzpicture}
-				</latex-image>
-      </image>
-
-      <image permid="ukF">
-
-				<latex-image>
-					\begin{tikzpicture}
-	\coordinate (A) at (-1,0);
-	\coordinate (B) at (0,1);
-	\coordinate (C) at (0,0);
-	\coordinate (D) at (0,-1);
-	\coordinate (E) at (1,0);
-
-	\draw (A) -- (B) -- (E) -- (C) -- (A) -- (D) -- (E);
-	\foreach \x in {(A), (B), (C), (D), (E)}{
-		\fill \x \v;
-	}
-	\end{tikzpicture}
-				</latex-image>
-      </image>
-
-      <image permid="arO">
-
-				<latex-image>
-					\begin{tikzpicture}
-	\coordinate (A) at (90+360/5:1);
-	\coordinate (B) at (90+2*360/5:1);
-	\coordinate (C) at (90+3*360/5:1);
-	\coordinate (D) at (90+4*360/5:1);
-	\coordinate (E) at (90:1);
-
-	\draw (A) -- (C) -- (E) -- (B) -- (D) -- (A);
-	\foreach \x in {(A), (B), (C), (D), (E)}{
-		\fill \x \v;
-	}
-	\end{tikzpicture}
-				</latex-image>
-      </image>
-
-      <image permid="GyX">
-
-				<latex-image>
-					\begin{tikzpicture}
-	\coordinate (A) at (-1,0);
-	\coordinate (B) at (0,1);
-	\coordinate (C) at (0,0);
-	\coordinate (D) at (0,-1);
-	\coordinate (E) at (1,0);
-
-	\draw (A) -- (C) -- (B) (D) -- (C) -- (E);
-	\foreach \x in {(A), (B), (C), (D), (E)}{
-		\fill \x \v;
-	}
-	\end{tikzpicture}
-				</latex-image>
+        </latex-image>
       </image>
 
     </sidebyside>
 
-    <p permid="TiO">
-      The graphs above are unlabeled.
-      Usually we think of a graph as having a specific set of vertices.
-      Which (if any) of the graphs below are the same?
+  </solution>
+</example>
+
+    <p>
+      A natural question to ask about the houses and utilities graph is whether it would be possible to draw the graph without edges crossing.  This would be a reasonable request, so that city planers don't have to worry about the utility lines interfering with each other.  Of course in reality, we have three dimensions to work with.  But consider a computer motherboard, which connects various important components with wires smoldered to the board.  Can we connect the needed components without wires (literally) getting crossed?
     </p>
 
-    <sidebyside width="18%" margins="auto" valign="bottom" permid="BWi">
-
-      <image permid="mGg">
-
-				<latex-image>
-					\begin{tikzpicture}
-\coordinate (A) at (-1,0);
-\coordinate (B) at (-1, 1);
-\coordinate (C) at (0,0);
-\coordinate (D) at (0,1);
-\coordinate (E) at (1,0);
-\coordinate (F) at (1,1);
-
-\draw (A) node[below] {\(a\)} -- (B) node[above] {\(b\)} -- (C) node[below] {\(c\)} -- (D) node[above] {\(d\)} -- (E) node[below] {\(e\)} -- (F) node[above] {\(f\)} -- (C) (A) -- (D);
-\foreach \x in {(A), (B), (C), (D), (E), (F)}{
-	\fill \x \v;
-}
-\end{tikzpicture}
-				</latex-image>
-      </image>
-
-      <image permid="SNp">
-
-				<latex-image>
-					\begin{tikzpicture}
-\coordinate (A) at (-1,0);
-\coordinate (B) at (-1, 1);
-\coordinate (C) at (0,1);
-\coordinate (D) at (0,0);
-\coordinate (E) at (1,0);
-\coordinate (F) at (1,1);
-
-\draw (A) node[below] {\(a\)} -- (B) node[above] {\(b\)} -- (C) node[above] {\(c\)} -- (D) node[below] {\(d\)} -- (E) node[below] {\(e\)} -- (F) node[above] {\(f\)} -- (C) (A) -- (D);
-\foreach \x in {(A), (B), (C), (D), (E), (F)}{
-	\fill \x \v;
-}
-\end{tikzpicture}
-				</latex-image>
-      </image>
-
-      <image permid="yUy">
-
-				<latex-image>
-					\begin{tikzpicture}
-\coordinate (A) at (-1,0);
-\coordinate (B) at (-1, 1);
-\coordinate (C) at (0,0);
-\coordinate (D) at (0,1);
-\coordinate (E) at (1,0);
-\coordinate (F) at (1,1);
-
-\draw (A) node[below] {\(a\)} -- (B) node[above] {\(c\)} -- (C) node[below] {\(e\)} -- (D) node[above] {\(b\)} -- (E) node[below] {\(d\)} -- (F) node[above] {\(f\)} -- (C) (A) -- (D);
-\foreach \x in {(A), (B), (C), (D), (E), (F)}{
-	\fill \x \v;
-}
-\end{tikzpicture}
-				</latex-image>
-      </image>
-
-      <image permid="fbH">
-
-				<latex-image>
-					\begin{tikzpicture}
-\coordinate (A) at (-1,0);
-\coordinate (B) at (-1, 1);
-\coordinate (C) at (0,1);
-\coordinate (D) at (0,0);
-\coordinate (E) at (1,0);
-\coordinate (F) at (1,1);
-
-\draw (A) node[below] {\(v_6\)} -- (B) node[above] {\(v_1\)} -- (C) node[above] {\(v_2\)} -- (D) node[below] {\(v_5\)} -- (E) node[below] {\(v_4\)} -- (F) node[above] {\(v_3\)} -- (C) (A) -- (D);
-\foreach \x in {(A), (B), (C), (D), (E), (F)}{
-	\fill \x \v;
-}
-\end{tikzpicture}
-				</latex-image>
-      </image>
-
-    </sidebyside>
-
-    <p permid="zpX">
-      Actually, all the graphs we have seen above are just
-      <em>drawings</em> of graphs.
-      A graph is really an abstract mathematical object consisting of two sets <m>V</m> and <m>E</m> where <m>E</m> is a set of 2-element subsets of <m>V</m>.
-			Are the graphs below the same or different?
-      <dl width="narrow" permid="cof">
-        <li permid="UJG">
-          <title>Graph 1:</title>
-          <p permid="LZO">
-            <m>V = \{a, b, c, d, e\}</m>,
-          </p>
-
-          <p permid="sgX">
-            <m>E = \{\{a,b\}, \{a, c\}, \{a,d\}, \{a,e\}, \{b,c\}, \{d,e\}\}</m>.
-          </p>
-        </li>
-
-        <li permid="AQP">
-          <title>Graph 2:</title>
-          <p permid="Yog">
-            <m>V = \{v_1, v_2, v_3, v_4, v_5\}</m>,
-          </p>
-
-          <p permid="Evp">
-            <m>E = \{\{v_1, v_3\}, \{v_1, v_5\}, \{v_2, v_4\}, \{v_2, v_5\}, \{v_3, v_5\}, \{v_4, v_5\}\}</m>.
-          </p>
-        </li>
-      </dl>
-    </p>
-  </investigation>
-  <p permid="wvr">
-    Before we start studying graphs,
-    we need to agree upon what a graph is.  		While we almost always think of graphs as pictures
-    (dots connected by lines)
-    this is fairly ambiguous.
-    Do the lines need to be straight?
-    Does it matter how long the lines are or how large the dots are?
-    Can there be two lines connecting the same pair of dots?
-    Can one line connect three dots?
-  </p>
-
-  <p permid="cCA">
-    The way we avoid ambiguities in mathematics is to provide concrete and rigorous <em>definitions</em>.
-    Crafting good definitions is not easy,
-    but it is incredibly important.
-    The definition is the agreed upon starting point from which all truths in mathematics proceed.
-    Is there a graph with no edges?
-    We have to look at the definition to see if this is possible.
-  </p>
-
-  <p permid="IJJ">
-    We want our definition to be precise and unambiguous,
-    but it also must agree with our intuition for the objects we are studying.
-    It needs to be useful: we <em>could</em>
-    define a graph to be a six legged mammal,
-    but that would not let us solve any problems about bridges.
-    Instead, here is the (now) standard definition of a graph.
-  </p>
-
-  <assemblage permid="AgV">
-    <title>Graph Definition</title>
-    <p permid="rLy">
-      A <term>graph</term> is an ordered pair
-      <m>G = (V, E)</m> consisting of a nonempty set <m>V</m>
-      (called the <term>vertices</term>)
-      and a set <m>E</m>
-      (called the <term>edges</term>)
-      of two-element subsets of <m>V</m>.
-    </p>
-  </assemblage>
-
-  <p permid="oQS">
-    Strange.
-    Nowhere in the definition is there talk of dots or lines.
-    From the definition, a graph could be
-    <me permid="YCB">
-      (\{a,b,c,d\}, \{\{a,b\}, \{a,c\}, \{b,c\}, \{b,d\}, \{c,d\}\})
-    </me>.
-    Here we have a graph with four vertices
-    (the letters <m>a, b, c, d</m>)
-    and five edges (the pairs <m>\{a,b\}, \{a,c\}, \{b,c\}, \{b,d\}, \{c,d\})</m>).
-  </p>
-
-  <p permid="UYb">
-    Looking at sets and sets of 2-element sets is difficult to process.
-    That is why we often draw a representation of these sets.
-    We put a dot down for each vertex,
-    and connect two dots with a line precisely when those two vertices are one of the 2-element subsets in our set of edges.
-    Thus one way to draw the graph described above is this:
-  </p>
-
-  <sidebyside width="25%" permid="idr">
-
-    <image permid="LiQ">
-
-			<latex-image>
-				\begin{tikzpicture}[scale=0.7]
-	    \draw  (-1,1) \vl{\(a\)} -- (1,1) \vr{\(b\)} (-1,1) -- (-1,-1) \vl{\(c\)} -- (1,-1) \vr{\(d\)} -- (1,1) -- (-1,-1);
-	  \end{tikzpicture}
-			</latex-image>
-    </image>
-
-  </sidebyside>
-
-  <p permid="Bfk">
-    However we could also have drawn the graph differently.
-    For example either of these:
-  </p>
-
-  <sidebyside widths="20% 25%" margins="auto" valign="bottom" permid="OkA">
-
-    <image permid="rpZ">
-
-			<latex-image>
-				\begin{tikzpicture}[scale=0.7]
-	    \draw  (-1,1) \vl{\(a\)} -- (1,-1) \vr{\(b\)} (-1,1) -- (-1,-1) \vl{\(c\)} -- (1,1) \vr{\(d\)} -- (1,-1) -- (-1,-1);
-	  \end{tikzpicture}
-			</latex-image>
-    </image>
-
-    <image permid="Xxi">
-<!-- TODO: fix the lables to make them have the same baseline. -->
-			<latex-image>
-				\begin{tikzpicture}[scale=0.7]
-	    \draw  (-1.5,0) \v -- (-.5,0) \v (-1.5,0) .. controls (-.5,1) .. (.5,0) \v -- (1.5,0) \v .. controls (.5,1) .. (-.5,0) -- (.5,0);
-      {\footnotesize
-      \draw (-1.5, -.75) node[above]{\(a\)} (-.5,-.75) node[above]{\(b\)} (.5,-.75) node[above]{\(c\)} (1.5, -.75) node[above]{\(d\)};
-      }
-	  \end{tikzpicture}
-			</latex-image>
-    </image>
-
-  </sidebyside>
-
-  <p permid="hmt">
-    We should be careful about what it means for two graphs to be
-    <q>the same.</q> Actually,
-    given our definition, this is easy: Are the vertex sets equal?
-    Are the edge sets equal?
-    We know what it means for sets to be equal,
-    and graphs are nothing but a pair of two special sorts of sets.
-  </p>
-
-  <example permid="kXX">
-    <statement>
-      <p permid="xAK">
-        Are the graphs below equal?
-        <me permid="EJK">
-          G_1 = (\{a,b,c\}, \{\{a,b\}, \{b,c\}\}); \qquad G_2 = (\{a,b,c\}, \{\{a,c\}, \{c, b\}\})
-        </me>.
-      </p>
-    </statement>
-    <solution permid="XEm">
-      <p permid="PEo">
-        No.
-        Here the vertex sets of each graph are equal, which is a good start.
-        Also, both graphs have two edges.
-        In the first graph, we have edges <m>\{a,b\}</m> and <m>\{b,c\}</m>,
-        while in the second graph we have edges	<m>\{a,c\}</m> and 	<m>\{c,b\}</m>.
-        Now we do have <m>\{b,c\} = \{c,b\}</m>,
-        so that is not the problem.
-        The issue is that <m>\{a,b\} \ne \{a,c\}</m>.
-        Since the edge sets of the two graphs are not equal
-        (as sets),
-        the graphs are not equal
-        (as graphs).
-      </p>
-    </solution>
-  </example>
-
-  <p permid="NtC">
-    Even if two graphs are not <em>equal</em>,
-    they might be <em>basically</em> the same.
-    The graphs in the previous example could be drawn like this:
-  </p>
-
-  <sidebyside width="60%" permid="urJ">
-
-    <image permid="DEr">
-
-		 		<latex-image>
-
-					\begin{tikzpicture}
-					\draw (-3,0) \vb{\footnotesize $a$} -- (-2,0) \vb{\footnotesize $b$} -- (-1,0) \vb{\footnotesize $c$}  (3,0) \vb{\footnotesize $b$} -- (2,0) \vb{\footnotesize $c$} -- (1,0) \vb{$\footnotesize a$};
-					\node[above] at (-3,.5) {$G_1$} ;
-					\node[above] at (1, .5) {$G_2$};
-					\end{tikzpicture}
-
-		 		</latex-image>
-    </image>
-
-  </sidebyside>
-
-  <p permid="tAL">
-    Graphs that are basically the same
-    (but perhaps not equal)
-    are called <term>isomorphic</term>.
-    We will give a precise definition of this term after a quick example:
-  </p>
-
-  <example permid="Rfg">
-    <statement>
-      <p permid="dHT">
-        Consider the graphs:
-
-        <me permid="kQT">
-          G_1 = (V_1, E_1) \text{ where }
-          V_1 = \{a, b, c\} \text{ and } E_1 = \{\{a,b\}, \{a,c\}, \{b,c\}\};
-        </me>
-
-        <me permid="QYc">
-          G_2 = (V_2, E_2) \text{ where }
-          V_2 = \{u,v,w\} \text{ and }E_2 = \{\{u,v\}, \{u,w\}, \{v,w\}\}.
-        </me>
-      </p>
-
-      <p permid="JPc">
-        Are these graphs the same?
-      </p>
-    </statement>
-    <solution permid="DLv">
-      <p permid="vLx">
-        The two graphs are NOT equal.
-        It is enough to notice that <m>V_1 \ne V_2</m> since
-        <m>a \in V_1</m> but <m>a \notin V_2</m>.
-        However, both of these graphs consist of three vertices with edges connecting every pair of vertices.
-        We can draw them as follows:
-      </p>
-
-      <sidebyside width="25%" margins="auto" valign="bottom" permid="ayS">
-
-        <image permid="jLA">
-
-					<latex-image>
-						\begin{tikzpicture}
-	\draw  (90:1) \va{\(a\)} -- (210:1) \vl{\(b\)} -- (-30:1) \vr{\(c\)} -- (90:1);
-	\end{tikzpicture}
-					</latex-image>
-        </image>
-
-        <image permid="PSJ">
-
-					<latex-image>
-						\begin{tikzpicture}
-	\draw  (90:1) \va{\(u\)} -- (210:1) \vl{\(v\)} -- (-30:1) \vr{\(w\)} -- (90:1);
-	\end{tikzpicture}
-					</latex-image>
-        </image>
-
-      </sidebyside>
-
-      <p permid="bSG">
-        Clearly we want to say these graphs are basically the same,
-        so while they are not equal, they will be <em>isomorphic</em>.
-        We can rename the vertices of one graph and get the second graph as the result.
-      </p>
-    </solution>
-  </example>
-
-  <p permid="ZHU">
-    Intuitively, graphs are <term>isomorphic</term>
-        <idx><h>isomorphic</h></idx>
-    if they are basically the same, or better yet,
-    if they are the same except for the names of the vertices.
-    To make the concept of renaming vertices precise,
-    we give the following definitions:
-  </p>
-
-  <assemblage permid="goe">
-      <idx><h>isomorphic</h></idx>
-    <title>Isomorphic Graphs</title>
-    <p permid="XSH">
-      An <term>isomorphism</term>
-          <idx><h>isomorphism</h></idx>
-      between two graphs <m>G_1</m> and <m>G_2</m> is a bijection
-      <m>f:V_1 \to V_2</m> between the vertices of the graphs such that
-      <m>\{a,b\}</m> is an edge in <m>G_1</m> if and only if <m>\{f(a), f(b)\}</m> is an edge in <m>G_2</m>.
+    <p>
+      Graphs that can be drawn without edges crossing are called <term>planar</term> (since they can be nicely drawn in the <em>plane</em>).  A common question in graph theory is to determine whether a particular graph is planar or not. Also of interest is to discover properties that are true of all planar graphs.   
     </p>
 
-    <p permid="DZQ">
-      Two graphs are <term>isomorphic</term> if there is an isomorphism between them.
-      In this case we write <m>G_1 \isom G_2</m>.
-    </p>
-  </assemblage>
+    <question>
+      <statement>
+        <p>
+          How many colors do you need to color the states in the map below so that bordering states are colored differently?
+        </p>
+        <sidebyside width="40%" margins="auto" permid="cFn">
 
-  <p permid="FPd">
-    An isomorphism is simply a function which renames the vertices.
-    It must be a bijection so every vertex gets a new name.
-    These newly named vertices must be connected by edges precisely when they were connected by edges with their old names.
-  </p>
+          <image permid="uXm" xml:id="southwest-map">
 
-  <example permid="xmp">
-    <statement>
-      <p permid="pWl">
-        Decide whether the graphs <m>G_1 = (V_1, E_1)</m> and
-        <m>G_2 = (V_2, E_2)</m> are equal or isomorphic.
-      </p>
+            <latex-image> \begin{tikzpicture}[scale=.25]
+          \USA[every state={draw=white, line width = .7pt, fill=white}, CA={fill=gray}, NV={fill=gray},NM={fill=gray},AZ={fill=gray},UT={fill=gray},CO={fill=gray},TX={fill=gray},KS={fill=gray},OK={fill=gray}];
+          \end{tikzpicture}
+            </latex-image>
+          </image>
 
-      <p permid="Wdu">
-        <m>V_1 = \{a,b,c,d\}</m>,
-        <m>E_1 = \{\{a,b\}, \{a,c\}, \{a,d\}, \{c,d\}\}</m>
-      </p>
+        </sidebyside>
+      </statement>
+    </question>
 
-      <p permid="CkD">
-        <m>V_2 = \{a,b,c,d\}</m>,
-        <m>E_2 = \{\{a,b\}, \{a,c\}, \{b,c\}, \{c,d\}\}</m>
-      </p>
-    </statement>
-    <solution permid="jSE">
-      <p permid="HZP">
-        The graphs are NOT equal,
-        since <m>\{a,d\} \in E_1</m> but <m>\{a,d\} \notin E_2</m>.
-        However, since both graphs contain the same number of vertices and same number of edges,
-        they <em>might</em> be isomorphic
-        (this is not enough in most cases, but it is a good start).
-      </p>
-
-      <p permid="ogY">
-        We can try to build an isomorphism.
-        How about we say <m>f(a) = b</m>,
-        <m>f(b) = c</m>, <m>f(c) = d</m> and <m>f(d) = a</m>.
-        This is definitely a bijection,
-        but to make sure that the function is an isomorphism,
-        we must make sure it <em>respects the edge relation</em>.
-        In <m>G_1</m>,
-        vertices <m>a</m> and <m>b</m> are connected by an edge.
-        In <m>G_2</m>, <m>f(a) = b</m> and
-        <m>f(b) = c</m> are connected by an edge.
-        So far, so good, but we must check the other three edges.
-        The edge <m>\{a,c\}</m> in <m>G_1</m> corresponds to
-        <m>\{f(a),
-        f(c)\} = \{b,d\}</m>, but here we have a problem.
-        There is no edge between <m>b</m> and <m>d</m> in <m>G_2</m>.
-        Thus <m>f</m> is NOT an isomorphism.
-      </p>
-
-      <p permid="Uoh">
-        Not all hope is lost, however.
-        Just because <m>f</m> is not an isomorphism does not mean that there is no isomorphism at all.
-        We can try again.
-        At this point it might be helpful to draw the graphs to see how they should match up.
-      </p>
-
-      <sidebyside widths="23% 23%" margins="auto" valign="bottom" permid="GGb">
-
-        <image permid="vZS">
-
-						<latex-image>
-
-							\begin{tikzpicture}
-								\coordinate (a) at (90:1);
-								\coordinate (b) at (0:1);
-								\coordinate (c) at (-90:1);
-								\coordinate (d) at (180:1);
-
-								\draw (a) -- (b) (a) -- (c) (a) -- (d) (c) --(d);
-								\draw (a) \va{\footnotesize $a$} (b) \vr{\footnotesize $b$} (c)\vb{\footnotesize $c$} (d) \vl{\footnotesize $d$};
-								\node at (-1,1) {$G_1$:};
-							\end{tikzpicture}
-
-						</latex-image>
-        </image>
-
-        <image permid="chb">
-
-						<latex-image>
-
-							\begin{tikzpicture}
-								\coordinate (a) at (90:1);
-								\coordinate (b) at (0:1);
-								\coordinate (c) at (-90:1);
-								\coordinate (d) at (180:1);
-
-								\draw (a) -- (b) (a) -- (c) (b) -- (c) (c) --(d);
-								\draw (a) \va{\footnotesize $a$} (b) \vr{\footnotesize $b$} (c)\vb{\footnotesize $c$} (d) \vl{\footnotesize $d$};
-								\node at (-1,1) {$G_2$:};
-							\end{tikzpicture}
-
-						</latex-image>
-        </image>
-
-      </sidebyside>
-
-      <p permid="Avq">
-        Alternatively, notice that in <m>G_1</m>,
-        the vertex <m>a</m> is adjacent to every other vertex.
-        In <m>G_2</m>,
-        there is also a vertex with this property: <m>c</m>.
-        So build the bijection <m>g:V_1 \to V_2</m> by defining <m>g(a) = c</m> to start with.
-        Next, where should we send <m>b</m>?
-        In <m>G_1</m>,
-        the vertex <m>b</m> is only adjacent to vertex <m>a</m>.
-        There is exactly one vertex like this in <m>G_2</m>, namely <m>d</m>.
-        So let <m>g(b) = d</m>.
-        As for the last two, in this example, we have a free choice:
-        let <m>g(c) = b</m> and <m>g(d) = a</m>
-        (switching these would be fine as well).
-      </p>
-
-      <p permid="gCz">
-        We should check that this really is an isomorphism.
-        It is definitely a bijection.
-        We must make sure that the edges are respected.
-        The four edges in <m>G_1</m> are
-        <me permid="xfl">
-          \{a,b\}, \{a,c\}, \{a,d\}, \{c,d\}
-        </me>.
-      </p>
-
-      <p permid="MJI">
-        Under the proposed isomorphism these become
-        <me permid="dmu">
-          \{g(a), g(b)\}, \{g(a), g(c)\}, \{g(a), g(d)\}, \{g(c), g(d)\}
-        </me>
-        <me permid="JtD">
-          \{c,d\}, \{c,b\}, \{c,a\}, \{b,a\}
-        </me>,
-        which are precisely the edges in <m>G_2</m>.
-        Thus <m>g</m> is an isomorphism, so <m>G_1 \cong G_2</m>
-      </p>
-    </solution>
-  </example>
-
-  <p permid="lWm">
-    Sometimes we will talk about a graph with a special name
-    (like <m>K_n</m> or the <em>Peterson graph</em>)
-    or perhaps draw a graph without any labels.
-    In this case we are really referring to <em>all</em>
-    graphs isomorphic to any copy of that particular graph.
-    A collection of isomorphic graphs is often called an
-    <term>isomorphism class</term>.
-        <idx><h>isomorphism class</h></idx>
-    <fn>
-    This is not unlike geometry,
-    where we might have more than one copy of a particular triangle.
-    There instead of <em>isomorphic</em>
-    we say <em>congruent</em>.
-    </fn></p>
-
-  <p permid="Sdv">
-    There are other relationships between graphs that we care about,
-    other than equality and being isomorphic.
-    For example, compare the following pair of graphs:
-  </p>
-
-  <sidebyside width="20%" margins="auto" permid="mNk">
-
-    <image permid="Iok">
-
-			<latex-image>\begin{tikzpicture}
-			      \foreach \x in {0,...,6}
-			      \draw  (\x*60:1) \v -- (\x*60+60:1) -- (\x*60+180:1) -- cycle;
-			    \end{tikzpicture}</latex-image>
-    </image>
-
-    <image permid="ovt">
-
-			<latex-image>\begin{tikzpicture}
-			      \foreach \x in {0,...,4}
-			      \draw  (\x*90:1) \v -- (\x*90+90:1) -- (\x*90+180:1) -- cycle;
-			    \end{tikzpicture}</latex-image>
-    </image>
-
-  </sidebyside>
-
-  <p permid="ykE">
-    These are definitely not isomorphic,
-    but notice that the graph on the right looks like it might be part of the graph on the left,
-    especially if we draw it like this:
-  </p>
-
-  <sidebyside width="20%" permid="SUt">
-
-    <image permid="UCC">
-
-			 <latex-image>\begin{tikzpicture}
-						 \foreach \x in {0,...,6}
-						 \draw[very thin]  (\x*60:1) \v -- (\x*60+60:1) -- (\x*60+180:1) -- cycle;
-						 \draw[very thick] (0:1) -- (60:1) -- (180:1) -- (240:1) -- (0:1) -- (180:1) (60:1) -- (240:1);
-					 \end{tikzpicture}</latex-image>
-    </image>
-
-  </sidebyside>
-
-  <p permid="erN">
-    We would like to say that the smaller graph is a
-    <em>subgraph</em> of the larger.
-  </p>
-
-  <p permid="KyW">
-    We should give a careful definition of this.
-    In fact, there are two reasonable notions for what a subgraph should mean.
-  </p>
-
-  <assemblage permid="Mvn">
-    <title>Subgraphs</title>
-      <idx><h>subgraph</h></idx>
-    <p oldPERMID="cBa" permid="kgZ">
-      We say that <m>G' = (V', E')</m> is a <term>subgraph</term>
-      of <m>G = (V, E)</m>, and write <m>G' \subseteq G</m>,
-      provided <m>V' \subseteq V</m> and <m>E' \subseteq E</m>.
+    <p>
+      We can create a graph from the map above as follows: represent each state with a vertex, and make two vertices adjacent (i.e., put an edge between them) if the states the represent share a border.  Now coloring the map means coloring the vertices in such a way that adjacent vertices get different colors.  The smallest number of colors needed to color vertices in this way is called the <term>chromatic number</term> of the graph.  Interestingly, knowing that a graph is planar limits what the chromatic number can be, and the graph we get from a map will generally be planar.
     </p>
 
-    <p oldPERMID="IIj" permid="Qoi">
-      We say that <m>G' = (V', E')</m> is an
-      <term>induced subgraph</term>
-          <idx><h>subgraph</h><h>induced</h></idx>
-          <idx><h>induced subgraph</h></idx>
-      of <m>G = (V, E)</m> provided
-      <m>V' \subseteq V</m> and every edge in <m>E</m> whose vertices are still in <m>V'</m> is also an edge in <m>E'</m>.
+    <p>
+      Let's consider another real world application of graphs.
     </p>
-  </assemblage>
 
-  <p permid="qGf">
-    Notice that every induced subgraph is also an ordinary subgraph,
-    but not conversely.
-    Think of a subgraph as the result of deleting some vertices and edges from the larger graph.
-    For the subgraph to be an induced subgraph,
-    we can still delete vertices,
-    but now we only delete those edges that included the deleted vertices.
-  </p>
+    <question>
+      <statement>
+        <p>
+          Professor Nefario has invited 25 unsuspecting discrete math students to his estate for an evening of escape room fun.  Some of these students are already friends, but no student is friends with more than three other students.  The Professor wants to ensure that no friends are sent to the same escape room.  Can he be sure that four escape rooms will be enough?
+        </p>
+      </statement>
+    </question>
 
-  <example permid="dty">
-    <statement>
-      <p permid="irM">
-        Consider the graphs:
-      </p>
+    <p>
+      In the scenario above, we can use vertices to represent students, and use edges to represent friendships.  What should we make of the other information in the question?  We want to assign students to one of four rooms so that no room contains students who are friends.  Aha!  Let's color the vertices using the same rule as our map: adjacent vertices cannot be colored the same.  This insures that no two friends are the same room.  So we are asking: is the chromatic number of this graph no more than four?
+    </p>
 
-      <sidebyside widths="18% 18% 18% 18%" margins="auto" valign="bottom" permid="zbC">
-         <!-- valigns="bottom bottom bottom bottom"> -->
+    <p>
+      There is no reason to think that the friendship graph is planar, so perhaps our answer depends on the actual friendships in the particular situation.  It turns out that it doesn't.  We haven't used all our information yet: no student is friends with more than three other students.  The number of edges coming out of a vertex is called the <term>degree</term> of the vertex (a nicer way to say this is the the degree is the number of edges <term>incident</term> to the vertex).  Later we will see that knowing about the degrees of vertices in a graph can tell us something about the chromatic number.
+    </p>
 
-        <image permid="AJL">
+    <question xml:id="ques-odd-friends">
+      <statement>
+        <p>
+          Is it possible that among the 25 students, everyone has <em>exactly</em> three friends?
+        </p>
+      </statement>
+    </question>
 
-						<latex-image>\begin{tikzpicture}[yscale=.8]
-						      \draw  (-1,0) \vb{\footnotesize $a$} -- (0,0) \vb{\footnotesize $b$} -- (1,0) \vb{\footnotesize $c$} -- (.5,1) \vb{\footnotesize $e$} -- (0,0) -- (-.5,1) \vb{\footnotesize $d$} -- (0,2) \vb{\footnotesize $f$} -- (.5,1) -- (-.5,1) -- (-1,0);
-									\node[below] at (0,-.5) {$G_1$};
-						    \end{tikzpicture}</latex-image>
-        </image>
+    <p>
+      Another way to ask the above question is this: is there a graph with 25 vertices in which every vertex has degree 3?  Let's answer this right now.  No.
+    </p>
 
-        <image permid="gQU">
-
-						<latex-image>\begin{tikzpicture}[yscale=.8]
-									\draw  (-1,0) \vb{\footnotesize $a$} -- (0,0) \vb{\footnotesize $b$} -- (1,0) \vb{\footnotesize $c$}  (0,0) -- (-.5,1) \vb{\footnotesize $d$} (-.5,1) -- (-1,0);
-									\node[below] at (0,-.5) {$G_2$};
-								\end{tikzpicture}</latex-image>
-        </image>
-
-        <image permid="MYd">
-
-						<latex-image>\begin{tikzpicture}[yscale=.8]
-									\draw  (-1,0) \vb{\footnotesize $a$} (0,0) \vb{\footnotesize $b$} -- (1,0) \vb{\footnotesize $c$}  (0,0) -- (-.5,1) \vb{\footnotesize $d$} -- (0,2) \vb{\footnotesize $f$} (-1,0) -- (-.5,1);
-									\node[below] at (0,-.5) {$G_3$};
-								\end{tikzpicture}</latex-image>
-        </image>
-
-        <image permid="tfm">
-
-						<latex-image>\begin{tikzpicture}[yscale=.8]
-									\draw  (-1,0) \vb{\footnotesize $a$} -- (0,0) \vb{\footnotesize $b$} -- (1,0) \vb{\footnotesize $c$} -- (.5,1) (0,0) -- (-.5,1) \vb{\footnotesize $d$} -- (0,2) \vb{\footnotesize $f$} -- (.5,1) (-.5,1) -- (-1,0);
-									\node[below] at (0,-.5) {$G_4$};
-								\end{tikzpicture}</latex-image>
-        </image>
-
-      </sidebyside>
-
-      <p permid="OyV">
-        Here both <m>G_2</m> and <m>G_3</m> are subgraphs of <m>G_1</m>.
-        But only <m>G_2</m> is an <em>induced</em> subgraph.
-        Every edge in <m>G_1</m> that connects vertices in <m>G_2</m> is also an edge in <m>G_2</m>.
-        In <m>G_3</m>,
-        the edge <m>\{a,b\}</m> is in <m>E_1</m> but not <m>E_3</m>,
-        even though vertices <m>a</m> and <m>b</m> are in <m>V_3</m>.
-      </p>
-
-      <p permid="uGe">
-        The graph <m>G_4</m> is NOT a subgraph of <m>G_1</m>,
-        even though it looks like all we did is remove vertex <m>e</m>.
-        The reason is that in <m>E_4</m> we have the edge <m>\{c,f\}</m> but this is not an element of <m>E_1</m>,
-        so we don't have the required 	<m>E_4 \subseteq E_1</m>.
-      </p>
-    </statement>
-  </example>
-
-  <p permid="WNo">
-    Back to some basic graph theory definitions.
-    Notice that all the graphs we have drawn above have the property that no pair of vertices is connected more than once,
-    and no vertex is connected to itself.
-    Graphs like these are sometimes called <term>simple</term>,
-    although we will just call them <em>graphs</em>.
-    This is because our definition for a graph says that the edges form a set of 2-element subsets of the vertices.
-    Remember that it doesn't make sense to say a set contains an element more than once.
-    So no pair of vertices can be connected by an edge more than once.
-    Also, since each edge must be a set containing two vertices,
-    we cannot have a single vertex connected to itself by an edge.
-  </p>
-
-  <p permid="CUx">
-    That said, there are times we want to consider double
-    (or more)
-    edges and single edge loops.
-    For example,
-    the <q>graph</q> we drew for the Bridges of Königsberg problem had double edges because there really are two bridges connecting a particular island to the near shore.
-    We will call these objects <term>multigraphs</term>.
-        <idx><h>multigraph</h></idx>
-    This is a good name: a <em>multiset</em>
-    is a set in which we are allowed to include a single element multiple times.
-  </p>
-
-  <p permid="jbG">
-    The graphs above are also <term>connected</term>:
-        <idx><h>connected</h></idx>
-    you can get from any vertex to any other vertex by following some path of edges.
-    A graph that is not connected can be thought of as two separate graphs drawn close together.
-    For example,
-    the following graph is NOT connected because there is no path from <m>a</m> to <m>b</m>:
-  </p>
-
-  <sidebyside width="33%" permid="fiL">
-
-    <image xml:id="ex-gt-non-connected" permid="Zmv">
-
-			<latex-image>
-
-				\begin{tikzpicture}
-					\draw (-1.5,0) \vl{\footnotesize $a$} -- (-.5, 1) \v -- (.5, 0) \v -- (-.5,-1) \v -- cycle;
-					\draw (-.5,0) \v -- (.5,1) \v -- (1.5,0) \vr{\footnotesize $b$} -- (.5,-1) \v -- cycle;
-				\end{tikzpicture}
-
-			</latex-image>
-    </image>
-
-  </sidebyside>
-
-
-  <p permid="PiP">
-    Vertices in a graph do not always have edges between them.
-    If we add all possible edges,
-    then the resulting graph is called <term>complete</term>.
-        <idx><h>complete graph</h></idx>
-    That is, a graph is complete if every pair of vertices is connected by an edge.
-    Since a graph is determined completely by which vertices are adjacent to which other vertices,
-    there is only one complete graph with a given number of vertices.
-    We give these a special name: <m>K_n</m>
-
-    <notation>
-      <usage>K_n</usage>
-      <description>the complete graph on <m>n</m> vertices</description>
-    </notation>
-
-    is the complete graph on <m>n</m> vertices.
-  </p>
-
-  <p permid="vpY">
-    Each vertex in <m>K_n</m> is adjacent to <m>n-1</m> other vertices.
-    We call the number of edges emanating from a given vertex the
-    <term>degree</term> of that vertex.
-    So every vertex in <m>K_n</m> has degree <m>n-1</m>.
-    How many edges does <m>K_n</m> have?
-    One might think the answer should be <m>n(n-1)</m>,
-    since we count <m>n-1</m> edges <m>n</m> times
-    (once for each vertex).
-    However, each edge is incident to 2 vertices,
-    so we counted every edge exactly twice.
-    Thus there are <m>n(n-1)/2</m> edges in <m>K_n</m>.
-    Alternatively, we can say there are <m>{n \choose 2}</m> edges,
-    since to draw an edge we must choose 2 of the <m>n</m> vertices.
-  </p>
-
+    <p>
+      How do we know?  Consider this: if there were a graph with 25 vertices, all of degree 3, then how many edges would the graph have?  At first, we might guess 75, since each vertex is incident to three edges, so  <m>3\cdot 25 = 75</m>.  But we have counted every edge exactly twice, since each edge is incident to exactly two vertices.  So in fact, there would be <m>75/2 = 37.5</m> edges.  That cannot happen!
+    </p>
   <p permid="bxh">
     In general, if we know the degrees of all the vertices in a graph,
     we can find the number of edges.
@@ -1088,36 +300,7 @@
   </example>
 
   <p permid="zZR">
-    The handshake lemma also tells us what is not possible.  
-  </p>
-
-  <example permid="pHQ">
-    <statement>
-      <p permid="GUw">
-        At a recent math seminar, 9 mathematicians greeted each other by shaking hands.
-        Is it possible that each mathematician shook hands with exactly 7 people at the seminar?
-      </p>
-    </statement>
-    <solution permid="wgW">
-      <p permid="YYa">
-        It seems like this should be possible.
-        Each mathematician chooses one person to not shake hands with.
-        But this cannot happen.
-        We are asking whether a graph with 9 vertices can have each vertex have degree 7.
-        If such a graph existed,
-        the sum of the degrees of the vertices would be <m>9\cdot 7 = 63</m>.
-        This would be twice the number of edges (handshakes) resulting in a graph with <m>31.5</m> edges.
-        That is impossible.
-        Thus at least one
-        (in fact an odd number)
-        of the mathematicians must have shaken hands with an <em>even</em>
-        number of people at the seminar.
-      </p>
-    </solution>
-  </example>
-
-  <p permid="gha">
-    We can generalize the previous example to get the following proposition.<fn>A <term>proposition</term> is a general statement in mathematics, similar to a theorem, although generally of lesser importance.</fn> 
+    In our explanation of <xref ref="ques-odd-friends"/>, we used the handshake lemma to prove that something is impossible.  Generalizing this we get the following proposition.<fn>A <term>proposition</term> is a general statement in mathematics, similar to a theorem, although generally of lesser importance.</fn> 
   </p>
   
   <proposition xml:id="prop-evensum" permid="YJF">
@@ -1133,8 +316,119 @@
     </proof>
   </proposition>
 
+<!-- 
   <p permid="Moj">
     We will consider further applications of the handshake lemma in the exercises.
+  </p> -->
+
+  <p>
+    Let's conclude with a different sort of question about graphs.
+  </p>
+
+  <question xml:id="ques-four-vertex-count">
+    <statement>
+      <p>
+        How many different graphs are there with four vertices?
+      </p>
+    </statement>
+  </question>
+
+  <p>
+    At first, this might seem like a question purely about graphs, but it is easy enough to see how this would apply to a real world situation: You want to design a network using four routers as access points.  You could connect some or all pairs of routers using wired connections, or wireless connections.  How many different configurations are possible.
+  </p>
+
+  <p>
+    To fully answer <xref ref="ques-four-vertex-count"/>, we will first need to be more careful about how we define graphs and what it means for two graphs to be <q>different.</q>  We will do this in <xref ref="sec_gt-carefully"/> after we consider sets and functions, the tools needed to give these careful definitions.
+  </p>
+
+</subsection>
+
+ 
+<subsection>
+  <title>Types of graphs</title>
+  
+  <p>
+    Let's agree upon some more common terminology in discussing graphs and, in particular, particular types of graphs.
+  </p>
+
+  <p>
+    Some of the graphs we have seen in the examples above have the property that between any two vertices, there is at most one edge.  
+    Graphs like these are sometimes called <term>simple graphs</term>.  When a graph is allowed to have more than one edge between vertices, we might call it a <term>multigraph</term>.  We will decide later whether <q>graph</q> should always mean simple graph or can include multigraphs: this will be a consequence of the careful definition we choose.  Similarly, should we allow an edge to connect a vertex back to itself?  We might call a graph including these single edge loops a <term>pseudograph</term>.
+  </p>
+
+  <p permid="jbG">
+    Must it always be possible to travel from any vertex in a graph to any other vertex along some sequence of edges?  If so, we say the graph is <term>connected</term>.
+        <idx><h>connected</h></idx>
+    A graph that is not connected might look like two separate graphs drawn close together. 
+    For example,
+    the following graph is NOT connected because there is no path from <m>a</m> to <m>b</m>:
+  </p>
+
+  <sidebyside width="33%" permid="fiL">
+
+    <image xml:id="ex-gt-non-connected" permid="Zmv">
+
+			<latex-image>
+
+				\begin{tikzpicture}
+					\draw (-1.5,0) \vl{\footnotesize $a$} -- (-.5, 1) \v -- (.5, 0) \v -- (-.5,-1) \v -- cycle;
+					\draw (-.5,0) \v -- (.5,1) \v -- (1.5,0) \vr{\footnotesize $b$} -- (.5,-1) \v -- cycle;
+				\end{tikzpicture}
+
+			</latex-image>
+    </image>
+
+  </sidebyside>
+  <p>
+    We will want to say that the above graph is just one graph, that happens to have two <term>connected components</term>.  There is good reason to allow non-connected graphs: in a computer network, it is natural to ask whether every computer is connected to every other.  You might even want some computers on their own component (if you are developing network hacking software and don't want to destroy the entire network by mistake).
+  </p>
+
+  <p permid="PiP">
+    What is the largest number of edges you can have in a (simple) graph?
+    If we add all possible edges,
+    then the resulting graph is called <term>complete</term>.
+        <idx><h>complete graph</h></idx>
+    That is, a graph is complete provided all vertices are adjacent.  Everyone is friends with everyone else.  
+    We give these a special name: <m>K_n</m> 
+
+    <notation>
+      <usage>K_n</usage>
+      <description>the complete graph on <m>n</m> vertices</description>
+    </notation>
+
+    is the complete graph on <m>n</m> vertices.
+  </p>
+
+  <p permid="vpY">
+    Each vertex in <m>K_n</m> is adjacent to <m>n-1</m> other vertices, so the degree of each vertex is <m>n-1</m>.  The handshake lemma tells us how to find the number of edges:  the sum of the degrees is  <m>n(n-1)</m>,
+    since we count <m>n-1</m> edges <m>n</m> times
+    (once for each vertex).  This is twice the number of edges (since each edge is incident to 2 vertices,
+    so we counted every edge exactly twice).
+    Thus there are <m>n(n-1)/2</m> edges in <m>K_n</m>.
+  </p>
+
+  <p>
+    What about the other extreme: how few edges can a graph with <m>n</m> vertices have?  That's easy.  Since we didn't say that graph had to be connected, the answer is zero!  What if the graph had to be connected?  We will answer this question in <xref ref="sec_trees"/> when we study a special type of graph called a <term>tree</term>.  For now, we can at least say what this is.
+  </p>
+
+  <p>
+    We define a <term>tree</term> to be a <em>connected</em> graph with no <em>cycles</em>.  What should a cycle be?  This is a bit hard to define at this point, but the name should give a good idea what it means.  Is it possible to put your pencil on some vertex and trace along edges, moving around the graph, until you eventually get back to where you started?  The <q>path</q> you traced out is a <term>cycle</term> (strictly speaking, you must not have repeated any edges or vertices except your start/stop vertex).
+  </p>
+
+  <p>
+    The name <q>tree</q> is a good one: if you draw a connected graph with no cycles, it might very well look a bit like a tree, with edges branching out.  Trees don't grow back in on themselves (that would be a cycle in the graph).  We extend this analogy: the vertices of degree one in a tree are called <term>leaves</term>.  
+  </p>
+
+  <p>
+    If a graph contains no cycles but is not necessarily connected, we call the graph a <term>forest</term>.  What is each connected component of a forest?  A tree!
+  </p>
+
+  <p>
+    Some trees also get special names.  If the tree contains exactly two leaves and every other vertex has degree 2, then we call it a <term>path</term>.  We use the notation <m>P_n</m> to denote the path with <m>n</m> <em>edges</em> (this means that <m>P_n</m> contains <m>n+1</m> vertices).  On the other extreme, if a tree contains only one non-leaf, we call it a <term>star</term>, and use the notation <m>S_n</m> for the star with <m>n</m> leaves (so again, <m>n+1</m> vertices).
+  </p>
+
+  <p>
+    There are lots of other amusingly named graphs: caterpillar graphs, jellyfish graphs, comb graphs, wheel graphs, snarks, butterfly graphs, claw graphs, daisy graphs, lollipop graphs, ladder graphs, and tadpole graphs.  Even better, there is nothing stopping you from defining a new sort of graph and discovering its properties.
   </p>
 
   <p permid="svs">
@@ -1147,7 +441,7 @@
     then the graph is a <term>complete bipartite graph</term>,
     and gets a special name:
     <m>K_{m,n}</m>, where <m>|A| = m</m> and <m>|B| = n</m>.
-    The graph in the houses and utilities puzzle is <m>K_{3,3}</m>.
+    The graph in the houses and utilities puzzle is <m>K_{3,3}</m>.  Note: not all bipartite graphs are be <m>K_{m,n}</m>; those are only the complete bipartite graphs. 
   </p>
 
 	<!-- TODO: give picture example of bipartite and not bipartite graphs -->
@@ -1266,7 +560,7 @@
     <title>Graph Theory Definitions</title>
     <p permid="LEp">
       There are a lot of definitions to keep track of in graph theory.
-      Here is a glossary of the terms we have already used and will soon encounter.
+      Here is a glossary of the terms we have already used or will soon encounter.
       <dl width="medium" permid="oCx">
         <li permid="FAI">
           <title>Graph</title>
@@ -1301,7 +595,7 @@
         <li permid="xWj">
           <title>Complete bipartite graph</title>
           <p permid="BAJ">
-            A bipartite graph for which every vertex in the first set is adjacent to every vertex in the second set.
+            A bipartite graph for which every vertex in the first set is adjacent to every vertex in the second set.  Each bipartite graph is <m>K_{m,n}</m> for some <m>m</m> and <m>n</m>.
           </p>
         </li>
 
@@ -1309,7 +603,7 @@
           <title>Complete graph</title>
           <p permid="hHS">
               <idx><h>complete graph</h></idx>
-          A graph in which every pair of vertices is adjacent.
+          A graph in which every pair of vertices is adjacent.  We write <m>K_n</m> for the complete graph with <m>n</m> vertices.
           </p>
         </li>
 

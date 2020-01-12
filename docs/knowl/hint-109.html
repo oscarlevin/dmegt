@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:18:05-07:00    *-->
+<!--*    on 2020-01-12T09:55:49-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,10 +14,16 @@
 <body>
 <div class="hint solution-like">
 <h6 class="heading">
-<span class="type">Hint</span><span class="space"> </span><span class="codenumber">4.5.24.1</span><span class="period">.</span>
+<span class="type">Hint</span><span class="space"> </span><span class="codenumber">4.5.27.1</span><span class="period">.</span>
 </h6>
-<p>To see why this works, try it on a copy of Pascal's triangle. We are adding up the entries along a diagonal, starting with the 1 on the left-hand side of the 4th row. Suppose we add up the first 5 entries on this diagonal. The claim is that the sum is the entry below and to the left of the last of these 5 entries. Note that if this is true, and we instead add up the first 6 entries, we will need to add the entry one spot to the right of the previous sum. But these two together give the entry below them, which is below and left of the last of the 6 entries on the diagonal. If you follow that, you can see what is going on. But it is not a great proof. A formal induction proof is needed.</p>
+<p>For the inductive step, we know by the product rule for two functions that</p>
+<div class="displaymath">
+\begin{equation*}
+(f_1f_2f_3 \cdots f_k f_{k+1})' = (f_1f_2f_3\cdots f_k)'f_{k+1} + (f_1f_2f_3\cdots f_k)f_{k+1}'\text{.}
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec_seq-induction.html#osC">in-context</a></span>
+<p>Then use the inductive hypothesis on the first summand, and distribute.</p>
+</div>
+<span class="incontext"><a href="sec_seq-induction.html#tcv">in-context</a></span>
 </body>
 </html>

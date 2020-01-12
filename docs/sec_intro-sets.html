@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:16:18-07:00    *-->
+<!--*    on 2020-01-12T09:54:03-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -96,7 +96,7 @@ var js_version = 0.13;
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="http://discrete.openmathbooks.org/dmoi3.html" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="dmoi.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">early Graph Theory</span></a></h1>
+<h1 class="heading"><a href="dmegt.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">Early Graph Theory</span></a></h1>
 <p class="byline">Oscar Levin</p>
 </div>
 </div></div>
@@ -211,7 +211,7 @@ A = \{1, b, \{x, y, z\}, \emptyset\}\text{.}
 A = \{0, 2, 4, 6, \ldots\}\text{,}
 \end{equation*}
 </div>
-<p>but this is a little imprecise. A better way would be</p>
+<p data-braille="continuation">but this is a little imprecise. A better way would be</p>
 <div class="displaymath">
 \begin{equation*}
 A = \{x \in \N \st \exists n\in \N ( x = 2 n)\}\text{.}
@@ -332,7 +332,7 @@ A = \{x \in \N \st x\text{ is even} \}\text{.}
 \{1, 2, 3\} = \{1, 1+1, 1+1+1\} = \{I, II, III\} = \{1, 2, 3, 1+2\}
 \end{equation*}
 </div>
-<p>since these are all ways to write the set containing the first three positive integers (how we write them doesn't matter, just what they are).</p>
+<p data-braille="continuation">since these are all ways to write the set containing the first three positive integers (how we write them doesn't matter, just what they are).</p>
 <p id="OdW">What about the sets \(A = \{1, 2, 3\}\) and \(B = \{1, 2, 3, 4\}\text{?}\) Clearly \(A \ne B\text{,}\) but notice that every element of \(A\) is also an element of \(B\text{.}\) Because of this we say that \(A\) is a <em class="emphasis">subset</em>  of \(B\text{,}\) or in symbols \(A \subset B\) or \(A \subseteq B\text{.}\) Both symbols are read “is a subset of.” The difference is that sometimes we want to say that \(A\) is either equal to or is a subset of \(B\text{,}\) in which case we use \(\subseteq\text{.}\) This is analogous to the difference between \(\lt\) and \(\le\text{.}\)</p>
 <article class="example example-like" id="uNI"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="period">.</span>
@@ -401,21 +401,21 @@ A = \{x \in \N \st x\text{ is even} \}\text{.}
 C = A \cup B\text{,}
 \end{equation*}
 </div>
-<p>read, “\(C\) is the union of \(A\) and \(B\text{,}\)” means that the elements of \(C\) are exactly the elements which are either an element of \(A\) or an element of \(B\) (or an element of both). For example, if \(A = \{1, 2, 3\}\) and \(B = \{2, 3, 4\}\text{,}\) then \(A \cup B = \{1, 2, 3, 4\}\text{.}\)</p>
+<p data-braille="continuation">read, “\(C\) is the union of \(A\) and \(B\text{,}\)” means that the elements of \(C\) are exactly the elements which are either an element of \(A\) or an element of \(B\) (or an element of both). For example, if \(A = \{1, 2, 3\}\) and \(B = \{2, 3, 4\}\text{,}\) then \(A \cup B = \{1, 2, 3, 4\}\text{.}\)</p>
 <p id="mGG">The other common operation on sets is <dfn class="terminology">intersection</dfn>.  We write,</p>
 <div class="displaymath">
 \begin{equation*}
 C = A \cap B
 \end{equation*}
 </div>
-<p>and say, “\(C\) is the intersection of \(A\) and \(B\text{,}\)” when the elements in \(C\) are precisely those both in \(A\) and in \(B\text{.}\) So if \(A = \{1, 2, 3\}\) and \(B = \{2, 3, 4\}\text{,}\) then \(A \cap B = \{2, 3\}\text{.}\)</p>
+<p data-braille="continuation">and say, “\(C\) is the intersection of \(A\) and \(B\text{,}\)” when the elements in \(C\) are precisely those both in \(A\) and in \(B\text{.}\) So if \(A = \{1, 2, 3\}\) and \(B = \{2, 3, 4\}\text{,}\) then \(A \cap B = \{2, 3\}\text{.}\)</p>
 <p id="SNP">Often when dealing with sets, we will have some understanding as to what “everything” is. Perhaps we are only concerned with natural numbers. In this case we would say that our <dfn class="terminology">universe</dfn> is \(\N\text{.}\)  Sometimes we denote this universe by \(\U\text{.}\) Given this context, we might wish to speak of all the elements which are <em class="emphasis">not</em> in a particular set. We say \(B\) is the <dfn class="terminology">complement</dfn>  of \(A\text{,}\) and write,</p>
 <div class="displaymath">
 \begin{equation*}
 B = \bar A
 \end{equation*}
 </div>
-<p>when \(B\) contains every element not contained in \(A\text{.}\) So, if our universe is \(\{1, 2,\ldots, 9, 10\}\text{,}\) and \(A = \{2, 3, 5, 7\}\text{,}\) then \(\bar A = \{1, 4, 6, 8, 9,10\}\text{.}\)</p>
+<p data-braille="continuation">when \(B\) contains every element not contained in \(A\text{.}\) So, if our universe is \(\{1, 2,\ldots, 9, 10\}\text{,}\) and \(A = \{2, 3, 5, 7\}\text{,}\) then \(\bar A = \{1, 4, 6, 8, 9,10\}\text{.}\)</p>
 <p id="yUY">Of course we can perform more than one operation at a time. For example, consider</p>
 <div class="displaymath">
 \begin{equation*}
@@ -479,7 +479,7 @@ x \in A \cap B \qquad \Iff \qquad x \in A \wedge x \in B\text{.}
 x \in \bar A \qquad \Iff \qquad \neg (x \in A)\text{.}
 \end{equation*}
 </div>
-<p>which says \(x\) is an element of the complement of \(A\) if \(x\) is not an element of \(A\text{.}\)</p>
+<p data-braille="continuation">which says \(x\) is an element of the complement of \(A\) if \(x\) is not an element of \(A\text{.}\)</p>
 <p id="PTj">There is one more way to combine sets which will be useful for us: the <dfn class="terminology">Cartesian product</dfn>,  \(A \times B\text{.}\)  This sounds fancy but is nothing you haven't seen before. When you graph a function in calculus, you graph it in the Cartesian plane. This is the set of all ordered pairs of real numbers \((x,y)\text{.}\) We can do this for <em class="emphasis">any</em> pair of sets, not just the real numbers with themselves.</p>
 <p id="was">Put another way, \(A \times B = \{(a,b) \st a \in A \wedge b \in B\}\text{.}\) The first coordinate comes from the first set and the second coordinate comes from the second set. Sometimes we will want to take the Cartesian product of a set with itself, and this is fine: \(A \times A = \{(a,b) \st a, b \in A\}\) (we might also write \(A^2\) for this set). Notice that in \(A \times A\text{,}\) we still want <em class="emphasis">all</em> ordered pairs, not just the ones where the first and second coordinate are the same. We can also take products of 3 or more sets, getting ordered triples, or quadruples, and so on.</p>
 <article class="example example-like" id="zxB"><h6 class="heading">
@@ -515,115 +515,115 @@ x \in \bar A \qquad \Iff \qquad \neg (x \in A)\text{.}
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <a href="sec_intro-sets.html#DAA" class="permalink">¶</a><article class="exercise exercise-like" id="AUc"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-335">Let \(A = \{1, 4, 9\}\) and \(B = \{1, 3, 6, 10\}\text{.}\) Find each of the following sets.</p>
+<p id="p-269">Let \(A = \{1, 4, 9\}\) and \(B = \{1, 3, 6, 10\}\text{.}\) Find each of the following sets.</p>
 <ol class="lower-alpha">
-<li id="li-153"><p id="p-336">\(A \cup B\text{.}\)</p></li>
-<li id="li-154"><p id="p-338">\(A \cap B\text{.}\)</p></li>
-<li id="li-155"><p id="p-340">\(A \setminus B\text{.}\)</p></li>
-<li id="li-156"><p id="p-342">\(B \setminus A\text{.}\)</p></li>
+<li id="li-130"><p id="p-270">\(A \cup B\text{.}\)</p></li>
+<li id="li-131"><p id="p-272">\(A \cap B\text{.}\)</p></li>
+<li id="li-132"><p id="p-274">\(A \setminus B\text{.}\)</p></li>
+<li id="li-133"><p id="p-276">\(B \setminus A\text{.}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-1" id="answer-1"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-344">\(\left\{1,3,4,6,9,10\right\}\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-2" id="answer-2"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-345">\(\left\{1\right\}\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-3" id="answer-3"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-346">\(\left\{4,9\right\}\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-4" id="answer-4"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-347">\(\left\{3,6,10\right\}\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-21" id="solution-21"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-21"><div class="solution solution-like"><ol id="p-348" class="lower-alpha">
-<li id="li-157"><p id="p-349">\(\{1, 3, 4, 6, 9, 10\}\text{.}\)</p></li>
-<li id="li-158"><p id="p-350">\(\{1\}\text{.}\)</p></li>
-<li id="li-159"><p id="p-351">\(\{4,9\}\text{.}\)</p></li>
-<li id="li-160"><p id="p-352">\(\{3, 6, 10\}\text{.}\)</p></li>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-1" id="answer-1"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-278">\(\left\{1,3,4,6,9,10\right\}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-2" id="answer-2"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-279">\(\left\{1\right\}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-3" id="answer-3"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-280">\(\left\{4,9\right\}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-4" id="answer-4"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-281">\(\left\{3,6,10\right\}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like"><ol id="p-282" class="lower-alpha">
+<li id="li-134"><p id="p-283">\(\{1, 3, 4, 6, 9, 10\}\text{.}\)</p></li>
+<li id="li-135"><p id="p-284">\(\{1\}\text{.}\)</p></li>
+<li id="li-136"><p id="p-285">\(\{4,9\}\text{.}\)</p></li>
+<li id="li-137"><p id="p-286">\(\{3, 6, 10\}\text{.}\)</p></li>
 </ol></div></div>
 </div></article><article class="exercise exercise-like" id="hbl"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-368">Find the least element of each of the following sets, if there is one.</p>
+<p id="p-302">Find the least element of each of the following sets, if there is one.</p>
 <ol class="lower-alpha">
-<li id="li-169"><p id="p-369">\(\{n \in \N \st n^2 - 3 \ge 2\}\text{.}\)</p></li>
-<li id="li-170"><p id="p-371">\(\{n \in \N \st n^2 - 5 \in \N\}\text{.}\)</p></li>
-<li id="li-171"><p id="p-373">\(\{n^2+1 \st n \in \N\}\text{.}\)</p></li>
-<li id="li-172"><p id="p-375">\(\{n \in \N \st n = k^2 + 1 \text{ for some } k \in \N\}\text{.}\)</p></li>
+<li id="li-146"><p id="p-303">\(\{n \in \N \st n^2 - 3 \ge 2\}\text{.}\)</p></li>
+<li id="li-147"><p id="p-305">\(\{n \in \N \st n^2 - 5 \in \N\}\text{.}\)</p></li>
+<li id="li-148"><p id="p-307">\(\{n^2+1 \st n \in \N\}\text{.}\)</p></li>
+<li id="li-149"><p id="p-309">\(\{n \in \N \st n = k^2 + 1 \text{ for some } k \in \N\}\text{.}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-5" id="answer-5"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-377">\(3\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-6" id="answer-6"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-378">\(3\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-7" id="answer-7"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-379">\(1\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-8" id="answer-8"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-380">\(1\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-23" id="solution-23"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-23"><div class="solution solution-like"><ol id="p-381" class="lower-alpha">
-<li id="li-173"><p id="p-382">This is the set \(\{3, 4, 5, \ldots \}\) since we need each element to be a natural number whose square is at least three more than 2. Since \(3^2 - 3 = 6\) but \(2^2 - 3 = 1\) we see that the first such natural number is 3.</p></li>
-<li id="li-174">
-<p id="p-383">We get the same set as we did in the previous part, and the smallest non-negative number for which \(n^2 - 5\) is a natural numbers is 3.</p>
-<p id="p-384">Note that if we didn’t specify \(n \in \N\) then any integer less than \(-3\) would also be in the set, so there would not be a least element.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-5" id="answer-5"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-311">\(3\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-6" id="answer-6"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-312">\(3\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-7" id="answer-7"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-313">\(1\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-8" id="answer-8"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-314">\(1\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like"><ol id="p-315" class="lower-alpha">
+<li id="li-150"><p id="p-316">This is the set \(\{3, 4, 5, \ldots \}\) since we need each element to be a natural number whose square is at least three more than 2. Since \(3^2 - 3 = 6\) but \(2^2 - 3 = 1\) we see that the first such natural number is 3.</p></li>
+<li id="li-151">
+<p id="p-317">We get the same set as we did in the previous part, and the smallest non-negative number for which \(n^2 - 5\) is a natural numbers is 3.</p>
+<p id="p-318">Note that if we didn’t specify \(n \in \N\) then any integer less than \(-3\) would also be in the set, so there would not be a least element.</p>
 </li>
-<li id="li-175"><p id="p-385">This is the set \(\{1, 2, 5, 10, \ldots\}\text{,}\) namely the set of numbers that are the <em class="emphasis">result</em> of squaring and adding 1 to a natural number. (\(0^2 + 1 = 1\text{,}\) \(1^2 + 1 = 2\text{,}\) \(2^2 + 1 = 5\) and so on.) Thus the least element of the set is 1.</p></li>
-<li id="li-176"><p id="p-386">Now we are looking for natural numbers that are equal to taking some natural number, squaring it and adding 1. That is, \(\{1, 2, 5, 10, \ldots\}\text{,}\) the same set as the previous part. So again, the least element is 1.</p></li>
+<li id="li-152"><p id="p-319">This is the set \(\{1, 2, 5, 10, \ldots\}\text{,}\) namely the set of numbers that are the <em class="emphasis">result</em> of squaring and adding 1 to a natural number. (\(0^2 + 1 = 1\text{,}\) \(1^2 + 1 = 2\text{,}\) \(2^2 + 1 = 5\) and so on.) Thus the least element of the set is 1.</p></li>
+<li id="li-153"><p id="p-320">Now we are looking for natural numbers that are equal to taking some natural number, squaring it and adding 1. That is, \(\{1, 2, 5, 10, \ldots\}\text{,}\) the same set as the previous part. So again, the least element is 1.</p></li>
 </ol></div></div>
 </div></article><article class="exercise exercise-like" id="Niu"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-398">Find the following cardinalities:</p>
+<p id="p-332">Find the following cardinalities:</p>
 <ol class="lower-alpha">
-<li id="li-183"><p id="p-399">\(|A|\) when \(A = \{4,5,6,\ldots,37\}\text{.}\)</p></li>
-<li id="li-184"><p id="p-401">\(|A|\) when \(A = \{x \in \Z \st -2 \le x \le 100\}\text{.}\)</p></li>
-<li id="li-185"><p id="p-403">\(|A \cap B|\) when \(A = \{x \in \N \st x \le 20\}\) and \(B = \{x \in \N \st x \mbox{ is prime} \}\text{.}\)</p></li>
+<li id="li-160"><p id="p-333">\(|A|\) when \(A = \{4,5,6,\ldots,37\}\text{.}\)</p></li>
+<li id="li-161"><p id="p-335">\(|A|\) when \(A = \{x \in \Z \st -2 \le x \le 100\}\text{.}\)</p></li>
+<li id="li-162"><p id="p-337">\(|A \cap B|\) when \(A = \{x \in \N \st x \le 20\}\) and \(B = \{x \in \N \st x \mbox{ is prime} \}\text{.}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-9" id="answer-9"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-405">\(34\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-10" id="answer-10"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-406">\(103\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-11" id="answer-11"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><p id="p-407">\(8\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-25" id="solution-25"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-25"><div class="solution solution-like"><ol id="p-408" class="lower-alpha">
-<li id="li-186"><p id="p-409">34. Note that \(37-4 = 33\text{,}\) but this calculation would not include 4 itself.</p></li>
-<li id="li-187"><p id="p-410">103. Again, you could compute this by \(100-(-2)+1\text{,}\) or simply count: 100 numbers from 1 through 100, plus -2, -1, and 0.</p></li>
-<li id="li-188"><p id="p-411">8. There are 8 primes not greater than 20: \(\{2, 3, 5, 7, 11, 13, 17, 19\}\text{.}\)</p></li>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-9" id="answer-9"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-339">\(34\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-10" id="answer-10"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-340">\(103\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-11" id="answer-11"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><p id="p-341">\(8\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-19" id="solution-19"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like"><ol id="p-342" class="lower-alpha">
+<li id="li-163"><p id="p-343">34. Note that \(37-4 = 33\text{,}\) but this calculation would not include 4 itself.</p></li>
+<li id="li-164"><p id="p-344">103. Again, you could compute this by \(100-(-2)+1\text{,}\) or simply count: 100 numbers from 1 through 100, plus -2, -1, and 0.</p></li>
+<li id="li-165"><p id="p-345">8. There are 8 primes not greater than 20: \(\{2, 3, 5, 7, 11, 13, 17, 19\}\text{.}\)</p></li>
 </ol></div></div>
 </div></article><article class="exercise exercise-like" id="tpD"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-415">Find a set of largest possible size that is a subset of both \(\{1, 2, 3, 4, 5\}\) and \(\{2, 4, 6, 8,10\}\text{.}\)</p>
+<p id="p-349">Find a set of largest possible size that is a subset of both \(\{1, 2, 3, 4, 5\}\) and \(\{2, 4, 6, 8,10\}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-12" id="answer-12"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><p id="p-417">\(\left\{2,4\right\}\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-27" id="solution-27"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-27"><div class="solution solution-like"><p id="p-418">\(\{2,4\}\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-12" id="answer-12"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><p id="p-351">\(\left\{2,4\right\}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-21" id="solution-21"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-21"><div class="solution solution-like"><p id="p-352">\(\{2,4\}\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="ZwM"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-422">Find a set of smallest possible size that has both \(\{1,2,3,4,5\}\) and \(\{2,4,6,8,10\}\) as subsets.</p>
+<p id="p-356">Find a set of smallest possible size that has both \(\{1,2,3,4,5\}\) and \(\{2,4,6,8,10\}\) as subsets.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-13" id="answer-13"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-424">\(\left\{1,2,3,4,5,6,8,10\right\}\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-29" id="solution-29"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-29"><div class="solution solution-like"><p id="p-425">\(\{1,2,3,4,5,6,8,10\}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-13" id="answer-13"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-358">\(\left\{1,2,3,4,5,6,8,10\right\}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-23" id="solution-23"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-23"><div class="solution solution-like"><p id="p-359">\(\{1,2,3,4,5,6,8,10\}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="FDV"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<p id="p-428">Let \(A = \{n \in \N \st 20 \le n \lt 50\}\) and \(B = \{n \in \N \st 10 \lt n \le 30\}\text{.}\) Suppose \(C\) is a set such that \(C \subseteq A\) and \(C \subseteq B\text{.}\) What is the largest possible cardinality of \(C\text{?}\)</p>
+<p id="p-362">Let \(A = \{n \in \N \st 20 \le n \lt 50\}\) and \(B = \{n \in \N \st 10 \lt n \le 30\}\text{.}\) Suppose \(C\) is a set such that \(C \subseteq A\) and \(C \subseteq B\text{.}\) What is the largest possible cardinality of \(C\text{?}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-31" id="solution-31"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-31"><div class="solution solution-like"><p id="p-429">11.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-25" id="solution-25"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-25"><div class="solution solution-like"><p id="p-363">11.</p></div></div>
 </div></article><article class="exercise exercise-like" id="lLe"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<p id="p-434">Let \(A = \{1,2,3,4,5\}\) and \(B = \{2, 3, 4\}\text{.}\) How many sets \(C\) have the property that \(C \subseteq A\) and \(B \subseteq C\text{.}\)</p>
+<p id="p-368">Let \(A = \{1,2,3,4,5\}\) and \(B = \{2, 3, 4\}\text{.}\) How many sets \(C\) have the property that \(C \subseteq A\) and \(B \subseteq C\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-12" id="hint-12"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-12"><div class="hint solution-like"><p id="p-436">You should be able to write all of them out. Don’t forget \(A\) and \(B\text{,}\) which are also candidates for \(C\text{.}\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-14" id="answer-14"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><p id="p-437">\(4\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-33" id="solution-33"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-33"><div class="solution solution-like"><p id="p-438">There will be exactly 4 such sets: \(\{2, 3, 4\}\text{,}\) \(\{1,2,3,4\}\text{,}\) \(\{2,3,4,5\}\) and \(\{1,2,3,4,5\}\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-9" id="hint-9"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><p id="p-370">You should be able to write all of them out. Don’t forget \(A\) and \(B\text{,}\) which are also candidates for \(C\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-14" id="answer-14"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><p id="p-371">\(4\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-27" id="solution-27"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-27"><div class="solution solution-like"><p id="p-372">There will be exactly 4 such sets: \(\{2, 3, 4\}\text{,}\) \(\{1,2,3,4\}\text{,}\) \(\{2,3,4,5\}\) and \(\{1,2,3,4,5\}\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="RSn"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
-<p id="p-449">Let \(A = \{1,2,3,4,5\}\text{,}\) \(B = \{3,4,5,6,7\}\text{,}\) and \(C = \{2,3,5\}\text{.}\)</p>
+<p id="p-383">Let \(A = \{1,2,3,4,5\}\text{,}\) \(B = \{3,4,5,6,7\}\text{,}\) and \(C = \{2,3,5\}\text{.}\)</p>
 <ol class="lower-alpha">
-<li id="li-197"><p id="p-450">Find \(A \cap B\text{.}\)</p></li>
-<li id="li-198"><p id="p-452">Find \(A \cup B\text{.}\)</p></li>
-<li id="li-199"><p id="p-454">Find \(A \setminus B\text{.}\)</p></li>
-<li id="li-200"><p id="p-456">Find \(A \cap \overline{(B \cup C)}\text{.}\)</p></li>
+<li id="li-174"><p id="p-384">Find \(A \cap B\text{.}\)</p></li>
+<li id="li-175"><p id="p-386">Find \(A \cup B\text{.}\)</p></li>
+<li id="li-176"><p id="p-388">Find \(A \setminus B\text{.}\)</p></li>
+<li id="li-177"><p id="p-390">Find \(A \cap \overline{(B \cup C)}\text{.}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-15" id="answer-15"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><p id="p-458">\(\left\{3,4,5\right\}\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-16" id="answer-16"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-16"><div class="answer solution-like"><p id="p-459">\(\left\{1,2,3,4,5,6,7\right\}\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-17" id="answer-17"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-17"><div class="answer solution-like"><p id="p-460">\(\left\{1,2\right\}\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-18" id="answer-18"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-18"><div class="answer solution-like"><p id="p-461">\(\left\{1\right\}\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-35" id="solution-35"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-35"><div class="solution solution-like"><ol id="p-462" class="lower-alpha">
-<li id="li-201"><p id="p-463">\(A \cap B = \{3,4,5\}\text{.}\)</p></li>
-<li id="li-202"><p id="p-464">\(A \cup B = \{1,2,3,4,5,6,7\}\text{.}\)</p></li>
-<li id="li-203"><p id="p-465">\(A \setminus B = \{1,2\}\text{.}\)</p></li>
-<li id="li-204"><p id="p-466">\(A \cap \overline{(B \cup C)} = \{1\}\text{.}\)</p></li>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-15" id="answer-15"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><p id="p-392">\(\left\{3,4,5\right\}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-16" id="answer-16"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-16"><div class="answer solution-like"><p id="p-393">\(\left\{1,2,3,4,5,6,7\right\}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-17" id="answer-17"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-17"><div class="answer solution-like"><p id="p-394">\(\left\{1,2\right\}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-18" id="answer-18"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-18"><div class="answer solution-like"><p id="p-395">\(\left\{1\right\}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-29" id="solution-29"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-29"><div class="solution solution-like"><ol id="p-396" class="lower-alpha">
+<li id="li-178"><p id="p-397">\(A \cap B = \{3,4,5\}\text{.}\)</p></li>
+<li id="li-179"><p id="p-398">\(A \cup B = \{1,2,3,4,5,6,7\}\text{.}\)</p></li>
+<li id="li-180"><p id="p-399">\(A \setminus B = \{1,2\}\text{.}\)</p></li>
+<li id="li-181"><p id="p-400">\(A \cap \overline{(B \cup C)} = \{1\}\text{.}\)</p></li>
 </ol></div></div>
 </div></article><article class="exercise exercise-like" id="xZw"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
-<p id="p-476">Let \(A = \{x \in \N \st 4 \le x \lt 12\}\) and \(B = \{x \in \N \st x \text{ is even}\}\text{.}\)</p>
+<p id="p-410">Let \(A = \{x \in \N \st 4 \le x \lt 12\}\) and \(B = \{x \in \N \st x \text{ is even}\}\text{.}\)</p>
 <ol class="lower-alpha">
-<li id="li-209"><p id="p-477">Find \(A \cap B\text{.}\)</p></li>
-<li id="li-210"><p id="p-479">Find \(A \setminus B\text{.}\)</p></li>
+<li id="li-186"><p id="p-411">Find \(A \cap B\text{.}\)</p></li>
+<li id="li-187"><p id="p-413">Find \(A \setminus B\text{.}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-19" id="answer-19"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-19"><div class="answer solution-like"><p id="p-481">\(\left\{4,6,8,10\right\}\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-20" id="answer-20"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-20"><div class="answer solution-like"><p id="p-482">\(\left\{5,7,9,11\right\}\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-37" id="solution-37"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-37"><div class="solution solution-like"><ol id="p-483" class="lower-alpha">
-<li id="li-211"><p id="p-484">\(A \cap B\) will be the set of natural numbers that are both at least 4 and less than 12, and even. That is, \(A \cap B = \{x \in \N \st 4\le x \lt 12 \wedge x \text{ is even}\} = \{4, 6, 8, 10\}\text{.}\)</p></li>
-<li id="li-212">
-<p id="p-485">\(A \setminus B\) is the set of all elements that are in \(A\) but not \(B\text{.}\) So this is \(\{x \in \N \st 4 \le x \lt 12 \wedge x \text{ is odd}\} = \{5,7,9,11\}\text{.}\)</p>
-<p id="p-486">Note this is the same set as \(A \cap \overline{B}\text{.}\)</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-19" id="answer-19"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-19"><div class="answer solution-like"><p id="p-415">\(\left\{4,6,8,10\right\}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-20" id="answer-20"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-20"><div class="answer solution-like"><p id="p-416">\(\left\{5,7,9,11\right\}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-31" id="solution-31"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-31"><div class="solution solution-like"><ol id="p-417" class="lower-alpha">
+<li id="li-188"><p id="p-418">\(A \cap B\) will be the set of natural numbers that are both at least 4 and less than 12, and even. That is, \(A \cap B = \{x \in \N \st 4\le x \lt 12 \wedge x \text{ is even}\} = \{4, 6, 8, 10\}\text{.}\)</p></li>
+<li id="li-189">
+<p id="p-419">\(A \setminus B\) is the set of all elements that are in \(A\) but not \(B\text{.}\) So this is \(\{x \in \N \st 4 \le x \lt 12 \wedge x \text{ is odd}\} = \{5,7,9,11\}\text{.}\)</p>
+<p id="p-420">Note this is the same set as \(A \cap \overline{B}\text{.}\)</p>
 </li>
 </ol></div></div>
 </div></article><article class="exercise exercise-like" id="egF"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
@@ -710,12 +710,12 @@ x \in \bar A \qquad \Iff \qquad \neg (x \in A)\text{.}
 \end{align*}
 </div></div></div>
 </div></article><article class="exercise exercise-like" id="blZ"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
-<p id="p-523">Let \(A = \{1,2,\ldots, 10\}\text{.}\) How many subsets of \(A\) contain exactly one element (i.e., how many singleton subsets are there)? singleton set</p>
-<p id="p-525">How many doubleton subsets (containing exactly two elements) are there? doubleton set</p>
+<p id="p-457">Let \(A = \{1,2,\ldots, 10\}\text{.}\) How many subsets of \(A\) contain exactly one element (i.e., how many singleton subsets are there)? singleton set</p>
+<p id="p-459">How many doubleton subsets (containing exactly two elements) are there? doubleton set</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-16" id="hint-16"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-16"><div class="hint solution-like"><p id="p-527">Write these out, or at least start to and look for a pattern.</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-21" id="answer-21"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-21"><div class="answer solution-like"><p id="p-528">\(10\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-22" id="answer-22"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-22"><div class="answer solution-like"><p id="p-529">\(45\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-13" id="hint-13"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-13"><div class="hint solution-like"><p id="p-461">Write these out, or at least start to and look for a pattern.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-21" id="answer-21"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-21"><div class="answer solution-like"><p id="p-462">\(10\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-22" id="answer-22"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-22"><div class="answer solution-like"><p id="p-463">\(45\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="Hti"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
 <p id="EFT">Let \(A = \{1,2,3,4,5,6\}\text{.}\) Find all sets \(B \in \pow(A)\) which have the property \(\{2,3,5\} \subseteq B\text{.}\)</p></article><article class="exercise exercise-like" id="nAr"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
 <p id="kNc">Find an example of sets \(A\) and \(B\) such that \(|A| = 4\text{,}\) \(|B| = 5\text{,}\) and \(|A \cup B| = 9\text{.}\)</p>
@@ -724,11 +724,11 @@ x \in \bar A \qquad \Iff \qquad \neg (x \in A)\text{.}
 </div></article><article class="exercise exercise-like" id="THA"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
 <p id="QUl">Find an example of sets \(A\) and \(B\) such that \(|A| = 3\text{,}\) \(|B| = 4\text{,}\) and \(|A \cup B| = 5\text{.}\)</p></article><article class="exercise exercise-like" id="zOJ"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
 <p id="xbu">Are there sets \(A\) and \(B\) such that \(|A| = |B|\text{,}\) \(|A\cup B| = 10\text{,}\) and \(|A\cap B| = 5\text{?}\) Explain.</p></article><article class="exercise exercise-like" id="fVS"><h6 class="heading"><span class="codenumber">23<span class="period">.</span></span></h6>
-<p id="p-539">Let \(A = \{2, 4, 6, 8\}\text{.}\) Suppose \(B\) is a set with \(|B| = 5\text{.}\)</p>
+<p id="p-473">Let \(A = \{2, 4, 6, 8\}\text{.}\) Suppose \(B\) is a set with \(|B| = 5\text{.}\)</p>
 <ol class="lower-alpha">
-<li id="li-240"><p id="p-540">What are the smallest and largest possible values of \(|A \cup B|\text{?}\) Explain.</p></li>
-<li id="li-241"><p id="p-541">What are the smallest and largest possible values of \(|A \cap B|\text{?}\) Explain.</p></li>
-<li id="li-242"><p id="p-542">What are the smallest and largest possible values of \(|A \times B|\text{?}\) Explain.</p></li>
+<li id="li-217"><p id="p-474">What are the smallest and largest possible values of \(|A \cup B|\text{?}\) Explain.</p></li>
+<li id="li-218"><p id="p-475">What are the smallest and largest possible values of \(|A \cap B|\text{?}\) Explain.</p></li>
+<li id="li-219"><p id="p-476">What are the smallest and largest possible values of \(|A \times B|\text{?}\) Explain.</p></li>
 </ol></article><article class="exercise exercise-like" id="Mdb"><h6 class="heading"><span class="codenumber">24<span class="period">.</span></span></h6>
 <p id="JpM">Let \(X = \{n \in \N \st 10 \le n \lt 20\}\text{.}\) Find examples of sets with the properties below and very briefly explain why your examples work.</p>
 <ol class="lower-alpha">

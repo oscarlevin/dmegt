@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:16:48-07:00    *-->
+<!--*    on 2020-01-12T09:54:29-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,22 +14,15 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">1.4.4.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">1.4.10.1</span><span class="period">.</span>
 </h6>
-<p>The rule says that \(f(6) = f(5) + 11\) (we are using \(6 = n+1\) so \(n = 5\)). We don't know what \(f(5)\) is though. Well, we know that \(f(5) = f(4) + 9\text{.}\) So we need to compute \(f(4)\text{,}\) which will require knowing \(f(3)\text{,}\) which will require \(f(2)\text{,}\)… will it ever end?</p>
-<p>Yes! In fact, this process will always end because we have \(\N\) as our domain, so there is a least element. And we gave the value of \(f(0)\) explicitly, so we are good. In fact, we might decide to work up to \(f(6)\) instead of working down from \(f(6)\text{:}\)</p>
+<p>There is only one such function. We need five elements of the domain to map to the number \(7 \in \N\text{.}\) Since there are only five elements in the domain, all of them must map to 7. So</p>
 <div class="displaymath">
-\begin{align*}
-f(1) = \amp f(0) + 1 = \amp 0 + 1 = 1\\
-f(2) = \amp f(1) + 3 = \amp 1 + 3 = 4\\
-f(3) = \amp f(2) + 5 = \amp 4 + 5 = 9\\
-f(4) = \amp f(3) + 7 = \amp 9 + 7 = 16\\
-f(5) = \amp f(4) + 9 = \amp 16 + 9 = 25\\
-f(6) = \amp f(5) + 11 = \amp 25 + 11 = 36
-\end{align*}
+\begin{equation*}
+f = \begin{pmatrix}1 \amp 2 \amp 3 \amp 4 \amp 5 \\ 7 \amp 7 \amp 7 \amp 7 \amp 7\end{pmatrix}\text{.}
+\end{equation*}
 </div>
-<p>It looks that this recursively defined function is the same as the explicitly defined function \(f(n) = n^2\text{.}\) Is it? Later we will prove that it is.</p>
 </div>
-<span class="incontext"><a href="sec_intro-functions.html#esa">in-context</a></span>
+<span class="incontext"><a href="sec_intro-functions.html#Pjc">in-context</a></span>
 </body>
 </html>

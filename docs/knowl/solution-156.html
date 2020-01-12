@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:17:10-07:00    *-->
+<!--*    on 2020-01-12T09:54:51-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,31 +14,11 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.7.12.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.2.6.1</span><span class="period">.</span>
 </h6>
-<article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
-<p>We know in any planar graph the number of faces \(f\) satisfies \(3f \le 2e\) since each face is bounded by at least three edges, but each edge borders two faces. Combine this with Euler's formula:</p>
-<div class="displaymath">
-\begin{equation*}
-v - e + f = 2
-\end{equation*}
+<p>By now you should agree that the answer to the first question is \(9 \cdot 5 = 45\) and the answer to the second question is \(9 + 5 = 14\text{.}\) These are the multiplicative and additive principles. There are two events: picking a shirt and picking a pair of pants. The first event can happen in 9 ways and the second event can happen in 5 ways. To get both a shirt and a pair of pants, you multiply. To get just one article of clothing, you add.</p>
+<p>Now look at this using sets. There are two sets, call them \(S\) and \(P\text{.}\) The set \(S\) contains all 9 shirts so \(|S| = 9\) while \(|P| = 5\text{,}\) since there are 5 elements in the set \(P\) (namely your 5 pairs of pants). What are we asking in terms of these sets? Well in question 2, we really want \(|S \cup P|\text{,}\) the number of elements in the union of shirts and pants. This is just \(|S| + |P|\) (since there is no overlap; \(|S \cap P| = 0\)). Question 1 is slightly more complicated. Your first guess might be to find \(|S \cap P|\text{,}\) but this is not right (there is nothing in the intersection). We are not asking for how many clothing items are both a shirt and a pair of pants. Instead, we want one of each. We could think of this as asking how many pairs \((x,y)\) there are, where \(x\) is a shirt and \(y\) is a pair of pants. As we will soon verify, this number is \(|S| \cdot |P|\text{.}\)</p>
 </div>
-<div class="displaymath">
-\begin{equation*}
-v - e + \frac{2e}{3} \ge 2
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-3v - e \ge 6
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-3v - 6 \ge e\text{.}
-\end{equation*}
-</div></article>
-</div>
-<span class="incontext"><a href="sec_planar.html#gyi">in-context</a></span>
+<span class="incontext"><a href="sec_counting-addmult.html#heC">in-context</a></span>
 </body>
 </html>

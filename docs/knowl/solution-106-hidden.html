@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-07T19:17:00-07:00    *-->
+<!--*    on 2020-01-12T09:54:43-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,10 +11,40 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><ol class="lower-alpha">
-<li><p>The claim that \(\forall x P(x)\) means that \(P(n)\) is true no matter what \(n\) you consider in the domain of discourse. Thus the only way to prove that \(\forall x P(x)\) is true is to check or otherwise argue that \(P(n)\) is true for all \(n\) in the domain.</p></li>
-<li><p>To prove \(\forall x P(x)\) is false all you need is one example of an element in the domain for which \(P(n)\) is false. This is often called a <dfn class="terminology">counterexample</dfn>.</p></li>
-<li><p>We are simply claiming that there is some element \(n\) in the domain of discourse for which \(P(n)\) is true. If you can find one such element, you have verified the claim.</p></li>
-<li><p>Here we are claiming that no element we find will make \(P(n)\) true. The only way to be sure of this is to verify that <em class="emphasis">every</em> element of the domain makes \(P(n)\) false. Note that the level of proof needed for this statement is the same as to prove that \(\forall x P(x)\) is true.</p></li>
-</ol></div></body>
+<body><div class="solution solution-like">
+<p>Note that this statement is not \(\neg(P \vee Q)\text{,}\) the negation belongs to \(P\) alone. Here is the truth table:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(P\)</td>
+<td class="c m b1 r2 l0 t0 lines">\(Q\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\neg P\)</td>
+<td class="c m b1 r0 l0 t0 lines" data-braille="last-cell">\(\neg P \vee Q\)</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
+</tr>
+</table></div></div></div>
+<p>We added a column for \(\neg P\) to make filling out the last column easier. The entries in the \(\neg P\) column were determined by the entries in the \(P\) column. Then to fill in the final column, look only at the column for \(Q\) and the column for \(\neg P\) and use the rule for \(\vee\text{.}\)</p>
+</div></body>
 </html>
