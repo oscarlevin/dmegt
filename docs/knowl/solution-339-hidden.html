@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:16-07:00    *-->
+<!--*    on 2020-01-20T16:13:17-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,56 +12,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>The idea is to mimic how we found the formula for triangular numbers. If we add the first and last terms, we get 472. The second term and second-to-last term also add up to 472. To keep track of everything, we might express this as follows. Call the sum \(S\text{.}\) Then,</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
-<tr>
-<td class="r m b0 r0 l0 t0 lines">\(S  =\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(2\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(5\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(8\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(+ \cdots +\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(467\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">470</td>
-</tr>
-<tr>
-<td class="r m b1 r0 l0 t0 lines">\(+ \quad S  =\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(470\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(467\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(464\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(+ \cdots +\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(5\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b1 r0 l0 t0 lines" data-braille="last-cell">2</td>
-</tr>
-<tr>
-<td class="r m b0 r0 l0 t0 lines">\(2S  =\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(472\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(472\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(472\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(+ \cdots +\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(472\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">\(472\)</td>
-</tr>
-</table></div></div></div>
-<p>To find \(2S\) then we add 472 to itself a number of times. What number? We need to decide how many terms (<dfn class="terminology">summands</dfn>) are in the sum. Since the terms form an arithmetic sequence, the \(n\)th term in the sum (counting \(2\) as the 0th term) can be expressed as \(2 + 3n\text{.}\) If \(2 + 3n = 470\) then \(n = 156\text{.}\) So \(n\) ranges from 0 to 156, giving 157 terms in the sum. This is the number of 472's in the sum for \(2S\text{.}\) Thus</p>
+<p>This closed formula would have \(a_{n-1} = 3\cdot 2^{n-1} + 7 \cdot 5^{n-1}\) and \(a_{n-2} = 3\cdot 2^{n-2} + 7 \cdot 5^{n-2}\text{.}\) Then we would have</p>
 <div class="displaymath">
-\begin{equation*}
-2S = 157\cdot 472 = 74104\text{.}
-\end{equation*}
+\begin{align*}
+7a_{n-1} - 10a_{n-2} = \amp 7(3\cdot 2^{n-1} + 7 \cdot 5^{n-1}) - 10(3\cdot 2^{n-2} + 7 \cdot 5^{n-2})\\
+= \amp 21\cdot 2^{n-1} + 49 \cdot 5^{n-1} - 30\cdot 2^{n-2} - 70 \cdot 5^{n-2})\\
+= \amp 21\cdot 2^{n-1} + 49 \cdot 5^{n-1} - 15\cdot 2^{n-1} - 14 \cdot 5^{n-1})\\
+= \amp 6\cdot 2^{n-1} + 35 \cdot 5^{n-1}\\
+= \amp 3\cdot 2^{n} + 7 \cdot 5^{n} = a_n\text{.}
+\end{align*}
 </div>
-<p>It is now easy to find \(S\text{:}\)</p>
-<div class="displaymath">
-\begin{equation*}
-S = 74104/2 = 37052\text{.}
-\end{equation*}
-</div>
+<p data-braille="continuation">So the closed formula agrees with the recurrence relation. The closed formula has initial terms \(a_0 = 10\) and \(a_1 = 41\text{.}\)</p>
 </div></body>
 </html>

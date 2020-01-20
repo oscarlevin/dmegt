@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:00:52-07:00    *-->
+<!--*    on 2020-01-20T16:12:53-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,16 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Consider the binomial identity</p>
-<div class="displaymath">
-\begin{equation*}
-\binom{n}{1} + 2 \binom{n}{2} + 3 \binom{n}{3} + \cdots + n\binom{n}{n} = n2^{n-1}\text{.}
-\end{equation*}
-</div>
-<ol class="lower-alpha">
-<li><p>Give a combinatorial proof of this identity.  Hint: What if some number of a group of \(n\) people wanted to go to an escape room, and among those going, one needed to be the team captain?</p></li>
-<li><p>Give an alternate proof by multiplying out \((1+x)^n\) and taking derivatives of both sides.</p></li>
-</ol>
-<span class="incontext"><a href="sec_comb-proofs.html#XUU">in-context</a></span>
+<p>You can also prove (explain) this identity using bit strings, subsets, or lattice paths. The bit string argument is nice: \({n \choose k}\) counts the number of bit strings of length \(n\) with \(k\) 1's. This is also the number of bit string of length \(n\) with \(k\) 0's (just replace each 1 with a 0 and each 0 with a 1). But if a string of length \(n\) has \(k\) 0's, it must have \(n-k\) 1's. And there are exactly \({n\choose n-k}\) strings of length \(n\) with \(n-k\) 1's.</p>
+<span class="incontext"><a href="sec_comb-proofs.html#lmf">in-context</a></span>
 </body>
 </html>

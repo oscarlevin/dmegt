@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:26-07:00    *-->
+<!--*    on 2020-01-20T16:13:26-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,19 +13,16 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Actually, we will not make a sequence of questions, but rather a sequence of statements. Let \(P(n)\)  be the statement “you can make \(n\) cents of postage using just 8-cent and 5-cent stamps.” Since for each value of \(n\text{,}\) \(P(n)\) is a statement, it is either true or false. So if we form the sequence of statements</p>
+<p>Now use this equation over and over again, changing \(n\) each time:</p>
 <div class="displaymath">
-\begin{equation*}
-P(1), P(2), P(3), P(4), \ldots\text{,}
-\end{equation*}
+\begin{align*}
+a_1 - a_0 \amp = 1\\
+a_2 - a_1 \amp = 2\\
+a_3 - a_2 \amp = 3\\
+\vdots \quad \amp \quad \vdots\\
+a_n - a_{n-1} \amp = n\text{.}
+\end{align*}
 </div>
-<p data-braille="continuation">the sequence will consist of \(T\)'s (for true) and \(F\)'s (for false). In our particular case the sequence starts</p>
-<div class="displaymath">
-\begin{equation*}
-F,F,F,F,T,F,F,T,F,T,F,F,T,\ldots
-\end{equation*}
-</div>
-<p data-braille="continuation">because \(P(1), P(2), P(3), P(4)\) are all false (you cannot make 1, 2, 3, or 4 cents of postage) but \(P(5)\) is true (use one 5-cent stamp), and so on.</p>
-<span class="incontext"><a href="sec_seq-induction.html#AwD">in-context</a></span>
+<span class="incontext"><a href="sec_recurrence.html#vFG">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:30-07:00    *-->
+<!--*    on 2020-01-20T16:13:29-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,7 +12,12 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage assemblage-like"><h6 class="heading"><span class="title">\(1,1,1,\ldots\).</span></h6>
-<p>The generating function for \(1,1,1,1,1,1,\ldots\) is \(\dfrac{1}{1-x}\)</p></article><span class="incontext"><a href="sec_addtops-genfun.html#bKC">in-context</a></span>
+<article class="assemblage assemblage-like"><h6 class="heading"><span class="title">Induction Proof Structure.</span></h6>
+<p> Start by saying what the statement is that you want to prove: “Let \(P(n)\) be the statement…” To prove that \(P(n)\) is true for all \(n \ge 0\text{,}\) you must prove two facts:</p>
+<ol class="decimal">
+<li><p>Base case: Prove that \(P(0)\) is true. You do this directly. This is often easy.</p></li>
+<li><p>Inductive case: Prove that \(P(k) \imp P(k+1)\) for all \(k \ge 0\text{.}\) That is, prove that for any \(k \ge 0\) if \(P(k)\) is true, then \(P(k+1)\) is true as well. This is the proof of an if … then … statement, so you can assume \(P(k)\) is true (\(P(k)\) is called the <em class="emphasis">inductive hypothesis</em>).  You must then explain why \(P(k+1)\) is also true, given that assumption.</p></li>
+</ol>
+<p>Assuming you are successful on both parts above, you can conclude, “Therefore by the principle of mathematical induction, the statement \(P(n)\) is true for all \(n \ge 0\text{.}\)”</p></article><span class="incontext"><a href="sec_seq-induction.html#UaZ">in-context</a></span>
 </body>
 </html>

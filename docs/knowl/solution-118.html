@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:00:30-07:00    *-->
+<!--*    on 2020-01-20T16:12:31-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,15 +14,29 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.8.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.9.1</span><span class="period">.</span>
 </h6>
-<ol class="lower-alpha">
-<li>\(P \wedge Q\text{.}\)</li>
-<li>\((\neg P \vee \neg R) \imp (Q \vee \neg R)\) or, replacing the implication with a disjunction first: \((P \wedge Q) \vee (Q \vee \neg R)\text{.}\)</li>
-<li><p>\((P \wedge Q) \wedge (R \wedge \neg R)\text{.}\) This is necessarily false, so it is also equivalent to \(P \wedge \neg P\text{.}\)</p></li>
-<li><p>Either Sam is a woman and Chris is a man, or Chris is a woman.</p></li>
-</ol>
+<p>These statements are NOT logically equivalent. To see this, we should provide an interpretation of the predicate \(P(x,y)\) which makes one of the statements true and the other false.</p>
+<p>Let \(P(x,y)\) be the predicate \(x \lt y\text{.}\) It is true, in the natural numbers, that for all \(x\) there is some \(y\) greater than that \(x\) (since there are infinitely many numbers). However, there is not a natural number \(y\) which is greater than every number \(x\text{.}\) Thus it is possible for \(\forall x \exists y P(x,y)\) to be true while \(\exists y \forall x P(x,y)\) is false.</p>
+<p>We cannot do the reverse of this though. If there is some \(y\) for which every \(x\) satisfies \(P(x,y)\text{,}\) then certainly for every \(x\) there is some \(y\) which satisfies \(P(x,y)\text{.}\) The first is saying we can find one \(y\) that works for every \(x\text{.}\) The second allows different \(y\)'s to work for different \(x\)'s, but there is nothing preventing us from using the same \(y\) that work for every \(x\text{.}\) In other words, while we don't have logical equivalence between the two statements, we do have a valid deduction rule:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines" data-braille="last-cell">\(\exists y \forall x P(x,y)\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">\(\therefore\)</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">\(\forall x \exists y P(x,y)\)</td>
+</tr>
+</table></div></div></div>
+<p>Put yet another way, this says that the single statement</p>
+<div class="displaymath">
+\begin{equation*}
+\exists y \forall x P(x,y) \imp \forall x \exists y P(x,y)
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec_propositional.html#mhq">in-context</a></span>
+<p data-braille="continuation">is always true. This is sort of like a tautology, although we reserve that term for necessary truths in propositional logic. A statement in predicate logic that is necessarily true gets the more prestigious designation of a <dfn class="terminology">law of logic</dfn>  (or sometimes <dfn class="terminology">logically valid</dfn>,  but that is less fun).</p>
+</div>
+<span class="incontext"><a href="sec_propositional.html#hPW">in-context</a></span>
 </body>
 </html>

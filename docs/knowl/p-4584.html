@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:31-07:00    *-->
+<!--*    on 2020-01-20T16:13:31-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,14 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We have seen how to find generating functions from \(\frac{1}{1-x}\) using multiplication (by a constant or by \(x\)), substitution, addition, and differentiation. To use each of these, you must notice a way to transform the sequence \(1,1,1,1,1\ldots\) into your desired sequence. This is not always easy. It is also not really the way we have analyzed sequences. One thing we have considered often is the sequence of differences between terms of a sequence. This will turn out to be helpful in finding generating functions as well. The sequence of differences is often simpler than the original sequence. So if we know a generating function for the differences, we would like to use this to find a generating function for the original sequence.</p>
-<span class="incontext"><a href="sec_addtops-genfun.html#Yux">in-context</a></span>
+<p>We must prove that \(1 + 2 + 2^2 + 2^3 + \cdots +2^n = 2^{n+1} - 1\) for all \(n \in \N\text{.}\) Thus let \(P(n)\) be the statement \(1 + 2 + 2^2 + \cdots + 2^n = 2^{n+1} - 1\text{.}\) We will prove that \(P(n)\) is true for all \(n \in \N\text{.}\) First we establish the base case, \(P(0)\text{,}\) which claims that \(1 = 2^{0+1} -1\text{.}\) Since \(2^1 - 1 = 2 - 1 = 1\text{,}\) we see that \(P(0)\) is true. Now for the inductive case. Assume that \(P(k)\) is true for an arbitrary \(k \in \N\text{.}\) That is, \(1 + 2 + 2^2 + \cdots + 2^k = 2^{k+1} - 1\text{.}\) We must show that \(P(k+1)\) is true (i.e., that \(1 + 2 + 2^2 + \cdots + 2^{k+1} = 2^{k+2} - 1\)). To do this, we start with the left-hand side of \(P(k+1)\) and work to the right-hand side:</p>
+<div class="displaymath">
+\begin{align*}
+1 + 2 + 2^2 + \cdots + 2^k + 2^{k+1} = \amp ~ 2^{k+1} - 1 + 2^{k+1} \amp \text{by inductive hypothesis}\\
+= \amp ~2\cdot 2^{k+1} - 1 \amp\\
+= \amp ~ 2^{k+2} - 1 \amp
+\end{align*}
+</div>
+<span class="incontext"><a href="sec_seq-induction.html#QzM">in-context</a></span>
 </body>
 </html>

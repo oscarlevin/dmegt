@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<exercises xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="exercises_gt-intro" permid="QMu">
+<exercises xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="exercises_gt-carefully" permid="QMu">
 
 
   <exercise permid="gcw">
@@ -120,7 +120,7 @@
             </sidebyside>
 
             <p permid="yuv">
-              Does <m>f</m> define an isomorphism between Graph 1 and Graph 2?
+              Does <m>f</m> define an isomorphism between Graph 1 and Graph 2?  Explain.
             </p>
           </li>
 

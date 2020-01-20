@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:00:54-07:00    *-->
+<!--*    on 2020-01-20T16:12:56-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -16,11 +16,19 @@
 <h6 class="heading">
 <span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.6.2.1</span><span class="period">.</span>
 </h6>
-<ol class="lower-alpha">
-<li><p>There are \({7 \choose 5}\) numbers. We simply choose five of the seven digits and once chosen put them in increasing order.</p></li>
-<li><p>This requires stars and bars. Use a star to represent each of the 5 digits in the number, and use their position relative to the bars to say what numeral fills that spot. So we will have 5 stars and 6 bars, giving \({11 \choose 6}\) numbers.</p></li>
-</ol>
+<p>We need to decide on 7 digits so we will use 7 stars. The bars will represent a switch from each possible single digit number down to the next smaller one. So the phone number 866-5221 is represented by the stars and bars chart</p>
+<div class="displaymath">
+\begin{equation*}
+|*||**|*|||**|*|\text{.}
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec_stars-and-bars.html#solution-239">in-context</a></span>
+<p>There are 10 choices for each digit (0-9) so we must switch between choices 9 times. We have 7 stars and 9 bars, so the total number of phone numbers is</p>
+<div class="displaymath">
+\begin{equation*}
+{16 \choose 9}\text{.}
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="sec_stars-and-bars.html#npN">in-context</a></span>
 </body>
 </html>

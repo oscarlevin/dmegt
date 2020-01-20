@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:04-07:00    *-->
+<!--*    on 2020-01-20T16:13:04-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,10 +14,15 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.8.4.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.8.1.1</span><span class="period">.</span>
 </h6>
-<p>You own 8 purple bow ties,  3 red bow ties, 3 blue bow ties and 5 green bow ties. How many ways can you select one of each color bow tie to take with you on a trip? \(8 \cdot 3 \cdot 3 \cdot 5\) ways. How many choices do you have for a single bow tie to wear tomorrow? \(8 + 3 + 3 + 5\) choices.</p>
+<ol class="lower-alpha">
+<li>\({8 \choose 5}\) ways, after giving one present to each kid, you are left with 5 presents (stars) which need to be divide among the 4 kids (giving 3 bars).</li>
+<li>\({12 \choose 9}\) ways. You have 9 stars and 3 bars.</li>
+<li>\(4^9\text{.}\) You have 4 choices for whom to give each present. This is like making a function from the set of presents to the set of kids.</li>
+<li>\(4^9 - \left[{4 \choose 1}3^9 - {4\choose 2}2^9 + {4 \choose 3}1^9 \right]\) ways. Now the function from the set of presents to the set of kids must be surjective.</li>
+</ol>
 </div>
-<span class="incontext"><a href="sec_count-conc.html#aAS">in-context</a></span>
+<span class="incontext"><a href="sec_count-conc.html#ifr">in-context</a></span>
 </body>
 </html>

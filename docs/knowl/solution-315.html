@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:09-07:00    *-->
+<!--*    on 2020-01-20T16:13:11-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,14 +14,10 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.8.17.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.8.14.1</span><span class="period">.</span>
 </h6>
-<ol class="lower-alpha">
-<li><p>\(5^4 + 5^4 - 5^3\) functions.</p></li>
-<li><p>\(4\cdot 5^4 + 5 \cdot 4 \cdot 5^3 - 4 \cdot 4 \cdot 5^3\) functions.</p></li>
-<li><p>\(5! - \left[ 4! + 4! - 3! \right]\) functions. Note we use factorials instead of powers because we are looking for injective functions.</p></li>
-<li><p>Note that being surjective here is the same as being injective, so we can start with all \(5!\) injective functions and subtract those which have one or more “fixed point”. We get \(5! - \left[{5 \choose 1}4! - {5 \choose 2}3! + {5 \choose 3}2! - {5 \choose 4}1! + {5 \choose 5} 0!\right]\) functions.</p></li>
-</ol>
+<p>There are 4 spots to start the word, and then there are \(3!\) ways to arrange the other letters in the remaining three spots. Thus the number of words avoiding the sub-word “bad” in consecutive letters is \(6! - 4\cdot 3!\text{.}\)</p>
+<p>If we now need to avoid words that put “b” before “a” before “d”, we must choose which spots those letters go (in that order) and then arrange the remaining three letters. Thus, \(6! - {6 \choose 3}3!\) words.</p>
 </div>
 <span class="incontext"><a href="sec_count-conc.html#solution-315">in-context</a></span>
 </body>

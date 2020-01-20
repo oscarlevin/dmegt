@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:00-07:00    *-->
+<!--*    on 2020-01-20T16:13:03-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,10 +14,16 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.7.9.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.7.5.1</span><span class="period">.</span>
 </h6>
-<p>\({10 \choose 6}\left(4! - \left[{4 \choose 1} 3! - {4 \choose 2}2! + {4 \choose 3}1! - {4 \choose 4}0!\right]\right)\) ways. We choose 6 of the 10 ladies to get their own hat, and the multiply by the number of ways the remaining hats can be deranged.</p>
+<p>Without any restriction, there would be \({19\choose 7}\) ways to distribute the stars. Now we must use PIE to eliminate all distributions in which one or more student gets more than one star:</p>
+<div class="displaymath">
+\begin{equation*}
+{19 \choose 7} - \left[{13 \choose 1}{17 \choose 5} - {13\choose 2}{15 \choose 3} + {13\choose 3}{13 \choose 1}\right] = 1716\text{.}
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec_advPIE.html#BJA">in-context</a></span>
+<p>Interestingly enough, this number is also the value of \({13 \choose 7}\text{,}\) which makes sense: if each student can have at most one star, we must just pick the 7 out of 13 students to receive them.</p>
+</div>
+<span class="incontext"><a href="sec_advPIE.html#JnZ">in-context</a></span>
 </body>
 </html>

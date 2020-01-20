@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:00:31-07:00    *-->
+<!--*    on 2020-01-20T16:12:31-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,13 +11,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">
-<p>This is the converse of the statement we proved above using a direct proof. From trying a few examples, this statement definitely appears to be true. So let's prove it.</p>
-<p>A direct proof of this statement would require fixing an arbitrary \(n\) and assuming that \(n^2\) is even. But it is not at all clear how this would allow us to conclude anything about \(n\text{.}\) Just because \(n^2 = 2k\) does not in itself suggest how we could write \(n\) as a multiple of 2.</p>
-<p>Try something else: write the contrapositive of the statement. We get, for all integers \(n\text{,}\) if \(n\) is odd then \(n^2\) is odd. This looks much more promising. Our proof will look something like this:</p>
-<p>Let \(n\) be an arbitrary integer. Suppose that \(n\) is not even. This means that …. In other words …. But this is the same as saying …. Therefore \(n^2\) is not even.</p>
-<p>Now we fill in the details:</p>
-<article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
-<p>We will prove the contrapositive. Let \(n\) be an arbitrary integer. Suppose that \(n\) is not even, and thus odd. Then \(n= 2k+1\) for some integer \(k\text{.}\) Now \(n^2 = (2k+1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1\text{.}\) Since \(2k^2 + 2k\) is an integer, we see that \(n^2\) is odd and therefore not even.</p></article>
-</div></body>
+<body><div class="solution solution-like"><ol class="lower-alpha">
+<li>\(P \wedge Q\text{.}\)</li>
+<li>\((\neg P \vee \neg R) \imp (Q \vee \neg R)\) or, replacing the implication with a disjunction first: \((P \wedge Q) \vee (Q \vee \neg R)\text{.}\)</li>
+<li><p>\((P \wedge Q) \wedge (R \wedge \neg R)\text{.}\) This is necessarily false, so it is also equivalent to \(P \wedge \neg P\text{.}\)</p></li>
+<li><p>Either Sam is a woman and Chris is a man, or Chris is a woman.</p></li>
+</ol></div></body>
 </html>

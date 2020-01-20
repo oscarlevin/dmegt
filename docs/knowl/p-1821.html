@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:00:31-07:00    *-->
+<!--*    on 2020-01-20T16:12:32-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,13 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We could go on and on and on about different proof styles (we haven't even mentioned induction or combinatorial proofs here), but instead we will end with one final useful technique: proof by cases. The idea is to prove that \(P\) is true by proving that \(Q \imp P\) and \(\neg Q \imp P\) for some statement \(Q\text{.}\) So no matter what, whether or not \(Q\) is true, we know that \(P\) is true. In fact, we could generalize this. Suppose we want to prove \(P\text{.}\) We know that at least one of the statements \(Q_1, Q_2, \ldots, Q_n\) is true. If we can show that \(Q_1 \imp P\) and \(Q_2 \imp P\) and so on all the way to \(Q_n \imp P\text{,}\) then we can conclude \(P\text{.}\) The key thing is that we want to be sure that one of our cases (the \(Q_i\)'s) must be true no matter what.</p>
-<span class="incontext"><a href="sec_logic-proofs.html#xut">in-context</a></span>
+<p>We can also simplify statements in predicate logic using our rules for passing negations over quantifiers, and then applying propositional logical equivalence to the “inside” propositional part. Simplify the statements below (so negation appears only directly next to predicates).</p>
+<ol class="lower-alpha">
+<li>\(\neg \exists x \forall y (\neg O(x) \vee E(y))\text{.}\)</li>
+<li>\(\neg \forall x \neg \forall y \neg(x \lt y \wedge \exists z (x \lt z \vee y \lt z))\text{.}\)</li>
+<li><p>There is a number \(n\) for which no other number is either less \(n\) than or equal to \(n\text{.}\)</p></li>
+<li><p>It is false that for every number \(n\) there are two other numbers which \(n\) is between.</p></li>
+</ol>
+<span class="incontext"><a href="sec_propositional.html#EdQ">in-context</a></span>
 </body>
 </html>

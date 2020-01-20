@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:24-07:00    *-->
+<!--*    on 2020-01-20T16:13:24-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,37 +13,11 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>The characteristic polynomial is \(x^2 - 6x + 9\text{.}\) We solve the characteristic equation</p>
-<div class="displaymath">
-\begin{equation*}
-x^2 - 6x + 9 = 0
-\end{equation*}
-</div>
-<p data-braille="continuation">by factoring:</p>
-<div class="displaymath">
-\begin{equation*}
-(x - 3)^2 = 0
-\end{equation*}
-</div>
-<p data-braille="continuation">so \(x =3\) is the only characteristic root. Therefore we know that the solution to the recurrence relation has the form</p>
-<div class="displaymath">
-\begin{equation*}
-a_n = a 3^n + bn3^n
-\end{equation*}
-</div>
-<p data-braille="continuation">for some constants \(a\) and \(b\text{.}\) Now use the initial conditions:</p>
-<div class="displaymath">
-\begin{align*}
-a_0 = 1 \amp = a 3^0 + b\cdot 0 \cdot 3^0 = a\\
-a_1 = 4 \amp = a\cdot 3 + b\cdot 1 \cdot3 = 3a + 3b\text{.}
-\end{align*}
-</div>
-<p data-braille="continuation">Since \(a = 1\text{,}\) we find that \(b = \frac{1}{3}\text{.}\) Therefore the solution to the recurrence relation is</p>
-<div class="displaymath">
-\begin{equation*}
-a_n = 3^n + \frac{1}{3}n3^n\text{.}
-\end{equation*}
-</div>
-<span class="incontext"><a href="sec_recurrence.html#JJl">in-context</a></span>
+<ol class="decimal">
+<li><p>As we saw in <a class="xref" data-knowl="./knowl/example-deltak.html" title="Example 4.3.1">Example 4.3.1</a>, this sequence is not \(\Delta^k\)-constant for any \(k\text{.}\) Therefore the closed formula for the sequence is not a polynomial. In fact, we know the closed formula is \(a_n = 2^n\text{,}\) which grows faster than any polynomial (so is not a polynomial).</p></li>
+<li><p>The sequence of first differences is \(7, 43, 133, 301, 571,\ldots\text{.}\) The second differences are: \(36, 90, 168, 270,\ldots\text{.}\) Third difference: \(54, 78, 102,\ldots\text{.}\) Fourth differences: \(24, 24, \ldots\text{.}\) As far as we can tell, this sequence of differences is constant so the sequence is \(\Delta^4\)-constant and as such the closed formula is a degree 4 polynomial.</p></li>
+<li><p>This is the Fibonacci sequence.  The sequence of first differences is \(0, 1, 1, 2, 3, 5, 8, \ldots\text{,}\) the second differences are \(1, 0, 1, 1, 2, 3, 5\ldots\text{.}\) We notice that after the first few terms, we get the original sequence back. So there will never be constant differences, so the closed formula for the Fibonacci sequence is not a polynomial.</p></li>
+</ol>
+<span class="incontext"><a href="sec_polyfit.html#Xyv">in-context</a></span>
 </body>
 </html>

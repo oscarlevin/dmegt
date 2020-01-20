@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:00:36-07:00    *-->
+<!--*    on 2020-01-20T16:12:36-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,10 +14,18 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.7.2.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.5.2.1</span><span class="period">.</span>
 </h6>
-<p>\(G\) has 10 edges, since \(10 = \frac{2+2+3+4+4+5}{2}\text{.}\) It could be planar, and then it would have 6 faces, using Euler's formula: \(6-10+f = 2\) means \(f = 6\text{.}\) To make sure that it is actually planar though, we would need to draw a graph with those vertex degrees without edges crossing. This can be done by trial and error (and is possible).</p>
+<ol class="lower-alpha">
+<li><p>This must be the degree sequence for a tree. This is because the vertex of degree 4 must be adjacent to the four vertices of degree 1 (there are no other vertices for it to be adjacent to), and thus we get a star.</p></li>
+<li>
+<p>This cannot be a tree. Each degree 3 vertex is adjacent to all but one of the vertices in the graph. Thus each must be adjacent to one of the degree 1 vertices (and not the other). That means both degree 3 vertices are adjacent to the degree 2 vertex, and to each other, so that means there is a cycle.</p>
+<p>Alternatively, count how many edges there are!</p>
+</li>
+<li><p>This might or might not be a tree. The length 4 path has this degree sequence (this is a tree), but so does the union of a 3-cycle and a length 1 path (which is not connected, so not a tree).</p></li>
+<li><p>This cannot be a tree. The sum of the degrees is 28, so there are 14 edges. But there are 14 vertices as well, so we don't have \(v = e+1\text{,}\) meaning this cannot be a tree.</p></li>
+</ol>
 </div>
-<span class="incontext"><a href="sec_planar.html#PzX">in-context</a></span>
+<span class="incontext"><a href="sec_trees.html#hRW">in-context</a></span>
 </body>
 </html>

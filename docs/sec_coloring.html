@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T15:59:49-07:00    *-->
+<!--*    on 2020-01-20T16:11:51-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -179,7 +179,7 @@ var js_version = 0.13;
 <a href="sec_coloring.html" class="permalink">¶</a><section class="introduction" id="Jmm"><article class="project-like" id="ptv"><h6 class="heading">
 <span class="type">Investigate!</span> </h6>
 <p id="ACu">Mapmakers in the fictional land of Euleria have drawn the borders of the various dukedoms of the land. To make the map pretty, they wish to color each region. Adjacent regions must be colored differently, but it is perfectly fine to color two distant regions with the same color. What is the fewest colors the mapmakers can use and still accomplish this task?</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-46.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><p id="gJD">Perhaps the most famous graph theory problem is how to color maps.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-72.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><p id="gJD">Perhaps the most famous graph theory problem is how to color maps.</p>
 <blockquote class="blockquote" id="NWf"><p id="XpR">Given any map of countries, states, counties, etc., how many colors are needed to color each region on the map so that neighboring regions are colored differently?</p></blockquote>
 <p id="MQM">Actual map makers usually use around seven colors. For one thing, they require watery regions to be a specific color, and with a lot of colors it is easier to find a permissible coloring. We want to know whether there is a smaller palette that will work for any map.</p>
 <p id="sXV">How is this related to graph theory? Well, if we place a vertex in the center of each region (say in the capital of each state) and then connect two vertices if their states share a border, we get a graph. Coloring regions on the map corresponds to coloring the vertices of the graph. Since neighboring regions cannot be colored the same, our graph cannot have vertices colored the same when those vertices are adjacent.</p>
@@ -189,15 +189,15 @@ var js_version = 0.13;
 </h6>
 <p id="bZK">Find the chromatic number of the graphs below.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
-<div class="sbspanel" style="width:22.2222222222222%;justify-content:center;"><img src="images/image-47.svg" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:22.2222222222222%;justify-content:center;"><img src="images/image-48.svg" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:33.3333333333333%;justify-content:center;"><img src="images/image-49.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:22.2222222222222%;justify-content:center;"><img src="images/image-73.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:22.2222222222222%;justify-content:center;"><img src="images/image-74.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:center;"><img src="images/image-75.svg" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-VAE" id="VAE"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-VAE"><div class="solution solution-like">
 <p id="udo">The graph on the left is \(K_6\text{.}\) The only way to properly color the graph is to give every vertex a different color (since every vertex is adjacent to every other vertex). Thus the chromatic number is 6.</p>
 <p id="akx">The middle graph can be properly colored with just 3 colors (Red, Blue, and Green). For example:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-50.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-76.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 <p id="GrG">There is no way to color it with just two colors, since there are three vertices mutually adjacent (i.e., a triangle). Thus the chromatic number is 3.</p>
 <p id="myP">The graph on the right is just \(K_{2,3}\text{.}\) As with all bipartite graphs, this graph has chromatic number 2: color the vertices on the top row red and the vertices on the bottom row blue.</p>
 </div></div>
@@ -266,14 +266,14 @@ var js_version = 0.13;
 </h6>
 <p id="IgT">Radio stations broadcast their signal at certain frequencies. However, there are a limited number of frequencies to choose from, so nationwide many stations use the same frequency. This works because the stations are far enough apart that their signals will not interfere; no one radio could pick them up at the same time.</p>
 <p id="ooc">Suppose 10 new radio stations are to be set up in a currently unpopulated (by radio stations) region. The radio stations that are close enough to each other to cause interference are recorded in the table below. What is the fewest number of frequencies the stations could use.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-51.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-77.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-BHN" id="BHN"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-BHN"><div class="solution solution-like">
 <p id="SFY">Represent the problem as a graph with vertices as the stations and edges when two stations are close enough to cause interference. We are looking for the chromatic number of the graph. Vertices that are colored identically represent stations that can have the same frequency.</p>
 <p id="yNh">This graph has chromatic number 5. A proper 5-coloring is shown on the right. Notice that the graph contains a copy of the complete graph \(K_5\) so no fewer than 5 colors can be used.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:8.75%;margin-right:8.75%;">
-<div class="sbspanel" style="width:42.4242424242424%;justify-content:flex-end;"><img src="images/image-52.svg" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:36.3636363636364%;justify-content:flex-end;"><img src="images/image-53.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:42.4242424242424%;justify-content:flex-end;"><img src="images/image-78.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:36.3636363636364%;justify-content:flex-end;"><img src="images/image-79.svg" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
 </div></div>
 </div></article><p id="OFZ">In the example above, the chromatic number was 5, but this is not a counterexample to the Four Color Theorem, since the graph representing the radio stations is not planar. It would be nice to have some quick way to find the chromatic number of a (possibly non-planar) graph. It turns out nobody knows whether an efficient algorithm for computing chromatic numbers exists.</p>
@@ -284,8 +284,8 @@ var js_version = 0.13;
 <article class="theorem theorem-like" id="Pby"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.6.4</span><span class="period">.</span>
 </h6>
-<p id="jEj">The chromatic number of a graph \(G\) is at least the clique number of \(G\text{.}\)</p></article><p id="TpS">There are times when the chromatic number of \(G\) is <em class="emphasis">equal</em> to the clique number. These graphs have a special name; they are called <dfn class="terminology">perfect</dfn>.  If you know that a graph is perfect, then finding the chromatic number is simply a matter of searching for the largest clique.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-4" id="fn-4"><sup> 4 </sup></a> However, not all graphs are perfect.</p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn">There are special classes of graphs which can be proved to be perfect. One such class is the set of <dfn class="terminology">chordal</dfn> graphs, which have the property that every cycle in the graph contains a <dfn class="terminology">chord</dfn>—an edge between two vertices in of the cycle which are not adjacent in the cycle.</div></div>
+<p id="jEj">The chromatic number of a graph \(G\) is at least the clique number of \(G\text{.}\)</p></article><p id="TpS">There are times when the chromatic number of \(G\) is <em class="emphasis">equal</em> to the clique number. These graphs have a special name; they are called <dfn class="terminology">perfect</dfn>.  If you know that a graph is perfect, then finding the chromatic number is simply a matter of searching for the largest clique.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-5" id="fn-5"><sup> 5 </sup></a> However, not all graphs are perfect.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn">There are special classes of graphs which can be proved to be perfect. One such class is the set of <dfn class="terminology">chordal</dfn> graphs, which have the property that every cycle in the graph contains a <dfn class="terminology">chord</dfn>—an edge between two vertices in of the cycle which are not adjacent in the cycle.</div></div>
 <p id="zxb">For an upper bound, we can improve on “the number of vertices” by looking to the degrees of vertices. Let \(\Delta(G)\)  be the largest degree of any vertex in the graph \(G\text{.}\) One reasonable guess for an upper bound on the chromatic number is \(\chi(G) \le \Delta(G) + 1\text{.}\) Why is this reasonable? Starting with any vertex, it together with all of its neighbors can always be colored in \(\Delta(G) + 1\) colors, since at most we are talking about \(\Delta(G) + 1\) vertices in this set. Now fan out! At any point, if you consider an already colored vertex, some of its neighbors might be colored, some might not. But no matter what, that vertex and its neighbors could all be colored distinctly, since there are at most \(\Delta(G)\) neighbors, plus the one vertex being considered.</p>
 <p id="fEk">In fact, there are examples of graphs for which \(\chi(G) = \Delta(G) + 1\text{.}\) For any \(n\text{,}\) the complete graph \(K_n\) has chromatic number \(n\text{,}\) but \(\Delta(K_n) = n-1\) (since every vertex is adjacent to every <em class="emphasis">other</em> vertex). Additionally, any <em class="emphasis">odd</em> cycle will have chromatic number 3, but the degree of every vertex in a cycle is 2. It turns out that these are the only two types of examples where we get equality, a result known as Brooks' Theorem.</p>
 <article class="theorem theorem-like" id="viH"><h6 class="heading">
@@ -302,7 +302,7 @@ var js_version = 0.13;
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-hOW" id="hOW"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-hOW"><div class="solution solution-like">
 <p id="eUq">Represent each player with a vertex and put an edge between two players if they will play each other. In this case, we get the graph \(K_6\text{:}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-54.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-80.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 <p id="Lbz">We must color the edges; each color represents a different hour. Since different edges incident to the same vertex will be colored differently, no player will be playing two different games (edges) at the same time. Thus we need to know the chromatic index of \(K_6\text{.}\)</p>
 <p id="riI">Notice that for sure \(\chi'(K_6) \ge 5\text{,}\) since there is a vertex of degree 5. It turns out 5 colors is enough (go find such a coloring). Therefore the friends will play for 5 hours.</p>
 </div></div>
@@ -328,13 +328,13 @@ var js_version = 0.13;
 </div></article><article class="exercise exercise-like" id="pvV"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="BoO">Find the chromatic number of each of the following graphs.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:9.166666666666666%;margin-right:9.166666666666666%;">
-<div class="sbspanel" style="width:18.3673469387755%;justify-content:flex-end;"><img src="images/image-55.svg" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:18.3673469387755%;justify-content:flex-end;"><img src="images/image-56.svg" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:18.3673469387755%;justify-content:flex-end;"><img src="images/image-57.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:18.3673469387755%;justify-content:flex-end;"><img src="images/image-81.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:18.3673469387755%;justify-content:flex-end;"><img src="images/image-82.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:18.3673469387755%;justify-content:flex-end;"><img src="images/image-83.svg" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;">
-<div class="sbspanel" style="width:28.5714285714286%;justify-content:flex-start;"><img src="images/image-58.svg" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:28.5714285714286%;justify-content:flex-start;"><img src="images/image-59.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:28.5714285714286%;justify-content:flex-start;"><img src="images/image-84.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:28.5714285714286%;justify-content:flex-start;"><img src="images/image-85.svg" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-Xsr" id="Xsr"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Xsr"><div class="solution solution-like"><p id="zzB">The chromatic numbers are 2, 3, 4, 5, and 3 respectively from left to right.</p></div></div>
@@ -378,7 +378,7 @@ var js_version = 0.13;
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-DzA" id="DzA"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-DzA"><div class="solution solution-like">
 <p id="fGK">The cube can be represented as a planar graph and colored with two colors as follows:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-60.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-86.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 <p id="LNT">Since it would be impossible to color the vertices with a single color, we see that the cube has chromatic number 2 (it is bipartite).</p>
 </div></div>
 </div></article><article class="exercise exercise-like" id="hRw"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
@@ -386,7 +386,7 @@ var js_version = 0.13;
 <ol class="lower-alpha">
 <li id="FoN">
 <p id="Cuh">Describe a procedure to color the tree below.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-61.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-87.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 </li>
 <li id="lvW"><p id="iBq">The chromatic number of \(C_n\) is two when \(n\) is even. What goes wrong when \(n\) is odd?</p></li>
 <li id="RDf"><p id="OIz">Prove that your procedure from part (a) always works for any tree.</p></li>
@@ -435,7 +435,7 @@ var js_version = 0.13;
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-PNS" id="PNS"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-PNS"><div class="solution solution-like">
 <p id="rVc">The wheel graph below has this property. The outside of the wheel forms an odd cycle, so requires 3 colors, the center of the wheel must be different than all the outside vertices.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-62.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-88.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 </div></div>
 </div></article><article class="exercise exercise-like" id="Gug"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
 <p id="SmZ">Find the chromatic number of the graph below and prove you are correct.</p>

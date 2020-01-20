@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:00:06-07:00    *-->
+<!--*    on 2020-01-20T16:12:06-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -198,8 +198,8 @@ a_n = 5a_{n-1} - 6a_{n-2}\text{.}
 <p id="qVN">Finding the recurrence relation would be easier if we had some context for the problem (like the Tower of Hanoi, for example). Alas, we have only the sequence. Remember, the recurrence relation tells you how to get from previous terms to future terms. What is going on here? We could look at the differences between terms: \(4, 12, 36, 108, \ldots\text{.}\) Notice that these are growing by a factor of 3. Is the original sequence as well? \(1\cdot 3 = 3\text{,}\) \(5 \cdot 3 = 15\text{,}\) \(17 \cdot 3 = 51\) and so on. It appears that we always end up with 2 less than the next term. Aha!</p>
 <p id="XcW">So \(a_n = 3a_{n-1} + 2\) is our recurrence relation and the initial condition is \(a_0 = 1\text{.}\)</p>
 </div></div>
-</div></article><p id="TcX">We are going to try to <em class="emphasis">solve</em> these recurrence relations. By this we mean something very similar to solving differential equations: we want to find a function of \(n\) (a closed formula) which satisfies the recurrence relation, as well as the initial condition.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-17" id="fn-17"><sup> 2 </sup></a> Just like for differential equations, finding a solution might be tricky, but checking that the solution is correct is easy.</p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-17"><div class="fn">Recurrence relations are sometimes called difference equations since they can describe the difference between terms and this highlights the relation to differential equations further.</div></div>
+</div></article><p id="TcX">We are going to try to <em class="emphasis">solve</em> these recurrence relations. By this we mean something very similar to solving differential equations: we want to find a function of \(n\) (a closed formula) which satisfies the recurrence relation, as well as the initial condition.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-18" id="fn-18"><sup> 2 </sup></a> Just like for differential equations, finding a solution might be tricky, but checking that the solution is correct is easy.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-18"><div class="fn">Recurrence relations are sometimes called difference equations since they can describe the difference between terms and this highlights the relation to differential equations further.</div></div>
 <article class="example example-like" id="sbg"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.2</span><span class="period">.</span>
 </h6>
@@ -481,12 +481,12 @@ a_n = 3^n + \frac{1}{3}n3^n\text{.}
 <li id="awo"><p id="lFn">Find a closed formula for the sequence.</p></li>
 <li id="GDx"><p id="RMw">If you look at the sequence of differences between terms, and then the sequence of second differences, the sequence of third differences, and so on, will you ever get a constant sequence? Explain how you know.</p></li>
 </ol></article><article class="exercise exercise-like" id="ype"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-4333">Solve the recurrence relation \(a_n = a_{n-1} + 2^n\) with \(a_0 = 5\text{.}\)</p>
+<p id="p-4433">Solve the recurrence relation \(a_n = a_{n-1} + 2^n\) with \(a_0 = 5\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-97" id="hint-97"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-97"><div class="hint solution-like"><p id="p-4334">Use telescoping or iteration.</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-391" id="solution-391"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-391"><div class="solution solution-like">
-<p id="p-4335">\(a_n = 3 + 2^{n+1}\text{.}\) We should use telescoping or iteration here. For example, telescoping gives</p>
-<div class="displaymath" id="p-4336">
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-99" id="hint-99"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-99"><div class="hint solution-like"><p id="p-4434">Use telescoping or iteration.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-396" id="solution-396"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-396"><div class="solution solution-like">
+<p id="p-4435">\(a_n = 3 + 2^{n+1}\text{.}\) We should use telescoping or iteration here. For example, telescoping gives</p>
+<div class="displaymath" id="p-4436">
 \begin{equation*}
 \begin{aligned}
 a_1 - a_0 \amp = 2^1\\
@@ -497,25 +497,25 @@ a_n - a_{n-1} \amp = 2^n
 \end{aligned}
 \end{equation*}
 </div>
-<p id="p-4337">which sums to \(a_n - a_0 = 2^{n+1} - 2\) (using the multiply-shift-subtract technique from Section 4.2 for the right-hand side). Substituting \(a_0 = 5\) and solving for \(a_n\) completes the solution.</p>
+<p id="p-4437">which sums to \(a_n - a_0 = 2^{n+1} - 2\) (using the multiply-shift-subtract technique from Section 4.2 for the right-hand side). Substituting \(a_0 = 5\) and solving for \(a_n\) completes the solution.</p>
 </div></div>
 </div></article><article class="exercise exercise-like" id="ewn"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="aaP">Show that \(4^n\) is a solution to the recurrence relation \(a_n = 3a_{n-1} + 4a_{n-2}\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-glA" id="glA"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-glA"><div class="solution solution-like"><p id="QHd">We claim \(a_n = 4^n\) works. Plug it in: \(4^n = 3(4^{n-1}) + 4(4^{n-2})\text{.}\) This works - just simplify the right-hand side.</p></div></div>
 </div></article><article class="exercise exercise-like" id="KDw"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-4342">Find the solution to the recurrence relation \(a_n = 3a_{n-1} + 4a_{n-2}\) with initial terms \(a_0 = 2\) and \(a_1 = 3\text{.}\)</p>
+<p id="p-4442">Find the solution to the recurrence relation \(a_n = 3a_{n-1} + 4a_{n-2}\) with initial terms \(a_0 = 2\) and \(a_1 = 3\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-394" id="solution-394"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-394"><div class="solution solution-like"><p id="p-4343">By the Characteristic Root Technique. \(a_n = 4^n + (-1)^n\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-399" id="solution-399"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-399"><div class="solution solution-like"><p id="p-4443">By the Characteristic Root Technique. \(a_n = 4^n + (-1)^n\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="qKF"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<p id="p-4346">Find the solution to the recurrence relation \(a_n = 3a_{n-1} + 4a_{n-2}\) with initial terms \(a_0 = 5\) and \(a_1 = 8\text{.}\)</p>
+<p id="p-4446">Find the solution to the recurrence relation \(a_n = 3a_{n-1} + 4a_{n-2}\) with initial terms \(a_0 = 5\) and \(a_1 = 8\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-396" id="solution-396"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-396"><div class="solution solution-like"><p id="p-4347">\(a_n = \frac{13}{5} 4^n + \frac{12}{5} (-1)^n\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-401" id="solution-401"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-401"><div class="solution solution-like"><p id="p-4447">\(a_n = \frac{13}{5} 4^n + \frac{12}{5} (-1)^n\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="WRO"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<p id="p-4351">Solve the recurrence relation \(a_n = 3a_{n-1} + 10a_{n-2}\) with initial terms \(a_0 = 4\) and \(a_1 = 1\text{.}\)</p>
+<p id="p-4451">Solve the recurrence relation \(a_n = 3a_{n-1} + 10a_{n-2}\) with initial terms \(a_0 = 4\) and \(a_1 = 1\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-235" id="answer-235"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-235"><div class="answer solution-like"><p id="p-4353">\(2.71429\!\left(-2\right)^{n}+1.28571\cdot 5^{n}\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-398" id="solution-398"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-398"><div class="solution solution-like"><p id="p-4354">\(a_n = \frac{19}{7}(-2)^n + \frac{9}{7}5^n\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-235" id="answer-235"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-235"><div class="answer solution-like"><p id="p-4453">\(2.71429\!\left(-2\right)^{n}+1.28571\cdot 5^{n}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-403" id="solution-403"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-403"><div class="solution solution-like"><p id="p-4454">\(a_n = \frac{19}{7}(-2)^n + \frac{9}{7}5^n\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="CYX"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
 <p id="eKI">Suppose that \(r^n\) and \(q^n\) are both solutions to a recurrence relation of the form \(a_n = \alpha a_{n-1} + \beta a_{n-2}\text{.}\) Prove that \(c\cdot r^n + d \cdot q^n\) is also a solution to the recurrence relation, for any constants \(c, d\text{.}\)</p></article><article class="exercise exercise-like" id="jgg"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
 <p id="KRR">Think back to the magical candy machine at your neighborhood grocery store. Suppose that the first time a quarter is put into the machine 1 Skittle comes out. The second time, 4 Skittles, the third time 16 Skittles, the fourth time 64 Skittles, etc.</p>

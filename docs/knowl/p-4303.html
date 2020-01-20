@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:24-07:00    *-->
+<!--*    on 2020-01-20T16:13:24-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,11 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Iteration can be messy, but when the recurrence relation only refers to one previous term (and maybe some function of \(n\)) it can work well. However, trying to iterate a recurrence relation such as \(a_n = 2 a_{n-1} + 3 a_{n-2}\) will be way too complicated. We would need to keep track of two sets of previous terms, each of which were expressed by two previous terms, and so on. The length of the formula would grow exponentially (double each time, in fact). Luckily there happens to be a method for solving recurrence relations which works very well on relations like this.</p>
-<span class="incontext"><a href="sec_recurrence.html#wpA">in-context</a></span>
+<ol class="decimal">
+<li>This is the sequence from <a class="xref" data-knowl="./knowl/example-sum-of-arithmetic.html" title="Example 4.2.6">Example 4.2.6</a>, in which we found a closed formula by recognizing the sequence as the sequence of partial sums of an arithmetic sequence. Indeed, the sequence of first differences is \(1,4,7, 10, 13,\ldots\text{,}\) which itself has differences \(3,3,3,3,\ldots\text{.}\) Thus \(2, 3, 7, 14, 24, 37,\ldots\) is a \(\Delta^2\)-constant sequence.</li>
+<li>These are the perfect cubes. The sequence of first differences is \(7, 19, 37, 61, 91, \ldots\text{;}\) the sequence of second differences is \(12, 18, 24, 30,\ldots\text{;}\) the sequence of third differences is constant: \(6,6,6,\ldots\text{.}\) Thus the perfect cubes are a \(\Delta^3\)-constant sequence.</li>
+<li>If we take first differences we get \(1,2,4,8,16,\ldots\text{.}\) Wait, what? That's the sequence we started with. So taking second differences will give us the same sequence again. No matter how many times we repeat this we will always have the same sequence, which in particular means no finite number of differences will be constant. Thus this sequence is not \(\Delta^k\)-constant for any \(k\text{.}\)</li>
+</ol>
+<span class="incontext"><a href="sec_polyfit.html#GAk">in-context</a></span>
 </body>
 </html>

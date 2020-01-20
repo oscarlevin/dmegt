@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:00:59-07:00    *-->
+<!--*    on 2020-01-20T16:13:01-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,7 +12,11 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>By now it should be no surprise that there are \(8^5\) words, and \(P(8,5)\) words without repeated letters. The new piece here is that we are actually counting functions. For the first problem, we are counting all functions from \(\{1,2,\ldots, 5\}\) to \(\{a,b,\ldots, h\}\text{.}\) The numbers in the domain represent the <em class="emphasis">position</em> of the letter in the word, the codomain represents the letter that could be assigned to that position. If we ask for no repeated letters, we are asking for injective functions.</p>
-<p>If \(A\) and \(B\) are <em class="emphasis">any</em> sets with \(|A| = 5\) and \(|B| = 8\text{,}\) then the number of functions \(f: A \to B\) is \(8^5\) and the number of injections is \(P(8,5)\text{.}\) So if you can represent your counting problem as a function counting problem, most of the work is done.</p>
+<p>We are counting derangements on 5 elements. There are \(5!\) ways for the gentlemen to grab hats in any order—but many of these permutations will result in someone getting their own hat. So we subtract all the ways in which one or more of the men get their own hat. In other words, we subtract the non-derangements. Doing so requires PIE. Thus the answer is:</p>
+<div class="displaymath">
+\begin{equation*}
+5! - \left[{5 \choose 1}4! - {5 \choose 2}3! + {5 \choose 3}2! - {5 \choose 4}1! + {5 \choose 5}0!\right]\text{.}
+\end{equation*}
+</div>
 </div></body>
 </html>

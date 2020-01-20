@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:28-07:00    *-->
+<!--*    on 2020-01-20T16:13:30-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,20 +14,28 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.5.3.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.5.2.1</span><span class="period">.</span>
 </h6>
+<p>Again, start by understanding the dynamics of the problem. What does increasing \(n\) do? Let's try with a few examples. If \(n = 1\text{,}\) then yes, \(6^1 - 1 = 5\) is a multiple of 5. What does incrementing \(n\) to 2 look like? We get \(6^2 - 1 = 35\text{,}\) which again is a multiple of 5. Next, \(n = 3\text{:}\) but instead of just finding \(6^3 - 1\text{,}\) what did the increase in \(n\) do? We will still subtract 1, but now we are multiplying by another 6 first. Viewed another way, we are multiplying a number which is one more than a multiple of 5 by 6 (because \(6^2 - 1\) is a multiple of 5, so \(6^2\) is one more than a multiple of 5). What do numbers which are one more than a multiple of 5 look like? They must have last digit 1 or 6. What happens when you multiply such a number by 6? Depends on the number, but in any case, the last digit of the new number must be a 6. And then if you subtract 1, you get last digit 5, so a multiple of 5.</p>
+<p>The point is, every time we multiply by just one more six, we still get a number with last digit 6, so subtracting 1 gives us a multiple of 5. Now the formal proof:</p>
 <article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
-<p>Let \(P(n)\) be the statement “\(7^n - 1\) is a multiple of 6.” We will show \(P(n)\) is true for all \(n \in \N\text{.}\) First we establish the base case, \(P(0)\text{.}\) Since \(7^0 - 1 = 0\text{,}\) and \(0\) is a multiple of 6, \(P(0)\) is true. Now for the inductive case. Assume \(P(k)\) holds for an arbitrary \(k \in \N\text{.}\) That is, \(7^k - 1\) is a multiple of 6, or in other words, \(7^k - 1 = 6j\) for some integer \(j\text{.}\) Now consider \(7^{k+1} - 1\text{:}\)</p>
+<p>Let \(P(n)\) be the statement, “\(6^n - 1\) is a multiple of 5.” We will prove that \(P(n)\) is true for all \(n \in \N\text{.}\)</p>
+<p>Base case: \(P(0)\) is true: \(6^0 -1 = 0\) which is a multiple of 5.</p>
+<p>Inductive case: Let \(k\) be an arbitrary natural number. Assume, for induction, that \(P(k)\) is true. That is, \(6^k - 1\) is a multiple of \(5\text{.}\) Then \(6^k - 1 = 5j\) for some integer \(j\text{.}\) This means that \(6^k = 5j + 1\text{.}\) Multiply both sides by \(6\text{:}\)</p>
 <div class="displaymath">
-\begin{align*}
-7^{k+1} - 1 ~ \amp = 7^{k+1} - 7 + 6 \amp \text{by cleverness:} -1 = -7 + 6\\
-\amp = 7(7^k - 1) + 6 \amp \text{factor out a 7 from the first two terms}\\
-\amp = 7(6j) + 6 \amp \text{by the inductive hypothesis}\\
-\amp = 6(7j + 1) \amp \text{factor out a 6}
-\end{align*}
+\begin{equation*}
+6^{k+1} = 6(5j+1) = 30j + 6\text{.}
+\end{equation*}
 </div>
-<p>Therefore \(7^{k+1} - 1\) is a multiple of 6, or in other words, \(P(k+1)\) is true. Therefore by the principle of mathematical induction, \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article>
+<p>But we want to know about \(6^{k+1} - 1\text{,}\) so subtract 1 from both sides:</p>
+<div class="displaymath">
+\begin{equation*}
+6^{k+1} - 1 = 30j + 5\text{.}
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec_seq-induction.html#EGT">in-context</a></span>
+<p>Of course \(30j+5 = 5(6j+1)\text{,}\) so is a multiple of 5.</p>
+<p>Therefore \(6^{k+1} - 1\) is a multiple of 5, or in other words, \(P(k+1)\) is true. Thus, by the principle of mathematical induction \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article>
+</div>
+<span class="incontext"><a href="sec_seq-induction.html#VQm">in-context</a></span>
 </body>
 </html>

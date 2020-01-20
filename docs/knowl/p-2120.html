@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:00:35-07:00    *-->
+<!--*    on 2020-01-20T16:12:36-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Proving that \(K_{3,3}\) is not planar answers the houses and utilities puzzle: it is not possible to connect each of three houses to each of three utilities without the lines crossing.</p>
-<span class="incontext"><a href="sec_planar.html#koq">in-context</a></span>
+<p>How do we know?  We can give an algorithm for <em class="emphasis">finding</em> a spanning tree!  Start with a connected graph \(G\text{.}\)  If there is no cycle, then \(G\) is already a tree and we are done.  If there is a cycle, let \(e\) be any edge in that cycle and consider the new graph \(G_1 = G - e\) (i.e., the graph you get by deleting \(e\)).  This tree is still connected since \(e\) belonged to a cycle, there were at least two paths between its incident vertices.  Now repeat: if \(G_1\) has no cycles, we are done, otherwise define \(G_2\) to be \(G_1 - e_1\text{,}\) where \(e_1\) is an edge in a cycle in \(G_1\text{.}\)  Keep going.  This process must eventually stop, since there are only a finite number of edges to remove.  The result will be a tree, and since we never removed any vertex, a <em class="emphasis">spanning</em> tree.</p>
+<span class="incontext"><a href="sec_trees.html#YYn">in-context</a></span>
 </body>
 </html>

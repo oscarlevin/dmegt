@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:30-07:00    *-->
+<!--*    on 2020-01-20T16:13:30-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,15 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Use induction to prove that \(\d\sum_{k=0}^n {n \choose k} = 2^n\text{.}\) That is, the sum of the \(n\)th row of Pascal's Triangle is \(2^n\text{.}\)</p>
-<span class="incontext"><a href="sec_seq-induction.html#NjH">in-context</a></span>
+<p>Inductive case: Let \(k \ge 5\) be an arbitrary integer. Assume, for induction, that \(P(k)\) is true. That is, assume \(k^2 \lt  2^k\text{.}\) We will prove that \(P(k+1)\) is true, i.e., \((k+1)^2 \lt  2^{k+1}\text{.}\) To prove such an inequality, start with the left-hand side and work towards the right-hand side:</p>
+<div class="displaymath">
+\begin{align*}
+(k+1)^2 \amp = k^2 + 2k + 1 \amp\\
+\amp \lt 2^k + 2k + 1 \amp \ldots\text{by the inductive hypothesis.}\\
+\amp \lt 2^k + 2^k \amp \ldots\text{ since } 2k + 1 \lt  2^k \text{ for }k \ge 5.\\
+\amp = 2^{k+1}. \amp
+\end{align*}
+</div>
+<span class="incontext"><a href="sec_seq-induction.html#fTS">in-context</a></span>
 </body>
 </html>

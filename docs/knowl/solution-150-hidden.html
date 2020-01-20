@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:00:36-07:00    *-->
+<!--*    on 2020-01-20T16:12:37-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,26 +11,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
-<p>We know in any planar graph the number of faces \(f\) satisfies \(3f \le 2e\) since each face is bounded by at least three edges, but each edge borders two faces. Combine this with Euler's formula:</p>
-<div class="displaymath">
-\begin{equation*}
-v - e + f = 2
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-v - e + \frac{2e}{3} \ge 2
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-3v - e \ge 6
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-3v - 6 \ge e\text{.}
-\end{equation*}
-</div></article></div></body>
+<body><div class="solution solution-like">
+<p>How many edges would such polyhedra have? For the first proposed polyhedron, the triangles would contribute a total of 9 edges, and the pentagons would contribute 30. However, this counts each edge twice (as each edge borders exactly two faces), giving 39/2 edges, an impossibility. There is no such polyhedron.</p>
+<p>The second polyhedron does not have this obstacle. The extra 35 edges contributed by the heptagons give a total of 74/2 = 37 edges. So far so good. Now how many vertices does this supposed polyhedron have? We can use Euler's formula. There are 14 faces, so we have \(v - 37 + 14 = 2\) or equivalently \(v = 25\text{.}\) But now use the vertices to count the edges again. Each vertex must have degree <em class="emphasis">at least</em> three (that is, each vertex joins at least three faces since the interior angle of all the polygons must be less that \(180^\circ\)), so the sum of the degrees of vertices is at least 75. Since the sum of the degrees must be exactly twice the number of edges, this says that there are strictly more than 37 edges. Again, there is no such polyhedron.</p>
+</div></body>
 </html>

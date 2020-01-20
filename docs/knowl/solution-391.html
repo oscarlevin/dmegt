@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:24-07:00    *-->
+<!--*    on 2020-01-20T16:13:26-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,22 +14,36 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.4.3.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.4.5.1</span><span class="period">.</span>
 </h6>
-<p>\(a_n = 3 + 2^{n+1}\text{.}\) We should use telescoping or iteration here. For example, telescoping gives</p>
+<p>Again, we iterate the recurrence relation, building up to the index \(n\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+a_1 \amp = 3a_0 + 2\\
+a_2 \amp = 3(a_1) + 2 = 3(3a_0 + 2) + 2\\
+a_3 \amp = 3[a_2] + 2 = 3[3(3a_0 + 2) + 2] + 2\\
+\vdots \amp \qquad \vdots \qquad \qquad \vdots\\
+a_n \amp = 3(a_{n-1}) + 2 = 3(3(3(3\cdots(3a_0 + 2) + 2) + 2)\cdots + 2)+ 2\text{.}
+\end{align*}
+</div>
+<p>It is difficult to see what is happening here because we have to distribute all those 3's. Let's try again, this time simplifying a bit as we go.</p>
+<div class="displaymath">
+\begin{align*}
+a_1 \amp = 3a_0 + 2\\
+a_2 \amp = 3(a_1) + 2 = 3(3a_0 + 2) + 2 = 3^2a_0 + 2\cdot 3 + 2\\
+a_3 \amp = 3[a_2] + 2 = 3[3^2a_0 + 2\cdot 3 + 2] + 2 = 3^3 a_0 + 2 \cdot 3^2 + 2 \cdot 3 + 2\\
+\vdots \amp \qquad\quad \vdots \hspace{2in} \vdots\\
+a_n \amp = 3(a_{n-1}) + 2 = 3(3^{n-1}a_0 + 2 \cdot 3^{n-2} + \cdots +2)+ 2\\
+\amp \qquad \qquad = 3^n a_0 + 2\cdot 3^{n-1} + 2 \cdot 3^{n-2} + \cdots + 2\cdot 3 + 2\text{.}
+\end{align*}
+</div>
+<p>Now we simplify. \(a_0 = 1\text{,}\) so we have \(3^n + \langle\text{stuff}\rangle\text{.}\) Note that all the other terms have a 2 in them. In fact, we have a geometric sum with first term \(2\) and common ratio \(3\text{.}\) We have seen how to simplify \(2 + 2\cdot 3 + 2 \cdot 3^2 + \cdots + 2\cdot 3^{n-1}\text{.}\) We get \(\frac{2-2\cdot 3^n}{-2}\) which simplifies to \(3^n - 1\text{.}\) Putting this together with the first \(3^n\) term gives our closed formula:</p>
 <div class="displaymath">
 \begin{equation*}
-\begin{aligned}
-a_1 - a_0 \amp = 2^1\\
-a_2 - a_1 \amp = 2^2\\
-a_3 - a_2 \amp = 2^3\\
-\vdots\amp \vdots\\
-a_n - a_{n-1} \amp = 2^n
-\end{aligned}
+a_n = 2\cdot 3^n - 1\text{.}
 \end{equation*}
 </div>
-<p>which sums to \(a_n - a_0 = 2^{n+1} - 2\) (using the multiply-shift-subtract technique from Section 4.2 for the right-hand side). Substituting \(a_0 = 5\) and solving for \(a_n\) completes the solution.</p>
 </div>
-<span class="incontext"><a href="sec_recurrence.html#solution-391">in-context</a></span>
+<span class="incontext"><a href="sec_recurrence.html#BuS">in-context</a></span>
 </body>
 </html>
