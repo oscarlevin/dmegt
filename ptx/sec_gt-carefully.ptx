@@ -848,7 +848,7 @@
   </p>
 
   <p>
-    Intuitively, you can think of a path as the result of tracing over a the edges of a graph, however it turns out that we will insist that you don't trace over any edge or vertex more than once.  A cycle then is just like a path except you stop where you started (and that is the only point where you can repeat a vertex).
+    Intuitively, you can think of a path as the result of tracing over the edges of a graph, however it turns out that we will insist that you don't trace over any edge or vertex more than once.  A cycle then is just like a path except you stop where you started (and that is the only point where you can repeat a vertex).
   </p>
 
   <p>
