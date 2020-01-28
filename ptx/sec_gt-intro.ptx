@@ -180,7 +180,7 @@
 </example>
 
     <p>
-      A natural question to ask about the houses and utilities graph is whether it would be possible to draw the graph without edges crossing.  This would be a reasonable request, so that city planers don't have to worry about the utility lines interfering with each other.  Of course in reality, we have three dimensions to work with.  But consider a computer motherboard, which connects various important components with wires smoldered to the board.  Can we connect the needed components without wires (literally) getting crossed?
+      A natural question to ask about the houses and utilities graph is whether it would be possible to draw the graph without edges crossing.  This would be a reasonable request, so that city planers don't have to worry about the utility lines interfering with each other.  Of course in reality, we have three dimensions to work with.  But consider a computer motherboard, which connects various important components with wires soldered to the board.  Can we connect the needed components without wires (literally) getting crossed?
     </p>
 
     <p>
