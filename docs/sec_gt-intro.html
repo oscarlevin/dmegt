@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-20T16:11:49-07:00    *-->
+<!--*    on 2020-02-06T22:15:26-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -127,7 +127,7 @@ var js_version = 0.13;
 <li><a href="sec_gt-intro.html" data-scroll="HLu" class="active">Graphs</a></li>
 <li><a href="sec_intro-sets.html" data-scroll="ltW">Sets</a></li>
 <li><a href="sec_intro-functions.html" data-scroll="CkQ">Functions</a></li>
-<li><a href="sec_gt-carefully.html" data-scroll="HLu">Graphs Done Right</a></li>
+<li><a href="sec_gt-carefully.html" data-scroll="sec_gt-carefully">Graphs Done Right</a></li>
 <li><a href="sec_coloring.html" data-scroll="qyO">Coloring</a></li>
 </ul>
 </li>
@@ -136,9 +136,9 @@ var js_version = 0.13;
 <li><a href="sec_intro-statements.html" data-scroll="QDd">Mathematical Statements</a></li>
 <li><a href="sec_propositional.html" data-scroll="XMq">Propositional Logic</a></li>
 <li><a href="sec_logic-proofs.html" data-scroll="lnf">Proofs</a></li>
-<li><a href="sec_paths.html" data-scroll="tPg">Euler Paths and Circuits</a></li>
-<li><a href="sec_trees.html" data-scroll="gor">Trees</a></li>
 <li><a href="sec_logic-induction.html" data-scroll="lnf">Mathematical Induction</a></li>
+<li><a href="sec_trees.html" data-scroll="gor">Trees</a></li>
+<li><a href="sec_paths.html" data-scroll="tPg">Euler Paths and Circuits</a></li>
 <li><a href="sec_planar.html" data-scroll="ttH">Planar Graphs</a></li>
 </ul>
 </li>
@@ -206,7 +206,7 @@ var js_version = 0.13;
 <p id="CjD">Think of the top row as the houses, bottom row as the utilities.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/gt-k33.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 </div></div>
-</div></article><p id="p-55">A natural question to ask about the houses and utilities graph is whether it would be possible to draw the graph without edges crossing.  This would be a reasonable request, so that city planers don't have to worry about the utility lines interfering with each other.  Of course in reality, we have three dimensions to work with.  But consider a computer motherboard, which connects various important components with wires smoldered to the board.  Can we connect the needed components without wires (literally) getting crossed?</p>
+</div></article><p id="p-55">A natural question to ask about the houses and utilities graph is whether it would be possible to draw the graph without edges crossing.  This would be a reasonable request, so that city planers don't have to worry about the utility lines interfering with each other.  Of course in reality, we have three dimensions to work with.  But consider a computer motherboard, which connects various important components with wires soldered to the board.  Can we connect the needed components without wires (literally) getting crossed?</p>
 <p id="p-56">Graphs that can be drawn without edges crossing are called <dfn class="terminology">planar</dfn> (since they can be nicely drawn in the <em class="emphasis">plane</em>).  A common question in graph theory is to determine whether a particular graph is planar or not. Also of interest is to discover properties that are true of all planar graphs.</p>
 <article class="question example-like" id="question-1"><h6 class="heading">
 <span class="type">Question</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
