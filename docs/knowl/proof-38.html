@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:26:32-07:00    *-->
+<!--*    on 2020-02-10T10:49:10-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,9 @@
 </head>
 <body>
 <article class="proof"><h6 class="heading"><span class="type">Proof</span></h6>
-<p>Let \(P(n)\) be the statement \(\log(a^n) = n \log(a)\text{.}\) The base case, \(P(2)\) is true, because \(\log(a^2) = \log(a\cdot a) = \log(a) + \log(a) = 2\log(a)\text{,}\) by the product rule for logarithms. Now assume, for induction, that \(P(k)\) is true. That is, \(\log(a^k) = k\log(a)\text{.}\) Consider \(\log(a^{k+1})\text{.}\) We have</p>
-<div class="displaymath">
-\begin{equation*}
-\log(a^{k+1}) = \log(a^k\cdot a) = \log(a^k) + \log(a) = k\log(a) + \log(a)\text{,}
-\end{equation*}
-</div>
-<p data-braille="continuation">with the last equality due to the inductive hypothesis. But this simplifies to \((k+1) \log(a)\text{,}\) establishing \(P(k+1)\text{.}\) Therefore by the principle of mathematical induction, \(P(n)\) is true for all \(n \ge 2\text{.}\)</p></article><span class="incontext"><a href="sec_logic-induction.html#AGU">in-context</a></span>
+<p>We will give a proof by induction on the number of vertices in the tree.  That is, we will prove that every tree with \(v\) vertices has exactly \(v-1\) edges, and then use induction to show this is true for all \(v \ge 1\text{.}\)</p>
+<p>For the base case, consider all trees with \(v = 1\) vertices.  There is only one such tree: the graph with a single isolated vertex.  This graph has \(e = 0\) edges, so we see that \(e = v-1\) as needed.</p>
+<p>Now for the inductive case, fix \(k \ge 1\) and assume that all trees with \(v=k\) vertices have exactly \(e=k-1\) edges.  Now consider an arbitrary tree \(T\) with \(v = k+1\) vertices.  By <a class="xref" data-knowl="./knowl/prop-leaves-in-trees.html" title="Proposition 2.5.3">Proposition 2.5.3</a>, \(T\) has a vertex \(v_0\) of degree one.  Let \(T'\) be the tree resulting from removing \(v_0\) from \(T\) (together with its incident edge).  Since we removed a leaf, \(T'\) is still a tree (the unique paths between pairs of vertices in \(T'\) are the same as the unique paths between them in \(T\)).</p>
+<p>Now \(T'\) has \(k\) vertices, so by the inductive hypothesis, has \(k-1\) edges.  What can we say about \(T\text{?}\)  Well, it has one more edge than \(T'\text{,}\) so it has \(k\) edges.  But this is exactly what we wanted: \(v=k+1\text{,}\) \(e=k\) so indeed \(e = v-1\text{.}\)  This completes the inductive case, and the proof.</p></article><span class="incontext"><a href="sec_trees.html#Lqh">in-context</a></span>
 </body>
 </html>

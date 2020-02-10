@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:26:53-07:00    *-->
+<!--*    on 2020-02-10T10:49:47-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,12 +11,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><ol class="decimal">
-<li>
-<p>We must use the three games (call them 1, 2, 3) as the domain and the 5 friends (a,b,c,d,e) as the codomain (otherwise the function would not be defined for the whole domain when a friend didn't get any game). So how many functions are there with domain \(\{1,2,3\}\) and codomain \(\{a,b,c,d,e\}\text{?}\) The answer to this is \(5^3=125\text{,}\) since we can assign any of 5 elements to be the image of 1, any of 5 elements to be the image of 2 and any of 5 elements to be the image of 3.</p>
-<p>But this is not the correct answer to our counting problem, because one of these functions is \(f= \twoline{1\amp 2\amp 3}{a\amp a\amp a}\text{;}\) one friend can get more than one game. What we really need to do is count <em class="emphasis">injective</em> functions. This gives \(P(5,3) = 60\) functions, which is the answer to our counting question.</p>
-</li>
-<li><p>Again, we need to use the 8 games as the domain and the 5 friends as the codomain. We are counting all functions, so the number of ways to distribute the games is \(5^8\text{.}\)</p></li>
-<li><p>This question is harder. Use the games as the domain and friends as the codomain (the reverse would not give a function). To ensure that every friend gets at least one game means that every element of the codomain is in the range. In other words, we are looking for <em class="emphasis">surjective</em> functions. How do you count those??</p></li>
-</ol></div></body>
+<body><div class="solution solution-like">
+<p>Without the “no more than 4” restriction, the answer would be \({13 \choose 2}\text{,}\) using 11 stars and 2 bars (separating the three kids). Now count the number of ways that one or more of the kids violates the condition, i.e., gets at least 4 cookies.</p>
+<p>Let \(A\) be the set of outcomes in which Alberto gets more than 4 cookies. Let \(B\) be the set of outcomes in which Bernadette gets more than 4 cookies. Let \(C\) be the set of outcomes in which Carlos gets more than 4 cookies. We then are looking (for the sake of subtraction) for the size of the set \(A \cup B \cup C\text{.}\) Using PIE, we must find the sizes of \(|A|\text{,}\) \(|B|\text{,}\) \(|C|\text{,}\) \(|A\cap B|\) and so on. Here is what we find.</p>
+<ul class="disc">
+<li>\(|A| = {8 \choose 2}\text{.}\) First give Alberto 5 cookies, then distribute the remaining 6 to the three kids without restrictions, using 6 stars and 2 bars.</li>
+<li>\(|B| = {8 \choose 2}\text{.}\) Just like above, only now Bernadette gets 5 cookies at the start.</li>
+<li>\(|C| = {8 \choose 2}\text{.}\) Carlos gets 5 cookies first.</li>
+<li>\(|A \cap B| = {3 \choose 2}\text{.}\) Give Alberto and Bernadette 5 cookies each, leaving 1 (star) to distribute to the three kids (2 bars).</li>
+<li>\(|A \cap C| = {3 \choose 2}\text{.}\) Alberto and Carlos get 5 cookies first.</li>
+<li>\(|B \cap C| = {3 \choose 2}\text{.}\) Bernadette and Carlos get 5 cookies first.</li>
+<li>\(|A \cap B \cap C| = 0\text{.}\) It is not possible for all three kids to get 4 or more cookies.</li>
+</ul>
+<p>Combining all of these we see</p>
+<div class="displaymath">
+\begin{equation*}
+|A \cup B \cup C| = {8 \choose 2} + {8 \choose 2} + {8 \choose 2} - {3 \choose 2} - {3 \choose 2} - {3 \choose 2} + 0 = 75\text{.}
+\end{equation*}
+</div>
+<p>Thus the answer to the original question is \({13 \choose 2} - 75 = 78 - 75 = 3\text{.}\) This makes sense now that we see it. The only way to ensure that no kid gets more than 4 cookies is to give two kids 4 cookies and one kid 3; there are three choices for which kid that should be. We could have found the answer much quicker through this observation, but the point of the example is to illustrate that PIE works!</p>
+</div></body>
 </html>

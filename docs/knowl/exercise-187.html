@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:26:32-07:00    *-->
+<!--*    on 2020-02-10T10:49:11-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,10 +13,16 @@
 </head>
 <body>
 <article class="exercise exercise-like"><h6 class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">14<span class="period">.</span></span>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">10<span class="period">.</span></span>
 </h6>
-<p>Find the flaw in the following “proof” of the “fact” that \(n \lt 100\) for every \(n \in \N\text{.}\)</p>
-<article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
-<p>Let \(P(n)\) be the statement \(n \lt 100\text{.}\) We will prove \(P(n)\) is true for all \(n \in \N\text{.}\) First we establish the base case: when \(n = 0\text{,}\) \(P(n)\) is true, because \(0 \lt 100\text{.}\) Now for the inductive step, assume \(P(k)\) is true. That is, \(k \lt 100\text{.}\) Now if \(k \lt 100\text{,}\) then \(k\) is some number, like 80. Of course \(80+1 = 81\) which is still less than 100. So \(k +1 \lt 100\) as well. But this is what \(P(k+1)\) claims, so we have shown that \(P(k) \imp P(k+1)\text{.}\) Thus by the principle of mathematical induction, \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article><div class="solutions"><a class="original" data-knowl="./knowl/solution-157-hidden.html" title="Solution 2.6.14.1"><span class="type">Solution</span></a></div></article><span class="incontext"><a href="sec_logic-induction.html#SaE">in-context</a></span>
+<p>Consider the tree drawn below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/img-labeled-tree2.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<ol class="lower-alpha">
+<li><p>Suppose we designate vertex \(e\) as the root.  List the children, parents and siblings of each vertex.  Does any vertex other than \(e\) have grandchildren?</p></li>
+<li><p>Suppose \(e\) is <em class="emphasis">not</em> chosen as the root.  Does our choice of root vertex change the <em class="emphasis">number</em> of children \(e\) has?  The number of grandchildren?  How many are there of each?</p></li>
+<li><p>In fact, pick any vertex in the tree and suppose it is not the root.  Explain why the number of children of that vertex does not depend on which other vertex is the root.</p></li>
+<li><p>Does the previous part work for other trees?  Give an example of a different tree for which it holds.  Then either prove that it always holds or give an example of a tree for which it doesn't.</p></li>
+</ol>
+<div class="solutions"><a class="original" data-knowl="./knowl/hint-61-hidden.html" title="Hint 2.5.10.1"><span class="type">Hint</span></a></div></article><span class="incontext"><a href="sec_trees.html#kMC">in-context</a></span>
 </body>
 </html>

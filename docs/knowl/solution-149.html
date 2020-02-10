@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:26:31-07:00    *-->
+<!--*    on 2020-02-10T10:49:08-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,17 +14,20 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.6.1.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.4.6.1</span><span class="period">.</span>
 </h6>
-<ol class="lower-alpha">
-<li><p>If we have a number of beans ending in a 5 and we double it, we will get a number of beans ending in a 0 (since \(5\cdot 2 = 10\) ). Then if we subtract 5, we will once again get a number of beans ending in a 5. Thus if on any day we have a number ending in a 5, the next day will also have a number ending in a 5.</p></li>
-<li><p>If you don't <em class="emphasis">start</em> with a number of beans ending in a 5 (on day 1), the above reasoning is still correct but not helpful. For example, if you start with a number ending in a 3, the next day you will have a number ending in a 1.</p></li>
-<li>
-<p>Part (b) is the base case and part (a) is the inductive case. If on day 1 we have a number ending in a 5 (by part (b)), then on day 2 we will also have a number ending in a 5 (by part (a)). Then by part (a) again, we will have a number ending in a 5 on day 3. By part (a) again, this means we will have a number ending in a 5 on day 4</p>
-<p>The proof by induction would say that on <em class="emphasis">every</em> day we will have a number ending in a 5, and this works because we can start with the base case, then use the inductive case over and over until we get up to our desired \(n\text{.}\)</p>
-</li>
-</ol>
+<article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p>Let \(P(n)\) be the statement \(2^n \lt  n!\text{.}\) We will show \(P(n)\) is true for all \(n \ge 4\text{.}\) First, we check the base case and see that yes, \(2^4 \lt  4!\) (as \(16 \lt  24\)) so \(P(4)\) is true. Now for the inductive case. Assume \(P(k)\) is true for an arbitrary \(k \ge 4\text{.}\) That is, \(2^k \lt  k!\text{.}\) Now consider \(P(k+1)\text{:}\) \(2^{k+1} \lt  (k+1)!\text{.}\) To prove this, we start with the left side and work to the right side.</p>
+<div class="displaymath">
+\begin{align*}
+2^{k+1}~ \amp = 2\cdot 2^k \amp\\
+\amp \lt 2\cdot k! \amp \text{by the inductive hypothesis}\\
+\amp \lt (k+1) \cdot k! \amp \text{ since } k+1 \gt 2\\
+\amp = (k+1)! \amp
+\end{align*}
 </div>
-<span class="incontext"><a href="sec_logic-induction.html#Mls">in-context</a></span>
+<p>Therefore \(2^{k+1} \lt (k+1)!\) so we have established \(P(k+1)\text{.}\) Thus by the principle of mathematical induction \(P(n)\) is true for all \(n \ge 4\text{.}\)</p></article>
+</div>
+<span class="incontext"><a href="sec_logic-induction.html#pxV">in-context</a></span>
 </body>
 </html>

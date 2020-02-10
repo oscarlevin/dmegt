@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:26:24-07:00    *-->
+<!--*    on 2020-02-10T10:48:59-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,13 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>However, we know how negation interacts with quantifiers: we can pass a negation over a quantifier by switching the quantifier type (between universal and existential). So the statement above should be <em class="emphasis">logically equivalent</em> to</p>
-<div class="displaymath">
-\begin{equation*}
-\forall x \exists y (y \lt x)\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">Notice that \(y \lt x\) is the negation of \(x \le y\text{.}\) This literally says, “for every number \(x\) there is a number \(y\) which is smaller than \(x\text{.}\)” We see that this is another way to make our original claim.</p>
-<span class="incontext"><a href="sec_propositional.html#LMt">in-context</a></span>
+<ol class="lower-alpha">
+<li><p>\(\forall x \exists y P(x,y)\) is false because when \(x = 4\text{,}\) there is no \(y\) which makes \(P(4,y)\) true.</p></li>
+<li><p>\(\forall y \exists x P(x,y)\) is true. No matter what \(y\) is (i.e., no matter what column we are in) there is some \(x\) for which \(P(x,y)\) is true. In fact, we can always take \(x\) to be \(3\text{.}\)</p></li>
+<li><p>\(\exists x \forall y P(x,y)\) is true. In particular \(x=3\) is such a number, so that no matter what \(y\) is, \(P(x,y)\) is true.</p></li>
+<li><p>\(\exists y \forall x P(x,y)\) is false. In fact, no matter what \(y\) (column) we look at, there is always some \(x\) (row) which makes \(P(x,y)\) false.</p></li>
+</ol>
+<span class="incontext"><a href="sec_intro-statements.html#p-1663">in-context</a></span>
 </body>
 </html>

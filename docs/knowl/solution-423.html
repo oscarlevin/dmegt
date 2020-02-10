@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:27:19-07:00    *-->
+<!--*    on 2020-02-10T10:50:18-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,18 +14,30 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.5.1.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.5.2.1</span><span class="period">.</span>
 </h6>
-<ol class="lower-alpha cols3">
-<li>\(\dfrac{4}{1-x}\text{.}\)</li>
-<li>\(\dfrac{2}{(1-x)^2}\text{.}\)</li>
-<li>\(\dfrac{2x^3}{(1-x)^2}\text{.}\)</li>
-<li>\(\dfrac{1}{1-5x}\text{.}\)</li>
-<li>\(\dfrac{1}{1+3x}\text{.}\)</li>
-<li>\(\dfrac{1}{1-5x^2}\text{.}\)</li>
-<li>\(\dfrac{x}{(1-x^3)^2}\text{.}\)</li>
-</ol>
+<p>Notice that the sequence of differences is constant. We know how to find the generating function for any constant sequence. So denote the generating function for \(1, 3, 5, 7, 9, \ldots\) by \(A\text{.}\) We have</p>
+<div class="displaymath">
+\begin{align*}
+A \amp  = 1 + 3x + 5x^2 + 7x^3 + 9x^4 + \cdots\\
+\underline{-xA} \amp  \underline{\,\,= 0 + x + 3x^2 +  5x^3 + 7x^4 + 9x^5 + \cdots}\\
+(1-x)A \amp  = 1 + 2x + 2x^2 + 2x^3 + 2x^4 + \cdots
+\end{align*}
 </div>
-<span class="incontext"><a href="sec_addtops-genfun.html#gLd">in-context</a></span>
+<p>We know that \(2x + 2x^2 + 2x^3 + 2x^4 + \cdots = \dfrac{2x}{1-x}\text{.}\) Thus</p>
+<div class="displaymath">
+\begin{equation*}
+(1-x)A = 1 + \frac{2x}{1-x}\text{.}
+\end{equation*}
+</div>
+<p>Now solve for \(A\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+A = \frac{1}{1-x} + \frac{2x}{(1-x)^2} = \frac{1+x}{(1-x)^2}\text{.}
+\end{equation*}
+</div>
+<p>Does this makes sense? Before we simplified the two fractions into one, we were adding the generating function for the sequence \(1,1,1,1,\ldots\) to the generating function for the sequence \(0, 2, 4, 6, 8, 10, \ldots\) (remember \(\frac{1}{(1-x)^2}\) generates \(1,2,3,4,5, \ldots\text{,}\) multiplying by \(2x\) shifts it over, putting the zero out front, and doubles each term). If we add these term by term, we get the correct sequence \(1,3,5,7, 9, \ldots\text{.}\)</p>
+</div>
+<span class="incontext"><a href="sec_addtops-genfun.html#leo">in-context</a></span>
 </body>
 </html>

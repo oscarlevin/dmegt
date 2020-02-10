@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:26:50-07:00    *-->
+<!--*    on 2020-02-10T10:49:39-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,8 +11,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><ol class="lower-alpha">
-<li><p>There are \({7 \choose 5}\) numbers. We simply choose five of the seven digits and once chosen put them in increasing order.</p></li>
-<li><p>This requires stars and bars. Use a star to represent each of the 5 digits in the number, and use their position relative to the bars to say what numeral fills that spot. So we will have 5 stars and 6 bars, giving \({11 \choose 6}\) numbers.</p></li>
-</ol></div></body>
+<body><div class="solution solution-like">
+<p>We get six scoops, each of which could be one of ten possible flavors. Represent each scoop as a star. Think of going down the counter one flavor at a time: you see vanilla first, and skip to the next, chocolate. You say yes to chocolate three times (use three stars), then switch to the next flavor. You keep skipping until you get to cherry, which you say yes to twice. Another switch and you are at mint chocolate chip. You say yes once. Then you keep switching until you get past the last flavor, never saying yes again (since you already have said yes six times). There are ten flavors to choose from, so we must switch from considering one flavor to the next nine times. These are the nine bars.</p>
+<p>Now that we are confident that we have the right number of stars and bars, we answer the question simply: there are 6 stars and 9 bars, so 15 symbols. We need to pick 9 of them to be bars, so the number of milkshakes possible is</p>
+<div class="displaymath">
+\begin{equation*}
+\binom{15}{9}\text{.}
+\end{equation*}
+</div>
+</div></body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:27:06-07:00    *-->
+<!--*    on 2020-02-10T10:50:02-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,47 +14,16 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.1.5.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.8.19.1</span><span class="period">.</span>
 </h6>
-<p>We can find the terms of this sequence easily enough.</p>
-<div class="displaymath">
-\begin{equation*}
-3, 8, 14, 24, 33, 33, 45,\ldots\text{.}
-\end{equation*}
+<ol class="lower-alpha">
+<li><p>\({10 \choose 4}\) combinations. You need to choose 4 of the 10 cookie types. Order doesn’t matter.</p></li>
+<li><p>\(P(10, 4) = 10 \cdot 9 \cdot 8 \cdot 7\) ways. You are choosing and arranging 4 out of 10 cookies. Order matters now.</p></li>
+<li><p>\({21 \choose 12}\) choices. You must switch between cookie type 9 times as you make your 12 cookies. The cookies are the stars, the switches between cookie types are the bars.</p></li>
+<li><p>\(10^{12}\) choices. You have 10 choices for the “1” cookie, 10 choices for the “2” cookie, and so on.</p></li>
+<li><p>\(10^{12} - \left[{10 \choose 1}9^{12} - {10 \choose 2}8^{12} + \cdots - {10 \choose 10}0^{12} \right]\) choices. We must use PIE to remove all the ways in which one or more cookie type is not selected.</p></li>
+</ol>
 </div>
-<p data-braille="continuation">Here \(b_1\) is just \(a_1\text{,}\) but then</p>
-<div class="displaymath">
-\begin{equation*}
-b_2 = 3+5 = a_1 + a_2\text{,}
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-b_3 = 3+5+6 = a_1 + a_2 + a_3\text{,}
-\end{equation*}
-</div>
-<p data-braille="continuation">and so on.</p>
-<p>There are a few ways we might describe \(b_n\) in general.  We could do so recursively as,</p>
-<div class="displaymath">
-\begin{equation*}
-b_n = b_{n-1} + a_n\text{,}
-\end{equation*}
-</div>
-<p data-braille="continuation">since the total number of push-ups done after \(n\) days will be the number done after \(n-1\) days, plus the number done on day \(n\text{.}\)</p>
-<p>For something closer to a closed formula, we could write</p>
-<div class="displaymath">
-\begin{equation*}
-b_n = a_1 + a_2 + a_3 + \cdots + a_n\text{,}
-\end{equation*}
-</div>
-<p data-braille="continuation">or the same thing using <em class="emphasis">summation notation</em>:</p>
-<div class="displaymath">
-\begin{equation*}
-b_n = \sum_{i=1}^n a_i\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">However, note that these are not really closed formulas since even if we had a formula for \(a_n\text{,}\) we would still have an increasing number of computations to do as \(n\) increases.</p>
-</div>
-<span class="incontext"><a href="sec_seq_intro.html#HjR">in-context</a></span>
+<span class="incontext"><a href="sec_count-conc.html#solution-340">in-context</a></span>
 </body>
 </html>

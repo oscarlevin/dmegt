@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:26:49-07:00    *-->
+<!--*    on 2020-02-10T10:49:38-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,15 +13,24 @@
 </head>
 <body>
 <article class="exercise exercise-like"><h6 class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1<span class="period">.</span></span>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">11<span class="period">.</span></span>
 </h6>
-<p>A multiset is a collection of objects, just like a set, but can contain an object more than once (the order of the elements still doesn’t matter). For example, \(\{1,1, 2, 5, 5, 7\}\) is a multiset of size 6.</p>
+<p>Let's count <dfn class="terminology">ternary</dfn> digit strings, that is, strings in which each digit can be 0, 1, or 2.</p>
 <ol class="lower-alpha">
-<li><p>How many <em class="emphasis">sets</em> of size 5 can be made using the 10 numeric digits 0 through 9?</p></li>
-<li><p>How many <em class="emphasis">multi</em>sets of size 5 can be made using the 10 numeric digits 0 through 9?</p></li>
-</ol>
-<div class="solutions">
-<a class="original" data-knowl="./knowl/answer-158-hidden.html" title="Answer 3.6.1.1"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><a class="original" data-knowl="./knowl/answer-159-hidden.html" title="Answer 3.6.1.2"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><a class="original" data-knowl="./knowl/solution-253-hidden.html" title="Solution 3.6.1.1"><span class="type">Solution</span></a>
-</div></article><span class="incontext"><a href="sec_stars-and-bars.html#SfI">in-context</a></span>
+<li><p>How many ternary digit strings contain exactly \(n\) digits?</p></li>
+<li><p>How many ternary digit strings contain exactly \(n\) digits and \(n\) 2's.</p></li>
+<li><p>How many ternary digit strings contain exactly \(n\) digits and \(n-1\) 2's. (Hint: where can you put the non-2 digit, and then what could it be?)</p></li>
+<li><p>How many ternary digit strings contain exactly \(n\) digits and \(n-2\) 2's. (Hint: see previous hint)</p></li>
+<li><p>How many ternary digit strings contain exactly \(n\) digits and \(n-k\) 2's.</p></li>
+<li><p>How many ternary digit strings contain exactly \(n\) digits and no 2's. (Hint: what kind of a string is this?)</p></li>
+<li>
+<p>Use the above parts to give a combinatorial proof for the identity</p>
+<div class="displaymath">
+\begin{equation*}
+{n \choose 0} + 2{n \choose 1} + 2^2{n \choose 2} + 2^3{n \choose 3} + \cdots + 2^n{n \choose n} = 3^n\text{.}
+\end{equation*}
+</div>
+</li>
+</ol></article><span class="incontext"><a href="sec_comb-proofs.html#FYu">in-context</a></span>
 </body>
 </html>

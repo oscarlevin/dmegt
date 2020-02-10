@@ -147,9 +147,9 @@
   <xi:include href="sec_logic-statements.ptx"/>
   <xi:include href="sec_logic-prop.ptx"/>
   <xi:include href="sec_logic-proofs.ptx"/>
-  <xi:include href="sec_gt-paths.ptx"/>
-  <xi:include href="sec_gt-trees.ptx"/>
   <xi:include href="sec_logic-induction.ptx"/>
+  <xi:include href="sec_gt-trees.ptx"/>
+  <xi:include href="sec_gt-paths.ptx"/>
   <xi:include href="sec_gt-planar.ptx"/>
 
   <!-- <xi:include href="sec_logic-conc.ptx"/> -->

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:26:32-07:00    *-->
+<!--*    on 2020-02-10T10:49:11-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,12 +11,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">
-<p>The proof will by by strong induction.</p>
-<article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
-<p>Let \(P(n)\) be the statement “\(n\) is either a power of 2 or can be written as the sum of distinct powers of 2.” We will show that \(P(n)\) is true for all \(n \ge 1\text{.}\)</p>
-<p>Base case: \(1 = 2^0\) is a power of 2, so \(P(1)\) is true.</p>
-<p>Inductive case: Suppose \(P(k)\) is true for all \(k \lt n\text{.}\) Now if \(n\) is a power of 2, we are done. If not, let \(2^x\) be the largest power of 2 strictly less than \(n\text{.}\) Consider \(n - 2^x\text{,}\) which is a smaller number, in fact smaller than both \(n\) and \(2^x\text{.}\) Thus \(n-2^x\) is either a power of 2 or can be written as the sum of distinct powers of 2, but none of them are going to be \(2^x\text{,}\) so the together with \(2^x\) we have written \(n\) as the sum of distinct powers of 2.</p>
-<p>Therefore, by the principle of (strong) mathematical induction, \(P(n)\) is true for all \(n \ge 1\text{.}\)</p></article>
-</div></body>
+<body><div class="solution solution-like"><ol class="lower-alpha">
+<li><p>This must be the degree sequence for a tree. This is because the vertex of degree 4 must be adjacent to the four vertices of degree 1 (there are no other vertices for it to be adjacent to), and thus we get a star.</p></li>
+<li>
+<p>This cannot be a tree. Each degree 3 vertex is adjacent to all but one of the vertices in the graph. Thus each must be adjacent to one of the degree 1 vertices (and not the other). That means both degree 3 vertices are adjacent to the degree 2 vertex, and to each other, so that means there is a cycle.</p>
+<p>Alternatively, count how many edges there are!</p>
+</li>
+<li><p>This might or might not be a tree. The length 4 path has this degree sequence (this is a tree), but so does the union of a 3-cycle and a length 1 path (which is not connected, so not a tree).</p></li>
+<li><p>This cannot be a tree. The sum of the degrees is 28, so there are 14 edges. But there are 14 vertices as well, so we don't have \(v = e+1\text{,}\) meaning this cannot be a tree.</p></li>
+</ol></div></body>
 </html>

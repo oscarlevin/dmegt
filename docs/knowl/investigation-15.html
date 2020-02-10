@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:26:32-07:00    *-->
+<!--*    on 2020-02-10T10:49:12-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,10 +14,24 @@
 <body>
 <article class="project-like"><h6 class="heading">
 <span class="type">Investigate!</span> </h6>
-<p>When a connected graph can be drawn without any edges crossing, it is called <dfn class="terminology">planar</dfn>. When a planar graph is drawn in this way, it divides the plane into regions called <dfn class="terminology">faces</dfn>.</p>
+<p>An <dfn class="terminology">Euler path</dfn>, in a graph or multigraph, is a walk through the graph which uses every edge exactly once. An <dfn class="terminology">Euler circuit</dfn> is an Euler path which starts and stops at the same vertex. Our goal is to find a quick way to check whether a graph (or multigraph) has an Euler path or circuit.</p>
 <ol class="decimal">
-<li><p>Draw, if possible, two different planar graphs with the same number of vertices, edges, and faces.</p></li>
-<li><p>Draw, if possible, two different planar graphs with the same number of vertices and edges, but a different number of faces.</p></li>
-</ol></article><span class="incontext"><a href="sec_planar.html#Mhf">in-context</a></span>
+<li>
+<p>Which of the graphs below have Euler paths? Which have Euler circuits?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0.75%;margin-right:0.75%;">
+<div class="sbspanel" style="width:18.2741116751269%;justify-content:center;"><img src="images/image-101.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:18.2741116751269%;justify-content:center;"><img src="images/image-102.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:36.5482233502538%;justify-content:center;"><img src="images/image-103.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:22.3350253807107%;justify-content:center;"><img src="images/image-104.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+</li>
+<li><p>List the degrees of each vertex of the graphs above. Is there a connection between degrees and the existence of Euler paths and circuits?</p></li>
+<li><p>Is it possible for a graph with a degree 1 vertex to have an Euler circuit? If so, draw one. If not, explain why not. What about an Euler path?</p></li>
+<li><p>What if every vertex of the graph has degree 2. Is there an Euler path? An Euler circuit? Draw some graphs.</p></li>
+<li>
+<p>Below is <em class="emphasis">part</em> of a graph. Even though you can only see some of the vertices, can you deduce whether the graph will have an Euler path or circuit?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:23%;margin-right:23%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-105.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+</ol></article><span class="incontext"><a href="sec_paths.html#jqb">in-context</a></span>
 </body>
 </html>

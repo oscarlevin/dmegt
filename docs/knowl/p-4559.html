@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:27:18-07:00    *-->
+<!--*    on 2020-02-10T10:50:15-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We just read off the coefficients of each \(x^n\) term. So \(a_0 = 3\) since the coefficient of \(x^0\) is 3 (\(x^0 = 1\) so this is the constant term). What is \(a_1\text{?}\) It is NOT 8, since 8 is the coefficient of \(x^2\text{,}\) so 8 is the term \(a_2\) of the sequence. To find \(a_1\) we need to look for the coefficient of \(x^1\) which in this case is 0. So \(a_1 = 0\text{.}\) Continuing, we have \(a_2 = 8\text{,}\) \(a_3 = 1\text{,}\) \(a_4 = 0\text{,}\) and \(a_5 = \frac{1}{7}\text{.}\) So we have the sequence</p>
+<p>This sum telescopes. We are left with only the \(-a_0\) from the first equation and the \(a_n\) from the last equation. Putting this all together we have \(-a_0 + a_n = \frac{n(n+1)}{2}\) or \(a_n = \frac{n(n+1)}{2} + a_0\text{.}\) But we know that \(a_0 = 4\text{.}\) So the solution to the recurrence relation, subject to the initial condition is</p>
 <div class="displaymath">
 \begin{equation*}
-3, 0, 8, 1, \frac{1}{7}, 100, \ldots\text{.}
+a_n = \frac{n(n+1)}{2} + 4\text{.}
 \end{equation*}
 </div>
-<span class="incontext"><a href="sec_addtops-genfun.html#pOh">in-context</a></span>
+<span class="incontext"><a href="sec_recurrence.html#HTY">in-context</a></span>
 </body>
 </html>

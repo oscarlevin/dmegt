@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:26:53-07:00    *-->
+<!--*    on 2020-02-10T10:49:47-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,30 +14,23 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.7.8.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.7.3.1</span><span class="period">.</span>
 </h6>
-<p>Again start with the total number of functions: \(3^5\) (as each of the five elements of the domain can go to any of three elements of the codomain). Now we count the functions which are <em class="emphasis">not</em> surjective.</p>
-<p>Start by excluding \(a\) from the range. Then we have two choices (\(b\) or \(c\)) for where to send each of the five elements of the domain. Thus there are \(2^5\) functions which exclude \(a\) from the range. Similarly, there are \(2^5\) functions which exclude \(b\text{,}\) and another \(2^5\) which exclude \(c\text{.}\) Now have we counted all functions which are not surjective? Yes, but in fact, we have counted some multiple times. For example, the function which sends everything to \(c\) was one of the \(2^5\) functions we counted when we excluded \(a\) from the range, and also one of the \(2^5\) functions we counted when we excluded \(b\) from the range. We must subtract out all the functions which specifically exclude two elements from the range. There is 1 function when we exclude \(a\) and \(b\) (everything goes to \(c\)), one function when we exclude \(a\) and \(c\text{,}\) and one function when we exclude \(b\) and \(c\text{.}\)</p>
-<p>We are using PIE: to count the functions which are not surjective, we added up the functions which exclude \(a\text{,}\) \(b\text{,}\) and \(c\) separately, then subtracted the functions which exclude pairs of elements. We would then add back in the functions which exclude groups of three elements, except that there are no such functions. We find that the number of functions which are <em class="emphasis">not</em> surjective is</p>
+<p>We must subtract off the number of solutions in which one or more of the variables has a value greater than 3. We will need to use PIE because counting the number of solutions for which each of the five variables separately are greater than 3 counts solutions multiple times. Here is what we get:</p>
+<ul class="disc">
+<li><p>Total solutions: \({17 \choose 4}\text{.}\)</p></li>
+<li><p>Solutions where \(x_1 &gt; 3\text{:}\) \({13 \choose 4}\text{.}\) Give \(x_1\) 4 units first, then distribute the remaining 9 units to the 5 variables.</p></li>
+<li><p>Solutions where \(x_1 &gt; 3\) and \(x_2 &gt; 3\text{:}\) \({9 \choose 4}\text{.}\) After you give 4 units to \(x_1\) and another 4 to \(x_2\text{,}\) you only have 5 units left to distribute.</p></li>
+<li><p>Solutions where \(x_1 &gt; 3\text{,}\) \(x_2 &gt; 3\) and \(x_3 &gt; 3\text{:}\) \({5 \choose 4}\text{.}\)</p></li>
+<li><p>Solutions where \(x_1 &gt; 3\text{,}\) \(x_2 &gt; 3\text{,}\) \(x_3 &gt; 3\text{,}\) and \(x_4 &gt; 3\text{:}\) 0.</p></li>
+</ul>
+<p>We also need to account for the fact that we could choose any of the five variables in the place of \(x_1\) above (so there will be \({5 \choose 1}\) outcomes like this), any pair of variables in the place of \(x_1\) and \(x_2\) (\({5 \choose 2}\) outcomes) and so on. It is because of this that the double counting occurs, so we need to use PIE. All together we have that the number of solutions with \(0 \le x_i \le 3\) is</p>
 <div class="displaymath">
 \begin{equation*}
-2^5 + 2^5 + 2^5 - 1 - 1 - 1 + 0\text{.}
-\end{equation*}
-</div>
-<p>Perhaps a more descriptive way to write this is</p>
-<div class="displaymath">
-\begin{equation*}
-{3 \choose 1}2^5 - {3 \choose 2}1^5 + {3 \choose 3}0^5\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">since each of the \(2^5\)'s was the result of choosing 1 of the 3 elements of the codomain to exclude from the range, each of the three \(1^5\)'s was the result of choosing 2 of the 3 elements of the codomain to exclude. Writing \(1^5\) instead of 1 makes sense too: we have 1 choice of where to send each of the 5 elements of the domain.</p>
-<p>Now we can finally count the number of surjective functions:</p>
-<div class="displaymath">
-\begin{equation*}
-3^5 - \left[{3 \choose 1}2^5 - {3 \choose 2}1^5\right] = 150\text{.}
+{17 \choose 4} - \left[{5\choose 1}{13 \choose 4} - {5 \choose 2}{9 \choose 4} + {5 \choose 3}{5 \choose 4}\right] = 15\text{.}
 \end{equation*}
 </div>
 </div>
-<span class="incontext"><a href="sec_advPIE.html#fil">in-context</a></span>
+<span class="incontext"><a href="sec_advPIE.html#ays">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:27:21-07:00    *-->
+<!--*    on 2020-02-10T10:50:18-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,11 +13,14 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<ol class="lower-alpha cols3">
-<li>\(n+2\) terms.</li>
-<li>\(4n+2\text{.}\)</li>
-<li>\(\frac{(4n+8)(n+2)}{2}\text{.}\)</li>
-</ol>
-<span class="incontext"><a href="sec_sequences-conc.html#Dnf">in-context</a></span>
+<p>What about the sequence \(2, 4, 10, 28, 82, \ldots\text{?}\) Here the terms are always 1 more than powers of 3. That is, we have added the sequences \(1,1,1,1,\ldots\) and \(1,3,9, 27,\ldots\) term by term. Therefore we can get a generating function by adding the respective generating functions:</p>
+<div class="displaymath">
+\begin{align*}
+2 + 4x + 10x^2 + 28x^3 + \cdots  \amp  = (1 + 1) + (1 + 3)x + (1 + 9)x^2 + (1 + 27)x^3 + \cdots\\
+\amp  = 1 + x + x^2 + x^3 + \cdots + 1 + 3x + 9x^2 + 27x^3 + \cdots\\
+\amp  = \frac{1}{1-x} + \frac{1}{1-3x}
+\end{align*}
+</div>
+<span class="incontext"><a href="sec_addtops-genfun.html#nDv">in-context</a></span>
 </body>
 </html>

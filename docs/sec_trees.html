@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:25:49-07:00    *-->
+<!--*    on 2020-02-10T10:48:09-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -96,11 +96,11 @@ MathJax.Hub.Config({
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_paths.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_logic-induction.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_logic-induction.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_paths.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_paths.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_logic-induction.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_logic-induction.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_paths.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -120,7 +120,7 @@ MathJax.Hub.Config({
 <li><a href="sec_gt-intro.html" data-scroll="HLu">Graphs</a></li>
 <li><a href="sec_intro-sets.html" data-scroll="ltW">Sets</a></li>
 <li><a href="sec_intro-functions.html" data-scroll="CkQ">Functions</a></li>
-<li><a href="sec_gt-carefully.html" data-scroll="HLu">Graphs Done Right</a></li>
+<li><a href="sec_gt-carefully.html" data-scroll="sec_gt-carefully">Graphs Done Right</a></li>
 <li><a href="sec_coloring.html" data-scroll="qyO">Coloring</a></li>
 </ul>
 </li>
@@ -129,9 +129,9 @@ MathJax.Hub.Config({
 <li><a href="sec_intro-statements.html" data-scroll="QDd">Mathematical Statements</a></li>
 <li><a href="sec_propositional.html" data-scroll="XMq">Propositional Logic</a></li>
 <li><a href="sec_logic-proofs.html" data-scroll="lnf">Proofs</a></li>
-<li><a href="sec_paths.html" data-scroll="tPg">Euler Paths and Circuits</a></li>
-<li><a href="sec_trees.html" data-scroll="gor" class="active">Trees</a></li>
 <li><a href="sec_logic-induction.html" data-scroll="lnf">Mathematical Induction</a></li>
+<li><a href="sec_trees.html" data-scroll="gor" class="active">Trees</a></li>
+<li><a href="sec_paths.html" data-scroll="tPg">Euler Paths and Circuits</a></li>
 <li><a href="sec_planar.html" data-scroll="ttH">Planar Graphs</a></li>
 </ul>
 </li>
@@ -171,15 +171,15 @@ MathJax.Hub.Config({
 <a href="sec_trees.html" class="permalink">¶</a><section class="introduction" id="mNx"><article class="project-like" id="SUG"><h6 class="heading">
 <span class="type">Investigate!</span> </h6>
 <p id="Yot">Consider the graph drawn below.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-89.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-93.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 <ol id="EvC" class="decimal">
 <li id="jSR"><p id="cos">Find a subgraph with the smallest number of edges that is still connected and contains all the vertices.</p></li>
 <li id="Qaa"><p id="IvB">Find a subgraph with the largest number of edges that doesn't contain any cycles.</p></li>
 <li id="whj"><p id="oCK">What do you notice about the number of edges in your examples above?  Is this a coincidence?</p></li>
 </ol></article><p id="kCL">One very useful and common approach to studying graph theory is to restrict your focus to graphs of a particular kind. For example, you could try to really understand just complete graphs or just bipartite graphs, instead of trying to understand all graphs in general. That is what we are going to do now, looking at <em class="emphasis">trees</em>. Hopefully by the end of this section we will have a better understanding of this class of graph, and also understand why it is important enough to warrant its own section.</p>
 <article class="assemblage assemblage-like" id="kYk"><h6 class="heading"><span class="title">Definition of a Tree.</span></h6>
-<p id="QJU">A <dfn class="terminology">tree</dfn> is a connected graph containing no cycles.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-8" id="fn-8"><sup> 4 </sup></a></p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-8"><div class="fn">Sometimes this is stated as “a tree is an acyclic connected graph;” “acyclic” is just a fancy word for “containing no cycles.”</div></div>
+<p id="QJU">A <dfn class="terminology">tree</dfn> is a connected graph containing no cycles.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-12" id="fn-12"><sup> 7 </sup></a></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-12"><div class="fn">Sometimes this is stated as “a tree is an acyclic connected graph;” “acyclic” is just a fancy word for “containing no cycles.”</div></div>
 <p id="wRd">A <dfn class="terminology">forest</dfn> is a graph containing no cycles.   Note that this means that a connected forest is a tree.</p></article><p id="cYm">Does the definition above agree with your intuition for what graphs we should call trees? Try thinking of examples of trees and make sure they satisfy the definition. One thing to keep in mind is that while the trees we study in graph theory are related to trees you might see in other subjects, the correspondence is not exact. For instance, in anthropology, you might study family trees, like the one below,</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/family-tree.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 <p id="Jfv">So far so good, but while your grandparents are (probably) not blood-relatives, if we go back far enough, it is likely that they did have <em class="emphasis">some</em> common ancestor. If you trace the tree back from you to that common ancestor, then down through your other grandparent, you would have a cycle, and thus the graph would not be a tree.</p>
@@ -201,8 +201,8 @@ MathJax.Hub.Config({
 <p id="FAV">Now we consider the converse: if between every pair of distinct vertices of \(T\) there is a unique path, then \(T\) is a tree.  So assume the hypothesis: between every pair of distinct vertices of \(T\) there is a unique path.  To prove that \(T\) is a tree, we must show it is connected and contains no cycles.</p>
 <p id="lIe">The first half of this is easy: \(T\) is connected, because there is a path between every pair of vertices.  To show that \(T\) has no cycles, we assume it does, for the sake of contradiction.  Let \(u\) and \(v\) be two distinct vertices in a cycle of \(T\text{.}\)  Since we can get from \(u\) to \(v\) by going clockwise or counterclockwise around the cycle, there are two paths from \(u\) and \(v\text{,}\) contradicting our assumption.</p>
 <p id="RPn">We have established both directions so we have completed the proof.</p></article><p id="mrY">Read the proof above very carefully.  Notice that both directions had two parts: the existence of paths, and the uniqueness of paths (which related to the fact that there were no cycles).  In this case, these two parts were really separate.  In fact, if we just considered graphs with no cycles (a forest), then we could still do the parts of the proof that explore the uniqueness of paths between vertices, even if there might not <em class="emphasis">exist</em> paths between vertices.</p>
-<p id="Szh">This observation allows us to state the following <em class="emphasis">corollary</em>:<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-9" id="fn-9"><sup> 5 </sup></a></p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-9"><div class="fn">A corollary is another sort of provable statement, like a proposition or theorem, but one that follows direction from another already established statement, or its proof.</div></div>
+<p id="Szh">This observation allows us to state the following <em class="emphasis">corollary</em>:<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-13" id="fn-13"><sup> 8 </sup></a></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-13"><div class="fn">A corollary is another sort of provable statement, like a proposition or theorem, but one that follows direction from another already established statement, or its proof.</div></div>
 <article class="corollary theorem-like" id="JAU"><h6 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.5.2</span><span class="period">.</span>
 </h6>
@@ -264,17 +264,17 @@ MathJax.Hub.Config({
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.7</span><span class="period">.</span>
 </h6>
 <p id="shk">Find two different spanning trees of the graph,</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-92.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-96.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-XEz" id="XEz"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-XEz"><div class="solution solution-like">
 <p id="gYl">Here are two spanning trees.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;">
-<div class="sbspanel" style="width:37.5%;justify-content:flex-start;"><img src="images/image-93.svg" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:37.5%;justify-content:flex-start;"><img src="images/image-94.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:37.5%;justify-content:flex-start;"><img src="images/image-97.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:37.5%;justify-content:flex-start;"><img src="images/image-98.svg" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
 </div></div>
-</div></article><p id="lmF">Although we will not consider this in detail, these algorithms are usually applied to <em class="emphasis">weighted</em> graphs.  Here every edge has some weight or cost assigned to it.  The goal is to find a spanning tree that has the smallest possible combined weight.  Such a tree is called a <dfn class="terminology">minimum spanning tree</dfn>.  Finding the minimum spanning tree uses basically the same algorithms as we described above, but when picking an edge to add, you always pick the smallest (or when removing an edge, you always remove the largest).<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-10" id="fn-10"><sup> 6 </sup></a></p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-10"><div class="fn">If you add the smallest edge adjacent to edges you have already added, you are doing <em class="emphasis">Prim's algorithm</em>.  If you add the smallest edge in the entire graph, you are following <em class="emphasis">Kruskal's algorithm</em>.</div></div></section><section class="exercises" id="iQl"><h3 class="heading hide-type">
+</div></article><p id="lmF">Although we will not consider this in detail, these algorithms are usually applied to <em class="emphasis">weighted</em> graphs.  Here every edge has some weight or cost assigned to it.  The goal is to find a spanning tree that has the smallest possible combined weight.  Such a tree is called a <dfn class="terminology">minimum spanning tree</dfn>.  Finding the minimum spanning tree uses basically the same algorithms as we described above, but when picking an edge to add, you always pick the smallest (or when removing an edge, you always remove the largest).<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-14" id="fn-14"><sup> 9 </sup></a></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-14"><div class="fn">If you add the smallest edge adjacent to edges you have already added, you are doing <em class="emphasis">Prim's algorithm</em>.  If you add the smallest edge in the entire graph, you are following <em class="emphasis">Kruskal's algorithm</em>.</div></div></section><section class="exercises" id="iQl"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <a href="sec_trees.html#iQl" class="permalink">¶</a><article class="exercise exercise-like" id="HzZ"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
@@ -379,7 +379,7 @@ MathJax.Hub.Config({
 </ol></div></div>
 </div></article><article class="exercise exercise-like" id="did"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
 <p id="xZj">Find all spanning trees of the graph below. How many different spanning trees are there? How many different spanning trees are there <em class="emphasis">up to isomorphism</em> (that is, if you grouped all the spanning trees by which are isomorphic, how many groups would you have)?</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-96.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise exercise-like" id="Jpm"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-100.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise exercise-like" id="Jpm"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
 <p id="egs">Give an example of a graph that has exactly 7 different spanning trees. Note, it acceptable for some or all of these spanning trees to be isomorphic.</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-rlI" id="rlI"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-rlI"><div class="hint solution-like"><p id="DOv">There is an example with 7 edges.</p></div></div>

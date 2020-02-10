@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:26:31-07:00    *-->
+<!--*    on 2020-02-10T10:49:08-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,13 +11,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">
-<p>First, the idea: if we take some number \(n\text{,}\) maybe it is prime. If so, we are done. If not, then it is composite, so it is the product of two smaller numbers. Each of these factors is smaller than \(n\) (but at least 2), so we can repeat the argument with these numbers. We have reduced to a smaller case.</p>
-<p>Now the formal proof:</p>
-<article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
-<p>Let \(P(n)\) be the statement, “\(n\) is either prime or can be written as the product of primes.” We will prove \(P(n)\) is true for all \(n \ge 2\text{.}\)</p>
-<p>Base case: \(P(2)\) is true because \(2\) is indeed prime.</p>
-<p>Inductive case: assume \(P(k)\) is true for all \(k \lt n\text{.}\) We want to show that \(P(n)\) is true. That is, we want to show that \(n\) is either prime or is the product of primes. If \(n\) is prime, we are done. If not, then \(n\) has more than 2 divisors, so we can write \(n = m_1 \cdot m_2\text{,}\) with \(m_1\) and \(m_2\) less than \(n\) (and greater than 1). By the inductive hypothesis, \(m_1\) and \(m_2\) are each either prime or can be written as the product of primes. In either case, we have that \(n\) is written as the product of primes.</p>
-<p>Thus by the strong induction, \(P(n)\) is true for all \(n \ge 2\text{.}\)</p></article>
-</div></body>
+<body><div class="solution solution-like"><article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p>Let \(P(n)\) be the statement \(F_0 + F_2 + F_4 + \cdots + F_{2n} = F_{2n+1} - 1\text{.}\) We will show that \(P(n)\) is true for all \(n \ge 0\text{.}\) First the base case is easy because \(F_0 = 0\) and \(F_1 = 1\) so \(F_0 = F_1 - 1\text{.}\) Now consider the inductive case. Assume \(P(k)\) is true, that is, assume \(F_0 + F_2 + F_4 + \cdots + F_{2k} = F_{2k+1} - 1\text{.}\) To establish \(P(k+1)\) we work from left to right:</p>
+<div class="displaymath">
+\begin{align*}
+F_0 + F_2 + \cdots + F_{2k} + F_{2k+2} ~ \amp = F_{2k+1} - 1 + F_{2k+2} \amp \text{by ind. hyp.}\\
+\amp = F_{2k+1} + F_{2k+2} - 1 \amp\\
+\amp = F_{2k+3} - 1 \amp \text{by recursive def.}
+\end{align*}
+</div>
+<p>Therefore \(F_0 + F_2 + F_4 + \cdots + F_{2k+2} = F_{2k+3} - 1\text{,}\) which is to say \(P(k+1)\) holds. Therefore by the principle of mathematical induction, \(P(n)\) is true for all \(n \ge 0\text{.}\)</p></article></div></body>
 </html>

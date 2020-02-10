@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:26:42-07:00    *-->
+<!--*    on 2020-02-10T10:49:27-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,9 +11,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">
-<p>Note that it doesn't make sense to ask for the number of <em class="emphasis">bijections</em> here, as there are none (because the codomain is larger than the domain, there are no surjections). But for a function to be injective, we just can't use an element of the codomain more than once.</p>
-<p>We need to pick an element from the codomain to be the image of 1. There are 8 choices. Then we need to pick one of the remaining 7 elements to be the image of 2. Finally, one of the remaining 6 elements must be the image of 3. So the total number of functions is \(8\cdot 7 \cdot 6 = P(8,3)\text{.}\)</p>
-<p>What this demonstrates in general is that the number of injections \(f:A \to B\text{,}\) where \(\card{A} = k\) and \(\card{B} = n\text{,}\) is \(P(n,k)\text{.}\)</p>
-</div></body>
+<body><div class="solution solution-like"><ol class="lower-alpha">
+<li>\({11 \choose 3} = 165\) choices, since you have to select a 3-element subset of the set of 11 toppings.</li>
+<li>\({10 \choose 3} = 120\) choices, since you must select 3 of the 10 non-pineapple toppings.</li>
+<li>\({10 \choose 2} = 45\) choices, since you must select 2 of the remaining 10 non-pineapple toppings to have in addition to the pineapple.</li>
+<li>\(165 = 120 + 45\) choices, which makes sense because every 3-topping pizza either has pineapple or does not have pineapple as a topping.</li>
+</ol></div></body>
 </html>

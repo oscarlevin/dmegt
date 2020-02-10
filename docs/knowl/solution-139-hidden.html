@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:26:29-07:00    *-->
+<!--*    on 2020-02-10T10:49:05-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,8 +11,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">
-<p>To show that a graph is bipartite, we must divide the vertices into two sets \(A\) and \(B\) so that no two vertices in the same set are adjacent.  Here is an algorithm that does just this.</p>
-<p>Designate any vertex as the root.  Put this vertex in set \(A\text{.}\)  Now put all of the children of the root in set \(B\text{.}\)  None of these children are adjacent (they are siblings), so we are good so far.  Now put into \(A\) every child of every vertex in \(B\) (i.e., every grandchild of the root).  Keep going until all vertices have been assigned one of the sets, alternating between \(A\) and \(B\) every “generation.”  That is, a vertex is in set \(B\) if and only if it is the child of a vertex in set \(A\text{.}\)</p>
-</div></body>
+<body><div class="solution solution-like"><ol class="lower-alpha">
+<li>
+<p>This is an example of the pigeonhole principle. We can prove it by contrapositive.</p>
+<article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p>Suppose that each number only came up 6 or fewer times. So there are at most six 1's, six 2's, and so on. That's a total of 36 dice, so you must not have rolled all 40 dice.</p></article>
+</li>
+<li>
+<p>We can have 9 dice without any four matching or any four being all different: three 1's, three 2's, three 3's. We will prove that whenever you roll 10 dice, you will always get four matching or all being different.</p>
+<article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p>Suppose you roll 10 dice, but that there are NOT four matching rolls. This means at most, there are three of any given value. If we only had three different values, that would be only 9 dice, so there must be 4 different values, giving 4 dice that are all different.</p></article>
+</li>
+</ol></div></body>
 </html>

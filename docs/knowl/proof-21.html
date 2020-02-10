@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:26:29-07:00    *-->
+<!--*    on 2020-02-10T10:49:06-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,9 +13,21 @@
 </head>
 <body>
 <article class="proof"><h6 class="heading"><span class="type">Proof</span></h6>
-<p>We will give a proof by induction on the number of vertices in the tree.  That is, we will prove that every tree with \(v\) vertices has exactly \(v-1\) edges, and then use induction to show this is true for all \(v \ge 1\text{.}\)</p>
-<p>For the base case, consider all trees with \(v = 1\) vertices.  There is only one such tree: the graph with a single isolated vertex.  This graph has \(e = 0\) edges, so we see that \(e = v-1\) as needed.</p>
-<p>Now for the inductive case, fix \(k \ge 1\) and assume that all trees with \(v=k\) vertices have exactly \(e=k-1\) edges.  Now consider an arbitrary tree \(T\) with \(v = k+1\) vertices.  By <a class="xref" data-knowl="./knowl/prop-leaves-in-trees.html" title="Proposition 2.5.3">Proposition 2.5.3</a>, \(T\) has a vertex \(v_0\) of degree one.  Let \(T'\) be the tree resulting from removing \(v_0\) from \(T\) (together with its incident edge).  Since we removed a leaf, \(T'\) is still a tree (the unique paths between pairs of vertices in \(T'\) are the same as the unique paths between them in \(T\)).</p>
-<p>Now \(T'\) has \(k\) vertices, so by the inductive hypothesis, has \(k-1\) edges.  What can we say about \(T\text{?}\)  Well, it has one more edge than \(T'\text{,}\) so it has \(k\) edges.  But this is exactly what we wanted: \(v=k+1\text{,}\) \(e=k\) so indeed \(e = v-1\text{.}\)  This completes the inductive case, and the proof.</p></article><span class="incontext"><a href="sec_trees.html#Lqh">in-context</a></span>
+<p>Let \(P(n)\) be the statement, “\(6^n - 1\) is a multiple of 5.” We will prove that \(P(n)\) is true for all \(n \in \N\text{.}\)</p>
+<p>Base case: \(P(0)\) is true: \(6^0 -1 = 0\) which is a multiple of 5.</p>
+<p>Inductive case: Let \(k\) be an arbitrary natural number. Assume, for induction, that \(P(k)\) is true. That is, \(6^k - 1\) is a multiple of \(5\text{.}\) Then \(6^k - 1 = 5j\) for some integer \(j\text{.}\) This means that \(6^k = 5j + 1\text{.}\) Multiply both sides by \(6\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+6^{k+1} = 6(5j+1) = 30j + 6\text{.}
+\end{equation*}
+</div>
+<p>But we want to know about \(6^{k+1} - 1\text{,}\) so subtract 1 from both sides:</p>
+<div class="displaymath">
+\begin{equation*}
+6^{k+1} - 1 = 30j + 5\text{.}
+\end{equation*}
+</div>
+<p>Of course \(30j+5 = 5(6j+1)\text{,}\) so is a multiple of 5.</p>
+<p>Therefore \(6^{k+1} - 1\) is a multiple of 5, or in other words, \(P(k+1)\) is true. Thus, by the principle of mathematical induction \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article><span class="incontext"><a href="sec_logic-induction.html#BXv">in-context</a></span>
 </body>
 </html>

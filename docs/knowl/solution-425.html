@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:27:19-07:00    *-->
+<!--*    on 2020-02-10T10:50:19-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -16,8 +16,23 @@
 <h6 class="heading">
 <span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.5.4.1</span><span class="period">.</span>
 </h6>
-<p>Call the generating function \(A\text{.}\) Compute \(A - xA = 4 + x + 2x^2 + 3x^3 + 4x^4 + \cdots\text{.}\) Thus \(A - xA = 4 + \dfrac{x}{(1-x)^2}\text{.}\) Solving for \(A\) gives \(\d\frac{4}{1-x} + \frac{x}{(1-x)^3}\text{.}\)</p>
+<p>Call the generating function for the sequence \(A\text{.}\) We have</p>
+<div class="displaymath">
+\begin{align*}
+A \amp  = 1 + 3x + 7x^2 + 15x^3 + 31x^4 + \cdots + a_nx^n + \cdots\\
+-3xA \amp  = 0 - 3x - 9x^2 - 21x^3 - 45x^4 - \cdots - 3a_{n-1}x^n - \cdots\\
+\underline{+~~~2x^2A_{~}^{~^{~}}} \amp  \underline{\,\, = 0 + 0x + 2x^2 + 6x^3 + 14x^4 + \cdots + 2a_{n-2}x^n + \cdots}\\
+(1-3x+2x^2)A \amp  = 1
+\end{align*}
 </div>
-<span class="incontext"><a href="sec_addtops-genfun.html#sZv">in-context</a></span>
+<p>We multiplied \(A\) by \(-3x\) which shifts every term over one spot and multiplies them by \(-3\text{.}\) On the third line, we multiplied \(A\) by \(2x^2\text{,}\) which shifted every term over two spots and multiplied them by 2. When we add up the corresponding terms, we are taking each term, subtracting 3 times the previous term, and adding 2 times the term before that. This will happen for each term after \(a_1\) because \(a_n - 3a_{n-1} + 2a_{n-2} = 0\text{.}\) In general, we might have two terms from the beginning of the generating series, although in this case the second term happens to be 0 as well.</p>
+<p>Now we just need to solve for \(A\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+A = \frac{1}{1 - 3x + 2x^2}\text{.}
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="sec_addtops-genfun.html#xsG">in-context</a></span>
 </body>
 </html>

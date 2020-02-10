@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:26:15-07:00    *-->
+<!--*    on 2020-02-10T10:48:46-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -15,40 +15,20 @@
 <article class="exercise exercise-like"><h6 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4<span class="period">.</span></span>
 </h6>
-<p>A group of 10 friends decides to head up to a cabin in the woods (where nothing could possibly go wrong). Unfortunately, a number of these friends have dated each other in the past, and things are still a little awkward. To get to the cabin, they need to divide up into some number of cars, and no two people who dated should be in the same car.</p>
+<p>We often define graph theory concepts using set theory.  For example, given a graph \(G = (V, E)\) and a vertex \(v \in V\text{,}\) we define</p>
+<div class="displaymath">
+\begin{equation*}
+N(v) = \{u \in V \st \{v,u\} \in E\}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">We define \(N[v] = N(v) \cup \{v\}\text{.}\)  The goal of this problem is to figure out what all this means.</p>
 <ol class="lower-alpha">
-<li><p>What is the smallest number of cars you need if all the relationships were strictly heterosexual? Represent an example of such a situation with a graph. What kind of graph do you get?</p></li>
-<li>
-<p>Because a number of these friends dated there are also conflicts between friends of the same gender, listed below. Now what is the smallest number of conflict-free cars they could take to the cabin?</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
-<tr>
-<td class="l m b1 r1 l0 t0 lines">Friend</td>
-<td class="l m b1 r0 l0 t0 lines">A</td>
-<td class="l m b1 r0 l0 t0 lines">B</td>
-<td class="l m b1 r0 l0 t0 lines">C</td>
-<td class="l m b1 r0 l0 t0 lines">D</td>
-<td class="l m b1 r0 l0 t0 lines">E</td>
-<td class="l m b1 r0 l0 t0 lines">F</td>
-<td class="l m b1 r0 l0 t0 lines">G</td>
-<td class="l m b1 r0 l0 t0 lines">H</td>
-<td class="l m b1 r0 l0 t0 lines">I</td>
-<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell">J</td>
-</tr>
-<tr>
-<td class="l m b0 r1 l0 t0 lines">Conflicts</td>
-<td class="l m b0 r0 l0 t0 lines">CFJ</td>
-<td class="l m b0 r0 l0 t0 lines">J</td>
-<td class="l m b0 r0 l0 t0 lines">AEF</td>
-<td class="l m b0 r0 l0 t0 lines">H</td>
-<td class="l m b0 r0 l0 t0 lines">CFG</td>
-<td class="l m b0 r0 l0 t0 lines">ACEGI</td>
-<td class="l m b0 r0 l0 t0 lines">EFI</td>
-<td class="l m b0 r0 l0 t0 lines">D</td>
-<td class="l m b0 r0 l0 t0 lines">AFG</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">B</td>
-</tr>
-</table></div></div></div>
-</li>
-</ol></article><span class="incontext"><a href="sec_coloring.html#VDe">in-context</a></span>
+<li><p>Let \(G\) be the graph with \(V = \{a,b,c,d,e,f\}\) and \(E = \{\{a,b\}, \{a,e\},\{b, c\}, \{b,e\}, \{c,d\}, \{c, f\}, \{d, f\}, \{e,f\}\}\text{.}\)  Find \(N(a)\text{,}\) \(N[a]\text{,}\) \(N(c)\text{,}\) and \(N[c]\text{.}\)</p></li>
+<li><p>What is the largest and smallest possible values for \(|N(v)|\) and \(|N[v]|\) for the graph in part (a)?  Explain.</p></li>
+<li><p>Give an example of a graph \(G = (V, E)\) (probably different than the one above) for which \(N[v] = V\) for some vertex \(v \in V\text{.}\)  Is there a graph for which \(N[v] = V\) for <em class="emphasis">all</em> \(v \in V\text{?}\)  Explain.</p></li>
+<li><p>Give an example of a graph \(G = (V,E)\) for which \(N(v) = \emptyset\) for some \(v \in V\text{.}\)  Is there an example of such a graph for which \(N[u] = V\) for some other \(u \in V\) as well?  Explain.</p></li>
+<li><p>Describe in words what \(N(v)\) and \(N[v]\) mean in general.</p></li>
+</ol>
+<div class="solutions"><a class="original" data-knowl="./knowl/hint-18-hidden.html" title="Hint 1.5.4.1"><span class="type">Hint</span></a></div></article><span class="incontext"><a href="sec_gt-carefully.html#dhQ">in-context</a></span>
 </body>
 </html>

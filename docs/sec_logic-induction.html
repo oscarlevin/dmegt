@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:25:49-07:00    *-->
+<!--*    on 2020-02-10T10:48:09-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -96,11 +96,11 @@ MathJax.Hub.Config({
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_trees.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_planar.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_logic-proofs.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_trees.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_trees.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_planar.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_logic-proofs.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_trees.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -120,7 +120,7 @@ MathJax.Hub.Config({
 <li><a href="sec_gt-intro.html" data-scroll="HLu">Graphs</a></li>
 <li><a href="sec_intro-sets.html" data-scroll="ltW">Sets</a></li>
 <li><a href="sec_intro-functions.html" data-scroll="CkQ">Functions</a></li>
-<li><a href="sec_gt-carefully.html" data-scroll="HLu">Graphs Done Right</a></li>
+<li><a href="sec_gt-carefully.html" data-scroll="sec_gt-carefully">Graphs Done Right</a></li>
 <li><a href="sec_coloring.html" data-scroll="qyO">Coloring</a></li>
 </ul>
 </li>
@@ -129,9 +129,9 @@ MathJax.Hub.Config({
 <li><a href="sec_intro-statements.html" data-scroll="QDd">Mathematical Statements</a></li>
 <li><a href="sec_propositional.html" data-scroll="XMq">Propositional Logic</a></li>
 <li><a href="sec_logic-proofs.html" data-scroll="lnf">Proofs</a></li>
-<li><a href="sec_paths.html" data-scroll="tPg">Euler Paths and Circuits</a></li>
-<li><a href="sec_trees.html" data-scroll="gor">Trees</a></li>
 <li><a href="sec_logic-induction.html" data-scroll="lnf" class="active">Mathematical Induction</a></li>
+<li><a href="sec_trees.html" data-scroll="gor">Trees</a></li>
+<li><a href="sec_paths.html" data-scroll="tPg">Euler Paths and Circuits</a></li>
 <li><a href="sec_planar.html" data-scroll="ttH">Planar Graphs</a></li>
 </ul>
 </li>
@@ -166,10 +166,10 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="lnf"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">2.6</span> <span class="title">Mathematical Induction</span>
+<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Mathematical Induction</span>
 </h2>
-<a href="sec_logic-induction.html" class="permalink">¶</a><section class="introduction" id="duL"><p id="rcR"> Mathematical induction is a proof technique, not unlike direct proof or proof by contradiction or combinatorial proof.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-11" id="fn-11"><sup> 7 </sup></a> In other words, induction is a style of argument we use to convince ourselves and others that a mathematical statement is always true. Many mathematical statements can be proved by simply explaining what they mean. Others are very difficult to prove—in fact, there are relatively simple mathematical statements which nobody yet knows how to prove. To facilitate the discovery of proofs, it is important to be familiar with some standard styles of arguments. Induction is one such style. Let's start with an example:</p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-11"><div class="fn">You might or might not be familiar with these yet. We will consider these in <a href="ch_logic.html" class="internal" title="Chapter 2: Symbolic Logic and Proofs">Chapter 2</a>.</div></div></section><section class="subsection" id="vyp"><h3 class="heading hide-type">
+<a href="sec_logic-induction.html" class="permalink">¶</a><section class="introduction" id="duL"><p id="rcR"> Mathematical induction is a proof technique, not unlike direct proof or proof by contradiction or combinatorial proof.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-9" id="fn-9"><sup> 4 </sup></a> In other words, induction is a style of argument we use to convince ourselves and others that a mathematical statement is always true. Many mathematical statements can be proved by simply explaining what they mean. Others are very difficult to prove—in fact, there are relatively simple mathematical statements which nobody yet knows how to prove. To facilitate the discovery of proofs, it is important to be familiar with some standard styles of arguments. Induction is one such style. Let's start with an example:</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-9"><div class="fn">You might or might not be familiar with these yet. We will consider these in <a href="ch_logic.html" class="internal" title="Chapter 2: Symbolic Logic and Proofs">Chapter 2</a>.</div></div></section><section class="subsection" id="vyp"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Stamps</span>
 </h3>
 <a href="sec_logic-induction.html#vyp" class="permalink">¶</a><article class="project-like" id="MwA"><h6 class="heading">
@@ -191,12 +191,12 @@ F,F,F,F,T,F,F,T,F,T,F,F,T,\ldots
 <p id="gDM">Let's think a bit about how we could find the value of \(P(n)\) for some specific \(n\) (the “value” will be either \(T\) or \(F\)). How did we find the value of the \(n\)th term of a sequence of numbers? How did we find \(a_n\text{?}\) There were two ways we could do this: either there was a closed formula for \(a_n\text{,}\) so we could plug in \(n\) into the formula and get our output value, or we had a recursive definition for the sequence, so we could use the previous terms of the sequence to compute the \(n\)th term. When dealing with sequences of statements, we could use either of these techniques as well. Maybe there is a way to use \(n\) itself to determine whether we can make \(n\) cents of postage. That would be something like a closed formula. Or instead we could use the previous terms in the sequence (of statements) to determine whether we can make \(n\) cents of postage. That is, if we know the value of \(P(n-1)\text{,}\) can we get from that to the value of \(P(n)\text{?}\) That would be something like a recursive definition for the sequence. Remember, finding recursive definitions for sequences was often easier than finding closed formulas. The same is true here.</p>
 <p id="MKV">Suppose I told you that \(P(43)\) was true (it is). Can you determine from this fact the value of \(P(44)\) (whether it true or false)? Yes you can. Even if we don't know how exactly we made 43 cents out of the 5-cent and 8-cent stamps, we do know that there was some way to do it. What if that way used at least three 5-cent stamps (making 15 cents)? We could replace those three 5-cent stamps with two 8-cent stamps (making 16 cents). The total postage has gone up by 1, so we have a way to make 44 cents, so \(P(44)\) is true. Of course, we assumed that we had at least three 5-cent stamps. What if we didn't? Then we must have at least three 8-cent stamps (making 24 cents). If we replace those three 8-cent stamps with five 5-cent stamps (making 25 cents) then again we have bumped up our total by 1 cent so we can make 44 cents, so \(P(44)\) is true.</p>
 <p id="sSe">Notice that we have not said how to make 44 cents, just that we can, on the basis that we can make 43 cents. How do we know we can make 43 cents? Perhaps because we know we can make \(42\)  cents, which we know we can do because we know we can make 41 cents, and so on. It's a recursion! As with a recursive definition of a numerical sequence, we must specify our initial value. In this case, the initial value is “\(P(1)\) is false.” That's not good, since our recurrence relation just says that \(P(k+1)\) is true <em class="emphasis">if</em> \(P(k)\) is also true. We need to start the process with a true \(P(k)\text{.}\) So instead, we might want to use “\(P(28)\) is true” as the initial condition.</p>
-<p id="YZn">Putting this all together we arrive at the following fact: it is possible to (exactly) make any amount of postage greater than 27 cents using just 5-cent and 8-cent stamps.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-12" id="fn-12"><sup> 8 </sup></a> In other words, \(P(k)\) is true for any \(k \ge 28\text{.}\) To prove this, we could do the following:</p>
+<p id="YZn">Putting this all together we arrive at the following fact: it is possible to (exactly) make any amount of postage greater than 27 cents using just 5-cent and 8-cent stamps.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-10" id="fn-10"><sup> 5 </sup></a> In other words, \(P(k)\) is true for any \(k \ge 28\text{.}\) To prove this, we could do the following:</p>
 <ol class="decimal">
 <li id="ryq"><p id="cps">Demonstrate that \(P(28)\) is true.</p></li>
 <li id="XFz"><p id="IwB">Prove that if \(P(k)\) is true, then \(P(k+1)\) is true (for any \(k \ge 28\)).</p></li>
 </ol>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-12"><div class="fn">This is not claiming that there are no amounts less than 27 cents which can also be made.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-10"><div class="fn">This is not claiming that there are no amounts less than 27 cents which can also be made.</div></div>
 <p id="Fgw">Suppose we have done this. Then we know that the 28th term of the sequence above is a \(T\) (using step 1, the initial condition or <dfn class="terminology">base case</dfn>), and that every term after the 28th is \(T\) also (using step 2, the recursive part or <dfn class="terminology">inductive case</dfn>). Here is what the proof would actually look like.</p>
 <article class="proof" id="GHo"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="cZm">Let \(P(n)\) be the statement “it is possible to make exactly \(n\) cents of postage using 5-cent and 8-cent stamps.” We will show \(P(n)\) is true for all \(n \ge 28\text{.}\)</p>
@@ -224,7 +224,7 @@ F,F,F,F,T,F,F,T,F,T,F,F,T,\ldots
 </h3>
 <a href="sec_logic-induction.html#HMH" class="permalink">¶</a><p id="OAi">Here are some examples of proof by mathematical induction.</p>
 <article class="example example-like" id="sDJ"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.6.1</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span>
 </h6>
 <p id="SAh">Prove for each natural number \(n \ge 1\) that \(1 + 2 + 3 + \cdots + n = \frac{n(n+1)}{2}\text{.}\)</p>
 <div class="solutions">
@@ -252,7 +252,7 @@ F,F,F,F,T,F,F,T,F,T,F,F,T,\ldots
 </div></div>
 </div></article><p id="uHr">Note that in the part of the proof in which we proved \(P(k+1)\) from \(P(k)\text{,}\) we used the equation \(P(k)\text{.}\) This was the inductive hypothesis. Seeing how to use the inductive hypotheses is usually straight forward when proving a fact about a sum like this. In other proofs, it can be less obvious where it fits in.</p>
 <article class="example example-like" id="YKS"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.6.2</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span>
 </h6>
 <p id="yHq">Prove that for all \(n \in \N\text{,}\) \(6^n - 1\) is a multiple of 5.</p>
 <div class="solutions">
@@ -280,7 +280,7 @@ F,F,F,F,T,F,F,T,F,T,F,F,T,\ldots
 </div></article><p id="aOA">We had to be a little bit clever (i.e., use some algebra) to locate the \(6^k - 1\) inside of \(6^{k+1} - 1\) before we could apply the inductive hypothesis. This is what can make inductive proofs challenging.</p>
 <p id="GVJ">In the two examples above, we started with \(n = 1\) or \(n = 0\text{.}\) We can start later if we need to.</p>
 <article class="example example-like" id="ESb"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.6.3</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span>
 </h6>
 <p id="eOz">Prove that \(n^2 \lt 2^n\) for all integers \(n \ge 5\text{.}\)</p>
 <div class="solutions">
@@ -324,7 +324,7 @@ a\text{,}\) then \(f(x) \lt g(x)\) for \(x &gt; a\text{.}\) Same idea: the large
 <p id="LFC">What about \(n=4\text{?}\) Now we could have a \(2\times 2\) bar, or a \(1 \times 4\) bar. In the first case, break the bar into two \(2\times 2\) bars, each which require one more break (that's a total of three breaks required). If we started with a \(1 \times 4\) bar, we have choices for our first break. We could break the bar in half, creating two \(1\times 2\) bars, or we could break off a single square, leaving a \(1\times 3\) bar. But either way, we still need two more breaks, giving a total of three.</p>
 <p id="rML">It is starting to look like no matter how we break the bar (and no matter how the \(n\) squares are arranged into a rectangle), we will always have the same number of breaks required. It also looks like that number is one less than \(n\text{:}\)</p>
 <article class="conjecture theorem-like" id="kZk"><h6 class="heading">
-<span class="type">Conjecture</span><span class="space"> </span><span class="codenumber">2.6.4</span><span class="period">.</span>
+<span class="type">Conjecture</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span>
 </h6>
 <p id="msY">Given a \(n\)-square rectangular chocolate bar, it always takes \(n-1\) breaks to reduce the bar to single squares.</p></article><p id="XTU">It makes sense to prove this by induction because after breaking the bar once, you are left with <em class="emphasis">smaller</em> chocolate bars. Reducing to smaller cases is what induction is all about. We can inductively assume we already know how to deal with these smaller bars. The problem is, if we are trying to prove the inductive case about a \((k+1)\)-square bar, we don't know that after the first break the remaining bar will have \(k\) squares. So we really need to assume that our conjecture is true for all cases less than \(k+1\text{.}\)</p>
 <p id="Ebd">Is it valid to make this stronger assumption? Remember, in induction we are attempting to prove that \(P(n)\) is true for all \(n\text{.}\) What if that were not the case? Then there would be some first \(n_0\) for which \(P(n_0)\) was false. Since \(n_0\) is the <em class="emphasis">first</em> counterexample, we know that \(P(n)\) is true for all \(n \lt n_0\text{.}\) Now we proceed to prove that \(P(n_0)\) is actually true, based on the assumption that \(P(n)\) is true for all smaller \(n\text{.}\)</p>
@@ -336,8 +336,8 @@ a\text{,}\) then \(f(x) \lt g(x)\) for \(x &gt; a\text{.}\) Same idea: the large
 <li id="Qba"><p id="ASc">Base case: Prove that \(P(0)\) is true.</p></li>
 <li id="wij"><p id="gZl">Inductive case: Assume \(P(k)\) is true for all \(k \lt n\text{.}\) Prove that \(P(n)\) is true.</p></li>
 </ol>
-<p data-braille="continuation">Conclude, “therefore, by strong induction, \(P(n)\) is true for all \(n \gt 0\text{.}\)”</p></article><p id="wwE">Of course, it is acceptable to replace 0 with a larger base case if needed.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-13" id="fn-13"><sup> 9 </sup></a></p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-13"><div class="fn">Technically, strong induction does not require you to prove a separate base case. This is because when proving the inductive case, you must show that \(P(0)\) is true, assuming \(P(k)\) is true for all \(k \lt 0\text{.}\) But this is not any help so you end up proving \(P(0)\) anyway. To be on the safe side, we will always include the base case separately.</div></div>
+<p data-braille="continuation">Conclude, “therefore, by strong induction, \(P(n)\) is true for all \(n \gt 0\text{.}\)”</p></article><p id="wwE">Of course, it is acceptable to replace 0 with a larger base case if needed.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-11" id="fn-11"><sup> 6 </sup></a></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-11"><div class="fn">Technically, strong induction does not require you to prove a separate base case. This is because when proving the inductive case, you must show that \(P(0)\) is true, assuming \(P(k)\) is true for all \(k \lt 0\text{.}\) But this is not any help so you end up proving \(P(0)\) anyway. To be on the safe side, we will always include the base case separately.</div></div>
 <p id="cDN">Let's prove our conjecture about the chocolate bar puzzle:</p>
 <article class="proof" id="mOx"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="BBW">Let \(P(n)\) be the statement, “it takes \(n-1\) breaks to reduce a \(n\)-square chocolate bar to single squares.”</p>
@@ -346,7 +346,7 @@ a\text{,}\) then \(f(x) \lt g(x)\) for \(x &gt; a\text{.}\) Same idea: the large
 <p id="tXx">We also know that \(a \lt n\) and \(b \lt n\text{,}\) so by our inductive hypothesis, \(P(a)\) and \(P(b)\) are true. To reduce the \(a\)-sqaure bar to single squares takes \(a-1\) breaks; to reduce the \(b\)-square bar to single squares takes \(b-1\) breaks. Doing this results in our original bar being reduced to single squares. All together it took the initial break, plus the \(a-1\) and \(b-1\) breaks, for a total of \(1+a-1+b-1 = a+b-1 = n-1\) breaks. Thus \(P(n)\) is true.</p>
 <p id="aeG">Therefore, by strong induction, \(P(n)\) is true for all \(n \ge 2\text{.}\)</p></article><p id="IKW">Here is a more mathematically relevant example:</p>
 <article class="example example-like" id="Rgt"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.6.5</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.5</span><span class="period">.</span>
 </h6>
 <p id="KVI">Prove that any natural number greater than 1 is either prime  or can be written as the product of primes.</p>
 <div class="solutions">
@@ -492,7 +492,7 @@ F_0 + F_2 + \cdots + F_{2k} + F_{2k+2} ~ \amp = F_{2k+1} - 1 + F_{2k+2} \amp \te
 </div></article><article class="exercise exercise-like" id="qDo"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
 <p id="IzO">Prove that there is a sequence of positive real numbers \(a_0, a_1, a_2, \ldots\) such that the partial sum \(a_0 + a_1 + a_2 + \cdots + a_n\) is strictly less than \(2\) for all \(n \in \N\text{.}\) Hint: think about how you could define what \(a_{k+1}\) is to make the induction argument work.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-Xur" id="Xur"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Xur"><div class="hint solution-like"><p id="nXd">This is similar to <a class="xref" data-knowl="./knowl/exc-seq-lessthan-100.html" title="Exercise 2.6.15">Exercise 2.6.15</a>, although there you were showing that a sequence had all its terms less than some value, and here you are showing that the sum is less than som value.  But the partial sums forms a sequence, so this is actually very similar.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-Xur" id="Xur"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Xur"><div class="hint solution-like"><p id="nXd">This is similar to <a class="xref" data-knowl="./knowl/exc-seq-lessthan-100.html" title="Exercise 2.4.15">Exercise 2.4.15</a>, although there you were showing that a sequence had all its terms less than some value, and here you are showing that the sum is less than som value.  But the partial sums forms a sequence, so this is actually very similar.</p></div></div>
 </div></article><article class="exercise exercise-like" id="WKx"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
 <p id="oGX">Prove that every positive integer is either a power of 2, or can be written as the sum of distinct powers of 2.</p>
 <div class="solutions">
@@ -579,7 +579,7 @@ F_mF_n + F_{m+1}F_{n+1} = F_{m+n+1}\text{,}
 <li id="uRI"><p id="Elu">You can now conclude that \(P(m,n)\) holds for all \(m,n\ge 0\text{.}\) Do you believe that? Explain why this sort of induction is valid. For example, why do your proofs above guarantee that \(P(2,3)\) is true?</p></li>
 </ol></article><article class="exercise exercise-like" id="gej"><h6 class="heading"><span class="codenumber">27<span class="period">.</span></span></h6>
 <p id="qwk">Given a square, you can cut the square into smaller squares by cutting along lines parallel to the sides of the original square (these lines do not need to travel the entire side length of the original square). For example, by cutting along the lines below, you will divide a square into 6 smaller squares:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-97.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-92.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 <p id="WDt">Prove, using strong induction, that it is possible to cut a square into \(n\) smaller squares for any \(n \ge 6\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-ZjE" id="ZjE"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-ZjE"><div class="hint solution-like"><p id="dxY">You will need three base cases.  This is a very good hint actually, as it suggests that to prove \(P(n)\) is true, you would want to use the fact that \(P(n-3)\) is true.  So somehow you need to increase the number of squares by 3.</p></div></div>

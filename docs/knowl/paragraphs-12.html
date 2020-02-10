@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:26:49-07:00    *-->
+<!--*    on 2020-02-10T10:49:07-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,15 +12,9 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="paragraphs"><h5 class="heading"><span class="title">Counting with Functions.</span></h5>
-<p>Many of the counting problems in this section might at first appear to be examples of counting <em class="emphasis">functions</em>. After all, when we try to count the number of ways to distribute cookies to kids, we are assigning each cookie to a kid, just like you assign elements of the domain of a function to elements in the codomain. However, the number of ways to assign 7 cookies to 4 kids is \({10 \choose 7} = 120\text{,}\) while the number of functions \(f: \{1,2,3,4,5,6,7\} \to \{a,b,c,d\}\) is \(4^7 = 16384\text{.}\) What is going on here?</p>
-<p>When we count functions, we consider the following two functions, for example, to be different:</p>
-<div class="displaymath">
-\begin{equation*}
-f = \twoline{1 \amp 2 \amp 3 \amp 4\amp 5 \amp 6 \amp 7}{a \amp b \amp c \amp c \amp c \amp c \amp c} \qquad g = \twoline{1 \amp 2 \amp 3 \amp 4\amp 5 \amp 6 \amp 7}{b \amp a \amp c \amp c \amp c \amp c \amp c}\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">But these two functions would correspond to the <em class="emphasis">same</em> cookie distribution: kids \(a\) and \(b\) each get one cookie, kid \(c\) gets the rest (and none for kid \(d\)).</p>
-<p>The point: elements of the domain are distinguished, cookies are indistinguishable. This is analogous to the distinction between permutations (like counting functions) and combinations (not).</p></article><span class="incontext"><a href="sec_stars-and-bars.html#WrC">in-context</a></span>
+<article class="paragraphs"><h5 class="heading"><span class="title">Warning:.</span></h5>
+<p>With great power, comes great responsibility. Induction isn't magic. It seems very powerful to be able to assume \(P(k)\) is true. After all, we are trying to prove \(P(n)\) is true and the only difference is in the variable: \(k\) vs. \(n\text{.}\) Are we assuming that what we want to prove is true? Not really. We assume \(P(k)\) is true only for the sake of proving that \(P(k+1)\) is true.</p>
+<p>Still you might start to believe that you can prove anything with induction. Consider this incorrect “proof” that every Canadian  has the same eye color: Let \(P(n)\) be the statement that any \(n\) Canadians have the same eye color. \(P(1)\) is true, since everyone has the same eye color as themselves. Now assume \(P(k)\) is true. That is, assume that in any group of \(k\) Canadians, everyone has the same eye color. Now consider an arbitrary group of \(k+1\) Canadians. The first \(k\) of these must all have the same eye color, since \(P(k)\) is true. Also, the last \(k\) of these must have the same eye color, since \(P(k)\) is true. So in fact, everyone the group must have the same eye color. Thus \(P(k+1)\) is true. So by the principle of mathematical induction, \(P(n)\) is true for all \(n\text{.}\)</p>
+<p>Clearly something went wrong. The problem is that the proof that \(P(k)\) implies \(P(k+1)\) assumes that \(k \ge 2\text{.}\) We have only shown \(P(1)\) is true. In fact, \(P(2)\) is false.</p></article><span class="incontext"><a href="sec_logic-induction.html#Aii">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:27:01-07:00    *-->
+<!--*    on 2020-02-10T10:49:59-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,5 +11,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><p>\(2^7 + 2^7 - 2^4\) strings (using PIE).</p></div></body>
+<body><div class="solution solution-like">
+<p>With repeated letters allowed, we select which 5 of the 8 letters will be vowels, then pick one of the 5 vowels for each spot, and finally pick one of the other 21 letters for each of the remaining 3 spots. Thus, \({8 \choose 5}5^5 21^3\) words.</p>
+<p>Without repeats, we still pick the positions of the vowels, but now each time we place one there, there is one fewer choice for the next one. Similarly, we cannot repeat the consonants. We get \({8 \choose 5}5!
+P(21, 3)\) words.</p>
+</div></body>
 </html>

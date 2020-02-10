@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:26:58-07:00    *-->
+<!--*    on 2020-02-10T10:49:52-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,16 +13,20 @@
 </head>
 <body>
 <article class="exercise exercise-like"><h6 class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">5<span class="period">.</span></span>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">14<span class="period">.</span></span>
 </h6>
-<p>Consider five digit numbers \(\alpha = a_1a_2a_3a_4a_5\text{,}\) with each digit from the set \(\{1,2,3,4\}\text{.}\)</p>
-<ol class="lower-alpha">
-<li><p>How many such numbers are there?</p></li>
-<li><p>How many such numbers are there for which the <em class="emphasis">sum</em> of the digits is even?</p></li>
-<li><p>How many such numbers contain more even digits than odd digits?</p></li>
-</ol>
-<div class="solutions">
-<a class="original" data-knowl="./knowl/answer-195-hidden.html" title="Answer 3.8.5.1"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><a class="original" data-knowl="./knowl/answer-196-hidden.html" title="Answer 3.8.5.2"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><a class="original" data-knowl="./knowl/answer-197-hidden.html" title="Answer 3.8.5.3"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><a class="original" data-knowl="./knowl/solution-308-hidden.html" title="Solution 3.8.5.1"><span class="type">Solution</span></a>
-</div></article><span class="incontext"><a href="sec_count-conc.html#nUD">in-context</a></span>
+<p>Let \(d_n\) be the number of derangements of \(n\) objects. For example, using the techniques of this section, we find</p>
+<div class="displaymath">
+\begin{equation*}
+d_3 = 3!-\left({3 \choose 1}2! - {3 \choose 2}1! + {3 \choose 3}0! \right)\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">We can use the formula for \({n \choose k}\) to write this all in terms of factorials. After simplifying, for \(d_3\) we would get</p>
+<div class="displaymath">
+\begin{equation*}
+d_3 = 3!\left(1 - \frac{1}{1} + \frac{1}{2} - \frac{1}{6} \right)\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Generalize this to find a nicer formula for \(d_n\text{.}\) Bonus: For large \(n\text{,}\) approximately what fraction of all permutations are derangements? Use your knowledge of Taylor series from calculus.</p></article><span class="incontext"><a href="sec_advPIE.html#EEg">in-context</a></span>
 </body>
 </html>

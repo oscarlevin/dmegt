@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-10T10:26:53-07:00    *-->
+<!--*    on 2020-02-10T10:49:46-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,13 +11,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">
-<p>We count all permutations, and subtract those which are not derangements. There are \(4! = 24\) permutations of 4 elements. Now for a permutation to <em class="emphasis">not</em> be a derangement, at least one of the 4 elements must be fixed. There are \({4 \choose 1}\) choices for which single element we fix. Once fixed, we need to find a permutation of the other three elements. There are \(3!\) permutations on 3 elements.</p>
-<p>But now we have counted too many non-derangements, so we must subtract those permutations which fix two elements. There are \({4 \choose 2}\) choices for which two elements we fix, and then for each pair, \(2!\) permutations of the remaining elements. But this subtracts too many, so add back in permutations which fix 3 elements, all \({4 \choose 3}1!\) of them. Finally subtract the \({4 \choose 4}0!\) permutations (recall \(0! = 1\)) which fix all four elements. All together we get that the number of derangements of 4 elements is:</p>
-<div class="displaymath">
-\begin{equation*}
-4! - \left[{4 \choose 1}3! - {4 \choose 2}2! + {4 \choose 3} 1! - {4 \choose 4}0!\right] = 24 - 15 = 9\text{.}
-\end{equation*}
-</div>
-</div></body>
+<body><div class="solution solution-like"><ol class="lower-alpha">
+<li><p>\({20 \choose 4}\) sodas (order does not matter and repeats are not allowed).</p></li>
+<li><p>\(P(20, 4) = 20\cdot 19\cdot 18 \cdot 17\) sodas (order matters and repeats are not allowed).</p></li>
+<li><p>\({23 \choose 4}\) sodas (order does not matter and repeats are allowed; 4 stars and 19 bars).</p></li>
+<li><p>\(20^4\) sodas (order matters and repeats are allowed; 20 choices 4 times).</p></li>
+</ol></div></body>
 </html>
