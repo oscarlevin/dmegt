@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T15:59:55-07:00    *-->
+<!--*    on 2020-02-10T10:25:51-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -41,8 +41,8 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-dev.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
-<script src="https://webwork-dev.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork.cs.uleth.ca/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork.cs.uleth.ca/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
@@ -54,13 +54,6 @@ MathJax.Hub.Config({
 <link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="custom-styles.css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.13;
-</script>
 </head>
 <body id="levin-DMEGT" class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\d}{\displaystyle}
@@ -160,7 +153,6 @@ var js_version = 0.13;
 <li><a href="sec_seq-arithgeom.html" data-scroll="lIR">Arithmetic and Geometric Sequences</a></li>
 <li><a href="sec_polyfit.html" data-scroll="ylR">Polynomial Fitting</a></li>
 <li><a href="sec_recurrence.html" data-scroll="bcV">Solving Recurrence Relations</a></li>
-<li><a href="sec_seq-induction.html" data-scroll="Prg">Induction</a></li>
 <li><a href="sec_addtops-genfun.html" data-scroll="XaJ">Generating Functions</a></li>
 <li><a href="sec_sequences-conc.html" data-scroll="YaY">Chapter Summary</a></li>
 </ul>
@@ -233,8 +225,8 @@ var js_version = 0.13;
 <p id="EBT">All together, there were \(26^3\) choices for the three letters, and \(10^3\) choices for the numbers, so we have a total of \(26^3 \cdot 10^3\) choices of license plates.</p>
 </div></div>
 </div></article><p id="gJd">Careful: “and” doesn't mean “times.” For example, how many playing cards are both red and a face card? Not \(26 \cdot 12\text{.}\) The answer is 6, and we needed to know something about cards to answer that question.</p>
-<p id="MQm">Another caution: how many ways can you select two cards, so that the first one is a red card and the second one is a face card? This looks more like the multiplicative principle (you are counting two separate events) but the answer is not \(26 \cdot 12\) here either. The problem is that while there are 26 ways for the first card to be selected, it is not the case that <em class="emphasis">for each</em> of those there are 12 ways to select the second card. If the first card was both red and a face card, then there would be only 11 choices for the second card.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-13" id="fn-13"><sup> 1 </sup></a></p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-13"><div class="fn">To solve this problem, you could break it into two cases. First, count how many ways there are to select the two cards when the first card is a red non-face card. Second, count how many ways when the first card is a red face card. Doing so makes the events in each separate case independent, so the multiplicative principle can be applied.</div></div>
+<p id="MQm">Another caution: how many ways can you select two cards, so that the first one is a red card and the second one is a face card? This looks more like the multiplicative principle (you are counting two separate events) but the answer is not \(26 \cdot 12\) here either. The problem is that while there are 26 ways for the first card to be selected, it is not the case that <em class="emphasis">for each</em> of those there are 12 ways to select the second card. If the first card was both red and a face card, then there would be only 11 choices for the second card.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-16" id="fn-16"><sup> 1 </sup></a></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-16"><div class="fn">To solve this problem, you could break it into two cases. First, count how many ways there are to select the two cards when the first card is a red non-face card. Second, count how many ways when the first card is a red face card. Doing so makes the events in each separate case independent, so the multiplicative principle can be applied.</div></div>
 <article class="example example-like" id="jZi"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Counting functions.</span>
 </h6>
@@ -342,7 +334,7 @@ A \times B = (\{a_1\} \times B) \cup (\{a_2\} \times B) \cup (\{a_3\}\times B) \
 </tr>
 </table></div></div></div>
 <p id="ZeE">How many of those asked enjoy at least one of the kinds of pie? Also, explain why the answer is not 95.</p></article><p id="fDK"> While we are thinking about sets, consider what happens to the additive principle when the sets are NOT disjoint. Suppose we want to find \(\card{A \cup B}\) and know that \(\card{A} = 10\) and \(\card{B} = 8\text{.}\) This is not enough information though. We do not know how many of the 8 elements in \(B\) are also elements of \(A\text{.}\) However, if we also know that \(\card{A \cap B} = 6\text{,}\) then we can say exactly how many elements are in \(A\text{,}\) and, of those, how many are in \(B\) and how many are not (6 of the 10 elements are in \(B\text{,}\) so 4 are in \(A\) but not in \(B\)). We could fill in a Venn diagram as follows:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-110.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-111.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 <p id="LKT">This says there are 6 elements in \(A \cap B\text{,}\) 4 elements in \(A \setminus B\) and 2 elements in \(B \setminus A\text{.}\) Now <em class="emphasis">these</em> three sets <em class="emphasis">are</em> disjoint, so we can use the additive principle to find the number of elements in \(A \cup B\text{.}\) It is \(6 + 4 + 2 = 12\text{.}\)</p>
 <p id="rSc">This will always work, but drawing a Venn diagram is more than we need to do. In fact, it would be nice to relate this problem to the case where \(A\) and \(B\) are disjoint. Is there one rule we can make that works in either case?</p>
 <p id="XZl">Here is another way to get the answer to the problem above. Start by just adding \(\card{A} + \card{B}\text{.}\) This is \(10 + 8 = 18\text{,}\) which would be the answer if \(\card{A \cap B} = 0\text{.}\) We see that we are off by exactly 6, which just so happens to be \(\card{A \cap B}\text{.}\) So perhaps we guess,</p>
@@ -390,11 +382,11 @@ A \times B = (\{a_1\} \times B) \cup (\{a_2\} \times B) \cup (\{a_3\}\times B) \
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-tsU" id="tsU"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-tsU"><div class="solution solution-like">
 <p id="psV">The answer is not 37, even though the sum of the numbers above is 37. For example, while 12 students failed Algebra, 2 of those students also failed Biology, 6 also failed Chemistry, and 1 of those failed all three subjects. In fact, that 1 student who failed all three subjects is counted a total of 7 times in the total 37. To clarify things, let us think of the students who failed Algebra as the elements of the set \(A\text{,}\) and similarly for sets \(B\) and \(C\text{.}\) The one student who failed all three subjects is the lone element of the set \(A \cap B \cap C\text{.}\) Thus, in Venn diagrams:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:32%;margin-right:32%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-111.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
-<p id="VAe">Now let's fill in the other intersections. We know \(A\cap B\) contains 2 elements, but 1 element has already been counted. So we should put a 1 in the region where \(A\) and \(B\) intersect (but \(C\) does not). Similarly, we calculate the cardinality of \((A\cap C) \setminus B\text{,}\) and \((B \cap C) \setminus A\text{:}\)</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:32%;margin-right:32%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-112.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
-<p id="BHn">Next, we determine the numbers which should go in the remaining regions, including outside of all three circles. This last number is the number of students who did not fail any subject:</p>
+<p id="VAe">Now let's fill in the other intersections. We know \(A\cap B\) contains 2 elements, but 1 element has already been counted. So we should put a 1 in the region where \(A\) and \(B\) intersect (but \(C\) does not). Similarly, we calculate the cardinality of \((A\cap C) \setminus B\text{,}\) and \((B \cap C) \setminus A\text{:}\)</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:32%;margin-right:32%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-113.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="BHn">Next, we determine the numbers which should go in the remaining regions, including outside of all three circles. This last number is the number of students who did not fail any subject:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32%;margin-right:32%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-114.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 <p id="hOw">We found 5 goes in the “\(A\) only” region because the entire circle for \(A\) needed to have a total of 12, and 7 were already accounted for. Similarly, we calculate the “\(B\) only” region to contain only 1 student and the “\(C\) only” region to contain no students.</p>
 <p id="NVF">Thus the number of students who failed at least one class is 15 (the sum of the numbers in each of the eight disjoint regions). The number of students who passed all three classes is 26: the total number of students, 41, less the 15 who failed at least one class.</p>
 <p id="ucO">Note that we can also answer other questions. For example, how many students failed just Chemistry? None. How many passed Algebra but failed both Biology and Chemistry? This corresponds to the region inside both \(B\) and \(C\) but outside of \(A\text{,}\) containing 2 students.</p>
@@ -418,24 +410,24 @@ A \times B = (\{a_1\} \times B) \cup (\{a_2\} \times B) \cup (\{a_3\}\times B) \
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <a href="sec_counting-addmult.html#WHK" class="permalink">¶</a><article class="exercise exercise-like" id="Abr"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-2262">Your wardrobe consists of 5 shirts, 3 pairs of pants, and 17 bow ties. bow ties How many different outfits can you make?</p>
+<p id="p-2435">Your wardrobe consists of 5 shirts, 3 pairs of pants, and 17 bow ties. bow ties How many different outfits can you make?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-160" id="solution-160"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-160"><div class="solution solution-like"><p id="p-2263">There are 255 outfits. Use the multiplicative principle.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-176" id="solution-176"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-176"><div class="solution solution-like"><p id="p-2436">There are 255 outfits. Use the multiplicative principle.</p></div></div>
 </div></article><article class="exercise exercise-like" id="giA"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-2273">For your college interview, you must wear a tie. You own 3 regular (boring) ties and 5 (cool) bow ties.</p>
+<p id="p-2446">For your college interview, you must wear a tie. You own 3 regular (boring) ties and 5 (cool) bow ties.</p>
 <ol class="lower-alpha">
-<li id="li-1099"><p id="p-2274">How many choices do you have for your neck-wear?</p></li>
-<li id="li-1100"><p id="p-2276">You realize that the interview is for clown college, so you should probably wear both a regular tie and a bow tie. How many choices do you have now?</p></li>
-<li id="li-1101"><p id="p-2278">For the rest of your outfit, you have 5 shirts, 4 skirts, 3 pants, and 7 dresses. You want to select either a shirt to wear with a skirt or pants, or just a dress. How many outfits do you have to choose from?</p></li>
+<li id="li-1114"><p id="p-2447">How many choices do you have for your neck-wear?</p></li>
+<li id="li-1115"><p id="p-2449">You realize that the interview is for clown college, so you should probably wear both a regular tie and a bow tie. How many choices do you have now?</p></li>
+<li id="li-1116"><p id="p-2451">For the rest of your outfit, you have 5 shirts, 4 skirts, 3 pants, and 7 dresses. You want to select either a shirt to wear with a skirt or pants, or just a dress. How many outfits do you have to choose from?</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-89" id="answer-89"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-89"><div class="answer solution-like"><p id="p-2280">\(8\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-90" id="answer-90"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-90"><div class="answer solution-like"><p id="p-2281">\(15\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-91" id="answer-91"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-91"><div class="answer solution-like"><p id="p-2282">\(42\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-162" id="solution-162"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-162"><div class="solution solution-like"><ol id="p-2283" class="lower-alpha">
-<li id="li-1102"><p id="p-2284">8 ties. Use the additive principle.</p></li>
-<li id="li-1103"><p id="p-2285">15 ties. Use the multiplicative principle</p></li>
-<li id="li-1104"><p id="p-2286">\(5\cdot (4+3) + 7 = 42\) outfits.</p></li>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-89" id="answer-89"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-89"><div class="answer solution-like"><p id="p-2453">\(8\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-90" id="answer-90"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-90"><div class="answer solution-like"><p id="p-2454">\(15\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-91" id="answer-91"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-91"><div class="answer solution-like"><p id="p-2455">\(42\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-178" id="solution-178"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-178"><div class="solution solution-like"><ol id="p-2456" class="lower-alpha">
+<li id="li-1117"><p id="p-2457">8 ties. Use the additive principle.</p></li>
+<li id="li-1118"><p id="p-2458">15 ties. Use the multiplicative principle</p></li>
+<li id="li-1119"><p id="p-2459">\(5\cdot (4+3) + 7 = 42\) outfits.</p></li>
 </ol></div></div>
 </div></article><article class="exercise exercise-like" id="MpJ"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="wpN">Your Blu-ray collection consists of 9 comedies and 7 horror movies. Give an example of a question for which the answer is:</p>
@@ -449,57 +441,57 @@ A \times B = (\{a_1\} \times B) \cup (\{a_2\} \times B) \cup (\{a_3\}\times B) \
 <li id="Wtp"><p id="qWa">For example, 63 is the number of choices you have if you will watch two movies, first a comedy and then a horror.</p></li>
 </ol></div></div>
 </div></article><article class="exercise exercise-like" id="swS"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-2301">hexadecimal We usually write numbers in decimal form (or base 10), meaning numbers are composed using 10 different “digits” \(\{0,1,\ldots, 9\}\text{.}\) Sometimes though it is useful to write numbers hexadecimal or base 16. Now there are 16 distinct digits that can be used to form numbers: \(\{0, 1, \ldots, 9, \mathrm{A, B, C, D, E, F}\}\text{.}\) So for example, a 3 digit hexadecimal number might be 2B8.</p>
+<p id="p-2474">hexadecimal We usually write numbers in decimal form (or base 10), meaning numbers are composed using 10 different “digits” \(\{0,1,\ldots, 9\}\text{.}\) Sometimes though it is useful to write numbers hexadecimal or base 16. Now there are 16 distinct digits that can be used to form numbers: \(\{0, 1, \ldots, 9, \mathrm{A, B, C, D, E, F}\}\text{.}\) So for example, a 3 digit hexadecimal number might be 2B8.</p>
 <ol class="lower-alpha">
-<li id="li-1113"><p id="p-2302">How many 2-digit hexadecimals are there in which the first digit is E or F? Explain your answer in terms of the additive principle (using either events or sets).</p></li>
-<li id="li-1114"><p id="p-2304">Explain why your answer to the previous part is correct in terms of the multiplicative principle (using either events or sets). Why do both the additive and multiplicative principles give you the same answer?</p></li>
-<li id="li-1115"><p id="p-2305">How many 3-digit hexadecimals start with a letter (A-F) and end with a numeral (0-9)? Explain.</p></li>
-<li id="li-1116"><p id="p-2307">How many 3-digit hexadecimals start with a letter (A-F) or end with a numeral (0-9) (or both)? Explain.</p></li>
+<li id="li-1128"><p id="p-2475">How many 2-digit hexadecimals are there in which the first digit is E or F? Explain your answer in terms of the additive principle (using either events or sets).</p></li>
+<li id="li-1129"><p id="p-2477">Explain why your answer to the previous part is correct in terms of the multiplicative principle (using either events or sets). Why do both the additive and multiplicative principles give you the same answer?</p></li>
+<li id="li-1130"><p id="p-2478">How many 3-digit hexadecimals start with a letter (A-F) and end with a numeral (0-9)? Explain.</p></li>
+<li id="li-1131"><p id="p-2480">How many 3-digit hexadecimals start with a letter (A-F) or end with a numeral (0-9) (or both)? Explain.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-92" id="answer-92"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-92"><div class="answer solution-like"><p id="p-2309">\(32\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-93" id="answer-93"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-93"><div class="answer solution-like"><p id="p-2310">\(960\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-94" id="answer-94"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-94"><div class="answer solution-like"><p id="p-2311">\(3136\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-92" id="answer-92"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-92"><div class="answer solution-like"><p id="p-2482">\(32\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-93" id="answer-93"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-93"><div class="answer solution-like"><p id="p-2483">\(960\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-94" id="answer-94"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-94"><div class="answer solution-like"><p id="p-2484">\(3136\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="YEb"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-2319">Suppose you have sets \(A\) and \(B\) with \(\card{A} = 10\) and \(\card{B} = 15\text{.}\)</p>
+<p id="p-2492">Suppose you have sets \(A\) and \(B\) with \(\card{A} = 10\) and \(\card{B} = 15\text{.}\)</p>
 <ol class="lower-alpha">
-<li id="li-1123"><p id="p-2320">What is the largest possible value for \(\card{A \cap B}\text{?}\)</p></li>
-<li id="li-1124"><p id="p-2322">What is the smallest possible value for \(\card{A \cap B}\text{?}\)</p></li>
-<li id="li-1125"><p id="p-2324">What are the possible values for \(\card{A \cup B}\text{?}\)</p></li>
+<li id="li-1138"><p id="p-2493">What is the largest possible value for \(\card{A \cap B}\text{?}\)</p></li>
+<li id="li-1139"><p id="p-2495">What is the smallest possible value for \(\card{A \cap B}\text{?}\)</p></li>
+<li id="li-1140"><p id="p-2497">What are the possible values for \(\card{A \cup B}\text{?}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-95" id="answer-95"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-95"><div class="answer solution-like"><p id="p-2325">\(10\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-96" id="answer-96"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-96"><div class="answer solution-like"><p id="p-2326">\(0\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-165" id="solution-165"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-165"><div class="solution solution-like"><ol id="p-2327" class="lower-alpha">
-<li id="li-1126"><p id="p-2328">To maximize the number of elements in common between \(A\) and \(B\text{,}\) make \(A \subset B\text{.}\) This would give \(\card{A \cap B} = 10\text{.}\)</p></li>
-<li id="li-1127"><p id="p-2329">\(A\) and \(B\) might have no elements in common, giving \(\card{A\cap B} = 0\text{.}\)</p></li>
-<li id="li-1128"><p id="p-2330">\(15 \le \card{A \cup B} \le 25\text{.}\) In fact, when \(\card{A \cap B} = 0\) then \(\card{A \cup B} = 25\) and when \(\card{A \cap B} = 10\) then \(\card{A \cup B} = 15\text{.}\)</p></li>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-95" id="answer-95"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-95"><div class="answer solution-like"><p id="p-2498">\(10\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-96" id="answer-96"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-96"><div class="answer solution-like"><p id="p-2499">\(0\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-181" id="solution-181"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-181"><div class="solution solution-like"><ol id="p-2500" class="lower-alpha">
+<li id="li-1141"><p id="p-2501">To maximize the number of elements in common between \(A\) and \(B\text{,}\) make \(A \subset B\text{.}\) This would give \(\card{A \cap B} = 10\text{.}\)</p></li>
+<li id="li-1142"><p id="p-2502">\(A\) and \(B\) might have no elements in common, giving \(\card{A\cap B} = 0\text{.}\)</p></li>
+<li id="li-1143"><p id="p-2503">\(15 \le \card{A \cup B} \le 25\text{.}\) In fact, when \(\card{A \cap B} = 0\) then \(\card{A \cup B} = 25\) and when \(\card{A \cap B} = 10\) then \(\card{A \cup B} = 15\text{.}\)</p></li>
 </ol></div></div>
 </div></article><article class="exercise exercise-like" id="ELk"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<p id="p-2334">If \(\card{A} = 8\) and \(\card{B} = 5\text{,}\) what is \(\card{A \cup B} + \card{A \cap B}\text{?}\)</p>
+<p id="p-2507">If \(\card{A} = 8\) and \(\card{B} = 5\text{,}\) what is \(\card{A \cup B} + \card{A \cap B}\text{?}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-97" id="answer-97"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-97"><div class="answer solution-like"><p id="p-2336">\(13\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-167" id="solution-167"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-167"><div class="solution solution-like"><p id="p-2337">\(\card{A \cup B} + \card{A \cap B} = 13\text{.}\) Use PIE: we know \(\card{A \cup B} = 8 + 5 - \card{A \cap B}\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-97" id="answer-97"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-97"><div class="answer solution-like"><p id="p-2509">\(13\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-183" id="solution-183"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-183"><div class="solution solution-like"><p id="p-2510">\(\card{A \cup B} + \card{A \cap B} = 13\text{.}\) Use PIE: we know \(\card{A \cup B} = 8 + 5 - \card{A \cap B}\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="kSt"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<p id="p-2341">A group of college students were asked about their TV watching habits. Of those surveyed, 28 students watch <em class="emphasis">The Walking Dead</em>, 19 watch <em class="emphasis">The Blacklist</em>, and 24 watch <em class="emphasis">Game of Thrones</em>. Additionally, 16 watch <em class="emphasis">The Walking Dead</em> and <em class="emphasis">The Blacklist</em>, 14 watch <em class="emphasis">The Walking Dead</em> and <em class="emphasis">Game of Thrones</em>, and 10 watch <em class="emphasis">The Blacklist</em> and <em class="emphasis">Game of Thrones</em>. There are 8 students who watch all three shows. How many students surveyed watched at least one of the shows?</p>
+<p id="p-2514">A group of college students were asked about their TV watching habits. Of those surveyed, 28 students watch <em class="emphasis">The Walking Dead</em>, 19 watch <em class="emphasis">The Blacklist</em>, and 24 watch <em class="emphasis">Game of Thrones</em>. Additionally, 16 watch <em class="emphasis">The Walking Dead</em> and <em class="emphasis">The Blacklist</em>, 14 watch <em class="emphasis">The Walking Dead</em> and <em class="emphasis">Game of Thrones</em>, and 10 watch <em class="emphasis">The Blacklist</em> and <em class="emphasis">Game of Thrones</em>. There are 8 students who watch all three shows. How many students surveyed watched at least one of the shows?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-98" id="answer-98"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-98"><div class="answer solution-like"><p id="p-2343">\(39\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-169" id="solution-169"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-169"><div class="solution solution-like"><p id="p-2344">39 students. Use Venn diagram or PIE: \(28 + 19 + 24 - 16 - 14 - 10 + 8 = 39\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-98" id="answer-98"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-98"><div class="answer solution-like"><p id="p-2516">\(39\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-185" id="solution-185"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-185"><div class="solution solution-like"><p id="p-2517">39 students. Use Venn diagram or PIE: \(28 + 19 + 24 - 16 - 14 - 10 + 8 = 39\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="QZC"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
-<p id="p-2348">In a recent survey, 30 students reported whether they liked their potatoes Mashed, French-fried, or Twice-baked. 15 liked them mashed, 20 liked French fries, and 9 liked twice baked potatoes. Additionally, 12 students liked both mashed and fried potatoes, 5 liked French fries and twice baked potatoes, 6 liked mashed and baked, and 3 liked all three styles. How many students <em class="emphasis">hate</em> potatoes? Explain why your answer is correct.</p>
+<p id="p-2521">In a recent survey, 30 students reported whether they liked their potatoes Mashed, French-fried, or Twice-baked. 15 liked them mashed, 20 liked French fries, and 9 liked twice baked potatoes. Additionally, 12 students liked both mashed and fried potatoes, 5 liked French fries and twice baked potatoes, 6 liked mashed and baked, and 3 liked all three styles. How many students <em class="emphasis">hate</em> potatoes? Explain why your answer is correct.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-99" id="answer-99"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-99"><div class="answer solution-like"><p id="p-2350">\(6\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-171" id="solution-171"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-171"><div class="solution solution-like"><p id="p-2351">6 students <em class="emphasis">don’t</em> like potatoes.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-99" id="answer-99"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-99"><div class="answer solution-like"><p id="p-2523">\(6\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-187" id="solution-187"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-187"><div class="solution solution-like"><p id="p-2524">6 students <em class="emphasis">don’t</em> like potatoes.</p></div></div>
 </div></article><article class="exercise exercise-like" id="xgL"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
-<p id="p-2356">For how many \(n \in \{1,2, \ldots, 500\}\) is \(n\) a multiple of one or more of 5, 6, or 7?</p>
+<p id="p-2529">For how many \(n \in \{1,2, \ldots, 500\}\) is \(n\) a multiple of one or more of 5, 6, or 7?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-61" id="hint-61"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-61"><div class="hint solution-like"><p id="p-2358">To find out how many numbers are divisible by 6 and 7, for example, take \(500/42\) and round down.</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-100" id="answer-100"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-100"><div class="answer solution-like"><p id="p-2359">\(215\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-173" id="solution-173"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-173"><div class="solution solution-like"><p id="p-2360">215 values of \(n\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-72" id="hint-72"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-72"><div class="hint solution-like"><p id="p-2531">To find out how many numbers are divisible by 6 and 7, for example, take \(500/42\) and round down.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-100" id="answer-100"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-100"><div class="answer solution-like"><p id="p-2532">\(215\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-189" id="solution-189"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-189"><div class="solution solution-like"><p id="p-2533">215 values of \(n\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="dnU"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
-<p id="p-2363">How many positive integers less than 1000 are multiples of 3, 5, or 7? Explain your answer using the Principle of Inclusion/Exclusion.</p>
+<p id="p-2536">How many positive integers less than 1000 are multiples of 3, 5, or 7? Explain your answer using the Principle of Inclusion/Exclusion.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-101" id="answer-101"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-101"><div class="answer solution-like"><p id="p-2365">\(542\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-101" id="answer-101"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-101"><div class="answer solution-like"><p id="p-2538">\(542\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="Jvd"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
 <p id="yfa">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be sets.</p>
 <ol class="lower-alpha">
@@ -509,26 +501,26 @@ A \times B = (\{a_1\} \times B) \cup (\{a_2\} \times B) \cup (\{a_3\}\times B) \
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-Lkq" id="Lkq"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Lkq"><div class="hint solution-like"><p id="rFU">For part (a) you could use the formula for PIE, but for part (b) you might be better off drawing a Venn diagram.</p></div></div>
 </div></article><article class="exercise exercise-like" id="pCm"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
-<p id="p-2381">Consider all 5 letter “words” made from the letters \(a\) through \(h\text{.}\) (Recall, words are just strings of letters, not necessarily actual English words.)</p>
+<p id="p-2554">Consider all 5 letter “words” made from the letters \(a\) through \(h\text{.}\) (Recall, words are just strings of letters, not necessarily actual English words.)</p>
 <ol class="lower-alpha">
-<li id="li-1141"><p id="p-2382">How many of these words are there total?</p></li>
-<li id="li-1142"><p id="p-2384">How many of these words contain no repeated letters?</p></li>
-<li id="li-1143"><p id="p-2386">How many of these words start with the sub-word “aha”?</p></li>
-<li id="li-1144"><p id="p-2388">How many of these words either start with “aha” or end with “bah” or both?</p></li>
-<li id="li-1145"><p id="p-2390">How many of the words containing no repeats also do not contain the sub-word “bad”?</p></li>
+<li id="li-1156"><p id="p-2555">How many of these words are there total?</p></li>
+<li id="li-1157"><p id="p-2557">How many of these words contain no repeated letters?</p></li>
+<li id="li-1158"><p id="p-2559">How many of these words start with the sub-word “aha”?</p></li>
+<li id="li-1159"><p id="p-2561">How many of these words either start with “aha” or end with “bah” or both?</p></li>
+<li id="li-1160"><p id="p-2563">How many of the words containing no repeats also do not contain the sub-word “bad”?</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-102" id="answer-102"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-102"><div class="answer solution-like"><p id="p-2392">\(32768\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-103" id="answer-103"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-103"><div class="answer solution-like"><p id="p-2393">\(6720\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-104" id="answer-104"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-104"><div class="answer solution-like"><p id="p-2394">\(64\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-105" id="answer-105"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-105"><div class="answer solution-like"><p id="p-2395">\(128\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-106" id="answer-106"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-106"><div class="answer solution-like"><p id="p-2396">\(6660\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-175" id="solution-175"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-175"><div class="solution solution-like"><ol id="p-2397" class="lower-alpha">
-<li id="li-1146"><p id="p-2398">\(8^5 = 32768\) words.</p></li>
-<li id="li-1147"><p id="p-2399">\(8\cdot 7\cdot 6\cdot 5\cdot 4 = 6720\) words.</p></li>
-<li id="li-1148"><p id="p-2400">\(8 \cdot 8 =64\) words.</p></li>
-<li id="li-1149"><p id="p-2401">\(64 + 64 - 0 = 128\) words.</p></li>
-<li id="li-1150"><p id="p-2402">\((8\cdot 7\cdot 6\cdot 5\cdot 4) - 3\cdot (5\cdot 4) = 6660\) words.</p></li>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-102" id="answer-102"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-102"><div class="answer solution-like"><p id="p-2565">\(32768\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-103" id="answer-103"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-103"><div class="answer solution-like"><p id="p-2566">\(6720\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-104" id="answer-104"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-104"><div class="answer solution-like"><p id="p-2567">\(64\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-105" id="answer-105"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-105"><div class="answer solution-like"><p id="p-2568">\(128\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-106" id="answer-106"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-106"><div class="answer solution-like"><p id="p-2569">\(6660\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-191" id="solution-191"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-191"><div class="solution solution-like"><ol id="p-2570" class="lower-alpha">
+<li id="li-1161"><p id="p-2571">\(8^5 = 32768\) words.</p></li>
+<li id="li-1162"><p id="p-2572">\(8\cdot 7\cdot 6\cdot 5\cdot 4 = 6720\) words.</p></li>
+<li id="li-1163"><p id="p-2573">\(8 \cdot 8 =64\) words.</p></li>
+<li id="li-1164"><p id="p-2574">\(64 + 64 - 0 = 128\) words.</p></li>
+<li id="li-1165"><p id="p-2575">\((8\cdot 7\cdot 6\cdot 5\cdot 4) - 3\cdot (5\cdot 4) = 6660\) words.</p></li>
 </ol></div></div>
 </div></article><article class="exercise exercise-like" id="VJv"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
 <p id="Kts">For how many three digit numbers (100 to 999) is the <em class="emphasis">sum of the digits</em> even? (For example, \(343\) has an even sum of digits: \(3+4+3 = 10\) which is even.) Find the answer and explain why it is correct in at least two <em class="emphasis">different</em> ways.</p>
@@ -540,7 +532,5 @@ A \times B = (\{a_1\} \times B) \cup (\{a_2\} \times B) \cup (\{a_3\}\times B) \
 <a data-knowl="" class="id-ref original" data-refid="hk-DFR" id="DFR"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-DFR"><div class="hint solution-like"><p id="DUm">For a simpler example, there are 4 divisors of \(6 = 2\cdot 3\text{.}\)  They are \(1 = 2^0\cdot 3^0\text{,}\) \(2 = 2^1\cdot 3^0\text{,}\) \(3 = 2^0\cdot 3^1\) and \(6 = 2^1\cdot 3^1\text{.}\)</p></div></div>
 </div></article></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.13/login.js"></script>
 </body>
 </html>

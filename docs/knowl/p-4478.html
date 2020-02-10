@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:28-07:00    *-->
+<!--*    on 2020-02-10T10:27:16-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,14 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<ol class="lower-alpha">
-<li><p>If we have a number of beans ending in a 5 and we double it, we will get a number of beans ending in a 0 (since \(5\cdot 2 = 10\) ). Then if we subtract 5, we will once again get a number of beans ending in a 5. Thus if on any day we have a number ending in a 5, the next day will also have a number ending in a 5.</p></li>
-<li><p>If you don't <em class="emphasis">start</em> with a number of beans ending in a 5 (on day 1), the above reasoning is still correct but not helpful. For example, if you start with a number ending in a 3, the next day you will have a number ending in a 1.</p></li>
-<li>
-<p>Part (b) is the base case and part (a) is the inductive case. If on day 1 we have a number ending in a 5 (by part (b)), then on day 2 we will also have a number ending in a 5 (by part (a)). Then by part (a) again, we will have a number ending in a 5 on day 3. By part (a) again, this means we will have a number ending in a 5 on day 4</p>
-<p>The proof by induction would say that on <em class="emphasis">every</em> day we will have a number ending in a 5, and this works because we can start with the base case, then use the inductive case over and over until we get up to our desired \(n\text{.}\)</p>
-</li>
-</ol>
-<span class="incontext"><a href="sec_seq-induction.html#ksD">in-context</a></span>
+<p>The nice thing is, we know how to check whether a formula is actually a solution to a recurrence relation: plug it in. What happens if we plug in \(r^n\) into the recursion above? We get</p>
+<div class="displaymath">
+\begin{equation*}
+r^n - r^{n-1} - 6r^{n-2} = 0\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="sec_recurrence.html#AZt">in-context</a></span>
 </body>
 </html>

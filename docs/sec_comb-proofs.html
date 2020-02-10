@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T15:59:58-07:00    *-->
+<!--*    on 2020-02-10T10:25:54-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -41,8 +41,8 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-dev.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
-<script src="https://webwork-dev.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork.cs.uleth.ca/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork.cs.uleth.ca/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
@@ -54,13 +54,6 @@ MathJax.Hub.Config({
 <link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="custom-styles.css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.13;
-</script>
 </head>
 <body id="levin-DMEGT" class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\d}{\displaystyle}
@@ -160,7 +153,6 @@ var js_version = 0.13;
 <li><a href="sec_seq-arithgeom.html" data-scroll="lIR">Arithmetic and Geometric Sequences</a></li>
 <li><a href="sec_polyfit.html" data-scroll="ylR">Polynomial Fitting</a></li>
 <li><a href="sec_recurrence.html" data-scroll="bcV">Solving Recurrence Relations</a></li>
-<li><a href="sec_seq-induction.html" data-scroll="Prg">Induction</a></li>
 <li><a href="sec_addtops-genfun.html" data-scroll="XaJ">Generating Functions</a></li>
 <li><a href="sec_sequences-conc.html" data-scroll="YaY">Chapter Summary</a></li>
 </ul>
@@ -306,8 +298,8 @@ var js_version = 0.13;
 <p id="pVY">The total number of possible pizzas will be the sum of these, which is exactly the left-hand side of the identity we are trying to prove.</p>
 <p id="Wdh">Again, we could have proved the identity using subsets, bit strings, or lattice paths (although the lattice path argument is a little tricky).</p>
 </div></div>
-</div></article><p id="EJx">Hopefully this gives some idea of how explanatory proofs of binomial identities can go. It is worth pointing out that more traditional proofs can also be beautiful.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-14" id="fn-14"><sup> 2 </sup></a> For example, consider the following rather slick proof of the last identity.</p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-14"><div class="fn">Most every binomial identity can be proved using mathematical induction, using the recursive definition for \({n \choose k}\text{.}\) We will discuss induction in <a href="sec_seq-induction.html" class="internal" title="Section 4.5: Induction">Section 4.5</a>.</div></div>
+</div></article><p id="EJx">Hopefully this gives some idea of how explanatory proofs of binomial identities can go. It is worth pointing out that more traditional proofs can also be beautiful.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-17" id="fn-17"><sup> 2 </sup></a> For example, consider the following rather slick proof of the last identity.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-17"><div class="fn">Most every binomial identity can be proved using mathematical induction, using the recursive definition for \({n \choose k}\text{.}\) We will discuss induction in <span>(((Unresolved xref, reference "sec_seq-induction"; check spelling or use "provisional" attribute)))</span><a href="" class="internal" title=""> </a>.</div></div>
 <p id="kQG">Expand the binomial \((x+y)^n\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
@@ -617,7 +609,5 @@ k_j\) be a list of positive integers that sum to \(n\) (i.e, \(\sum_{i=1}^j k_i 
 <a data-knowl="" class="id-ref original" data-refid="hk-Lem" id="Lem"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Lem"><div class="hint solution-like"><p id="DOi">How many edges does \(K_n\) have?  One of the two graphs will not be connected (unless \(j=1\)).</p></div></div>
 </div></article></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.13/login.js"></script>
 </body>
 </html>

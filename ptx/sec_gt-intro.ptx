@@ -641,9 +641,9 @@
         </li>
 
         <li permid="iNl">
-          <title>Euler path</title>
+          <title>Euler trail</title>
           <p permid="mrL">
-              <idx><h>Euler path</h></idx>
+              <idx><h>Euler trail</h></idx>
             A walk which uses each edge exactly once.
           </p>
         </li>

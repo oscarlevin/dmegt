@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:25-07:00    *-->
+<!--*    on 2020-02-10T10:27:15-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,15 +14,19 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.4.10.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.4.2.1</span><span class="period">.</span>
 </h6>
-<ol class="lower-alpha">
-<li><p>\(a_n = 4a_{n-1} + 5a_{n-2}\text{.}\)</p></li>
-<li><p>4, 21, 104, 521, 2604, 13021</p></li>
-<li><p>\(a_n = \frac{5}{6} 5^n + \frac{1}{6}(-1)^n
-\text{.}\)</p></li>
-</ol>
+<p>First, it is easy to check the initial condition: \(a_1\) should be \(2^1 + 1\) according to our closed formula. Indeed, \(2^1 + 1 = 3\text{,}\) which is what we want. To check that our proposed solution satisfies the recurrence relation, try plugging it in.</p>
+<div class="displaymath">
+\begin{align*}
+2a_{n-1} - 1 \amp = 2(2^{n-1} + 1) - 1\\
+\amp = 2^n + 2 - 1\\
+\amp = 2^n +1\\
+\amp = a_n\text{.}
+\end{align*}
 </div>
-<span class="incontext"><a href="sec_recurrence.html#EOk">in-context</a></span>
+<p>That's what our recurrence relation says! We have a solution.</p>
+</div>
+<span class="incontext"><a href="sec_recurrence.html#IZr">in-context</a></span>
 </body>
 </html>

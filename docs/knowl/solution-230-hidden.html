@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:00:51-07:00    *-->
+<!--*    on 2020-02-10T10:26:45-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,9 +11,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
-<p>Question: How many 2-letter words start with <em class="emphasis">a</em>, <em class="emphasis">b</em>, or <em class="emphasis">c</em> and end with either <em class="emphasis">y</em> or <em class="emphasis">z</em>?</p>
-<p>Answer 1: There are two words that start with <em class="emphasis">a</em>, two that start with <em class="emphasis">b</em>, two that start with <em class="emphasis">c</em>, for a total of \(2+2+2\text{.}\)</p>
-<p>Answer 2: There are three choices for the first letter and two choices for the second letter, for a total of \(3 \cdot 2\text{.}\)</p>
-<p>Since the two answers are both answers to the same question, they are equal. Thus \(2 + 2 + 2 = 3\cdot 2\text{.}\)</p></article></div></body>
+<body><div class="solution solution-like"><p>First, decide where to put the “a”s. There are 7 positions, and we must choose 3 of them to fill with an “a”. This can be done in \({7 \choose 3}\) ways. The remaining 4 spots all get a different letter, so there are \(4!\) ways to finish off the anagram. This gives a total of \({7 \choose 3}\cdot 4!\) anagrams. Strangely enough, this is 840, which is also equal to \(P(7,4)\text{.}\) To get the answer that way, start by picking one of the 7 <em class="emphasis">positions</em> to be filled by the “n”, one of the remaining 6 positions to be filled by the “g”, one of the remaining 5 positions to be filled by the “r”, one of the remaining 4 positions to be filled by the “m” and then put “a”s in the remaining 3 positions.</p></div></body>
 </html>

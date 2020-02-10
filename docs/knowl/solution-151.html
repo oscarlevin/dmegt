@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:00:36-07:00    *-->
+<!--*    on 2020-02-10T10:26:31-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,10 +14,20 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.2.1.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.6.3.1</span><span class="period">.</span>
 </h6>
-<p>First, how many two letter words start with A? We just need to select the second letter, which can be accomplished in 26 ways. So there are 26 words starting with A. There are also 26 words that start with B. To select a word which starts with either A or B, we can pick the word from the first 26 or the second 26, for a total of 52 words.</p>
+<article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p>Let \(P(n)\) be the statement “\(7^n - 1\) is a multiple of 6.” We will show \(P(n)\) is true for all \(n \in \N\text{.}\) First we establish the base case, \(P(0)\text{.}\) Since \(7^0 - 1 = 0\text{,}\) and \(0\) is a multiple of 6, \(P(0)\) is true. Now for the inductive case. Assume \(P(k)\) holds for an arbitrary \(k \in \N\text{.}\) That is, \(7^k - 1\) is a multiple of 6, or in other words, \(7^k - 1 = 6j\) for some integer \(j\text{.}\) Now consider \(7^{k+1} - 1\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+7^{k+1} - 1 ~ \amp = 7^{k+1} - 7 + 6 \amp \text{by cleverness:} -1 = -7 + 6\\
+\amp = 7(7^k - 1) + 6 \amp \text{factor out a 7 from the first two terms}\\
+\amp = 7(6j) + 6 \amp \text{by the inductive hypothesis}\\
+\amp = 6(7j + 1) \amp \text{factor out a 6}
+\end{align*}
 </div>
-<span class="incontext"><a href="sec_counting-addmult.html#cuJ">in-context</a></span>
+<p>Therefore \(7^{k+1} - 1\) is a multiple of 6, or in other words, \(P(k+1)\) is true. Therefore by the principle of mathematical induction, \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article>
+</div>
+<span class="incontext"><a href="sec_logic-induction.html#EGT">in-context</a></span>
 </body>
 </html>

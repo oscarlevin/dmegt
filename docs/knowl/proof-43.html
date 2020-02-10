@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:28-07:00    *-->
+<!--*    on 2020-02-10T10:26:33-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,15 +13,26 @@
 </head>
 <body>
 <article class="proof"><h6 class="heading"><span class="type">Proof</span></h6>
-<p>Let \(P(n)\) be the statement \(2^n \lt  n!\text{.}\) We will show \(P(n)\) is true for all \(n \ge 4\text{.}\) First, we check the base case and see that yes, \(2^4 \lt  4!\) (as \(16 \lt  24\)) so \(P(4)\) is true. Now for the inductive case. Assume \(P(k)\) is true for an arbitrary \(k \ge 4\text{.}\) That is, \(2^k \lt  k!\text{.}\) Now consider \(P(k+1)\text{:}\) \(2^{k+1} \lt  (k+1)!\text{.}\) To prove this, we start with the left side and work to the right side.</p>
+<p>We know in any planar graph the number of faces \(f\) satisfies \(3f \le 2e\) since each face is bounded by at least three edges, but each edge borders two faces. Combine this with Euler's formula:</p>
 <div class="displaymath">
-\begin{align*}
-2^{k+1}~ \amp = 2\cdot 2^k \amp\\
-\amp \lt 2\cdot k! \amp \text{by the inductive hypothesis}\\
-\amp \lt (k+1) \cdot k! \amp \text{ since } k+1 \gt 2\\
-\amp = (k+1)! \amp
-\end{align*}
+\begin{equation*}
+v - e + f = 2
+\end{equation*}
 </div>
-<p>Therefore \(2^{k+1} \lt (k+1)!\) so we have established \(P(k+1)\text{.}\) Thus by the principle of mathematical induction \(P(n)\) is true for all \(n \ge 4\text{.}\)</p></article><span class="incontext"><a href="sec_seq-induction.html#VFe">in-context</a></span>
+<div class="displaymath">
+\begin{equation*}
+v - e + \frac{2e}{3} \ge 2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+3v - e \ge 6
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+3v - 6 \ge e\text{.}
+\end{equation*}
+</div></article><span class="incontext"><a href="sec_planar.html#MFr">in-context</a></span>
 </body>
 </html>

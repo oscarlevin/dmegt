@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:00:58-07:00    *-->
+<!--*    on 2020-02-10T10:26:50-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,15 +14,14 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.7.5.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.6.5.1</span><span class="period">.</span>
 </h6>
-<p>We are counting derangements on 5 elements. There are \(5!\) ways for the gentlemen to grab hats in any order—but many of these permutations will result in someone getting their own hat. So we subtract all the ways in which one or more of the men get their own hat. In other words, we subtract the non-derangements. Doing so requires PIE. Thus the answer is:</p>
-<div class="displaymath">
-\begin{equation*}
-5! - \left[{5 \choose 1}4! - {5 \choose 2}3! + {5 \choose 3}2! - {5 \choose 4}1! + {5 \choose 5}0!\right]\text{.}
-\end{equation*}
+<ol class="lower-alpha">
+<li><p>\({7 \choose 2}\) solutions. After each variable gets 1 star for free, we are left with 5 stars and 2 bars.</p></li>
+<li><p>\({10 \choose 2}\) solutions. We have 8 stars and 2 bars.</p></li>
+<li><p>\({19 \choose 2}\) solutions. This problem is equivalent to finding the number of solutions to \(x' + y' + z' = 17\) where \(x'\text{,}\) \(y'\) and \(z'\) are non-negative. (In fact, we really just do a substitution. Let \(x = x'- 3\text{,}\) \(y = y' - 3\) and \(z = z' - 3\)).</p></li>
+</ol>
 </div>
-</div>
-<span class="incontext"><a href="sec_advPIE.html#mMK">in-context</a></span>
+<span class="incontext"><a href="sec_stars-and-bars.html#gjn">in-context</a></span>
 </body>
 </html>

@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:27-07:00    *-->
+<!--*    on 2020-02-10T10:26:32-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,21 +13,6 @@
 </head>
 <body>
 <article class="proof"><h6 class="heading"><span class="type">Proof</span></h6>
-<p>Let \(P(n)\) be the statement, “\(6^n - 1\) is a multiple of 5.” We will prove that \(P(n)\) is true for all \(n \in \N\text{.}\)</p>
-<p>Base case: \(P(0)\) is true: \(6^0 -1 = 0\) which is a multiple of 5.</p>
-<p>Inductive case: Let \(k\) be an arbitrary natural number. Assume, for induction, that \(P(k)\) is true. That is, \(6^k - 1\) is a multiple of \(5\text{.}\) Then \(6^k - 1 = 5j\) for some integer \(j\text{.}\) This means that \(6^k = 5j + 1\text{.}\) Multiply both sides by \(6\text{:}\)</p>
-<div class="displaymath">
-\begin{equation*}
-6^{k+1} = 6(5j+1) = 30j + 6\text{.}
-\end{equation*}
-</div>
-<p>But we want to know about \(6^{k+1} - 1\text{,}\) so subtract 1 from both sides:</p>
-<div class="displaymath">
-\begin{equation*}
-6^{k+1} - 1 = 30j + 5\text{.}
-\end{equation*}
-</div>
-<p>Of course \(30j+5 = 5(6j+1)\text{,}\) so is a multiple of 5.</p>
-<p>Therefore \(6^{k+1} - 1\) is a multiple of 5, or in other words, \(P(k+1)\) is true. Thus, by the principle of mathematical induction \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article><span class="incontext"><a href="sec_seq-induction.html#BXv">in-context</a></span>
+<p>Let \(P(n)\) be the statement \(n \lt 100\text{.}\) We will prove \(P(n)\) is true for all \(n \in \N\text{.}\) First we establish the base case: when \(n = 0\text{,}\) \(P(n)\) is true, because \(0 \lt 100\text{.}\) Now for the inductive step, assume \(P(k)\) is true. That is, \(k \lt 100\text{.}\) Now if \(k \lt 100\text{,}\) then \(k\) is some number, like 80. Of course \(80+1 = 81\) which is still less than 100. So \(k +1 \lt 100\) as well. But this is what \(P(k+1)\) claims, so we have shown that \(P(k) \imp P(k+1)\text{.}\) Thus by the principle of mathematical induction, \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article><span class="incontext"><a href="sec_logic-induction.html#SKy">in-context</a></span>
 </body>
 </html>

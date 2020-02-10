@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:16-07:00    *-->
+<!--*    on 2020-02-10T10:27:06-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,49 +14,47 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.2.5.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.1.5.1</span><span class="period">.</span>
 </h6>
-<p>Again, we have a sum of an arithmetic sequence. How many terms are in the sequence? Clearly each term in the sequence has the form \(4k -2\) (as evidenced by the last term). For which values of \(k\) though? To get 6, \(k = 2\text{.}\) To get \(4n-2\) take \(k = n\text{.}\) So to find the number of terms, we must count the number of integers in the range \(2,3,\ldots, n\text{.}\) This is \(n-1\text{.}\) (There are \(n\) numbers from 1 to \(n\text{,}\) so one less if we start with 2.)</p>
-<p>Now reverse and add:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
-<tr>
-<td class="r m b0 r0 l0 t0 lines">\(S  =\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(6\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(10\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(+ \cdots +\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(4n-6\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">\(4n-2\)</td>
-</tr>
-<tr>
-<td class="r m b1 r0 l0 t0 lines">\(+ \quad S  =\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(4n-2\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(4n-6\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(+ \cdots +\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(10\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b1 r0 l0 t0 lines" data-braille="last-cell">6</td>
-</tr>
-<tr>
-<td class="r m b0 r0 l0 t0 lines">\(2S  =\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(4n+4\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(4n+4\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(+ \cdots +\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(4n+4\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">\(4n+4\)</td>
-</tr>
-</table></div></div></div>
-<p>Since there are \(n-1\) terms, we get</p>
+<p>We can find the terms of this sequence easily enough.</p>
 <div class="displaymath">
 \begin{equation*}
-2S = (n-1)(4n+4)\qquad \mbox{ so } \qquad S = \frac{(n-1)(4n+4)}{2}\text{.}
+3, 8, 14, 24, 33, 33, 45,\ldots\text{.}
 \end{equation*}
 </div>
+<p data-braille="continuation">Here \(b_1\) is just \(a_1\text{,}\) but then</p>
+<div class="displaymath">
+\begin{equation*}
+b_2 = 3+5 = a_1 + a_2\text{,}
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec_seq-arithgeom.html#aet">in-context</a></span>
+<div class="displaymath">
+\begin{equation*}
+b_3 = 3+5+6 = a_1 + a_2 + a_3\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">and so on.</p>
+<p>There are a few ways we might describe \(b_n\) in general.  We could do so recursively as,</p>
+<div class="displaymath">
+\begin{equation*}
+b_n = b_{n-1} + a_n\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">since the total number of push-ups done after \(n\) days will be the number done after \(n-1\) days, plus the number done on day \(n\text{.}\)</p>
+<p>For something closer to a closed formula, we could write</p>
+<div class="displaymath">
+\begin{equation*}
+b_n = a_1 + a_2 + a_3 + \cdots + a_n\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">or the same thing using <em class="emphasis">summation notation</em>:</p>
+<div class="displaymath">
+\begin{equation*}
+b_n = \sum_{i=1}^n a_i\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">However, note that these are not really closed formulas since even if we had a formula for \(a_n\text{,}\) we would still have an increasing number of computations to do as \(n\) increases.</p>
+</div>
+<span class="incontext"><a href="sec_seq_intro.html#HjR">in-context</a></span>
 </body>
 </html>

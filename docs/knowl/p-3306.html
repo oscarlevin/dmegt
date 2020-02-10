@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:00:57-07:00    *-->
+<!--*    on 2020-02-10T10:26:49-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,13 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>The Principle of Inclusion/Exclusion (PIE) gives a method for finding the cardinality of the union of not necessarily disjoint sets. We saw in <a href="sec_counting-addmult.html" class="internal" title="Section 3.2: Additive and Multiplicative Principles">Section 3.2</a> how this works with three sets. To find how many things are in <em class="emphasis">one or more</em> of the sets \(A\text{,}\) \(B\text{,}\) and \(C\text{,}\) we should just add up the number of things in each of these sets. However, if there is any overlap among the sets, those elements are counted multiple times. So we subtract the things in each intersection of a pair of sets. But doing this removes elements which are in all three sets once too often, so we need to add it back in. In terms of cardinality of sets, we have</p>
+<p>When we count functions, we consider the following two functions, for example, to be different:</p>
 <div class="displaymath">
 \begin{equation*}
-|A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A\cap B \cap C|\text{.}
+f = \twoline{1 \amp 2 \amp 3 \amp 4\amp 5 \amp 6 \amp 7}{a \amp b \amp c \amp c \amp c \amp c \amp c} \qquad g = \twoline{1 \amp 2 \amp 3 \amp 4\amp 5 \amp 6 \amp 7}{b \amp a \amp c \amp c \amp c \amp c \amp c}\text{.}
 \end{equation*}
 </div>
-<span class="incontext"><a href="sec_advPIE.html#Kyw">in-context</a></span>
+<p data-braille="continuation">But these two functions would correspond to the <em class="emphasis">same</em> cookie distribution: kids \(a\) and \(b\) each get one cookie, kid \(c\) gets the rest (and none for kid \(d\)).</p>
+<span class="incontext"><a href="sec_stars-and-bars.html#QgR">in-context</a></span>
 </body>
 </html>

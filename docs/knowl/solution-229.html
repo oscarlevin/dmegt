@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:00:51-07:00    *-->
+<!--*    on 2020-02-10T10:26:44-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,56 +14,10 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.5.7.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.4.9.1</span><span class="period">.</span>
 </h6>
-<p>We will give two different proofs of this fact. The first will be very similar to the previous example (counting subsets). The second proof is a little slicker, using lattice paths.</p>
-<article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
-<p>Consider the question: “How many pizzas can you make using \(n\) toppings when there are \(2n\) toppings to choose from?”</p>
-<p>Answer 1: There are \(2n\) toppings, from which you must choose \(n\text{.}\) This can be done in \({2n \choose n}\) ways.</p>
-<p>Answer 2: Divide the toppings into two groups of \(n\) toppings (perhaps \(n\) meats and \(n\) veggies). Any choice of \(n\) toppings must include some number from the first group and some number from the second group. Consider each possible number of meat toppings separately:</p>
-<p>0 meats: \({n \choose 0}{n \choose n}\text{,}\) since you need to choose 0 of the \(n\) meats and \(n\) of the \(n\) veggies.</p>
-<p>1 meat: \({n \choose 1}{n \choose n-1}\text{,}\) since you need 1 of \(n\) meats so \(n-1\) of \(n\) veggies.</p>
-<p>2 meats: \({n \choose 2}{n \choose n-2}\text{.}\) Choose 2 meats and the remaining \(n-2\) toppings from the \(n\) veggies.</p>
-<p>And so on. The last case is \(n\) meats, which can be done in \({n \choose n}{n \choose 0}\) ways.</p>
-<p>Thus the total number of pizzas possible is</p>
-<div class="displaymath">
-\begin{equation*}
-{n \choose 0}{n \choose n} + {n \choose 1}{n \choose n-1} + {n \choose 2}{n \choose n-2} + \cdots + {n \choose n}{n \choose 0}\text{.}
-\end{equation*}
+<p>First, decide where to put the “a”s. There are 7 positions, and we must choose 3 of them to fill with an “a”. This can be done in \({7 \choose 3}\) ways. The remaining 4 spots all get a different letter, so there are \(4!\) ways to finish off the anagram. This gives a total of \({7 \choose 3}\cdot 4!\) anagrams. Strangely enough, this is 840, which is also equal to \(P(7,4)\text{.}\) To get the answer that way, start by picking one of the 7 <em class="emphasis">positions</em> to be filled by the “n”, one of the remaining 6 positions to be filled by the “g”, one of the remaining 5 positions to be filled by the “r”, one of the remaining 4 positions to be filled by the “m” and then put “a”s in the remaining 3 positions.</p>
 </div>
-<p>This is not quite the left-hand side … yet. Notice that \({n \choose n} = {n \choose 0}\) and \({n \choose n-1} = {n  \choose 1}\) and so on, by the identity in <a class="xref" data-knowl="./knowl/example-symmetry-formula.html" title="Example 3.5.4">Example 3.5.4</a>. Thus we do indeed get</p>
-<div class="displaymath">
-\begin{equation*}
-{n \choose 0}^2 + {n \choose 1}^2 + {n \choose 2}^2 + \cdots + {n \choose n}^2\text{.}
-\end{equation*}
-</div>
-<p>Since these two answers are answers to the same question, they must be equal, and thus</p>
-<div class="displaymath">
-\begin{equation*}
-{n \choose 0}^2 + {n \choose 1}^2 + {n \choose 2}^2 + \cdots + {n \choose n}^2 = {2n \choose n}\text{.}
-\end{equation*}
-</div></article><p>For an alternative proof, we use lattice paths. This is reasonable to consider because the right-hand side of the identity reminds us of the number of paths from \((0,0)\) to \((n,n)\text{.}\)</p>
-<article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
-<p>Consider the question: How many lattice paths are there from \((0,0)\) to \((n,n)\text{?}\)</p>
-<p>Answer 1: We must travel \(2n\) steps, and \(n\) of them must be in the up direction. Thus there are \({2n \choose n}\) paths.</p>
-<p>Answer 2: Note that any path from \((0,0)\) to \((n,n)\) must cross the line \(x + y = n\text{.}\) That is, any path must pass through exactly one of the points: \((0,n)\text{,}\) \((1,n-1)\text{,}\) \((2,n-2)\text{,}\) …, \((n, 0)\text{.}\) For example, this is what happens in the case \(n = 4\text{:}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/lattice-paths-comb-proof.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
-<p>How many paths pass through \((0,n)\text{?}\) To get to that point, you must travel \(n\) units, and \(0\) of them are to the right, so there are \({n \choose 0}\) ways to get to \((0,n)\text{.}\) From \((0,n)\) to \((n,n)\) takes \(n\) steps, and \(0\) of them are up. So there are \({n \choose 0}\) ways to get from \((0,n)\) to \((n,n)\text{.}\) Therefore there are \({n \choose 0}{n \choose 0}\) paths from \((0,0)\) to \((n,n)\) through the point \((0,n)\text{.}\)</p>
-<p>What about through \((1,n-1)\text{.}\) There are \({n \choose 1}\) paths to get there (\(n\) steps, 1 to the right) and \({n \choose 1}\) paths to complete the journey to \((n,n)\) (\(n\) steps, \(1\) up). So there are \({n \choose 1}{n \choose 1}\) paths from \((0,0)\) to \((n,n)\) through \((1,n-1)\text{.}\)</p>
-<p>In general, to get to \((n,n)\) through the point \((k,n-k)\) we have \({n \choose k}\) paths to the midpoint and then \({n \choose k}\) paths from the midpoint to \((n,n)\text{.}\) So there are \({n \choose k}{n \choose k}\) paths from \((0,0)\) to \((n,n)\) through \((k, n-k)\text{.}\)</p>
-<p>All together then the total paths from \((0,0)\) to \((n,n)\) passing through exactly one of these midpoints is</p>
-<div class="displaymath">
-\begin{equation*}
-{n \choose 0}^2 + {n \choose 1}^2 + {n \choose 2}^2 + \cdots + {n \choose n}^2\text{.}
-\end{equation*}
-</div>
-<p>Since these two answers are answers to the same question, they must be equal, and thus</p>
-<div class="displaymath">
-\begin{equation*}
-{n \choose 0}^2 + {n \choose 1}^2 + {n \choose 2}^2 + \cdots + {n \choose n}^2 = {2n \choose n}\text{.}
-\end{equation*}
-</div></article>
-</div>
-<span class="incontext"><a href="sec_comb-proofs.html#xVW">in-context</a></span>
+<span class="incontext"><a href="sec_counting-combperm.html#qWn">in-context</a></span>
 </body>
 </html>

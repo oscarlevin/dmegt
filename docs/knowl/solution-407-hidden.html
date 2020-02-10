@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:28-07:00    *-->
+<!--*    on 2020-02-10T10:27:17-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,15 +11,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
-<p>Let \(P(n)\) be the statement “\(7^n - 1\) is a multiple of 6.” We will show \(P(n)\) is true for all \(n \in \N\text{.}\) First we establish the base case, \(P(0)\text{.}\) Since \(7^0 - 1 = 0\text{,}\) and \(0\) is a multiple of 6, \(P(0)\) is true. Now for the inductive case. Assume \(P(k)\) holds for an arbitrary \(k \in \N\text{.}\) That is, \(7^k - 1\) is a multiple of 6, or in other words, \(7^k - 1 = 6j\) for some integer \(j\text{.}\) Now consider \(7^{k+1} - 1\text{:}\)</p>
+<body><div class="solution solution-like">
+<p>\(a_n = 3 + 2^{n+1}\text{.}\) We should use telescoping or iteration here. For example, telescoping gives</p>
 <div class="displaymath">
-\begin{align*}
-7^{k+1} - 1 ~ \amp = 7^{k+1} - 7 + 6 \amp \text{by cleverness:} -1 = -7 + 6\\
-\amp = 7(7^k - 1) + 6 \amp \text{factor out a 7 from the first two terms}\\
-\amp = 7(6j) + 6 \amp \text{by the inductive hypothesis}\\
-\amp = 6(7j + 1) \amp \text{factor out a 6}
-\end{align*}
+\begin{equation*}
+\begin{aligned}
+a_1 - a_0 \amp = 2^1\\
+a_2 - a_1 \amp = 2^2\\
+a_3 - a_2 \amp = 2^3\\
+\vdots\amp \vdots\\
+a_n - a_{n-1} \amp = 2^n
+\end{aligned}
+\end{equation*}
 </div>
-<p>Therefore \(7^{k+1} - 1\) is a multiple of 6, or in other words, \(P(k+1)\) is true. Therefore by the principle of mathematical induction, \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article></div></body>
+<p>which sums to \(a_n - a_0 = 2^{n+1} - 2\) (using the multiply-shift-subtract technique from Section 4.2 for the right-hand side). Substituting \(a_0 = 5\) and solving for \(a_n\) completes the solution.</p>
+</div></body>
 </html>

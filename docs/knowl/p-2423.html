@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:00:40-07:00    *-->
+<!--*    on 2020-02-10T10:26:34-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Finding the number of 5-bit strings of weight 3 is harder. Think about how such a string could start. The first bit must be either a 0 or a 1. In the first case (the string starts with a 0), we must then decide on four more bits. To have a total of three 1's, among those four remaining bits there must be three 1's. To count all of these strings, we must include all 4-bit strings of weight 3. In the second case (the string starts with a 1), we still have four bits to choose, but now only two of them can be 1's, so we should look at all the 4-bit strings of weight 2. So the strings in \(\B^5_3\) all have the form \(1\B^4_2\) (that is, a 1 followed by a string from \(\B^4_2\)) or \(0\B^4_3\text{.}\) These two sets are disjoint, so we can use the additive principle:</p>
-<div class="displaymath">
-\begin{equation*}
-|\B^5_3| = |\B^4_2| + |\B^4_3|\text{.}
-\end{equation*}
-</div>
-<span class="incontext"><a href="sec_counting-binom.html#vDT">in-context</a></span>
+<p>Next, we determine the numbers which should go in the remaining regions, including outside of all three circles. This last number is the number of students who did not fail any subject:</p>
+<span class="incontext"><a href="sec_counting-addmult.html#BHn">in-context</a></span>
 </body>
 </html>

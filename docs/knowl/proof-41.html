@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:28-07:00    *-->
+<!--*    on 2020-02-10T10:26:33-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,13 +13,52 @@
 </head>
 <body>
 <article class="proof"><h6 class="heading"><span class="type">Proof</span></h6>
-<p>Let \(P(n)\) be the statement \(1+3 +5 + \cdots + (2n-1) = n^2\text{.}\) We will prove that \(P(n)\) is true for all \(n \ge 1\text{.}\) First the base case, \(P(1)\text{.}\) We have \(1 = 1^2\) which is true, so \(P(1)\) is established. Now the inductive case. Assume that \(P(k)\) is true for some fixed arbitrary \(k \ge 1\text{.}\) That is, \(1 + 3 + 5 + \cdots + (2k-1) = k^2\text{.}\) We will now prove that \(P(k+1)\) is also true (i.e., that \(1 + 3 + 5 + \cdots + (2k+1) = (k+1)^2\)). We start with the left-hand side of \(P(k+1)\) and work to the right-hand side:</p>
+<p>Recall that all the faces of a regular polyhedron are identical regular polygons, and that each vertex has the same degree. Consider four cases, depending on the type of regular polygon.</p>
+<p>Case 1: Each face is a triangle. Let \(f\) be the number of faces. There are then \(3f/2\) edges. Using Euler's formula we have \(v - 3f/2 + f = 2\) so \(v = 2 + f/2\text{.}\) Now each vertex has the same degree, say \(k\text{.}\) So the number of edges is also \(kv/2\text{.}\) Putting this together gives</p>
 <div class="displaymath">
-\begin{align*}
-1 + 3 + 5 + \cdots + (2k-1) + (2k+1) ~ \amp = k^2 + (2k+1) \amp \text{by ind. hyp.}\\
-\amp = (k+1)^2 \amp \text{by factoring}
-\end{align*}
+\begin{equation*}
+e = \frac{3f}{2} = \frac{k(2+f/2)}{2}\text{,}
+\end{equation*}
 </div>
-<p>Thus \(P(k+1)\) holds, so by the principle of mathematical induction, \(P(n)\) is true for all \(n \ge 1\text{.}\)</p></article><span class="incontext"><a href="sec_seq-induction.html#xcu">in-context</a></span>
+<p data-braille="continuation">which says</p>
+<div class="displaymath">
+\begin{equation*}
+k = \frac{6f}{4+f}\text{.}
+\end{equation*}
+</div>
+<p>Both \(k\) and \(f\) must be positive integers. Note that \(\frac{6f}{4+f}\) is an increasing function for positive \(f\text{,}\) bounded above by a horizontal asymptote at \(f=6\text{.}\) Thus the only possible values for \(k\) are 3, 4, and 5. Each of these are possible. To get \(k = 3\text{,}\) we need \(f = 4\) (this is the tetrahedron).  For \(k = 4\) we take \(f = 8\) (the octahedron).  For \(k = 5\) take \(f = 20\) (the icosahedron).  Thus there are exactly three regular polyhedra with triangles for faces.</p>
+<p>Case 2: Each face is a square. Now we have \(e = 4f/2 = 2f\text{.}\) Using Euler's formula we get \(v = 2 + f\text{,}\) and counting edges using the degree \(k\) of each vertex gives us</p>
+<div class="displaymath">
+\begin{equation*}
+e = 2f = \frac{k(2+f)}{2}\text{.}
+\end{equation*}
+</div>
+<p>Solving for \(k\) gives</p>
+<div class="displaymath">
+\begin{equation*}
+k = \frac{4f}{2+f} = \frac{8f}{4+2f}\text{.}
+\end{equation*}
+</div>
+<p>This is again an increasing function, but this time the horizontal asymptote is at \(k = 4\text{,}\) so the only possible value that \(k\) could take is 3. This produces 6 faces, and we have a cube. There is only one regular polyhedron with square faces.</p>
+<p>Case 3: Each face is a pentagon. We perform the same calculation as above, this time getting \(e = 5f/2\) so \(v = 2 + 3f/2\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+e = \frac{5f}{2} = \frac{k(2+3f/2)}{2}\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">so</p>
+<div class="displaymath">
+\begin{equation*}
+k = \frac{10f}{4+3f}\text{.}
+\end{equation*}
+</div>
+<p>Now the horizontal asymptote is at \(\frac{10}{3}\text{.}\) This is less than 4, so we can only hope of making \(k = 3\text{.}\) We can do so by using 12 pentagons, getting the dodecahedron.  This is the only regular polyhedron with pentagons as faces.</p>
+<p>Case 4: Each face is an \(n\)-gon with \(n \ge 6\text{.}\) Following the same procedure as above, we deduce that</p>
+<div class="displaymath">
+\begin{equation*}
+k = \frac{2nf}{4+(n-2)f}\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">which will be increasing to a horizontal asymptote of \(\frac{2n}{n-2}\text{.}\) When \(n = 6\text{,}\) this asymptote is at \(k = 3\text{.}\) Any larger value of \(n\) will give an even smaller asymptote. Therefore no regular polyhedra exist with faces larger than pentagons.<a class="fn-knowl" data-knowl="./knowl/fn-15-hidden.html" title="Footnote 2.11"><sup> 11 </sup></a></p></article><span class="incontext"><a href="sec_planar.html#kJP">in-context</a></span>
 </body>
 </html>

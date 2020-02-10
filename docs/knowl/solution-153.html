@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:00:36-07:00    *-->
+<!--*    on 2020-02-10T10:26:31-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,10 +14,19 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.2.3.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.6.5.1</span><span class="period">.</span>
 </h6>
-<p>Break your choices up into disjoint events: \(A\) are the choices with the first topping, \(B\) the choices featuring the second topping, and so on. There are four events; each can occur in 6 ways (one for each yogurt flavor). The events are disjoint, so the total number of choices is \(6 + 6 + 6 + 6 = 24\text{.}\)</p>
+<article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p>Let \(P(n)\) be the statement \(F_0 + F_2 + F_4 + \cdots + F_{2n} = F_{2n+1} - 1\text{.}\) We will show that \(P(n)\) is true for all \(n \ge 0\text{.}\) First the base case is easy because \(F_0 = 0\) and \(F_1 = 1\) so \(F_0 = F_1 - 1\text{.}\) Now consider the inductive case. Assume \(P(k)\) is true, that is, assume \(F_0 + F_2 + F_4 + \cdots + F_{2k} = F_{2k+1} - 1\text{.}\) To establish \(P(k+1)\) we work from left to right:</p>
+<div class="displaymath">
+\begin{align*}
+F_0 + F_2 + \cdots + F_{2k} + F_{2k+2} ~ \amp = F_{2k+1} - 1 + F_{2k+2} \amp \text{by ind. hyp.}\\
+\amp = F_{2k+1} + F_{2k+2} - 1 \amp\\
+\amp = F_{2k+3} - 1 \amp \text{by recursive def.}
+\end{align*}
 </div>
-<span class="incontext"><a href="sec_counting-addmult.html#oJb">in-context</a></span>
+<p>Therefore \(F_0 + F_2 + F_4 + \cdots + F_{2k+2} = F_{2k+3} - 1\text{,}\) which is to say \(P(k+1)\) holds. Therefore by the principle of mathematical induction, \(P(n)\) is true for all \(n \ge 0\text{.}\)</p></article>
+</div>
+<span class="incontext"><a href="sec_logic-induction.html#djD">in-context</a></span>
 </body>
 </html>

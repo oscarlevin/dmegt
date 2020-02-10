@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:00:36-07:00    *-->
+<!--*    on 2020-02-10T10:26:31-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,11 +13,17 @@
 </head>
 <body>
 <article class="proof"><h6 class="heading"><span class="type">Proof</span></h6>
-<p>Let \(P(n)\) be the statement, “every connected planar graph containing \(n\) edges satisfies \(v - n + f = 2\text{.}\)” We will show \(P(n)\) is true for all \(n \ge 0\text{.}\)</p>
-<p>Base case: there is only one graph with zero edges, namely a single isolated vertex. In this case \(v = 1\text{,}\) \(f = 1\) and \(e = 0\text{,}\) so Euler's formula holds.</p>
-<p>Inductive case: Suppose \(P(k)\) is true for some arbitrary \(k \ge 0\text{.}\) Now consider an arbitrary graph containing \(k+1\) edges (and \(v\) vertices and \(f\) faces). No matter what this graph looks like, we can remove a single edge to get a graph with \(k\) edges which we can apply the inductive hypothesis to.</p>
-<p>There are two cases: either the graph contains a cycle or it does not. If the graph contains a cycle, then pick an edge that is part of this cycle, and remove it.  This will not disconnect the graph, and will decrease the number of faces by 1 (since the edge was bordering two distinct faces).  So by the inductive hypothesis we will have \(v - k + f-1 = 2\text{.}\) Adding the edge back will give \(v - (k+1) + f = 2\) as needed.</p>
-<p>If the graph does not contain a cycle, then it is a tree, so has a vertex of degree 1.  Then we can pick the edge to remove to be incident to such a degree 1 vertex. In this case, also remove that vertex. The smaller graph will now satisfy \(v-1 - k + f = 2\) by the induction hypothesis (removing the edge and vertex did not reduce the number of faces). Adding the edge and vertex back gives \(v - (k+1) + f = 2\text{,}\) as required.</p>
-<p>Therefore, by the principle of mathematical induction, Euler's formula holds for all planar graphs.</p></article><span class="incontext"><a href="sec_planar.html#UjQ">in-context</a></span>
+<p>Let \(P(n)\) be the statement \(n^2 \lt 2^n\text{.}\) We will prove \(P(n)\) is true for all integers \(n \ge 5\text{.}\)</p>
+<p>Base case: \(P(5)\) is the statement \(5^2 \lt 2^5\text{.}\) Since \(5^2 = 25\) and \(2^5 = 32\text{,}\) we see that \(P(5)\) is indeed true.</p>
+<p>Inductive case: Let \(k \ge 5\) be an arbitrary integer. Assume, for induction, that \(P(k)\) is true. That is, assume \(k^2 \lt  2^k\text{.}\) We will prove that \(P(k+1)\) is true, i.e., \((k+1)^2 \lt  2^{k+1}\text{.}\) To prove such an inequality, start with the left-hand side and work towards the right-hand side:</p>
+<div class="displaymath">
+\begin{align*}
+(k+1)^2 \amp = k^2 + 2k + 1 \amp\\
+\amp \lt 2^k + 2k + 1 \amp \ldots\text{by the inductive hypothesis.}\\
+\amp \lt 2^k + 2^k \amp \ldots\text{ since } 2k + 1 \lt  2^k \text{ for }k \ge 5.\\
+\amp = 2^{k+1}. \amp
+\end{align*}
+</div>
+<p>Following the equalities and inequalities through, we get \((k+1)^2 \lt 2^{k+1}\text{,}\) in other words, \(P(k+1)\text{.}\) Therefore by the principle of mathematical induction, \(P(n)\) is true for all \(n \ge 5\text{.}\)</p></article><span class="incontext"><a href="sec_logic-induction.html#OlN">in-context</a></span>
 </body>
 </html>

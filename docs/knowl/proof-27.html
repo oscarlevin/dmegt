@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:00:50-07:00    *-->
+<!--*    on 2020-02-10T10:26:31-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,28 +13,9 @@
 </head>
 <body>
 <article class="proof"><h6 class="heading"><span class="type">Proof</span></h6>
-<p>By the definition of \({n \choose k}\text{,}\) we have</p>
-<div class="displaymath">
-\begin{equation*}
-{n-1 \choose k-1} = \frac{(n-1)!}{(n-1-(k-1))!(k-1)!} = \frac{(n-1)!}{(n-k)!(k-1)!}
-\end{equation*}
-</div>
-<p data-braille="continuation">and</p>
-<div class="displaymath">
-\begin{equation*}
-{n-1 \choose k} = \frac{(n-1)!}{(n-1-k)!k!}\text{.}
-\end{equation*}
-</div>
-<p>Thus, starting with the right-hand side of the equation:</p>
-<div class="displaymath">
-\begin{align*}
-{n-1 \choose k-1} + {n-1 \choose k} \amp = \frac{(n-1)!}{(n-k)!(k-1)!}+ \frac{(n-1)!}{(n-1-k)!\,k!}\\
-\amp = \frac{(n-1)!k}{(n-k)!\,k!} + \frac{(n-1)!(n-k)}{(n-k)!\,k!}\\
-\amp = \frac{(n-1)!(k+n-k)}{(n-k)!\,k!}\\
-\amp = \frac{n!}{(n-k)!\, k!}\\
-\amp = {n \choose k}\text{.}
-\end{align*}
-</div>
-<p>The second line (where the common denominator is found) works because \(k(k-1)! = k!\) and \((n-k)(n-k-1)! = (n-k)!\text{.}\)</p></article><span class="incontext"><a href="sec_comb-proofs.html#gXL">in-context</a></span>
+<p>Let \(P(n)\) be the statement, “\(n\) is either prime or can be written as the product of primes.” We will prove \(P(n)\) is true for all \(n \ge 2\text{.}\)</p>
+<p>Base case: \(P(2)\) is true because \(2\) is indeed prime.</p>
+<p>Inductive case: assume \(P(k)\) is true for all \(k \lt n\text{.}\) We want to show that \(P(n)\) is true. That is, we want to show that \(n\) is either prime or is the product of primes. If \(n\) is prime, we are done. If not, then \(n\) has more than 2 divisors, so we can write \(n = m_1 \cdot m_2\text{,}\) with \(m_1\) and \(m_2\) less than \(n\) (and greater than 1). By the inductive hypothesis, \(m_1\) and \(m_2\) are each either prime or can be written as the product of primes. In either case, we have that \(n\) is written as the product of primes.</p>
+<p>Thus by the strong induction, \(P(n)\) is true for all \(n \ge 2\text{.}\)</p></article><span class="incontext"><a href="sec_logic-induction.html#aAf">in-context</a></span>
 </body>
 </html>

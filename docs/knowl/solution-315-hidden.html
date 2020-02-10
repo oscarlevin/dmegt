@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:09-07:00    *-->
+<!--*    on 2020-02-10T10:27:00-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,10 +11,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><ol class="lower-alpha">
-<li><p>\(5^4 + 5^4 - 5^3\) functions.</p></li>
-<li><p>\(4\cdot 5^4 + 5 \cdot 4 \cdot 5^3 - 4 \cdot 4 \cdot 5^3\) functions.</p></li>
-<li><p>\(5! - \left[ 4! + 4! - 3! \right]\) functions. Note we use factorials instead of powers because we are looking for injective functions.</p></li>
-<li><p>Note that being surjective here is the same as being injective, so we can start with all \(5!\) injective functions and subtract those which have one or more “fixed point”. We get \(5! - \left[{5 \choose 1}4! - {5 \choose 2}3! + {5 \choose 3}2! - {5 \choose 4}1! + {5 \choose 5} 0!\right]\) functions.</p></li>
-</ol></div></body>
+<body><div class="solution solution-like">
+<p>With repeated letters allowed, we select which 5 of the 8 letters will be vowels, then pick one of the 5 vowels for each spot, and finally pick one of the other 21 letters for each of the remaining 3 spots. Thus, \({8 \choose 5}5^5 21^3\) words.</p>
+<p>Without repeats, we still pick the positions of the vowels, but now each time we place one there, there is one fewer choice for the next one. Similarly, we cannot repeat the consonants. We get \({8 \choose 5}5!
+P(21, 3)\) words.</p>
+</div></body>
 </html>

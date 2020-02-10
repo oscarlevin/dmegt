@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:00:06-07:00    *-->
+<!--*    on 2020-02-10T10:26:01-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -41,8 +41,8 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-dev.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
-<script src="https://webwork-dev.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork.cs.uleth.ca/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork.cs.uleth.ca/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
@@ -54,13 +54,6 @@ MathJax.Hub.Config({
 <link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="custom-styles.css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.13;
-</script>
 </head>
 <body id="levin-DMEGT" class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\d}{\displaystyle}
@@ -103,11 +96,11 @@ var js_version = 0.13;
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_polyfit.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_sequences.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_seq-induction.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_polyfit.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_sequences.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_addtops-genfun.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_polyfit.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_sequences.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_seq-induction.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_polyfit.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_sequences.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_addtops-genfun.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -160,7 +153,6 @@ var js_version = 0.13;
 <li><a href="sec_seq-arithgeom.html" data-scroll="lIR">Arithmetic and Geometric Sequences</a></li>
 <li><a href="sec_polyfit.html" data-scroll="ylR">Polynomial Fitting</a></li>
 <li><a href="sec_recurrence.html" data-scroll="bcV" class="active">Solving Recurrence Relations</a></li>
-<li><a href="sec_seq-induction.html" data-scroll="Prg">Induction</a></li>
 <li><a href="sec_addtops-genfun.html" data-scroll="XaJ">Generating Functions</a></li>
 <li><a href="sec_sequences-conc.html" data-scroll="YaY">Chapter Summary</a></li>
 </ul>
@@ -198,8 +190,8 @@ a_n = 5a_{n-1} - 6a_{n-2}\text{.}
 <p id="qVN">Finding the recurrence relation would be easier if we had some context for the problem (like the Tower of Hanoi, for example). Alas, we have only the sequence. Remember, the recurrence relation tells you how to get from previous terms to future terms. What is going on here? We could look at the differences between terms: \(4, 12, 36, 108, \ldots\text{.}\) Notice that these are growing by a factor of 3. Is the original sequence as well? \(1\cdot 3 = 3\text{,}\) \(5 \cdot 3 = 15\text{,}\) \(17 \cdot 3 = 51\) and so on. It appears that we always end up with 2 less than the next term. Aha!</p>
 <p id="XcW">So \(a_n = 3a_{n-1} + 2\) is our recurrence relation and the initial condition is \(a_0 = 1\text{.}\)</p>
 </div></div>
-</div></article><p id="TcX">We are going to try to <em class="emphasis">solve</em> these recurrence relations. By this we mean something very similar to solving differential equations: we want to find a function of \(n\) (a closed formula) which satisfies the recurrence relation, as well as the initial condition.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-17" id="fn-17"><sup> 2 </sup></a> Just like for differential equations, finding a solution might be tricky, but checking that the solution is correct is easy.</p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-17"><div class="fn">Recurrence relations are sometimes called difference equations since they can describe the difference between terms and this highlights the relation to differential equations further.</div></div>
+</div></article><p id="TcX">We are going to try to <em class="emphasis">solve</em> these recurrence relations. By this we mean something very similar to solving differential equations: we want to find a function of \(n\) (a closed formula) which satisfies the recurrence relation, as well as the initial condition.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-20" id="fn-20"><sup> 2 </sup></a> Just like for differential equations, finding a solution might be tricky, but checking that the solution is correct is easy.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-20"><div class="fn">Recurrence relations are sometimes called difference equations since they can describe the difference between terms and this highlights the relation to differential equations further.</div></div>
 <article class="example example-like" id="sbg"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.2</span><span class="period">.</span>
 </h6>
@@ -481,12 +473,12 @@ a_n = 3^n + \frac{1}{3}n3^n\text{.}
 <li id="awo"><p id="lFn">Find a closed formula for the sequence.</p></li>
 <li id="GDx"><p id="RMw">If you look at the sequence of differences between terms, and then the sequence of second differences, the sequence of third differences, and so on, will you ever get a constant sequence? Explain how you know.</p></li>
 </ol></article><article class="exercise exercise-like" id="ype"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-4333">Solve the recurrence relation \(a_n = a_{n-1} + 2^n\) with \(a_0 = 5\text{.}\)</p>
+<p id="p-4506">Solve the recurrence relation \(a_n = a_{n-1} + 2^n\) with \(a_0 = 5\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-97" id="hint-97"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-97"><div class="hint solution-like"><p id="p-4334">Use telescoping or iteration.</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-391" id="solution-391"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-391"><div class="solution solution-like">
-<p id="p-4335">\(a_n = 3 + 2^{n+1}\text{.}\) We should use telescoping or iteration here. For example, telescoping gives</p>
-<div class="displaymath" id="p-4336">
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-108" id="hint-108"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-108"><div class="hint solution-like"><p id="p-4507">Use telescoping or iteration.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-407" id="solution-407"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-407"><div class="solution solution-like">
+<p id="p-4508">\(a_n = 3 + 2^{n+1}\text{.}\) We should use telescoping or iteration here. For example, telescoping gives</p>
+<div class="displaymath" id="p-4509">
 \begin{equation*}
 \begin{aligned}
 a_1 - a_0 \amp = 2^1\\
@@ -497,25 +489,25 @@ a_n - a_{n-1} \amp = 2^n
 \end{aligned}
 \end{equation*}
 </div>
-<p id="p-4337">which sums to \(a_n - a_0 = 2^{n+1} - 2\) (using the multiply-shift-subtract technique from Section 4.2 for the right-hand side). Substituting \(a_0 = 5\) and solving for \(a_n\) completes the solution.</p>
+<p id="p-4510">which sums to \(a_n - a_0 = 2^{n+1} - 2\) (using the multiply-shift-subtract technique from Section 4.2 for the right-hand side). Substituting \(a_0 = 5\) and solving for \(a_n\) completes the solution.</p>
 </div></div>
 </div></article><article class="exercise exercise-like" id="ewn"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="aaP">Show that \(4^n\) is a solution to the recurrence relation \(a_n = 3a_{n-1} + 4a_{n-2}\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-glA" id="glA"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-glA"><div class="solution solution-like"><p id="QHd">We claim \(a_n = 4^n\) works. Plug it in: \(4^n = 3(4^{n-1}) + 4(4^{n-2})\text{.}\) This works - just simplify the right-hand side.</p></div></div>
 </div></article><article class="exercise exercise-like" id="KDw"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-4342">Find the solution to the recurrence relation \(a_n = 3a_{n-1} + 4a_{n-2}\) with initial terms \(a_0 = 2\) and \(a_1 = 3\text{.}\)</p>
+<p id="p-4515">Find the solution to the recurrence relation \(a_n = 3a_{n-1} + 4a_{n-2}\) with initial terms \(a_0 = 2\) and \(a_1 = 3\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-394" id="solution-394"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-394"><div class="solution solution-like"><p id="p-4343">By the Characteristic Root Technique. \(a_n = 4^n + (-1)^n\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-410" id="solution-410"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-410"><div class="solution solution-like"><p id="p-4516">By the Characteristic Root Technique. \(a_n = 4^n + (-1)^n\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="qKF"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<p id="p-4346">Find the solution to the recurrence relation \(a_n = 3a_{n-1} + 4a_{n-2}\) with initial terms \(a_0 = 5\) and \(a_1 = 8\text{.}\)</p>
+<p id="p-4519">Find the solution to the recurrence relation \(a_n = 3a_{n-1} + 4a_{n-2}\) with initial terms \(a_0 = 5\) and \(a_1 = 8\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-396" id="solution-396"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-396"><div class="solution solution-like"><p id="p-4347">\(a_n = \frac{13}{5} 4^n + \frac{12}{5} (-1)^n\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-412" id="solution-412"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-412"><div class="solution solution-like"><p id="p-4520">\(a_n = \frac{13}{5} 4^n + \frac{12}{5} (-1)^n\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="WRO"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<p id="p-4351">Solve the recurrence relation \(a_n = 3a_{n-1} + 10a_{n-2}\) with initial terms \(a_0 = 4\) and \(a_1 = 1\text{.}\)</p>
+<p id="p-4524">Solve the recurrence relation \(a_n = 3a_{n-1} + 10a_{n-2}\) with initial terms \(a_0 = 4\) and \(a_1 = 1\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-235" id="answer-235"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-235"><div class="answer solution-like"><p id="p-4353">\(2.71429\!\left(-2\right)^{n}+1.28571\cdot 5^{n}\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-398" id="solution-398"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-398"><div class="solution solution-like"><p id="p-4354">\(a_n = \frac{19}{7}(-2)^n + \frac{9}{7}5^n\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-235" id="answer-235"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-235"><div class="answer solution-like"><p id="p-4526">\(2.71429\!\left(-2\right)^{n}+1.28571\cdot 5^{n}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-414" id="solution-414"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-414"><div class="solution solution-like"><p id="p-4527">\(a_n = \frac{19}{7}(-2)^n + \frac{9}{7}5^n\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="CYX"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
 <p id="eKI">Suppose that \(r^n\) and \(q^n\) are both solutions to a recurrence relation of the form \(a_n = \alpha a_{n-1} + \beta a_{n-2}\text{.}\) Prove that \(c\cdot r^n + d \cdot q^n\) is also a solution to the recurrence relation, for any constants \(c, d\text{.}\)</p></article><article class="exercise exercise-like" id="jgg"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
 <p id="KRR">Think back to the magical candy machine at your neighborhood grocery store. Suppose that the first time a quarter is put into the machine 1 Skittle comes out. The second time, 4 Skittles, the third time 16 Skittles, the fourth time 64 Skittles, etc.</p>
@@ -565,7 +557,5 @@ a_n - a_{n-1} \amp = 2^n
 <li id="tjM"><p id="YlC">Find the solution when \(a_0 = 1\) and \(a_1 = 8\text{.}\)</p></li>
 </ol></article></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.13/login.js"></script>
 </body>
 </html>

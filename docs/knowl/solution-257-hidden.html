@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:00:58-07:00    *-->
+<!--*    on 2020-02-10T10:26:50-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,20 +11,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">
-<p>We must subtract off the number of solutions in which one or more of the variables has a value greater than 3. We will need to use PIE because counting the number of solutions for which each of the five variables separately are greater than 3 counts solutions multiple times. Here is what we get:</p>
-<ul class="disc">
-<li><p>Total solutions: \({17 \choose 4}\text{.}\)</p></li>
-<li><p>Solutions where \(x_1 &gt; 3\text{:}\) \({13 \choose 4}\text{.}\) Give \(x_1\) 4 units first, then distribute the remaining 9 units to the 5 variables.</p></li>
-<li><p>Solutions where \(x_1 &gt; 3\) and \(x_2 &gt; 3\text{:}\) \({9 \choose 4}\text{.}\) After you give 4 units to \(x_1\) and another 4 to \(x_2\text{,}\) you only have 5 units left to distribute.</p></li>
-<li><p>Solutions where \(x_1 &gt; 3\text{,}\) \(x_2 &gt; 3\) and \(x_3 &gt; 3\text{:}\) \({5 \choose 4}\text{.}\)</p></li>
-<li><p>Solutions where \(x_1 &gt; 3\text{,}\) \(x_2 &gt; 3\text{,}\) \(x_3 &gt; 3\text{,}\) and \(x_4 &gt; 3\text{:}\) 0.</p></li>
-</ul>
-<p>We also need to account for the fact that we could choose any of the five variables in the place of \(x_1\) above (so there will be \({5 \choose 1}\) outcomes like this), any pair of variables in the place of \(x_1\) and \(x_2\) (\({5 \choose 2}\) outcomes) and so on. It is because of this that the double counting occurs, so we need to use PIE. All together we have that the number of solutions with \(0 \le x_i \le 3\) is</p>
-<div class="displaymath">
-\begin{equation*}
-{17 \choose 4} - \left[{5\choose 1}{13 \choose 4} - {5 \choose 2}{9 \choose 4} + {5 \choose 3}{5 \choose 4}\right] = 15\text{.}
-\end{equation*}
-</div>
-</div></body>
+<body><div class="solution solution-like"><ol class="lower-alpha">
+<li>\({18 \choose 4}\) ways. Each outcome can be represented by a sequence of 14 stars and 4 bars.</li>
+<li>\({13 \choose 4}\) ways. First put one ball in each bin. This leaves 9 stars and 4 bars.</li>
+</ol></div></body>
 </html>

@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:00:37-07:00    *-->
+<!--*    on 2020-02-10T10:26:31-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,14 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>How many license plates can you make out of three letters followed by three numerical digits?</p>
-<span class="incontext"><a href="sec_counting-addmult.html#SFy">in-context</a></span>
+<p>Let \(P(n)\) be the statement \(F_0 + F_2 + F_4 + \cdots + F_{2n} = F_{2n+1} - 1\text{.}\) We will show that \(P(n)\) is true for all \(n \ge 0\text{.}\) First the base case is easy because \(F_0 = 0\) and \(F_1 = 1\) so \(F_0 = F_1 - 1\text{.}\) Now consider the inductive case. Assume \(P(k)\) is true, that is, assume \(F_0 + F_2 + F_4 + \cdots + F_{2k} = F_{2k+1} - 1\text{.}\) To establish \(P(k+1)\) we work from left to right:</p>
+<div class="displaymath">
+\begin{align*}
+F_0 + F_2 + \cdots + F_{2k} + F_{2k+2} ~ \amp = F_{2k+1} - 1 + F_{2k+2} \amp \text{by ind. hyp.}\\
+\amp = F_{2k+1} + F_{2k+2} - 1 \amp\\
+\amp = F_{2k+3} - 1 \amp \text{by recursive def.}
+\end{align*}
+</div>
+<span class="incontext"><a href="sec_logic-induction.html#BqO">in-context</a></span>
 </body>
 </html>

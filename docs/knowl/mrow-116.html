@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:27-07:00    *-->
+<!--*    on 2020-02-10T10:27:16-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,12 +14,14 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-(k+1)^2 \amp = k^2 + 2k + 1 \amp\\
-\amp \lt 2^k + 2k + 1 \amp \ldots\text{by the inductive hypothesis.}\\
-\amp \lt 2^k + 2^k \amp \ldots\text{ since } 2k + 1 \lt  2^k \text{ for }k \ge 5.\\
-\amp = 2^{k+1}. \amp
+a_1 \amp = 3a_0 + 2\\
+a_2 \amp = 3(a_1) + 2 = 3(3a_0 + 2) + 2 = 3^2a_0 + 2\cdot 3 + 2\\
+a_3 \amp = 3[a_2] + 2 = 3[3^2a_0 + 2\cdot 3 + 2] + 2 = 3^3 a_0 + 2 \cdot 3^2 + 2 \cdot 3 + 2\\
+\vdots \amp \qquad\quad \vdots \hspace{2in} \vdots\\
+a_n \amp = 3(a_{n-1}) + 2 = 3(3^{n-1}a_0 + 2 \cdot 3^{n-2} + \cdots +2)+ 2\\
+\amp \qquad \qquad = 3^n a_0 + 2\cdot 3^{n-1} + 2 \cdot 3^{n-2} + \cdots + 2\cdot 3 + 2
 \end{align*}
 </div>
-<span class="incontext"><a href="sec_seq-induction.html#mjx-eqn-mrow-116">in-context</a></span>
+<span class="incontext"><a href="sec_recurrence.html#mjx-eqn-mrow-116">in-context</a></span>
 </body>
 </html>

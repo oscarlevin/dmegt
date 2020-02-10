@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:29-07:00    *-->
+<!--*    on 2020-02-10T10:26:47-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,9 +13,9 @@
 </head>
 <body>
 <article class="proof"><h6 class="heading"><span class="type">Proof</span></h6>
-<p>Let \(P(n)\) be the statement “\(n\) is either a power of 2 or can be written as the sum of distinct powers of 2.” We will show that \(P(n)\) is true for all \(n \ge 1\text{.}\)</p>
-<p>Base case: \(1 = 2^0\) is a power of 2, so \(P(1)\) is true.</p>
-<p>Inductive case: Suppose \(P(k)\) is true for all \(k \lt n\text{.}\) Now if \(n\) is a power of 2, we are done. If not, let \(2^x\) be the largest power of 2 strictly less than \(n\text{.}\) Consider \(n - 2^x\text{,}\) which is a smaller number, in fact smaller than both \(n\) and \(2^x\text{.}\) Thus \(n-2^x\) is either a power of 2 or can be written as the sum of distinct powers of 2, but none of them are going to be \(2^x\text{,}\) so the together with \(2^x\) we have written \(n\) as the sum of distinct powers of 2.</p>
-<p>Therefore, by the principle of (strong) mathematical induction, \(P(n)\) is true for all \(n \ge 1\text{.}\)</p></article><span class="incontext"><a href="sec_seq-induction.html#jIJ">in-context</a></span>
+<p>Question: How many 2-letter words start with <em class="emphasis">a</em>, <em class="emphasis">b</em>, or <em class="emphasis">c</em> and end with either <em class="emphasis">y</em> or <em class="emphasis">z</em>?</p>
+<p>Answer 1: There are two words that start with <em class="emphasis">a</em>, two that start with <em class="emphasis">b</em>, two that start with <em class="emphasis">c</em>, for a total of \(2+2+2\text{.}\)</p>
+<p>Answer 2: There are three choices for the first letter and two choices for the second letter, for a total of \(3 \cdot 2\text{.}\)</p>
+<p>Since the two answers are both answers to the same question, they are equal. Thus \(2 + 2 + 2 = 3\cdot 2\text{.}\)</p></article><span class="incontext"><a href="sec_comb-proofs.html#KIn">in-context</a></span>
 </body>
 </html>

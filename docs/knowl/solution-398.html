@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-12T16:01:25-07:00    *-->
+<!--*    on 2020-02-10T10:27:15-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,10 +14,11 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.4.7.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.4.1.1</span><span class="period">.</span>
 </h6>
-<p>\(a_n = \frac{19}{7}(-2)^n + \frac{9}{7}5^n\text{.}\)</p>
+<p>Finding the recurrence relation would be easier if we had some context for the problem (like the Tower of Hanoi, for example). Alas, we have only the sequence. Remember, the recurrence relation tells you how to get from previous terms to future terms. What is going on here? We could look at the differences between terms: \(4, 12, 36, 108, \ldots\text{.}\) Notice that these are growing by a factor of 3. Is the original sequence as well? \(1\cdot 3 = 3\text{,}\) \(5 \cdot 3 = 15\text{,}\) \(17 \cdot 3 = 51\) and so on. It appears that we always end up with 2 less than the next term. Aha!</p>
+<p>So \(a_n = 3a_{n-1} + 2\) is our recurrence relation and the initial condition is \(a_0 = 1\text{.}\)</p>
 </div>
-<span class="incontext"><a href="sec_recurrence.html#solution-398">in-context</a></span>
+<span class="incontext"><a href="sec_recurrence.html#cSi">in-context</a></span>
 </body>
 </html>
