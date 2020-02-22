@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65pt" height="65pt" viewBox="0 0 65 65" version="1.1">
 <g id="surface1">
-<path style="fill:none;stroke-width:0.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -0.00046875 0.001875 L -0.00046875 63.779219 L 63.780781 63.779219 L 63.780781 0.001875 Z M -0.00046875 0.001875 L -0.00046875 42.521406 L 42.519062 42.521406 L 42.519062 0.001875 Z M 21.26125 42.521406 L 21.26125 63.779219 M 42.519062 42.521406 L 42.519062 63.779219 M 42.519062 42.521406 L 63.780781 42.521406 M 42.519062 21.259687 L 63.780781 21.259687 " transform="matrix(1,0,0,-1,0.52,64.58)"/>
+<path style="fill:none;stroke-width:0.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 0.00053125 0.000875 L 0.00053125 63.782125 L 63.781781 63.782125 L 63.781781 0.000875 Z M 0.00053125 0.000875 L 0.00053125 42.520406 L 42.520063 42.520406 L 42.520063 0.000875 Z M 21.258344 42.520406 L 21.258344 63.782125 M 42.520063 42.520406 L 42.520063 63.782125 M 42.520063 42.520406 L 63.781781 42.520406 M 42.520063 21.258688 L 63.781781 21.258688 " transform="matrix(1,0,0,-1,0.894,64.579)"/>
 </g>
 </svg>
