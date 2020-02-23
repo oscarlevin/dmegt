@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-21T20:33:34-07:00    *-->
+<!--*    on 2020-02-23T14:52:34-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,27 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Any lattice path from (0,0) to (3,2) must pass through exactly one of \(A\) and \(B\text{.}\) The point \(A\) is 4 steps away from (0,0) and two of them are towards the right. The number of lattice paths to \(A\) is the same as the number of 4-bit strings of weight 2, namely 6. The point \(B\) is 4 steps away from (0,0), but now 3 of them are towards the right. So the number of paths to point \(B\) is the same as the number of 4-bit strings of weight 3, namely 4. So the total number of paths to (3,2) is just \(6+4\text{.}\) This is the same way we calculated the number of 5-bit strings of weight 3. The point: the exact same recurrence relation exists for bit strings and for lattice paths.</p>
-<span class="incontext"><a href="sec_counting-binom.html#RlX">in-context</a></span>
+<p> <dfn class="terminology">Binomial coefficients</dfn> are the coefficients in the expanded version of a binomial, such as \((x+y)^5\text{.}\) What happens when we multiply such a binomial out? We will expand \((x+y)^n\) for various values of \(n\text{.}\) Each of these are done by multiplying everything out (i.e., FOIL-ing) and then collecting like terms.</p>
+<div class="displaymath">
+\begin{equation*}
+(x+y)^1 = x + y
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+(x+y)^2 = x^2 + 2xy + y^2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+(x+y)^3 = x^3 + 3x^2y + 3xy^2 + y^3
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+(x+y)^4 = x^4 + 4x^3y + 6x^2y^2 + 4xy^3 + y^4\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="sec_counting-binom.html#xtg">in-context</a></span>
 </body>
 </html>

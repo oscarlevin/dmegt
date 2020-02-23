@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-21T20:33:35-07:00    *-->
+<!--*    on 2020-02-23T14:52:35-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>It should be clear that in each case above, we have the right answer. All we had to do is phrase the question correctly and it became obvious that \({5 \choose 3}\) is correct. However, this does not tell us that the answer is in fact 10 in each case. We will eventually find a formula for \({n \choose k}\text{,}\) but for now, look back at how we arrived at the answer 10 in our counting problems above. It all came down to bit strings, and we have a recurrence relation for bit strings:</p>
-<div class="displaymath">
-\begin{equation*}
-|\B^n_k| = |\B^{n-1}_{k-1}| + |\B^{n-1}_k|\text{.}
-\end{equation*}
-</div>
-<span class="incontext"><a href="sec_counting-binom.html#Orr">in-context</a></span>
+<p>Remember, this is because we can start the bit string with either a 1 or a 0. In both cases, we have \(n-1\) more bits to pick. The strings starting with 1 must contain \(k-1\) more 1's, while the strings starting with 0 still need \(k\) more 1's.</p>
+<span class="incontext"><a href="sec_counting-binom.html#uyA">in-context</a></span>
 </body>
 </html>

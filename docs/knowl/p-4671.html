@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-21T20:37:09-07:00    *-->
+<!--*    on 2020-02-23T14:55:59-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,14 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Similarly, to find the generating function for the sequence \(3, 9, 27, 81, \ldots\text{,}\) we note that this sequence is the result of multiplying each term of \(1, 3, 9, 27, \ldots\) by 3. Since we have the generating function for \(1, 3, 9, 27, \ldots\) we can say</p>
+<p>What about the sequence \(2, 4, 10, 28, 82, \ldots\text{?}\) Here the terms are always 1 more than powers of 3. That is, we have added the sequences \(1,1,1,1,\ldots\) and \(1,3,9, 27,\ldots\) term by term. Therefore we can get a generating function by adding the respective generating functions:</p>
 <div class="displaymath">
-\begin{equation*}
-\frac{3}{1-3x} = 3\cdot 1 + 3\cdot 3x + 3\cdot 9x^2 + 3\cdot 27x^3 + \cdots \mbox{ which generates }  3, 9, 27, 81, \ldots\text{.}
-\end{equation*}
+\begin{align*}
+2 + 4x + 10x^2 + 28x^3 + \cdots  \amp  = (1 + 1) + (1 + 3)x + (1 + 9)x^2 + (1 + 27)x^3 + \cdots\\
+\amp  = 1 + x + x^2 + x^3 + \cdots + 1 + 3x + 9x^2 + 27x^3 + \cdots\\
+\amp  = \frac{1}{1-x} + \frac{1}{1-3x}
+\end{align*}
 </div>
-<span class="incontext"><a href="sec_addtops-genfun.html#Hwm">in-context</a></span>
+<span class="incontext"><a href="sec_addtops-genfun.html#nDv">in-context</a></span>
 </body>
 </html>

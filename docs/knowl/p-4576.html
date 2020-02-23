@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-21T20:37:00-07:00    *-->
+<!--*    on 2020-02-23T14:55:50-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Iteration can be messy, but when the recurrence relation only refers to one previous term (and maybe some function of \(n\)) it can work well. However, trying to iterate a recurrence relation such as \(a_n = 2 a_{n-1} + 3 a_{n-2}\) will be way too complicated. We would need to keep track of two sets of previous terms, each of which were expressed by two previous terms, and so on. The length of the formula would grow exponentially (double each time, in fact). Luckily there happens to be a method for solving recurrence relations which works very well on relations like this.</p>
-<span class="incontext"><a href="sec_recurrence.html#wpA">in-context</a></span>
+<p>Suppose we want to solve a recurrence relation expressed as a combination of the two previous terms, such as \(a_n = a_{n-1} + 6a_{n-2}\text{.}\) In other words, we want to find a function of \(n\) which satisfies \(a_n - a_{n-1} - 6a_{n-2} = 0\text{.}\) Now iteration is too complicated, but think just for a second what would happen if we <em class="emphasis">did</em> iterate. In each step, we would, among other things, multiply a previous iteration by 6. So our closed formula would include \(6\) multiplied some number of times. Thus it is reasonable to guess the solution will contain parts that look geometric. Perhaps the solution will take the form \(r^n\) for some constant \(r\text{.}\)</p>
+<span class="incontext"><a href="sec_recurrence.html#USk">in-context</a></span>
 </body>
 </html>

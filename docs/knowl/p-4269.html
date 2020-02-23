@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-21T20:36:29-07:00    *-->
+<!--*    on 2020-02-23T14:55:21-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,13 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Consider three cases: the last digit is a 0, a 1, or a 2.  Two of these should be easy to count, but strings ending in 0 cannot be proceeded by a 2, so require a little more work.</p>
-<span class="incontext"><a href="sec_seq_intro.html#slk">in-context</a></span>
+<p>Consider bit strings with length \(l\) and weight \(k\) (so strings of \(l\) 0's and 1's, including \(k\) 1's). We know how to count the number of these for a fixed \(l\) and \(k\text{.}\) Now, we will count the number of strings for which the <em class="emphasis">sum</em> of the length and the weight is fixed. For example, let's count all the bit strings for which \(l+k = 11\text{.}\)</p>
+<ol class="lower-alpha">
+<li><p>Find examples of these strings of different lengths. What is the longest string possible? What is the shortest?</p></li>
+<li><p>How many strings are there of each of these lengths. Use this to count the total number of strings (with sum 11).</p></li>
+<li><p>The other approach: Let \(n = l+k\) vary. How many strings have sum \(n = 1\text{?}\) How many have sum \(n = 2\text{?}\) And so on. Find and explain a recurrence relation for the sequence \((a_n)\) which gives the number of strings with sum \(n\text{.}\)</p></li>
+<li><p>Describe what you have found above in terms of Pascal's Triangle. What pattern have you discovered?</p></li>
+</ol>
+<span class="incontext"><a href="sec_seq_intro.html#rfR">in-context</a></span>
 </body>
 </html>

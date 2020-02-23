@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-21T20:37:00-07:00    *-->
+<!--*    on 2020-02-23T14:55:50-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Now we simplify. \(a_0 = 1\text{,}\) so we have \(3^n + \langle\text{stuff}\rangle\text{.}\) Note that all the other terms have a 2 in them. In fact, we have a geometric sum with first term \(2\) and common ratio \(3\text{.}\) We have seen how to simplify \(2 + 2\cdot 3 + 2 \cdot 3^2 + \cdots + 2\cdot 3^{n-1}\text{.}\) We get \(\frac{2-2\cdot 3^n}{-2}\) which simplifies to \(3^n - 1\text{.}\) Putting this together with the first \(3^n\) term gives our closed formula:</p>
-<div class="displaymath">
-\begin{equation*}
-a_n = 2\cdot 3^n - 1\text{.}
-\end{equation*}
-</div>
-<span class="incontext"><a href="sec_recurrence.html#lgB">in-context</a></span>
+<p>Iteration can be messy, but when the recurrence relation only refers to one previous term (and maybe some function of \(n\)) it can work well. However, trying to iterate a recurrence relation such as \(a_n = 2 a_{n-1} + 3 a_{n-2}\) will be way too complicated. We would need to keep track of two sets of previous terms, each of which were expressed by two previous terms, and so on. The length of the formula would grow exponentially (double each time, in fact). Luckily there happens to be a method for solving recurrence relations which works very well on relations like this.</p>
+<span class="incontext"><a href="sec_recurrence.html#wpA">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-21T20:35:14-07:00    *-->
+<!--*    on 2020-02-23T14:54:08-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,13 +13,14 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>You decide to give away your video game collection so as to better spend your time studying advanced mathematics. How many ways can you do this, provided:</p>
 <ol class="decimal">
-<li>You want to distribute your 3 different PS4 games among 5 friends, so that no friend gets more than one game?</li>
-<li>You want to distribute your 8 different 3DS games among 5 friends?</li>
-<li>You want to distribute your 8 different SNES games among 5 friends, so that each friend gets at least one game?</li>
+<li>
+<p>We must use the three games (call them 1, 2, 3) as the domain and the 5 friends (a,b,c,d,e) as the codomain (otherwise the function would not be defined for the whole domain when a friend didn't get any game). So how many functions are there with domain \(\{1,2,3\}\) and codomain \(\{a,b,c,d,e\}\text{?}\) The answer to this is \(5^3=125\text{,}\) since we can assign any of 5 elements to be the image of 1, any of 5 elements to be the image of 2 and any of 5 elements to be the image of 3.</p>
+<p>But this is not the correct answer to our counting problem, because one of these functions is \(f= \twoline{1\amp 2\amp 3}{a\amp a\amp a}\text{;}\) one friend can get more than one game. What we really need to do is count <em class="emphasis">injective</em> functions. This gives \(P(5,3) = 60\) functions, which is the answer to our counting question.</p>
+</li>
+<li><p>Again, we need to use the 8 games as the domain and the 5 friends as the codomain. We are counting all functions, so the number of ways to distribute the games is \(5^8\text{.}\)</p></li>
+<li><p>This question is harder. Use the games as the domain and friends as the codomain (the reverse would not give a function). To ensure that every friend gets at least one game means that every element of the codomain is in the range. In other words, we are looking for <em class="emphasis">surjective</em> functions. How do you count those??</p></li>
 </ol>
-<p data-braille="continuation">In each case, model the counting question as a function counting question.</p>
-<span class="incontext"><a href="sec_advPIE.html#BeK">in-context</a></span>
+<span class="incontext"><a href="sec_advPIE.html#uFE">in-context</a></span>
 </body>
 </html>

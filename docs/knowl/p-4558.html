@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-21T20:36:59-07:00    *-->
+<!--*    on 2020-02-23T14:55:49-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Add all these equations together. On the right-hand side, we get the sum \(1 + 2 + 3 + \cdots + n\text{.}\) We already know this can be simplified to \(\frac{n(n+1)}{2}\text{.}\) What happens on the left-hand side? We get</p>
+<p>This sum telescopes. We are left with only the \(-a_0\) from the first equation and the \(a_n\) from the last equation. Putting this all together we have \(-a_0 + a_n = \frac{n(n+1)}{2}\) or \(a_n = \frac{n(n+1)}{2} + a_0\text{.}\) But we know that \(a_0 = 4\text{.}\) So the solution to the recurrence relation, subject to the initial condition is</p>
 <div class="displaymath">
 \begin{equation*}
-(a_1 - a_0) + (a_2 - a_1) + (a_3 - a_2) + \cdots (a_{n-1} - a_{n-2})+ (a_n - a_{n-1})\text{.}
+a_n = \frac{n(n+1)}{2} + 4\text{.}
 \end{equation*}
 </div>
-<span class="incontext"><a href="sec_recurrence.html#bMP">in-context</a></span>
+<span class="incontext"><a href="sec_recurrence.html#HTY">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-21T20:37:11-07:00    *-->
+<!--*    on 2020-02-23T14:56:01-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Consider the special case when you multiply a sequence by \(1, 1, 1, \ldots\text{.}\) For example, multiply \(1,1,1,\ldots\) by \(1, 2, 3, 4, 5\ldots\text{.}\) The first term is \(1\cdot 1 = 1\text{.}\) Then \(1\cdot 2 + 1 \cdot 1 = 3\text{.}\) Then \(1\cdot 3 + 1\cdot 2 + 1 \cdot 1 = 6\text{.}\) The next term will be 10. We are getting the triangular numbers. More precisely, we get the sequence of partial sums of \(1,2,3,4,5, \ldots\text{.}\) In terms of generating functions, we take \(\frac{1}{1-x}\) (generating \(1,1,1,1,1\ldots\)) and multiply it by \(\frac{1}{(1-x)^2}\) (generating \(1,2,3,4,5,\ldots\)) and this give \(\frac{1}{(1-x)^3}\text{.}\) This should not be a surprise as we found the same generating function for the triangular numbers earlier.</p>
-<span class="incontext"><a href="sec_addtops-genfun.html#Jlz">in-context</a></span>
+<p>The point is, if you need to find a generating function for the sum of the first \(n\) terms of a particular sequence, and you know the generating function for <em class="emphasis">that</em> sequence, you can multiply it by \(\frac{1}{1-x}\text{.}\) To go back from the sequence of partial sums to the original sequence, you look at the sequence of differences. When you get the sequence of differences you end up multiplying by \(1-x\text{,}\) or equivalently, dividing by \(\frac{1}{1-x}\text{.}\) Multiplying by \(\frac{1}{1-x}\) gives partial sums, dividing by \(\frac{1}{1-x}\) gives differences.</p>
+<span class="incontext"><a href="sec_addtops-genfun.html#psI">in-context</a></span>
 </body>
 </html>

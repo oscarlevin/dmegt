@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-21T20:28:09-07:00    *-->
+<!--*    on 2020-02-23T14:47:21-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -129,7 +129,7 @@ MathJax.Hub.Config({
 <li><a href="sec_intro-statements.html" data-scroll="QDd">Mathematical Statements</a></li>
 <li><a href="sec_propositional.html" data-scroll="XMq">Propositional Logic</a></li>
 <li><a href="sec_logic-proofs.html" data-scroll="lnf">Proofs</a></li>
-<li><a href="sec_logic-induction.html" data-scroll="lnf">Mathematical Induction</a></li>
+<li><a href="sec_logic-induction.html" data-scroll="sec_logic-induction">Mathematical Induction</a></li>
 <li><a href="sec_trees.html" data-scroll="gor">Trees</a></li>
 <li><a href="sec_paths.html" data-scroll="tPg">Euler Paths and Circuits</a></li>
 <li><a href="sec_planar.html" data-scroll="ttH">Planar Graphs</a></li>
@@ -137,7 +137,6 @@ MathJax.Hub.Config({
 </li>
 <li class="link">
 <a href="ch_counting.html" data-scroll="raE"><span class="codenumber">3</span> <span class="title">Counting</span></a><ul>
-<li><a href="sec_counting-pascal.html" data-scroll="sJa">Pascal's Triangle</a></li>
 <li><a href="sec_counting-addmult.html" data-scroll="sJa">Additive and Multiplicative Principles</a></li>
 <li><a href="sec_counting-binom.html" data-scroll="vZs">Binomial Coefficients</a></li>
 <li><a href="sec_counting-combperm.html" data-scroll="yda">Combinations and Permutations</a></li>
@@ -166,7 +165,7 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="HKU"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">3.7</span> <span class="title">Advanced Counting Using PIE</span>
+<span class="type">Section</span> <span class="codenumber">3.6</span> <span class="title">Advanced Counting Using PIE</span>
 </h2>
 <a href="sec_advPIE.html" class="permalink">¶</a><section class="introduction" id="BVI"><article class="project-like" id="icR"><h6 class="heading">
 <span class="type">Investigate!</span> </h6>
@@ -181,14 +180,14 @@ MathJax.Hub.Config({
 <p id="ScV">Suppose now you have 13 pies and 7 children. No child can have more than 2 pies. How many ways can you distribute the pies?</p></article><p id="yke">Stars and bars allows us to count the number of ways to distribute 10 cookies to 3 kids and natural number solutions to \(x+y+z = 11\text{,}\) for example. A relatively easy modification allows us to put a <em class="emphasis">lower bound</em> restriction on these problems: perhaps each kid must get at least two cookies or \(x,y,z \ge 2\text{.}\) This was done by first assigning each kid (or variable) 2 cookies (or units) and then distributing the rest using stars and bars.</p>
 <p id="ern"> What if we wanted an <em class="emphasis">upper bound</em> restriction? For example, we might insist that no kid gets more than 4 cookies or that \(x,
 y, z \le 4\text{.}\) It turns out this is considerably harder, but still possible. The idea is to count all the distributions and then remove those that violate the condition. In other words, we must count the number of ways to distribute 11 cookies to 3 kids in which <em class="emphasis">one or more</em> of the kids gets more than 4 cookies. For any particular kid, this is not a problem; we do this using stars and bars. But how to combine the number of ways for kid A, or B or C? We must use the PIE.</p>
-<p id="Kyw">The Principle of Inclusion/Exclusion (PIE) gives a method for finding the cardinality of the union of not necessarily disjoint sets. We saw in <a href="sec_counting-addmult.html" class="internal" title="Section 3.2: Additive and Multiplicative Principles">Section 3.2</a> how this works with three sets. To find how many things are in <em class="emphasis">one or more</em> of the sets \(A\text{,}\) \(B\text{,}\) and \(C\text{,}\) we should just add up the number of things in each of these sets. However, if there is any overlap among the sets, those elements are counted multiple times. So we subtract the things in each intersection of a pair of sets. But doing this removes elements which are in all three sets once too often, so we need to add it back in. In terms of cardinality of sets, we have</p>
+<p id="Kyw">The Principle of Inclusion/Exclusion (PIE) gives a method for finding the cardinality of the union of not necessarily disjoint sets. We saw in <a href="sec_counting-addmult.html" class="internal" title="Section 3.1: Additive and Multiplicative Principles">Section 3.1</a> how this works with three sets. To find how many things are in <em class="emphasis">one or more</em> of the sets \(A\text{,}\) \(B\text{,}\) and \(C\text{,}\) we should just add up the number of things in each of these sets. However, if there is any overlap among the sets, those elements are counted multiple times. So we subtract the things in each intersection of a pair of sets. But doing this removes elements which are in all three sets once too often, so we need to add it back in. In terms of cardinality of sets, we have</p>
 <div class="displaymath">
 \begin{equation*}
 |A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A\cap B \cap C|\text{.}
 \end{equation*}
 </div>
 <article class="example example-like" id="JAh"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.7.1</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.1</span><span class="period">.</span>
 </h6>
 <p id="QnI">Three kids, Alberto, Bernadette, and Carlos, decide to share 11 cookies. They wonder how many ways they could split the cookies up provided that none of them receive more than 4 cookies (someone receiving no cookies is for some reason acceptable to these kids).</p>
 <div class="solutions">
@@ -214,7 +213,7 @@ y, z \le 4\text{.}\) It turns out this is considerably harder, but still possibl
 </div></div>
 </div></article><p id="qFF"> For four or more sets, we do not write down a formula for PIE. Instead, we just think of the principle: add up all the elements in single sets, then subtract out things you counted twice (elements in the intersection of a <em class="emphasis">pair</em> of sets), then add back in elements you removed too often (elements in the intersection of groups of three sets), then take back out elements you added back in too often (elements in the intersection of groups of four sets), then add back in, take back out, add back in, etc. This would be very difficult if it wasn't for the fact that in these problems, all the cardinalities of the single sets are equal, as are all the cardinalities of the intersections of two sets, and that of three sets, and so on. Thus we can group all of these together and multiply by how many different combinations of 1, 2, 3, … sets there are.</p>
 <article class="example example-like" id="pHq"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.7.2</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.2</span><span class="period">.</span>
 </h6>
 <p id="wuR">How many ways can you distribute 10 cookies to 4 kids so that no kid gets more than 2 cookies?</p>
 <div class="solutions">
@@ -245,9 +244,9 @@ y, z \le 4\text{.}\) It turns out this is considerably harder, but still possibl
 </div></div>
 </div></article><p id="WMO">Just so you don't think that these problems always have easier solutions, consider the following example.</p>
 <article class="example example-like" id="VOz"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.7.3</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.3</span><span class="period">.</span>
 </h6>
-<p id="cCa">Earlier (<a class="xref" data-knowl="./knowl/example-stars-bars-int-sol.html" title="Example 3.6.3">Example 3.6.3</a>) we counted the number of solutions to the equation</p>
+<p id="cCa">Earlier (<a class="xref" data-knowl="./knowl/example-stars-bars-int-sol.html" title="Example 3.5.3">Example 3.5.3</a>) we counted the number of solutions to the equation</p>
 <div class="displaymath">
 \begin{equation*}
 x_1 + x_2 + x_3 + x_4 + x_5 = 13\text{,}
@@ -292,7 +291,7 @@ n\}\) is a permutation in which no element is fixed. For example, there are \(6\
 </div>
 <p id="vpy">If we go up to 4 elements, there are 24 permutations (because we have 4 choices for the first element, 3 choices for the second, 2 choices for the third leaving only 1 choice for the last). How many of these are derangements? If you list out all 24 permutations and eliminate those which are not derangements, you will be left with just 9 derangements. Let's see how we can get that number using PIE.</p>
 <article class="example example-like" id="Agv"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.7.4</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.4</span><span class="period">.</span>
 </h6>
 <p id="oQs">How many derangements are there of 4 elements?</p>
 <div class="solutions">
@@ -307,7 +306,7 @@ n\}\) is a permutation in which no element is fixed. For example, there are \(6\
 </div></div>
 </div></article><p id="bwH">Of course we can use a similar formula to count the derangements of any number of elements. However, the more elements we have, the longer the formula gets. Here is another example:</p>
 <article class="example example-like" id="gnE"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.7.5</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.5</span><span class="period">.</span>
 </h6>
 <p id="UXB">Five gentlemen attend a party, leaving their hats at the door. At the end of the party, they hastily grab hats on their way out. How many different ways could this happen so that none of the gentlemen leave with his own hat?</p>
 <div class="solutions">
@@ -339,7 +338,7 @@ n\}\) is a permutation in which no element is fixed. For example, there are \(6\
 <li id="nwE"><p id="KTV">Recall that a <em class="emphasis">surjection</em>  is a function for which every element of the codomain is in the range. How many of the functions \(f: \{1,2,3,4,5\} \to \{1,2,3,4,5\}\) are surjective? Use PIE!</p></li>
 </ol></article><p id="HDQ">We have seen throughout this chapter that many counting questions can be rephrased as questions about counting functions with certain properties. This is reasonable since many counting questions can be thought of as counting the number of ways to assign elements from one set to elements of another.</p>
 <article class="example example-like" id="sBW"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.7.6</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.6</span><span class="period">.</span>
 </h6>
 <p id="BeK">You decide to give away your video game collection so as to better spend your time studying advanced mathematics. How many ways can you do this, provided:</p>
 <ol class="decimal">
@@ -357,17 +356,17 @@ n\}\) is a permutation in which no element is fixed. For example, there are \(6\
 <li id="sgx"><p id="Dpw">Again, we need to use the 8 games as the domain and the 5 friends as the codomain. We are counting all functions, so the number of ways to distribute the games is \(5^8\text{.}\)</p></li>
 <li id="YnG"><p id="jwF">This question is harder. Use the games as the domain and friends as the codomain (the reverse would not give a function). To ensure that every friend gets at least one game means that every element of the codomain is in the range. In other words, we are looking for <em class="emphasis">surjective</em> functions. How do you count those??</p></li>
 </ol></div></div>
-</div></article><p id="nKZ">In <a class="xref" data-knowl="./knowl/example-counting-functions-all.html" title="Example 3.2.5: Counting functions">Example 3.2.5</a> we saw how to count all functions (using the multiplicative principle) and in <a class="xref" data-knowl="./knowl/example-counting-functions-injective.html" title="Example 3.4.4: Counting injective functions">Example 3.4.4</a> we learned how to count injective functions (using permutations). Surjective functions are not as easily counted (unless the size of the domain is smaller than the codomain, in which case there are none).</p>
+</div></article><p id="nKZ">In <a class="xref" data-knowl="./knowl/example-counting-functions-all.html" title="Example 3.1.5: Counting functions">Example 3.1.5</a> we saw how to count all functions (using the multiplicative principle) and in <a class="xref" data-knowl="./knowl/example-counting-functions-injective.html" title="Example 3.3.4: Counting injective functions">Example 3.3.4</a> we learned how to count injective functions (using permutations). Surjective functions are not as easily counted (unless the size of the domain is smaller than the codomain, in which case there are none).</p>
 <p id="TSi">The idea is to count the functions which are <em class="emphasis">not</em> surjective, and then subtract that from the total number of functions. This works very well when the codomain has two elements in it:</p>
 <article class="example example-like" id="YJf"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.7.7</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.7</span><span class="period">.</span>
 </h6>
 <p id="hlT">How many functions \(f: \{1,2,3,4,5\} \to \{a,b\}\) are surjective?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-zbc" id="zbc"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-zbc"><div class="solution solution-like"><p id="aMN">There are \(2^5\) functions all together, two choices for where to send each of the 5 elements of the domain. Now of these, the functions which are <em class="emphasis">not</em> surjective must exclude one or more elements of the codomain from the range. So first, consider functions for which \(a\) is not in the range. This can only happen one way: everything gets sent to \(b\text{.}\) Alternatively, we could exclude \(b\) from the range. Then everything gets sent to \(a\text{,}\) so there is only one function like this. These are the only ways in which a function could not be surjective (no function excludes both \(a\) and \(b\) from the range) so there are exactly \(2^5 - 2\) surjective functions.</p></div></div>
 </div></article><p id="zZr">When there are three elements in the codomain, there are now three choices for a single element to exclude from the range. Additionally, we could pick pairs of two elements to exclude from the range, and we must make sure we don't over count these. It's PIE time!</p>
 <article class="example example-like" id="EQo"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.7.8</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.8</span><span class="period">.</span>
 </h6>
 <p id="Ntc">How many functions \(f: \{1,2,3,4,5\} \to \{a,b,c\}\) are surjective?</p>
 <div class="solutions">
@@ -396,7 +395,7 @@ n\}\) is a permutation in which no element is fixed. For example, there are \(6\
 </div></div>
 </div></article><p id="ggA">You might worry that to count surjective functions when the codomain is larger than 3 elements would be too tedious. We need to use PIE but with more than 3 sets the formula for PIE is very long. However, we have lucked out. As we saw in the example above, the number of functions which exclude a single element from the range is the same no matter which single element is excluded. Similarly, the number of functions which exclude a pair of elements will be the same for every pair. With larger codomains, we will see the same behavior with groups of 3, 4, and more elements excluded. So instead of adding/subtracting each of these, we can simply add or subtract all of them at once, if you know how many there are. This works just like it did in for the other types of counting questions in this section, only now the size of the various combinations of sets is a number raised to a power, as opposed to a binomial coefficient or factorial. Here's what happens with \(4\) and \(5\) elements in the codomain.</p>
 <article class="example example-like" id="kXx"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.7.9</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.9</span><span class="period">.</span>
 </h6>
 <ol id="tAl" class="decimal">
 <li id="EuP"><p id="PDO">How many functions \(f: \{1,2,3,4,5\} \to \{a,b,c,d\}\) are surjective?</p></li>
@@ -437,7 +436,7 @@ n^n - \left[{n\choose 1}(n-1)^n - {n \choose 2}(n-2)^n + \cdots + {n \choose n-1
 </div></article><p id="MnJ"> We have seen that counting surjective functions is another nice example of the advanced use of the Principle of Inclusion/Exclusion. Also, counting injective functions turns out to be equivalent to permutations, and counting all functions has a solution akin to those counting problems where order matters but repeats are allowed (like counting the number of words you can make from a given set of letters).</p>
 <p id="suS">These are not just a few more examples of the techniques we have developed in this chapter. Quite the opposite: everything we have learned in this chapter are examples of <em class="emphasis">counting functions</em>!</p>
 <article class="example example-like" id="ReG"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.7.10</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.10</span><span class="period">.</span>
 </h6>
 <p id="ZHu">How many 5-letter words can you make using the eight letters \(a\) through \(h\text{?}\) How many contain no repeated letters?</p>
 <div class="solutions">
@@ -446,12 +445,12 @@ n^n - \left[{n\choose 1}(n-1)^n - {n \choose 2}(n-2)^n + \cdots + {n \choose n-1
 <p id="XSh">If \(A\) and \(B\) are <em class="emphasis">any</em> sets with \(|A| = 5\) and \(|B| = 8\text{,}\) then the number of functions \(f: A \to B\) is \(8^5\) and the number of injections is \(P(8,5)\text{.}\) So if you can represent your counting problem as a function counting problem, most of the work is done.</p>
 </div></div>
 </div></article><article class="example example-like" id="xlP"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.7.11</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.11</span><span class="period">.</span>
 </h6>
 <p id="FOD">How many subsets are there of \(\{1,2,\ldots, 9\}\text{?}\) How many 9-bit strings are there (of any weight)?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-XDM" id="XDM"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-XDM"><div class="solution solution-like">
-<p id="DZq">We saw in <a href="sec_counting-binom.html" class="internal" title="Section 3.3: Binomial Coefficients">Section 3.3</a> that the answer to both these questions is \(2^9\text{,}\) as we can say yes or no (or 0 or 1) to each of the 9 elements in the set (positions in the bit-string). But \(2^9\) also looks like the answer you get from counting functions. In fact, if you count all functions \(f: A \to B\) with \(|A| = 9\) and \(|B| = 2\text{,}\) this is exactly what you get.</p>
+<p id="DZq">We saw in <a href="sec_counting-binom.html" class="internal" title="Section 3.2: Binomial Coefficients">Section 3.2</a> that the answer to both these questions is \(2^9\text{,}\) as we can say yes or no (or 0 or 1) to each of the 9 elements in the set (positions in the bit-string). But \(2^9\) also looks like the answer you get from counting functions. In fact, if you count all functions \(f: A \to B\) with \(|A| = 9\) and \(|B| = 2\text{,}\) this is exactly what you get.</p>
 <p id="kgz">This makes sense! Let \(A = \{1,2,\ldots, 9\}\) and \(B = \{y, n\}\text{.}\) We are assigning each element of the set either a yes or a no. Or in the language of bit-strings, we would take the 9 positions in the bit string as our domain and the set \(\{0,1\}\) as the codomain.</p>
 </div></div>
 </div></article><p id="YCb"> So far we have not used a function as a model for binomial coefficients (combinations). Think for a moment about the relationship between combinations and permutations, say specifically \({9 \choose 3}\) and \(P(9,3)\text{.}\) We <em class="emphasis">do</em> have a function model for \(P(9,3)\text{.}\) This is the number of <em class="emphasis">injective</em> functions from a set of size 3 (say \(\{1,2,3\}\) to a set of size 9 (say \(\{1,2,\ldots, 9\}\)) since there are 9 choices for where to send the first element of the domain, then only 8 choices for the second, and 7 choices for the third. For example, the function might look like this:</p>
@@ -472,20 +471,20 @@ f(1) = 4 \qquad f(2) = 5 \qquad f(3) = 8\text{.}
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <a href="sec_advPIE.html#nUq" class="permalink">¶</a><article class="exercise exercise-like" id="COT"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-3666">The dollar menu at your favorite tax-free fast food restaurant has 7 items. You have $10 to spend. How many different meals can you buy if you spend all your money and:</p>
+<p id="p-3665">The dollar menu at your favorite tax-free fast food restaurant has 7 items. You have $10 to spend. How many different meals can you buy if you spend all your money and:</p>
 <ol class="lower-alpha">
-<li id="li-1567"><p id="p-3667">Purchase at least one of each item.</p></li>
-<li id="li-1568"><p id="p-3669">Possibly skip some items.</p></li>
-<li id="li-1569"><p id="p-3671">Don’t get more than 2 of any particular item.</p></li>
+<li id="li-1567"><p id="p-3666">Purchase at least one of each item.</p></li>
+<li id="li-1568"><p id="p-3668">Possibly skip some items.</p></li>
+<li id="li-1569"><p id="p-3670">Don’t get more than 2 of any particular item.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-176" id="answer-176"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-176"><div class="answer solution-like"><p id="p-3673">\(\mathop{\rm C}\nolimits\!\left(9,6\right)\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-177" id="answer-177"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-177"><div class="answer solution-like"><p id="p-3674">\(\mathop{\rm C}\nolimits\!\left(16,6\right)\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-178" id="answer-178"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-178"><div class="answer solution-like"><p id="p-3675">\(\mathop{\rm C}\nolimits\!\left(16,6\right)-\left(\mathop{\rm C}\nolimits\!\left(7,1\right)\mathop{\rm C}\nolimits\!\left(13,6\right)-\mathop{\rm C}\nolimits\!\left(7,2\right)\mathop{\rm C}\nolimits\!\left(10,6\right)+\mathop{\rm C}\nolimits\!\left(7,3\right)\mathop{\rm C}\nolimits\!\left(7,6\right)\right)\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-288" id="solution-288"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-288"><div class="solution solution-like"><ol id="p-3676" class="lower-alpha">
-<li id="li-1570"><p id="p-3677">\({9 \choose 3}\) meals. First spend $7 to buy one of each item, then use 3 stars to select items between 6 bars.</p></li>
-<li id="li-1571"><p id="p-3678">\({16 \choose 6}\) meals. Here you have 10 stars and 6 bars (separating the 7 items).</p></li>
-<li id="li-1572"><p id="p-3679">\({16 \choose 6} - \left[{7 \choose 1}{13 \choose 6} - {7 \choose 2}{10 \choose 6} + {7 \choose 3}{7 \choose 6}\right]\) meals. Use PIE to subtract all the meals in which you get 3 or more of a particular item.</p></li>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-176" id="answer-176"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-176"><div class="answer solution-like"><p id="p-3672">\(\mathop{\rm C}\nolimits\!\left(9,6\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-177" id="answer-177"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-177"><div class="answer solution-like"><p id="p-3673">\(\mathop{\rm C}\nolimits\!\left(16,6\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-178" id="answer-178"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-178"><div class="answer solution-like"><p id="p-3674">\(\mathop{\rm C}\nolimits\!\left(16,6\right)-\left(\mathop{\rm C}\nolimits\!\left(7,1\right)\mathop{\rm C}\nolimits\!\left(13,6\right)-\mathop{\rm C}\nolimits\!\left(7,2\right)\mathop{\rm C}\nolimits\!\left(10,6\right)+\mathop{\rm C}\nolimits\!\left(7,3\right)\mathop{\rm C}\nolimits\!\left(7,6\right)\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-288" id="solution-288"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-288"><div class="solution solution-like"><ol id="p-3675" class="lower-alpha">
+<li id="li-1570"><p id="p-3676">\({9 \choose 3}\) meals. First spend $7 to buy one of each item, then use 3 stars to select items between 6 bars.</p></li>
+<li id="li-1571"><p id="p-3677">\({16 \choose 6}\) meals. Here you have 10 stars and 6 bars (separating the 7 items).</p></li>
+<li id="li-1572"><p id="p-3678">\({16 \choose 6} - \left[{7 \choose 1}{13 \choose 6} - {7 \choose 2}{10 \choose 6} + {7 \choose 3}{7 \choose 6}\right]\) meals. Use PIE to subtract all the meals in which you get 3 or more of a particular item.</p></li>
 </ol></div></div>
 </div></article><article class="exercise exercise-like" id="iWc"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="EiH">After a late night of math studying, you and your friends decide to go to your favorite tax-free fast food Mexican restaurant, <em class="emphasis">Burrito Chime</em>. You decide to order off of the dollar menu, which has 7 items. Your group has $16 to spend (and will spend all of it).</p>
@@ -494,30 +493,30 @@ f(1) = 4 \qquad f(2) = 5 \qquad f(3) = 8\text{.}
 <li id="vUo"><p id="RCs">How many different orders are possible if you want to get at least one of each item? Explain.</p></li>
 <li id="cbx"><p id="xJB">How many different orders are possible if you don't get more than 4 of any one item? Explain.</p></li>
 </ol></article><article class="exercise exercise-like" id="Pdl"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-3687">After another gym class you are tasked with putting the 14 identical dodgeballs away into 5 bins. This time, no bin can hold more than 6 balls. How many ways can you clean up?</p>
+<p id="p-3686">After another gym class you are tasked with putting the 14 identical dodgeballs away into 5 bins. This time, no bin can hold more than 6 balls. How many ways can you clean up?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-179" id="answer-179"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-179"><div class="answer solution-like"><p id="p-3689">\(\mathop{\rm C}\nolimits\!\left(18,4\right)-\left(\mathop{\rm C}\nolimits\!\left(5,1\right)\mathop{\rm C}\nolimits\!\left(11,4\right)-\mathop{\rm C}\nolimits\!\left(5,2\right)\mathop{\rm C}\nolimits\!\left(4,4\right)\right)\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-290" id="solution-290"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-290"><div class="solution solution-like"><p id="p-3690">\({18 \choose 4} - \left[ {5 \choose 1}{11 \choose 4} - {5 \choose 2}{4 \choose 4}\right]\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-179" id="answer-179"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-179"><div class="answer solution-like"><p id="p-3688">\(\mathop{\rm C}\nolimits\!\left(18,4\right)-\left(\mathop{\rm C}\nolimits\!\left(5,1\right)\mathop{\rm C}\nolimits\!\left(11,4\right)-\mathop{\rm C}\nolimits\!\left(5,2\right)\mathop{\rm C}\nolimits\!\left(4,4\right)\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-290" id="solution-290"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-290"><div class="solution solution-like"><p id="p-3689">\({18 \choose 4} - \left[ {5 \choose 1}{11 \choose 4} - {5 \choose 2}{4 \choose 4}\right]\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="vku"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-3695">Consider the equation \(x_1 + x_2 + x_3 + x_4 = 15\text{.}\) How many solutions are there with \(2 \le x_i \le 5\) for all \(i \in \{1,2,3,4\}\text{?}\)</p>
+<p id="p-3694">Consider the equation \(x_1 + x_2 + x_3 + x_4 = 15\text{.}\) How many solutions are there with \(2 \le x_i \le 5\) for all \(i \in \{1,2,3,4\}\text{?}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-98" id="hint-98"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-98"><div class="hint solution-like"><p id="p-3697">Instead, count the solutions to \(y_1 + y_2 + y_3 + y_4 = 7\) with \(0 \le y_i \le 3\text{.}\)  Why is this equivalent?</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-180" id="answer-180"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-180"><div class="answer solution-like"><p id="p-3698">\(\mathop{\rm C}\nolimits\!\left(10,7\right)-\mathop{\rm C}\nolimits\!\left(4,1\right)\mathop{\rm C}\nolimits\!\left(6,3\right)\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-292" id="solution-292"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-292"><div class="solution solution-like"><p id="p-3699">There are \({10 \choose 7} - {4\choose 1} {6 \choose 3}\) solutions.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-98" id="hint-98"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-98"><div class="hint solution-like"><p id="p-3696">Instead, count the solutions to \(y_1 + y_2 + y_3 + y_4 = 7\) with \(0 \le y_i \le 3\text{.}\)  Why is this equivalent?</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-180" id="answer-180"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-180"><div class="answer solution-like"><p id="p-3697">\(\mathop{\rm C}\nolimits\!\left(10,7\right)-\mathop{\rm C}\nolimits\!\left(4,1\right)\mathop{\rm C}\nolimits\!\left(6,3\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-292" id="solution-292"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-292"><div class="solution solution-like"><p id="p-3698">There are \({10 \choose 7} - {4\choose 1} {6 \choose 3}\) solutions.</p></div></div>
 </div></article><article class="exercise exercise-like" id="brD"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-3705">Suppose you planned on giving 7 gold stars to some of the 13 star students in your class. Each student can receive at most one star. How many ways can you do this?</p>
-<p id="p-3707">Use PIE. Then, find the numeric answer in Pascal’s triangle and explain why that makes sense.</p>
+<p id="p-3704">Suppose you planned on giving 7 gold stars to some of the 13 star students in your class. Each student can receive at most one star. How many ways can you do this?</p>
+<p id="p-3706">Use PIE. Then, find the numeric answer in Pascal’s triangle and explain why that makes sense.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-181" id="answer-181"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-181"><div class="answer solution-like"><p id="p-3708">\(\mathop{\rm C}\nolimits\!\left(13,7\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-181" id="answer-181"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-181"><div class="answer solution-like"><p id="p-3707">\(\mathop{\rm C}\nolimits\!\left(13,7\right)\)</p></div></div>
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-294" id="solution-294"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-294"><div class="solution solution-like">
-<p id="p-3709">Without any restriction, there would be \({19\choose 7}\) ways to distribute the stars. Now we must use PIE to eliminate all distributions in which one or more student gets more than one star:</p>
-<div class="displaymath" id="p-3710">
+<p id="p-3708">Without any restriction, there would be \({19\choose 7}\) ways to distribute the stars. Now we must use PIE to eliminate all distributions in which one or more student gets more than one star:</p>
+<div class="displaymath" id="p-3709">
 \begin{equation*}
 {19 \choose 7} - \left[{13 \choose 1}{17 \choose 5} - {13\choose 2}{15 \choose 3} + {13\choose 3}{13 \choose 1}\right] = 1716
 \text{.}
 \end{equation*}
 </div>
-<p id="p-3711">Interestingly enough, this number is also the value of \({13 \choose 7}\text{,}\) which makes sense: if each student can have at most one star, we must just pick the 7 out of 13 students to receive them.</p>
+<p id="p-3710">Interestingly enough, this number is also the value of \({13 \choose 7}\text{,}\) which makes sense: if each student can have at most one star, we must just pick the 7 out of 13 students to receive them.</p>
 </div></div>
 </div></article><article class="exercise exercise-like" id="HyM"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
 <p id="Bob">Based on the previous question, give a combinatorial proof for the identity:</p>
@@ -530,15 +529,15 @@ f(1) = 4 \qquad f(2) = 5 \qquad f(3) = 8\text{.}
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-pvi" id="pvi"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-pvi"><div class="solution solution-like"><p id="aWe">The 9 derangements are: 2143, 2341, 2413, 3142, 3412, 3421, 4123, 4312, 4321.</p></div></div>
 </div></article><article class="exercise exercise-like" id="TNe"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
-<p id="p-3718">How many permutations of \(\{1,2,3,4,5\}\) leave exactly 1 element fixed?</p>
+<p id="p-3717">How many permutations of \(\{1,2,3,4,5\}\) leave exactly 1 element fixed?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-182" id="answer-182"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-182"><div class="answer solution-like"><p id="p-3720">\(\mathop{\rm C}\nolimits\!\left(5,1\right)\!\left(4!-\left(\mathop{\rm C}\nolimits\!\left(4,1\right)\!\left(3!\right)-\mathop{\rm C}\nolimits\!\left(4,2\right)\!\left(2!\right)+\mathop{\rm C}\nolimits\!\left(4,3\right)\!\left(1!\right)-\mathop{\rm C}\nolimits\!\left(4,4\right)\!\left(0!\right)\right)\right)\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-297" id="solution-297"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-297"><div class="solution solution-like"><p id="p-3721">First pick one of the five elements to be fixed. For each such choice, derange the remaining four, using the standard advanced PIE formula. We get \({5 \choose 1}\left( 4! - \left[{4 \choose 1}3! - {4 \choose 2}2! + {4 \choose 3} 1! - {4 \choose 4} 0!\right] \right)\) permutations.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-182" id="answer-182"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-182"><div class="answer solution-like"><p id="p-3719">\(\mathop{\rm C}\nolimits\!\left(5,1\right)\!\left(4!-\left(\mathop{\rm C}\nolimits\!\left(4,1\right)\!\left(3!\right)-\mathop{\rm C}\nolimits\!\left(4,2\right)\!\left(2!\right)+\mathop{\rm C}\nolimits\!\left(4,3\right)\!\left(1!\right)-\mathop{\rm C}\nolimits\!\left(4,4\right)\!\left(0!\right)\right)\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-297" id="solution-297"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-297"><div class="solution solution-like"><p id="p-3720">First pick one of the five elements to be fixed. For each such choice, derange the remaining four, using the standard advanced PIE formula. We get \({5 \choose 1}\left( 4! - \left[{4 \choose 1}3! - {4 \choose 2}2! + {4 \choose 3} 1! - {4 \choose 4} 0!\right] \right)\) permutations.</p></div></div>
 </div></article><article class="exercise exercise-like" id="zUn"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
-<p id="p-3725">Ten ladies of a certain age drop off their red hats at the hat check of a museum. As they are leaving, the hat check attendant gives the hats back randomly. In how many ways can exactly six of the ladies receive their own hat (and the other four not)? Explain.</p>
+<p id="p-3724">Ten ladies of a certain age drop off their red hats at the hat check of a museum. As they are leaving, the hat check attendant gives the hats back randomly. In how many ways can exactly six of the ladies receive their own hat (and the other four not)? Explain.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-183" id="answer-183"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-183"><div class="answer solution-like"><p id="p-3727">\(\mathop{\rm C}\nolimits\!\left(10,6\right)\!\left(4!-\left(\mathop{\rm C}\nolimits\!\left(4,1\right)\!\left(3!\right)-\mathop{\rm C}\nolimits\!\left(4,2\right)\!\left(2!\right)+\mathop{\rm C}\nolimits\!\left(4,3\right)\!\left(1!\right)-\mathop{\rm C}\nolimits\!\left(4,4\right)\!\left(0!\right)\right)\right)\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-299" id="solution-299"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-299"><div class="solution solution-like"><p id="p-3728">\({10 \choose 6}\left(4! - \left[{4 \choose 1} 3! - {4 \choose 2}2! + {4 \choose 3}1! - {4 \choose 4}0!\right]\right)\) ways. We choose 6 of the 10 ladies to get their own hat, and the multiply by the number of ways the remaining hats can be deranged.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-183" id="answer-183"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-183"><div class="answer solution-like"><p id="p-3726">\(\mathop{\rm C}\nolimits\!\left(10,6\right)\!\left(4!-\left(\mathop{\rm C}\nolimits\!\left(4,1\right)\!\left(3!\right)-\mathop{\rm C}\nolimits\!\left(4,2\right)\!\left(2!\right)+\mathop{\rm C}\nolimits\!\left(4,3\right)\!\left(1!\right)-\mathop{\rm C}\nolimits\!\left(4,4\right)\!\left(0!\right)\right)\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-299" id="solution-299"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-299"><div class="solution solution-like"><p id="p-3727">\({10 \choose 6}\left(4! - \left[{4 \choose 1} 3! - {4 \choose 2}2! + {4 \choose 3}1! - {4 \choose 4}0!\right]\right)\) ways. We choose 6 of the 10 ladies to get their own hat, and the multiply by the number of ways the remaining hats can be deranged.</p></div></div>
 </div></article><article class="exercise exercise-like" id="gbw"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
 <p id="mfd">The Grinch sneaks into a room with 6 Christmas presents to 6 different people. He proceeds to switch the name-labels on the presents. How many ways could he do this if:</p>
 <ol class="lower-alpha">
@@ -546,12 +545,12 @@ f(1) = 4 \qquad f(2) = 5 \qquad f(3) = 8\text{.}
 <li id="opP"><p id="JXT">Exactly 2 presents keep their original labels? Explain.</p></li>
 <li id="UwY"><p id="qfc">Exactly 5 presents keep their original labels? Explain.</p></li>
 </ol></article><article class="exercise exercise-like" id="MiF"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
-<p id="p-3736">Consider functions \(f: \{1,2,3,4\} \to \{a,b,c,d,e,f\}\text{.}\) How many functions have the property that \(f(1) \ne a\) or \(f(2) \ne b\text{,}\) or both?</p>
+<p id="p-3735">Consider functions \(f: \{1,2,3,4\} \to \{a,b,c,d,e,f\}\text{.}\) How many functions have the property that \(f(1) \ne a\) or \(f(2) \ne b\text{,}\) or both?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-184" id="answer-184"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-184"><div class="answer solution-like"><p id="p-3738">\(5\cdot 6^{3}+5\cdot 6^{3}-5^{2}\cdot 6^{2}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-184" id="answer-184"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-184"><div class="answer solution-like"><p id="p-3737">\(5\cdot 6^{3}+5\cdot 6^{3}-5^{2}\cdot 6^{2}\)</p></div></div>
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-301" id="solution-301"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-301"><div class="solution solution-like">
-<p id="p-3739">There are \(5 \cdot 6^3\) functions for which \(f(1) \ne a\) and another \(5 \cdot 6^3\) functions for which \(f(2) \ne b\text{.}\) There are \(5^2 \cdot 6^2\) functions for which both \(f(1) \ne a\) and \(f(2) \ne b\text{.}\) So the total number of functions for which \(f(1) \ne a\) or \(f(2) \ne b\) or both is</p>
-<div class="displaymath" id="p-3740">
+<p id="p-3738">There are \(5 \cdot 6^3\) functions for which \(f(1) \ne a\) and another \(5 \cdot 6^3\) functions for which \(f(2) \ne b\text{.}\) There are \(5^2 \cdot 6^2\) functions for which both \(f(1) \ne a\) and \(f(2) \ne b\text{.}\) So the total number of functions for which \(f(1) \ne a\) or \(f(2) \ne b\) or both is</p>
+<div class="displaymath" id="p-3739">
 \begin{equation*}
 5 \cdot 6^3 + 5 \cdot 6^3 - 5^2 \cdot 6^2 = 1260
 \text{.}
@@ -559,16 +558,16 @@ f(1) = 4 \qquad f(2) = 5 \qquad f(3) = 8\text{.}
 </div>
 </div></div>
 </div></article><article class="exercise exercise-like" id="spO"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
-<p id="p-3744">Consider sets \(A\) and \(B\) with \(|A| = 10\) and \(|B| = 5\text{.}\) How many functions \(f: A \to B\) are surjective?</p>
+<p id="p-3743">Consider sets \(A\) and \(B\) with \(|A| = 10\) and \(|B| = 5\text{.}\) How many functions \(f: A \to B\) are surjective?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-185" id="answer-185"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-185"><div class="answer solution-like"><p id="p-3746">\(5^{10}-\left(\mathop{\rm C}\nolimits\!\left(5,1\right)\cdot 4^{10}-\mathop{\rm C}\nolimits\!\left(5,2\right)\cdot 3^{10}+\mathop{\rm C}\nolimits\!\left(5,3\right)\cdot 2^{10}-\mathop{\rm C}\nolimits\!\left(5,4\right)\cdot 1^{10}\right)\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-303" id="solution-303"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-303"><div class="solution solution-like"><p id="p-3747">\(5^{10} - \left[{5 \choose 1}4^{10} - {5 \choose 2}3^{10} + {5 \choose 3}2^{10} - {5 \choose 4}1^{10}\right]\) functions. The \(5^{10}\) is all the functions from \(A\) to \(B\text{.}\) We subtract those that aren’t surjective. Pick one of the five elements in \(B\) to not have in the range (in \({5 \choose 1}\) ways) and count all those functions (\(4^{10}\)). But this overcounts the functions where two elements from \(B\) are excluded from the range, so subtract those. And so on, using PIE.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-185" id="answer-185"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-185"><div class="answer solution-like"><p id="p-3745">\(5^{10}-\left(\mathop{\rm C}\nolimits\!\left(5,1\right)\cdot 4^{10}-\mathop{\rm C}\nolimits\!\left(5,2\right)\cdot 3^{10}+\mathop{\rm C}\nolimits\!\left(5,3\right)\cdot 2^{10}-\mathop{\rm C}\nolimits\!\left(5,4\right)\cdot 1^{10}\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-303" id="solution-303"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-303"><div class="solution solution-like"><p id="p-3746">\(5^{10} - \left[{5 \choose 1}4^{10} - {5 \choose 2}3^{10} + {5 \choose 3}2^{10} - {5 \choose 4}1^{10}\right]\) functions. The \(5^{10}\) is all the functions from \(A\) to \(B\text{.}\) We subtract those that aren’t surjective. Pick one of the five elements in \(B\) to not have in the range (in \({5 \choose 1}\) ways) and count all those functions (\(4^{10}\)). But this overcounts the functions where two elements from \(B\) are excluded from the range, so subtract those. And so on, using PIE.</p></div></div>
 </div></article><article class="exercise exercise-like" id="YwX"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
-<p id="p-3752">Let \(A = \{1,2,3,4,5\}\text{.}\) How many injective functions \(f:A \to A\) have the property that for each \(x \in A\text{,}\) \(f(x) \ne x\text{?}\)</p>
+<p id="p-3751">Let \(A = \{1,2,3,4,5\}\text{.}\) How many injective functions \(f:A \to A\) have the property that for each \(x \in A\text{,}\) \(f(x) \ne x\text{?}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-100" id="hint-100"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-100"><div class="hint solution-like"><p id="p-3754">This is a sneaky way to ask for the number of derangements on 5 elements.  Do you see why?</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-186" id="answer-186"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-186"><div class="answer solution-like"><p id="p-3755">\(5!-\left(\mathop{\rm C}\nolimits\!\left(5,1\right)\!\left(4!\right)-\mathop{\rm C}\nolimits\!\left(5,2\right)\!\left(3!\right)+\mathop{\rm C}\nolimits\!\left(5,3\right)\!\left(2!\right)-\mathop{\rm C}\nolimits\!\left(5,4\right)\!\left(1!\right)+\mathop{\rm C}\nolimits\!\left(5,5\right)\!\left(0!\right)\right)\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-305" id="solution-305"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-305"><div class="solution solution-like"><p id="p-3756">\(5! - \left[{5 \choose 1}4! - {5 \choose 2}3! + {5 \choose 3}2! - {5 \choose 4}1! + {5 \choose 5}0!\right]\) functions.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-100" id="hint-100"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-100"><div class="hint solution-like"><p id="p-3753">This is a sneaky way to ask for the number of derangements on 5 elements.  Do you see why?</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-186" id="answer-186"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-186"><div class="answer solution-like"><p id="p-3754">\(5!-\left(\mathop{\rm C}\nolimits\!\left(5,1\right)\!\left(4!\right)-\mathop{\rm C}\nolimits\!\left(5,2\right)\!\left(3!\right)+\mathop{\rm C}\nolimits\!\left(5,3\right)\!\left(2!\right)-\mathop{\rm C}\nolimits\!\left(5,4\right)\!\left(1!\right)+\mathop{\rm C}\nolimits\!\left(5,5\right)\!\left(0!\right)\right)\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-305" id="solution-305"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-305"><div class="solution solution-like"><p id="p-3755">\(5! - \left[{5 \choose 1}4! - {5 \choose 2}3! + {5 \choose 3}2! - {5 \choose 4}1! + {5 \choose 5}0!\right]\) functions.</p></div></div>
 </div></article><article class="exercise exercise-like" id="EEg"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
 <p id="Ddo">Let \(d_n\) be the number of derangements of \(n\) objects. For example, using the techniques of this section, we find</p>
 <div class="displaymath">

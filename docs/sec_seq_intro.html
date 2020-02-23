@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-21T20:28:28-07:00    *-->
+<!--*    on 2020-02-23T14:47:40-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -129,7 +129,7 @@ MathJax.Hub.Config({
 <li><a href="sec_intro-statements.html" data-scroll="QDd">Mathematical Statements</a></li>
 <li><a href="sec_propositional.html" data-scroll="XMq">Propositional Logic</a></li>
 <li><a href="sec_logic-proofs.html" data-scroll="lnf">Proofs</a></li>
-<li><a href="sec_logic-induction.html" data-scroll="lnf">Mathematical Induction</a></li>
+<li><a href="sec_logic-induction.html" data-scroll="sec_logic-induction">Mathematical Induction</a></li>
 <li><a href="sec_trees.html" data-scroll="gor">Trees</a></li>
 <li><a href="sec_paths.html" data-scroll="tPg">Euler Paths and Circuits</a></li>
 <li><a href="sec_planar.html" data-scroll="ttH">Planar Graphs</a></li>
@@ -137,7 +137,6 @@ MathJax.Hub.Config({
 </li>
 <li class="link">
 <a href="ch_counting.html" data-scroll="raE"><span class="codenumber">3</span> <span class="title">Counting</span></a><ul>
-<li><a href="sec_counting-pascal.html" data-scroll="sJa">Pascal's Triangle</a></li>
 <li><a href="sec_counting-addmult.html" data-scroll="sJa">Additive and Multiplicative Principles</a></li>
 <li><a href="sec_counting-binom.html" data-scroll="vZs">Binomial Coefficients</a></li>
 <li><a href="sec_counting-combperm.html" data-scroll="yda">Combinations and Permutations</a></li>
@@ -403,19 +402,19 @@ b_n = a_0 + a_1 + a_2 + \cdots + a_n\text{.}
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <a href="sec_seq_intro.html#vPK" class="permalink">¶</a><article class="exercise exercise-like" id="QUY"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-4214">Find the closed formula for each of the following sequences by relating them to a well known sequence. Assume the first term given is \(a_1\text{.}\)</p>
+<p id="p-4213">Find the closed formula for each of the following sequences by relating them to a well known sequence. Assume the first term given is \(a_1\text{.}\)</p>
 <ol class="lower-alpha">
-<li id="li-1837"><p id="p-4215">\(2, 5, 10, 17, 26, \ldots\)</p></li>
-<li id="li-1838"><p id="p-4216">\(0, 2, 5, 9, 14, 20, \ldots\)</p></li>
-<li id="li-1839"><p id="p-4217">\(8, 12, 17, 23, 30,\ldots\)</p></li>
-<li id="li-1840"><p id="p-4218">\(1, 5, 23, 119, 719,\ldots\)</p></li>
+<li id="li-1837"><p id="p-4214">\(2, 5, 10, 17, 26, \ldots\)</p></li>
+<li id="li-1838"><p id="p-4215">\(0, 2, 5, 9, 14, 20, \ldots\)</p></li>
+<li id="li-1839"><p id="p-4216">\(8, 12, 17, 23, 30,\ldots\)</p></li>
+<li id="li-1840"><p id="p-4217">\(1, 5, 23, 119, 719,\ldots\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-348" id="solution-348"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-348"><div class="solution solution-like"><ol id="p-4219" class="lower-alpha">
-<li id="li-1841"><p id="p-4220">Note that if we subtract 1 from each term, we get the square numbers. Thus \(a_n = n^2 + 1\text{.}\)</p></li>
-<li id="li-1842"><p id="p-4221">These look like the triangular numbers, only shifted by 1. We get: \(a_n = \frac{n(n+1)}{2} - 1\text{.}\)</p></li>
-<li id="li-1843"><p id="p-4222">If you subtract 2 from each term, you get triangular numbers, only starting with 6 instead of 1. So we must shift vertically and horizontally. \(a_n = \frac{(n+2)(n+3)}{2} + 2\text{.}\)</p></li>
-<li id="li-1844"><p id="p-4223">These seem to grow very quickly. Further, if we add 1 to each term, we find the factorials, although starting with 2 instead of 1. This gives, \(a_n = (n+1)! - 1\) (where \(n! = 1 \cdot 2 \cdot 3 \cdots n\)).</p></li>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-348" id="solution-348"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-348"><div class="solution solution-like"><ol id="p-4218" class="lower-alpha">
+<li id="li-1841"><p id="p-4219">Note that if we subtract 1 from each term, we get the square numbers. Thus \(a_n = n^2 + 1\text{.}\)</p></li>
+<li id="li-1842"><p id="p-4220">These look like the triangular numbers, only shifted by 1. We get: \(a_n = \frac{n(n+1)}{2} - 1\text{.}\)</p></li>
+<li id="li-1843"><p id="p-4221">If you subtract 2 from each term, you get triangular numbers, only starting with 6 instead of 1. So we must shift vertically and horizontally. \(a_n = \frac{(n+2)(n+3)}{2} + 2\text{.}\)</p></li>
+<li id="li-1844"><p id="p-4222">These seem to grow very quickly. Further, if we add 1 to each term, we find the factorials, although starting with 2 instead of 1. This gives, \(a_n = (n+1)! - 1\) (where \(n! = 1 \cdot 2 \cdot 3 \cdots n\)).</p></li>
 </ol></div></div>
 </div></article><article class="exercise exercise-like" id="xch"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="QNU">For each sequence given below, find a closed formula for \(a_n\text{,}\) the \(n\)th term of the sequence (assume the first terms are \(a_0\)) by relating it to another sequence for which you already know the formula. In each case, briefly say how you got your answers.</p>

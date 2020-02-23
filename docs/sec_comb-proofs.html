@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-21T20:27:55-07:00    *-->
+<!--*    on 2020-02-23T14:47:07-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -129,7 +129,7 @@ MathJax.Hub.Config({
 <li><a href="sec_intro-statements.html" data-scroll="QDd">Mathematical Statements</a></li>
 <li><a href="sec_propositional.html" data-scroll="XMq">Propositional Logic</a></li>
 <li><a href="sec_logic-proofs.html" data-scroll="lnf">Proofs</a></li>
-<li><a href="sec_logic-induction.html" data-scroll="lnf">Mathematical Induction</a></li>
+<li><a href="sec_logic-induction.html" data-scroll="sec_logic-induction">Mathematical Induction</a></li>
 <li><a href="sec_trees.html" data-scroll="gor">Trees</a></li>
 <li><a href="sec_paths.html" data-scroll="tPg">Euler Paths and Circuits</a></li>
 <li><a href="sec_planar.html" data-scroll="ttH">Planar Graphs</a></li>
@@ -137,7 +137,6 @@ MathJax.Hub.Config({
 </li>
 <li class="link">
 <a href="ch_counting.html" data-scroll="raE"><span class="codenumber">3</span> <span class="title">Counting</span></a><ul>
-<li><a href="sec_counting-pascal.html" data-scroll="sJa">Pascal's Triangle</a></li>
 <li><a href="sec_counting-addmult.html" data-scroll="sJa">Additive and Multiplicative Principles</a></li>
 <li><a href="sec_counting-binom.html" data-scroll="vZs">Binomial Coefficients</a></li>
 <li><a href="sec_counting-combperm.html" data-scroll="yda">Combinations and Permutations</a></li>
@@ -166,7 +165,7 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="SUg"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">3.5</span> <span class="title">Combinatorial Proofs</span>
+<span class="type">Section</span> <span class="codenumber">3.4</span> <span class="title">Combinatorial Proofs</span>
 </h2>
 <a href="sec_comb-proofs.html" class="permalink">¶</a><section class="introduction" id="oCk"><article class="project-like" id="UJt"><h6 class="heading">
 <span class="type">Investigate!</span> </h6>
@@ -215,7 +214,7 @@ MathJax.Hub.Config({
 </div>
 <p id="svf">Here's how you might do that for the second identity above.</p>
 <article class="example example-like" id="LpH"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.1</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span>
 </h6>
 <p id="KyJ">Give an algebraic proof for the binomial identity</p>
 <div class="displaymath">
@@ -250,7 +249,7 @@ MathJax.Hub.Config({
 <p id="HZC">The second line (where the common denominator is found) works because \(k(k-1)! = k!\) and \((n-k)(n-k-1)! = (n-k)!\text{.}\)</p></article></div></div>
 </div></article><p id="YCo">This is certainly a valid proof, but also is entirely useless. Even if you understand the proof perfectly, it does not tell you <em class="emphasis">why</em> the identity is true. A better approach would be to explain what \({n \choose k}\) <em class="emphasis">means</em> and then say why that is also what \({n-1 \choose k-1} + {n-1 \choose k}\) means. Let's see how this works for the four identities we observed above.</p>
 <article class="example example-like" id="rwQ"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.2</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span>
 </h6>
 <p id="qFS">Explain why \({n \choose 0} = 1\) and \({n \choose n} = 1\text{.}\)</p>
 <div class="solutions">
@@ -260,7 +259,7 @@ MathJax.Hub.Config({
 <p id="Avd">Another way: \({n \choose 0}\) gives the number of subsets of a set of size \(n\) containing 0 elements. There is only one such subset, the empty set. \({n \choose n}\) gives the number of subsets containing \(n\) elements. The only such subset is the original set (of all elements).</p>
 </div></div>
 </div></article><article class="example example-like" id="XDZ"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.3</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="period">.</span>
 </h6>
 <p id="WNb">Explain why \({n \choose k} = {n-1 \choose k-1} + {n-1 \choose k}\text{.}\)</p>
 <div class="solutions">
@@ -270,7 +269,7 @@ MathJax.Hub.Config({
 <p id="sQE">You can also explain (prove) this identity by counting subsets, or even lattice paths.</p>
 </div></div>
 </div></article><article class="example example-like" id="DLi"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.4</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.4</span><span class="period">.</span>
 </h6>
 <p id="CUk">Prove the binomial identity \({n \choose k} = {n \choose n-k}\text{.}\)</p>
 <div class="solutions">
@@ -280,7 +279,7 @@ MathJax.Hub.Config({
 <p id="lmf">You can also prove (explain) this identity using bit strings, subsets, or lattice paths. The bit string argument is nice: \({n \choose k}\) counts the number of bit strings of length \(n\) with \(k\) 1's. This is also the number of bit string of length \(n\) with \(k\) 0's (just replace each 1 with a 0 and each 0 with a 1). But if a string of length \(n\) has \(k\) 0's, it must have \(n-k\) 1's. And there are exactly \({n\choose n-k}\) strings of length \(n\) with \(n-k\) 1's.</p>
 </div></div>
 </div></article><article class="example example-like" id="jSr"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.5</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.5</span><span class="period">.</span>
 </h6>
 <p id="jbt">Prove the binomial identity \({n\choose 0} + {n \choose 1} + {n\choose 2} + \cdots + {n \choose n} = 2^n\text{.}\)</p>
 <div class="solutions">
@@ -351,7 +350,7 @@ MathJax.Hub.Config({
 </div>
 <p id="GyK">Here are a couple more binomial identities with combinatorial proofs.</p>
 <article class="example example-like" id="wgJ"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.6</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.6</span><span class="period">.</span>
 </h6>
 <p id="PiC">Prove the identity</p>
 <div class="displaymath">
@@ -385,7 +384,7 @@ n+2\}\text{?}\)” We answer this in two ways:</p>
 </div></article>
 </div></div>
 </div></article><article class="example example-like" id="cnS"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.7</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.7</span><span class="period">.</span>
 </h6>
 <p id="vpL">Prove the binomial identity</p>
 <div class="displaymath">
@@ -410,7 +409,7 @@ n+2\}\text{?}\)” We answer this in two ways:</p>
 {n \choose 0}{n \choose n} + {n \choose 1}{n \choose n-1} + {n \choose 2}{n \choose n-2} + \cdots + {n \choose n}{n \choose 0}\text{.}
 \end{equation*}
 </div>
-<p id="oQF">This is not quite the left-hand side … yet. Notice that \({n \choose n} = {n \choose 0}\) and \({n \choose n-1} = {n  \choose 1}\) and so on, by the identity in <a class="xref" data-knowl="./knowl/example-symmetry-formula.html" title="Example 3.5.4">Example 3.5.4</a>. Thus we do indeed get</p>
+<p id="oQF">This is not quite the left-hand side … yet. Notice that \({n \choose n} = {n \choose 0}\) and \({n \choose n-1} = {n  \choose 1}\) and so on, by the identity in <a class="xref" data-knowl="./knowl/example-symmetry-formula.html" title="Example 3.4.4">Example 3.4.4</a>. Thus we do indeed get</p>
 <div class="displaymath">
 \begin{equation*}
 {n \choose 0}^2 + {n \choose 1}^2 + {n \choose 2}^2 + \cdots + {n \choose n}^2\text{.}
@@ -519,7 +518,7 @@ k{n\choose k} = n{n-1 \choose k-1}\text{.}
 <li id="IxB"><p id="hKf">Give a combinatorial proof of the identity.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-jkX" id="jkX"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-jkX"><div class="hint solution-like"><p id="JRp">Try <a class="xref" data-knowl="./knowl/exc-bridesmaids.html" title="Exercise 3.5.5">Exercise 3.5.5</a></p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-jkX" id="jkX"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-jkX"><div class="hint solution-like"><p id="JRp">Try <a class="xref" data-knowl="./knowl/exc-bridesmaids.html" title="Exercise 3.4.5">Exercise 3.4.5</a></p></div></div>
 </div></article><article class="exercise exercise-like" id="hvK"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
 <p id="rNL">Give a combinatorial proof of the identity \({n \choose 2}{n-2 \choose k-2} = {n\choose k}{k \choose 2}\text{.}\)</p>
 <div class="solutions">
@@ -581,9 +580,9 @@ k{n\choose k} = n{n-1 \choose k-1}\text{.}
 \end{equation*}
 </div>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-UbZ" id="UbZ"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-UbZ"><div class="hint solution-like"><p id="itZ">This one might remind you of <a class="xref" data-knowl="./knowl/ex-comb-proof-3elemsets.html" title="Example 3.5.6">Example 3.5.6</a></p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-UbZ" id="UbZ"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-UbZ"><div class="hint solution-like"><p id="itZ">This one might remind you of <a class="xref" data-knowl="./knowl/ex-comb-proof-3elemsets.html" title="Example 3.4.6">Example 3.4.6</a></p></div></div>
 </div></article><article class="exercise exercise-like" id="ytV"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
-<p id="ILW">In <a class="xref" data-knowl="./knowl/ex-comb-proof-rowsum.html" title="Example 3.5.5">Example 3.5.5</a> we established that the sum of any row in Pascal's triangle is a power of two.  Specifically,</p>
+<p id="ILW">In <a class="xref" data-knowl="./knowl/ex-comb-proof-rowsum.html" title="Example 3.4.5">Example 3.4.5</a> we established that the sum of any row in Pascal's triangle is a power of two.  Specifically,</p>
 <div class="displaymath">
 \begin{equation*}
 {n\choose 0} + {n \choose 1} + {n\choose 2} + \cdots + {n \choose n} = 2^n\text{.}

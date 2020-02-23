@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-21T20:37:00-07:00    *-->
+<!--*    on 2020-02-23T14:55:50-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,13 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>The nice thing is, we know how to check whether a formula is actually a solution to a recurrence relation: plug it in. What happens if we plug in \(r^n\) into the recursion above? We get</p>
+<p>Now solve for \(r\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
-r^n - r^{n-1} - 6r^{n-2} = 0\text{.}
+r^{n-2}(r^2 - r - 6) = 0\text{,}
 \end{equation*}
 </div>
-<span class="incontext"><a href="sec_recurrence.html#AZt">in-context</a></span>
+<p data-braille="continuation">so by factoring, \(r = -2\) or \(r = 3\) (or \(r = 0\text{,}\) although this does not help us). This tells us that \(a_n = (-2)^n\) is a solution to the recurrence relation, as is \(a_n = 3^n\text{.}\) Which one is correct? They both are, unless we specify initial conditions. Notice we could also have \(a_n = (-2)^n + 3^n\text{.}\) Or \(a_n = 7(-2)^n + 4\cdot 3^n\text{.}\) In fact, for any \(a\) and \(b\text{,}\) \(a_n = a(-2)^n + b 3^n\) is a solution (try plugging this into the recurrence relation). To find the values of \(a\) and \(b\text{,}\) use the initial conditions.</p>
+<span class="incontext"><a href="sec_recurrence.html#hgC">in-context</a></span>
 </body>
 </html>

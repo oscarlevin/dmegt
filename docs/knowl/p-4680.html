@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-21T20:37:09-07:00    *-->
+<!--*    on 2020-02-23T14:55:59-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,14 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>For example, consider the sequence \(2, 4, 10, 28, 82, \ldots\text{.}\) How could we move to the sequence of first differences: \(2, 6, 18, 54,\ldots\text{?}\) We want to subtract 2 from the 4, 4 from the 10, 10 from the 28, and so on. So if we subtract (term by term) the sequence \(0, 2, 4, 10, 28,\ldots\) from \(2, 4, 10, 28\ldots\text{,}\) we will be set. We can get the generating function for \(0,2,4,10,28,\ldots\) from the generating function for \(2,4,10,28\ldots\) by multiplying by \(x\text{.}\) Use \(A\) to represent the generating function for \(2, 4, 10, 28, 82, \ldots\) Then:</p>
-<div class="displaymath">
-\begin{align*}
-A \amp  = 2 + 4x + 10x^2 +28x^3 + 82x^4 + \cdots\\
-\underline{-xA} \amp  \underline{\,\,= 0 + 2x + 4x^2 + 10x^3 + 28 x^4 + 82x^5 + \cdots}\\
-(1-x)A \amp  = 2 + 2x + 6x^2 + 18x^3 + 54x^4 + \cdots
-\end{align*}
-</div>
-<span class="incontext"><a href="sec_addtops-genfun.html#EBG">in-context</a></span>
+<p>While we don't get exactly the sequence of differences, we do get something close. In this particular case, we already know the generating function \(A\) (we found it in the previous section) but most of the time we will use this differencing technique to <em class="emphasis">find</em> \(A\text{:}\) if we have the generating function for the sequence of differences, we can then solve for \(A\text{.}\)</p>
+<span class="incontext"><a href="sec_addtops-genfun.html#kIP">in-context</a></span>
 </body>
 </html>

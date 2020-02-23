@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-21T20:36:16-07:00    *-->
+<!--*    on 2020-02-23T14:55:08-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,30 +13,15 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We know that \(a_6 = 2a_5 - a_4\text{.}\) So to find \(a_6\) we need to find \(a_5\) and \(a_4\text{.}\) Well</p>
-<div class="displaymath">
-\begin{equation*}
-a_5 = 2a_4 - a_3 \qquad \text{and} \qquad a_4 = 2a_3 - a_2\text{,}
-\end{equation*}
-</div>
-<p data-braille="continuation">so if we can only find \(a_3\) and \(a_2\) we would be set. Of course</p>
-<div class="displaymath">
-\begin{equation*}
-a_3 = 2a_2 - a_1 \qquad \text{and} \qquad a_2 = 2a_1 - a_0\text{,}
-\end{equation*}
-</div>
-<p data-braille="continuation">so we only need to find \(a_1\) and \(a_0\text{.}\) But we are given these. Thus</p>
+<p>Note that now we can guess a closed formula for the \(n\)th term of the sequence: \(a_n = n+3\text{.}\) To be sure this will always work, we could plug in this formula into the recurrence relation:</p>
 <div class="displaymath">
 \begin{align*}
-a_0 \amp = 3\\
-a_1 \amp = 4\\
-a_2 \amp = 2\cdot 4 - 3 = 5\\
-a_3 \amp = 2\cdot 5 - 4 = 6\\
-a_4 \amp = 2\cdot 6 - 5 = 7\\
-a_5 \amp = 2\cdot 7 - 6 = 8\\
-a_6 \amp = 2\cdot 8 - 7 = 9\text{.}
+2a_{n-1} - a_{n-2} \amp = 2((n-1) + 3) - ((n-2) + 3)\\
+\amp = 2n + 4 - n - 1\\
+\amp = n + 3\\
+\amp = a_n\text{.}
 \end{align*}
 </div>
-<span class="incontext"><a href="sec_seq_intro.html#dgq">in-context</a></span>
+<span class="incontext"><a href="sec_seq_intro.html#Jnz">in-context</a></span>
 </body>
 </html>

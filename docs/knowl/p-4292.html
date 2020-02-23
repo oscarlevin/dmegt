@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-21T20:36:31-07:00    *-->
+<!--*    on 2020-02-23T14:55:22-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,16 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>What about sequences like \(2, 6, 18, 54, \ldots\text{?}\) This is not arithmetic because the difference between terms is not constant. However, the <em class="emphasis">ratio</em> between successive terms is constant. We call such sequences <dfn class="terminology">geometric</dfn>.</p>
-<span class="incontext"><a href="sec_seq-arithgeom.html#JuD">in-context</a></span>
+<p>The recursive definition for the geometric sequence with initial term \(a\) and common ratio \(r\) is \(a_n = a_{n-1}\cdot r; a_0 = a\text{.}\) To get the next term we multiply the previous term by \(r\text{.}\) We can find the closed formula like we did for the arithmetic progression. Write</p>
+<div class="displaymath">
+\begin{align*}
+a_0 \amp = a\\
+a_1 \amp = a_0\cdot r\\
+a_2 \amp = a_1 \cdot r = a_0\cdot r\cdot r = a_0\cdot r^2\\
+\amp \vdots
+\end{align*}
+</div>
+<p data-braille="continuation">We must multiply the first term \(a\) by \(r\) a number of times, \(n\) times to be precise. We get \(a_n = a\cdot r^{n}\text{.}\)</p>
+<span class="incontext"><a href="sec_seq-arithgeom.html#pBM">in-context</a></span>
 </body>
 </html>

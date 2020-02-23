@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-21T20:36:51-07:00    *-->
+<!--*    on 2020-02-23T14:55:42-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,23 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>First, check to see if the formula has constant differences at some level. The sequence of first differences is \(4, 7, 10, \ldots\) which is arithmetic, so the sequence of second differences is constant. The sequence is \(\Delta^2\)-constant, so the formula for \(a_n\) will be a degree 2 polynomial. That is, we know that for some constants \(a\text{,}\) \(b\text{,}\) and \(c\text{,}\)</p>
+<p>Now to find \(a\text{,}\) \(b\text{,}\) and \(c\text{.}\) First, it would be nice to know what \(a_0\) is, since plugging in \(n = 0\) simplifies the above formula greatly. In this case, \(a_0 = 2\) (work backwards from the sequence of constant differences). Thus</p>
 <div class="displaymath">
 \begin{equation*}
-a_n = an^2 + bn + c\text{.}
+a_0 = 2 = a\cdot 0^2 + b \cdot 0 + c\text{,}
 \end{equation*}
 </div>
-<span class="incontext"><a href="sec_polyfit.html#mHt">in-context</a></span>
+<p data-braille="continuation">so \(c = 2\text{.}\) Now plug in \(n =1\) and \(n = 2\text{.}\) We get</p>
+<div class="displaymath">
+\begin{equation*}
+a_1 = 3 = a + b + 2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+a_2 = 7 = a4 + b 2 + 2\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="sec_polyfit.html#SOC">in-context</a></span>
 </body>
 </html>

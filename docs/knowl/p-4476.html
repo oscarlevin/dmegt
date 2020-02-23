@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-21T20:36:51-07:00    *-->
+<!--*    on 2020-02-23T14:55:41-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,11 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<ol class="decimal">
-<li>This is the sequence from <a class="xref" data-knowl="./knowl/example-sum-of-arithmetic.html" title="Example 4.2.6">Example 4.2.6</a>, in which we found a closed formula by recognizing the sequence as the sequence of partial sums of an arithmetic sequence. Indeed, the sequence of first differences is \(1,4,7, 10, 13,\ldots\text{,}\) which itself has differences \(3,3,3,3,\ldots\text{.}\) Thus \(2, 3, 7, 14, 24, 37,\ldots\) is a \(\Delta^2\)-constant sequence.</li>
-<li>These are the perfect cubes. The sequence of first differences is \(7, 19, 37, 61, 91, \ldots\text{;}\) the sequence of second differences is \(12, 18, 24, 30,\ldots\text{;}\) the sequence of third differences is constant: \(6,6,6,\ldots\text{.}\) Thus the perfect cubes are a \(\Delta^3\)-constant sequence.</li>
-<li>If we take first differences we get \(1,2,4,8,16,\ldots\text{.}\) Wait, what? That's the sequence we started with. So taking second differences will give us the same sequence again. No matter how many times we repeat this we will always have the same sequence, which in particular means no finite number of differences will be constant. Thus this sequence is not \(\Delta^k\)-constant for any \(k\text{.}\)</li>
-</ol>
-<span class="incontext"><a href="sec_polyfit.html#GAk">in-context</a></span>
+<p>The \(\Delta^0\)-constant sequences are themselves constant, so a closed formula for them is easy to compute (it's just the constant). The \(\Delta^1\)-constant sequences are arithmetic and we have a method for finding closed formulas for them as well. Every \(\Delta^2\)-constant sequence is the sum of an arithmetic sequence so we can find formulas for these as well. But notice that the format of the closed formula for a \(\Delta^2\)-constant sequence is always quadratic. For example, the square numbers are \(\Delta^2\)-constant with closed formula \(a_n= n^2\text{.}\) The triangular numbers (also \(\Delta^2\)-constant) have closed formula \(a_n = \frac{n(n+1)}{2}\text{,}\) which when multiplied out gives you an \(n^2\) term as well. It appears that every time we increase the complexity of the sequence, that is, increase the number of differences before we get constants, we also increase the degree of the polynomial used for the closed formula. We go from constant to linear to quadratic. The sequence of differences between terms tells us something about the rate of growth of the sequence. If a sequence is growing at a constant rate, then the formula for the sequence will be linear. If the sequence is growing at a rate which itself is growing at a constant rate, then the formula is quadratic. You have seen this elsewhere: if a function has a constant second derivative (rate of change) then the function must be quadratic.</p>
+<span class="incontext"><a href="sec_polyfit.html#gSh">in-context</a></span>
 </body>
 </html>
