@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-23T14:47:00-07:00    *-->
+<!--*    on 2020-02-26T10:02:49-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -311,9 +311,6 @@ P(n,k) = {n \choose k}\cdot k!\text{.}
 <li id="li-1331"><p id="p-3006">The pizza parlor will list the 10 toppings in two equal-sized columns on their menu. How many ways can they arrange the toppings in the left column?</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-134" id="answer-134"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-134"><div class="answer solution-like"><p id="p-3008">\(\mathop{\rm C}\nolimits\!\left(10,3\right)\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-135" id="answer-135"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-135"><div class="answer solution-like"><p id="p-3009">\(2^{10}\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-136" id="answer-136"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-136"><div class="answer solution-like"><p id="p-3010">\(\mathop{\rm P}\nolimits\!\left(10,5\right)\)</p></div></div>
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-222" id="solution-222"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-222"><div class="solution solution-like"><ol id="p-3011" class="lower-alpha">
 <li id="li-1332"><p id="p-3012">\({10 \choose 3} = 120\) pizzas. We must choose (in no particular order) 3 out of the 10 toppings.</p></li>
 <li id="li-1333"><p id="p-3013">\(2^{10} = 1024\) pizzas. Say yes or no to each topping.</p></li>
@@ -322,7 +319,6 @@ P(n,k) = {n \choose k}\cdot k!\text{.}
 </div></article><article class="exercise exercise-like" id="zGf"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="p-3018">A combination lock consists of a dial with 40 numbers on it. To open the lock, you turn the dial to the right until you reach a first number, then to the left until you get to second number, then to the right again to the third number. The numbers must be distinct. How many different combinations are possible?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-137" id="answer-137"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-137"><div class="answer solution-like"><p id="p-3020">\(\mathop{\rm P}\nolimits\!\left(40,3\right)\)</p></div></div>
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-224" id="solution-224"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-224"><div class="solution solution-like"><p id="p-3021">Despite its name, we are not looking for a combination here. The order in which the three numbers appears matters. There are \(P(40,3) = 40\cdot 39 \cdot 38\) different possibilities for the “combination”. This is assuming you cannot repeat any of the numbers (if you could, the answer would be \(40^3\)).</p></div></div>
 </div></article><article class="exercise exercise-like" id="fNo"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="p-3035">Using the digits 2 through 8, find the number of different 5-digit numbers such that:</p>
@@ -333,9 +329,6 @@ P(n,k) = {n \choose k}\cdot k!\text{.}
 <li id="li-1346"><p id="p-3042">Which of the above counting questions is a combination and which is a permutation? Explain why this makes sense.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-138" id="answer-138"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-138"><div class="answer solution-like"><p id="p-3043">\(7^{5}\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-139" id="answer-139"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-139"><div class="answer solution-like"><p id="p-3044">\(\mathop{\rm P}\nolimits\!\left(7,5\right)\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-140" id="answer-140"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-140"><div class="answer solution-like"><p id="p-3045">\(\mathop{\rm C}\nolimits\!\left(7,5\right)\)</p></div></div>
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-226" id="solution-226"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-226"><div class="solution solution-like"><ol id="p-3046" class="lower-alpha">
 <li id="li-1347"><p id="p-3047">This is just the multiplicative principle. There are 7 digits which we can select for each of the 5 positions, so we have \(7^5 = 16807\) such numbers.</p></li>
 <li id="li-1348"><p id="p-3048">Now we have 7 choices for the first number, 6 for the second, etc. So there are \(7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 = P(7,5) = 2520\) such numbers.</p></li>
@@ -362,12 +355,6 @@ P(n,k) = {n \choose k}\cdot k!\text{.}
 <p id="p-3081">How many are trapezoids? (Here, as in calculus, a trapezoid is defined as a quadrilateral with <em class="emphasis">at least</em> one pair of parallel sides. In particular, parallelograms are trapezoids.)</p>
 <p id="p-3083">How many are trapezoids that are not parallelograms?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-141" id="answer-141"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-141"><div class="answer solution-like"><p id="p-3085">\(\mathop{\rm C}\nolimits\!\left(7,2\right)\mathop{\rm C}\nolimits\!\left(7,2\right)\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-142" id="answer-142"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-142"><div class="answer solution-like"><p id="p-3086">\(5\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-143" id="answer-143"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-143"><div class="answer solution-like"><p id="p-3087">\(\mathop{\rm C}\nolimits\!\left(7,2\right)\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-144" id="answer-144"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-144"><div class="answer solution-like"><p id="p-3088">\(91\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-145" id="answer-145"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-145"><div class="answer solution-like"><p id="p-3089">\(\mathop{\rm C}\nolimits\!\left(7,2\right)\mathop{\rm C}\nolimits\!\left(7,2\right)\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-146" id="answer-146"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-146"><div class="answer solution-like"><p id="p-3090">\(441-91\)</p></div></div>
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-228" id="solution-228"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-228"><div class="solution solution-like">
 <p id="p-3091">You can make \({7\choose 2}{7\choose 2} = 441\) quadrilaterals.</p>
 <p id="p-3092">There are 5 squares.</p>
@@ -384,18 +371,15 @@ P(n,k) = {n \choose k}\cdot k!\text{.}
 </div></article><article class="exercise exercise-like" id="EpY"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
 <p id="p-3102">An <em class="emphasis">anagram</em> of a word is just a rearrangement of its letters. How many different anagrams of “uncopyrightable” are there? (This happens to be the longest common English word without any repeated letters.)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-147" id="answer-147"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-147"><div class="answer solution-like"><p id="p-3104">\(15!\)</p></div></div>
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-231" id="solution-231"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-231"><div class="solution solution-like"><p id="p-3105">Since there are 15 different letters, we have 15 choices for the first letter, 14 for the next, and so on. Thus there are \(15!\) anagrams.</p></div></div>
 </div></article><article class="exercise exercise-like" id="kxh"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
 <p id="p-3110">How many anagrams are there of the word “assesses” that start with the letter “a”?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-hint-85" id="hint-85"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-85"><div class="hint solution-like"><p id="p-3112">We just need a string of 7 letters: 4 of one type, 3 of the other.</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-148" id="answer-148"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-148"><div class="answer solution-like"><p id="p-3113">\(\mathop{\rm C}\nolimits\!\left(7,2\right)\)</p></div></div>
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-233" id="solution-233"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-233"><div class="solution solution-like"><p id="p-3114">There are \({7 \choose 2} = 21\) anagrams starting with “a”.</p></div></div>
 </div></article><article class="exercise exercise-like" id="QEq"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
 <p id="p-3118">How many anagrams are there of “anagram”?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-149" id="answer-149"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-149"><div class="answer solution-like"><p id="p-3120">\(\mathop{\rm C}\nolimits\!\left(7,3\right)\!\left(4!\right)\)</p></div></div>
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-235" id="solution-235"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-235"><div class="solution solution-like"><p id="p-3121">First, decide where to put the “a”s. There are 7 positions, and we must choose 3 of them to fill with an “a”. This can be done in \({7 \choose 3}\) ways. The remaining 4 spots all get a different letter, so there are \(4!\) ways to finish off the anagram. This gives a total of \({7 \choose 3}\cdot 4!\) anagrams. Strangely enough, this is 840, which is also equal to \(P(7,4)\text{.}\) To get the answer that way, start by picking one of the 7 <em class="emphasis">positions</em> to be filled by the “n”, one of the remaining 6 positions to be filled by the “g”, one of the remaining 5 positions to be filled by the “r”, one of the remaining 4 positions to be filled by the “m” and then put “a”s in the remaining 3 positions.</p></div></div>
 </div></article><article class="exercise exercise-like" id="wLz"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
 <p id="p-3128">On a business retreat, your company of 20 executives go golfing.</p>
@@ -404,8 +388,6 @@ P(n,k) = {n \choose k}\cdot k!\text{.}
 <li id="li-1358"><p id="p-3131">After all your hard work, you realize that in fact, you want each foursome to include one of the five Board members. How many ways can you do this?</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-150" id="answer-150"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-150"><div class="answer solution-like"><p id="p-3133">\(\mathop{\rm C}\nolimits\!\left(20,4\right)\mathop{\rm C}\nolimits\!\left(16,4\right)\mathop{\rm C}\nolimits\!\left(12,4\right)\mathop{\rm C}\nolimits\!\left(8,4\right)\mathop{\rm C}\nolimits\!\left(4,4\right)\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-151" id="answer-151"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-151"><div class="answer solution-like"><p id="p-3134">\(5!\mathop{\rm C}\nolimits\!\left(15,3\right)\mathop{\rm C}\nolimits\!\left(12,3\right)\mathop{\rm C}\nolimits\!\left(9,3\right)\mathop{\rm C}\nolimits\!\left(6,3\right)\mathop{\rm C}\nolimits\!\left(3,3\right)\)</p></div></div>
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-237" id="solution-237"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-237"><div class="solution solution-like"><ol id="p-3135" class="lower-alpha">
 <li id="li-1359"><p id="p-3136">\({20 \choose 4}{16 \choose 4}{12 \choose 4}{8 \choose 4}{4 \choose 4}\) ways.</p></li>
 <li id="li-1360"><p id="p-3137">\(5!{15 \choose 3}{12 \choose 3}{9 \choose 3}{6 \choose 3}{3 \choose 3}\) ways.</p></li>
@@ -414,7 +396,6 @@ P(n,k) = {n \choose k}\cdot k!\text{.}
 <p id="p-3142">How many different seating arrangements are possible for King Arthur and his 9 knights around their round table?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-hint-87" id="hint-87"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-87"><div class="hint solution-like"><p id="p-3144">There are 10 people seated around the table, but it does not matter where King Arthur sits, only who sits to his left, two seats to his left, and so on.  So the answer is not \(10!\text{.}\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-152" id="answer-152"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-152"><div class="answer solution-like"><p id="p-3145">\(\frac{10!}{10}\)</p></div></div>
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-239" id="solution-239"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-239"><div class="solution solution-like"><p id="p-3146">\(9!\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="IZR"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
 <p id="p-3155">Consider sets \(A\) and \(B\) with \(|A| = 10\) and \(|B| = 17\text{.}\)</p>
@@ -423,8 +404,6 @@ P(n,k) = {n \choose k}\cdot k!\text{.}
 <li id="li-1366"><p id="p-3158">How many functions \(f: A \to B\) are injective?</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-153" id="answer-153"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-153"><div class="answer solution-like"><p id="p-3160">\(17^{10}\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-154" id="answer-154"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-154"><div class="answer solution-like"><p id="p-3161">\(\mathop{\rm P}\nolimits\!\left(17,10\right)\)</p></div></div>
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-241" id="solution-241"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-241"><div class="solution solution-like"><ol id="p-3162" class="lower-alpha">
 <li id="li-1367"><p id="p-3163">\(17^{10}\) functions. There are 17 choices for the image of each element in the domain.</p></li>
 <li id="li-1368"><p id="p-3164">\(P(17, 10)\) injective functions. There are 17 choices for image of the first element of the domain, then only 16 choices for the second, and so on.</p></li>
@@ -437,9 +416,6 @@ P(n,k) = {n \choose k}\cdot k!\text{.}
 <li id="li-1377"><p id="p-3181">How many of the injective functions are <em class="emphasis">increasing</em>? To be increasing means that if \(a \lt b\) then \(f(a) \lt f(b)\text{,}\) or in other words, the outputs get larger as the inputs get larger.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-155" id="answer-155"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-155"><div class="answer solution-like"><p id="p-3183">\(6^{4}\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-156" id="answer-156"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-156"><div class="answer solution-like"><p id="p-3184">\(\mathop{\rm P}\nolimits\!\left(6,4\right)\)</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-157" id="answer-157"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-157"><div class="answer solution-like"><p id="p-3185">\(\mathop{\rm C}\nolimits\!\left(6,4\right)\)</p></div></div>
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-243" id="solution-243"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-243"><div class="solution solution-like"><ol id="p-3186" class="lower-alpha">
 <li id="li-1378"><p id="p-3187">\(6^4 = 1296\) functions.</p></li>
 <li id="li-1379"><p id="p-3188">\(P(6, 4) = 6 \cdot 5 \cdot 4 \cdot 3 = 360\) functions.</p></li>
