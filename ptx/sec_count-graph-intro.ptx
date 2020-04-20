@@ -59,7 +59,7 @@
 </subsection>
 
 <worksheet xml:id="ws-chromatic-function">
-  <title>The Chromatic Function</title>
+  <title>Activity: The Chromatic Function</title>
   <introduction>
     <p>
       For any graph <m>G</m>, let <m>P(G,k)</m> denote the <em>number</em> of proper colorings of <m>G</m> that use up to <m>k</m> colors (think of having <m>k</m> colors in your crayon box you can use to color the vertices; you don't have to use all of them).  For a fixed graph <m>G</m>,      <m>P(G,k)</m> is a function of <m>k</m>.
