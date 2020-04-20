@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_sequences-recursion-induction" permid="YaY">
+  <title>Recursion and Induction</title>
+  <introduction permid="Eih">
+    <investigation permid="kpq">
+      <p permid="KHn">
+        Each day your supply of magic chocolate covered espresso beans doubles
+        (each one splits in half),
+        but then you eat 5 of them.
+        You have 10 at the start of day 0.
+
+        <ol permid="wDI">
+          <li permid="BnB">
+            <p permid="tJc">
+              Write out the first few terms of the sequence.
+              Then give a recursive definition for the sequence and explain how you know it is correct.
+            </p>
+          </li>
+
+          <li permid="huK">
+            <p permid="ZQl">
+              Prove, using induction,
+              that the last digit of the number of beans you have on the <m>n</m>th day is always a 5 for all <m>n \ge 1</m>.
+            </p>
+          </li>
+
+          <li permid="NBT">
+            <p permid="FXu">
+              Find a closed formula for the <m>n</m>th term of the sequence and prove it is correct by induction.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </investigation>
+   <p>
+     We have seen that sequences can be a useful tool for solving counting questions.  The general approach is this: instead of answering a single instance of a counting question, we answer it more in general (replacing numbers with variables).  This creates a sequence of answers.  We use the counting question to develop a recursive formula for for that sequence.  Then we use one of a variety of techniques to transform the recursive formula into a closed formula.  This provides the answer to the general question.
+   </p>
+
+   <p>
+     Throughout this process, we might be concerned that we have made a mistake.  How do we know that we haven't?  We need a proof.  So what sorts of proofs would be appropriate to use here?  The answer this depends on which step of the process we wish to prove.  For now, let's consider the last step: how do we know that the closed formula we have discovered is correct?
+   </p>
+
+   <p>
+     Consider again <term>mathematical induction</term>.  To remind you, an inductive proof consists of the following steps:
+     <ol>
+       <li>
+         <p>
+           Prove a base case: prove that the statement is true for a fixed, small input.
+         </p>
+       </li>
+       <li>
+         <p>
+           Prove the inductive case: prove the implication <q><em>if</em> the statement is true for input <m>k</m>, <em>then</em> the statement is true for input <m>k+1</m>.</q>
+         </p>
+       </li>
+     </ol>
+   </p>
+  </introduction>
+
+  <!-- <xi:include href="exercises/seq-conc.ptx"/> -->
+</section>
+

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_count-graph-intro">
+  <title>The Chromatic Function</title>
+<introduction>
+  <p>
+    And now for the grand finale!  Let's use all the tools we have developed so far to try to understand graph colorings better.
+  </p>
+
+  <p>
+    Recall that a <term>proper coloring</term> of a graph is an assignment of colors to the <em>vertices</em> of the graph such that adjacent vertices must be colored differently.  The interesting question about such colorings is: what is the smallest number of colors you can use to properly color the graph?  This smallest number is called the <term>chromatic number</term> of the graph (written <m>\chi(G)</m>).  
+  </p>
+
+  <p>
+    We have seen that in general, there is no limit to how large the chromatic number of a graph can be.  In particular, the complete graph <m>K_n</m> (the graph with <m>n</m> vertices all of which are adjacent) has chromatic number <m>\chi(K_n) = n</m>.  However, a very early question in graph theory was whether every <em>planar</em> graph has chromatic number at most 4.  This is called the <em>Four Color Theorem</em>.  This theorem seems like it should be fairly easy to prove, but it took mathematicians a long time to prove it, and even today, the best proof we have requires a computer to check hundreds of cases.  Given the difficulty of this theorem, graph theorists have spent a lot of effort to understand chromatic number in many different ways.  
+  </p>
+
+  <p>
+    The topic we are about to consider is one such attempt at understanding the chromatic number.
+  </p>
+</introduction>
+
+<subsection xml:id="subsec-counting-colorings">
+  <title>Counting Colorings</title>
+  <p>
+    It is often helpful in mathematics to make our problems harder.  
+  </p>
+  <p>
+    Suppose we wanted to decide whether a particular graph <m>G</m> had chromatic number 4.  This would mean that there is a proper coloring using four colors, but no proper coloring that uses three.  Instead of asking whether there is a 4-coloring and whether there is a 3-coloring, let's ask <em>how many</em> 4-colorings and how many 3-colorings there are.  In fact, let's ask how many <m>k</m>-colorings there are, for any natural number <m>k</m>.  
+  </p>  
+
+  <p>
+    We have turned our question about graphs into a question about sequences.  We can let <m>(g_n)_{n \ge 1}</m> be the sequence in which <m>g_n</m> is the number of <m>n</m>-colorings of the graph <m>G</m>.  Perhaps we can understand this sequence for a particular graph.  The first <m>n</m> such that <m>g_n \gt 0</m> will be the chromatic number of the graph.  Maybe we can even understand something about all these sequences for all planar graphs!<fn>Don't get too excited though, it turns out that so far, this approach has not resulted in a nicer proof of the four color theorem.  Maybe some day.</fn>
+  </p>
+
+  <p>
+    Since the number of <m>k</m>-colorings of a graph <m>G</m> depends both on <m>k</m> and <m>G</m>, we will adopt the following notation.
+  </p>
+
+  <definition xml:id="def-chromatic-function">
+    <statement>
+      <p>
+        For any graph <m>G</m>, the <term>chromatic function</term> of <m>G</m>, denoted <m>P(G,k)</m>, gives the number of proper colorings of <m>G</m> that use up to <m>k</m> colors.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Once <m>G</m> is fixed, <m>P(G,k)</m> is a function of <m>k</m>.  Later we will discover that this function is always a polynomial, and at that point we will call <m>P(G,k)</m> the <term>chromatic polynomial</term> of a graph.
+  </p>
+
+  <p>
+    Note: it is perfectly reasonable to have <m>k</m> be larger than the number of vertices.  Think of <m>k</m> as telling you how many colors you have in your crayon box.  Each vertex must be one of those colors (observing the rule that adjacent vertices must be colored differently), but you are not required to use all of the colors in the box.
+  </p>
+
+  <p>
+    To become familiar with the chromatic function, try the following activity.
+  </p>
+</subsection>
+
+<worksheet xml:id="ws-chromatic-function">
+  <title>The Chromatic Function</title>
+  <introduction>
+    <p>
+      For any graph <m>G</m>, let <m>P(G,k)</m> denote the <em>number</em> of proper colorings of <m>G</m> that use up to <m>k</m> colors (think of having <m>k</m> colors in your crayon box you can use to color the vertices; you don't have to use all of them).  For a fixed graph <m>G</m>,      <m>P(G,k)</m> is a function of <m>k</m>.
+    </p>
+  </introduction>
+
+  <exercise workspace="8%">
+    <statement>
+      <p>
+        For each graph <m>G</m> below, find <m>P(G,2)</m>,        <m>P(G,3)</m>, and <m>P(G,4)</m>.  Note, these graphs are <em>labeled</em>, so coloring vertex <m>a</m> red and <m>b</m> blue is a different coloring than coloring <m>a</m> blue and <m>b</m> red. 
+      </p>
+      <p>
+        <nbsp/>
+      </p>
+      <sbsgroup>
+        <sidebyside widths="10% 20%" margins="20% 20%" valign="top">
+          <image xml:id="p1">
+            <latex-image>
+            \begin{tikzpicture}
+            {\tiny
+              \draw (0,0) \vb{$a$} -- (1,0) \vb{$b$};
+            }
+            \end{tikzpicture}
+            </latex-image>
+          </image>
+          <image xml:id="c3">
+            <latex-image>
+            \begin{tikzpicture}
+            {\tiny
+                 \draw (90:1) \vl{$a$} -- (210:1) \vl{$c$} -- (-30:1) \vr{$b$} -- cycle;
+            }
+              
+            \end{tikzpicture}
+            </latex-image>
+          </image>
+        </sidebyside>
+        <sidebyside widths="20% 20%">
+          <image xml:id="p2">
+            <latex-image>
+            \begin{tikzpicture}
+            {\tiny
+              \draw (0,0) \vb{$a$} -- (1,0) \vb{$b$}-- (2,0) \vb{$c$};
+            }
+            \end{tikzpicture}
+            </latex-image>
+          </image>
+          <p>
+            <nbsp/>
+          </p>
+        </sidebyside>
+        <sidebyside widths="30% 20%" margins="10% 20%" valign="bottom">
+          <image xml:id="p3" width="40%">
+            <latex-image>
+            \begin{tikzpicture}
+            {\tiny
+              \draw (0,0) \vb{$a$} -- (1,0) \vb{$b$}-- (2,0) \vb{$c$} -- (3,0) \vb{$d$};
+            }
+            \end{tikzpicture}
+            </latex-image>
+          </image>
+          <image xml:id="k4">
+            <latex-image>
+            \begin{tikzpicture}
+            {\tiny
+              \draw (45:1) \vr{$b$} -- (-45:1) \vr{$c$} -- (-135:1) \vl{$d$}-- (135:1) \vl{$a$} -- (45:1) -- (-135:1) (-45:1) -- (135:1);
+            }
+            \end{tikzpicture}
+            </latex-image>
+          </image>
+        </sidebyside>
+      </sbsgroup>
+    </statement>
+    <solution>
+      <p>
+        First let's find the chromatic functions for the paths on the left.  The top graph is <m>P_1</m>, and we have <m>P(P_1, 2) = 2</m> (since we can pick any of the two colors for <m>a</m>, and the other for <m>b</m>),        <m>P(P_1, 3) = 6</m>, and <m>P(P_1, 4) = 12</m> (there are 4 choices for <m>a</m> and 3 choices for <m>b</m>).
+      </p>
+      <p>
+        For the second path, <m>P_2</m>, we have <m>P(P_2, 2) = 2</m>,        <m>P(P_2,3) = 12</m>, and <m>P(P_2, 4) = 36</m>, since there are 4 colors to choose from for <m>a</m>, then three for <m>b</m> and three for <m>c</m>.
+      </p>
+      <p>
+        For <m>P_3</m>, we have <m>P(P_3, 2) = 2</m>,        <m>P(P_3, 3) = 24</m>, and <m>P(P_3,4) = 108</m>.
+      </p>
+      <p>
+        For <m>C_3 = K_3</m> (the triangle on the top right), we have <m>P(K_3, 2) = 0</m> (there are no proper colorings of <m>K_3</m> with 2 colors), <m>P(K_3, 3) = 6</m>, and <m>P(K_3, 4) = 24</m> (since there are 4 colors you can pick for <m>a</m>, 3 colors to choose from for <m>b</m> and 2 colors you can pick for <m>c</m>).
+      </p>
+      <p>
+        For <m>K_4</m>, we have <m>P(K_4,2) = P(K_4,3) = 0</m> and <m>P(K_4,4) = 24</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        Generalize:  Find <m>P(P_3,k)</m> for any <m>k</m> (recall <m>P_3</m> is the path with 4 vertices and 3 edges) and <m>P(C_3, k)</m> for any <m>k</m> (where <m>C_3</m> is a 3-edge cycle, the same as <m>K_3</m>).  That is, find a closed formula for each of these.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Consider the labeled <m>P_3</m> shown above. We have <m>P(P_3, k) = k(k-1)^3</m>.  This is because there are <m>k</m> choices for <m>a</m>.  Then there are <m>k-1</m> choices for <m>b</m>.  The next vertex in the path must be colored different from <m>b</m>, but could be colored the same as <m>a</m>, so there are still <m>k-1</m> choices for its color.  Similarly, there are <m>k-1</m> choices for the color of <m>d</m>.  
+      </p>
+
+      <p>
+        On the other hand, <m>P(C_3, k) = k(k-1)(k-2)</m> (which is the same as <m>P(k, 3)</m>, where this <m>P</m> represents permutations).  There are <m>k</m> choices for <m>a</m>, then only <m>k-1</m> choices for <m>b</m> and then <m>k-2</m> choices for the last vertex, since it cannot be the same as either of the other two.
+      </p>
+    </solution>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Use your answers to the previous problem to find <m>P(C_4, k)</m>.  Hint: If there wasn't an edge between <m>a</m> and <m>d</m>, then we this would be coloring <m>P_3</m>.  The colorings that we don't want to allow are those in which <m>a</m> and <m>d</m> are the same: how many of those are there?
+      </p>
+      <p>
+        <nbsp/>
+      </p>
+      <image xml:id="c4" width="20%">
+        <latex-image>
+          \begin{tikzpicture}
+            {\tiny
+              \draw (45:1) \vr{$b$} -- (-45:1) \vr{$c$} -- (-135:1) \vl{$d$}-- (135:1) \vl{$a$} -- (45:1);
+            }
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </statement>
+    <solution>
+      <p>
+        The answer is not <m>k(k-1)^3 = P(P_3, k)</m>, but only because some of the colorings of <m>P_3</m> have <m>a</m> and <m>d</m> colored the same.  Let's count how many proper colorings of <m>P_3</m> like that there are.  We have <m>k</m> colors to choose for <m>a</m> (and this color is the same as <m>d</m>).  Then there are <m>k-1</m> choices for the color of <m>b</m>.  What about <m>c</m>?  Well, we are only considering <em>proper</em> colorings of <m>P_3</m>, so <m>c</m> cannot be the same color as <m>b</m> or as <m>d</m> (and we know that <m>d</m> is the same color as <m>a</m>).  So there are only <m>k-2</m> colors to choose from for <m>c</m>.  
+      </p>
+
+      <p>
+        Putting this all together we see that <m>P(C_4, k) = k(k-1)^3 - k(k-1)(k-2)</m>.  Note that the <m>k(k-1)(k-2)</m> bad colorings we remove are equal in number to the proper colorings of <m>C_3</m>.  This makes sense: by insisting that <m>a</m> and <m>d</m> are colored the same, it is like we are identifying those two vertices.  If you slide <m>a</m> and <m>d</m> together (removing the redundant edge between them) you get <m>C_3</m>.
+      </p>
+    </solution>
+  </exercise>
+</worksheet>
+
+<subsection xml:id="subsec-chromatic-functions-nice-graphs">
+  <title>Chromatic Functions for Nice Graphs</title>
+  <p>
+    As the activity above suggests, finding the chromatic function is reasonable for some nice graphs.  In all of the cases below, we are always considering <em>labeled</em> graphs: which vertex gets which color matters.  
+  </p>
+
+  <p>
+    We begin by considering paths.
+  </p>
+
+  <theorem xml:id="thm-chromatic-polynomial-path">
+    <statement>
+      <p>
+        The chromatic function of <m>P_n</m>, the <m>n</m>-edge path, is <m>P(P_n, k) = k(k-1)^n</m>.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        The graph <m>P_n</m> contains <m>n+1</m> vertices, call them <m>v_0, v_1, \ldots, v_n</m>, where <m>v_0</m> and <m>v_n</m> are the <q>end</q> vertices (the only two with degree 1).  
+      </p>
+      <p>
+        There are <m>k</m> choices for the color of <m>v_0</m>.  Then since <m>v_1</m> is adjacent to <m>v_0</m>, there are only <m>k-1</m> choices for <m>v_1</m>.  Next <m>v_2</m> is adjacent to <m>v_1</m>, so there are <m>k-1</m> choices for its color: any color except the one we picked for <m>v_1</m>.  In fact, <m>v_i</m> can be colored any of the m
+        <m>k-1</m> colors we did not use for <m>v_{i-1}</m> (for <m>1 \le i \le n</m>).
+      </p>
+      <p>
+        By the product principle, we see that <m>P(P_n, k) = k(k-1)^n</m>.
+      </p>
+    </proof>
+  </theorem>
+
+  <p>
+    Next, complete graphs.
+  </p>
+
+  <theorem xml:id="thm-chromatic-function-complete">
+    <statement>
+      <p>
+        The chromatic function of the complete graph <m>K_n</m> is <m>P(K_n, k) = \frac{k!}{(k-n)!}</m> for <m>k \ge n</m> and 0 otherwise.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        If <m>k \lt n</m>, then there are no proper <m>k</m>-colorings of <m>K_n</m>, since the chromatic number of <m>K_n</m> is <m>n</m>.  So assume that <m>k \ge n</m>.  
+      </p>
+
+      <p>
+        Now there are <m>k</m> choices for the color of the first vertex.  There are only <m>k-1</m> choices for the color of the second vertex.  The vertex after that cannot be either of the first two colors, so there are <m>k-2</m> choices for its color.  And so on.  So we have <m>P(K_n, k) = k (k-1) (k-2) \cdots (k-n+1)</m> (the product contains <m>n</m> terms), which is <m>\frac{k!}{(k-n)!}</m>.
+      </p>
+    </proof>
+  </theorem>
+  
+  <p>
+    Since all the vertices must have different colors in a complete graph, we can think of a coloring as an <em>injective</em> function from the set of vertices to the set of colors.  So it is not surprising then that the number of proper colorings is a <m>k</m>-permutation of the <m>n</m> colors.  This does, however, lead to the strange and perhaps notationally confusing identity,
+    <me>
+      P(K_n,k) = P(k,n)
+    </me>.
+  </p>
+
+  <p>
+    What about other classes of graphs?  There are some that are not too difficult (you are asked to describe the chromatic function for all trees in the exercises).  However, finding the chromatic function for many graphs can be quite challenging.  In the next few sections we will consider some techniques to overcome some of this challenge.  We conclude with one example of a small graph with a complicated chromatic function computation.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Find the chromatic function <m>P(G,k)</m> for the graph <m>G</m> below.
+      </p>
+      <image xml:id="house-graph" width="30%">
+        <latex-image>
+          \begin{tikzpicture}
+            {\tiny
+              \draw (0,0) \vb{$v_1$} -- (.75, .5) \vr{$v_2$} -- (0,1) \va{$v_3$} -- (-1,1) \va{$v_4$} -- (-1,0) \vb{$v_5$} -- (0,0) -- (0,1);
+             }
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </statement>
+    <solution>
+      <p>
+        There are <m>k</m> choices for the color of <m>v_1</m>, and then <m>k-1</m> choices for <m>v_2</m>, <m>k-2</m> choices for <m>v_3</m>.  So far so good.  Now <m>v_4</m> can be any color except the color of <m>v_3</m>, so there are <m>k-1</m> choices for it.  What about <m>v_5</m>?  The problem is that it could be that <m>v_4</m> and <m>v_1</m> are the same color, which would mean that <m>v_5</m> could be any of <m>k-1</m> colors.  But if <m>v_1</m> and <m>v_4</m> are different, then <m>v_5</m> can only be <m>k-2</m> colors.
+      </p>
+
+      <p>
+        At this point, our best bet is to break this into two cases.  First, if <m>v_1</m> and <m>v_4</m> are <em>different</em> colors, then we will have 
+        <me>
+          k(k-1)(k-2)(k-2)(k-2)
+        </me>
+        colorings.  If <m>v_1</m> and <m>v_4</m> are the same color, then we have 
+        <me>
+          k(k-1)(k-2)1(k-1)
+        </me>
+        colorings.  So all together, we see
+        <me>
+          P(G,k) = k(k-1)(k-2)(k-2)(k-2) + k(k-1)(k-2)1(k-1)
+        </me>.
+        In future sections we will see other ways to compute this function.
+      </p>
+    </solution>
+  </example>
+</subsection>
+
+<exercises xml:id="exercises-chromatic-function">
+  <exercise>
+    <statement>
+      <p>
+        Suppose <m>T</m> is a (labeled) tree with <m>n</m> edges (and so <m>n+1</m> vertices).  Find a formula for <m>P(T,k)</m> and explain how you know you are correct. 
+      </p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Every example of a chromatic function we have seen so far has been for <em>labeled</em> graphs.  That is, we are assigning distinct colors to distinct vertices.  If we consider unlabeled graphs, now (some of) the vertices (might) be indistinguishable.  Can we still count proper colorings?
+        <ol>
+          <li>
+            <p>
+              First, find <m>P(P_4,7)</m> and <m>P(K_5, 7)</m> for labeled graphs and explain why you are correct.  Then say what <m>P(P_4,k)</m> and <m>P(K_5,k)</m> will be.
+            </p>
+            <sidebyside widths="35% 25%" valign="bottom">
+              <image xml:id="p4-jag">
+                <description></description>
+                <latex-image>
+                  \begin{tikzpicture}
+                    {
+                      \footnotesize
+                      \draw (0,0) \vb{$a$} -- (1,1) \va{$b$} -- (2,0) \vb{$c$} -- (3,1) \va{$d$} -- (4,0) \vb{$e$};
+                    }
+                  \end{tikzpicture}
+                </latex-image>
+              </image>
+              <image xml:id="k5">
+                <latex-image>
+                  \begin{tikzpicture}
+                    {
+                      \footnotesize
+                        \draw (90:1) \va{$a$} -- (18:1) \va{$b$} -- (90-2*72:1) \vb{$c$} -- (90-3*72:1) \vb{$d$} -- (90-4*72:1) \va{$e$} -- (18:1) -- (90-3*72:1) -- (90:1) -- (90-2*72:1) -- (90-4*72:1) -- cycle;
+                    }
+                  \end{tikzpicture}
+                </latex-image>
+              </image>
+            </sidebyside>
+          </li>
+          <li>
+            <p>
+              How find <m>P(G,7)</m> for <m>G</m> an unlabeled copy of <m>K_5</m>.  Explain your answer.  Then say what <m>P(G,k)</m> should be. 
+            </p>
+          </li>
+          <li>
+            <p>
+              Explain carefully how <m>P(G,k)</m> changes when <m>G</m> goes from being a labeled <m>K_5</m> to an unlabeled <m>K_5</m>.  Why does it make sense to divide by 120?
+            </p>
+          </li>
+          <li>
+            <p>
+              Can you do the same thing to find <m>P(G,k)</m> for <m>G</m> an unlabeled copy of <m>P_4</m>?  Explain what goes wrong.  Then find <m>P(G,k)</m> in this case anyway.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Find <m>P(C_5,k)</m> and explain why you are correct (<m>C_5</m> is the cycle with 5 vertices; assume it is labeled <m>v_1, v_2,\ldots, v_5</m>).  Hint: consider two cases.
+      </p>
+    </statement>
+  </exercise>
+</exercises>
+</section>
+

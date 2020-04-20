@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-26T10:02:55-07:00    *-->
+<!--*    on 2020-04-19T22:00:12-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -96,16 +96,16 @@ MathJax.Hub.Config({
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_addtops-genfun.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_sequences.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="backmatter.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_recurrence.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_sequences.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ch_counting-graphs.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_addtops-genfun.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_sequences.html" title="Up">Up</a><a class="next-button button toolbar-item" href="backmatter.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_recurrence.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_sequences.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ch_counting-graphs.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="frontmatter.html" data-scroll="RGW"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
@@ -152,11 +152,13 @@ MathJax.Hub.Config({
 <li><a href="sec_seq-arithgeom.html" data-scroll="lIR">Arithmetic and Geometric Sequences</a></li>
 <li><a href="sec_polyfit.html" data-scroll="ylR">Polynomial Fitting</a></li>
 <li><a href="sec_recurrence.html" data-scroll="bcV">Solving Recurrence Relations</a></li>
-<li><a href="sec_addtops-genfun.html" data-scroll="XaJ">Generating Functions</a></li>
 <li><a href="sec_sequences-conc.html" data-scroll="YaY" class="active">Chapter Summary</a></li>
 </ul>
 </li>
-<li class="link"><a href="backmatter.html" data-scroll="mqL"><span class="title">Backmatter</span></a></li>
+<li class="link">
+<a href="ch_counting-graphs.html" data-scroll="ch_counting-graphs"><span class="codenumber">5</span> <span class="title">Counting Colorings of Graphs</span></a><ul><li><a href="sec_count-graph-intro.html" data-scroll="sec_count-graph-intro">The Chromatic Function</a></li></ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="mqL"><span class="title">Backmatter</span></a></li>
 <li class="link"><a href="solutions-1.html" data-scroll="SxU"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
 <li class="link"><a href="solutions-2.html" data-scroll="yFd"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
 <li class="link"><a href="appendix-1.html" data-scroll="GjC"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
@@ -165,61 +167,53 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="YaY"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">4.6</span> <span class="title">Chapter Summary</span>
+<span class="type">Section</span> <span class="codenumber">4.5</span> <span class="title">Chapter Summary</span>
 </h2>
-<a href="sec_sequences-conc.html" class="permalink">¶</a><section class="introduction" id="Eih"><article class="project-like" id="kpq"><h6 class="heading">
-<span class="type">Investigate!</span> </h6>
-<p id="KHn">Each day your supply of magic chocolate covered espresso beans doubles (each one splits in half), but then you eat 5 of them. You have 10 at the start of day 0.</p>
-<ol class="decimal">
-<li id="BnB"><p id="tJc">Write out the first few terms of the sequence. Then give a recursive definition for the sequence and explain how you know it is correct.</p></li>
-<li id="huK"><p id="ZQl">Prove, using induction, that the last digit of the number of beans you have on the \(n\)th day is always a 5 for all \(n \ge 1\text{.}\)</p></li>
-<li id="NBT"><p id="FXu">Find a closed formula for the \(n\)th term of the sequence and prove it is correct by induction.</p></li>
-</ol></article><p id="qOw">In this chapter we explored sequences and mathematical induction. At first these might not seem entirely related, but there is a link: recursive reasoning. When we have many cases (maybe infinitely many), it is often easier to describe a particular case by saying how it relates to other cases, instead of describing it absolutely. For sequences, we can describe the \(n\)th term in the sequence by saying how it is related to the <em class="emphasis">previous</em> term. When showing a statement involving the variable \(n\) is true for all values of \(n\text{,}\) we can describe why the case for \(n = k\) is true on the basis of why the case for \(n = k-1\) is true.</p>
+<a href="sec_sequences-conc.html" class="permalink">¶</a><section class="introduction" id="Eih"><p id="qOw">In this chapter we explored sequences and mathematical induction. At first these might not seem entirely related, but there is a link: recursive reasoning. When we have many cases (maybe infinitely many), it is often easier to describe a particular case by saying how it relates to other cases, instead of describing it absolutely. For sequences, we can describe the \(n\)th term in the sequence by saying how it is related to the <em class="emphasis">previous</em> term. When showing a statement involving the variable \(n\) is true for all values of \(n\text{,}\) we can describe why the case for \(n = k\) is true on the basis of why the case for \(n = k-1\) is true.</p>
 <p id="WVF">While thinking of problems recursively is often easer than thinking of them absolutely (at least after you get used to thinking in this way), our ultimate goal is to move beyond this recursive description. For sequences, we want to find <em class="emphasis">closed formulas</em> for the \(n\)th term of the sequence. For proofs, we want to know the statement is actually true for a particular \(n\) (not only under the assumption that the statement is true for the previous value of \(n\)). In this chapter we saw some methods for moving from recursive descriptions to absolute descriptions.</p>
 <ul id="DcO" class="disc">
 <li id="cKR"><p id="meD">If the terms of a sequence increase by a constant difference or constant ratio (these are both recursive descriptions), then the sequences are arithmetic or geometric, respectively, and we have closed formulas for each of these based on the initial terms and common difference or ratio.</p></li>
 <li id="ISa"><p id="SlM">If the terms of a sequence increase at a polynomial rate (that is, if the differences between terms form a sequence with a polynomial closed formula), then the sequence is itself given by a polynomial closed formula (of degree one more than the sequence of differences).</p></li>
 <li id="oZj"><p id="ysV">If the terms of a sequence increase at an exponential rate, then we expect the closed formula for the sequence to be exponential. These sequences often have relatively nice recursive formulas, and the <em class="emphasis">characteristic root technique</em> allows us to find the closed formula for these sequences.</p></li>
 <li id="Vgs"><p id="eAe">If we want to prove that a statement is true for all values of \(n\) (greater than some first small value), and we can describe why the statement being true for \(n = k\) implies the statement is true for \(n = k+1\text{,}\) then the <em class="emphasis">principle of mathematical induction</em> gives us that the statement is true for all values of \(n\) (greater than the base case).</p></li>
-</ul>
-<p id="jjX">Throughout the chapter we tried to understand <em class="emphasis">why</em> these facts listed above are true. In part, that is what proofs, by induction or not, attempt to accomplish: they explain why mathematical truths are in fact truths. As we develop our ability to reason about mathematics, it is a good idea to make sure that the methods of our reasoning are sound. The branch of mathematics that deals with deciding whether reasoning is good or not is <em class="emphasis">mathematical logic</em>, the subject of the next chapter.</p></section><section class="exercises" id="XPQ"><h3 class="heading hide-type">
+</ul></section><section class="exercises" id="XPQ"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Chapter Review</span>
 </h3>
 <a href="sec_sequences-conc.html#XPQ" class="permalink">¶</a><article class="exercise exercise-like" id="Iec"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-4760">Find \(3 + 7 + 11+ \cdots + 427\text{.}\)</p>
+<p id="p-4663">Find \(3 + 7 + 11+ \cdots + 427\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-440" id="solution-440"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-440"><div class="solution solution-like"><p id="p-4763">\(\frac{430\cdot 107}{2} = 23005\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-423" id="solution-423"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-423"><div class="solution solution-like"><p id="p-4666">\(\frac{430\cdot 107}{2} = 23005\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="oll"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-4772">Consider the sequence \(2, 6, 10, 14, \ldots, 4n + 6\text{.}\)</p>
+<p id="p-4675">Consider the sequence \(2, 6, 10, 14, \ldots, 4n + 6\text{.}\)</p>
 <ol class="lower-alpha">
-<li id="li-2064"><p id="p-4773">How many terms are there in the sequence?</p></li>
-<li id="li-2065"><p id="p-4775">What is the second-to-last term?</p></li>
-<li id="li-2066"><p id="p-4777">Find the sum of all the terms in the sequence.</p></li>
+<li id="li-2015"><p id="p-4676">How many terms are there in the sequence?</p></li>
+<li id="li-2016"><p id="p-4678">What is the second-to-last term?</p></li>
+<li id="li-2017"><p id="p-4680">Find the sum of all the terms in the sequence.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-442" id="solution-442"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-442"><div class="solution solution-like"><ol id="p-4782" class="lower-alpha">
-<li id="li-2067"><p id="p-4783">\(n+2\) terms.</p></li>
-<li id="li-2068"><p id="p-4784">\(4n+2\text{.}\)</p></li>
-<li id="li-2069"><p id="p-4785">\(\frac{(4n+8)(n+2)}{2}\text{.}\)</p></li>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-425" id="solution-425"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-425"><div class="solution solution-like"><ol id="p-4685" class="lower-alpha">
+<li id="li-2018"><p id="p-4686">\(n+2\) terms.</p></li>
+<li id="li-2019"><p id="p-4687">\(4n+2\text{.}\)</p></li>
+<li id="li-2020"><p id="p-4688">\(\frac{(4n+8)(n+2)}{2}\text{.}\)</p></li>
 </ol></div></div>
 </div></article><article class="exercise exercise-like" id="Usu"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-4793">Consider the sequence given by \(a_n = 2\cdot 5^{n-1}\text{.}\)</p>
+<p id="p-4696">Consider the sequence given by \(a_n = 2\cdot 5^{n-1}\text{.}\)</p>
 <ol class="lower-alpha">
-<li id="li-2074">
-<p id="p-4794">Find the first 4 terms of the sequence.</p>
-<p id="p-4795">What sort of sequence is this?</p>
-<p id="p-4796"><ul style="list-style:circle;">
-<li id="li-2076"><p id="p-4798">arithmetic</p></li>
-<li id="li-2077"><p id="p-4799">geometric</p></li>
-<li id="li-2078"><p id="p-4800">neither</p></li>
+<li id="li-2025">
+<p id="p-4697">Find the first 4 terms of the sequence.</p>
+<p id="p-4698">What sort of sequence is this?</p>
+<p id="p-4699"><ul style="list-style:circle;">
+<li id="li-2027"><p id="p-4701">arithmetic</p></li>
+<li id="li-2028"><p id="p-4702">geometric</p></li>
+<li id="li-2029"><p id="p-4703">neither</p></li>
 </ul></p>
 </li>
-<li id="li-2079"><p id="p-4801">Find the <em class="emphasis">sum</em> of the first 25 terms. That is, compute \(\sum_{k=1}^{25}a_k\text{.}\)</p></li>
+<li id="li-2030"><p id="p-4704">Find the <em class="emphasis">sum</em> of the first 25 terms. That is, compute \(\sum_{k=1}^{25}a_k\text{.}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-444" id="solution-444"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-444"><div class="solution solution-like"><ol id="p-4805" class="lower-alpha">
-<li id="li-2080"><p id="p-4806">\(2, 10, 50, 250, \ldots\) The sequence is geometric.</p></li>
-<li id="li-2081"><p id="p-4807">\(\frac{2 - 2\cdot 5^{25}}{-4}\text{.}\)</p></li>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-427" id="solution-427"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-427"><div class="solution solution-like"><ol id="p-4708" class="lower-alpha">
+<li id="li-2031"><p id="p-4709">\(2, 10, 50, 250, \ldots\) The sequence is geometric.</p></li>
+<li id="li-2032"><p id="p-4710">\(\frac{2 - 2\cdot 5^{25}}{-4}\text{.}\)</p></li>
 </ol></div></div>
 </div></article><article class="exercise exercise-like" id="AzD"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="dFc">Consider the sequence \(5, 11, 19, 29, 41, 55,\ldots\text{.}\) Assume \(a_1 = 5\text{.}\)</p>
@@ -228,15 +222,15 @@ MathJax.Hub.Config({
 <li id="Msw"><p id="Hne">Find a closed formula again, this time using either polynomial fitting or the characteristic root technique (whichever is appropriate). Show your work.</p></li>
 <li id="szF"><p id="nun">Find a closed formula once again, this time by recognizing the sequence as a modification to some well known sequence(s). Explain.</p></li>
 </ol></article><article class="exercise exercise-like" id="gGM"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-4814">Use polynomial fitting to find a closed formula for the sequence \((a_n)_{n\ge 1}\text{:}\)</p>
-<div class="displaymath" id="p-4815">
+<p id="p-4717">Use polynomial fitting to find a closed formula for the sequence \((a_n)_{n\ge 1}\text{:}\)</p>
+<div class="displaymath" id="p-4718">
 \begin{equation*}
 4, 11, 20, 31, 44, \ldots
 \text{.}
 \end{equation*}
 </div>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-446" id="solution-446"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-446"><div class="solution solution-like"><p id="p-4816">\(a_n = n^2 + 4n - 1\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-429" id="solution-429"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-429"><div class="solution solution-like"><p id="p-4719">\(a_n = n^2 + 4n - 1\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="MNV"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
 <p id="pTu">Suppose the closed formula for a particular sequence is a degree 3 polynomial. What can you say about the closed formula for:</p>
 <ol class="lower-alpha">
@@ -260,31 +254,31 @@ MathJax.Hub.Config({
 <li id="pEZ"><p id="Esy">No, taking differences gives the original sequence back, so the differences will never be constant.</p></li>
 </ol></div></div>
 </div></article><article class="exercise exercise-like" id="Zcn"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
-<p id="p-4830">The sequence \((a_n)_{n \ge 1}\) starts \(-1, 0, 2, 5, 9, 14\ldots\) and has closed formula \(a_n = \dfrac{(n+1)(n-2)}{2}\text{.}\) Use this fact to find a closed formula for the sequence \((b_n)_{n \ge 1}\) which starts \(4, 10, 18, 28, 40, \ldots\text{.}\)</p>
+<p id="p-4733">The sequence \((a_n)_{n \ge 1}\) starts \(-1, 0, 2, 5, 9, 14\ldots\) and has closed formula \(a_n = \dfrac{(n+1)(n-2)}{2}\text{.}\) Use this fact to find a closed formula for the sequence \((b_n)_{n \ge 1}\) which starts \(4, 10, 18, 28, 40, \ldots\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-450" id="solution-450"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-450"><div class="solution solution-like"><p id="p-4831">\(b_n = (n+3)n\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-433" id="solution-433"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-433"><div class="solution solution-like"><p id="p-4734">\(b_n = (n+3)n\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="Fjw"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
 <p id="ioV">The in song <em class="emphasis">The Twelve Days of Christmas</em>, my true love gave to me first 1 gift, then 2 gifts and 1 gift, then 3 gifts, 2 gifts and 1 gift, and so on. How many gifts did my true love give me all together during the twelve days?</p></article><article class="exercise exercise-like" id="lqF"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
-<p id="p-4837">Consider the recurrence relation \(a_n = 3a_{n-1} + 10 a_{n-2}\) with first two terms \(a_0 = 1\) and \(a_1 = 2\text{.}\)</p>
+<p id="p-4740">Consider the recurrence relation \(a_n = 3a_{n-1} + 10 a_{n-2}\) with first two terms \(a_0 = 1\) and \(a_1 = 2\text{.}\)</p>
 <ol class="lower-alpha">
-<li id="li-2097"><p id="p-4838">Write out the first 5 terms of the sequence defined by this recurrence relation.</p></li>
-<li id="li-2098"><p id="p-4839">Solve the recurrence relation. That is, find a closed formula for \(a_n\text{.}\)</p></li>
+<li id="li-2048"><p id="p-4741">Write out the first 5 terms of the sequence defined by this recurrence relation.</p></li>
+<li id="li-2049"><p id="p-4742">Solve the recurrence relation. That is, find a closed formula for \(a_n\text{.}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-452" id="solution-452"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-452"><div class="solution solution-like"><ol id="p-4840" class="lower-alpha">
-<li id="li-2099"><p id="p-4841">\(1, 2, 16, 68, 364, \ldots\text{.}\)</p></li>
-<li id="li-2100"><p id="p-4842">\(a_n = \frac{3}{7}(-2)^n + \frac{4}{7}5^n\text{.}\)</p></li>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-435" id="solution-435"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-435"><div class="solution solution-like"><ol id="p-4743" class="lower-alpha">
+<li id="li-2050"><p id="p-4744">\(1, 2, 16, 68, 364, \ldots\text{.}\)</p></li>
+<li id="li-2051"><p id="p-4745">\(a_n = \frac{3}{7}(-2)^n + \frac{4}{7}5^n\text{.}\)</p></li>
 </ol></div></div>
 </div></article><article class="exercise exercise-like" id="RxO"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
-<p id="p-4847">Consider the recurrence relation \(a_n = 2a_{n-1} + 8a_{n-2}\text{,}\) with initial terms \(a_0 = 1\) and \(a_1= 3\text{.}\)</p>
+<p id="p-4750">Consider the recurrence relation \(a_n = 2a_{n-1} + 8a_{n-2}\text{,}\) with initial terms \(a_0 = 1\) and \(a_1= 3\text{.}\)</p>
 <ol class="lower-alpha">
-<li id="li-2105"><p id="p-4848">Find the next two terms of the sequence (\(a_2\) and \(a_3\)).</p></li>
-<li id="li-2106"><p id="p-4849">Solve the recurrence relation. That is, find a closed formula for the \(n\)th term of the sequence.</p></li>
+<li id="li-2056"><p id="p-4751">Find the next two terms of the sequence (\(a_2\) and \(a_3\)).</p></li>
+<li id="li-2057"><p id="p-4752">Solve the recurrence relation. That is, find a closed formula for the \(n\)th term of the sequence.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-454" id="solution-454"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-454"><div class="solution solution-like"><ol id="p-4850" class="lower-alpha">
-<li id="li-2107"><p id="p-4851">\(a_2 = 14\text{.}\) \(a_3 = 52\text{.}\)</p></li>
-<li id="li-2108"><p id="p-4852">\(a_n = \frac{1}{6}(-2)^n + \frac{5}{6}4^n\text{.}\)</p></li>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-437" id="solution-437"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-437"><div class="solution solution-like"><ol id="p-4753" class="lower-alpha">
+<li id="li-2058"><p id="p-4754">\(a_2 = 14\text{.}\) \(a_3 = 52\text{.}\)</p></li>
+<li id="li-2059"><p id="p-4755">\(a_n = \frac{1}{6}(-2)^n + \frac{5}{6}4^n\text{.}\)</p></li>
 </ol></div></div>
 </div></article><article class="exercise exercise-like" id="xEX"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
 <p id="aKw">Your magic chocolate bunnies  reproduce like rabbits: every large bunny produces 2 new mini bunnies each day, and each day every mini bunny born the previous day grows into a large bunny. Assume you start with 2 mini bunnies and no bunny ever dies (or gets eaten).</p>

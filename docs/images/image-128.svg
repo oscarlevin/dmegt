@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34pt" height="34pt" viewBox="0 0 34 34" version="1.1">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33pt" height="34pt" viewBox="0 0 33 34" version="1.1">
 <g id="surface1">
-<path style="fill:none;stroke-width:0.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -14.173312 -14.171688 L 14.174344 14.172062 " transform="matrix(1,0,0,-1,16.853,17.133)"/>
-<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 4.671875 31.304688 C 4.671875 30.207031 3.78125 29.3125 2.679688 29.3125 C 1.578125 29.3125 0.6875 30.207031 0.6875 31.304688 C 0.6875 32.40625 1.578125 33.300781 2.679688 33.300781 C 3.78125 33.300781 4.671875 32.40625 4.671875 31.304688 Z M 4.671875 31.304688 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 33.019531 2.960938 C 33.019531 1.859375 32.125 0.96875 31.027344 0.96875 C 29.925781 0.96875 29.035156 1.859375 29.035156 2.960938 C 29.035156 4.058594 29.925781 4.953125 31.027344 4.953125 C 32.125 4.953125 33.019531 4.058594 33.019531 2.960938 Z M 33.019531 2.960938 "/>
+<path style="fill:none;stroke-width:0.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -14.173438 -14.174531 L 14.174219 14.173125 " transform="matrix(1,0,0,-1,16.4,16.97)"/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 4.21875 31.144531 C 4.21875 30.042969 3.328125 29.152344 2.226562 29.152344 C 1.125 29.152344 0.234375 30.042969 0.234375 31.144531 C 0.234375 32.242188 1.125 33.136719 2.226562 33.136719 C 3.328125 33.136719 4.21875 32.242188 4.21875 31.144531 Z M 4.21875 31.144531 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 32.566406 2.796875 C 32.566406 1.695312 31.675781 0.804688 30.574219 0.804688 C 29.472656 0.804688 28.582031 1.695312 28.582031 2.796875 C 28.582031 3.898438 29.472656 4.789062 30.574219 4.789062 C 31.675781 4.789062 32.566406 3.898438 32.566406 2.796875 Z M 32.566406 2.796875 "/>
 </g>
 </svg>

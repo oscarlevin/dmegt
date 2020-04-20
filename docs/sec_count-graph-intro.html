@@ -1,0 +1,303 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-04-19T22:00:14-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Chromatic Function</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="levin-DMEGT" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://discrete.openmathbooks.org/dmoi3.html" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="dmegt.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">Early Graph Theory</span></a></h1>
+<p class="byline">Oscar Levin</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ch_counting-graphs.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_counting-graphs.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="backmatter.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ch_counting-graphs.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_counting-graphs.html" title="Up">Up</a><a class="next-button button toolbar-item" href="backmatter.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="RGW"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="xOf">Preface</a></li>
+<li><a href="preface-2.html" data-scroll="dVo">How to use this book</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_graphtheory.html" data-scroll="gBz"><span class="codenumber">1</span> <span class="title">Graphs and other Discrete Structures</span></a><ul>
+<li><a href="sec_intro-intro.html" data-scroll="hPw">What is Discrete Mathematics?</a></li>
+<li><a href="sec_gt-intro.html" data-scroll="HLu">Graphs</a></li>
+<li><a href="sec_intro-sets.html" data-scroll="ltW">Sets</a></li>
+<li><a href="sec_intro-functions.html" data-scroll="CkQ">Functions</a></li>
+<li><a href="sec_gt-carefully.html" data-scroll="sec_gt-carefully">Graphs Done Right</a></li>
+<li><a href="sec_coloring.html" data-scroll="qyO">Coloring</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logic.html" data-scroll="wur"><span class="codenumber">2</span> <span class="title">Symbolic Logic and Proofs</span></a><ul>
+<li><a href="sec_intro-statements.html" data-scroll="QDd">Mathematical Statements</a></li>
+<li><a href="sec_propositional.html" data-scroll="XMq">Propositional Logic</a></li>
+<li><a href="sec_logic-proofs.html" data-scroll="lnf">Proofs</a></li>
+<li><a href="sec_logic-induction.html" data-scroll="sec_logic-induction">Mathematical Induction</a></li>
+<li><a href="sec_trees.html" data-scroll="gor">Trees</a></li>
+<li><a href="sec_paths.html" data-scroll="tPg">Euler Paths and Circuits</a></li>
+<li><a href="sec_planar.html" data-scroll="ttH">Planar Graphs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_counting.html" data-scroll="raE"><span class="codenumber">3</span> <span class="title">Counting</span></a><ul>
+<li><a href="sec_counting-addmult.html" data-scroll="sJa">Additive and Multiplicative Principles</a></li>
+<li><a href="sec_counting-binom.html" data-scroll="vZs">Binomial Coefficients</a></li>
+<li><a href="sec_counting-combperm.html" data-scroll="yda">Combinations and Permutations</a></li>
+<li><a href="sec_comb-proofs.html" data-scroll="SUg">Combinatorial Proofs</a></li>
+<li><a href="sec_stars-and-bars.html" data-scroll="qkt">Stars and Bars</a></li>
+<li><a href="sec_advPIE.html" data-scroll="HKU">Advanced Counting Using PIE</a></li>
+<li><a href="sec_count-conc.html" data-scroll="Bmb">Chapter Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_sequences.html" data-scroll="KxW"><span class="codenumber">4</span> <span class="title">Sequences</span></a><ul>
+<li><a href="sec_seq_intro.html" data-scroll="tgm">Describing Sequences</a></li>
+<li><a href="sec_seq-arithgeom.html" data-scroll="lIR">Arithmetic and Geometric Sequences</a></li>
+<li><a href="sec_polyfit.html" data-scroll="ylR">Polynomial Fitting</a></li>
+<li><a href="sec_recurrence.html" data-scroll="bcV">Solving Recurrence Relations</a></li>
+<li><a href="sec_sequences-conc.html" data-scroll="YaY">Chapter Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_counting-graphs.html" data-scroll="ch_counting-graphs"><span class="codenumber">5</span> <span class="title">Counting Colorings of Graphs</span></a><ul><li><a href="sec_count-graph-intro.html" data-scroll="sec_count-graph-intro" class="active">The Chromatic Function</a></li></ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="mqL"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="SxU"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="yFd"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="GjC"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_count-graph-intro"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.1</span> <span class="title">The Chromatic Function</span>
+</h2>
+<a href="sec_count-graph-intro.html" class="permalink">¶</a><section class="introduction" id="introduction-32"><p id="p-4782">And now for the grand finale!  Let's use all the tools we have developed so far to try to understand graph colorings better.</p>
+<p id="p-4783">Recall that a <dfn class="terminology">proper coloring</dfn> of a graph is an assignment of colors to the <em class="emphasis">vertices</em> of the graph such that adjacent vertices must be colored differently.  The interesting question about such colorings is: what is the smallest number of colors you can use to properly color the graph?  This smallest number is called the <dfn class="terminology">chromatic number</dfn> of the graph (written \(\chi(G)\)).</p>
+<p id="p-4784">We have seen that in general, there is no limit to how large the chromatic number of a graph can be.  In particular, the complete graph \(K_n\) (the graph with \(n\) vertices all of which are adjacent) has chromatic number \(\chi(K_n) = n\text{.}\)  However, a very early question in graph theory was whether every <em class="emphasis">planar</em> graph has chromatic number at most 4.  This is called the <em class="emphasis">Four Color Theorem</em>.  This theorem seems like it should be fairly easy to prove, but it took mathematicians a long time to prove it, and even today, the best proof we have requires a computer to check hundreds of cases.  Given the difficulty of this theorem, graph theorists have spent a lot of effort to understand chromatic number in many different ways.</p>
+<p id="p-4785">The topic we are about to consider is one such attempt at understanding the chromatic number.</p></section><section class="subsection" id="subsec-counting-colorings"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Counting Colorings</span>
+</h3>
+<a href="sec_count-graph-intro.html#subsec-counting-colorings" class="permalink">¶</a><p id="p-4786">It is often helpful in mathematics to make our problems harder.</p>
+<p id="p-4787">Suppose we wanted to decide whether a particular graph \(G\) had chromatic number 4.  This would mean that there is a proper coloring using four colors, but no proper coloring that uses three.  Instead of asking whether there is a 4-coloring and whether there is a 3-coloring, let's ask <em class="emphasis">how many</em> 4-colorings and how many 3-colorings there are.  In fact, let's ask how many \(k\)-colorings there are, for any natural number \(k\text{.}\)</p>
+<p id="p-4788">We have turned our question about graphs into a question about sequences.  We can let \((g_n)_{n \ge 1}\) be the sequence in which \(g_n\) is the number of \(n\)-colorings of the graph \(G\text{.}\)  Perhaps we can understand this sequence for a particular graph.  The first \(n\) such that \(g_n \gt 0\) will be the chromatic number of the graph.  Maybe we can even understand something about all these sequences for all planar graphs!<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-22" id="fn-22"><sup> 1 </sup></a></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-22"><div class="fn">Don't get too excited though, it turns out that so far, this approach has not resulted in a nicer proof of the four color theorem.  Maybe some day.</div></div>
+<p id="p-4789">Since the number of \(k\)-colorings of a graph \(G\) depends both on \(k\) and \(G\text{,}\) we will adopt the following notation.</p>
+<article class="definition definition-like" id="def-chromatic-function"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.1.1</span><span class="period">.</span>
+</h6>
+<p id="p-4790">For any graph \(G\text{,}\) the <dfn class="terminology">chromatic function</dfn> of \(G\text{,}\) denoted \(P(G,k)\text{,}\) gives the number of proper colorings of \(G\) that use up to \(k\) colors.</p></article><p id="p-4791">Once \(G\) is fixed, \(P(G,k)\) is a function of \(k\text{.}\)  Later we will discover that this function is always a polynomial, and at that point we will call \(P(G,k)\) the <dfn class="terminology">chromatic polynomial</dfn> of a graph.</p>
+<p id="p-4792">Note: it is perfectly reasonable to have \(k\) be larger than the number of vertices.  Think of \(k\) as telling you how many colors you have in your crayon box.  Each vertex must be one of those colors (observing the rule that adjacent vertices must be colored differently), but you are not required to use all of the colors in the box.</p>
+<p id="p-4793">To become familiar with the chromatic function, try the following activity.</p></section><section class="worksheet" id="ws-chromatic-function"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">The Chromatic Function</span>
+</h3>
+<a href="sec_count-graph-intro.html#ws-chromatic-function" class="permalink">¶</a><section class="introduction" id="introduction-33"><p id="p-4794">For any graph \(G\text{,}\) let \(P(G,k)\) denote the <em class="emphasis">number</em> of proper colorings of \(G\) that use up to \(k\) colors (think of having \(k\) colors in your crayon box you can use to color the vertices; you don't have to use all of them).  For a fixed graph \(G\text{,}\)      \(P(G,k)\) is a function of \(k\text{.}\)</p></section><article class="exercise exercise-like" id="exercise-398"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-4795">For each graph \(G\) below, find \(P(G,2)\text{,}\)        \(P(G,3)\text{,}\) and \(P(G,4)\text{.}\)  Note, these graphs are <em class="emphasis">labeled</em>, so coloring vertex \(a\) red and \(b\) blue is a different coloring than coloring \(a\) blue and \(b\) red.</p>
+<p id="p-4796"> </p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;">
+<div class="sbspanel" style="width:16.6666666666667%;justify-content:flex-start;"><img src="images/p1.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:flex-start;"><img src="images/c3.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;">
+<div class="sbspanel" style="width:28.5714285714286%;justify-content:flex-start;"><img src="images/p2.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:28.5714285714286%;justify-content:flex-start;"><p id="p-4797"> </p></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:20%;">
+<div class="sbspanel" style="width:42.8571428571429%;justify-content:flex-end;"><img src="images/p3.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:28.5714285714286%;justify-content:flex-end;"><img src="images/k4.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-440" id="solution-440"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-440"><div class="solution solution-like">
+<p id="p-4798">First let's find the chromatic functions for the paths on the left.  The top graph is \(P_1\text{,}\) and we have \(P(P_1, 2) = 2\) (since we can pick any of the two colors for \(a\text{,}\) and the other for \(b\)),        \(P(P_1, 3) = 6\text{,}\) and \(P(P_1, 4) = 12\) (there are 4 choices for \(a\) and 3 choices for \(b\)).</p>
+<p id="p-4799">For the second path, \(P_2\text{,}\) we have \(P(P_2, 2) = 2\text{,}\)        \(P(P_2,3) = 12\text{,}\) and \(P(P_2, 4) = 36\text{,}\) since there are 4 colors to choose from for \(a\text{,}\) then three for \(b\) and three for \(c\text{.}\)</p>
+<p id="p-4800">For \(P_3\text{,}\) we have \(P(P_3, 2) = 2\text{,}\)        \(P(P_3, 3) = 24\text{,}\) and \(P(P_3,4) = 108\text{.}\)</p>
+<p id="p-4801">For \(C_3 = K_3\) (the triangle on the top right), we have \(P(K_3, 2) = 0\) (there are no proper colorings of \(K_3\) with 2 colors), \(P(K_3, 3) = 6\text{,}\) and \(P(K_3, 4) = 24\) (since there are 4 colors you can pick for \(a\text{,}\) 3 colors to choose from for \(b\) and 2 colors you can pick for \(c\)).</p>
+<p id="p-4802">For \(K_4\text{,}\) we have \(P(K_4,2) = P(K_4,3) = 0\) and \(P(K_4,4) = 24\text{.}\)</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-399"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-4803">Generalize:  Find \(P(P_3,k)\) for any \(k\) (recall \(P_3\) is the path with 4 vertices and 3 edges) and \(P(C_3, k)\) for any \(k\) (where \(C_3\) is a 3-edge cycle, the same as \(K_3\)).  That is, find a closed formula for each of these.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-441" id="solution-441"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-441"><div class="solution solution-like">
+<p id="p-4804">Consider the labeled \(P_3\) shown above. We have \(P(P_3, k) = k(k-1)^3\text{.}\)  This is because there are \(k\) choices for \(a\text{.}\)  Then there are \(k-1\) choices for \(b\text{.}\)  The next vertex in the path must be colored different from \(b\text{,}\) but could be colored the same as \(a\text{,}\) so there are still \(k-1\) choices for its color.  Similarly, there are \(k-1\) choices for the color of \(d\text{.}\)</p>
+<p id="p-4805">On the other hand, \(P(C_3, k) = k(k-1)(k-2)\) (which is the same as \(P(k, 3)\text{,}\) where this \(P\) represents permutations).  There are \(k\) choices for \(a\text{,}\) then only \(k-1\) choices for \(b\) and then \(k-2\) choices for the last vertex, since it cannot be the same as either of the other two.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-400"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-4806">Use your answers to the previous problem to find \(P(C_4, k)\text{.}\)  Hint: If there wasn't an edge between \(a\) and \(d\text{,}\) then we this would be coloring \(P_3\text{.}\)  The colorings that we don't want to allow are those in which \(a\) and \(d\) are the same: how many of those are there?</p>
+<p id="p-4807"> </p>
+<div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="images/c4.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-442" id="solution-442"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-442"><div class="solution solution-like">
+<p id="p-4808">The answer is not \(k(k-1)^3 = P(P_3, k)\text{,}\) but only because some of the colorings of \(P_3\) have \(a\) and \(d\) colored the same.  Let's count how many proper colorings of \(P_3\) like that there are.  We have \(k\) colors to choose for \(a\) (and this color is the same as \(d\)).  Then there are \(k-1\) choices for the color of \(b\text{.}\)  What about \(c\text{?}\)  Well, we are only considering <em class="emphasis">proper</em> colorings of \(P_3\text{,}\) so \(c\) cannot be the same color as \(b\) or as \(d\) (and we know that \(d\) is the same color as \(a\)).  So there are only \(k-2\) colors to choose from for \(c\text{.}\)</p>
+<p id="p-4809">Putting this all together we see that \(P(C_4, k) = k(k-1)^3 - k(k-1)(k-2)\text{.}\)  Note that the \(k(k-1)(k-2)\) bad colorings we remove are equal in number to the proper colorings of \(C_3\text{.}\)  This makes sense: by insisting that \(a\) and \(d\) are colored the same, it is like we are identifying those two vertices.  If you slide \(a\) and \(d\) together (removing the redundant edge between them) you get \(C_3\text{.}\)</p>
+</div></div>
+</div></article></section><section class="subsection" id="subsec-chromatic-functions-nice-graphs"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Chromatic Functions for Nice Graphs</span>
+</h3>
+<a href="sec_count-graph-intro.html#subsec-chromatic-functions-nice-graphs" class="permalink">¶</a><p id="p-4810">As the activity above suggests, finding the chromatic function is reasonable for some nice graphs.  In all of the cases below, we are always considering <em class="emphasis">labeled</em> graphs: which vertex gets which color matters.</p>
+<p id="p-4811">We begin by considering paths.</p>
+<article class="theorem theorem-like" id="thm-chromatic-polynomial-path"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.1.2</span><span class="period">.</span>
+</h6>
+<p id="p-4812">The chromatic function of \(P_n\text{,}\) the \(n\)-edge path, is \(P(P_n, k) = k(k-1)^n\text{.}\)</p></article><article class="proof" id="proof-50"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-4813">The graph \(P_n\) contains \(n+1\) vertices, call them \(v_0, v_1, \ldots, v_n\text{,}\) where \(v_0\) and \(v_n\) are the “end” vertices (the only two with degree 1).</p>
+<p id="p-4814">There are \(k\) choices for the color of \(v_0\text{.}\)  Then since \(v_1\) is adjacent to \(v_0\text{,}\) there are only \(k-1\) choices for \(v_1\text{.}\)  Next \(v_2\) is adjacent to \(v_1\text{,}\) so there are \(k-1\) choices for its color: any color except the one we picked for \(v_1\text{.}\)  In fact, \(v_i\) can be colored any of the m \(k-1\) colors we did not use for \(v_{i-1}\) (for \(1 \le i \le n\)).</p>
+<p id="p-4815">By the product principle, we see that \(P(P_n, k) = k(k-1)^n\text{.}\)</p></article><p id="p-4816">Next, complete graphs.</p>
+<article class="theorem theorem-like" id="thm-chromatic-function-complete"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.1.3</span><span class="period">.</span>
+</h6>
+<p id="p-4817">The chromatic function of the complete graph \(K_n\) is \(P(K_n, k) = \frac{k!}{(k-n)!}\) for \(k \ge n\) and 0 otherwise.</p></article><article class="proof" id="proof-51"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-4818">If \(k \lt n\text{,}\) then there are no proper \(k\)-colorings of \(K_n\text{,}\) since the chromatic number of \(K_n\) is \(n\text{.}\)  So assume that \(k \ge n\text{.}\)</p>
+<p id="p-4819">Now there are \(k\) choices for the color of the first vertex.  There are only \(k-1\) choices for the color of the second vertex.  The vertex after that cannot be either of the first two colors, so there are \(k-2\) choices for its color.  And so on.  So we have \(P(K_n, k) = k (k-1) (k-2) \cdots (k-n+1)\) (the product contains \(n\) terms), which is \(\frac{k!}{(k-n)!}\text{.}\)</p></article><p id="p-4820">Since all the vertices must have different colors in a complete graph, we can think of a coloring as an <em class="emphasis">injective</em> function from the set of vertices to the set of colors.  So it is not surprising then that the number of proper colorings is a \(k\)-permutation of the \(n\) colors.  This does, however, lead to the strange and perhaps notationally confusing identity,</p>
+<div class="displaymath">
+\begin{equation*}
+P(K_n,k) = P(k,n)\text{.}
+\end{equation*}
+</div>
+<p id="p-4821">What about other classes of graphs?  There are some that are not too difficult (you are asked to describe the chromatic function for all trees in the exercises).  However, finding the chromatic function for many graphs can be quite challenging.  In the next few sections we will consider some techniques to overcome some of this challenge.  We conclude with one example of a small graph with a complicated chromatic function computation.</p>
+<article class="example example-like" id="example-125"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.1.4</span><span class="period">.</span>
+</h6>
+<p id="p-4822">Find the chromatic function \(P(G,k)\) for the graph \(G\) below.</p>
+<div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/house-graph.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-443" id="solution-443"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-443"><div class="solution solution-like">
+<p id="p-4823">There are \(k\) choices for the color of \(v_1\text{,}\) and then \(k-1\) choices for \(v_2\text{,}\) \(k-2\) choices for \(v_3\text{.}\)  So far so good.  Now \(v_4\) can be any color except the color of \(v_3\text{,}\) so there are \(k-1\) choices for it.  What about \(v_5\text{?}\)  The problem is that it could be that \(v_4\) and \(v_1\) are the same color, which would mean that \(v_5\) could be any of \(k-1\) colors.  But if \(v_1\) and \(v_4\) are different, then \(v_5\) can only be \(k-2\) colors.</p>
+<p id="p-4824">At this point, our best bet is to break this into two cases.  First, if \(v_1\) and \(v_4\) are <em class="emphasis">different</em> colors, then we will have</p>
+<div class="displaymath">
+\begin{equation*}
+k(k-1)(k-2)(k-2)(k-2)
+\end{equation*}
+</div>
+<p data-braille="continuation">colorings.  If \(v_1\) and \(v_4\) are the same color, then we have</p>
+<div class="displaymath">
+\begin{equation*}
+k(k-1)(k-2)1(k-1)
+\end{equation*}
+</div>
+<p data-braille="continuation">colorings.  So all together, we see</p>
+<div class="displaymath">
+\begin{equation*}
+P(G,k) = k(k-1)(k-2)(k-2)(k-2) + k(k-1)(k-2)1(k-1)\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">In future sections we will see other ways to compute this function.</p>
+</div></div>
+</div></article></section><section class="exercises" id="exercises-chromatic-function"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<a href="sec_count-graph-intro.html#exercises-chromatic-function" class="permalink">¶</a><article class="exercise exercise-like" id="exercise-401"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-4825">Suppose \(T\) is a (labeled) tree with \(n\) edges (and so \(n+1\) vertices).  Find a formula for \(P(T,k)\) and explain how you know you are correct.</p></article><article class="exercise exercise-like" id="exercise-402"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-4826">Every example of a chromatic function we have seen so far has been for <em class="emphasis">labeled</em> graphs.  That is, we are assigning distinct colors to distinct vertices.  If we consider unlabeled graphs, now (some of) the vertices (might) be indistinguishable.  Can we still count proper colorings?</p>
+<ol class="lower-alpha">
+<li id="li-2079">
+<p id="p-4827">First, find \(P(P_4,7)\) and \(P(K_5, 7)\) for labeled graphs and explain why you are correct.  Then say what \(P(P_4,k)\) and \(P(K_5,k)\) will be.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;">
+<div class="sbspanel" style="width:43.75%;justify-content:flex-end;"><img src="images/p4-jag.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:31.25%;justify-content:flex-end;"><img src="images/k5.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+</li>
+<li id="li-2080"><p id="p-4828">How find \(P(G,7)\) for \(G\) an unlabeled copy of \(K_5\text{.}\)  Explain your answer.  Then say what \(P(G,k)\) should be.</p></li>
+<li id="li-2081"><p id="p-4829">Explain carefully how \(P(G,k)\) changes when \(G\) goes from being a labeled \(K_5\) to an unlabeled \(K_5\text{.}\)  Why does it make sense to divide by 120?</p></li>
+<li id="li-2082"><p id="p-4830">Can you do the same thing to find \(P(G,k)\) for \(G\) an unlabeled copy of \(P_4\text{?}\)  Explain what goes wrong.  Then find \(P(G,k)\) in this case anyway.</p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-403"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-4831">Find \(P(C_5,k)\) and explain why you are correct (\(C_5\) is the cycle with 5 vertices; assume it is labeled \(v_1, v_2,\ldots, v_5\)).  Hint: consider two cases.</p></article></section></section></div></main>
+</div>
+</body>
+</html>

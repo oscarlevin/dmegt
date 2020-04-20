@@ -3,36 +3,7 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_sequences-conc" permid="YaY">
   <title>Chapter Summary</title>
   <introduction permid="Eih">
-    <investigation permid="kpq">
-      <p permid="KHn">
-        Each day your supply of magic chocolate covered espresso beans doubles
-        (each one splits in half),
-        but then you eat 5 of them.
-        You have 10 at the start of day 0.
-
-        <ol permid="wDI">
-          <li permid="BnB">
-            <p permid="tJc">
-              Write out the first few terms of the sequence.
-              Then give a recursive definition for the sequence and explain how you know it is correct.
-            </p>
-          </li>
-
-          <li permid="huK">
-            <p permid="ZQl">
-              Prove, using induction,
-              that the last digit of the number of beans you have on the <m>n</m>th day is always a 5 for all <m>n \ge 1</m>.
-            </p>
-          </li>
-
-          <li permid="NBT">
-            <p permid="FXu">
-              Find a closed formula for the <m>n</m>th term of the sequence and prove it is correct by induction.
-            </p>
-          </li>
-        </ol>
-      </p>
-    </investigation>
+    
     <p permid="qOw">
       In this chapter we explored sequences and mathematical induction.
       At first these might not seem entirely related,
@@ -101,18 +72,6 @@
       </ul>
     </p>
 
-    <p permid="jjX">
-      Throughout the chapter we tried to understand <em>why</em>
-      these facts listed above are true.
-      In part, that is what proofs,
-      by induction or not, attempt to accomplish:
-      they explain why mathematical truths are in fact truths.
-      As we develop our ability to reason about mathematics,
-      it is a good idea to make sure that the methods of our reasoning are sound.
-      The branch of mathematics that deals with deciding whether reasoning is good or not is
-      <em>mathematical logic</em>,
-      the subject of the next chapter.
-    </p>
   </introduction>
 
   <xi:include href="exercises/seq-conc.ptx"/>

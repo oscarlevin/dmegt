@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-26T10:04:38-07:00    *-->
+<!--*    on 2020-04-19T22:07:01-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,13 +14,29 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.6.3.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.1.4.1</span><span class="period">.</span>
 </h6>
-<ol class="lower-alpha">
-<li>\(2, 10, 50, 250, \ldots\) The sequence is geometric.</li>
-<li>\(\frac{2 - 2\cdot 5^{25}}{-4}\text{.}\)</li>
-</ol>
+<p>There are \(k\) choices for the color of \(v_1\text{,}\) and then \(k-1\) choices for \(v_2\text{,}\) \(k-2\) choices for \(v_3\text{.}\)  So far so good.  Now \(v_4\) can be any color except the color of \(v_3\text{,}\) so there are \(k-1\) choices for it.  What about \(v_5\text{?}\)  The problem is that it could be that \(v_4\) and \(v_1\) are the same color, which would mean that \(v_5\) could be any of \(k-1\) colors.  But if \(v_1\) and \(v_4\) are different, then \(v_5\) can only be \(k-2\) colors.</p>
+<p>At this point, our best bet is to break this into two cases.  First, if \(v_1\) and \(v_4\) are <em class="emphasis">different</em> colors, then we will have</p>
+<div class="displaymath">
+\begin{equation*}
+k(k-1)(k-2)(k-2)(k-2)
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec_sequences-conc.html#uKr">in-context</a></span>
+<p data-braille="continuation">colorings.  If \(v_1\) and \(v_4\) are the same color, then we have</p>
+<div class="displaymath">
+\begin{equation*}
+k(k-1)(k-2)1(k-1)
+\end{equation*}
+</div>
+<p data-braille="continuation">colorings.  So all together, we see</p>
+<div class="displaymath">
+\begin{equation*}
+P(G,k) = k(k-1)(k-2)(k-2)(k-2) + k(k-1)(k-2)1(k-1)\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">In future sections we will see other ways to compute this function.</p>
+</div>
+<span class="incontext"><a href="sec_count-graph-intro.html#solution-443">in-context</a></span>
 </body>
 </html>
