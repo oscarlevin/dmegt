@@ -264,7 +264,7 @@
       <p>
         Find the chromatic function <m>P(G,k)</m> for the graph <m>G</m> below.
       </p>
-      <image xml:id="house-graph" width="30%">
+      <image xml:id="house-graph" width="25%">
         <latex-image>
           \begin{tikzpicture}
             {\tiny
@@ -315,13 +315,13 @@
             <p>
               First, find <m>P(P_4,7)</m> and <m>P(K_5, 7)</m> for labeled graphs and explain why you are correct.  Then say what <m>P(P_4,k)</m> and <m>P(K_5,k)</m> will be.
             </p>
-            <sidebyside widths="35% 25%" valign="bottom">
+            <sidebyside widths="40% 25%" valign="middle">
               <image xml:id="p4-jag">
                 <description></description>
                 <latex-image>
                   \begin{tikzpicture}
                     {
-                      \footnotesize
+                      \tiny
                       \draw (0,0) \vb{$a$} -- (1,1) \va{$b$} -- (2,0) \vb{$c$} -- (3,1) \va{$d$} -- (4,0) \vb{$e$};
                     }
                   \end{tikzpicture}
@@ -331,7 +331,7 @@
                 <latex-image>
                   \begin{tikzpicture}
                     {
-                      \footnotesize
+                      \tiny
                         \draw (90:1) \va{$a$} -- (18:1) \va{$b$} -- (90-2*72:1) \vb{$c$} -- (90-3*72:1) \vb{$d$} -- (90-4*72:1) \va{$e$} -- (18:1) -- (90-3*72:1) -- (90:1) -- (90-2*72:1) -- (90-4*72:1) -- cycle;
                     }
                   \end{tikzpicture}
