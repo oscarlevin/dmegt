@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_count-colorings-pie">
+  <title>PIE for Counting Colorings</title>
+  
+  
+  <introduction>
+    <p>
+      We have seen how to compute the chromatic function for some simple graphs like paths and complete graphs, and that we could basically just us the multiplicative principle to do this.  For more complicated graphs, we will need another approach.  In this section we will consider one such technique, which also serves as a nice reminder of how to use the Principle of Inclusion and Exclusion.
+    </p>
+  </introduction>
+
+  <worksheet xml:id="ws-count-colorings-pie">
+    <title>Activity: Counting Colorings with PIE</title>
+    <introduction>
+      <p>
+     Let's use the Principle of Inclusion and Exclusion to find the chromatic function for the path <m>P_3</m> shown below.  We already know what the answer should be, but using PIE will give another way to compute this, and will allow use to find the chromatic function for more complicated graphs.
+      </p>
+      <p>
+        <nbsp/>
+      </p>
+      <image xml:id="edge-labeled-p3" width="35%">
+        <latex-image>
+        \begin{tikzpicture}
+          {\tiny
+            \draw (0,0) \vb{\tiny $v_1$} -- (1,0) \vb{$v_2$} -- (2,0) \vb{$v_3$} -- (3,0) \vb{$v_4$};
+            \draw (0,0) -- (1,0) node[midway, above]{$e_1$};
+            \draw (1,0) -- (2,0) node[midway, above]{\tiny $e_2$};
+            \draw (2,0) -- (3,0) node[midway, above]{$e_3$};
+          }
+        \end{tikzpicture}
+        </latex-image>
+      </image>
+    </introduction>
+
+    <exercise workspace="10%">
+      <statement>
+        <p>
+        First, how many <m>k</m>-colorings are there, including all those that are not <q>proper</q>?  That is we include those colorings in which adjacent vertices <em>are</em> colored the same.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise workspace="5%">
+      <statement>
+        <p>
+        Now exclude those colorings that are not proper!  A coloring could not be proper because the vertices of <m>e_1</m> are colored identically, or the vertices of <m>e_2</m>, or of <m>e_3</m>, or of <m>e_1</m>
+          <em>and</em>
+          <m>e_2</m>, etc.  Make a table giving the number of colorings that have the vertices of each specified edge(s) colored the same.
+        </p>
+        <p>
+          <nbsp/>
+        </p>
+        <sidebyside>
+          <tabular>
+            <row bottom="medium">
+              <cell right="medium">
+                          Edge(s) with same colored vertices
+              </cell>
+              <cell right="medium">
+                <m>~e_1~</m>
+              </cell>
+              <cell right="medium">
+                <m>~e_2~</m>
+              </cell>
+              <cell right="medium">
+                <m>~e_3~</m>
+              </cell>
+              <cell right="medium">
+                <m>e_1</m> &amp;
+                <m>e_2</m>
+              </cell>
+              <cell right="medium">
+                <m>e_1</m> &amp;
+                <m>e_3</m>
+              </cell>
+              <cell right="medium">
+                <m>e_2</m> &amp;
+                <m>e_3</m>
+              </cell>
+              <cell>
+                <m>e_1</m>,                <m>e_2</m>, &amp;  <m>e_3</m>
+              </cell>
+            </row>
+            <row>
+              <cell right="medium">
+                          Number of <m>k</m>-colorings of <m>G</m>
+              </cell>
+              <cell right="medium">
+              </cell>
+              <cell right="medium">
+              </cell>
+              <cell right="medium">
+              </cell>
+              <cell right="medium">
+              </cell>
+              <cell right="medium">
+              </cell>
+              <cell right="medium">
+              </cell>
+              <cell>
+              </cell>
+            </row>
+          </tabular>
+        </sidebyside>
+      </statement>
+    </exercise>
+    <exercise workspace="10%">
+      <statement>
+        <p>
+        Use PIE to combine the numbers above to give the chromatic function.  Is this the same function that you got using the multiplicative principle?
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+        Let's try some other graphs.  Use PIE to find <m>P(C_4, k)</m> (label the edges of <m>C_4</m> as <m>e_1, e_2, e_3, e_4</m> in counter-clockwise order).  Then repeat for <m>P(C_5, k)</m>.
+        </p>
+      </statement>
+    </exercise>
+  </worksheet>
+
+  <subsection xml:id="subsec-count-colorings-pie-summary">
+    <title>Advantages and Disadvantages</title>
+    <p>
+      Let's review the key features of how to use the Principle of Inclusion and Exclusion to compute the chromatic function of a graph.
+      <ol>
+        <li>
+          <p>
+            First, we count the number of all colorings, both proper and not.  This will always be <m>k^n</m> where <m>n</m> is the number of vertices.
+          </p>
+        </li>
+        <li>
+          <p>
+            Now we will subtract the colorings that are not proper.  To count these, we use PIE.
+          </p>
+        </li>
+        <li>
+          <p>
+            For each individual edge, we count the number of colorings of the graph in which the endpoints of that edge are colored the same.  Let's say that such a coloring <term>violates the edge</term>.  This will be <m>k^{n-1}</m> for each edge.  Add up all of these.
+          </p>
+        </li>
+        <li>
+          <p>
+            Now for each pair of edges, count the number of colorings that violate both edges (that is, colorings in which both edges have their respective endpoints colored the same).  Subtract each of these.
+          </p>
+        </li>
+        <li>
+          <p>
+            Then for each set of three edges, count the number of colorings that violate all three edges.  Add these back in.
+          </p>
+        </li>
+        <li>
+          <p>
+            Keep going until you add or subtract the number of colorings in which all edges have their endpoints colored the same (all edges are violated).
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      Clearly, when a graph contains a lot of edges, this process might be quite tedious.  The formula for PIE with more than three sets is too long to write down, so for a graph with 20 edges, this would be ridiculous.  So why even bother?
+    </p>
+
+    <p>
+      Two reasons: first, if the graph is <q>regular enough,</q> then it might be that the number of colorings that violate each set of edges (of a particular size) will be the same.  Then the formula we get out of PIE can be greatly simplified, just like it was when we counted surjective functions or derangements in <xref ref="sec_advPIE"/>.  Let's consider an example of this.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Find <m>P(C_6,k)</m> using the Principle of Inclusion and Exclusion.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Label the edges of <m>C_6</m> as <m>e_1, \ldots e_6</m> consecutively going around counterclockwise, where <m>e_1 = \{v_1, v_2\}</m>, <m>e_2 = \{v_2, v_3\}</m>, and so on, until <m>e_6 = \{v_6, v_1\}</m>. There are <m>k^6</m> colorings of all the vertices, but lots of these are not proper.  Let's count the non-proper ones.   
+        </p>
+        <p>
+          For each individual edge, there are <m>k^5</m> colorings in which violate that edge (<m>k</m> choices for one of the end points, 1 choice for the other, and <m>k</m> choices for each of the other 4 vertices).  So we can start our PIE computation with <m>6 \cdot k^5</m>.
+        </p>
+        <p>
+          Now look at pairs of edges.  No matter what two edges we pick, there will be <m>k^4</m> colorings in which both edges are violated.  For example, if we look at the edges <m>e_1</m> and <m>e_2</m>, then there are three vertices that we must worry about: <m>v_1, v_2</m> for <m>e_1</m> and <m>v_2, v_3</m> for <m>e_2</m>.  Whatever color we pick for <m>v_1</m> must be the same as <m>v_2</m>.  And then to satisfy <m>e_2</m>, we must make <m>v_3</m> the same color as well.  This gives <m>k</m> choices for these three vertices, and then <m>k</m> choices for <em>each</em> of the remaining <m>3</m> vertices.  However, if we pick <m>e_1</m> and <m>e_3</m>, now we have four vertices to worry about: <m>v_1, v_2</m> for <m>e_1</m> and <m>v_3, v_4</m> for <m>e_3</m>.  We don't need <m>v_2</m> and <m>v_3</m> to be the same, but still we find that there are <m>k^4</m> colorings.  One choice of <m>k</m> for <m>v_1</m> and <m>v_2</m>, another for <m>v_3</m> and <m>v_4</m>, and then choices for each of <m>v_5</m> and <m>v_6</m>. 
+        </p>
+
+        <p>
+          Since any of the <m>\binom{6}{2}</m> pairs of edges have <m>k^4</m> colorings in which each pair is violated, we will subtract <m>\binom{6}{2}k^4</m> from our total. 
+        </p>
+
+        <p>
+          For three edge sets, we will have to add <m>\binom{6}{3}k^3</m>, since again, by checking the various ways that the three edges could relate to each other, we see that no matter what, there are <m>k^3</m> colorings that violate the three edges.
+        </p>
+
+        <p>
+          If we keep going and then apply PIE, we find
+          <me>
+            P(C_6, k) = k^6 - \left[\binom{6}{1}k^5 - \binom{6}{2}k^4+\binom{6}{3}k^3 - \binom{6}{4}k^2 + \binom{6}{5}k^1 - \binom{6}{6}k^1]
+          </me>.
+          But look carefully at the last term: shouldn't that be <m>\binom{6}{6}k^0</m>?  That would certainly fit the pattern better, but it would be wrong.  The reason is that this term should count the number of ways in which all six edges have their endpoints colored the same.  There are <m>k</m> choices for what the common color is, not 1 choice!  So even in this very nice situation, we must be careful.
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      By way of contrast, consider how you would use PIE to find the chromatic function for the following relatively simple graph.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Find <m>P(G,k)</m> for the graph <m>G</m> below, using PIE.
+        </p>
+        <image xml:id="house-graph-edge-labeled" width="25%">
+          <latex-image>
+          \begin{tikzpicture}
+            {\tiny
+              \draw (0,0) \vb{$v_1$} -- (.75, .5) node[midway, below]{$e_1$} \vr{$v_2$} -- (0,1) node[midway, above]{$e_2$} \va{$v_3$} -- (-1,1) node[midway,above]{$e_3$} \va{$v_4$} -- (-1,0) node[midway,left]{$e_4$} \vb{$v_5$} -- (0,0) node[midway,below]{$e_5$} -- (0,1) node[midway,right]{$e_6$};
+             }
+          \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+      <solution>
+        <p>
+          First, there are five vertices, so the total number of colorings is <m>k^5</m>.  Now we count colorings that violate single edges.  Each edge has <m>k^4</m> such colorings, and there are 6 edges.
+        </p>
+
+        <p>
+          Now look at pairs of edges.  Each of the <m>\binom{6}{2} = 15</m> pairs will have <m>k^3</m> violating colorings.
+        </p>
+
+        <p>
+          The case for three edges is now more complicated.  There are <m>\binom{6}{3} = 20</m> sets of three edges, and most of these give <m>k^2</m> colorings.  The only exception is the set <m>\{e_1, e_2, e_6\}</m>, since this forms a 3-cycle and thus involves only three vertices.  For this set we have <m>k^3</m> colorings that violate the edges.  So all together, the 3-edge-set colorings contribute <m>19k^2 + k^3</m>.
+        </p>
+
+        <p>
+          For sets of four edges, there are <m>\binom{6}{4} = 15</m> sets, but 3 of these include <m>\{e_1, e_2, e_6}</m> as a subset, and these have <m>k^2</m> violating colorings.  Also, the set <m>\{e_3, e_4, e_5, e_6\}</m> has <m>k^2</m> violating subsets.  The remaining <m>11</m> subsets have just <m>k</m> violating subsets (since they will touch all five vertices).  All together: <m>11k+4k^2</m>
+        </p>
+
+        <p>
+          Five edge subsets: there are 6 of them, each including all but one edge.  No matter what edge we don't include in the set, all five vertices must be colored the same to violate the five edges, so there are <m>6k</m> colorings here. 
+        </p>
+
+        <p>
+          Finally, there are <m>k</m> colorings that violate all six edges (all vertices are colored the same).
+        </p>
+
+        <p>
+          Putting this all together using PIE:
+          <me>
+            k^5 - \left[6k^4 - 15k^3 + (19k^2 + k^3) - (11k+4k^2) + 6k - k\right]
+          </me>
+          which simplifies to 
+          <me>
+            k^6 - 6k^4 + 14k^3 - 15k^2 + 6k
+          </me>.          
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      The example above shows that it is possible to use PIE, but it requires being very careful and might not be worth the effort.
+      Even if we don't use this approach very often, it does illustrate something very interesting about the chromatic function: that these really should be called chromatic <em>polynomials</em>!  
+    </p>
+    <p>
+      No matter how complicated a graph is, we <em>could</em> always use this PIE approach to finding the chromatic function (even if doing so would be prohibitively burdensome).  In the expression we get, for every set of edges, the number of colorings that violate those edges will be <m>k^n</m> for some value of <m>n</m>.  We always have <m>k</m> choices some number of times.  When we combine all these many, many expressions, we will have some sum and difference of different powers of <m>k</m>.  In other words, the function we arrive at will necessarily be a <em>polynomial</em> in the variable <m>k</m>.  What is more, the leading coefficient of this polynomial will be <m>k^n</m>, where <m>n</m> is the number of vertices in the graph. 
+    </p> 
+  </subsection>
+
+  <exercises xml:id="exercises-count-color-pie">
+    <exercise>
+      <statement>
+        <p>
+          Use the Principle of Inclusion and Exclusion to calculate <m>P(K_4, k)</m> (label edges <m>e_1, \ldots, e_6</m>).  Explain how you know each term in the formula is correct.  Then compare what you get to the formula <m>P(K_4,k) = k(k-1)(k-2)(k-3)</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Consider the graph <m>G</m> that consists of <m>4</m> disconnected edges (so it is the disjoint union of <m>4</m> copies of <m>P_1</m>).
+        </p>
+        <image xml:id="p1-unions" width="30%">
+          <latex-image>
+            \begin{tikzpicture}
+              {\tiny
+                \foreach \i in {1,...,4}{
+                  \draw (\i,0) \vb{$a_\i$} -- (\i,1) node[midway,left]{$e_\i$} \va{$b_\i$};
+                }
+              }
+            \end{tikzpicture}
+          </latex-image>          
+        </image>
+        <p>
+          <ol>
+            <li>
+              <p>
+                Find <m>P(G,k)</m> using the multiplicative principle.
+              </p>
+            </li>
+            <li>
+              <p>
+                Find <m>P(G,k)</m> using PIE. Verify that this gives the same answer as the previous part.
+              </p>
+            </li>
+            <li>
+              <p>
+                Generalize: what if there are <m>n</m> copies of <m>P_1</m> instead of just 4?  What happens for each counting technique.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          What will the last term be in the PIE calculation of <m>P(G,k)</m>?  Assume <m>G</m> has at least one edge. Consider first the case where <m>G</m> is connected, and then what happens when <m>G</m> has <m>p</m> connected components.  
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Prove that if a graph has at least one edge, then the constant term of the chromatic polynomial is <m>0</m>.  Explain why this is true both by using PIE (see the previous exercise) and why it makes sense in terms of graph coloring.
+        </p>
+      </statement>
+    </exercise>
+  </exercises>
+</section>
+
