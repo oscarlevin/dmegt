@@ -4,6 +4,7 @@
 <title>Counting Colorings of Graphs</title>
 
   <xi:include href="sec_count-graph-intro.ptx"/>
+  <xi:include href="sec_count-color-pie.ptx"/>
   <!-- <xi:include href="sec_count-graph-rec.ptx"/> -->
 </chapter>
 

@@ -1,0 +1,284 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-04-21T10:55:27-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PIE for Counting Colorings</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="levin-DMEGT" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://discrete.openmathbooks.org/dmoi3.html" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="dmegt.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">Early Graph Theory</span></a></h1>
+<p class="byline">Oscar Levin</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_count-graph-intro.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_counting-graphs.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="backmatter.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_count-graph-intro.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_counting-graphs.html" title="Up">Up</a><a class="next-button button toolbar-item" href="backmatter.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="RGW"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="xOf">Preface</a></li>
+<li><a href="preface-2.html" data-scroll="dVo">How to use this book</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_graphtheory.html" data-scroll="gBz"><span class="codenumber">1</span> <span class="title">Graphs and other Discrete Structures</span></a><ul>
+<li><a href="sec_intro-intro.html" data-scroll="hPw">What is Discrete Mathematics?</a></li>
+<li><a href="sec_gt-intro.html" data-scroll="HLu">Graphs</a></li>
+<li><a href="sec_intro-sets.html" data-scroll="ltW">Sets</a></li>
+<li><a href="sec_intro-functions.html" data-scroll="CkQ">Functions</a></li>
+<li><a href="sec_gt-carefully.html" data-scroll="sec_gt-carefully">Graphs Done Right</a></li>
+<li><a href="sec_coloring.html" data-scroll="qyO">Coloring</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logic.html" data-scroll="wur"><span class="codenumber">2</span> <span class="title">Symbolic Logic and Proofs</span></a><ul>
+<li><a href="sec_intro-statements.html" data-scroll="QDd">Mathematical Statements</a></li>
+<li><a href="sec_propositional.html" data-scroll="XMq">Propositional Logic</a></li>
+<li><a href="sec_logic-proofs.html" data-scroll="lnf">Proofs</a></li>
+<li><a href="sec_logic-induction.html" data-scroll="sec_logic-induction">Mathematical Induction</a></li>
+<li><a href="sec_trees.html" data-scroll="gor">Trees</a></li>
+<li><a href="sec_paths.html" data-scroll="tPg">Euler Paths and Circuits</a></li>
+<li><a href="sec_planar.html" data-scroll="ttH">Planar Graphs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_counting.html" data-scroll="raE"><span class="codenumber">3</span> <span class="title">Counting</span></a><ul>
+<li><a href="sec_counting-addmult.html" data-scroll="sJa">Additive and Multiplicative Principles</a></li>
+<li><a href="sec_counting-binom.html" data-scroll="vZs">Binomial Coefficients</a></li>
+<li><a href="sec_counting-combperm.html" data-scroll="yda">Combinations and Permutations</a></li>
+<li><a href="sec_comb-proofs.html" data-scroll="SUg">Combinatorial Proofs</a></li>
+<li><a href="sec_stars-and-bars.html" data-scroll="qkt">Stars and Bars</a></li>
+<li><a href="sec_advPIE.html" data-scroll="HKU">Advanced Counting Using PIE</a></li>
+<li><a href="sec_count-conc.html" data-scroll="Bmb">Chapter Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_sequences.html" data-scroll="KxW"><span class="codenumber">4</span> <span class="title">Sequences</span></a><ul>
+<li><a href="sec_seq_intro.html" data-scroll="tgm">Describing Sequences</a></li>
+<li><a href="sec_seq-arithgeom.html" data-scroll="lIR">Arithmetic and Geometric Sequences</a></li>
+<li><a href="sec_polyfit.html" data-scroll="ylR">Polynomial Fitting</a></li>
+<li><a href="sec_recurrence.html" data-scroll="bcV">Solving Recurrence Relations</a></li>
+<li><a href="sec_sequences-conc.html" data-scroll="YaY">Chapter Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_counting-graphs.html" data-scroll="ch_counting-graphs"><span class="codenumber">5</span> <span class="title">Counting Colorings of Graphs</span></a><ul>
+<li><a href="sec_count-graph-intro.html" data-scroll="sec_count-graph-intro">The Chromatic Function</a></li>
+<li><a href="sec_count-colorings-pie.html" data-scroll="sec_count-colorings-pie" class="active">PIE for Counting Colorings</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="mqL"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="SxU"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="yFd"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="GjC"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_count-colorings-pie"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.2</span> <span class="title">PIE for Counting Colorings</span>
+</h2>
+<a href="sec_count-colorings-pie.html" class="permalink">¶</a><section class="introduction" id="introduction-34"><p id="p-4832">We have seen how to compute the chromatic function for some simple graphs like paths and complete graphs, and that we could basically just us the multiplicative principle to do this.  For more complicated graphs, we will need another approach.  In this section we will consider one such technique, which also serves as a nice reminder of how to use the Principle of Inclusion and Exclusion.</p></section><section class="worksheet" id="ws-count-colorings-pie"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Activity: Counting Colorings with PIE</span>
+</h3>
+<a href="sec_count-colorings-pie.html#ws-count-colorings-pie" class="permalink">¶</a><section class="introduction" id="introduction-35"><p id="p-4833">Let's use the Principle of Inclusion and Exclusion to find the chromatic function for the path \(P_3\) shown below.  We already know what the answer should be, but using PIE will give another way to compute this, and will allow use to find the chromatic function for more complicated graphs.</p>
+<p id="p-4834"> </p>
+<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="images/edge-labeled-p3.svg" style="width: 100%; height: auto;" alt=""></div></section><article class="exercise exercise-like" id="exercise-404"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-4835">First, how many \(k\)-colorings are there, including all those that are not “proper”?  That is we include those colorings in which adjacent vertices <em class="emphasis">are</em> colored the same.</p></article><article class="exercise exercise-like" id="exercise-405"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-4836">Now exclude those colorings that are not proper!  A coloring could not be proper because the vertices of \(e_1\) are colored identically, or the vertices of \(e_2\text{,}\) or of \(e_3\text{,}\) or of \(e_1\) <em class="emphasis">and</em> \(e_2\text{,}\) etc.  Make a table giving the number of colorings that have the vertices of each specified edge(s) colored the same.</p>
+<p id="p-4837"> </p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">Edge(s) with same colored vertices</td>
+<td class="l m b2 r2 l0 t0 lines">\(~e_1~\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(~e_2~\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(~e_3~\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(e_1\) &amp; \(e_2\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(e_1\) &amp; \(e_3\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(e_2\) &amp; \(e_3\)</td>
+<td class="l m b2 r0 l0 t0 lines" data-braille="last-cell">\(e_1\text{,}\)                \(e_2\text{,}\) &amp;  \(e_3\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">Number of \(k\)-colorings of \(G\)</td>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+</table></div></div></div></article><article class="exercise exercise-like" id="exercise-406"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-4838">Use PIE to combine the numbers above to give the chromatic function.  Is this the same function that you got using the multiplicative principle?</p></article><article class="exercise exercise-like" id="exercise-407"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-4839">Let's try some other graphs.  Use PIE to find \(P(C_4, k)\) (label the edges of \(C_4\) as \(e_1, e_2, e_3, e_4\) in counter-clockwise order).  Then repeat for \(P(C_5, k)\text{.}\)</p></article></section><section class="subsection" id="subsec-count-colorings-pie-summary"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Advantages and Disadvantages</span>
+</h3>
+<a href="sec_count-colorings-pie.html#subsec-count-colorings-pie-summary" class="permalink">¶</a><p id="p-4840">Let's review the key features of how to use the Principle of Inclusion and Exclusion to compute the chromatic function of a graph.</p>
+<ol class="decimal">
+<li id="li-2083"><p id="p-4841">First, we count the number of all colorings, both proper and not.  This will always be \(k^n\) where \(n\) is the number of vertices.</p></li>
+<li id="li-2084"><p id="p-4842">Now we will subtract the colorings that are not proper.  To count these, we use PIE.</p></li>
+<li id="li-2085"><p id="p-4843">For each individual edge, we count the number of colorings of the graph in which the endpoints of that edge are colored the same.  Let's say that such a coloring <dfn class="terminology">violates the edge</dfn>.  This will be \(k^{n-1}\) for each edge.  Add up all of these.</p></li>
+<li id="li-2086"><p id="p-4844">Now for each pair of edges, count the number of colorings that violate both edges (that is, colorings in which both edges have their respective endpoints colored the same).  Subtract each of these.</p></li>
+<li id="li-2087"><p id="p-4845">Then for each set of three edges, count the number of colorings that violate all three edges.  Add these back in.</p></li>
+<li id="li-2088"><p id="p-4846">Keep going until you add or subtract the number of colorings in which all edges have their endpoints colored the same (all edges are violated).</p></li>
+</ol>
+<p id="p-4847">Clearly, when a graph contains a lot of edges, this process might be quite tedious.  The formula for PIE with more than three sets is too long to write down, so for a graph with 20 edges, this would be ridiculous.  So why even bother?</p>
+<p id="p-4848">Two reasons: first, if the graph is “regular enough,” then it might be that the number of colorings that violate each set of edges (of a particular size) will be the same.  Then the formula we get out of PIE can be greatly simplified, just like it was when we counted surjective functions or derangements in <a href="sec_advPIE.html" class="internal" title="Section 3.6: Advanced Counting Using PIE">Section 3.6</a>.  Let's consider an example of this.</p>
+<article class="example example-like" id="example-126"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.1</span><span class="period">.</span>
+</h6>
+<p id="p-4849">Find \(P(C_6,k)\) using the Principle of Inclusion and Exclusion.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-444" id="solution-444"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-444"><div class="solution solution-like">
+<p id="p-4850">Label the edges of \(C_6\) as \(e_1, \ldots e_6\) consecutively going around counterclockwise, where \(e_1 = \{v_1, v_2\}\text{,}\) \(e_2 = \{v_2, v_3\}\text{,}\) and so on, until \(e_6 = \{v_6, v_1\}\text{.}\) There are \(k^6\) colorings of all the vertices, but lots of these are not proper.  Let's count the non-proper ones.</p>
+<p id="p-4851">For each individual edge, there are \(k^5\) colorings in which violate that edge (\(k\) choices for one of the end points, 1 choice for the other, and \(k\) choices for each of the other 4 vertices).  So we can start our PIE computation with \(6 \cdot k^5\text{.}\)</p>
+<p id="p-4852">Now look at pairs of edges.  No matter what two edges we pick, there will be \(k^4\) colorings in which both edges are violated.  For example, if we look at the edges \(e_1\) and \(e_2\text{,}\) then there are three vertices that we must worry about: \(v_1, v_2\) for \(e_1\) and \(v_2, v_3\) for \(e_2\text{.}\)  Whatever color we pick for \(v_1\) must be the same as \(v_2\text{.}\)  And then to satisfy \(e_2\text{,}\) we must make \(v_3\) the same color as well.  This gives \(k\) choices for these three vertices, and then \(k\) choices for <em class="emphasis">each</em> of the remaining \(3\) vertices.  However, if we pick \(e_1\) and \(e_3\text{,}\) now we have four vertices to worry about: \(v_1, v_2\) for \(e_1\) and \(v_3, v_4\) for \(e_3\text{.}\)  We don't need \(v_2\) and \(v_3\) to be the same, but still we find that there are \(k^4\) colorings.  One choice of \(k\) for \(v_1\) and \(v_2\text{,}\) another for \(v_3\) and \(v_4\text{,}\) and then choices for each of \(v_5\) and \(v_6\text{.}\)</p>
+<p id="p-4853">Since any of the \(\binom{6}{2}\) pairs of edges have \(k^4\) colorings in which each pair is violated, we will subtract \(\binom{6}{2}k^4\) from our total.</p>
+<p id="p-4854">For three edge sets, we will have to add \(\binom{6}{3}k^3\text{,}\) since again, by checking the various ways that the three edges could relate to each other, we see that no matter what, there are \(k^3\) colorings that violate the three edges.</p>
+<p id="p-4855">If we keep going and then apply PIE, we find</p>
+<div class="displaymath">
+\begin{equation*}
+P(C_6, k) = k^6 - \left[\binom{6}{1}k^5 - \binom{6}{2}k^4+\binom{6}{3}k^3 - \binom{6}{4}k^2 + \binom{6}{5}k^1 - \binom{6}{6}k^1]\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">But look carefully at the last term: shouldn't that be \(\binom{6}{6}k^0\text{?}\)  That would certainly fit the pattern better, but it would be wrong.  The reason is that this term should count the number of ways in which all six edges have their endpoints colored the same.  There are \(k\) choices for what the common color is, not 1 choice!  So even in this very nice situation, we must be careful.</p>
+</div></div>
+</div></article><p id="p-4856">By way of contrast, consider how you would use PIE to find the chromatic function for the following relatively simple graph.</p>
+<article class="example example-like" id="example-127"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.2</span><span class="period">.</span>
+</h6>
+<p id="p-4857">Find \(P(G,k)\) for the graph \(G\) below, using PIE.</p>
+<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="images/house-graph-edge-labeled.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-445" id="solution-445"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-445"><div class="solution solution-like">
+<p id="p-4858">First, there are five vertices, so the total number of colorings is \(k^5\text{.}\)  Now we count colorings that violate single edges.  Each edge has \(k^4\) such colorings, and there are 6 edges.</p>
+<p id="p-4859">Now look at pairs of edges.  Each of the \(\binom{6}{2} = 15\) pairs will have \(k^3\) violating colorings.</p>
+<p id="p-4860">The case for three edges is now more complicated.  There are \(\binom{6}{3} = 20\) sets of three edges, and most of these give \(k^2\) colorings.  The only exception is the set \(\{e_1, e_2, e_6\}\text{,}\) since this forms a 3-cycle and thus involves only three vertices.  For this set we have \(k^3\) colorings that violate the edges.  So all together, the 3-edge-set colorings contribute \(19k^2 + k^3\text{.}\)</p>
+<p id="p-4861">For sets of four edges, there are \(\binom{6}{4} = 15\) sets, but 3 of these include \(\{e_1, e_2, e_6}\) as a subset, and these have \(k^2\) violating colorings.  Also, the set \(\{e_3, e_4, e_5, e_6\}\) has \(k^2\) violating subsets.  The remaining \(11\) subsets have just \(k\) violating subsets (since they will touch all five vertices).  All together: \(11k+4k^2\)</p>
+<p id="p-4862">Five edge subsets: there are 6 of them, each including all but one edge.  No matter what edge we don't include in the set, all five vertices must be colored the same to violate the five edges, so there are \(6k\) colorings here.</p>
+<p id="p-4863">Finally, there are \(k\) colorings that violate all six edges (all vertices are colored the same).</p>
+<p id="p-4864">Putting this all together using PIE:</p>
+<div class="displaymath">
+\begin{equation*}
+k^5 - \left[6k^4 - 15k^3 + (19k^2 + k^3) - (11k+4k^2) + 6k - k\right]
+\end{equation*}
+</div>
+<p data-braille="continuation">which simplifies to</p>
+<div class="displaymath">
+\begin{equation*}
+k^6 - 6k^4 + 14k^3 - 15k^2 + 6k\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article><p id="p-4865">The example above shows that it is possible to use PIE, but it requires being very careful and might not be worth the effort. Even if we don't use this approach very often, it does illustrate something very interesting about the chromatic function: that these really should be called chromatic <em class="emphasis">polynomials</em>!</p>
+<p id="p-4866">No matter how complicated a graph is, we <em class="emphasis">could</em> always use this PIE approach to finding the chromatic function (even if doing so would be prohibitively burdensome).  In the expression we get, for every set of edges, the number of colorings that violate those edges will be \(k^n\) for some value of \(n\text{.}\)  We always have \(k\) choices some number of times.  When we combine all these many, many expressions, we will have some sum and difference of different powers of \(k\text{.}\)  In other words, the function we arrive at will necessarily be a <em class="emphasis">polynomial</em> in the variable \(k\text{.}\)  What is more, the leading coefficient of this polynomial will be \(k^n\text{,}\) where \(n\) is the number of vertices in the graph.</p></section><section class="exercises" id="exercises-count-color-pie"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<a href="sec_count-colorings-pie.html#exercises-count-color-pie" class="permalink">¶</a><article class="exercise exercise-like" id="exercise-408"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-4867">Use the Principle of Inclusion and Exclusion to calculate \(P(K_4, k)\) (label edges \(e_1, \ldots, e_6\)).  Explain how you know each term in the formula is correct.  Then compare what you get to the formula \(P(K_4,k) = k(k-1)(k-2)(k-3)\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-409"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-4868">Consider the graph \(G\) that consists of \(4\) disconnected edges (so it is the disjoint union of \(4\) copies of \(P_1\)).</p>
+<div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/p1-unions.svg" style="width: 100%; height: auto;" alt=""></div>
+<ol id="p-4869" class="lower-alpha">
+<li id="li-2089"><p id="p-4870">Find \(P(G,k)\) using the multiplicative principle.</p></li>
+<li id="li-2090"><p id="p-4871">Find \(P(G,k)\) using PIE. Verify that this gives the same answer as the previous part.</p></li>
+<li id="li-2091"><p id="p-4872">Generalize: what if there are \(n\) copies of \(P_1\) instead of just 4?  What happens for each counting technique.</p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-410"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-4873">What will the last term be in the PIE calculation of \(P(G,k)\text{?}\)  Assume \(G\) has at least one edge. Consider first the case where \(G\) is connected, and then what happens when \(G\) has \(p\) connected components.</p></article><article class="exercise exercise-like" id="exercise-411"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-4874">Prove that if a graph has at least one edge, then the constant term of the chromatic polynomial is \(0\text{.}\)  Explain why this is true both by using PIE (see the previous exercise) and why it makes sense in terms of graph coloring.</p></article></section></section></div></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-04-21T11:02:01-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution solution-like">
+<h6 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.2.2.1</span><span class="period">.</span>
+</h6>
+<p>First, there are five vertices, so the total number of colorings is \(k^5\text{.}\)  Now we count colorings that violate single edges.  Each edge has \(k^4\) such colorings, and there are 6 edges.</p>
+<p>Now look at pairs of edges.  Each of the \(\binom{6}{2} = 15\) pairs will have \(k^3\) violating colorings.</p>
+<p>The case for three edges is now more complicated.  There are \(\binom{6}{3} = 20\) sets of three edges, and most of these give \(k^2\) colorings.  The only exception is the set \(\{e_1, e_2, e_6\}\text{,}\) since this forms a 3-cycle and thus involves only three vertices.  For this set we have \(k^3\) colorings that violate the edges.  So all together, the 3-edge-set colorings contribute \(19k^2 + k^3\text{.}\)</p>
+<p>For sets of four edges, there are \(\binom{6}{4} = 15\) sets, but 3 of these include \(\{e_1, e_2, e_6}\) as a subset, and these have \(k^2\) violating colorings.  Also, the set \(\{e_3, e_4, e_5, e_6\}\) has \(k^2\) violating subsets.  The remaining \(11\) subsets have just \(k\) violating subsets (since they will touch all five vertices).  All together: \(11k+4k^2\)</p>
+<p>Five edge subsets: there are 6 of them, each including all but one edge.  No matter what edge we don't include in the set, all five vertices must be colored the same to violate the five edges, so there are \(6k\) colorings here.</p>
+<p>Finally, there are \(k\) colorings that violate all six edges (all vertices are colored the same).</p>
+<p>Putting this all together using PIE:</p>
+<div class="displaymath">
+\begin{equation*}
+k^5 - \left[6k^4 - 15k^3 + (19k^2 + k^3) - (11k+4k^2) + 6k - k\right]
+\end{equation*}
+</div>
+<p data-braille="continuation">which simplifies to</p>
+<div class="displaymath">
+\begin{equation*}
+k^6 - 6k^4 + 14k^3 - 15k^2 + 6k\text{.}
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="sec_count-colorings-pie.html#solution-445">in-context</a></span>
+</body>
+</html>

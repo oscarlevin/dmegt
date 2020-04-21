@@ -1,0 +1,27 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-04-21T11:01:59-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Let's review the key features of how to use the Principle of Inclusion and Exclusion to compute the chromatic function of a graph.</p>
+<ol class="decimal">
+<li><p>First, we count the number of all colorings, both proper and not.  This will always be \(k^n\) where \(n\) is the number of vertices.</p></li>
+<li><p>Now we will subtract the colorings that are not proper.  To count these, we use PIE.</p></li>
+<li><p>For each individual edge, we count the number of colorings of the graph in which the endpoints of that edge are colored the same.  Let's say that such a coloring <dfn class="terminology">violates the edge</dfn>.  This will be \(k^{n-1}\) for each edge.  Add up all of these.</p></li>
+<li><p>Now for each pair of edges, count the number of colorings that violate both edges (that is, colorings in which both edges have their respective endpoints colored the same).  Subtract each of these.</p></li>
+<li><p>Then for each set of three edges, count the number of colorings that violate all three edges.  Add these back in.</p></li>
+<li><p>Keep going until you add or subtract the number of colorings in which all edges have their endpoints colored the same (all edges are violated).</p></li>
+</ol>
+<span class="incontext"><a href="sec_count-colorings-pie.html#p-4840">in-context</a></span>
+</body>
+</html>

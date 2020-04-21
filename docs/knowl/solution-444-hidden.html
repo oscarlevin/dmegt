@@ -1,0 +1,28 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-04-21T11:02:00-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution solution-like">
+<p>Label the edges of \(C_6\) as \(e_1, \ldots e_6\) consecutively going around counterclockwise, where \(e_1 = \{v_1, v_2\}\text{,}\) \(e_2 = \{v_2, v_3\}\text{,}\) and so on, until \(e_6 = \{v_6, v_1\}\text{.}\) There are \(k^6\) colorings of all the vertices, but lots of these are not proper.  Let's count the non-proper ones.</p>
+<p>For each individual edge, there are \(k^5\) colorings in which violate that edge (\(k\) choices for one of the end points, 1 choice for the other, and \(k\) choices for each of the other 4 vertices).  So we can start our PIE computation with \(6 \cdot k^5\text{.}\)</p>
+<p>Now look at pairs of edges.  No matter what two edges we pick, there will be \(k^4\) colorings in which both edges are violated.  For example, if we look at the edges \(e_1\) and \(e_2\text{,}\) then there are three vertices that we must worry about: \(v_1, v_2\) for \(e_1\) and \(v_2, v_3\) for \(e_2\text{.}\)  Whatever color we pick for \(v_1\) must be the same as \(v_2\text{.}\)  And then to satisfy \(e_2\text{,}\) we must make \(v_3\) the same color as well.  This gives \(k\) choices for these three vertices, and then \(k\) choices for <em class="emphasis">each</em> of the remaining \(3\) vertices.  However, if we pick \(e_1\) and \(e_3\text{,}\) now we have four vertices to worry about: \(v_1, v_2\) for \(e_1\) and \(v_3, v_4\) for \(e_3\text{.}\)  We don't need \(v_2\) and \(v_3\) to be the same, but still we find that there are \(k^4\) colorings.  One choice of \(k\) for \(v_1\) and \(v_2\text{,}\) another for \(v_3\) and \(v_4\text{,}\) and then choices for each of \(v_5\) and \(v_6\text{.}\)</p>
+<p>Since any of the \(\binom{6}{2}\) pairs of edges have \(k^4\) colorings in which each pair is violated, we will subtract \(\binom{6}{2}k^4\) from our total.</p>
+<p>For three edge sets, we will have to add \(\binom{6}{3}k^3\text{,}\) since again, by checking the various ways that the three edges could relate to each other, we see that no matter what, there are \(k^3\) colorings that violate the three edges.</p>
+<p>If we keep going and then apply PIE, we find</p>
+<div class="displaymath">
+\begin{equation*}
+P(C_6, k) = k^6 - \left[\binom{6}{1}k^5 - \binom{6}{2}k^4+\binom{6}{3}k^3 - \binom{6}{4}k^2 + \binom{6}{5}k^1 - \binom{6}{6}k^1]\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">But look carefully at the last term: shouldn't that be \(\binom{6}{6}k^0\text{?}\)  That would certainly fit the pattern better, but it would be wrong.  The reason is that this term should count the number of ways in which all six edges have their endpoints colored the same.  There are \(k\) choices for what the common color is, not 1 choice!  So even in this very nice situation, we must be careful.</p>
+</div></body>
+</html>
