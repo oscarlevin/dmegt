@@ -1,0 +1,308 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-04-23T22:18:41-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Deletion/Contraction Recurrence</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="levin-DMEGT" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://discrete.openmathbooks.org/dmoi3.html" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="dmegt.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">Early Graph Theory</span></a></h1>
+<p class="byline">Oscar Levin</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_count-colorings-pie.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_counting-graphs.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="backmatter.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_count-colorings-pie.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_counting-graphs.html" title="Up">Up</a><a class="next-button button toolbar-item" href="backmatter.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="RGW"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="xOf">Preface</a></li>
+<li><a href="preface-2.html" data-scroll="dVo">How to use this book</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_graphtheory.html" data-scroll="gBz"><span class="codenumber">1</span> <span class="title">Graphs and other Discrete Structures</span></a><ul>
+<li><a href="sec_intro-intro.html" data-scroll="hPw">What is Discrete Mathematics?</a></li>
+<li><a href="sec_gt-intro.html" data-scroll="HLu">Graphs</a></li>
+<li><a href="sec_intro-sets.html" data-scroll="ltW">Sets</a></li>
+<li><a href="sec_intro-functions.html" data-scroll="CkQ">Functions</a></li>
+<li><a href="sec_gt-carefully.html" data-scroll="sec_gt-carefully">Graphs Done Right</a></li>
+<li><a href="sec_coloring.html" data-scroll="qyO">Coloring</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logic.html" data-scroll="wur"><span class="codenumber">2</span> <span class="title">Symbolic Logic and Proofs</span></a><ul>
+<li><a href="sec_intro-statements.html" data-scroll="QDd">Mathematical Statements</a></li>
+<li><a href="sec_propositional.html" data-scroll="XMq">Propositional Logic</a></li>
+<li><a href="sec_logic-proofs.html" data-scroll="lnf">Proofs</a></li>
+<li><a href="sec_logic-induction.html" data-scroll="sec_logic-induction">Mathematical Induction</a></li>
+<li><a href="sec_trees.html" data-scroll="gor">Trees</a></li>
+<li><a href="sec_paths.html" data-scroll="tPg">Euler Paths and Circuits</a></li>
+<li><a href="sec_planar.html" data-scroll="ttH">Planar Graphs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_counting.html" data-scroll="raE"><span class="codenumber">3</span> <span class="title">Counting</span></a><ul>
+<li><a href="sec_counting-addmult.html" data-scroll="sJa">Additive and Multiplicative Principles</a></li>
+<li><a href="sec_counting-binom.html" data-scroll="vZs">Binomial Coefficients</a></li>
+<li><a href="sec_counting-combperm.html" data-scroll="yda">Combinations and Permutations</a></li>
+<li><a href="sec_comb-proofs.html" data-scroll="SUg">Combinatorial Proofs</a></li>
+<li><a href="sec_stars-and-bars.html" data-scroll="qkt">Stars and Bars</a></li>
+<li><a href="sec_advPIE.html" data-scroll="HKU">Advanced Counting Using PIE</a></li>
+<li><a href="sec_count-conc.html" data-scroll="Bmb">Chapter Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_sequences.html" data-scroll="KxW"><span class="codenumber">4</span> <span class="title">Sequences</span></a><ul>
+<li><a href="sec_seq_intro.html" data-scroll="tgm">Describing Sequences</a></li>
+<li><a href="sec_seq-arithgeom.html" data-scroll="lIR">Arithmetic and Geometric Sequences</a></li>
+<li><a href="sec_polyfit.html" data-scroll="ylR">Polynomial Fitting</a></li>
+<li><a href="sec_recurrence.html" data-scroll="bcV">Solving Recurrence Relations</a></li>
+<li><a href="sec_sequences-conc.html" data-scroll="YaY">Chapter Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_counting-graphs.html" data-scroll="ch_counting-graphs"><span class="codenumber">5</span> <span class="title">Counting Colorings of Graphs</span></a><ul>
+<li><a href="sec_count-graph-intro.html" data-scroll="sec_count-graph-intro">The Chromatic Function</a></li>
+<li><a href="sec_count-colorings-pie.html" data-scroll="sec_count-colorings-pie">PIE for Counting Colorings</a></li>
+<li><a href="sec_count-colorings-recursion.html" data-scroll="sec_count-colorings-recursion" class="active">Deletion/Contraction Recurrence</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="mqL"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="SxU"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="yFd"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="GjC"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_count-colorings-recursion"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.3</span> <span class="title">Deletion/Contraction Recurrence</span>
+</h2>
+<a href="sec_count-colorings-recursion.html" class="permalink">¶</a><section class="introduction" id="introduction-36"><p id="p-4875">In this section we will consider a method for counting the colorings of a graph by counting colorings of smaller graphs.  This will lead to a recursion for the chromatic function \(P(G,k)\text{.}\)  This will both help us count colorings for specific graphs, and also give us a tool to prove basic facts about the chromatic function, since having a recursion allows us to give proofs by induction.</p></section><section class="subsection" id="subsec-deletion-contraction"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Two useful ways to make a graph smaller</span>
+</h3>
+<a href="sec_count-colorings-recursion.html#subsec-deletion-contraction" class="permalink">¶</a><p id="p-4876">We will build our recursion for \(P(G,k)\) by make the graph \(G\) smaller (rather than making \(k\) smaller).  For this to work, we must consider how shrinking a graph changes the number of proper colorings.</p>
+<p id="p-4877">A very natural way to reduce the size of a graph is to simply remove one of the edges.  If \(G\) is a graph and \(e\) is a specific edge in \(G\text{,}\) we write \(G-e\) for the graph in which \(e\) is removed from the set of edges.  We read \(G - e\) as “\(G\) delete \(e\)”.  Note that we are not changing the number of vertices here, even if one of the vertices in the edge has degree one in \(G\text{.}\)  In particular, it is possible that \(G\) is a connected graph but \(G-e\) is not.</p>
+<article class="example example-like" id="example-128"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.1</span><span class="period">.</span>
+</h6>
+<p id="p-4878">For the graph \(G\) below, find \(G - e_1\) and \(G - e_2\text{.}\)</p>
+<div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="images/graph-to-delete-edge.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-446" id="solution-446"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-446"><div class="solution solution-like">
+<p id="p-4879">Just delete the edges and keep everything the same.  \(G-e_1\) on the left; \(G-e_2\) on the right:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;">
+<div class="sbspanel" style="width:28.5714285714286%;justify-content:flex-end;"><img src="images/graph-delete-e1.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:28.5714285714286%;justify-content:flex-end;"><img src="images/graph-delete-e2.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+</div></div>
+</div></article><p id="p-4880">A second useful way to reduce the size of a graph is to <dfn class="terminology">contract</dfn> an edge.  This is a little harder to describe.  The idea is that we pull the endpoints of the edge together to form one new vertex (out of the two) and removing the edge.  Any edges that were incident to either vertex will now be incident to the new (combined) vertex, although we delete any double edges that are formed this way, since we are looking at graphs and not multigraphs.</p>
+<p id="p-4881">To be precise, given a graph \(G\) and a specific edge \(e = \{u,v\}\text{,}\) we can form <dfn class="terminology">\(G\) contract \(e\)</dfn>, written \(G/e\) as the graph whose vertices no longer include \(u\) (since it was combined with \(v\)) and whose edges include any \(\{w,v\}\) for all vertices \(w\) that were adjacent to either \(u\) or \(v\text{.}\)</p>
+<p id="p-4882">An example will make this clear.</p>
+<article class="example example-like" id="example-129"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.2</span><span class="period">.</span>
+</h6>
+<p id="p-4883">For the graph \(G\) below, find \(G/e_1\text{,}\) \(G/e_2\) and \(G/e_3\text{.}\)</p>
+<div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="images/graph-to-contract-edge.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-447" id="solution-447"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-447"><div class="solution solution-like">
+<p id="p-4884">Here are the three graphs \(G/e_1\text{,}\) \(G/e_2\text{,}\) and \(G/e_3\text{,}\) from left to right:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:8.333333333333334%;margin-right:8.333333333333334%;">
+<div class="sbspanel" style="width:24%;justify-content:flex-end;"><img src="images/graph-contract-e1.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:12%;justify-content:flex-end;"><img src="images/graph-contract-e2.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:24%;justify-content:flex-end;"><img src="images/graph-contract-e3.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="p-4885">It might be helpful to see what these look like “half way” through the contraction (although this is not really a thing, just a helpful way to think about it).</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:7.5%;margin-right:7.5%;">
+<div class="sbspanel" style="width:23.5294117647059%;justify-content:flex-end;"><img src="images/graph-contract-e1-partial.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:17.6470588235294%;justify-content:flex-end;"><img src="images/graph-contract-e2-partial.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:23.5294117647059%;justify-content:flex-end;"><img src="images/graph-contract-e3-partial.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+</div></div>
+</div></article><p id="p-4886">Note that going from \(G\) to \(G/e\) will reduce the number of vertices by one, and reduce the number of edges by <em class="emphasis">at least</em> one.</p>
+<p id="p-4887">Now let's consider what deletion and contraction has to do with the chromatic function.  First, consider what could happen to the number of colorings in a broad sense.</p>
+<article class="question example-like" id="question-5"><h6 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">5.3.3</span><span class="period">.</span>
+</h6>
+<p id="p-4888">For a fixed value of \(k\text{,}\) which is larger: \(P(G,k)\) or \(P(G-e,k)\text{?}\)</p></article><p id="p-4889">Careful: just because the graph is smaller, doesn't mean it has fewer colorings.  In fact, we must still color the same number of vertices.  However, now the edge we removed is no longer preventing its endpoints from being colored the same.  Thus \(P(G-e,k)\) will be <em class="emphasis">larger</em> than \(P(G,k)\text{.}\)</p>
+<p id="p-4890">How much larger?  Let's count!  Say \(e = \{u,v\}\) and consider \(P(G-e,k)\text{.}\)  Some of the proper colorings in this count will have \(u\) and \(v\) colored the same, and some will have \(u\) and \(v\) colored differently.  Think of making a complete list of all the colorings in two columns: column A has \(u\) and \(v\) the same, and column B has \(u\) and \(v\) different.</p>
+<p id="p-4891">Now every coloring in column B is a proper coloring of \(G\text{.}\)  So the number of colorings in column B is precisely \(P(G,k)\text{.}\)  We must count the colorings in column A, and this will tell us how much larger \(P(G-e,k)\) is than \(P(G,k)\text{.}\)</p>
+<p id="p-4892">Column A gives the colorings of \(G-e\) in which \(u\) and \(v\) are given the same color.  Now look at the proper colorings of \(G/e\text{.}\)  For each coloring in this list, we can assign vertices of \(G-e\) the same colors as they were assigned in \(G/e\text{,}\) except what to do for \(u\) and \(v\) that are the same new vertex in \(G/e\text{?}\)  Well assign \(u\) and \(v\) whatever color the new combined vertex was assigned.  This will still be a proper coloring of \(G-e\text{,}\) but one in which \(u\) and \(v\) have the same color.  In other words, the number of colorings in column A is precisely the number of proper colorings of \(G/e\text{.}\)</p>
+<p id="p-4893">Putting this all together we get</p>
+<div class="displaymath">
+\begin{equation*}
+P(G-e,k) = P(G,k) + P(G/e,k)\text{.}
+\end{equation*}
+</div>
+<p id="p-4894">Rearranging this gives us a recurrence relation for \(P(G,k)\text{,}\) which we call the <em class="emphasis">deletion/contraction recurrence</em>.</p>
+<article class="assemblage assemblage-like" id="assemblage-deletion-contraction-recurrence"><h6 class="heading"><span class="title">Deletion/Contraction Recurrence.</span></h6>
+<p id="p-4895">For any graph \(G\) and any positive integer \(k\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+P(G,k) = P(G-e,k) - P(G/e, k)\text{.}
+\end{equation*}
+</div></article></section><section class="subsection" id="subsec-using-deletion-contraction"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Using the Recurrence</span>
+</h3>
+<a href="sec_count-colorings-recursion.html#subsec-using-deletion-contraction" class="permalink">¶</a><p id="p-4896">Much like the Principle of Inclusion and Exclusion, we can use the Deletion/Contraction Recurrence both to find the chromatic function for specific graphs, and to understand how \(P(G,k)\) behaves as a function in general.  Let's begin with a familiar graph and see how to apply the recurrence to find \(P(G,k)\text{.}\)</p>
+<article class="example example-like" id="example-130"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.4</span><span class="period">.</span>
+</h6>
+<p id="p-4897">Use the Deletion/Contraction recurrence to find \(P(G,k)\) for the graph \(G\) below.</p>
+<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="images/house-graph-edge-labeled-dcr.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-448" id="solution-448"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-448"><div class="solution solution-like">
+<p id="p-4898">We must first pick an edge to delete and contract.  Some might be better to pick than others.  For example, if we use \(e_6\text{,}\) then to find \(P(G-e_6,k)\) we would need to know how to count the colorings of \(C_5\text{.}\)  This will give us the correct answer, but let's avoid this for now by picking \(e_4\text{.}\)</p>
+<p id="p-4899">Here is what the two graphs \(G-e_4\) and \(G/e_4\) look like:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;">
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:flex-end;"><img src="images/house-graph-edge-labeled-dcr-de4.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:flex-end;"><img src="images/house-graph-edge-labeled-dcr-ce4.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="p-4900">We then compute \(P(G-e_4,k) = k(k-1)(k-2)(k-1)(k-1)\) (since \(v_1\) has \(k\) options, \(v_2\) has \(k-1\) options, \(v_3\) has \(k-2\) options, and then \(v_4\) and \(v_5\) each can be any color other than the color of their neighbor).</p>
+<p id="p-4901">On the other hand, \(P(G/e_4,k) = k(k-1)(k-2)(k-2)\text{:}\) the first three vertices must be different, but then \(v_4\) must be different from \(v_1\) and \(v_3\text{,}\) which cannot be the same as each other, so \(v_4\) has \(k-2\) options.</p>
+<p id="p-4902">Putting this all together gives \(P(G,k) = k(k-1)^3(k-2) - k(k-1)(k-2)^2\text{.}\)  You should compare this to the function we found for this graph using other methods.</p>
+</div></div>
+</div></article><p id="p-4903">Since the Deletion/Contraction Recurrence is a recurrence relation, it lends itself nicely to proofs by induction.  This allows us to verify a relatively clean formula for the number of colorings of a cycle.</p>
+<article class="theorem theorem-like" id="thm-cycle-chromatic-polynomial"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.3.5</span><span class="period">.</span>
+</h6>
+<p id="p-4904">For any \(n \ge 3\text{,}\) the number of proper \(k\)-colorings of the cycle \(C_n\) is</p>
+<div class="displaymath">
+\begin{equation*}
+P(C_n, k) = (k-1)^n + (-1)^n(k-1)\text{.}
+\end{equation*}
+</div>
+<article class="proof" id="proof-52"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-4905">We will give a proof by induction on \(n\text{.}\)  For our base case, we consider \(n = 3\text{.}\)  We know that \(P(C_3,k) = k(k-1)(k-2)\text{.}\)  Multiplying this out gives \(k^3 - 3k^2 + 2k\text{.}\)  On the other hand, our formula \((k-1)^3 -(k-1)\) expands as... exactly the same thing!  So we have established our base case.</p>
+<p id="p-4906">Now for the inductive case, let \(n\) be an arbitrary integer at least 3 and assume \(P(C_n,k) = (k-1)^n + (-1)^n(k-1)\text{.}\)  We now consider \(C_{n+1}\text{.}\)  Picking any edge \(e\) in \(C_{n+1}\text{,}\) we note that \(C_{n+1} - e\) is the graph \(P_n\) and that \(C_{n+1}/e\) is \(C_n\text{.}\)  Thus we have:</p>
+<div class="displaymath">
+\begin{align*}
+P(C_{n+1},k) = \amp P(C_{n+1} - e, k) - P(C_{n+1}/e, k) \\
+= \amp P(P_n,k) - P(C_n,k) \\
+= \amp k(k-1)^n - \left[(k-1)^n + (-1)^n(k-1)\right]
+\end{align*}
+</div>
+<p data-braille="continuation">where we are using our inductive hypothesis for \(P(C_n,k)\) and previous work to find \(P(P_n,k)\text{.}\)  Continuing:</p>
+<div class="displaymath">
+\begin{align*}
+P(C_{n+1},k) = \amp k(k-1)^n - (k-1)^n - (-1)^n(k-1) \\
+= \amp (k-1)(k-1)^n + (-1)^{n+1}(k-1)\\
+= \amp (k-1)^{n+1} + (-1)^{n+1}(k-1)
+\end{align*}
+</div>
+<p data-braille="continuation">which is exactly what we claim.</p>
+<p id="p-4907">Therefore, by the principle of mathematical induction, \(P(C_n, k) = (k-1)^n + (-1)^n(k-1)\) for all \(n \ge 3\text{.}\)</p></article></article><p id="p-4908">At the end of the last section, we noted that the Principle of Inclusion and Exclusion demonstrates that \(P(G,k)\) is always a <em class="emphasis">polynomial</em> in the variable \(k\text{.}\)  We can also see this is true using the deletion/contraction recurrence.  In the exercises, you will use strong induction to prove this fact.</p></section><section class="exercises" id="exercises-count-color-recursion"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<a href="sec_count-colorings-recursion.html#exercises-count-color-recursion" class="permalink">¶</a><article class="exercise exercise-like" id="exercise-412"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-4909">Let \(e\) be any edge of \(K_n\text{.}\)  What graph is \(K_n/e\text{?}\)</p></article><article class="exercise exercise-like" id="exercise-413"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-4910">Use the deletion/contraction recurrence to calculate \(P(G,k)\) for the graph below.  Show how this works first by using edge \(e_1\) and then using \(e_2\text{,}\) and show that you get the same answer in both cases.</p>
+<div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="images/del-cont-graph.svg" style="width: 100%; height: auto;" alt=""></div></article><article class="exercise exercise-like" id="exercise-414"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-4911">Sometimes it takes repeated use of the deletion/contraction recurrence to get down to graphs simple enough to just count.  Show how to do this with the graph below.</p>
+<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="images/del-cont-graph-multi-step.svg" style="width: 100%; height: auto;" alt=""></div></article><article class="exercise exercise-like" id="exercise-415"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-4912">In an earlier exercise, you found that for any tree \(T\) with \(n\) edges, \(P(T,k) = k(k-1)^n\) (which agrees with what we know about the path \(P_n\text{,}\) which is a type of tree with \(n\) edges).  Prove this is correct using the deletion/contraction recurrence and a proof by induction.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-114" id="hint-114"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-114"><div class="hint solution-like"><p id="p-4913">A single vertex is a tree, and every tree has a vertex of degree 1.  The edge incident to such a vertex would be a good choice.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-416"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-4914">Prove, using induction and the deletion/contraction recurrence, that \(P(G,k)\) is a polynomial in the variable \(k\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-115" id="hint-115"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-115"><div class="hint solution-like"><p id="p-4915">Use a strong induction proof.  Assume that \(P(G,k)\) is a polynomial for all graphs with fewer than \(n\) edges.  Then consider a graph \(G\) with \(n\) edges and see what the deletion/contraction recurrence gives you.</p></div></div>
+</div></article></section></section></div></main>
+</div>
+</body>
+</html>

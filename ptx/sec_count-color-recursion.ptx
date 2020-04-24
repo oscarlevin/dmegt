@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_count-colorings-recursion">
+  <title>Deletion/Contraction Recurrence</title>
+  <introduction>
+    <p>
+      In this section we will consider a method for counting the colorings of a graph by counting colorings of smaller graphs.  This will lead to a recursion for the chromatic function <m>P(G,k)</m>.  This will both help us count colorings for specific graphs, and also give us a tool to prove basic facts about the chromatic function, since having a recursion allows us to give proofs by induction.
+    </p>
+  </introduction>
+
+  <subsection xml:id="subsec-deletion-contraction">
+    <title>Two useful ways to make a graph smaller</title>
+    
+    <p>
+      We will build our recursion for <m>P(G,k)</m> by make the graph <m>G</m> smaller (rather than making <m>k</m> smaller).  For this to work, we must consider how shrinking a graph changes the number of proper colorings.
+    </p>
+
+    <p>
+      A very natural way to reduce the size of a graph is to simply remove one of the edges.  If <m>G</m> is a graph and <m>e</m> is a specific edge in <m>G</m>, we write <m>G-e</m> for the graph in which <m>e</m> is removed from the set of edges.  We read <m>G - e</m> as <q><m>G</m> delete <m>e</m></q>.  Note that we are not changing the number of vertices here, even if one of the vertices in the edge has degree one in <m>G</m>.  In particular, it is possible that <m>G</m> is a connected graph but <m>G-e</m> is not.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          For the graph <m>G</m> below, find <m>G - e_1</m> and <m>G - e_2</m>. 
+        </p>
+        <image xml:id="graph-to-delete-edge" width="20%">
+          <latex-image>
+            \begin{tikzpicture}
+              {\tiny
+                \draw (0,0) \vb{$v_1$} -- (1,0) \vb{$v_2$} -- (1,1) \va{$v_3$} -- (0,1) \va{$v_4$} -- (0,0) -- (1,1) node[midway, above]{$e_1$} -- (2,0) node[midway, above]{$e_2$} \vb{$v_5$}; 
+              }
+            \end{tikzpicture}
+          </latex-image>          
+        </image>
+      </statement>
+      <solution>
+        <p>
+          Just delete the edges and keep everything the same.  <m>G-e_1</m> on the left; <m>G-e_2</m> on the right:
+        </p>
+        <sidebyside widths="20% 20%" valign="bottom">
+          <image xml:id="graph-delete-e1">
+            <latex-image>
+            \begin{tikzpicture}
+              {\tiny
+                \draw (0,0) \vb{$v_1$} -- (1,0) \vb{$v_2$} -- (1,1) \va{$v_3$} -- (0,1) \va{$v_4$} -- (0,0) (1,1) -- (2,0) node[midway, above]{$e_2$} \vb{$v_5$}; 
+              }
+            \end{tikzpicture}
+            </latex-image>
+          </image>        
+
+          <image xml:id="graph-delete-e2">
+            <latex-image>
+              \begin{tikzpicture}
+              {\tiny
+                \draw (0,0) \vb{$v_1$} -- (1,0) \vb{$v_2$} -- (1,1) \va{$v_3$} -- (0,1) \va{$v_4$} -- (0,0) -- (1,1) node[midway, above]{$e_1$} (2,0) \vb{$v_5$}; 
+              }
+            \end{tikzpicture}
+            </latex-image>
+          </image>     
+        </sidebyside>
+      </solution>
+    </example>
+
+    <p>
+      A second useful way to reduce the size of a graph is to <term>contract</term> an edge.  This is a little harder to describe.  The idea is that we pull the endpoints of the edge together to form one new vertex (out of the two) and removing the edge.  Any edges that were incident to either vertex will now be incident to the new (combined) vertex, although we delete any double edges that are formed this way, since we are looking at graphs and not multigraphs.
+    </p>
+
+    <p>
+      To be precise, given a graph <m>G</m> and a specific edge <m>e = \{u,v\}</m>, we can form <term><m>G</m> contract <m>e</m></term>, written <m>G/e</m> as the graph whose vertices no longer include <m>u</m> (since it was combined with <m>v</m>) and whose edges include any <m>\{w,v\}</m> for all vertices <m>w</m> that were adjacent to either <m>u</m> or <m>v</m>.
+    </p>
+
+    <p>
+      An example will make this clear.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          For the graph <m>G</m> below, find <m>G/e_1</m>, <m>G/e_2</m> and <m>G/e_3</m>. 
+        </p>
+        <image xml:id="graph-to-contract-edge" width="20%">
+          <latex-image>
+            \begin{tikzpicture}
+              {\tiny
+                \draw (0,0) \vb{$v_1$} -- (1,0) node[midway, below]{$e_3$} \vb{$v_2$} -- (1,1) \va{$v_3$} -- (0,1) \va{$v_4$} -- (0,0) -- (1,1) node[midway, above]{$e_1$} -- (2,0) node[midway, above]{$e_2$} \vb{$v_5$}; 
+              }
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+      <solution>
+        <p>
+          Here are the three graphs <m>G/e_1</m>, <m>G/e_2</m>, and <m>G/e_3</m>, from left to right:
+        </p>
+        <sidebyside widths="20% 10% 20%" valign="bottom">
+          <image xml:id="graph-contract-e1">
+            <latex-image>
+              \begin{tikzpicture}
+              {\tiny
+                \draw (1,0) \vb{$v_2$} -- (1,1) \va{$v_3$} -- (0,1) \va{$v_4$} (1,1) -- (2,0) node[midway, above]{$e_2$} \vb{$v_5$}; 
+              }
+              \end{tikzpicture}
+            </latex-image>            
+          </image>
+          <image xml:id="graph-contract-e2">
+            <latex-image>
+              \begin{tikzpicture}
+              {\tiny
+                \draw (0,0) \vb{$v_1$} -- (1,0) node[midway, below]{$e_3$} \vb{$v_2$} -- (1,1) \va{$v_3$} -- (0,1) \va{$v_4$} -- (0,0) -- (1,1) node[midway, above]{$e_1$}; 
+              }
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+          <image xml:id="graph-contract-e3">
+            <latex-image>
+              \begin{tikzpicture}
+              {\tiny
+                \draw (0,0) \vb{$v_1$} (1,1) \va{$v_3$} -- (0,1) \va{$v_4$} -- (0,0) -- (1,1) node[midway, above]{$e_1$} -- (2,0) node[midway, above]{$e_2$} \vb{$v_5$}; 
+              }
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </sidebyside>
+        <p>
+          It might be helpful to see what these look like <q>half way</q> through the contraction (although this is not really a thing, just a helpful way to think about it).
+        </p>
+        <sidebyside widths="20% 15% 20%" valign="bottom">
+          <image xml:id="graph-contract-e1-partial">
+            <latex-image>
+            \begin{tikzpicture}
+              {\tiny
+                \draw[color=black!50] (.65,.65) \vb{$v_1$} -- (1,0) node[midway, below]{$e_3$} \vb{$v_2$} -- (1,1) \va{$v_3$} -- (0,1) \va{$v_4$} -- (.65,.65) -- (1,1) node[midway, above]{$e_1$} -- (2,0) node[midway, above]{$e_2$} \vb{$v_5$}; 
+                \draw (1,0) \vb{$v_2$} -- (1,1) \va{$v_3$} -- (0,1) \va{$v_4$} (1,1) -- (2,0) node[midway, above]{$e_2$} \vb{$v_5$}; 
+              }
+            \end{tikzpicture}
+            </latex-image>
+          </image>
+          <image xml:id="graph-contract-e2-partial">
+            <latex-image>
+              \begin{tikzpicture}
+              {\tiny
+                \draw[color=black!50] (0,0) \vb{$v_1$} -- (1,0) node[midway, below]{$e_3$} \vb{$v_2$} -- (1,1) \va{$v_3$} -- (0,1) \va{$v_4$} -- (0,0) -- (1,1) node[midway, above]{$e_1$} -- (1.5,.5) node[midway, above]{$e_2$} \vb{$v_5$}; 
+                \draw (0,0) \vb{$v_1$} -- (1,0) node[midway, below]{$e_3$} \vb{$v_2$} -- (1,1) \va{$v_3$} -- (0,1) \va{$v_4$} -- (0,0) -- (1,1) node[midway, above]{$e_1$}; 
+
+              }
+            \end{tikzpicture}
+            </latex-image>
+          </image>
+          <image xml:id="graph-contract-e3-partial">
+            <latex-image>
+              \begin{tikzpicture}
+              {\tiny
+                \draw[color=black!50] (0,0) \vb{$v_1$} -- (.5,0) node[midway, below]{$e_3$} \vb{$v_2$} -- (1,1) \va{$v_3$} -- (0,1) \va{$v_4$} -- (0,0) -- (1,1) node[midway, above]{$e_1$} -- (2,0) node[midway, above]{$e_2$} \vb{$v_5$}; 
+                \draw (0,0) \vb{$v_1$} (1,1) \va{$v_3$} -- (0,1) \va{$v_4$} -- (0,0) -- (1,1) node[midway, above]{$e_1$} -- (2,0) node[midway, above]{$e_2$} \vb{$v_5$}; 
+
+              }
+            \end{tikzpicture}
+            </latex-image>
+          </image>
+        </sidebyside>
+      </solution>
+    </example>
+    <p>
+      Note that going from <m>G</m> to <m>G/e</m> will reduce the number of vertices by one, and reduce the number of edges by <em>at least</em> one.
+    </p>
+
+    <p>
+      Now let's consider what deletion and contraction has to do with the chromatic function.  First, consider what could happen to the number of colorings in a broad sense.
+    </p>
+
+    <question>
+      <statement>
+        <p>
+          For a fixed value of <m>k</m>, which is larger: <m>P(G,k)</m> or <m>P(G-e,k)</m>? 
+        </p>
+      </statement>
+    </question>
+
+    <p>
+      Careful: just because the graph is smaller, doesn't mean it has fewer colorings.  In fact, we must still color the same number of vertices.  However, now the edge we removed is no longer preventing its endpoints from being colored the same.  Thus <m>P(G-e,k)</m> will be <em>larger</em> than <m>P(G,k)</m>.  
+    </p>
+
+    <p>
+      How much larger?  Let's count!  Say <m>e = \{u,v\}</m> and consider <m>P(G-e,k)</m>.  Some of the proper colorings in this count will have <m>u</m> and <m>v</m> colored the same, and some will have <m>u</m> and <m>v</m> colored differently.  Think of making a complete list of all the colorings in two columns: column A has <m>u</m> and <m>v</m> the same, and column B has <m>u</m> and <m>v</m> different.
+    </p>
+
+    <p>
+      Now every coloring in column B is a proper coloring of <m>G</m>.  So the number of colorings in column B is precisely <m>P(G,k)</m>.  We must count the colorings in column A, and this will tell us how much larger <m>P(G-e,k)</m> is than <m>P(G,k)</m>.
+    </p>
+
+    <p>
+      Column A gives the colorings of <m>G-e</m> in which <m>u</m> and <m>v</m> are given the same color.  Now look at the proper colorings of <m>G/e</m>.  For each coloring in this list, we can assign vertices of <m>G-e</m> the same colors as they were assigned in <m>G/e</m>, except what to do for <m>u</m> and <m>v</m> that are the same new vertex in <m>G/e</m>?  Well assign <m>u</m> and <m>v</m> whatever color the new combined vertex was assigned.  This will still be a proper coloring of <m>G-e</m>, but one in which <m>u</m> and <m>v</m> have the same color.  In other words, the number of colorings in column A is precisely the number of proper colorings of <m>G/e</m>.
+    </p>
+
+    <p>
+      Putting this all together we get
+      <me>
+        P(G-e,k) = P(G,k) + P(G/e,k)
+      </me>.
+    </p>
+
+    <p>
+      Rearranging this gives us a recurrence relation for <m>P(G,k)</m>, which we call the <em>deletion/contraction recurrence</em>.
+    </p>
+
+    <assemblage xml:id="assemblage-deletion-contraction-recurrence">
+      <title>Deletion/Contraction Recurrence</title>
+      <p>
+        For any graph <m>G</m> and any positive integer <m>k</m>, we have 
+        <me>
+          P(G,k) = P(G-e,k) - P(G/e, k)
+        </me>.
+      </p>
+    </assemblage>
+  </subsection>
+
+  <subsection xml:id="subsec-using-deletion-contraction">
+    <title>Using the Recurrence</title>
+    <p>
+      Much like the Principle of Inclusion and Exclusion, we can use the Deletion/Contraction Recurrence both to find the chromatic function for specific graphs, and to understand how <m>P(G,k)</m> behaves as a function in general.  Let's begin with a familiar graph and see how to apply the recurrence to find <m>P(G,k)</m>.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Use the Deletion/Contraction recurrence to find <m>P(G,k)</m> for the graph <m>G</m> below.
+        </p>
+        <image xml:id="house-graph-edge-labeled-dcr" width="25%">
+          <latex-image>
+          \begin{tikzpicture}
+            {\tiny
+              \draw (0,0) \vb{$v_1$} -- (.75, .5) node[midway, below]{$e_1$} \vr{$v_2$} -- (0,1) node[midway, above]{$e_2$} \va{$v_3$} -- (-1,1) node[midway,above]{$e_3$} \va{$v_4$} -- (-1,0) node[midway,left]{$e_4$} \vb{$v_5$} -- (0,0) node[midway,below]{$e_5$} -- (0,1) node[midway,right]{$e_6$};
+             }
+          \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+      <solution>
+        <p>
+          We must first pick an edge to delete and contract.  Some might be better to pick than others.  For example, if we use <m>e_6</m>, then to find <m>P(G-e_6,k)</m> we would need to know how to count the colorings of <m>C_5</m>.  This will give us the correct answer, but let's avoid this for now by picking <m>e_4</m>.
+        </p>
+        <p>
+          Here is what the two graphs <m>G-e_4</m> and <m>G/e_4</m> look like:
+        </p>
+        <sidebyside widths="25% 25%" valign="bottom">
+          <image xml:id="house-graph-edge-labeled-dcr-de4">
+            <latex-image>
+          \begin{tikzpicture}
+            {\tiny
+              \draw (0,0) \vb{$v_1$} -- (.75, .5) node[midway, below]{$e_1$} \vr{$v_2$} -- (0,1) node[midway, above]{$e_2$} \va{$v_3$} -- (-1,1) node[midway,above]{$e_3$} \va{$v_4$}  (-1,0) \vb{$v_5$} -- (0,0) node[midway,below]{$e_5$} -- (0,1) node[midway,right]{$e_6$};
+             }
+          \end{tikzpicture}
+            </latex-image>
+          </image>
+          <image xml:id="house-graph-edge-labeled-dcr-ce4">
+            <latex-image>
+          \begin{tikzpicture}
+            {\tiny
+              \draw (0,0) \vb{$v_1$} -- (.75, .5) node[midway, below]{$e_1$} \vr{$v_2$} -- (0,1) node[midway, above]{$e_2$} \va{$v_3$} -- (-1,.5) node[midway,above]{$e_3$} \va{$v_4$} -- (0,0) node[midway,below]{$e_5$} -- (0,1) node[midway,right]{$e_6$};
+             }
+          \end{tikzpicture}
+            </latex-image>
+          </image>
+        </sidebyside>
+        <p>
+          We then compute <m>P(G-e_4,k) = k(k-1)(k-2)(k-1)(k-1)</m> (since <m>v_1</m> has <m>k</m> options, <m>v_2</m> has <m>k-1</m> options, <m>v_3</m> has <m>k-2</m> options, and then <m>v_4</m> and <m>v_5</m> each can be any color other than the color of their neighbor).
+        </p>
+
+        <p>
+          On the other hand, <m>P(G/e_4,k) = k(k-1)(k-2)(k-2)</m>: the first three vertices must be different, but then <m>v_4</m> must be different from <m>v_1</m> and <m>v_3</m>, which cannot be the same as each other, so <m>v_4</m> has <m>k-2</m> options.
+        </p>
+
+        <p>
+          Putting this all together gives <m>P(G,k) = k(k-1)^3(k-2) - k(k-1)(k-2)^2</m>.  You should compare this to the function we found for this graph using other methods.
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      Since the Deletion/Contraction Recurrence is a recurrence relation, it lends itself nicely to proofs by induction.  This allows us to verify a relatively clean formula for the number of colorings of a cycle.
+    </p>
+
+    <theorem xml:id="thm-cycle-chromatic-polynomial">
+      <statement>
+        <p>
+          For any <m>n \ge 3</m>, the number of proper <m>k</m>-colorings of the cycle <m>C_n</m> is <me>
+            P(C_n, k) = (k-1)^n + (-1)^n(k-1)
+          </me>.
+        </p>
+        <proof>
+          <p>
+            We will give a proof by induction on <m>n</m>.  For our base case, we consider <m>n = 3</m>.  We know that <m>P(C_3,k) = k(k-1)(k-2)</m>.  Multiplying this out gives <m>k^3 - 3k^2 + 2k</m>.  On the other hand, our formula <m>(k-1)^3 -(k-1)</m> expands as... exactly the same thing!  So we have established our base case.
+          </p>
+
+          <p>
+            Now for the inductive case, let <m>n</m> be an arbitrary integer at least 3 and assume <m>P(C_n,k) = (k-1)^n + (-1)^n(k-1)</m>.  We now consider <m>C_{n+1}</m>.  Picking any edge <m>e</m> in <m>C_{n+1}</m>, we note that <m>C_{n+1} - e</m> is the graph <m>P_n</m> and that <m>C_{n+1}/e</m> is <m>C_n</m>.  Thus we have:
+            <md>
+              <mrow>P(C_{n+1},k) = \amp P(C_{n+1} - e, k) - P(C_{n+1}/e, k) </mrow>
+              <mrow> = \amp P(P_n,k) - P(C_n,k) </mrow>
+              <mrow> = \amp k(k-1)^n - \left[(k-1)^n + (-1)^n(k-1)\right]</mrow>
+            </md>
+            where we are using our inductive hypothesis for <m>P(C_n,k)</m> and previous work to find <m>P(P_n,k)</m>.  Continuing:
+            <md>
+              <mrow>P(C_{n+1},k) = \amp k(k-1)^n - (k-1)^n - (-1)^n(k-1) </mrow>
+              <mrow> = \amp (k-1)(k-1)^n + (-1)^{n+1}(k-1)</mrow>
+              <mrow> = \amp (k-1)^{n+1} + (-1)^{n+1}(k-1)</mrow>
+            </md>
+            which is exactly what we claim.
+          </p>
+          <p>
+            Therefore, by the principle of mathematical induction, <m>P(C_n, k) = (k-1)^n + (-1)^n(k-1)</m> for all <m>n \ge 3</m>.
+          </p>
+        </proof>
+      </statement>
+    </theorem>
+    <p>
+      At the end of the last section, we noted that the Principle of Inclusion and Exclusion demonstrates that <m>P(G,k)</m> is always a <em>polynomial</em> in the variable <m>k</m>.  We can also see this is true using the deletion/contraction recurrence.  In the exercises, you will use strong induction to prove this fact.
+    </p>
+  </subsection>
+
+  <exercises xml:id="exercises-count-color-recursion">
+
+    <exercise>
+      <statement>
+        <p>
+          Let <m>e</m> be any edge of <m>K_n</m>.  What graph is <m>K_n/e</m>?
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Use the deletion/contraction recurrence to calculate <m>P(G,k)</m> for the graph below.  Show how this works first by using edge <m>e_1</m> and then using <m>e_2</m>, and show that you get the same answer in both cases.
+        </p>
+        <image xml:id="del-cont-graph" width="20%">
+          <latex-image>
+            \begin{tikzpicture}[scale=2]
+              {\footnotesize
+              \draw (0,0) \vb{$v_1$} -- (0,1) node[midway,left]{$e_1$} \va{$v_2$} -- (1,1) node[midway,above]{$e_2$} \va{$v_3$} -- (1,0) \vb{$v_4$} -- (0,1);
+              }
+            \end{tikzpicture}
+          </latex-image>
+          
+        </image>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Sometimes it takes repeated use of the deletion/contraction recurrence to get down to graphs simple enough to just count.  Show how to do this with the graph below.
+        </p>
+        <image xml:id="del-cont-graph-multi-step" width="25%">
+          <latex-image>
+            \begin{tikzpicture}
+              \draw (0,0) \v -- (2,0) \v -- (2,2) \v -- (0,2) \v -- (0,0) -- (2,2) (2,0) -- (0,2) (1,1) \v;
+            \end{tikzpicture}
+          </latex-image>
+          
+        </image>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          In an earlier exercise, you found that for any tree <m>T</m> with <m>n</m> edges, <m>P(T,k) = k(k-1)^n</m> (which agrees with what we know about the path <m>P_n</m>, which is a type of tree with <m>n</m> edges).  Prove this is correct using the deletion/contraction recurrence and a proof by induction.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          A single vertex is a tree, and every tree has a vertex of degree 1.  The edge incident to such a vertex would be a good choice.
+        </p>
+      </hint>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Prove, using induction and the deletion/contraction recurrence, that <m>P(G,k)</m> is a polynomial in the variable <m>k</m>.  
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Use a strong induction proof.  Assume that <m>P(G,k)</m> is a polynomial for all graphs with fewer than <m>n</m> edges.  Then consider a graph <m>G</m> with <m>n</m> edges and see what the deletion/contraction recurrence gives you. 
+        </p>
+      </hint>
+    </exercise>
+  </exercises>
+</section>
+
